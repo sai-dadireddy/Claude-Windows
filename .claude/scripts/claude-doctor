@@ -1,0 +1,274 @@
+#!/usr/bin/env bash
+# claude-doctor - Health check for Claude Code custom stack
+# Validates: hooks, MCP, memory, signals, beads, deps, disk
+
+# Don't use set -e as we want to continue checking even on failures
+set -uo pipefail
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+PASS=0
+WARN=0
+FAIL=0
+
+pass() { echo -e "${GREEN}✓${NC} $1"; PASS=$((PASS+1)); }
+warn() { echo -e "${YELLOW}⚠${NC} $1"; WARN=$((WARN+1)); }
+fail() { echo -e "${RED}✗${NC} $1"; FAIL=$((FAIL+1)); }
+section() { echo -e "\n${BLUE}━━━ $1 ━━━${NC}"; }
+
+# ─────────────────────────────────────────────────────────────
+section "Hook Permissions"
+# ─────────────────────────────────────────────────────────────
+
+HOOKS_DIR="$HOME/.claude/hooks"
+if [[ -d "$HOOKS_DIR" ]]; then
+    hook_count=0
+    hook_ok=0
+    for hook in "$HOOKS_DIR"/*.py; do
+        [[ -e "$hook" ]] || continue
+        hook_count=$((hook_count+1))
+        if [[ -x "$hook" ]]; then
+            hook_ok=$((hook_ok+1))
+        else
+            fail "Not executable: $(basename "$hook")"
+        fi
+        # Syntax check
+        if python3 -m py_compile "$hook" 2>/dev/null; then
+            :
+        else
+            fail "Syntax error: $(basename "$hook")"
+        fi
+    done
+    if [[ $hook_count -eq $hook_ok && $hook_count -gt 0 ]]; then
+        pass "All $hook_count hooks executable and valid"
+    elif [[ $hook_count -eq 0 ]]; then
+        warn "No hooks found in $HOOKS_DIR"
+    fi
+else
+    fail "Hooks directory missing: $HOOKS_DIR"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Signal File (Hints Bridge)"
+# ─────────────────────────────────────────────────────────────
+
+HINTS_DIR="$HOME/.claude/hints"
+HINTS_FILE="$HINTS_DIR/current.txt"
+
+if [[ -d "$HINTS_DIR" ]]; then
+    pass "Hints directory exists"
+    if touch "$HINTS_FILE" 2>/dev/null; then
+        pass "Signal file writable"
+    else
+        fail "Cannot write to $HINTS_FILE"
+    fi
+else
+    if mkdir -p "$HINTS_DIR" 2>/dev/null; then
+        warn "Created missing hints directory"
+    else
+        fail "Cannot create hints directory"
+    fi
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Memory System"
+# ─────────────────────────────────────────────────────────────
+
+MEMORY_DIR="$HOME/.claude/memory"
+SEMANTIC_DB="$MEMORY_DIR/semantic.db"
+
+if [[ -d "$MEMORY_DIR" ]]; then
+    pass "Memory directory exists"
+else
+    fail "Memory directory missing: $MEMORY_DIR"
+fi
+
+if [[ -f "$SEMANTIC_DB" ]]; then
+    # Use Python sqlite3 module (CLI may not be installed)
+    count=$(python3 -c "
+import sqlite3
+try:
+    conn = sqlite3.connect('$SEMANTIC_DB')
+    c = conn.cursor()
+    c.execute('SELECT COUNT(*) FROM memories')
+    print(c.fetchone()[0])
+    conn.close()
+except Exception as e:
+    print('ERROR:' + str(e))
+" 2>/dev/null)
+    if [[ "$count" =~ ^[0-9]+$ ]]; then
+        pass "Semantic DB accessible ($count memories)"
+    else
+        fail "Semantic DB issue: $count"
+    fi
+else
+    warn "Semantic DB not initialized (will be created on first save)"
+fi
+
+# Check memory scripts
+MEMORY_MGR="$HOME/.claude/scripts/memory_manager.py"
+SEMANTIC_MEM="$HOME/.claude/scripts/semantic_memory.py"
+
+[[ -f "$MEMORY_MGR" && -x "$MEMORY_MGR" ]] && pass "memory_manager.py ready" || fail "memory_manager.py missing/not executable"
+[[ -f "$SEMANTIC_MEM" && -x "$SEMANTIC_MEM" ]] && pass "semantic_memory.py ready" || fail "semantic_memory.py missing/not executable"
+
+# ─────────────────────────────────────────────────────────────
+section "MCP Router"
+# ─────────────────────────────────────────────────────────────
+
+# Check if mcp-router process or socket exists
+if pgrep -f "mcp-router" >/dev/null 2>&1; then
+    pass "MCP router process running"
+elif [[ -S "/tmp/mcp-router.sock" ]]; then
+    pass "MCP router socket exists"
+else
+    # Try to list categories as a connectivity test
+    # This is a heuristic - actual MCP availability depends on Claude Code session
+    warn "MCP router status unknown (check within active session)"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Beads Issue Tracker"
+# ─────────────────────────────────────────────────────────────
+
+BD_BIN="$HOME/.local/bin/bd"
+if [[ -x "$BD_BIN" ]]; then
+    version=$("$BD_BIN" --version 2>/dev/null || echo "unknown")
+    pass "Beads CLI installed ($version)"
+else
+    warn "Beads CLI not found at $BD_BIN"
+fi
+
+# Check for .beads in current directory or git root
+if [[ -d ".beads" ]]; then
+    count=$(PATH="$HOME/.local/bin:$PATH" bd list --format json 2>/dev/null | jq 'length' 2>/dev/null || echo "?")
+    pass "Beads initialized in current project ($count issues)"
+elif git rev-parse --git-dir >/dev/null 2>&1; then
+    git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [[ -d "$git_root/.beads" ]]; then
+        pass "Beads initialized at git root"
+    else
+        warn "No .beads in current project (run 'bd init' if needed)"
+    fi
+else
+    warn "Not in a git repo / no .beads directory"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Python Dependencies"
+# ─────────────────────────────────────────────────────────────
+
+# Core stdlib dependencies
+for pkg in sqlite3 json hashlib urllib.request; do
+    if timeout 2s python3 -c "import $pkg" 2>/dev/null; then
+        pass "Python: $pkg"
+    else
+        fail "Missing: $pkg"
+    fi
+done
+
+# Check Gemini API key for semantic memory
+GEMINI_KEY_FILE="$HOME/.claude/memory/.env"
+if [[ -f "$GEMINI_KEY_FILE" ]] && grep -q "GEMINI_API_KEY" "$GEMINI_KEY_FILE" 2>/dev/null; then
+    pass "Gemini API key configured"
+else
+    warn "Gemini API key not set (semantic search disabled)"
+fi
+
+# Optional: local-faiss may need these
+installed_pkgs=$(pip list --format=freeze 2>/dev/null | cut -d= -f1 | tr '[:upper:]' '[:lower:]')
+for optional_pkg in sentence-transformers numpy faiss-cpu; do
+    if echo "$installed_pkgs" | grep -qi "^${optional_pkg}$"; then
+        pass "Optional: $optional_pkg"
+    fi
+done
+
+# ─────────────────────────────────────────────────────────────
+section "Disk Space"
+# ─────────────────────────────────────────────────────────────
+
+# Check home directory space
+home_avail=$(df -BM "$HOME" | awk 'NR==2 {print $4}' | tr -d 'M')
+if [[ $home_avail -gt 1000 ]]; then
+    pass "Home disk: ${home_avail}MB available"
+elif [[ $home_avail -gt 100 ]]; then
+    warn "Home disk low: ${home_avail}MB available"
+else
+    fail "Home disk critical: ${home_avail}MB available"
+fi
+
+# Check /tmp for MCP sockets
+tmp_avail=$(df -BM /tmp | awk 'NR==2 {print $4}' | tr -d 'M')
+if [[ $tmp_avail -gt 100 ]]; then
+    pass "/tmp disk: ${tmp_avail}MB available"
+else
+    warn "/tmp disk low: ${tmp_avail}MB (may affect MCP)"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Skills & RAG"
+# ─────────────────────────────────────────────────────────────
+
+SKILLS_DIR="$HOME/.config/claude-code/skills"
+if [[ -d "$SKILLS_DIR" ]]; then
+    skill_count=$(find "$SKILLS_DIR" -name "*.md" | wc -l)
+    pass "Skills directory: $skill_count markdown files"
+else
+    warn "Skills directory not found"
+fi
+
+# Check local-faiss
+FAISS_BIN="$HOME/.local/bin/local-faiss"
+if [[ -x "$FAISS_BIN" ]]; then
+    pass "local-faiss installed"
+    VECTOR_STORE="$SKILLS_DIR/superpowers/.vector_store"
+    if [[ -d "$VECTOR_STORE" ]]; then
+        pass "Vector store indexed"
+    else
+        warn "Vector store not built (run: cd $SKILLS_DIR/superpowers && local-faiss index)"
+    fi
+else
+    warn "local-faiss not installed"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Workmux (Parallel Agents)"
+# ─────────────────────────────────────────────────────────────
+
+if command -v workmux >/dev/null 2>&1 || [[ -x "$HOME/.cargo/bin/workmux" ]]; then
+    pass "workmux available"
+else
+    warn "workmux not installed (optional, for parallel agents)"
+fi
+
+if command -v tmux >/dev/null 2>&1; then
+    pass "tmux available"
+else
+    warn "tmux not installed (needed for workmux)"
+fi
+
+# ─────────────────────────────────────────────────────────────
+section "Summary"
+# ─────────────────────────────────────────────────────────────
+
+echo ""
+echo -e "${GREEN}Passed:${NC} $PASS"
+echo -e "${YELLOW}Warnings:${NC} $WARN"
+echo -e "${RED}Failed:${NC} $FAIL"
+echo ""
+
+if [[ $FAIL -eq 0 && $WARN -eq 0 ]]; then
+    echo -e "${GREEN}All systems operational.${NC}"
+    exit 0
+elif [[ $FAIL -eq 0 ]]; then
+    echo -e "${YELLOW}System functional with warnings.${NC}"
+    exit 0
+else
+    echo -e "${RED}Critical issues detected. Review failures above.${NC}"
+    exit 1
+fi

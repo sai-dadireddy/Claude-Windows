@@ -1,0 +1,5 @@
+# Monitoring Requirements
+# Install: pip install -r requirements.txt
+
+# File watching
+watchdog>=3.0.0

@@ -1,0 +1,281 @@
+{
+  "_comment": "HYBRID MODE - Memory MCPs always available, others agent-only",
+  "_strategy": "Memory in main session for auto-updates, other MCPs in agents for token efficiency",
+  "_usage": "Rename to claude-code-mcp-config.json to enable",
+  "_token_impact": "Main session: ~42-48K tokens (memory MCPs add ~6-8K)",
+  "mcpServers": {
+    "memory_short": {
+      "_tokens": "~3K (9 tools)",
+      "_always_available": "Short-term memory (session context)",
+      "_auto_update": "Every conversation turn",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_TYPE": "short",
+        "DB_PATH": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/claude/memory/short.json"
+      }
+    },
+    "memory_long": {
+      "_tokens": "~3K (9 tools)",
+      "_always_available": "Long-term memory (permanent knowledge)",
+      "_auto_update": "Important decisions",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_TYPE": "long",
+        "DB_PATH": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/claude/memory/long.json"
+      }
+    },
+    "memory-auto": {
+      "_tokens": "~3K (6 tools)",
+      "_always_available": "REMOVED from hybrid mode - use agents for advanced ops",
+      "_reason": "Auto-classification heavy, better in agent contexts",
+      "_agent_usage": "Invoke via memory agent when needed"
+    },
+    "code-index-mcp": {
+      "_tokens": "~8.7K (13 tools)",
+      "_agent_only": true,
+      "command": "C:/Users/SainathreddyDadiredd/AppData/Local/Programs/Python/Python313/Scripts/uvx.exe",
+      "args": [
+        "code-index-mcp"
+      ]
+    },
+    "playwright": {
+      "_tokens": "~19.7K (32 tools)",
+      "_agent_usage": "Web Scraper agent",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@playwright/mcp"
+      ],
+      "env": {
+        "PLAYWRIGHT_BROWSER": "chromium",
+        "PLAYWRIGHT_LAUNCH_OPTIONS": "{\"channel\":\"chrome\",\"headless\":true,\"args\":[\"--disable-extensions\",\"--disable-plugins\",\"--no-default-browser-check\",\"--disable-sync\",\"--disable-translate\",\"--disable-features=TranslateUI\"]}",
+        "PLAYWRIGHT_USER_DATA_DIR": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/browser-profiles/claude-automation"
+      }
+    },
+    "github": {
+      "_tokens": "~18.1K (26 tools)",
+      "_agent_usage": "GitHub Operations agent",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      }
+    },
+    "aws": {
+      "_tokens": "~4.4K (7 tools)",
+      "_agent_usage": "AWS Operations agent",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@aws/aws-mcp-server"
+      ],
+      "env": {
+        "AWS_PROFILE": "claude-code-reader",
+        "AWS_REGION": "us-east-1"
+      }
+    },
+    "sequential-thinking": {
+      "_tokens": "~15-20K (1 tool)",
+      "_agent_usage": "Complex reasoning tasks",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "langchain": {
+      "_tokens": "~8-12K (5 tools)",
+      "_agent_usage": "Vector search and embeddings",
+      "command": "python",
+      "args": [
+        "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/projects/mcp-servers/langchain-server/server.py"
+      ],
+      "env": {
+        "VECTOR_STORE": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/projects/unified-memory/vector-store",
+        "EMBEDDING_PROVIDER": "huggingface",
+        "HUGGINGFACE_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+        "VECTORSTORE_TYPE": "chroma",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "jan-ai": {
+      "_tokens": "~2.5K (4 tools)",
+      "_agent_usage": "Local AI code generation (FREE, UNLIMITED, PRIVATE, LIGHTWEIGHT, ON-DEMAND)",
+      "_description": "Jan AI with Qwen2.5-Coder-7B - Auto-starts when needed, auto-stops after inactivity",
+      "command": "node",
+      "args": [
+        "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/projects/mcp-servers/jan-ai-mcp/server.js"
+      ],
+      "env": {
+        "JAN_AI_URL": "http://localhost:1337",
+        "JAN_AI_API_KEY": "jan-local-key",
+        "MODEL_NAME": "Qwen2_5-Coder-7B-Instruct-Q4_K_M",
+        "JAN_AUTO_START": "true",
+        "JAN_AUTO_STOP": "true",
+        "JAN_INACTIVITY_TIMEOUT": "300000"
+      },
+      "_on_demand_config": {
+        "auto_start": "Starts Jan AI automatically when Claude needs it",
+        "auto_stop": "Stops Jan AI after 5 minutes (300000ms) of inactivity",
+        "ram_freed": "~3-4GB freed when stopped",
+        "startup_delay": "~10-30 seconds for first request (model loading)",
+        "disable": "Set JAN_AUTO_START=false or JAN_AUTO_STOP=false to disable"
+      }
+    },
+    "codex": {
+      "_tokens": "~5K (varies)",
+      "_agent_usage": "Deep code review and architecture (ChatGPT Pro subscription)",
+      "_description": "GPT-5 Codex via ChatGPT Pro - 300-1500 msgs per 5 hours",
+      "command": "codex",
+      "args": [
+        "-m",
+        "gpt-5-codex",
+        "-c",
+        "model_reasoning_effort=high",
+        "mcp-server"
+      ],
+      "scope": "user"
+    },
+    "testing": {
+      "_tokens": "~2.5K (4 tools)",
+      "_agent_usage": "Test automation and analysis",
+      "command": "python",
+      "args": [
+        "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/projects/testing-mcp/server.py"
+      ],
+      "env": {
+        "PROJECT_PATH": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude",
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "drawio": {
+      "_tokens": "~5-8K (8 tools)",
+      "_agent_usage": "Live diagram creation and modification",
+      "command": "npx",
+      "args": [
+        "-y",
+        "drawio-mcp-server"
+      ]
+    }
+  },
+  "_hybrid_architecture": {
+    "strategy": "Memory MCPs in main session, everything else in agents",
+    "main_session": {
+      "mcp_enabled": true,
+      "mcp_tools_loaded": "memory_short + memory_long only (~6K tokens)",
+      "token_overhead": "~42-48K total (vs 30-40K agent-only mode)",
+      "startup_tokens": "~42-48K (system + tools + messages + memory MCPs)"
+    },
+    "benefits": {
+      "auto_memory_updates": "Every conversation turn without agent invocation",
+      "token_efficient": "Only 6-8K overhead vs 66.8K if all MCPs loaded",
+      "best_of_both": "Memory always on, heavy MCPs agent-only",
+      "user_experience": "Seamless memory updates, no manual intervention"
+    },
+    "trade_offs": {
+      "token_cost": "+6-8K tokens in main session",
+      "still_efficient": "73-76% free context (vs 80-85% agent-only)",
+      "auto_classification": "Still requires agent (memory-auto not in main)",
+      "recommendation": "Use if you want automatic memory updates without thinking about it"
+    }
+  },
+  "_token_analysis": {
+    "agent_only_mode": {
+      "main_session_startup": "30-40K tokens",
+      "mcp_tools_overhead": "0K tokens",
+      "free_space": "160-170K (80-85%)",
+      "memory_access": "Via mcp__memory_* tools (works but less obvious)"
+    },
+    "hybrid_mode": {
+      "main_session_startup": "42-48K tokens",
+      "mcp_tools_overhead": "6-8K tokens (memory MCPs only)",
+      "free_space": "152-158K (73-76%)",
+      "memory_access": "Direct and automatic (memory_short, memory_long)"
+    },
+    "all_mcps_mode": {
+      "main_session_startup": "155K tokens",
+      "mcp_tools_overhead": "66.8K tokens",
+      "free_space": "45K (22.5%)",
+      "problem": "Not recommended - most MCPs unused"
+    },
+    "recommendation": "Use hybrid mode if you want memory visibility, agent-only if you want maximum tokens"
+  },
+  "_agent_to_mcp_mapping": {
+    "web-scraper-heavy": [
+      "playwright",
+      "memory_short"
+    ],
+    "github-ops-heavy": [
+      "github",
+      "memory_short"
+    ],
+    "aws-ops-heavy": [
+      "aws",
+      "memory_short"
+    ],
+    "youtube-research-heavy": [
+      "playwright",
+      "memory_short"
+    ],
+    "visual-analysis-heavy": [
+      "playwright",
+      "memory_short"
+    ],
+    "diagram-creation": [
+      "drawio",
+      "memory_short"
+    ],
+    "architecture-designer": [
+      "drawio",
+      "memory_long",
+      "codex"
+    ],
+    "code-review-pro": [
+      "codex",
+      "jan-ai",
+      "memory_long"
+    ],
+    "ai-engineer": [
+      "jan-ai",
+      "memory_short",
+      "code-index-mcp"
+    ],
+    "python-pro": [
+      "jan-ai",
+      "codex",
+      "memory_short"
+    ],
+    "any-agent": [
+      "memory_short",
+      "code-index-mcp"
+    ]
+  },
+  "_how_to_enable": {
+    "step_1": "Backup current config",
+    "step_1_command": "copy claude-code-mcp-config.json claude-code-mcp-config.json.backup",
+    "step_2": "Replace with this file",
+    "step_2_command": "copy claude-code-mcp-config-hybrid-memory.json claude-code-mcp-config.json",
+    "step_3": "Restart Claude Code",
+    "step_3_command": "Close and reopen Claude Code",
+    "step_4": "Verify memory MCPs loaded",
+    "step_4_test": "Try: mcp__memory_short__read_graph",
+    "rollback": "copy claude-code-mcp-config.json.backup claude-code-mcp-config.json"
+  }
+}

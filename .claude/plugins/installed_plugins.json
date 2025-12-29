@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "plugins": {
+    "beads@beads-marketplace": [
+      {
+        "scope": "project",
+        "installPath": "/home/claude/.claude/plugins/cache/beads-marketplace/beads/0.30.0",
+        "version": "0.30.0",
+        "installedAt": "2025-12-15T16:30:00.451Z",
+        "lastUpdated": "2025-12-15T17:21:47.753Z",
+        "gitCommitSha": "daf3e6b0e74ccba3074c4df421077c040ac96573",
+        "isLocal": true,
+        "projectPath": "/home/claude"
+      }
+    ],
+    "document-skills@anthropic-agent-skills": [
+      {
+        "scope": "project",
+        "installPath": "/home/claude/.claude/plugins/cache/anthropic-agent-skills/document-skills/unknown",
+        "version": "unknown",
+        "installedAt": "2025-12-15T16:51:14.339Z",
+        "lastUpdated": "2025-12-15T17:21:47.753Z",
+        "gitCommitSha": "daf3e6b0e74ccba3074c4df421077c040ac96573",
+        "isLocal": true,
+        "projectPath": "/home/claude"
+      }
+    ],
+    "example-skills@anthropic-agent-skills": [
+      {
+        "scope": "project",
+        "installPath": "/home/claude/.claude/plugins/cache/anthropic-agent-skills/example-skills/unknown",
+        "version": "unknown",
+        "installedAt": "2025-12-15T16:51:24.743Z",
+        "lastUpdated": "2025-12-15T17:21:47.753Z",
+        "gitCommitSha": "daf3e6b0e74ccba3074c4df421077c040ac96573",
+        "isLocal": true,
+        "projectPath": "/home/claude"
+      }
+    ]
+  }
+}

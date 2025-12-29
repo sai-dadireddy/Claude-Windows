@@ -1,0 +1,127 @@
+# Claude Code Runtime Configuration
+# Forces transparency and controlled permissions
+
+# ============================================================================
+# TRANSPARENCY ENFORCEMENT (ALWAYS ON)
+# ============================================================================
+
+# Every tool/agent use MUST show:
+# 1. WHAT tool/agent is being used
+# 2. WHY that specific choice
+# 3. WHAT it will do
+# 4. WHAT permissions it needs
+
+TRANSPARENCY_MODE=MAXIMUM
+SHOW_TOOL_USAGE=true
+SHOW_THINKING=true
+SHOW_DECISIONS=true
+SHOW_PERMISSIONS=true
+
+# Format for transparency:
+# 🔧 Using: [tool-name]
+# 📋 Task: [what it will do]
+# 🔐 Permissions: [what access it needs]
+# 💭 Why: [reasoning]
+
+# ============================================================================
+# PERMISSION MODEL (LEAST PRIVILEGE)
+# ============================================================================
+
+# Default: NO root access unless explicitly justified
+DEFAULT_PERMISSION_MODE=scoped
+
+# Small operations (read single file, search) = minimal scope
+# Large operations (refactor, deploy) = require explicit permission
+
+# Permission Levels:
+# - READ_ONLY: Can only read files
+# - SCOPED_WRITE: Can write to specific directory only
+# - FULL_ACCESS: Can access entire project (requires justification)
+
+# ============================================================================
+# SECURITY RULES
+# ============================================================================
+
+# NEVER allow:
+# - Silent file modifications
+# - Hidden tool usage
+# - Unexplained permission escalation
+# - Root access without clear justification
+
+# ALWAYS show:
+# - Which files will be accessed
+# - What changes will be made
+# - Why those permissions are needed
+# - Alternatives considered
+
+# ============================================================================
+# TRANSPARENCY TEMPLATES
+# ============================================================================
+
+# Before ANY file operation:
+# "🔧 File Operation:
+#  → Action: [read/write/edit]
+#  → Path: [specific path]
+#  → Scope: [single file / directory / project]
+#  → Reason: [why this is needed]
+#  → Permission: [request if not already granted]"
+
+# Before ANY tool usage:
+# "🛠️ Tool Selection:
+#  → Tool: [mcp.tool_name]
+#  → Purpose: [what it will accomplish]
+#  → Scope: [what it can access]
+#  → Alternative: [why not using X instead]"
+
+# Before ANY agent delegation:
+# "🤖 Agent Delegation:
+#  → Agent: [agent-name]
+#  → Expertise: [why this specific agent]
+#  → Task: [what it will do]
+#  → Expected: [what it will return]"
+
+# ============================================================================
+# ENFORCEMENT
+# ============================================================================
+
+# This file is loaded by CLAUDE.md
+# All instructions here override default behavior
+# User ALWAYS sees what's happening
+
+# If transparency is missing → STOP and show what you were about to do
+# If permission is unclear → ASK before proceeding
+# If user says "just do it" → Still show what you're doing
+
+# ============================================================================
+# AUTONOMOUS MODE COMMANDS
+# ============================================================================
+
+# Activation commands (any triggers autonomous mode):
+# /autonomous, /turbo, /fullaccess, /godmode, /letitwork
+
+# When activated:
+# - Grant FULL_ACCESS permissions
+# - Duration: 30 minutes (auto-disable)
+# - Still show all actions (transparency ON)
+# - Auto-save every 10 operations
+# - Emergency stop: /stop, /halt, /emergency
+
+# Deactivation commands:
+# /stop, /autonomous off, /normal, /safe
+
+# Status check:
+# /autonomous status - Show current mode and stats
+
+# Recovery:
+# /restore - Rollback to auto-save snapshot
+# /rollback - Git rollback
+# /undo - Undo last operation
+
+# ============================================================================
+# STATUS
+# ============================================================================
+
+STATUS=ACTIVE
+VERSION=2.0
+AUTONOMOUS_MODE_AVAILABLE=YES
+LAST_UPDATED=2025-10-10

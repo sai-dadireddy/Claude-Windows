@@ -1,0 +1,278 @@
+# Claude Code Autonomy Configuration
+# Defines autonomous behavior and decision-making authority
+# Last Updated: 2025-10-09
+
+version: "1.0"
+
+# === AUTONOMY LEVEL ===
+# low: Ask before most actions
+# medium: Auto-approve medium-risk actions
+# high: Try things, revert if they fail
+autonomy_level: medium
+
+# === AUTO-APPROVE ACTIONS ===
+auto_approve:
+  # Automatically commit changes with descriptive messages
+  commits: true
+
+  # Automatically run tests after code changes
+  tests: true
+
+  # Automatically create checkpoints before edits
+  checkpoints: true
+
+  # Automatically optimize code (refactoring, performance)
+  optimizations: false  # Ask first for optimizations
+
+  # Package installations
+  npm_install: true
+  pip_install: true
+
+  # File operations
+  file_create: true
+  file_edit: true
+  file_delete: false  # Ask before deleting
+
+  # Git operations
+  git_commit: true
+  git_push: false  # Always ask before pushing
+  git_rebase: false  # Always ask before rebasing
+  git_reset: false  # Always ask before resetting
+
+  # Web research
+  web_search: true
+  web_fetch: true
+  browser_automation: true
+
+# === ERROR RECOVERY ===
+error_recovery:
+  # Enable autonomous error recovery
+  enabled: true
+
+  # Number of automatic retry attempts before escalating to user
+  max_retries: 3
+
+  # Strategies to try (in order)
+  strategies:
+    - retry_with_backoff
+    - search_memory_for_solution
+    - search_web_for_solution
+    - try_alternative_approach
+    - revert_to_checkpoint
+
+  # Automatically revert changes if tests fail
+  auto_revert_on_test_failure: true
+
+  # Log all errors to memory for learning
+  log_errors: true
+
+# === TESTING ===
+testing:
+  # Run tests after code changes
+  auto_run_tests: true
+
+  # Which tests to run
+  test_scope: related  # all, related, or none
+
+  # Timeout for test execution (seconds)
+  timeout: 300
+
+  # Fail fast on first error
+  fail_fast: false
+
+  # Automatically fix simple test failures (e.g., formatting)
+  auto_fix_simple_failures: true
+
+# === CHECKPOINTING ===
+checkpointing:
+  # Enable automatic checkpoints
+  enabled: true
+
+  # When to create checkpoints
+  triggers:
+    - before_file_edit
+    - before_large_refactor
+    - before_risky_operation
+    - on_test_failure
+
+  # Checkpoint strategy
+  strategy: git_commit  # git_stash, git_commit, or snapshot
+
+  # Automatically rollback on failure
+  auto_rollback: true
+
+  # Maximum checkpoints to keep
+  max_checkpoints: 10
+
+# === BACKGROUND TASKS ===
+background_tasks:
+  # Enable background task execution
+  enabled: true
+
+  # Tasks that can run in background
+  allowed:
+    - build
+    - tests
+    - lint
+    - type_check
+    - install_dependencies
+
+  # Check interval (seconds)
+  check_interval: 5
+
+  # Timeout for background tasks (seconds)
+  timeout: 600
+
+# === LEARNING ===
+learning:
+  # Autonomous learning from past sessions
+  enabled: true
+
+  # Research new patterns autonomously
+  auto_research: true
+
+  # Store new patterns in pattern library
+  auto_add_patterns: true
+
+  # Improve existing tools based on usage
+  self_improvement: true
+
+  # Learn from errors
+  learn_from_failures: true
+
+# === COMMUNICATION ===
+communication:
+  # How verbose should I be
+  verbosity: medium  # low, medium, high
+
+  # Report progress for long operations
+  progress_updates: true
+
+  # Frequency of progress updates (seconds)
+  update_interval: 30
+
+  # Report all decisions made autonomously
+  report_decisions: true
+
+  # Format for reports
+  report_format: concise  # concise, detailed
+
+# === RISK TOLERANCE ===
+risk_tolerance:
+  # Overall risk tolerance
+  level: medium  # low, medium, high
+
+  # Allow experimental features
+  experimental: false
+
+  # Allow breaking changes
+  breaking_changes: false
+
+  # Allow external dependencies
+  external_dependencies: true
+
+  # Maximum cost per operation (for paid APIs)
+  max_cost_per_operation: 0.10  # USD
+
+# === SAFETY LIMITS ===
+safety:
+  # Maximum files to modify in one go
+  max_files_per_operation: 10
+
+  # Maximum lines to change without checkpoint
+  max_lines_without_checkpoint: 100
+
+  # Require user approval for sensitive operations
+  sensitive_operations:
+    - database_migration
+    - production_deployment
+    - user_data_modification
+    - security_config_change
+
+  # Paths that require approval before modifying
+  protected_paths:
+    - .git/config
+    - package.json
+    - requirements.txt
+    - database/migrations/*
+
+  # Never delete these paths
+  never_delete:
+    - .git
+    - node_modules
+    - venv
+    - database
+
+# === SESSION MANAGEMENT ===
+session:
+  # Automatically capture session start/end
+  auto_capture: true
+
+  # Track all tasks automatically
+  auto_track_tasks: true
+
+  # Create session summary at end
+  auto_summary: true
+
+  # Store session in memory
+  store_in_memory: true
+
+  # Session timeout (minutes)
+  timeout: 120
+
+# === MEMORY SYSTEM ===
+memory:
+  # Automatically classify and store important information
+  auto_classify: true
+
+  # Search memory before asking user
+  search_first: true
+
+  # Store all code changes
+  store_code_changes: true
+
+  # Store all decisions
+  store_decisions: true
+
+  # Importance threshold for automatic storage
+  min_importance: 2  # 0-3 scale
+
+# === SUBAGENTS ===
+subagents:
+  # Enable parallel execution with subagents
+  enabled: true
+
+  # Maximum concurrent subagents
+  max_concurrent: 3
+
+  # Tasks suitable for subagents
+  delegate_tasks:
+    - research
+    - analysis
+    - testing
+    - documentation
+    - code_review
+
+  # Automatically use subagents for suitable tasks
+  auto_delegate: true
+
+# === CUSTOM RULES ===
+custom_rules:
+  # Project-specific rules
+  # These override global settings
+
+  # Example: For test files, always run tests
+  "test_*.py":
+    auto_run_tests: true
+    test_scope: all
+
+  # Example: For config files, always create checkpoint
+  "*.config.json":
+    checkpoints: true
+    require_user_approval: false
+
+# === NOTES ===
+# This configuration enables a good balance of autonomy and safety.
+# Adjust settings based on your comfort level and project requirements.
+# For maximum autonomy, set autonomy_level: high and enable all features.
+# For maximum safety, set autonomy_level: low and disable auto-approve.

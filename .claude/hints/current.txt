@@ -1,0 +1,2 @@
+[20:39:36] [memory] SAVE TO MEMORY: decision detected - use memory_manager.py
+[20:39:36] [skill] systematic-debugging: Root-cause analysis

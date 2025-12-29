@@ -1,0 +1,218 @@
+site_name: AI Learning Syllabus - Interactive
+site_description: Provider-Neutral AI Preparation Guide with Progress Tracking
+site_author: AI Learning Team
+
+# Repository (optional - for GitHub integration)
+# repo_url: https://github.com/yourusername/ai-learning-syllabus
+# repo_name: yourusername/ai-learning-syllabus
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/school
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+
+# Extra CSS and JavaScript
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/progress-tracker.css
+
+extra_javascript:
+  - javascripts/progress-tracker.js
+  - javascripts/notes-manager.js
+  - javascripts/localStorage-sync.js
+
+# Navigation structure
+nav:
+  - Home:
+    - Welcome: index.md
+    - How to Use: guide/how-to-use.md
+    - Quick Start: guide/quick-start.md
+    - Progress Dashboard: dashboard.md
+
+  - Quick Reference:
+    - Topic Map: reference/topic-map.md
+    - Provider Comparison: reference/provider-comparison.md
+    - Prerequisites: reference/prerequisites.md
+    - Glossary: reference/glossary.md
+
+  - Study Tracks:
+    - Overview: tracks/overview.md
+    - Beginner Fast Track (4 weeks): tracks/beginner.md
+    - Standard Track (8 weeks): tracks/standard.md
+    - Deep Mastery (12 weeks): tracks/deep-mastery.md
+
+  - Foundation Topics:
+    - Transformer Architecture: topics/transformer-architecture.md
+    - Attention Mechanisms: topics/attention-mechanisms.md
+    - BERT vs GPT: topics/bert-vs-gpt.md
+    - Tokenization & Embeddings: topics/tokenization-embeddings.md
+    - Data Ingestion: topics/data-ingestion.md
+    - Chunking Strategies: topics/chunking-strategies.md
+    - Embeddings & Vector DBs: topics/embeddings-vector-dbs.md
+    - Semantic Search: topics/semantic-search.md
+    - RAG Architecture: topics/rag-architecture.md
+    - Prompt Engineering: topics/prompt-engineering.md
+    - Evaluation Basics: topics/evaluation-basics.md
+    - Quality Scoring: topics/quality-scoring.md
+
+  - Advanced Retrieval:
+    - Query Rewriting & Expansion: topics/query-rewriting.md
+    - HyDE: topics/hyde.md
+    - Reranking & Cross-Encoders: topics/reranking.md
+    - Hybrid Search: topics/hybrid-search.md
+    - Self-RAG: topics/self-rag.md
+    - Graph RAG: topics/graph-rag.md
+    - RAPTOR: topics/raptor.md
+    - Agentic RAG: topics/agentic-rag.md
+
+  - Agents & Orchestration:
+    - Multi-Agent Systems: topics/multi-agent.md
+    - LangChain & LangGraph: topics/langchain.md
+    - Agent Communication: topics/agent-communication.md
+    - Supervisor Patterns: topics/supervisor-patterns.md
+    - Structured Output: topics/structured-output.md
+    - Function Calling: topics/function-calling.md
+    - Multi-Step Reasoning: topics/multi-step-reasoning.md
+    - Data Extraction: topics/data-extraction.md
+
+  - Performance & Caching:
+    - Semantic Caching: topics/semantic-caching.md
+    - Multi-Layer Caching: topics/multi-layer-caching.md
+    - Observability Basics: topics/observability-basics.md
+    - Distributed Tracing: topics/distributed-tracing.md
+
+  - Fine-Tuning & Alignment:
+    - DPO & RLHF: topics/dpo-rlhf.md
+    - LoRA & QLoRA: topics/lora.md
+    - Quantization: topics/quantization.md
+    - Model Distillation: topics/distillation.md
+    - Pruning Techniques: topics/pruning.md
+
+  - Security & Compliance:
+    - Prompt Injection Defense: topics/prompt-injection.md
+    - PII Detection & Redaction: topics/pii-detection.md
+    - Guardrails: topics/guardrails.md
+    - Red-Teaming: topics/red-teaming.md
+    - Bias Detection: topics/bias-detection.md
+    - Explainability: topics/explainability.md
+    - RAI Frameworks: topics/rai-frameworks.md
+    - Fairness Metrics: topics/fairness-metrics.md
+
+  - Production & Deployment:
+    - Prompt Version Control: topics/prompt-version-control.md
+    - A/B Testing: topics/ab-testing.md
+    - CI/CD for LLM Apps: topics/cicd.md
+    - Cost Management: topics/cost-management.md
+    - Real-Time Streaming: topics/streaming.md
+    - Edge Deployment: topics/edge-deployment.md
+
+  - Advanced Topics:
+    - Multimodal AI: topics/multimodal.md
+    - Prerequisites: topics/prerequisites.md
+
+  - Assessments:
+    - Beginner Checkpoint: assessments/beginner.md
+    - Intermediate Checkpoint: assessments/intermediate.md
+    - Expert Checkpoint: assessments/expert.md
+
+# Extra configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/
+
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve by providing specific suggestions.
+
+copyright: Copyright &copy; 2025 AI Learning Team

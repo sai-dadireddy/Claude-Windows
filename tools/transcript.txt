@@ -1,0 +1,375 @@
+[00:00] I built an automatic YouTube system
+[00:01] that's saving me hours each and every
+[00:03] week whenever I post a new video. I have
+[00:06] to do the manual work of coming up with
+[00:08] titles, timestamps, a description for
+[00:11] the video, and so many other assets. But
+[00:14] with this automation using N8, I can
+[00:16] click on execute the workflow, enter my
+[00:19] video. So let's say I'm going to choose
+[00:22] this one here, click on share, copy the
+[00:24] link, paste it in, click on submit.
+[00:26] automations will run on the back end
+[00:28] using a set of my parameters and agents
+[00:31] that I've built. And in a matter of
+[00:33] seconds, it's come up with some video
+[00:35] titles that I could potentially use, a
+[00:38] video description based on the criteria
+[00:40] and the way that I usually write my
+[00:42] descriptions, as well as suggested
+[00:44] timestamps and thumbnail ideas,
+[00:46] keywords, and email copy that I could
+[00:49] simply take away and start promoting
+[00:51] that new YouTube video of mine. And this
+[00:53] is just one simple automation that I've
+[00:55] created to save me hours each and every
+[00:58] week. So in this video, I want to share
+[00:59] with you 10 useful N and AI agent ideas
+[01:03] and workflows that you can build to save
+[01:06] you time. Now the first step that you
+[01:08] are going to want to take is making sure
+[01:10] that you've got access to N8. What I
+[01:14] like to do is self-host it. So I've got
+[01:16] my own server online on the cloud that
+[01:19] runs these automations so that I'm not
+[01:21] paying such a premium through n
+[01:24] directly. If you head to natn.io,
+[01:27] you can see the pricing. Now this is in
+[01:30] euros build uh annually. Monthly it
+[01:33] looks like this. I'm not sure exactly if
+[01:35] I can change the conversion, but that's
+[01:37] to give an idea. The way that I like to
+[01:39] do it is by self-hosting on a VPS
+[01:42] specifically with Hostinger. So it'll be
+[01:44] your own server and you can host these.
+[01:47] So it's private and no one else shares
+[01:49] it with you. There's quite a few plans
+[01:51] to choose from. You can see that the
+[01:52] pricing differs quite substantially and
+[01:55] this is a great way more economic for
+[01:57] you in the long run because if you want
+[01:59] to save time, become more productive,
+[02:01] this is a great way to do it by choosing
+[02:03] one of the plans to start off with. So
+[02:05] KVM4 is if you want to run automations
+[02:08] and don't want any delays doing so, I
+[02:11] recommend the KVM4. And once you're on
+[02:13] the checkout, after choosing your plan,
+[02:15] choose your period. Of course, the more
+[02:16] months you go with, the more you will
+[02:18] save and go through some of these
+[02:20] options here, select the server
+[02:22] location. Use the one that's closest to
+[02:24] you because this is going to determine,
+[02:27] you know, the best latency for you. So,
+[02:29] if you're located in the United States,
+[02:31] pick one that best suits you since this
+[02:33] will all be for personal and private
+[02:34] use. All right. So, down the bottom, you
+[02:36] see select operating system. You want to
+[02:39] choose inn. There's also the init with
+[02:42] the plus 100 uh pre-made workflows built
+[02:45] in if you do want to choose that.
+[02:47] Otherwise, just choose inn and that's
+[02:49] what you want to go with. But don't
+[02:51] check out yet because I've got a special
+[02:53] coupon code that you can use to save
+[02:54] further. So, right here, enter in
+[02:57] Aurelius. I'll also link hosting and N8
+[02:59] in the description box below as well as
+[03:01] this coupon code here. Click on apply.
+[03:03] That will give you a further discount as
+[03:05] you can see. Now, I'm not going to run
+[03:07] through the whole setup process, but if
+[03:08] you do want to learn how to set it up in
+[03:10] Hostinger, I'll link up a relevant video
+[03:13] in the description box below. But in
+[03:14] this video, as I said, I want to share
+[03:16] 10 useful ideas that you can start with
+[03:19] and to spark some ideas for you to get
+[03:21] started so that you're not left starting
+[03:23] from scratch thinking about what sort of
+[03:25] automations can I create using NN and
+[03:27] creating these AI agents. All right, so
+[03:29] the first idea is automated content
+[03:32] repurposing. So what can happen is you
+[03:34] can post a video on YouTube and then
+[03:36] what NN can do is it will transcribe it.
+[03:39] Then it generates blog posts, tweets,
+[03:41] LinkedIn updates all using chat GBT on
+[03:44] the back end and one piece of content
+[03:47] really does can fuel the multiple
+[03:49] platforms automatically. For example, I
+[03:51] found this automation in N8 called
+[03:54] automate Instagram content discovery and
+[03:56] repurposing. And you can see what it can
+[04:00] do. Just to give you a little bit of
+[04:02] context on some of the things that it
+[04:04] can do, if you look down the bottom on
+[04:06] any of these automations, it monitor
+[04:08] competitive Instagram accounts,
+[04:10] downloads the new res, and processes
+[04:12] them without manual intervention. And it
+[04:15] does the script generation, duplication,
+[04:17] multiplatform intelligence. And by the
+[04:19] way, if you do want to take a look at
+[04:20] some of the automations that are readily
+[04:23] available at N8N, just go to N8N and
+[04:26] then we're going to go to templates.
+[04:28] There's 5,684 workflow automation
+[04:31] templates to choose from. These are some
+[04:33] trending ones, but check out this one.
+[04:35] We're still talking about idea number
+[04:36] one. This is automate multi-platform
+[04:38] social media content creation with AI. I
+[04:41] simply went to the workflows and search
+[04:44] for social media automation. And then
+[04:46] this is one of the ones that popped up.
+[04:47] Look at this. This is free to use. And
+[04:50] if you take a look at this, we're going
+[04:51] to zoom in just a little bit. You know,
+[04:54] it's quite comprehensive, right? But
+[04:55] just to zoom out like this is the
+[04:57] complexity that is involved with this
+[05:00] automation and this can be quite
+[05:02] overwhelming especially if you don't
+[05:03] know how to set up your first AI agent
+[05:05] but start with what you only need and
+[05:08] then you can kind of progress from there
+[05:10] in my opinion. So down the bottom
+[05:12] there's always like this description
+[05:14] social media managers and digital
+[05:15] marketers seeking to streamline content
+[05:17] production across seven plus platforms.
+[05:20] So quite impressive there and the best
+[05:22] part is it's free but that's just one
+[05:24] idea. If this is something that's taking
+[05:26] you a lot of time, let's say you're
+[05:27] posting on YouTube, but then you want to
+[05:29] repurpose that content and post it onto
+[05:31] other platforms, this is a great way to
+[05:33] do it using N. By the way, in order to
+[05:35] use any of the workflows in N, all you
+[05:39] need to do is head to your hosting VPN,
+[05:42] create a new workflow, and you'll have
+[05:44] this blank canvas. So, once you found
+[05:47] one, click on use. What you can do then
+[05:50] is copy the template to clipboard. And
+[05:53] this is just one of the multiple ways
+[05:55] that you can do it. And then all you
+[05:57] need to do on your keyboard is paste it
+[05:59] in. So on my Mac, it's commandV. And
+[06:03] there we go. We've got the entire
+[06:04] workflow ready to go. And all we need to
+[06:08] do now is fill in the details. So if you
+[06:11] haven't connected your Google account,
+[06:12] for instance, then you're going to want
+[06:14] to do that so that it has access
+[06:16] essentially to your Google account and
+[06:19] your OpenAI. So it really depends which
+[06:21] workflow you are using from N8N. The
+[06:25] next idea is scraping business emails
+[06:27] from Google maps without the use of any
+[06:30] third party APIs. And this is the
+[06:33] specific automation that I found in N8N
+[06:36] and it does exactly what name suggests.
+[06:39] It will scrape the emails rather than
+[06:41] going to each and every business listing
+[06:43] on Google maps and then you copy and
+[06:45] pasting every single email to contact
+[06:47] them. So rather than that you can create
+[06:49] this automation that does it all for
+[06:51] you. And as mentioned you don't need any
+[06:53] third-party APIs that you need to plug
+[06:56] into N8N. The third ID is also social
+[06:58] media related but with this if you're
+[07:00] currently using let's say Google Sheets
+[07:03] or Excel or notion what you can do is
+[07:06] you can batch schedule posts in those
+[07:09] apps and let N autopublish them to
+[07:12] places like X LinkedIn and Instagram.
+[07:15] So, it's a must have if you're, you
+[07:17] know, you want to stay consistent with
+[07:18] branding without juggling multiple apps.
+[07:21] And this doesn't necessarily have to be
+[07:23] in Notion or Google Sheets, but I think
+[07:25] that's just a simple way since most of
+[07:27] you are probably using Notion or Excel
+[07:29] yourself. So, import everything into
+[07:31] notion and then create an automation
+[07:33] that will automatically post all those
+[07:36] onto those platforms. All right. The
+[07:38] next idea is to create like a daily
+[07:40] business dashboard. So each morning you
+[07:42] get a single summary of you know your
+[07:44] emails. You get a Slack message with
+[07:47] sales from Stripe or your PayPal
+[07:49] account. You get also a little
+[07:51] notification or a section where you can
+[07:53] see new subscribers of yours on places
+[07:56] like YouTube, on Instagram, on your
+[07:58] email marketing platform. So at one
+[08:00] glance, you know, on your platform, you
+[08:02] can see everything without logging to
+[08:05] dozens or you know multiple platforms in
+[08:08] at once. So every morning check that one
+[08:10] dashboard and you've got everything
+[08:12] there. All this can be automated using
+[08:14] N. Idea number five is to create an AI
+[08:17] agent so that you're creating like this
+[08:19] content idea inbox. So every time you
+[08:23] voice note let's say on your phone you
+[08:25] can run an automation. So you can
+[08:26] actually hook up WhatsApp or Telegram
+[08:28] and then when you create a voice message
+[08:31] in it and can then transcribe it, send
+[08:33] it to your content ideas page or
+[08:36] workspace or database in your notion
+[08:39] account or whatever platform that you
+[08:41] organize all your things and that way no
+[08:45] ideas get lost. So there are plenty of
+[08:47] times when I think about an idea. I'm
+[08:49] like ah just need something where I can
+[08:51] just quickly voice something and then
+[08:52] that will automatically put it into my
+[08:55] project management workspace. You know
+[08:57] what if something existed then this is a
+[09:00] great solution right by using the power
+[09:01] of N8 and you simply voice chat on
+[09:04] WhatsApp or whatever communication and
+[09:06] chat program you use and then that
+[09:08] automatically stores it to your favorite
+[09:11] project management system. The next idea
+[09:13] is an AI agent for idea validation. So
+[09:16] every time you add a video idea to again
+[09:19] your favorite project management system
+[09:21] such as notion in it and then runs it
+[09:24] through GPT or chargbt to score it on
+[09:28] like let's say search potential tension
+[09:31] hook and monetization fit whether it's
+[09:34] viable as an idea and then helps you
+[09:36] prioritize the best ideas fast. So
+[09:39] rather than doing all the guesswork, you
+[09:41] can simply enter your idea and then
+[09:43] it'll run through all these criteria and
+[09:45] then give you the green lights or the
+[09:46] red light. This is a good idea or not a
+[09:49] good idea or something that can just be
+[09:51] put on the back burner. Okay, idea
+[09:52] number seven is creating like a news
+[09:54] aggregator or something where each and
+[09:57] every day on a daily basis they send you
+[09:59] the latest news which is one great use
+[10:01] of NN really. So, in the NetN workflows
+[10:04] section, you can say something like uh
+[10:07] news and then you'll find a list of
+[10:10] workflows that you could potentially use
+[10:12] to do that. Let's be more specific and
+[10:15] say news headlines. We've got a couple
+[10:18] here. And let's say you are a regular
+[10:21] reader of Hacker News, right? And
+[10:23] there's quite a few here. Hacker News to
+[10:25] video content. Not quite what we want
+[10:27] but you can do other things like get
+[10:29] data from hacker news and send it to air
+[10:32] table or via SMS. So these kinds of
+[10:34] things that you can do to aggregate you
+[10:37] know gather all those news especially if
+[10:39] you're in the field where you're posting
+[10:41] content about the latest things about in
+[10:43] your industry. So this is extremely
+[10:45] useful or if you just want to you know
+[10:47] feed your knowledge with what's
+[10:49] happening today. Number eight is
+[10:50] automatic Gmail email labeling. And a
+[10:54] lot of emails probably going into your
+[10:56] inbox and it's not sorted. It's not
+[10:58] organized. So, a great way to do it is
+[11:01] by creating an automation that
+[11:02] automatically categorizes and labels it
+[11:04] all using the power of AI. You can see
+[11:06] how the automation works. And who's this
+[11:08] for? It's an inbox. It's for those with
+[11:11] an inbox full of unread emails. And
+[11:13] instead of reading through them one by
+[11:15] one, uh you can let AI do the sorting.
+[11:18] And here's how it works. So every hour
+[11:20] the workflow runs automatically such as
+[11:22] for unread emails and then what it does
+[11:24] is it extracts the content and sends it
+[11:26] to open AI. Then the AI returns one of
+[11:29] four labels action receipt. So all of
+[11:31] these automations that you find in the
+[11:33] workflows and the templates do work
+[11:35] differently depending on what you want.
+[11:36] But the great thing with inn is it's
+[11:38] completely flexible to you know however
+[11:41] you choose like however you want the
+[11:43] automation to work. but use it as a
+[11:46] starting ground and personalize it based
+[11:48] on the activities that you use it for
+[11:51] and for your daily process. All right,
+[11:53] number nine. This one's a great one.
+[11:54] Extract and store YouTube video comments
+[11:57] in Google Sheets. And if you're doing a
+[12:00] bit of research into and wanting to know
+[12:03] what do my audience seek, what are their
+[12:06] problems, what are they facing, so that
+[12:08] I could potentially create a new video
+[12:10] on those subjects or I could potentially
+[12:13] create an offer or a product or a
+[12:14] digital product that solves that
+[12:17] problem. You can do it all using this
+[12:19] particular and free init workflow. All
+[12:23] right, so this init template
+[12:25] demonstrates how to use the tool and
+[12:26] here's how it works. The workflow starts
+[12:28] when you manually click test flow. Uh it
+[12:31] reads the list of YouTube video URLs
+[12:33] from the YouTube from the video URLs and
+[12:36] then it reads the comments, puts it into
+[12:39] Google sheet and the great thing about
+[12:41] these automations is that it does give
+[12:43] you a set of instructions and what you
+[12:45] need uh prerequisites before you
+[12:47] actually get started. The great thing
+[12:49] about initiards
+[12:52] of actually creating the AI agent, the
+[12:54] rest is quite passive. It runs on the
+[12:56] back end whenever you need it. And
+[12:58] finally, number 10. This one is also
+[13:00] kind of news related, but if you're,
+[13:02] let's say, getting on a call with a
+[13:05] client or a company, this one scrapes
+[13:07] recent news about a company before a
+[13:10] call. So, it may be a really important
+[13:12] call for you. Let's say an interview or
+[13:15] you're working with a new client and you
+[13:18] want to build trust. This is a great way
+[13:21] because it's going to scrape uh the web
+[13:23] for news, recent news about that company
+[13:26] and then it'll give you a summary of all
+[13:28] those things. So these again are the
+[13:30] steps and this is how the automation
+[13:33] looks. But to give you an idea, it gets
+[13:35] a meeting for today. It has some filters
+[13:38] in place, extracts the company name, the
+[13:42] news, and then it formats the email so
+[13:45] that it sends it ultimately via email so
+[13:48] that you get a gist of everything that
+[13:50] you need to learn about that company and
+[13:52] the latest news of course in your email.
+[13:54] And that's just a fraction of the kinds
+[13:56] of NAN automations that you can build
+[13:58] using N8 and Hostinger on your own
+[14:01] server. I'll list all of these workflows
+[14:03] that I found in the description box
+[14:05] below. hosting a link will be in
+[14:07] description box below so you can sign
+[14:08] up, create your own N server and get
+[14:11] started. But hopefully that sparked some
+[14:13] ideas to create your own AI agents. I'll
+[14:15] link up this video right here that will
+[14:18] guide you on how I actually set up my
+[14:20] own YouTube automation system. So I'll
+[14:23] see you there.

@@ -1,0 +1,134 @@
+# Security-focused .gitignore
+# Prevents committing sensitive data
+
+# Memory and session data
+unified-memory/*.json
+.claude-memory/
+*.db
+*.db-shm
+*.db-wal
+
+# Logs that may contain sensitive information
+*.log
+logs/
+LLM_SESSIONS/sessions-*.md
+
+# Credentials and keys
+.env
+.env.local
+.env.*.local
+**/credentials.json
+**/*_key.json
+**/*_secret.json
+**/api_key*
+**/access_token*
+
+# Personal configuration
+**/config.local.json
+**/*.local.json
+
+# Backup files that might contain old configs
+backups/
+*.backup
+*.bak
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+.tmp/
+
+# OneDrive sync files
+.849C9593-D756-4E56-8D6E-42412F2A707B
+desktop.ini
+
+# Node modules and package caches
+node_modules/
+.npm/
+.yarn/
+package-lock.json
+.pnpm-store/
+
+# IDE and editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Claude-specific
+.claude/sessions/
+.claude/cache/
+Microsoft.PowerShell_profile.ps1.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Nested git repositories (have their own repos)
+.claude/agents/
+claude/projects/aarp/
+claude/projects/active-genie-nginx/
+claude/projects/n8n/workflow-repos/
+claude/projects/PeopleSoft-RAG/
+projects/aarp/
+projects/erpa/
+
+# Session and state files (auto-generated)
+.claude/session-states/
+.claude/last-session.*
+.claude/bootstrap_report.json
+.claude/memory_sync_log.json
+
+# Config backups
+.claude/settings.json.backup*
+config/backups/
+
+# Code index
+.code-index/
+
+# Exclude ALL projects folders
+projects/
+claude/projects/
+**/projects/
+
+# Claude cache and temp
+.claude/cache/
+.claude/plugins/cache/
+.claude/telemetry/
+.claude/statsig/
+.claude/history.jsonl
+.claude/logs/
+.claude/backups/
+.claude/debug/
+.claude/downloads/
+.claude/ide/
+.claude/pending_learnings.json
+.claude/session*.json
+.claude/*_counter.json
+.claude/state_hash.json
+.claude/stats-cache.json
+.claude/playbook.json
+.claude/read_tracker.json
+.beads/

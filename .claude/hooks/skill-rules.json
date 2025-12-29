@@ -1,0 +1,213 @@
+{
+  "rag-query": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "critical",
+    "promptTriggers": {
+      "keywords": [
+        "how to", "how do I", "documentation", "API", "reference",
+        "useState", "useEffect", "NextJS", "React", "AWS", "Tailwind",
+        "TypeScript", "Zustand", "TanStack", "Cognito", "API Gateway"
+      ],
+      "intentPatterns": [
+        "(how|what).*(use|implement|configure|setup)",
+        "(read|check|look at).*(docs|documentation|reference)",
+        "how does.*work"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "💡 RAG Available: Query docs with /knowledge query instead of reading files (97% token savings)"
+  },
+  "debugger": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "error", "bug", "issue", "problem", "fail", "failing",
+        "doesn't work", "not working", "broken", "crash", "exception",
+        "undefined", "null", "NaN", "TypeError", "ReferenceError"
+      ],
+      "intentPatterns": [
+        "(debug|fix|solve|resolve).*(error|bug|issue)",
+        "why (is|does|doesn't)",
+        "getting.*(error|exception|failure)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "🐛 Use debugger skill: Grep-first approach for efficient debugging (80-90% token savings)"
+  },
+  "code-reviewer": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "review", "check", "verify", "validate", "quality",
+        "code smell", "best practice", "refactor", "improve"
+      ],
+      "intentPatterns": [
+        "(review|check|verify).*(code|changes|implementation)",
+        "is this.*(good|correct|right|best)",
+        "any.*(issues|problems|improvements)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "👀 Use code-reviewer skill: Grep-based quality checks (90% token savings vs full reads)"
+  },
+  "tdd-workflow": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "medium",
+    "promptTriggers": {
+      "keywords": [
+        "test", "TDD", "test-driven", "write tests",
+        "implement", "create feature", "add feature"
+      ],
+      "intentPatterns": [
+        "(implement|create|add|build).*(feature|function|component)",
+        "(write|create|generate).*(test|spec)",
+        "test.*(first|driven)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "🧪 Use tdd-workflow skill: Test-first approach (63% token savings vs traditional)"
+  },
+  "project-setup": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "medium",
+    "promptTriggers": {
+      "keywords": [
+        "new project", "create project", "initialize project",
+        "setup project", "scaffold", "boilerplate"
+      ],
+      "intentPatterns": [
+        "(create|initialize|setup|scaffold).*(project|repo|application)",
+        "new.*(project|app|service)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "📦 Use project-setup skill: Auto-scaffold with Claude Code best practices"
+  },
+  "aws-operations": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "AWS", "ECS", "Fargate", "Cognito", "API Gateway",
+        "Lambda", "S3", "RDS", "CloudWatch", "EC2",
+        "deployment", "infrastructure", "cloud"
+      ],
+      "intentPatterns": [
+        "(deploy|check|update|configure).*(AWS|ECS|Cognito)",
+        "AWS.*(status|logs|metrics)",
+        "(authentication|auth).*(Cognito|AWS)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "☁️ Use aws-operations skill: AWS management for agdemo profile (us-east-2)"
+  },
+  "file-organizer": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "organize", "cleanup", "clean up", "declutter", "reorganize",
+        "structure", "merge files", "archive", "delete unused",
+        "duplicate", "scattered", "messy", "tidy", "sort files"
+      ],
+      "intentPatterns": [
+        "(organize|cleanup|clean|tidy|sort).*(files|project|folder)",
+        "(delete|remove|archive).*(unused|old|duplicate)",
+        "(merge|combine).*(files|similar)",
+        "files.*(wrong|scattered|messy)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "📁 Use file-organizer skill: Cleanup, merge, archive, RAG index (/file-organizer analyze)"
+  },
+  "project-enhancer": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "enhance project", "setup project", "align project", "initialize",
+        "add hooks", "add skills", "create agents", "project structure",
+        "best practices", "missing hooks", "missing skills", "scaffold"
+      ],
+      "intentPatterns": [
+        "(enhance|setup|initialize|align).*(project|repo|codebase)",
+        "(add|create|setup).*(hooks|skills|agents)",
+        "project.*(structure|best practices|claude)",
+        "(missing|need).*(hooks|skills|agents|CLAUDE.md)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "🚀 Use project-enhancer skill: Add hooks, skills, agents, update CLAUDE.md (/project-enhancer analyze)"
+  },
+  "multi-llm-orchestrator": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "medium",
+    "promptTriggers": {
+      "keywords": [
+        "multi-ai", "multiple AI", "consult", "second opinion",
+        "GLM", "Codex", "Qwen", "Gemini", "Ollama",
+        "consensus", "perspectives", "stuck", "fresh viewpoint"
+      ],
+      "intentPatterns": [
+        "(consult|ask|get).*(another AI|multiple AI|second opinion)",
+        "stuck.*(bug|error|problem)",
+        "(compare|get).*(perspectives|viewpoints)",
+        "use.*(GLM|Codex|Qwen|Gemini)"
+      ]
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "🤖 Use multi-llm-orchestrator skill: Consult GLM-4.6, Codex, Qwen, Gemini in parallel"
+  },
+  "prompt-improver": {
+    "type": "domain",
+    "enforcement": "auto",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [],
+      "intentPatterns": []
+    },
+    "fileTriggers": {
+      "pathPatterns": [],
+      "contentPatterns": []
+    },
+    "activationMessage": "💡 Prompt Improver: Evaluating clarity... (bypass with * prefix)"
+  }
+}

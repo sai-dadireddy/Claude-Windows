@@ -1,0 +1,12 @@
+# Task Automation Requirements
+# Install: pip install -r requirements.txt
+
+# Core dependency for scheduled tasks
+schedule>=1.2.0
+
+# Optional: Code formatting and linting
+black>=23.0.0
+pylint>=2.17.0
+
+# Optional: Environment management
+python-dotenv>=1.0.0

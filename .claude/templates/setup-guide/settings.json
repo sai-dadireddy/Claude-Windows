@@ -1,0 +1,253 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mcp-router__*",
+      "mcp__plugin_beads_beads__*",
+      "Bash(~/.claude/hooks/*)",
+      "Bash(~/.claude/scripts/*)",
+      "Bash(/home/claude/.claude/hooks/*)",
+      "Bash(/home/claude/.claude/scripts/*)",
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "Bash(sh)",
+      "Bash(bash)",
+      "Bash(source:*)",
+      "Bash(.:*)",
+      "Bash(uvx:*)",
+      "Bash(npx:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(uv:*)",
+      "Bash(pip:*)",
+      "Bash(pkill:*)",
+      "Bash(workmux:*)",
+      "Bash(bd:*)",
+      "Bash(/home/claude/.local/bin/*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:gist.githubusercontent.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:claudetory.com)",
+      "WebFetch(domain:blog.gitbutler.com)",
+      "WebFetch(domain:hexdocs.pm)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.claudecodeagents.com)",
+      "WebFetch(domain:www.paigeniedringhaus.com)",
+      "WebFetch(domain:danielmiessler.com)",
+      "WebFetch(domain:www.brethorsting.com)",
+      "Read(//tmp/claude/-home-claude/tasks/**)"
+    ],
+    "defaultMode": "acceptEdits",
+    "allow_file_write": true,
+    "allow_bash": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/pre_tool_use.py"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/permission_request.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/post_tool_use.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/audit_logger.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/auto_capture_memory.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/beads_integration.py"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/auto_formatter.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/code_quality.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/typecheck_changed.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/lint_changed.py"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/test_changed.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/user_prompt_submit.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/parallel_agent_reminder.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/codebase_map.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/memory_search.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/beads_reminder.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/skill_reminder.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/decision_reminder.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/notification.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/stop.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/end_of_turn_check.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/create_checkpoint.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/subagent_stop.py"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "exit 2"
+          }
+        ]
+      },
+      {
+        "matcher": "manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/pre_compact.py"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/session_start.py"
+          },
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/skill_activation.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/claude/.claude/hooks/session_end.py"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "beads@beads-marketplace": true,
+    "document-skills@anthropic-agent-skills": true,
+    "example-skills@anthropic-agent-skills": true
+  }
+}

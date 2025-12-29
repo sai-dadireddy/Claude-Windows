@@ -1,0 +1,353 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__router__*",
+      "Bash(~/.claude/hooks/*)",
+      "Bash(~/.claude/scripts/*)",
+      "Bash(C:/Users/SainathreddyDadiredd/.claude/hooks/*)",
+      "Bash(C:/Users/SainathreddyDadiredd/.claude/scripts/*)",
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "Bash(uvx:*)",
+      "Bash(npx:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(uv:*)",
+      "Bash(pip:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.anthropic.com)"
+    ],
+    "fileOperations": {
+      "read": true,
+      "write": true,
+      "delete": false,
+      "sensitiveFileProtection": true,
+      "excludePatterns": [
+        "*.env",
+        "*.key",
+        "*.pem",
+        "*credentials*",
+        ".ssh/*",
+        ".aws/credentials"
+      ]
+    },
+    "bashCommands": {
+      "allowed": true,
+      "blacklist": [
+        "rm -rf /",
+        "del /f /s /q C:\\",
+        "format",
+        "dd if="
+      ]
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/session_start.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/skill_activation.py",
+            "timeout": 2000
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/session_end.py",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/user_prompt_submit.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/parallel_agent_reminder.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/codebase_map.py",
+            "timeout": 1500
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/memory_unified.py",
+            "timeout": 1500
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/beads_reminder.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/skill_reminder.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/improve-prompt.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/intent_detector.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/auto_rag.py",
+            "timeout": 1500
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/pre_tool_use.py",
+            "timeout": 2000
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__router__router_execute",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/ollama_auto_start.py",
+            "timeout": 20000
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/permission_request.py",
+            "timeout": 2000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/post_tool_use.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/audit_logger.py",
+            "timeout": 1000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/auto_capture_memory.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/beads_integration.py",
+            "timeout": 2000
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/auto_formatter.py",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/code_quality.py",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/typecheck_changed.py",
+            "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/lint_changed.py",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/test_changed.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/notification.py",
+            "timeout": 1000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/stop.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/end_of_turn_check.py",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/create_checkpoint.py",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/subagent_stop.py",
+            "timeout": 2000
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "exit 2"
+          }
+        ]
+      },
+      {
+        "matcher": "manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/pre_compact.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "beads@beads-marketplace": true,
+    "document-skills@anthropic-agent-skills": true,
+    "example-skills@anthropic-agent-skills": true,
+    "pyright@claude-code-lsps": true,
+    "vtsls@claude-code-lsps": true,
+    "gopls@claude-code-lsps": true,
+    "rust-analyzer@claude-code-lsps": true
+  },
+  "description": "User-level Claude Code Settings (v5.0) - Full Feature Parity with Linux",
+  "version": "5.0.0",
+  "optimization": {
+    "enabled": true,
+    "projectInstructions": "CLAUDE.md",
+    "defaultModel": "claude-opus-4-5-20251101",
+    "defaultAgentModel": "haiku",
+    "effort": "high",
+    "autoOptimize": true,
+    "tokenMonitoring": true,
+    "parallelAgents": true
+  },
+  "modelPreferences": {
+    "default": "claude-opus-4-5-20251101",
+    "agents": "claude-haiku-4-5-20251101",
+    "coding": "claude-opus-4-5-20251101",
+    "architecture": "claude-opus-4-5-20251101"
+  },
+  "skills": {
+    "active": [
+      "rag-query",
+      "debugger",
+      "code-reviewer",
+      "tdd-workflow",
+      "project-setup",
+      "aws-operations",
+      "documentation-analyzer",
+      "file-organizer",
+      "project-enhancer",
+      "multi-llm-orchestrator",
+      "prompt-improver",
+      "model-routing",
+      "glm-orchestration"
+    ]
+  },
+  "mcpServers": {},
+  "context": {
+    "limit": "200K",
+    "thresholds": {
+      "healthy": "<140K (70%)",
+      "caution": "140-160K (70-80%)",
+      "warning": "160-180K (80-90%)",
+      "critical": ">180K (90%)"
+    }
+  },
+  "_metadata": {
+    "updated": "2025-12-26",
+    "version": "5.0 Full Linux Parity",
+    "note": "Full feature parity with Linux version, Windows paths configured"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccstatusline@latest"
+  }
+}

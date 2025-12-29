@@ -1,0 +1,26 @@
+{
+  "beads-marketplace": {
+    "source": {
+      "source": "github",
+      "repo": "steveyegge/beads"
+    },
+    "installLocation": "/home/claude/.claude/plugins/marketplaces/beads-marketplace",
+    "lastUpdated": "2025-12-15T16:29:52.599Z"
+  },
+  "anthropic-agent-skills": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/skills"
+    },
+    "installLocation": "/home/claude/.claude/plugins/marketplaces/anthropic-agent-skills",
+    "lastUpdated": "2025-12-15T16:51:06.079Z"
+  },
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/claude/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2025-12-23T20:46:42.494Z"
+  }
+}

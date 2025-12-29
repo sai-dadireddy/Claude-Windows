@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Slash Commands - Cheat Sheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            padding: 20px;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            background: #f5f5f5;
+            border-radius: 6px;
+            overflow: hidden;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-content {
+            padding: 12px;
+        }
+
+        .command {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .command:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .command-name {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+            font-size: 11px;
+        }
+
+        .command-desc {
+            color: #666;
+            font-size: 10px;
+        }
+
+        .key {
+            display: inline-block;
+            background: #2d2d2d;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+
+        .table th {
+            background: #e8e8e8;
+            padding: 6px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .table td {
+            padding: 6px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table-code {
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            color: #1a1a1a;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid #ff6b35;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .footer-highlight {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+
+        .icon {
+            font-size: 14px;
+        }
+
+        @media print {
+            body {
+                padding: 10px;
+            }
+            .grid {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Row 1 -->
+        <div class="grid">
+            <!-- Session Management -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🚀</span> SESSION MANAGEMENT
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/load-global</div>
+                        <div class="command-desc">Load complete CLAUDE.md (all 47 modules)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/load-global lite</div>
+                        <div class="command-desc">Load CLAUDE-LITE (85% token savings)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/save-session [name] [notes]</div>
+                        <div class="command-desc">Save current session state for fast resume</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/resume-session [name]</div>
+                        <div class="command-desc">Resume saved session with full context</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/smart-resume</div>
+                        <div class="command-desc">Intelligent resume (auto-detect changes, 90%+ savings)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Setup & Management -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🔧</span> SETUP & MANAGEMENT
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/mcp</div>
+                        <div class="command-desc">View MCP server status (13+ configured)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/project [name]</div>
+                        <div class="command-desc">Switch between projects with context loading</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/agents</div>
+                        <div class="command-desc">Browse directory of 90+ specialized AI agents</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/auto-optimize</div>
+                        <div class="command-desc">Get optimization recommendations for your setup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid">
+            <!-- AI News & Research -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">📰</span> AI NEWS & RESEARCH
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/ai-news</div>
+                        <div class="command-desc">View AI news dashboard (30+ sources aggregated)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/n8n</div>
+                        <div class="command-desc">Start n8n automation platform and open dashboard</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/research-video [YouTube URL]</div>
+                        <div class="command-desc">Extract and analyze YouTube video transcripts</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/morning</div>
+                        <div class="command-desc">Personal AI assistant briefing (progress + AI news + inspiration)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Analysis -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🔍</span> CODE ANALYSIS & REVIEW
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/analyze</div>
+                        <div class="command-desc">Comprehensive 6-part analysis (quality, performance, architecture, testing, security, refactoring)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/analyze-files [pattern]</div>
+                        <div class="command-desc">Analyze specific files or patterns</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/review-code</div>
+                        <div class="command-desc">Code review with industry best practices</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/auto-review</div>
+                        <div class="command-desc">Automated code review triggered on file changes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid">
+            <!-- Testing -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🧪</span> TESTING & AUTOMATION
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/test</div>
+                        <div class="command-desc">Playwright test automation overview</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/test-plan [URL]</div>
+                        <div class="command-desc">Launch Planner agent - explore website and create test scenarios</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/test-generate [plan-file]</div>
+                        <div class="command-desc">Launch Generator agent - convert plans to executable Playwright tests</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/test-heal [test-file]</div>
+                        <div class="command-desc">Launch Healer agent - automatically fix broken tests</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/generate-tests [file]</div>
+                        <div class="command-desc">Auto-generate unit tests for code</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🔒</span> SECURITY ANALYSIS
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/security-analyze</div>
+                        <div class="command-desc">Deep security analysis with XML structure + ultrathink mode (Anthropic best practices)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/security-audit</div>
+                        <div class="command-desc">Comprehensive security audit with compliance checking (OWASP, GDPR, SOC2)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/security-review</div>
+                        <div class="command-desc">Run automated security analysis with guardrails</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/security-scan</div>
+                        <div class="command-desc">Quick security scan (same as security-review)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="grid">
+            <!-- Development -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🛠️</span> DEVELOPMENT & DEBUGGING
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/debug-issue [description]</div>
+                        <div class="command-desc">Systematic debugging workflow with root cause analysis</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/optimize-performance</div>
+                        <div class="command-desc">Performance optimization analysis and recommendations</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/refactor-safe [file]</div>
+                        <div class="command-desc">Safe refactoring with automated validation</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/deploy-check</div>
+                        <div class="command-desc">Pre-deployment validation checks (security, tests, config)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autonomous -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🤖</span> AUTONOMOUS MODES
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/autonomous</div>
+                        <div class="command-desc">Enable autonomous mode with supervision</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/godmode</div>
+                        <div class="command-desc">⚠️ MAXIMUM POWER - Full autonomous capabilities (use carefully)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/turbo</div>
+                        <div class="command-desc">Turbo mode alias for autonomous</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/full-auto</div>
+                        <div class="command-desc">Full automation mode</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/stop</div>
+                        <div class="command-desc">Stop autonomous/godmode operation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="grid">
+            <!-- Productivity -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🎯</span> PRODUCTIVITY & UTILITIES
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">/create-presentation [topic]</div>
+                        <div class="command-desc">Generate professional PowerPoint presentations (.pptx)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/improve-prompt [your-prompt]</div>
+                        <div class="command-desc">Claude Smart Improver - One-click prompt optimization</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/rate-me</div>
+                        <div class="command-desc">Comprehensive AI engineering performance review</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">/web-fetch-fix [URL]</div>
+                        <div class="command-desc">Smart web fetching using Playwright (better than WebFetch)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key File Locations -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">📁</span> KEY FILE LOCATIONS
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">~/.claude/settings.json</div>
+                        <div class="command-desc">User global settings</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">.claude/settings.json</div>
+                        <div class="command-desc">Project-specific settings</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">.claude/commands/</div>
+                        <div class="command-desc">Custom slash commands (38 available)</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">.claude/session-states/</div>
+                        <div class="command-desc">Saved session states</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">CLAUDE.md</div>
+                        <div class="command-desc">Master configuration (47 modules)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="grid">
+            <!-- Token Optimization -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">📊</span> TOKEN OPTIMIZATION
+                </div>
+                <div class="section-content">
+                    <table class="table">
+                        <tr>
+                            <th>Strategy</th>
+                            <th>Tokens</th>
+                            <th>Best For</th>
+                        </tr>
+                        <tr>
+                            <td class="table-code">/load-global</td>
+                            <td>15-20K</td>
+                            <td>Full work sessions ✅</td>
+                        </tr>
+                        <tr>
+                            <td class="table-code">/load-global lite</td>
+                            <td>2-3K</td>
+                            <td>Quick tasks</td>
+                        </tr>
+                        <tr>
+                            <td class="table-code">/resume-session</td>
+                            <td>5K</td>
+                            <td>Daily continuity ⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="table-code">/smart-resume</td>
+                            <td>5-10K</td>
+                            <td>Zero compromise ⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="table-code">No resume (restart)</td>
+                            <td>82K+</td>
+                            <td>❌ Avoid</td>
+                        </tr>
+                    </table>
+                    <div style="margin-top: 8px; font-weight: 600; color: #ff6b35;">
+                        💰 Savings: 94% token reduction with session resume!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular MCP Servers -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="icon">🔌</span> POPULAR MCP SERVERS
+                </div>
+                <div class="section-content">
+                    <div class="command">
+                        <div class="command-name">code-index-mcp</div>
+                        <div class="command-desc">Code search & indexing</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">sequential-thinking</div>
+                        <div class="command-desc">Chain-of-thought reasoning</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">memory-auto</div>
+                        <div class="command-desc">Persistent memory across sessions</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">playwright</div>
+                        <div class="command-desc">Browser automation & testing</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">github</div>
+                        <div class="command-desc">GitHub operations</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">aws</div>
+                        <div class="command-desc">AWS cloud operations</div>
+                    </div>
+                    <div class="command">
+                        <div class="command-name">+ 7 more MCPs configured</div>
+                        <div class="command-desc">langchain, ai-workflows, context7, code-indexing, testing, etc.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 7 - Full Width -->
+        <div class="section">
+            <div class="section-header">
+                <span class="icon">💡</span> QUICK START PATTERNS
+            </div>
+            <div class="section-content">
+                <div class="grid">
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 6px;">Daily Development</div>
+                        <div class="command-name">/load-global</div>
+                        <div class="command-name">/morning</div>
+                        <div class="command-desc">[work for hours]</div>
+                        <div class="command-name">/save-session today "current work"</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 6px;">Resume Session</div>
+                        <div class="command-name">/resume-session today</div>
+                        <div class="command-desc">[continue immediately with full context]</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 6px;">New Feature</div>
+                        <div class="command-name">/load-global → /analyze</div>
+                        <div class="command-desc">[implement]</div>
+                        <div class="command-name">/generate-tests → /security-analyze → /deploy-check</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 6px;">Bug Fix</div>
+                        <div class="command-name">/load-global → /debug-issue "description"</div>
+                        <div class="command-desc">[fix bug]</div>
+                        <div class="command-name">/test-heal tests/ → /deploy-check</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Get the full interactive documentation at <span class="footer-highlight">SLASH-COMMANDS-CHEATSHEET.md</span><br>
+            Claude Code Custom Setup • Total Commands: 38 • Total Modules: 47 • Total MCPs: 13+ • Total Agents: 90+
+        </div>
+
+    </div>
+</body>
+</html>

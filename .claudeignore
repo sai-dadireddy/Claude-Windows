@@ -1,0 +1,133 @@
+# Claude Code Security Ignore File
+# Files and patterns that Claude Code should NEVER access
+
+# ============================================
+# CREDENTIALS & SECRETS
+# ============================================
+*.env
+.env*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+secrets.json
+secrets.yml
+secrets.yaml
+auth.json
+token.json
+.credentials
+.secrets
+
+# ============================================
+# SSH & GPG KEYS
+# ============================================
+.ssh/
+.ssh/*
+id_rsa
+id_ed25519
+*.ppk
+.gnupg/
+.gpg
+
+# ============================================
+# CLOUD PROVIDER CREDENTIALS
+# ============================================
+.aws/
+.aws/*
+!.aws/config
+.azure/
+.gcloud/
+.kube/config
+.kubeconfig
+gcp-credentials.json
+azure-credentials.json
+service-account*.json
+
+# ============================================
+# DATABASE & CONNECTION STRINGS
+# ============================================
+database.yml
+!database.example.yml
+*.sqlite
+*.db
+*.sql
+connection-strings.json
+.pgpass
+.my.cnf
+
+# ============================================
+# API KEYS & TOKENS
+# ============================================
+*api-key*
+*apikey*
+*access-token*
+*secret-key*
+*private-key*
+*auth-token*
+*.cer
+*.crt
+
+# ============================================
+# APPLICATION SECRETS
+# ============================================
+appsettings.Production.json
+application-prod.yml
+config/production.json
+.npmrc
+.pypirc
+.docker/config.json
+.netrc
+
+# ============================================
+# SENSITIVE DATA
+# ============================================
+*password*
+*passwords*
+!password-policy.md
+customer-data/
+pii-data/
+phi-data/
+backup/
+dumps/
+
+# ============================================
+# BUILD & DEPENDENCY FILES
+# ============================================
+node_modules/
+venv/
+.venv/
+vendor/
+.gradle/
+.m2/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ============================================
+# VERSION CONTROL & TEMP
+# ============================================
+.git/
+.svn/
+.hg/
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*~
+
+# ============================================
+# CLAUDE-SPECIFIC
+# ============================================
+.claude/audit-log.json
+.claude/session-*.json
+.claude/temp/
+
+# ============================================
+# CUSTOM SENSITIVE PATTERNS
+# ============================================
+# Add your organization-specific patterns here

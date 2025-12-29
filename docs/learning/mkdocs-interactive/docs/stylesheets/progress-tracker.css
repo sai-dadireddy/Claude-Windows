@@ -1,0 +1,416 @@
+/**
+ * Progress Tracker Styles for AI Learning Syllabus
+ */
+
+/* Topic Checkbox Container */
+.topic-checkbox-container {
+    background: var(--md-code-bg-color);
+    border-left: 4px solid var(--md-primary-fg-color);
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.topic-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.topic-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-weight: 500;
+    color: var(--md-default-fg-color);
+}
+
+.topic-checkbox input[type="checkbox"]:checked + .checkbox-label {
+    color: var(--md-accent-fg-color);
+}
+
+.completion-date {
+    font-size: 0.875rem;
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+}
+
+/* Progress Bars */
+.progress-bar-container {
+    margin: 1.5rem 0;
+}
+
+.progress-bar-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: var(--md-code-bg-color);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg,
+        var(--md-primary-fg-color),
+        var(--md-accent-fg-color));
+    transition: width 0.3s ease;
+    border-radius: 12px;
+}
+
+/* Dashboard Layout */
+#progress-dashboard {
+    padding: 2rem 0;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--md-code-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--md-default-fg-color--light);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+    margin: 0.5rem 0;
+}
+
+.stat-detail {
+    font-size: 0.875rem;
+    color: var(--md-default-fg-color--light);
+}
+
+.dashboard-progress,
+.dashboard-recent {
+    background: var(--md-code-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.dashboard-progress h3,
+.dashboard-recent h3 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+}
+
+.part-progress {
+    margin-bottom: 1rem;
+}
+
+.part-progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.recent-topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-topics-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.recent-topics-list li:last-child {
+    border-bottom: none;
+}
+
+.topic-name {
+    font-weight: 500;
+}
+
+.topic-date {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.875rem;
+}
+
+.no-recent {
+    text-align: center;
+    color: var(--md-default-fg-color--light);
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* Notes Section */
+.topic-notes-container {
+    background: var(--md-code-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.topic-notes-container h4 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+}
+
+.topic-notes-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.875rem;
+    resize: vertical;
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+}
+
+.topic-notes-textarea:focus {
+    outline: none;
+    border-color: var(--md-primary-fg-color);
+}
+
+.notes-auto-save {
+    font-size: 0.75rem;
+    color: var(--md-default-fg-color--light);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Action Buttons */
+.dashboard-actions {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--md-primary-fg-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--md-accent-fg-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: var(--md-code-bg-color);
+    color: var(--md-default-fg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.btn-secondary:hover {
+    background: var(--md-default-fg-color--lightest);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-checkbox-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .completion-date {
+        align-self: flex-end;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+}
+
+/* Dark Mode Adjustments */
+[data-md-color-scheme="slate"] .stat-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .stat-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Print Styles */
+@media print {
+    .topic-checkbox-container,
+    .dashboard-actions,
+    .topic-notes-container {
+        page-break-inside: avoid;
+    }
+
+    .btn {
+        display: none;
+    }
+}
+
+/* Accessibility */
+.topic-checkbox input[type="checkbox"]:focus {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 2px;
+}
+
+.btn:focus {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes progressFill {
+    from {
+        width: 0;
+    }
+}
+
+.progress-bar-fill {
+    animation: progressFill 1s ease-out;
+}
+
+/* Study Mode Tags */
+.study-mode-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 0.5rem;
+}
+
+.study-mode-learn {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.study-mode-practice {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.study-mode-deploy {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+[data-md-color-scheme="slate"] .study-mode-learn {
+    background: rgba(25, 118, 210, 0.2);
+    color: #90caf9;
+}
+
+[data-md-color-scheme="slate"] .study-mode-practice {
+    background: rgba(123, 31, 162, 0.2);
+    color: #ce93d8;
+}
+
+[data-md-color-scheme="slate"] .study-mode-deploy {
+    background: rgba(56, 142, 60, 0.2);
+    color: #a5d6a7;
+}
+
+/* Provider Icons */
+.provider-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.provider-claude {
+    background: rgba(204, 102, 51, 0.1);
+    color: #cc6633;
+}
+
+.provider-gpt {
+    background: rgba(16, 163, 127, 0.1);
+    color: #10a37f;
+}
+
+.provider-gemini {
+    background: rgba(66, 133, 244, 0.1);
+    color: #4285f4;
+}
