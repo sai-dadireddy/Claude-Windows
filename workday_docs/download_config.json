@@ -1,131 +1,63 @@
 {
   "base_url": "https://doc.workday.com",
-  "pdf_base": "/content/dam/fmdita-outputs/pdfs/admin-guide/en-us/",
+  "pdf_base_admin": "/content/dam/fmdita-outputs/pdfs/admin-guide/en-us/",
+  "pdf_base_user": "/content/dam/fmdita-outputs/pdfs/user-guide/en-us/",
   "guides_page": "https://doc.workday.com/en-us/guides.html",
   "auth_required": true,
-  "auth_url": "https://doc.workday.com",
   "guides": [
-    {
-      "name": "Human Capital Management",
-      "url": "/admin-guide/en-us/human-capital-management/human-capital-management.html",
-      "pdf": "Admin-Guide-Human-Capital-Management.pdf",
-      "access": "confirmed"
-    },
-    {
-      "name": "Financial Management",
-      "url": "/admin-guide/en-us/financial-management/financial-management.html",
-      "pdf": "Admin-Guide-Financial-Management.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Spend Management",
-      "url": "/admin-guide/en-us/spend-management/spend-management.html",
-      "pdf": "Admin-Guide-Spend-Management.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Payroll",
-      "url": "/admin-guide/en-us/payroll/payroll.html",
-      "pdf": "Admin-Guide-Payroll.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Strategic Sourcing Managers",
-      "url": "/admin-guide/en-us/strategic-sourcing/sourcing-managers-user-guide.html",
-      "pdf": "Admin-Guide-Strategic-Sourcing-Managers.pdf",
-      "access": "public"
-    },
-    {
-      "name": "Strategic Sourcing Suppliers",
-      "url": "/admin-guide/en-us/strategic-sourcing/suppliers-user-guide.html",
-      "pdf": "Admin-Guide-Strategic-Sourcing-Suppliers.pdf",
-      "access": "public"
-    },
-    {
-      "name": "Manage Workday",
-      "url": "/admin-guide/en-us/manage-workday/manage-workday.html",
-      "pdf": "Admin-Guide-Manage-Workday.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Authentication and Security",
-      "url": "/admin-guide/en-us/authentication-and-security/authentication-and-security.html",
-      "pdf": "Admin-Guide-Authentication-and-Security.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Integrations EIB",
-      "url": "/admin-guide/en-us/integrations/integrations.html",
-      "pdf": "Admin-Guide-Integrations.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Reporting and Analytics",
-      "url": "/admin-guide/en-us/reporting-and-analytics/reporting-and-analytics.html",
-      "pdf": "Admin-Guide-Reporting-and-Analytics.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Prism Analytics",
-      "url": "/admin-guide/en-us/prism-analytics/prism-analytics.html",
-      "pdf": "Admin-Guide-Prism-Analytics.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Workday Studio",
-      "url": "/admin-guide/en-us/workday-studio/workday-studio.html",
-      "pdf": "Admin-Guide-Workday-Studio.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Education and Government",
-      "url": "/admin-guide/en-us/education-and-government/education-and-government.html",
-      "pdf": "Admin-Guide-Education-and-Government.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Adaptive Planning",
-      "url": "/admin-guide/en-us/adaptive-planning/adaptive-planning.html",
-      "pdf": "Admin-Guide-Adaptive-Planning.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "People Analytics",
-      "url": "/user-guide/en-us/people-analytics/people-analytics.html",
-      "pdf": "User-Guide-People-Analytics.pdf",
-      "access": "public"
-    },
-    {
-      "name": "Discovery Boards",
-      "url": "/user-guide/en-us/discovery-boards/discovery-boards.html",
-      "pdf": "User-Guide-Discovery-Boards.pdf",
-      "access": "public"
-    },
-    {
-      "name": "Glossary",
-      "url": "/admin-guide/en-us/glossary/full-glossary-of-terms.html",
-      "pdf": "Admin-Guide-Glossary.pdf",
-      "access": "locked"
-    },
-    {
-      "name": "Use Case Library",
-      "url": "/admin-guide/en-us/use-case-library/use-case-library.html",
-      "pdf": "Admin-Guide-Use-Case-Library.pdf",
-      "access": "public"
-    }
+    {"category": "Human Capital Management", "name": "Human Capital Management", "url": "/admin-guide/en-us/human-capital-management.html", "type": "admin", "status": "pending"},
+    {"category": "Human Capital Management", "name": "Workday VNDLY", "url": "/admin-guide/en-us/vndly-documentation/vndly.html", "type": "admin", "status": "pending"},
+    {"category": "Platform", "name": "Manage Workday", "url": "/admin-guide/en-us/manage-workday/manage-workday.html", "type": "admin", "status": "pending"},
+    {"category": "Platform", "name": "Authentication and Security", "url": "/admin-guide/en-us/authentication-and-security/authentication-and-security.html", "type": "admin", "status": "pending"},
+    {"category": "Platform", "name": "Drive User Guide", "url": "/user-guide/en-us/workday-drive.html", "type": "user", "status": "pending"},
+    {"category": "Platform", "name": "Slides User Guide", "url": "/user-guide/en-us/workday-slides.html", "type": "user", "status": "pending"},
+    {"category": "Platform", "name": "Worksheets User Guide", "url": "/user-guide/en-us/workday-worksheets.html", "type": "user", "status": "pending"},
+    {"category": "Platform", "name": "Notification Designer User Guide", "url": "/user-guide/en-us/workday-notification-designer.html", "type": "user", "status": "pending"},
+    {"category": "Platform", "name": "Docs for Layouts User Guide", "url": "/user-guide/en-us/workday-docs-for-layouts.html", "type": "user", "status": "pending"},
+    {"category": "Platform", "name": "Workday Central Login User Guide", "url": "/user-guide/en-us/workday-central-login-wcl-/wev1666724954446.html", "type": "user", "status": "pending"},
+    {"category": "Financials and Spend", "name": "Financial Management", "url": "/admin-guide/en-us/financial-management/financial-management.html", "type": "admin", "status": "pending"},
+    {"category": "Financials and Spend", "name": "Spend Management", "url": "/admin-guide/en-us/spend-management/spend-management.html", "type": "admin", "status": "pending"},
+    {"category": "Financials and Spend", "name": "Strategic Sourcing Managers", "url": "/user-guide/en-us/strategic-sourcing-sourcing-managers/strategic-sourcing-for-sourcing-managers.html", "type": "user", "status": "pending"},
+    {"category": "Financials and Spend", "name": "Strategic Sourcing Suppliers", "url": "/user-guide/en-us/strategic-sourcing.html", "type": "user", "status": "pending"},
+    {"category": "Product Extensions", "name": "Integrations EIB", "url": "/admin-guide/en-us/integrations.html", "type": "admin", "status": "pending"},
+    {"category": "Product Extensions", "name": "Prism Analytics Admin", "url": "/admin-guide/en-us/reporting-and-analytics/prism-analytics/qgq1497977466556.html", "type": "admin", "status": "pending"},
+    {"category": "Product Extensions", "name": "Workday Studio", "url": "/admin-guide/en-us/workday-studio.html", "type": "admin", "status": "pending"},
+    {"category": "Payroll", "name": "Payroll", "url": "/admin-guide/en-us/payroll/payroll.html", "type": "admin", "status": "pending"},
+    {"category": "Payroll", "name": "Global Payroll Connect", "url": "/admin-guide/en-us/integrations/global-payroll-connect/concept--global-payroll-connect.html", "type": "admin", "status": "pending"},
+    {"category": "Education and Government", "name": "Education and Government", "url": "/admin-guide/en-us/education-and-government/education-and-government.html", "type": "admin", "status": "pending"},
+    {"category": "Education and Government", "name": "Student", "url": "/admin-guide/en-us/student/setup-considerations--workday-student.html", "type": "admin", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "Reporting and Analytics", "url": "/admin-guide/en-us/reporting-and-analytics/reporting-and-analytics.html", "type": "admin", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "Adaptive Planning and Consolidation", "url": "/admin-guide/en-us/adaptive-planning-and-consolidation.html", "type": "admin", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "Planning for HCM and Financials", "url": "/admin-guide/en-us/adaptive-planning.html", "type": "admin", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "People Analytics User Guide", "url": "/user-guide/en-us/workday-people-analytics/people-analytics.html", "type": "user", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "Prism Analytics User Guide", "url": "/user-guide/en-us/workday-prism-analytics.html", "type": "user", "status": "pending"},
+    {"category": "Analytics and Planning", "name": "Discovery Boards User Guide", "url": "/user-guide/en-us/workday-discovery-boards/luj1584405722594.html", "type": "user", "status": "pending"},
+    {"category": "Reference", "name": "Release Notes", "url": "/admin-guide/en-us/administrator-guide-release-notes/about-workday-documentation-relnotes.html", "type": "admin", "status": "pending"},
+    {"category": "Reference", "name": "Glossary", "url": "/admin-guide/en-us/glossary/full-glossary-of-terms.html", "type": "admin", "status": "pending"},
+    {"category": "Reference", "name": "Workday Feature Descriptions", "url": "/admin-guide/en-us/workday-feature-descriptions/future--workday-feature-descriptions.html", "type": "admin", "status": "pending"},
+    {"category": "Reference", "name": "Use Case Library", "url": "/admin-guide/en-us/use-case-library/use-case-library.html", "type": "admin", "status": "pending"},
+    {"category": "Reference", "name": "QuickTips Sample Library", "url": "/admin-guide/en-us/manage-workday/user-experience/guidance-workspace/quicktips-sample-library/concept--quicktips-sample-library.html", "type": "admin", "status": "pending"},
+    {"category": "Reference", "name": "Guidance Workspace", "url": "/admin-guide/en-us/manage-workday/user-experience/guidance-workspace/future--concept--guidance-workspace.html", "type": "admin", "status": "pending"},
+    {"category": "Help Centers", "name": "Adaptive Planning Help", "url": "/en-us/adaptive-planning.html", "type": "help", "status": "pending"},
+    {"category": "Help Centers", "name": "Contract Management Help", "url": "/en-us/contract-management-document-intelligence.html", "type": "help", "status": "pending"},
+    {"category": "Help Centers", "name": "HiredScore Help", "url": "/en-us/hiredscore.html", "type": "help", "status": "pending"},
+    {"category": "Help Centers", "name": "Peakon Help", "url": "/en-us/peakon.html", "type": "help", "status": "pending"}
+  ],
+  "external_links": [
+    {"name": "Workday Paradox", "url": "https://paradox.helpjuice.com/"},
+    {"name": "Workday Sana Learn", "url": "https://help.sana.ai/en/"},
+    {"name": "Developer Site", "url": "https://developer.workday.com/documentation"},
+    {"name": "REST Services Directory", "url": "https://community.workday.com/sites/default/files/file-hosting/restapi/index.html"},
+    {"name": "SOAP Web Services Directory", "url": "https://community.workday.com/sites/default/files/file-hosting/productionapi/index.html"},
+    {"name": "FlowiseAI", "url": "https://docs.flowiseai.com/"},
+    {"name": "Workday Sana Agent Builder", "url": "https://support.sana.ai/en/"}
   ],
   "download_strategy": {
-    "method": "browser_automation",
+    "method": "browser_click_pdf_button",
     "delay_between_downloads_sec": 30,
-    "use_random_delay": true,
     "random_delay_range": [20, 60],
-    "max_downloads_per_session": 5,
-    "require_login": true
+    "max_per_session": 5
   },
-  "notes": [
-    "PDF URLs follow pattern: base_url + pdf_base + pdf filename",
-    "Access levels: public (no login), locked (need customer login), confirmed (tested access)",
-    "Use Workday agent with browser automation to download with natural timing",
-    "Each session: login -> download 3-5 PDFs -> logout -> wait -> repeat"
-  ]
+  "total_internal_guides": 37,
+  "total_external_links": 7
 }
