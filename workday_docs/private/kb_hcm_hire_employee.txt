@@ -1,0 +1,161 @@
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: 2025R1
+- Posted: 2025-02-03 | Updated: 2025-06-18
+
+## Overview
+
+The **Hire Employee business process** is a critical workflow within Workday Human Capital Management (HCM) that facilitates the transition of a candidate into an employee. This process encompasses several key stages and can be configured as a consolidated business process.
+
+## Key Components
+
+### 1. Initiation
+The process begins when an authorized user, such as a recruiter or HR partner, triggers the Hire Employee task. This task allows for enhanced search capabilities to prevent duplicate records by checking for existing pre-hires or former employees.
+
+### 2. Steps and Subprocesses
+
+The Hire business process includes various steps and subprocesses:
+
+#### Core Steps:
+- **Propose Compensation**: Determines the new hire's salary and compensation components
+- **Create Workday Account**: Generates the new hire's account for system access
+- **Onboarding**: Manages tasks related to the new hire after the hiring process is complete
+
+#### Consolidated Template Sub-Processes (2025R1):
+You can add these sub business processes to the consolidated template:
+- Assign Employee Collective Agreement
+- Assign Pay Group
+- Change Organization Assignments for Worker
+- Edit Government IDs
+- Edit Service Dates
+- Payment Election Enrollment Event
+- Propose Compensation Hire
+
+### 3. Security and Permissions
+The process is governed by security groups that define who can initiate and approve various steps. Proper configuration is essential to ensure that the right stakeholders are involved at the appropriate stages.
+
+### 4. Data Accuracy and Automation
+A well-configured Hire business process ensures data accuracy and automates tasks like account creation and notifications, facilitating a seamless transition from candidate to employee.
+
+### 5. Business Process Status Report
+This report is used to track the progress of hire events and identify any bottlenecks. It allows for task reassignment if necessary.
+
+### 6. Common Issues
+Potential issues may arise, such as:
+- Incorrect approvals
+- Unavailability of positions
+
+Solutions typically involve reviewing the business process definition and ensuring that all conditions for the position are met.
+
+## Business Benefits (2025R1)
+
+The Hire Employee task redesign and consolidated Hire experience helps to:
+- Streamline the hiring process
+- Increase efficiency by reducing manual effort
+- Add compensation to consolidated template, making it easier to propose compensation for new hires
+
+## Changes in 2025R1
+
+### Hire Employee Task Redesign
+- More intuitive and modern layout
+- Automatically available in tenant
+- Enhanced user interface
+
+### Consolidated Templates
+Available sub business processes:
+1. Assign Employee Collective Agreement
+2. Assign Pay Group
+3. Change Organization Assignments for Worker
+4. Edit Government IDs
+5. Edit Service Dates
+6. Payment Election Enrollment Event
+7. Propose Compensation Hire
+
+### Configuration Notes:
+- For consolidated review or approval: Add the Review or Approval step to step (b) on your Hire business process definition
+- Exit validations: Must be configured on the initiation step (a) to trigger during a consolidated hire event
+- The order of sub business processes is predefined by Workday and cannot be changed
+- For former employee hires: Consolidated hire payment elections event doesn't check for previous payment elections
+
+### Hiding/Requiring Information:
+To configure fields in the right-hand panel of the Hire Employee task:
+1. Access the Configure Optional Fields task
+2. Select Hire for the Functional Area value
+3. Configure the Worker Information and Recruiting Information fields
+
+## Implementation Steps
+
+### What Do I Need to Do?
+
+1. **Business Process Configuration**:
+   - On the Hire business process type, select the relevant initiating actions for your organization
+   - Update the security groups accordingly
+
+2. **Access Consolidated Template**:
+   - Select the Hire business process
+   - Select Related Actions > Business Process policy > View
+   - Select Related Actions > Business Process
+   - Select either Configure Consolidated Template or Configure Rules Based Consolidated Template
+
+3. **(Optional)** Add Propose Compensation Hire as a Business Process Type
+
+4. **Recommended Configuration**:
+   - When configuring Assign Pay Group and Payment Election Enrollment Event as subprocesses, also configure Change Organization Assignments for Worker
+   - This ensures accuracy and efficiency in processing payroll
+   - You must select a company on the Change Organization Assignments for Worker step to add a worker to a Workday payroll pay group
+
+5. **Payment Elections Prerequisites**:
+   - Configured payment election rules
+   - Assigned the worker to a pay group
+
+### View and Modify Access Requirements
+
+Ensure users have View and Modify access to relevant sub business process domains:
+
+| Sub-Process | Required Domain Access |
+|-------------|------------------------|
+| Government IDs | Person Data: Government IDs |
+| Service Dates | Worker Data: Service Dates |
+| Organization Assignments | Staffing Organizations: Header |
+| Collective Agreement | Worker Data: Collective Agreements |
+| Assign Pay Group | Worker Data: Payroll (Pay Group Specific) OR Worker Data: Payroll Interface (Pay Group Specific) |
+| Payment Elections | Worker Data: Payroll (Payment Elections) OR Manage: Payment Election OR Worker Data: Payroll Interface (Pay Group Specific) |
+| Compensation | Refer to Administrator Guide for full list |
+
+## Known Issues (2025R1)
+
+- When collective agreement is consolidated, defaulting doesn't work and requires the user to manually select the collective agreement
+
+## Automation Considerations
+
+For Electron/UI automation, the Hire Employee process involves:
+1. **Navigation**: Search for and access "Hire Employee" task
+2. **Search for Candidate**: Enhanced search to check for existing pre-hires or former employees
+3. **Fill Required Fields**: Worker information, recruiting information
+4. **Compensation Proposal**: If using consolidated template with Propose Compensation
+5. **Account Creation**: Workday account setup (may be automated)
+6. **Approval Routing**: Submit for approval if configured
+7. **Onboarding Tasks**: Post-hire task management
+
+## Related Business Processes
+
+- Propose Compensation
+- Create Position
+- Job Requisition
+- Onboarding
+- Change Organization Assignments
+
+## References
+
+- Hire Business Process - User Experience DPG
+- Concept: Hire Event Business Process Guidelines
+- Templates for Proposed Compensation Hire
+- Hire Consolidation – Example of sub-process validation on initiation step of Hire BP
+
+## Effective Management
+
+By effectively managing the Hire Employee business process, organizations can streamline their hiring efforts and enhance the overall experience for both HR and new employees.
