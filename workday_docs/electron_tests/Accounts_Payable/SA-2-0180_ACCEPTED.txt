@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: SA-2-0180
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Copy a Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Copy a supplier invoice and route for approval
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Related Action from the Supplier Invoice > Supplier Invoice > Copy"
+2. wait for search results
+3. click search result containing "Related Action from the Supplier Invoice > Supplier Invoice > Copy"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-2-0180_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Copy a Supplier Invoice
+- Template Used: default
+- RAG Query: "Related Action from the Supplier Invoice > Supplier Invoice > Copy"
+
+NOTES:
+
+================================================================================
