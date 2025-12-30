@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRNXE-4-0010-02
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Create Course - Extended Enterprise Learners
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners that are not Learning Administrators cannot create courses
+
+ORIGINAL TASK:
+Create Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0010-02
+# Task: Create Course
+3. 
+4. enter search box as "Create Course"
+5. wait 2
+6. click search result containing "Create Course"
+7. wait for page to load
+8. screenshot as "LRNXE-4-0010-02_complete.png"

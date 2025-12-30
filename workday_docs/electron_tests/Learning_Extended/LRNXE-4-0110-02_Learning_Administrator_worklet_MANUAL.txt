@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0110-02
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Express Interest Notification - Extended Enterprise Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the learning administrator can see the learners on the Expression of Interest in Learning Courses report
+
+ORIGINAL TASK:
+Learning Administrator worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0110-02
+# Task: Learning Administrator worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Learning Administrator worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

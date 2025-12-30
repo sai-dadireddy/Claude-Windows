@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0210-01
+FUNCTIONAL AREA: Learning
+TEST NAME: My Team's Learning Report
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Managers can view their team's Learner Transcript using the My Team's Learning report
+
+ORIGINAL TASK:
+My Team Management worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0210-01
+# Task: My Team Management worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: My Team Management worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

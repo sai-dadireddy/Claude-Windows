@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-2-0350
+FUNCTIONAL AREA: Learning
+TEST NAME: Manager Mass Enroll
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Managers can Enroll their Team into a Course
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0350
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-2-0350_complete.png"

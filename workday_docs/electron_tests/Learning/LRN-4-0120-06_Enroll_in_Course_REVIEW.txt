@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0120-06
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering Enrollment - Absence Validation
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that an alert is displayed when a learner attempts to enroll in a course while on a Leave of Absence or approved time off. This scenario may require cross-functional collaboration to place a worker on Leave of Absence or approved time off.
+
+ORIGINAL TASK:
+Enroll in Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0120-06
+# Task: Enroll in Course
+3. 
+4. enter search box as "Enroll in Learning"
+5. wait 2
+6. click search result containing "Enroll"
+7. wait for page to load
+8. screenshot as "LRN-4-0120-06_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

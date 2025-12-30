@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0090-01
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Learning Programs - Extended Enterprise Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners can access and begin a learning program
+
+ORIGINAL TASK:
+Browse Learning
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0090-01
+# Task: Browse Learning
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Browse Learning
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0060-02
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Course Re-enrollment - Blended Course
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that learners have the ability to re-enroll in a blended course after it has been completed
+
+ORIGINAL TASK:
+Learning Worklet > My transcript
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0060-02
+# Task: Learning Worklet > My transcript
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0060-02_complete.png"

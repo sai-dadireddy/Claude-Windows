@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0380
+FUNCTIONAL AREA: Learning
+TEST NAME: Media - Automated Transcriptions and Closed Captioning
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify captions are viewable across the bottom of a video. Interactive transcription with timestamps will appear to the right. The option to search through a video is available in the top right of the screen, and the controls to turn and off Captions or Transcriptions on the bottom right. Auto transcription currently only supports EN, FR and ES - check Community for updates on language support.
+
+ORIGINAL TASK:
+View Media
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0380
+# Task: View Media
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View Media
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -246,7 +246,7 @@ def process_area(df, area_name, output_folder):
     area_df = df[df['Functional Area'] == area_name]
 
     if len(area_df) == 0:
-        print(f"⚠️  No scenarios found for {area_name}")
+        print(f"  No scenarios found for {area_name}")
         return {
             'total': 0,
             'high_confidence': 0,
@@ -322,9 +322,9 @@ def main():
     print()
 
     # Load Excel
-    print("📊 Loading Excel file...")
+    print(" Loading Excel file...")
     df = pd.read_excel(excel_path)
-    print(f"✓ Loaded {len(df)} total scenarios\n")
+    print(f" Loaded {len(df)} total scenarios\n")
 
     # Process each area
     all_stats = {}
@@ -338,7 +338,7 @@ def main():
         all_stats[folder_name] = stats
 
         if stats['total'] > 0:
-            print(f"✓ Generated {stats['files_generated']} test files")
+            print(f" Generated {stats['files_generated']} test files")
             print(f"  High Confidence: {stats['high_confidence']}")
             print(f"  Medium (Review): {stats['medium_confidence']}")
             print(f"  Low (Manual):    {stats['low_confidence']}")
@@ -382,8 +382,8 @@ def main():
         f.write(f"Total: {total_scenarios} scenarios, {total_files} files\n")
         f.write(f"Success Rate: {total_high/total_scenarios*100:.1f}%\n")
 
-    print("\n✓ Generation complete!")
-    print(f"📄 Summary saved to: GENERATION_SUMMARY_10_AREAS.txt\n")
+    print("\n Generation complete!")
+    print(f" Summary saved to: GENERATION_SUMMARY_10_AREAS.txt\n")
 
 if __name__ == '__main__':
     main()

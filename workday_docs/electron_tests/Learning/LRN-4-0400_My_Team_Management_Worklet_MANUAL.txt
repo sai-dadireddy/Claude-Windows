@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0400
+FUNCTIONAL AREA: Learning
+TEST NAME: My Team's User Generate Content Report
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that employees that are not Learning Administrators display on the report with standalone lessons that they created
+
+ORIGINAL TASK:
+My Team Management Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0400
+# Task: My Team Management Worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: My Team Management Worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

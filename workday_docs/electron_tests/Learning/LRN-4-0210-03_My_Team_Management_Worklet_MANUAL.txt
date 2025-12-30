@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0210-03
+FUNCTIONAL AREA: Learning
+TEST NAME: My Team's Peer Learning Content report
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If Peer Learning is in scope, verify that the standalone lessons created by the manager's direct report(s) display on the My Team's Peer Learning Content report.
+
+ORIGINAL TASK:
+My Team Management Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0210-03
+# Task: My Team Management Worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: My Team Management Worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0050-03
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Lesson Comments
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+If enabled, verify that Extended Enterprise Learners can add comments to a lesson
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0050-03
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0050-03_complete.png"

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-2-0100
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Extended Enterprise Learner Type
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that administrators can create and edit extended enterprise learner types
+
+ORIGINAL TASK:
+Maintain Extended Enterprise Learner Types
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0100
+# Task: Maintain Extended Enterprise Learner Types
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Maintain Extended Enterprise Learner Types
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

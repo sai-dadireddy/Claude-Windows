@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0110
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Validations for Courses
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators or Business Process Administrators can add validations for the Enroll in Course and Drop Course business processes on the Maintain Learning Validations task
+
+ORIGINAL TASK:
+Maintain Learning Validations
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0110
+# Task: Maintain Learning Validations
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Maintain Learning Validations
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

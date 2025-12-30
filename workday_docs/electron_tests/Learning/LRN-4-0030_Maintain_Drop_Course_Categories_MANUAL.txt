@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0030
+FUNCTIONAL AREA: Learning
+TEST NAME: Set Up - Drop Reasons
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that you can add drop reasons using the Maintain Drop Course Categories task
+
+ORIGINAL TASK:
+Maintain Drop Course Categories
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0030
+# Task: Maintain Drop Course Categories
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Maintain Drop Course Categories
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

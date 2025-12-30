@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0010
+FUNCTIONAL AREA: Learning
+TEST NAME: Terminated Learners
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that terminated employees cannot access the learning worklet
+
+ORIGINAL TASK:
+Proxy as terminated worker
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0010
+# Task: Proxy as terminated worker
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Proxy as terminated worker
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

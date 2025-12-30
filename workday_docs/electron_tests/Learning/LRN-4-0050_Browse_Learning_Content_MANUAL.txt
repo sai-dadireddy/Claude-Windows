@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0050
+FUNCTIONAL AREA: Learning
+TEST NAME: Content Cloud - Skillsoft Integration
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If in scope, verify that external courses from Skillsoft integration are imported and visible on the learning catalog (Browse Learning Content report)
+
+ORIGINAL TASK:
+Browse Learning Content
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0050
+# Task: Browse Learning Content
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Browse Learning Content
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

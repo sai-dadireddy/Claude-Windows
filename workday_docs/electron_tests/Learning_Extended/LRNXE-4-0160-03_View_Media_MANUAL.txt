@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0160-03
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Media - Video Intelligence
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that captions and video transcription display when a standalone video with sound is uploaded.
+
+ORIGINAL TASK:
+View Media
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0160-03
+# Task: View Media
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View Media
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

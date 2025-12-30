@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-4-0110
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Ratings
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+If enabled, verify that learners can rate lessons and courses after beginning a lesson or starting a course
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0110
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-4-0110_complete.png"

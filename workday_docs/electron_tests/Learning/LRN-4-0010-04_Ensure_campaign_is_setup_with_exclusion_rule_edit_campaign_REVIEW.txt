@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0010-04
+FUNCTIONAL AREA: Learning
+TEST NAME: Campaign Exclusion Rule
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that a campaign item is removed from "Required For You" for a learner that is no longer included in the campaign audience (i.e. If Campaign Audience includes all workers located in Boston and Learner is relocated to Chicago location). This scenario may require cross-functional collaboration to update worker attributes like Location or Job Profile for example (if these are used as criteria for the campaign audience).
+
+ORIGINAL TASK:
+Ensure campaign is setup with exclusion rule (edit campaign)
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0010-04
+# Task: Ensure campaign is setup with exclusion rule (edit campaign)
+3. 
+4. enter search box as "Edit campaign)"
+5. wait 2
+6. click search result containing "Edit campaign)"
+7. wait for page to load
+8. screenshot as "LRN-4-0010-04_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

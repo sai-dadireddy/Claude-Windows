@@ -325,13 +325,13 @@ def main():
 
             if confidence >= 7.0:
                 stats['high_confidence'] += 1
-                print(f"    ✓ High confidence ({confidence:.1f})")
+                print(f"    [OK] High confidence ({confidence:.1f})")
             elif confidence >= 5.0:
                 stats['medium_confidence'] += 1
-                print(f"    ⚠ Medium confidence ({confidence:.1f}) - Needs SME review")
+                print(f"    [REVIEW] Medium confidence ({confidence:.1f}) - Needs SME review")
             else:
                 stats['low_confidence'] += 1
-                print(f"    ✗ Low confidence ({confidence:.1f}) - Manual only")
+                print(f"    [MANUAL] Low confidence ({confidence:.1f}) - Manual only")
 
             # Generate test file
             test_content = generate_electron_test(scenario, confidence, rag_result)

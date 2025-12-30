@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0350
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Reports
+STATUS: AUTO-GENERATED
+CONFIDENCE: 8.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the delivered reports on the Learning Admin dashboard are pulling the correct results
+
+ORIGINAL TASK:
+Learning Admin dashboard
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0350
+# Task: Learning Admin dashboard
+3. 
+4. enter search box as "Learning Dashboard"
+5. wait 2
+6. click search result containing "Learning Dashboard"
+7. wait for page to load
+8. screenshot as "LRN-4-0350_complete.png"

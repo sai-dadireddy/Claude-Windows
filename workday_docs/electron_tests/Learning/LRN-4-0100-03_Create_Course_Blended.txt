@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0100-03
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - On the Job Training
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can create a blended course with Training type lesson for On the Job Training
+
+ORIGINAL TASK:
+Create Course > Blended
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0100-03
+# Task: Create Course > Blended
+3. 
+4. enter search box as "Create Course"
+5. wait 2
+6. click search result containing "Create Course"
+7. wait for page to load
+8. screenshot as "LRN-4-0100-03_complete.png"

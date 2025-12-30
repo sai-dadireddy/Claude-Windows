@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0150
+FUNCTIONAL AREA: Learning
+TEST NAME: Create Lesson - Learning Admin
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators are able to create lessons and add media
+
+ORIGINAL TASK:
+Create Lesson
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0150
+# Task: Create Lesson
+3. 
+4. enter search box as "Create Lesson"
+5. wait 2
+6. click search result containing "Create Lesson"
+7. wait for page to load
+8. screenshot as "LRN-2-0150_complete.png"

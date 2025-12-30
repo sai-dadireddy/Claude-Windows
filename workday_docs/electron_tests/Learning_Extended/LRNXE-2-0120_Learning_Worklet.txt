@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-2-0120
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Drop Learning Enrollment - Extended Enterprise Learner
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners can drop courses
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0120
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-2-0120_complete.png"

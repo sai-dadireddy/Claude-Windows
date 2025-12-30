@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0370-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Media - Video Transcription Display
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that video transcription is displayed when a caption file is uploaded to a standalone video.
+
+ORIGINAL TASK:
+View Media
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0370-02
+# Task: View Media
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View Media
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

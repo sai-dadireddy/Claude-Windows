@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0340-01
+FUNCTIONAL AREA: Learning
+TEST NAME: View Survey Results
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the survey results can be viewed on Survey Home
+
+ORIGINAL TASK:
+Survey Home
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0340-01
+# Task: Survey Home
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Survey Home
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0050
+FUNCTIONAL AREA: Learning
+TEST NAME: Topic Segmented Security
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify topic segmented security
+
+ORIGINAL TASK:
+Edit Learning Topic Security Segment
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0050
+# Task: Edit Learning Topic Security Segment
+3. 
+4. enter search box as "Edit Learning Topic"
+5. wait 2
+6. click search result containing "Edit Learning Topic"
+7. wait for page to load
+8. screenshot as "LRN-2-0050_complete.png"

@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0140
+FUNCTIONAL AREA: Learning
+TEST NAME: Create Vendor for External Learning Instructor
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators can create a vendor for external instructors
+
+ORIGINAL TASK:
+Create Learning Vendor
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0140
+# Task: Create Learning Vendor
+3. 
+4. enter search box as "Create Learning"
+5. wait 2
+6. click search result containing "Create Learning"
+7. wait for page to load
+8. screenshot as "LRN-2-0140_complete.png"

@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0080
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Equivalencies - Learning Administrator
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators can create Learning Equivalencies
+
+ORIGINAL TASK:
+Create Learning Equivalency Rule
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0080
+# Task: Create Learning Equivalency Rule
+3. 
+4. enter search box as "Create Learning"
+5. wait 2
+6. click search result containing "Create Learning"
+7. wait for page to load
+8. screenshot as "LRN-4-0080_complete.png"

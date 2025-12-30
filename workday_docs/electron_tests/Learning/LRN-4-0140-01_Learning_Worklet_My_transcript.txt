@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-4-0140-01
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Re-enrollment - Digital Course
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that learners have the ability to re-enroll in a digital course after it has been completed
+
+ORIGINAL TASK:
+Learning Worklet > My transcript
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0140-01
+# Task: Learning Worklet > My transcript
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-4-0140-01_complete.png"

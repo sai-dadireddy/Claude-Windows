@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0180
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Paths
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learners can create and share Learning Paths and add learning content to "Watch Later" using "Save" button on course or lesson
+
+ORIGINAL TASK:
+Navigate to Course or Lesson
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0180
+# Task: Navigate to Course or Lesson
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Navigate to Course or Lesson
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

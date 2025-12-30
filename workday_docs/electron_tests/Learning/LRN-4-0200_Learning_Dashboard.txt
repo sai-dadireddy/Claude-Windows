@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0200
+FUNCTIONAL AREA: Learning
+TEST NAME: Custom Learning Sliders
+STATUS: AUTO-GENERATED
+CONFIDENCE: 8.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the custom learning slider is correctly configured and presenting the expected data.
+
+ORIGINAL TASK:
+Learning Dashboard
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0200
+# Task: Learning Dashboard
+3. 
+4. enter search box as "Learning Dashboard"
+5. wait 2
+6. click search result containing "Learning Dashboard"
+7. wait for page to load
+8. screenshot as "LRN-4-0200_complete.png"

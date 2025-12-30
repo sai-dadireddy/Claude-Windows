@@ -1,0 +1,28 @@
+======================================================================
+TEST ID: LRN-2-0220
+FUNCTIONAL AREA: Learning
+TEST NAME: Manage Prerequisite Rules
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators are able to create, edit and manage prerequisite rules
+
+ORIGINAL TASK:
+Create Learning Prerequisite Rule
+ Manager Learning Prerequisite Rule
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0220
+# Task: Create Learning Prerequisite Rule
+ Manager Learning Prerequisite Rule
+3. 
+4. enter search box as "Create Learning"
+5. wait 2
+6. click search result containing "Create Learning"
+7. wait for page to load
+8. screenshot as "LRN-2-0220_complete.png"

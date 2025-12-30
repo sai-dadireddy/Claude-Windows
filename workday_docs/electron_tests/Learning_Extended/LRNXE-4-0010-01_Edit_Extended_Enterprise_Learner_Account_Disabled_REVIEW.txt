@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRNXE-4-0010-01
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Disabled Accounts - Extended Enterprise Learners
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners that have accounts disabled cannot access the learning worklet. This scenario requires to disable an Extended Enterprise Learner's account. Access the "Edit Extended Enterprise Learner" task and select "Account Disabled" setting.
+
+ORIGINAL TASK:
+Edit Extended Enterprise Learner > Account Disabled
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0010-01
+# Task: Edit Extended Enterprise Learner > Account Disabled
+3. 
+4. enter search box as "Edit Extended Enterprise Learner > Account Disabled"
+5. wait 2
+6. click search result containing "Edit Extended Enterprise Learner > Account Disabled"
+7. wait for page to load
+8. screenshot as "LRNXE-4-0010-01_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

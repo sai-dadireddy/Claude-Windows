@@ -1,0 +1,35 @@
+======================================================================
+TEST ID: LRN-4-0270
+FUNCTIONAL AREA: Learning
+TEST NAME: Waitlist - Automatic Promotion from Waitlist
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the first learner on the waitlist is automatically enrolled when a spot becomes available in a course. 
+
+This scenario requires a blended course and a course offering with the "Enable Auto-Enrollment from the Waitlist" box checked. This scenario requires that there are learners on the waitlist and that a learner is dropped from the course offering to open up a seat for the waitlisted learner.
+
+ORIGINAL TASK:
+Confirm course is set to Enable Auto-Enrollment
+ Place a learner on waitlist
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0270
+# Task: Confirm course is set to Enable Auto-Enrollment
+ Place a learner on waitlist
+3. 
+4. enter search box as "Enroll in Learning"
+5. wait 2
+6. click search result containing "Enroll"
+7. wait for page to load
+8. screenshot as "LRN-4-0270_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

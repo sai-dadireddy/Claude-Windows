@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0090-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Retraining - Expiration Periods - Advanced Learning Expiration Rules for Workers
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators can add expiration period and/or advanced expiration period rules on a course
+
+ORIGINAL TASK:
+Create course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0090-02
+# Task: Create course
+3. 
+4. enter search box as "Create Course"
+5. wait 2
+6. click search result containing "Create Course"
+7. wait for page to load
+8. screenshot as "LRN-4-0090-02_complete.png"

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0020
+FUNCTIONAL AREA: Learning
+TEST NAME: Set Up - Add Topics
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can add topics and see them using the Manage Topic task. If Topic or Course segmented security is in use, work with the Learning Workday Consultant before completing this scenario.
+
+ORIGINAL TASK:
+Manage Topics
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0020
+# Task: Manage Topics
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Manage Topics
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

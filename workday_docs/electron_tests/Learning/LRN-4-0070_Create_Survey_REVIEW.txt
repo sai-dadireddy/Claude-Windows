@@ -1,0 +1,27 @@
+======================================================================
+TEST ID: LRN-4-0070
+FUNCTIONAL AREA: Learning
+TEST NAME: Create Surveys
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 5.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that a survey can be created by the Learning Administrator and is able to be attached to a course
+
+ORIGINAL TASK:
+Create Survey
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0070
+# Task: Create Survey
+3. 
+4. screenshot as "LRN-4-0070_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

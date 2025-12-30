@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0240
+FUNCTIONAL AREA: Learning
+TEST NAME: Campaign Audience - Saved Search
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator is able to save a search on the Find Workers - Mass Enroll report to identify the campaign audience
+
+ORIGINAL TASK:
+Find Workers to Enroll Report
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0240
+# Task: Find Workers to Enroll Report
+3. 
+4. enter search box as "Enroll Student in Course"
+5. wait 2
+6. click search result containing "Enroll Student in Course"
+7. wait for page to load
+8. screenshot as "LRN-2-0240_complete.png"

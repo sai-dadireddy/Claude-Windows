@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0020-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Find Workers to Enroll - Unconstrained Security Group
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+If applicable, verify that unconstrained security groups (i.e. Learning Administrator) are able to access the Find Workers to Enroll report and enroll any user, regardless of organization.
+
+ORIGINAL TASK:
+Proxy as a user assigned an unconstrained security group
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0020-02
+# Task: Proxy as a user assigned an unconstrained security group
+3. 
+4. enter search box as "Maintain Security Groups"
+5. wait 2
+6. click search result containing "Maintain Security Groups"
+7. wait for page to load
+8. screenshot as "LRN-4-0020-02_complete.png"

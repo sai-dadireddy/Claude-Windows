@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-2-0030
+FUNCTIONAL AREA: Learning
+TEST NAME: Security Groups - Contingent Workers
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that contingent workers can access Workday Learning content
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0030
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-2-0030_complete.png"

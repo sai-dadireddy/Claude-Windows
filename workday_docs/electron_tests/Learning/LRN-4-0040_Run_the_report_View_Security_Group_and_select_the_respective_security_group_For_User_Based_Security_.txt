@@ -1,5 +1,5 @@
 ======================================================================
-TEST ID: LRN-2-0010
+TEST ID: LRN-4-0040
 FUNCTIONAL AREA: Learning
 TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
 STATUS: AUTO-GENERATED
@@ -18,7 +18,7 @@ EXPECTED RESULT:
 nan
 
 ELECTRON STEPS:
-# Scenario ID: LRN-2-0010
+# Scenario ID: LRN-4-0040
 # Task: Run the report "View Security Group" and select the respective security group:
 For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
 For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
@@ -27,4 +27,4 @@ For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get 
 5. wait 2
 6. click search result containing "View Security Group"
 7. wait for page to load
-8. screenshot as "LRN-2-0010_complete.png"
+8. screenshot as "LRN-4-0040_complete.png"

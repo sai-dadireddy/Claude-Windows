@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0100-06
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - Update Version
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that versioning enables a learning admin to update existing open course offerings with the new version. If new Media lessons are added to the new version of the offering, verify the new version displays the new Media lesson
+
+ORIGINAL TASK:
+Edit Course > Add New Version > Update Media
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0100-06
+# Task: Edit Course > Add New Version > Update Media
+3. 
+4. enter search box as "Edit Course"
+5. wait 2
+6. click search result containing "Edit Course"
+7. wait for page to load
+8. screenshot as "LRN-4-0100-06_complete.png"

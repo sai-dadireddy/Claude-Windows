@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0090-01
+FUNCTIONAL AREA: Learning
+TEST NAME: Retraining - Expiration Periods
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Expiration Dates can be added to Blended and Digital courses   Also, that expiration (retraining) dates are displayed on the Learner transcript for completed courses
+
+ORIGINAL TASK:
+Edit Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0090-01
+# Task: Edit Course
+3. 
+4. enter search box as "Edit Course"
+5. wait 2
+6. click search result containing "Edit Course"
+7. wait for page to load
+8. screenshot as "LRN-4-0090-01_complete.png"

@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0180
+FUNCTIONAL AREA: Learning
+TEST NAME: Create Course - Units
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can create a course with units
+
+ORIGINAL TASK:
+Create Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0180
+# Task: Create Course
+3. 
+4. enter search box as "Create Course"
+5. wait 2
+6. click search result containing "Create Course"
+7. wait for page to load
+8. screenshot as "LRN-2-0180_complete.png"

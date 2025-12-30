@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-2-0260
+FUNCTIONAL AREA: Learning
+TEST NAME: Edit Campaign Audience
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can edit a campaign audience
+
+ORIGINAL TASK:
+Edit Audience
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0260
+# Task: Edit Audience
+3. 
+4. enter search box as "Edit Audience"
+5. wait 2
+6. click search result containing "Edit Audience"
+7. wait for page to load
+8. screenshot as "LRN-2-0260_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

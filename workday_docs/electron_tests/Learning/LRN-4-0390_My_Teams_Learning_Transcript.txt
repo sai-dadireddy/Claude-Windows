@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0390
+FUNCTIONAL AREA: Learning
+TEST NAME: My Team's Learning Report
+STATUS: AUTO-GENERATED
+CONFIDENCE: 8.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Managers can view their team's Learner Transcript using the My Team's Learning Report
+
+ORIGINAL TASK:
+My Team's Learning Transcript
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0390
+# Task: My Team's Learning Transcript
+3. 
+4. enter search box as "View Learning Transcript"
+5. wait 2
+6. click search result containing "Learning Transcript"
+7. wait for page to load
+8. screenshot as "LRN-4-0390_complete.png"

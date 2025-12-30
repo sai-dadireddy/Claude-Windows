@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-4-0120-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - Waitlist Enrollment
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the learner can place themselves on the waitlist. This scenario requires a blended course and a scheduled course offering with waitlisting capacity.
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0120-02
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-4-0120-02_complete.png"

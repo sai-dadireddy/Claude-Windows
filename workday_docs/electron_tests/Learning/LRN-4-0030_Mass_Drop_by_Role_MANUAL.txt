@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0030
+FUNCTIONAL AREA: Learning
+TEST NAME: Mass Drop by Role
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If applicable, verify that constrained security groups can access the Mass Drop by Role task to enroll users only in the organizations they are assigned to support.
+
+ORIGINAL TASK:
+Mass Drop by Role
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0030
+# Task: Mass Drop by Role
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Mass Drop by Role
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0450
+FUNCTIONAL AREA: Learning
+TEST NAME: Webinar Time Zone Localization
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the time zone is converted for webinar lessons
+
+ORIGINAL TASK:
+View Course with Time zone other than users
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0450
+# Task: View Course with Time zone other than users
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View Course with Time zone other than users
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

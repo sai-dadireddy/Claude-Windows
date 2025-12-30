@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-2-0060
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Request Extended Enterprise Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that administrators can request extended enterprise learners.
+
+ORIGINAL TASK:
+Request Extended Enterprise Learner
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0060
+# Task: Request Extended Enterprise Learner
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Request Extended Enterprise Learner
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

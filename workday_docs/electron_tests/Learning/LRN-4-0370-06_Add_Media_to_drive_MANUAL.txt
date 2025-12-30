@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0370-06
+FUNCTIONAL AREA: Learning
+TEST NAME: Media - Video Captions
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can add video captions to media. This scenario requires a caption file (Ex .srt captioning file). 
+More information on captioning files here: https://www.3playmedia.com/blog/create-srt-file/
+
+ORIGINAL TASK:
+Add Media to drive
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0370-06
+# Task: Add Media to drive
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Add Media to drive
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

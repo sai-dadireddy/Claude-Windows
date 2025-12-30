@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-2-0330
+FUNCTIONAL AREA: Learning
+TEST NAME: Program Reminders
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that program reminders can be configured and sent out to Learners.
+
+ORIGINAL TASK:
+Manage Learning Content
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0330
+# Task: Manage Learning Content
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Manage Learning Content
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

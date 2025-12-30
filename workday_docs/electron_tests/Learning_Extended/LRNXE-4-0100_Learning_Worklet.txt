@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0100
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Learning Paths
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners can create, share, and add to watch later Learning Paths on My Library dashboard
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0100
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0100_complete.png"

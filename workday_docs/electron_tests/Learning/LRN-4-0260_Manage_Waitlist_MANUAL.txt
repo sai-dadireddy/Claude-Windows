@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0260
+FUNCTIONAL AREA: Learning
+TEST NAME: View Waitlist
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator is able to view the waitlist
+
+ORIGINAL TASK:
+Manage Waitlist
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0260
+# Task: Manage Waitlist
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Manage Waitlist
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

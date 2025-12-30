@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0170
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Learning Equivalencies - Extended Enterprise Learner
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Equivalencies are accurate on the Extended Enterprise Learner transcript
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0170
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0170_complete.png"

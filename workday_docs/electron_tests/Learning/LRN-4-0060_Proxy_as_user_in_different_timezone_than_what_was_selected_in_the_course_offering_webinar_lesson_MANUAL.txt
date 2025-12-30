@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0060
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - Webinar Time Zone Localization
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If applicable, verify that the timezone on webinar lessons is converted for workers in different timezones.
+
+ORIGINAL TASK:
+Proxy as user in different timezone than what was selected in the course offering webinar lesson
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0060
+# Task: Proxy as user in different timezone than what was selected in the course offering webinar lesson
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Proxy as user in different timezone than what was selected in the course offering webinar lesson
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

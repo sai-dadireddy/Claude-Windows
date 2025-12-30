@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRNXE-2-0020
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Create External Learning  User
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that administrators can create External Learning User (must create user before creating/assigning EEL role)
+
+ORIGINAL TASK:
+Create External Learning User
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0020
+# Task: Create External Learning User
+3. 
+4. enter search box as "Create Learning"
+5. wait 2
+6. click search result containing "Create Learning"
+7. wait for page to load
+8. screenshot as "LRNXE-2-0020_complete.png"

@@ -1,0 +1,27 @@
+======================================================================
+TEST ID: LRNXE-2-0030
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Create/ Edit External System User
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 5.0/10.0
+======================================================================
+
+DESCRIPTION:
+If using Learning External Instructor and Extended Enterprise Learners, verify the only one Workday user account is created. Note: A Workday user account must be created first, then individual External Enterprise Learner and External Learning Instructor accounts should be created.
+
+ORIGINAL TASK:
+Create External System User
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0030
+# Task: Create External System User
+3. 
+4. screenshot as "LRNXE-2-0030_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0100-05
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - Learning Locations - Ad hoc
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can select "Specify Ad Hoc Location" on the course offering to include a location on the course offering using text
+
+ORIGINAL TASK:
+Schedule Offering
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0100-05
+# Task: Schedule Offering
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Schedule Offering
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

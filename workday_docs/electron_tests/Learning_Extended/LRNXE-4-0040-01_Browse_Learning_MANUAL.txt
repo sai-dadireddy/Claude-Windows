@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0040-01
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Enroll in Course - Extended Enterprise Learners
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that learners are able to enroll in a course. Verify that SCORM/AICC packaged content in course lessons can be viewed on desktops and/or laptops
+
+ORIGINAL TASK:
+Browse Learning
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0040-01
+# Task: Browse Learning
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Browse Learning
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

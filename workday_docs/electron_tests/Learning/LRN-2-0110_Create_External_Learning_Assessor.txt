@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0110
+FUNCTIONAL AREA: Learning
+TEST NAME: Create External Learning Assessor
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators and/or Extended Enterprise Admin (dependent on scope)  can create external learning assessors
+
+ORIGINAL TASK:
+Create External Learning Assessor
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0110
+# Task: Create External Learning Assessor
+3. 
+4. enter search box as "Create Learning"
+5. wait 2
+6. click search result containing "Create Learning"
+7. wait for page to load
+8. screenshot as "LRN-2-0110_complete.png"

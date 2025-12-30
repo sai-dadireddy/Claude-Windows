@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0190
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Express Interest Notification - Extended Enterprise Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Extended Enterprise Learner receives the notification when the expressed interest course have a relevant course offering scheduled
+
+ORIGINAL TASK:
+Express Interest in Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0190
+# Task: Express Interest in Course
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Express Interest in Course
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

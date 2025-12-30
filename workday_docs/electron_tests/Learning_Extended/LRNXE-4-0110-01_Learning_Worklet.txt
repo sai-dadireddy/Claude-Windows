@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0110-01
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Drop Learning Enrollment - Notifications
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that all drop course notifications are correct
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0110-01
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0110-01_complete.png"

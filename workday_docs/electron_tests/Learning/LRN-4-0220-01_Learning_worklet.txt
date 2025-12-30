@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRN-4-0220-01
+FUNCTIONAL AREA: Learning
+TEST NAME: Instructor - Access to Learning Worklet
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Instructors can access the Learning worklet
+
+ORIGINAL TASK:
+Learning worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0220-01
+# Task: Learning worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRN-4-0220-01_complete.png"

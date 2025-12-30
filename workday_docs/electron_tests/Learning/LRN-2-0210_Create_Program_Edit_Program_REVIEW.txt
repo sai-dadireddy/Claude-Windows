@@ -1,0 +1,33 @@
+======================================================================
+TEST ID: LRN-2-0210
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Programs - Learning Administrator
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administration can create and edit Learning Programs
+
+ORIGINAL TASK:
+Create Program
+ Edit Program
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0210
+# Task: Create Program
+ Edit Program
+3. 
+4. enter search box as "Edit Program"
+5. wait 2
+6. click search result containing "Edit Program"
+7. wait for page to load
+8. screenshot as "LRN-2-0210_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

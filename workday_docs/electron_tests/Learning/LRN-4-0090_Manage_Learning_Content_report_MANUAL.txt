@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0090
+FUNCTIONAL AREA: Learning
+TEST NAME: Searching Skills on Learning Catalog
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If enabled, verify Skills are searchable on the learning catalog.
+ *HCM setup required.
+
+ORIGINAL TASK:
+Manage Learning Content report
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0090
+# Task: Manage Learning Content report
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Manage Learning Content report
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

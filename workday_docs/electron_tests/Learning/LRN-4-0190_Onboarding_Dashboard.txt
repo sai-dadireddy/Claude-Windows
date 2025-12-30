@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0190
+FUNCTIONAL AREA: Learning
+TEST NAME: Onboarding Dashboard
+STATUS: AUTO-GENERATED
+CONFIDENCE: 8.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the "Required for You" slider can be added to the Onboarding Dashboard. This scenario may require cross-functional collaboration to edit dashboards.
+
+ORIGINAL TASK:
+Onboarding Dashboard
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0190
+# Task: Onboarding Dashboard
+3. 
+4. enter search box as "Onboarding Dashboard"
+5. wait 2
+6. click search result containing "Onboarding Dashboard"
+7. wait for page to load
+8. screenshot as "LRN-4-0190_complete.png"

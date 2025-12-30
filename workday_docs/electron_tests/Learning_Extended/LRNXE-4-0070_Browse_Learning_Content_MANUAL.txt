@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0070
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Express Interest - Extended Enterprise Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the learner is able to express interest for a course offering within a specific date range
+
+ORIGINAL TASK:
+Browse Learning Content
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0070
+# Task: Browse Learning Content
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Browse Learning Content
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

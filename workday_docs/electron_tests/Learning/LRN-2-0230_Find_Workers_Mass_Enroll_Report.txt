@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-2-0230
+FUNCTIONAL AREA: Learning
+TEST NAME: Mass Enroll - Unlimited Capacity
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator can select and enroll an unlimited capacity of learners into a course
+
+ORIGINAL TASK:
+Find Workers Mass Enroll Report
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0230
+# Task: Find Workers Mass Enroll Report
+3. 
+4. enter search box as "Enroll Student in Course"
+5. wait 2
+6. click search result containing "Enroll Student in Course"
+7. wait for page to load
+8. screenshot as "LRN-2-0230_complete.png"

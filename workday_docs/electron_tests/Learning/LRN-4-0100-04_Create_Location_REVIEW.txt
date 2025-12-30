@@ -1,0 +1,27 @@
+======================================================================
+TEST ID: LRN-4-0100-04
+FUNCTIONAL AREA: Learning
+TEST NAME: Course Offering - Learning Location - Training Room
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 5.0/10.0
+======================================================================
+
+DESCRIPTION:
+If Training Rooms were created, verify that the Learning Administrator can view them in the Room drop down field when creating/editing a course offering. This scenario may require cross-functional collaboration to create new locations in the tenant.
+
+ORIGINAL TASK:
+Create Location
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0100-04
+# Task: Create Location
+3. 
+4. screenshot as "LRN-4-0100-04_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

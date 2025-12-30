@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0020-02
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Search Topics
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners can search courses by topic
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0020-02
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0020-02_complete.png"

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0100
+FUNCTIONAL AREA: Learning
+TEST NAME: Drop Learning Enrollment - Learner
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the learner can drop a course. If applicable, verify that a drop reason is required before dropping a course.
+
+ORIGINAL TASK:
+Navigate to Course/Course Offering
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0100
+# Task: Navigate to Course/Course Offering
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Navigate to Course/Course Offering
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

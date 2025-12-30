@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0050
+FUNCTIONAL AREA: Learning
+TEST NAME: User Generated Content - Create Lessons
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+If Peer Learning is in scope, verify that learners are able to create lessons and add media
+
+ORIGINAL TASK:
+Create Lesson
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0050
+# Task: Create Lesson
+3. 
+4. enter search box as "Create Lesson"
+5. wait 2
+6. click search result containing "Create Lesson"
+7. wait for page to load
+8. screenshot as "LRN-4-0050_complete.png"

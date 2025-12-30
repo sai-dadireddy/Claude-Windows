@@ -1,0 +1,29 @@
+======================================================================
+TEST ID: LRNXE-4-0140
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Extended Enterprise Worklet
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Extended Enterprise administrator can access the Extended Enterprise worklet
+
+ORIGINAL TASK:
+Home > Extended Enterprise Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0140
+# Task: Home > Extended Enterprise Worklet
+3. 
+4. click link "Extended Enterprise Worklet"
+5. wait 2
+6. screenshot as "LRNXE-4-0140_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

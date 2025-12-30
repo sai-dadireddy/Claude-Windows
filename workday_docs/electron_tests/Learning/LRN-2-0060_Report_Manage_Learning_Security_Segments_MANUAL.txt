@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-2-0060
+FUNCTIONAL AREA: Learning
+TEST NAME: Segmented Security
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+If segmented security is being used, verify the Learning Admin can access the Learning Access Insights report to review segmented security configuration for Learning.
+
+ORIGINAL TASK:
+Report: Manage Learning Security Segments
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-2-0060
+# Task: Report: Manage Learning Security Segments
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Report: Manage Learning Security Segments
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

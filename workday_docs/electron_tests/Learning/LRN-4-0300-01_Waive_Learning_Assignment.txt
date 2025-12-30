@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0300-01
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Assignments - Waive
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators are able to waive learning assignments
+
+ORIGINAL TASK:
+Waive Learning Assignment
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0300-01
+# Task: Waive Learning Assignment
+3. 
+4. enter search box as "Assign Learning"
+5. wait 2
+6. click search result containing "Assign Learning"
+7. wait for page to load
+8. screenshot as "LRN-4-0300-01_complete.png"

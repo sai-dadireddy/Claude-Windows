@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-2-0110
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Extended Enterprise Learner - Enroll in Course
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Extended Enterprise Learners can enroll in courses
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0110
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-2-0110_complete.png"

@@ -1,0 +1,27 @@
+======================================================================
+TEST ID: LRN-4-0360
+FUNCTIONAL AREA: Learning
+TEST NAME: Media Importer
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 5.0/10.0
+======================================================================
+
+DESCRIPTION:
+If applicable, verify that the Learning Administrator can bulk import media (SCORM, AICC, Video) using Media Importer
+
+ORIGINAL TASK:
+Create Media Import Job
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0360
+# Task: Create Media Import Job
+3. 
+4. screenshot as "LRN-4-0360_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

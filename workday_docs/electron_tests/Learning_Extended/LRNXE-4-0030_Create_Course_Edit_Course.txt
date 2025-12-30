@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-4-0030
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: User Generated Content - Create/ Edit Lessons
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+If in scope, verify that Extended Enterprise Learners are able to create and edit lessons, add images for lessons and media
+
+ORIGINAL TASK:
+Create Course
+
+Edit Course
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0030
+# Task: Create Course
+
+Edit Course
+3. 
+4. enter search box as "Edit Course"
+5. wait 2
+6. click search result containing "Edit Course"
+7. wait for page to load
+8. screenshot as "LRNXE-4-0030_complete.png"

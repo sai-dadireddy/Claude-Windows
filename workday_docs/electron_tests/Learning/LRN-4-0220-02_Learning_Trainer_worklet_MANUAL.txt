@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0220-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Instructor - Learning Trainer Worklet
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the instructor can access courses that are assigned to her/him on the Learning Trainer Worklet
+
+ORIGINAL TASK:
+Learning Trainer worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0220-02
+# Task: Learning Trainer worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Learning Trainer worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

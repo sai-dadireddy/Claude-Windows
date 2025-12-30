@@ -1,0 +1,26 @@
+======================================================================
+TEST ID: LRN-4-0470
+FUNCTIONAL AREA: Learning
+TEST NAME: Equivalency Recognition in Learning Programs
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that equivalencies are recognized in learning programs
+
+ORIGINAL TASK:
+Create Program that contains equivalent course in succession
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0470
+# Task: Create Program that contains equivalent course in succession
+3. 
+4. enter search box as "Create Course"
+5. wait 2
+6. click search result containing "Create Course"
+7. wait for page to load
+8. screenshot as "LRN-4-0470_complete.png"

@@ -1,0 +1,35 @@
+======================================================================
+TEST ID: LRNXE-2-0040
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Create/Edit Extended Enterprise Learner
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that administrators can create and edit extended enterprise learners
+
+ORIGINAL TASK:
+Create Extended Enterprise Learner
+	
+Edit Extended Enterprise Learner
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0040
+# Task: Create Extended Enterprise Learner
+	
+Edit Extended Enterprise Learner
+3. 
+4. enter search box as "Edit Extended Enterprise Learner"
+5. wait 2
+6. click search result containing "Edit Extended Enterprise Learner"
+7. wait for page to load
+8. screenshot as "LRNXE-2-0040_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

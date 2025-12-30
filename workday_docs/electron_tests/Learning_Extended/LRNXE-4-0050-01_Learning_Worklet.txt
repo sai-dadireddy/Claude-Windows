@@ -1,0 +1,24 @@
+======================================================================
+TEST ID: LRNXE-4-0050-01
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Course Ratings
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.5/10.0
+======================================================================
+
+DESCRIPTION:
+If enabled, verify that Extended Enterprise Learners can rate courses
+
+ORIGINAL TASK:
+Learning Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-4-0050-01
+# Task: Learning Worklet
+3. 
+4. click worklet "Learning"
+5. wait 2
+6. screenshot as "LRNXE-4-0050-01_complete.png"

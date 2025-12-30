@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0370-04
+FUNCTIONAL AREA: Learning
+TEST NAME: Media - Scoring on Video Interactions
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Administrators can add scores to video interactions
+
+ORIGINAL TASK:
+Drive > Open Media > Edit Media
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0370-04
+# Task: Drive > Open Media > Edit Media
+3. 
+4. enter search box as "Edit Media"
+5. wait 2
+6. click search result containing "Edit Media"
+7. wait for page to load
+8. screenshot as "LRN-4-0370-04_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

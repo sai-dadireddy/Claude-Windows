@@ -1,0 +1,31 @@
+======================================================================
+TEST ID: LRN-4-0320
+FUNCTIONAL AREA: Learning
+TEST NAME: Reset Expiration Periods (Retraining)
+STATUS: NEEDS SME REVIEW
+CONFIDENCE: 6.5/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that Learning Admins can reset Expiration (Retraining) Dates for learning records
+
+ORIGINAL TASK:
+Reset Expiration Date on Enrollments
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0320
+# Task: Reset Expiration Date on Enrollments
+3. 
+4. enter search box as "Enroll in Learning"
+5. wait 2
+6. click search result containing "Enroll"
+7. wait for page to load
+8. screenshot as "LRN-4-0320_complete.png"
+
+======================================================================
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths

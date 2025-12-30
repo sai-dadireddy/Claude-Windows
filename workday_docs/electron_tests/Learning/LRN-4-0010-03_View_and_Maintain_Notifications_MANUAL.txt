@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0010-03
+FUNCTIONAL AREA: Learning
+TEST NAME: Campaign Notifications
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that notifications for campaign items are sent out to Learners when the campaign is launched
+
+ORIGINAL TASK:
+View and Maintain Notifications
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0010-03
+# Task: View and Maintain Notifications
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View and Maintain Notifications
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0280
+FUNCTIONAL AREA: Learning
+TEST NAME: Manger Grading & Attendance - Learning Administrator
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator is able to access all courses that track grading and attendance
+
+ORIGINAL TASK:
+Manage Grading and Attendance
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0280
+# Task: Manage Grading and Attendance
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Manage Grading and Attendance
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

@@ -1,0 +1,25 @@
+======================================================================
+TEST ID: LRN-4-0160
+FUNCTIONAL AREA: Learning
+TEST NAME: Equivalency Recognition in Learning Programs
+STATUS: AUTO-GENERATED
+CONFIDENCE: 7.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that equivalencies are recognized in learning programs. This scenario requires creating a Learning Program with courses equivalent to each other.
+
+ORIGINAL TASK:
+Complete first course and view impact on the status of subsequent courses in the Program
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0160
+# Task: Complete first course and view impact on the status of subsequent courses in the Program
+3. 
+4. click button "Submit"
+5. wait 2
+6. verify submission successful
+7. screenshot as "LRN-4-0160_complete.png"

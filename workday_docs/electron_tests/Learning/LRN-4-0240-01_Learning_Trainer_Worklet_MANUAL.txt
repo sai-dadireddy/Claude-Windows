@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0240-01
+FUNCTIONAL AREA: Learning
+TEST NAME: Assessor - Learning Trainer Worklet
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the assessor can access courses that they are assigned to using the My Course Offerings report
+
+ORIGINAL TASK:
+Learning Trainer Worklet
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0240-01
+# Task: Learning Trainer Worklet
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Learning Trainer Worklet
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

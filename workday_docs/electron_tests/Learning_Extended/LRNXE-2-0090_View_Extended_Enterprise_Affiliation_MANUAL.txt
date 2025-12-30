@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRNXE-2-0090
+FUNCTIONAL AREA: Learning Extended Enterprise
+TEST NAME: Assign an Affiliation Manager to an Extended Enterprise Affiliation
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that administrators can assign an affiliation manager to an extended enterprise affiliation
+
+ORIGINAL TASK:
+View Extended Enterprise Affiliation
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRNXE-2-0090
+# Task: View Extended Enterprise Affiliation
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: View Extended Enterprise Affiliation
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps

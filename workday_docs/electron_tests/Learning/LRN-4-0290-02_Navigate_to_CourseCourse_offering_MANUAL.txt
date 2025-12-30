@@ -1,0 +1,30 @@
+======================================================================
+TEST ID: LRN-4-0290-02
+FUNCTIONAL AREA: Learning
+TEST NAME: Learning Enrollment - Drop All
+STATUS: MANUAL IMPLEMENTATION REQUIRED
+CONFIDENCE: 4.0/10.0
+======================================================================
+
+DESCRIPTION:
+Verify that the Learning Administrator is able to drop all learners.
+
+ORIGINAL TASK:
+Navigate to Course/Course offering
+
+EXPECTED RESULT:
+nan
+
+ELECTRON STEPS:
+# Scenario ID: LRN-4-0290-02
+# Task: Navigate to Course/Course offering
+3. 
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Navigate to Course/Course offering
+# No automated pattern match found
+
+======================================================================
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps
