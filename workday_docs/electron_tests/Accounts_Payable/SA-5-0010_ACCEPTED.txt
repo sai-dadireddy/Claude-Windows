@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-5-0010
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Confirm Custom Validations
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Verify all required Custom Validations have been configured for: Supplier Invoice, Supplier
+
+ If direct intercompany is in scope, be wary of custom validations or required worktags on the supplier invoice area. If there are any custom validations or worktags that are enforced for the supplier invoice but are not added upfront in the customer invoice, the supplier invoice will not be submitted and will need to be manually edited before it can be submitted.
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Custom Validations"
+2. wait for search results
+3. click search result containing "Maintain Custom Validations"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-5-0010_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Custom Validations
+- Template Used: maintain
+- RAG Query: "Maintain Custom Validations"
+
+NOTES:
+
+================================================================================

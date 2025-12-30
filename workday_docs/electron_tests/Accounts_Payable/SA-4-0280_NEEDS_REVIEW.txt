@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: SA-4-0280
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Convert a failed Upload and Scan to a Draft Invoice
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Manually create a supplier invoice from a failed upload using the Create Supplier Invoice button on the Upload and Scan tab.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0280_complete.png"
+
+VERIFICATION:
+- [ ] A draft invoice is created.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Create Supplier Invoice
+
+RELATED INFORMATION:
+- Scenario Name: Convert a failed Upload and Scan to a Draft Invoice
+- Template Used: default
+- RAG Query: "Supplier Invoice Work Area> Upload and Scan"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

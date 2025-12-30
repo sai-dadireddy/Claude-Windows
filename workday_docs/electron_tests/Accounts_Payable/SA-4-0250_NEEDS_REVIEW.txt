@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0250
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Upload Invoice without a date
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Upload a supplier invoice that does not have a date on it.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0250_complete.png"
+
+VERIFICATION:
+- [ ] The date should default to the date type specified on Supplier Accounts OCR Tenant Options>OCR Supplier Invoice Empty Date Behavior.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Upload Invoice without a date
+- Template Used: default
+- RAG Query: "Supplier Invoice Work Area> Upload and Scan"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

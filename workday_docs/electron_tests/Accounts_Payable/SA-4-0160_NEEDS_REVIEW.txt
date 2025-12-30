@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0160
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Upload PO Invoice missing a PO number
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Upload an invoice attachment that is for a Purchase Order but does not reference the purchase order
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0160_complete.png"
+
+VERIFICATION:
+- [ ] The created invoice will not reference the Purchase Order.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Upload PO Invoice missing a PO number
+- Template Used: default
+- RAG Query: "Supplier Invoice Work Area> Upload and Scan"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

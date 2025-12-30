@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: SA-5-0120
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Verify Supplier Accounts Match Rule Sets
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 11.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+If procurement is in scope, review supplier accounts match match rule set as a whole and ensure it is set up for the correct companies
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "View Supplier Accounts Match Rule Set"
+2. wait for search results
+3. click search result containing "View Supplier Accounts Match Rule Set"
+4. wait for page to load
+5. verify data displays
+6. screenshot as "SA-5-0120_step6.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Supplier Accounts Match Rule Sets
+- Template Used: view
+- RAG Query: "View Supplier Accounts Match Rule Set"
+
+NOTES:
+
+================================================================================

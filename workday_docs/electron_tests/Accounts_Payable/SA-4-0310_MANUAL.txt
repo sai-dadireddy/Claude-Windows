@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: SA-4-0310
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Mass Cancel Supplier Invoices
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Mass cancel one or more selected supplier invoices in My Work Queue.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> My Work Queue"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> My Work Queue"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0310_complete.png"
+
+VERIFICATION:
+- [ ] The selected supplier invoices are cancelled.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Mass Cancel
+
+RELATED INFORMATION:
+- Scenario Name: Mass Cancel Supplier Invoices
+- Template Used: default
+- RAG Query: "Supplier Invoice Work Area> My Work Queue"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-5-0050
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Verify Invoice Adjustment Reasons
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 3.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Review invoice adjustment reasons in the tenant and identify any that need to be added
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Invoice Adjustment Reasons"
+2. wait for search results
+3. click search result containing "Invoice Adjustment Reasons"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-5-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Invoice Adjustment Reasons
+- Template Used: default
+- RAG Query: "Invoice Adjustment Reasons"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

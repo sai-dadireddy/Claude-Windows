@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0270
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Upload file with >15 pages
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Upload a Supplier Invoice attachment with more than 15 pages.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0270_complete.png"
+
+VERIFICATION:
+- [ ] The upload should fail with error "too many pages"
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Upload file with >15 pages
+- Template Used: default
+- RAG Query: "Supplier Invoice Work Area> Upload and Scan"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

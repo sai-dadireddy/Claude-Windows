@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: SA-5-0170
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Confirm Role Based Procurement Assignments
+WORKDAY ROLE: Security Administrator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 10.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Confirm that these Role Based Security Roles for Supplier Accounts have been properly assigned or are defaulting to each Company: 1099 Specialist Accounts Payable Analyst Accounts Payable Data Entry Specialist Accounts Payable Settlement Specialist Accounts Payable Operations Lead
+
+PREREQUISITES:
+- User logged in with Security Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Roles for Organization and Subordinates"
+2. wait for search results
+3. click search result containing "Roles for Organization and Subordinates"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-5-0170_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Role Based Procurement Assignments
+- Template Used: default
+- RAG Query: "Roles for Organization and Subordinates"
+
+NOTES:
+
+================================================================================
