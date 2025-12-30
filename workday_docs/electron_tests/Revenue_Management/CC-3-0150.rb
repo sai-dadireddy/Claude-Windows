@@ -1,34 +1,44 @@
 # CC-3-0150 - View Account Posting Rules
-# Confidence Score: 4.0/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 8.0/10.0
 # Role: Common Finance Configurator
 
-## MANUAL TEST ONLY - LOW CONFIDENCE (4.0/10.0)
+## AUTOMATED TEST
+## Description: Verify the following rules have the correct ledger account:  Deferred Revenue Revenue Receivables
 
-# This scenario requires manual execution due to insufficient automation detail
+# Test Steps
+describe "CC-3-0150 - View Account Posting Rules" do
 
-## Test Information
-- **Scenario ID**: CC-3-0150
-- **Functional Area**: Revenue Management
-- **Role**: Common Finance Configurator
-- **Task**: nan
+  # Setup
+  before do
+    login_as "Common Finance Configurator"
+  end
 
-## Manual Test Steps
-1. Login as: Common Finance Configurator
-2. Navigate to: nan
-3. Execute: Verify the following rules have the correct ledger account:  Deferred Revenue Revenue Receivables
-4. Sub-Task: None
-5. Validate: Per business requirements
-6. Document results
+  it "should complete: View Account Posting Rules" do
+    # Step 1: Navigate to task
+    navigate_to_task "nan"
+    wait_for_page_load
 
-## Reason for Manual Testing
-- Insufficient task detail for automation
-- Complex business logic requiring human judgment
-- Missing field specifications
+  end
 
-## Recommendations
-1. Execute manually and document detailed steps
-2. Capture field names and UI elements
-3. Record business logic decisions
-4. Create detailed Electron script from documentation
-5. Submit for SME review
+  # Cleanup
+  after do
+    logout
+  end
+end
+
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management View Account Posting Rules nan
+
+### 1. Admin Guide  Financial Management (score: 7)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components....................

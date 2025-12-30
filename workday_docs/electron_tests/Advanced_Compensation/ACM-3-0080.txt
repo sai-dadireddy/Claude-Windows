@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-3-0080
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Eligibility Rules
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 10 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Verify the plan will include the correct employee population.
+
+TASK/STEP:
+While in each plan, right click on the eligibility rule. Select "open in new tab".
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "While in each plan, right click on the eligibility rule. Select "open in new tab"."
+2. wait for search results
+3. click search result containing "While in each plan, right click on the eligibility rule. Select "open in new tab"."
+4. wait for page to load
+5. screenshot as "ACM-3-0080_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================
