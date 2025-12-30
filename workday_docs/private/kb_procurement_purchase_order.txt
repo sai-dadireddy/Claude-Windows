@@ -1,0 +1,278 @@
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Management WSDL
+Category: Procurement - Purchase Order Management
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Create Purchase Order business process is used to create legally binding
+purchase commitments with suppliers. POs can be created from approved
+requisitions, directly without requisitions, or from supplier contracts. Once
+issued, POs authorize suppliers to deliver goods/services.
+
+Business Process: Create Purchase Order (or Convert Requisition to PO)
+Functional Area: Procurement / Resource Management
+Initiator: Procurement team or automated conversion
+Typical Duration: Same-day (after requisition approval)
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PO HEADER
+   - PO Number (auto-generated)
+   - PO Date
+   - Company/Legal Entity
+   - Supplier
+   - Supplier Contract (if applicable)
+   - Currency
+   - Payment Terms
+   - Ship-To Location
+   - Bill-To Location
+
+2. LINE ITEMS
+   - Purchase Item
+   - Description
+   - Quantity
+   - Unit Price
+   - Extended Amount
+   - Delivery Date
+   - Tax Applicability
+
+3. WORKTAGS
+   - Cost Center
+   - Project
+   - Grant
+   - Program
+
+4. FINANCIAL COMMITMENT
+   - Encumbrance created
+   - Budget reserved
+   - Commitment accounting entry
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: CREATE PO FROM REQUISITION
+----------------------------------
+Navigation: Procurement → Create Purchase Order from Requisition
+
+Actions:
+1. Search for approved requisition
+2. Click "Create Purchase Order"
+3. System pre-fills all requisition details
+4. Review supplier, pricing, terms
+5. Adjust if needed (pricing negotiations)
+6. Submit for approval (if required)
+7. Issue PO to supplier
+
+STEP 2: CREATE PO DIRECTLY (No Requisition)
+-------------------------------------------
+Navigation: Create → Purchase Order
+
+Actions:
+1. Click Create → Purchase Order
+2. Select Company
+3. Select Supplier
+4. Add line items manually
+5. Set pricing and quantities
+6. Assign worktags
+7. Submit and issue
+
+STEP 3: ADD LINE ITEMS
+-----------------------
+For Goods:
+- Item description
+- Purchase item (catalog)
+- Quantity
+- Unit price
+- Unit of measure
+- Delivery date
+- Tax code
+
+For Services:
+- Service description
+- Deliverables
+- Milestones
+- Project association
+- Payment schedule
+
+For Contingent Workers:
+- Position
+- Start/End dates
+- Hourly rate
+- Scheduled hours
+- Time codes
+
+STEP 4: SET PAYMENT TERMS
+--------------------------
+Common Terms:
+- Net 30: Payment due in 30 days
+- Net 45: Payment due in 45 days
+- 2/10 Net 30: 2% discount if paid in 10 days
+- Due on Receipt: Payment immediately
+- Progress Payments: Based on milestones
+
+STEP 5: ISSUE PO TO SUPPLIER
+-----------------------------
+Issuance Methods:
+- Email: Auto-send PO PDF to supplier email
+- Fax: Fax PO to supplier
+- Manual: Print and mail/hand-deliver
+- EDI: Electronic data interchange
+- Supplier Portal: Supplier downloads from portal
+
+STEP 6: CHANGE ORDER (If Needed)
+---------------------------------
+For changes after issuance:
+1. Initiate Change Purchase Order
+2. Modify quantity, price, delivery date
+3. Add/remove line items
+4. Submit for approval
+5. Re-issue amended PO to supplier
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Resource_Management
+
+Key Operations:
+
+1. Submit_Purchase_Order
+   - Create new PO
+   - Required: Company, Supplier, Line Items
+   - Returns: PO Number, Business Process ID
+
+2. Get_Purchase_Orders
+   - Retrieve PO details
+   - Filter by PO number, supplier, date
+   - Returns: Full PO data, status, approvals
+
+3. Cancel_Purchase_Order
+   - Cancel issued PO
+   - Reason required
+   - Returns: Cancellation confirmation
+
+4. Submit_Receipt
+   - Receive goods against PO
+   - Required: PO Line, Quantity Received
+   - Creates 3-way match for payment
+
+5. Submit_Supplier_Invoice
+   - Match invoice to PO
+   - Validates pricing and quantities
+   - Enables payment processing
+
+API Request Example:
+```xml
+<bsvc:Submit_Purchase_Order_Request bsvc:version="v42.2">
+  <bsvc:Business_Process_Parameters>
+    <bsvc:Auto_Complete>true</bsvc:Auto_Complete>
+  </bsvc:Business_Process_Parameters>
+  <bsvc:Purchase_Order_Data>
+    <bsvc:Document_Number>PO-2026-00123</bsvc:Document_Number>
+    <bsvc:Company_Reference>
+      <bsvc:ID bsvc:type="Company_Reference_ID">US001</bsvc:ID>
+    </bsvc:Company_Reference>
+    <bsvc:Supplier_Reference>
+      <bsvc:ID bsvc:type="Supplier_ID">SUP-12345</bsvc:ID>
+    </bsvc:Supplier_Reference>
+    <bsvc:Purchase_Order_Line_Replacement_Data>
+      <bsvc:Goods_Line>
+        <bsvc:Item_Description>Laptop Computer</bsvc:Item_Description>
+        <bsvc:Quantity>1</bsvc:Quantity>
+        <bsvc:Unit_Cost>1299.99</bsvc:Unit_Cost>
+        <bsvc:Worktags_Reference>
+          <bsvc:ID bsvc:type="Cost_Center_ID">CC-IT-100</bsvc:ID>
+        </bsvc:Worktags_Reference>
+      </bsvc:Goods_Line>
+    </bsvc:Purchase_Order_Line_Replacement_Data>
+  </bsvc:Purchase_Order_Data>
+</bsvc:Submit_Purchase_Order_Request>
+```
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- PO Search: input[data-automation-id="searchBox"]
+- Create PO: button:contains("Create Purchase Order")
+- Supplier: input[data-automation-id="supplierPrompt"]
+- Add Line: button[data-automation-id="addItemButton"]
+- Issue PO: button:contains("Issue Purchase Order")
+
+Validation:
+- PO amount matches requisition
+- Supplier is approved and active
+- Budget available (encumbrance)
+- Pricing within contract limits
+- Delivery dates realistic
+
+Error Handling:
+- "Supplier on hold" → contact procurement
+- "Budget exceeded" → reduce PO amount
+- "Invalid payment terms" → select valid terms
+- "PO already exists" → check for duplicates
+
+Screenshot Strategy:
+1. PO creation screen
+2. Line items added
+3. Review/approval summary
+4. Issuance confirmation
+5. PO PDF generated
+
+Performance:
+- Use API for bulk PO creation (10x faster)
+- Cache supplier lookups
+- Pre-validate budget before PO creation
+- Batch similar POs to same supplier
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Create Requisition → Create Purchase Order → Issue PO
+- Create Receipt → Receive goods/services
+- Create Supplier Invoice → Match to PO
+- Process Payment → Pay supplier
+- Close Purchase Order → After full delivery/payment
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Use requisitions for proper approval workflow
+2. Verify supplier details before issuance
+3. Include clear delivery instructions
+4. Set realistic delivery dates
+5. Attach contracts/SOWs for services
+6. Use supplier contracts for better pricing
+7. Consolidate POs to reduce admin overhead
+8. Track PO status proactively
+9. Close POs promptly after completion
+10. Monitor supplier performance
+
+================================================================================
+NOTES
+================================================================================
+
+- PO creates financial commitment (encumbrance)
+- Issued POs are legally binding
+- Changes require formal change order process
+- 3-way match: PO + Receipt + Invoice (for payment)
+- PO status: Draft → Submitted → Approved → Issued → Closed
+- Closed POs cannot be reopened (create new PO if needed)
+- Partial receipts and invoices supported
+- Over-receipt tolerance can be configured
+- Under-delivery may allow PO closure with write-off
+
+================================================================================
