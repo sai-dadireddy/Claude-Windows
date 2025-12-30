@@ -1,0 +1,480 @@
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration
+Category: Human Capital Management - Benefits
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Benefit Enrollment process allows employees to elect, change, or waive
+benefit coverage. Enrollment occurs during annual open enrollment, new hire
+onboarding, qualifying life events, or benefit-specific enrollment periods.
+
+Business Process: Enroll in Benefits / Change Benefits
+Functional Area: Benefits Administration
+Initiator: Employee (self-service) or HR Partner
+Typical Duration: 15-30 minutes (employee), 1-2 days (approval/processing)
+
+Types of Enrollment Events:
+- New Hire Enrollment: Benefits election within first 30 days
+- Open Enrollment: Annual election period (typically November)
+- Life Event: Qualifying event (marriage, birth, etc.)
+- Benefits-Eligible Transfer: Job change makes newly eligible
+- Loss of Coverage: COBRA or retiree continuation
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. BENEFIT PLANS
+   - Medical (PPO, HMO, HDHP)
+   - Dental (PPO, DMO)
+   - Vision
+   - Life Insurance (Basic, Supplemental, Dependent)
+   - Disability (Short-term, Long-term)
+   - Flexible Spending Accounts (Health FSA, Dependent Care FSA)
+   - Health Savings Account (HSA)
+   - Retirement (401k, Roth 401k)
+   - Supplemental (Accident, Critical Illness, Hospital Indemnity)
+
+2. ENROLLMENT DETAILS
+   - Plan selection
+   - Coverage level (Employee Only, Employee+Spouse, Family)
+   - Contribution amount (for retirement/FSA)
+   - Beneficiary designation (life insurance, retirement)
+   - Dependent addition/verification
+   - Waiver (if declining coverage)
+
+3. DEPENDENTS
+   - Spouse/Domestic Partner
+   - Children
+   - Legal dependent verification
+   - Social Security Numbers
+   - Date of Birth
+   - Relationship type
+
+4. BENEFICIARIES
+   - Primary beneficiaries (% allocation)
+   - Contingent beneficiaries
+   - Trust designation
+   - Relationship to employee
+
+5. COSTS & DEDUCTIONS
+   - Employee premium cost
+   - Employer contribution
+   - Pre-tax vs post-tax deductions
+   - Payroll deduction frequency
+   - Annual cost projection
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE ENROLLMENT
+----------------------------
+Employee Self-Service:
+Navigation: Benefits → Change Benefits
+
+System Prompts:
+- "What is your qualifying event?" (for mid-year changes)
+- "When did the event occur?" (event date)
+- "Who is affected?" (employee, spouse, dependent)
+
+HR-Initiated:
+Navigation: Worker Profile → Actions → Change Benefits
+
+Required Information:
+- Event Type (New Hire, Open Enrollment, Life Event)
+- Event Date
+- Reason for Change
+
+STEP 2: REVIEW ELIGIBILITY
+---------------------------
+System Displays:
+
+Eligible Plans:
+✓ Plans employee qualifies for
+✓ Coverage levels available
+✓ Enrollment deadlines
+✓ Current elections (if mid-year change)
+
+Eligibility Rules:
+- Full-time (30+ hours): All plans
+- Part-time (20-29 hours): Limited plans
+- Contractors: Typically not eligible
+- Waitng Period: May be 30-90 days for new hires
+
+STEP 3: ELECT MEDICAL COVERAGE
+-------------------------------
+Medical Plan Selection:
+
+Options Typically:
+1. PPO (Preferred Provider Organization)
+   - Higher premium, lower deductible
+   - No referrals needed
+   - Broader network
+
+2. HMO (Health Maintenance Organization)
+   - Lower premium, moderate deductible
+   - Requires PCP and referrals
+   - Narrower network
+
+3. HDHP (High Deductible Health Plan)
+   - Lowest premium, high deductible
+   - HSA-eligible
+   - Best for healthy individuals
+
+Actions:
+1. Review plan comparison chart
+2. Calculate estimated costs
+3. Select plan
+4. Choose coverage level:
+   - Employee Only
+   - Employee + Spouse
+   - Employee + Child(ren)
+   - Family (Employee + Spouse + Children)
+5. Add dependents if needed
+6. Click "Elect"
+
+STEP 4: ADD/VERIFY DEPENDENTS
+------------------------------
+Dependent Information:
+
+Required Fields:
+- Full Legal Name
+- Date of Birth
+- Social Security Number
+- Relationship (Spouse, Child, Domestic Partner)
+- Gender
+- Address (if different)
+
+Supporting Documentation:
+- Marriage certificate (for spouse)
+- Birth certificate (for children)
+- Adoption papers
+- Domestic partnership affidavit
+- Court order (for legal guardianship)
+
+Actions:
+1. Click "Add Dependent"
+2. Enter dependent details
+3. Upload verification documents
+4. Attest to eligibility
+5. Save dependent
+
+STEP 5: ELECT DENTAL & VISION
+------------------------------
+Dental Plans:
+
+Options:
+- PPO Dental: Higher premium, any dentist
+- DMO Dental: Lower premium, network dentists only
+
+Vision Plans:
+- Vision Exam coverage
+- Frames/Contacts allowance
+- Frequency (annual/biennial)
+
+Actions:
+1. Select dental plan
+2. Choose coverage level
+3. Select vision plan
+4. Coverage level (often employee or family)
+5. Click "Elect"
+
+STEP 6: ELECT LIFE & DISABILITY INSURANCE
+------------------------------------------
+Life Insurance:
+
+Basic Life:
+- Employer-paid (typically 1x salary)
+- Automatic coverage
+- Beneficiary designation required
+
+Supplemental Life:
+- Employee-paid
+- Additional coverage (1x, 2x, 3x salary up to max)
+- Evidence of Insurability (EOI) if over guarantee issue
+- Beneficiary designation required
+
+Dependent Life:
+- Spouse coverage ($10K-$50K)
+- Child coverage ($5K-$20K)
+
+Disability:
+
+Short-Term Disability (STD):
+- Covers 60-70% salary
+- Waiting period: 7-14 days
+- Duration: 13-26 weeks
+
+Long-Term Disability (LTD):
+- Covers 60% salary
+- Waiting period: 90-180 days
+- Duration: To age 65 or Social Security approval
+
+Actions:
+1. Review basic life coverage
+2. Elect supplemental life amount
+3. Add spouse/dependent life if desired
+4. Designate beneficiaries
+5. Elect STD/LTD coverage
+6. Review costs
+
+STEP 7: DESIGNATE BENEFICIARIES
+--------------------------------
+Beneficiary Types:
+
+Primary Beneficiaries:
+- Receive proceeds if you die
+- Can designate multiple (must = 100%)
+- Example: Spouse 100% or Spouse 50%, Children 50%
+
+Contingent Beneficiaries:
+- Receive if primary deceased
+- Also must = 100%
+
+Trust/Estate:
+- Can name trust as beneficiary
+- Estate if no beneficiary
+
+Required Information:
+- Full Legal Name
+- Date of Birth
+- Social Security Number
+- Relationship
+- Address
+- Percentage allocation
+
+Actions:
+1. Click "Designate Beneficiaries"
+2. Add primary beneficiary(ies)
+3. Allocate percentages (total = 100%)
+4. Add contingent beneficiary(ies)
+5. Review and confirm
+
+STEP 8: ELECT FSA/HSA ACCOUNTS
+-------------------------------
+Flexible Spending Accounts:
+
+Health Care FSA:
+- Annual contribution: $0-$3,200 (2026 limit)
+- Use for medical expenses (copays, Rx, etc.)
+- Use-it-or-lose-it (with $640 carryover)
+- Cannot have with HSA
+
+Dependent Care FSA:
+- Annual contribution: $0-$5,000
+- Use for childcare, daycare, eldercare
+- Requires dependent SSN
+- Use-it-or-lose-it
+
+Health Savings Account (HSA):
+- Only available with HDHP
+- Annual contribution: $4,300 (individual), $8,550 (family) for 2026
+- Rolls over indefinitely
+- Triple tax advantage
+- Employer may contribute
+
+Actions:
+1. Select account type (FSA or HSA)
+2. Enter annual contribution amount
+3. Calculate per-paycheck deduction
+4. Confirm pre-tax status
+5. Click "Elect"
+
+STEP 9: ELECT RETIREMENT PLANS
+-------------------------------
+401(k) Plan:
+
+Contribution Options:
+- Pre-tax 401(k): Reduces taxable income
+- Roth 401(k): Tax-free in retirement
+- Combination of both
+
+Employer Match:
+- Example: 100% of first 3%, 50% of next 2%
+- Vesting schedule (e.g., 100% after 3 years)
+- Free money - always contribute enough to get full match
+
+Contribution Limits:
+- Employee: $23,500 (2026 limit)
+- Catch-up (50+): $7,500 additional
+- Total (including match): $70,000
+
+Investment Options:
+- Target Date Funds (recommended for most)
+- Index Funds
+- Bond Funds
+- Individual stock funds
+
+Actions:
+1. Select contribution type (Pre-tax/Roth/Both)
+2. Enter contribution % or $ amount
+3. Select investments (or use target date fund)
+4. Review employer match calculation
+5. Click "Elect"
+
+STEP 10: WAIVE COVERAGE (If Declining)
+---------------------------------------
+Waiving Benefits:
+
+Valid Reasons:
+- Covered under spouse's plan
+- Medicare/Medicaid
+- VA benefits
+- Retiree coverage
+- Cannot afford
+
+Attestation Required:
+- Certify other coverage source
+- Acknowledge can only re-enroll during:
+  - Next open enrollment
+  - Qualifying life event
+  - Loss of other coverage
+
+Actions:
+1. Select "Waive Coverage"
+2. Choose waiver reason
+3. Provide alternate coverage details
+4. Acknowledge restrictions
+5. Click "Confirm Waiver"
+
+STEP 11: REVIEW & SUBMIT
+-------------------------
+Review Summary:
+
+Displays:
+- All elected plans
+- Coverage levels
+- Dependents covered
+- Beneficiary designations
+- Total employee cost per paycheck
+- Annual cost projection
+- Effective date
+- Enrollment deadline
+
+Pre-Submission Checklist:
+□ All plans elected or waived
+□ Dependents added and verified
+□ Beneficiaries designated (life/retirement)
+□ Costs reviewed and affordable
+□ FSA/HSA amounts appropriate
+□ Retirement contribution set
+□ Evidence of Insurability submitted (if needed)
+
+Actions:
+1. Review all elections
+2. Use cost calculator
+3. Download summary for records
+4. Check "I attest to accuracy"
+5. Click "Submit Enrollment"
+
+STEP 12: POST-SUBMISSION
+-------------------------
+Confirmation:
+
+System Actions:
+- Confirmation number generated
+- Confirmation email sent
+- Enrollment forwarded to carriers
+- Payroll deductions updated
+- ID cards ordered (medical/dental/vision)
+
+Employee Receives:
+- Enrollment confirmation
+- Summary of Benefits and Coverage (SBC)
+- ID card arrival timeline (2-3 weeks)
+- Plan documents/handbooks
+- Beneficiary confirmation
+
+HR Follow-Up:
+- Review for completeness
+- Verify dependent documentation
+- Process Evidence of Insurability
+- Transmit to carriers
+- Update payroll
+
+================================================================================
+WORKDAY CONFIGURATION
+================================================================================
+
+Benefits Administration Setup:
+
+1. Benefit Plans: Configure medical, dental, vision, etc.
+2. Eligibility Rules: Define who qualifies for each plan
+3. Enrollment Periods: Set open enrollment dates
+4. Life Events: Define qualifying events
+5. Cost Factors: Employee premiums by age/tier
+6. Carrier Connections: Integrate with insurance carriers
+7. Dependent Verification: Document requirements
+8. Elections: Default elections and restrictions
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Automation is NOT recommended for benefit enrollment because:
+1. High sensitivity - errors impact employee coverage
+2. Complex decision-making required
+3. Document uploads needed
+4. Attestations and compliance requirements
+5. Employee-specific calculations
+
+API Usage:
+- Get_Benefit_Elections: Retrieve current elections
+- Get_Benefit_Plans: Display available plans
+- Reporting: Enrollment status, participation rates
+
+Better Approach:
+- Guide employees through self-service
+- HR reviews and validates elections
+- Use Workday's built-in enrollment experience
+- Automate carrier file transmissions instead
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Hire Employee: Triggers new hire enrollment
+- Life Event: Marriage, birth, adoption
+- Open Enrollment: Annual enrollment period
+- Terminate Employee: COBRA election
+- Change Job: May trigger benefit changes
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Communicate enrollment dates early (30 days notice)
+2. Provide decision-support tools (cost calculators)
+3. Offer benefits counseling sessions
+4. Send enrollment reminders
+5. Make enrollment mobile-friendly
+6. Provide plan comparison charts
+7. Explain employer contributions clearly
+8. Highlight deadlines prominently
+9. Verify dependent eligibility annually
+10. Follow up with non-enrollees
+
+================================================================================
+NOTES
+================================================================================
+
+- Enrollment typically happens annually during open enrollment
+- New hires have 30 days from hire date to enroll
+- Life events allow mid-year changes (31-day window)
+- Missing enrollment deadline = loss of coverage or passive enrollment
+- HSA only available if enrolled in HDHP
+- FSA and HSA cannot be combined (HCFSA)
+- Benefit elections generally effective on 1st of month after election
+- Some carriers require 15-day advance notice
+- ID cards arrive 2-3 weeks after effective date
+- COBRA election available after termination (60 days to elect)
+
+================================================================================
