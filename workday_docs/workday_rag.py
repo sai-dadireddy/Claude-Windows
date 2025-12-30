@@ -13,9 +13,15 @@ WSDL_DIR = DOCS_DIR / "wsdl"
 EMBEDDINGS_CACHE = DOCS_DIR / "embeddings.pkl"
 
 GEMINI_AVAILABLE = False
+PDF_AVAILABLE = False
 try:
     import google.generativeai as genai
     GEMINI_AVAILABLE = True
+except ImportError:
+    pass
+try:
+    import fitz  # PyMuPDF
+    PDF_AVAILABLE = True
 except ImportError:
     pass
 
@@ -77,6 +83,19 @@ class WorkdayRAG:
                 try:
                     self.docs.append({"type": "text", "file": f.name, "title": f.stem.replace("_"," ").title(), "content": open(f, encoding="utf-8").read()})
                 except: pass
+            # Load PDFs if PyMuPDF available
+            if PDF_AVAILABLE:
+                for f in PRIVATE_DIR.glob("*.pdf"):
+                    try:
+                        doc = fitz.open(f)
+                        text = ""
+                        for page in doc:
+                            text += page.get_text()[:5000]
+                            if len(text) > 50000: break
+                        doc.close()
+                        title = f.stem.replace("-", " ").replace("_", " ").title()
+                        self.docs.append({"type": "pdf", "file": f.name, "title": title, "content": text[:50000]})
+                    except: pass
         print(f"Loaded {len(self.docs)} docs from public/private")
 
     def load_wsdls(self):
