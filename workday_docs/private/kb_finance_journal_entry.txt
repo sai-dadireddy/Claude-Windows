@@ -1,0 +1,482 @@
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financial Management WSDL
+Category: Financial Management - General Ledger
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Create Journal Entry process is used to record manual accounting
+transactions in the general ledger. Journal entries are used for month-end
+accruals, adjustments, reclassifications, depreciation, and corrections that
+cannot be captured through operational transactions.
+
+Business Process: Submit Accounting Journal
+Functional Area: Financial Management / General Ledger
+Initiator: Accountant, Finance Manager
+Typical Duration: Same-day (simple entries) to 3 days (complex, multi-approval)
+
+Types of Journal Entries:
+- Accrual Journal: Record expense/revenue not yet invoiced
+- Adjustment Journal: Correct errors or reclassify transactions
+- Depreciation Journal: Record asset depreciation
+- Reversal Journal: Auto-reverse in next period
+- Recurring Journal: Template for repetitive entries
+- Beginning Balance: Opening balances for new ledgers
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. JOURNAL HEADER
+   - Journal Number (auto-generated or manual)
+   - Company/Legal Entity
+   - Accounting Date
+   - Ledger Type (Actual, Budget, Forecast)
+   - Currency
+   - Journal Source
+   - Book Code (GAAP, Tax, IFRS, etc.)
+   - Memo/Description
+
+2. JOURNAL LINES (Debits & Credits)
+   - Ledger Account
+   - Debit Amount
+   - Credit Amount
+   - Currency
+   - Line Memo
+   - Worktags (Cost Center, Project, Grant, etc.)
+   - Intercompany Affiliate
+
+3. BALANCING REQUIREMENT
+   - Total Debits = Total Credits (must balance)
+   - Multi-currency journals must balance in both transaction and ledger currency
+   - Intercompany transactions must balance across affiliates
+
+4. APPROVAL & POSTING
+   - Submission for approval
+   - Approval workflow (based on amount/account)
+   - Posting to ledger (creates GL impact)
+   - Reversal creation (if auto-reverse selected)
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE JOURNAL ENTRY
+-------------------------------
+Navigation: Create → Accounting Journal
+
+Required Fields:
+- Company
+- Accounting Date (period must be open)
+- Ledger Type (Actuals, Budget, Forecast)
+- Journal Source
+
+Optional:
+- Journal Number (auto-generated if blank)
+- Currency (defaults to company currency)
+- Book Code (defaults to Primary)
+- Control Total (for validation)
+- Create Reversal checkbox (auto-reverse next period)
+
+Actions:
+1. Click Create → Accounting Journal
+2. Select Company
+3. Set Accounting Date (must be in open period)
+4. Select Ledger Type
+5. Choose Journal Source (Manual, Month-End, Accrual, etc.)
+6. Add Memo describing purpose
+
+STEP 2: ADD DEBIT LINE
+-----------------------
+Debit Entry:
+
+Fields:
+- Ledger Account (search by account number or name)
+- Debit Amount
+- Currency (if multi-currency)
+- Line Memo
+- Worktags (Cost Center required, plus others)
+
+Actions:
+1. Click "Add" → "Add Journal Line"
+2. Search and select Ledger Account
+3. Enter Debit Amount
+4. Assign Worktags (Cost Center, Project, etc.)
+5. Add Line Memo
+6. Click "OK"
+
+Example Debit:
+Account: 6200 - Travel & Entertainment Expense
+Debit: $5,000
+Cost Center: Sales Department
+Memo: "Accrual for Q4 sales conference"
+
+STEP 3: ADD CREDIT LINE
+------------------------
+Credit Entry:
+
+Fields:
+- Ledger Account
+- Credit Amount
+- Currency
+- Line Memo
+- Worktags
+
+Actions:
+1. Click "Add" → "Add Journal Line"
+2. Select Ledger Account
+3. Enter Credit Amount
+4. Assign Worktags
+5. Add Line Memo
+6. Click "OK"
+
+Example Credit:
+Account: 2100 - Accrued Expenses
+Credit: $5,000
+Cost Center: Sales Department
+Memo: "Liability for Q4 sales conference"
+
+STEP 4: VERIFY BALANCE
+-----------------------
+Balance Validation:
+
+System Checks:
+✓ Total Debits = Total Credits
+✓ Multi-currency balanced in both currencies
+✓ Intercompany entries balanced across affiliates
+✓ All required worktags assigned
+✓ Accounting date in open period
+
+Visual Indicators:
+- Balance indicator shows: In Balance / Out of Balance
+- Amount difference displayed if unbalanced
+- Color coding: Green (balanced), Red (unbalanced)
+
+If Out of Balance:
+1. Review debit and credit amounts
+2. Check for missing lines
+3. Verify currency rates
+4. Add/adjust lines to balance
+
+STEP 5: ATTACH SUPPORTING DOCS
+-------------------------------
+Documentation:
+
+Recommended Attachments:
+- Supporting calculations (Excel)
+- Invoices or receipts
+- Email approvals
+- Contracts or agreements
+- Reconciliation reports
+
+Actions:
+1. Click "Attachments" tab
+2. Click "Add Attachment"
+3. Upload file
+4. Add description
+5. Categorize document type
+
+STEP 6: REVIEW & VALIDATE
+--------------------------
+Pre-Submission Review:
+
+Checklist:
+□ Journal is balanced (debits = credits)
+□ Accounting date correct
+□ Correct accounts selected
+□ Worktags assigned to all lines
+□ Memo clearly describes purpose
+□ Supporting docs attached
+□ Control total matches (if used)
+□ Correct book code selected
+
+Review Screen Shows:
+- Journal summary
+- Total debits
+- Total credits
+- Balance status
+- GL impact preview
+
+STEP 7: SUBMIT FOR APPROVAL
+----------------------------
+Submission:
+
+Actions:
+1. Click "Submit"
+2. Journal enters approval workflow
+3. System validates all requirements
+4. Routing determined by:
+   - Dollar amount thresholds
+   - Account types (balance sheet vs P&L)
+   - Book code
+   - Company policy
+
+Approval Chain (typical):
+
+Level 1: Accountant/Preparer
+- Self-review before submission
+- Validates calculations
+
+Level 2: Accounting Manager
+- Reviews journal purpose
+- Validates account selection
+- Checks documentation
+- Approves amounts < $50K
+
+Level 3: Controller (for large amounts)
+- Reviews material journals > $50K
+- Balance sheet account changes
+- Intercompany transactions
+- Period-end adjustments
+
+Level 4: CFO (for very large/unusual)
+- Amounts > $500K
+- Write-offs
+- Prior period adjustments
+- Litigation accruals
+
+STEP 8: POSTING TO LEDGER
+--------------------------
+After Approval:
+
+Automatic Posting:
+- Journal posts to General Ledger
+- GL balances updated
+- Financial reports reflect entry
+- Transaction date stamped
+- Audit trail created
+
+Status Changes:
+Draft → Submitted → Approved → Posted → Closed
+
+Reversal Creation (if selected):
+- System creates automatic reversal
+- Reversal dated first day of next period
+- Reversal posts automatically when period opens
+- Original journal linked to reversal
+
+STEP 9: RECURRING JOURNALS
+---------------------------
+For Repetitive Entries:
+
+Create Template:
+1. Create "Recurring Journal Template"
+2. Define line items with accounts
+3. Set frequency (monthly, quarterly)
+4. Save template
+
+Use Template:
+1. Search for template
+2. Click "Create Journal from Template"
+3. System pre-fills all lines
+4. Update amounts if needed
+5. Submit
+
+Common Recurring Journals:
+- Monthly depreciation
+- Rent/lease expense allocation
+- Prepaid amortization
+- Deferred revenue recognition
+- Standard allocations
+
+STEP 10: REVERSALS & CORRECTIONS
+---------------------------------
+Reversing Journals:
+
+Auto-Reverse:
+- Check "Create Reversal" at creation
+- System creates opposite entry
+- Posts automatically next period
+- Used for accruals
+
+Manual Reverse:
+- Use "Reverse Journal" action
+- Select original journal
+- System creates opposite entry
+- Review and approve reversal
+
+Correcting Errors:
+
+Option A: Reverse and Re-enter
+1. Reverse incorrect journal
+2. Create new correct journal
+3. Both post to same period
+
+Option B: Adjusting Entry
+1. Create new journal with correction
+2. Reference original journal in memo
+3. Net effect corrects error
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Financial_Management
+
+Key Operations:
+
+1. Submit_Accounting_Journal
+   - Create/submit journal entries
+   - Required: Company, Date, Ledger_Type, Lines (balanced)
+   - Returns: Journal_Reference, Business_Process_ID
+
+2. Get_Journals
+   - Retrieve journal entries
+   - Filter by company, date range, account, status
+   - Returns: Header, lines, approval status
+
+3. Cancel_Accounting_Journal
+   - Cancel unposted journal
+   - Kicks off unpost/cancel workflow
+   - Returns: Cancellation confirmation
+
+4. Unpost-Reverse_Accounting_Journal
+   - Unpost or reverse posted journal
+   - Creates reversal entry
+   - Returns: Reversal journal reference
+
+5. Put_Recurring_Journal_Template
+   - Create/update journal templates
+   - Returns: Template reference
+
+6. Get_Recurring_Journal_Templates
+   - Retrieve template definitions
+   - Returns: Template structure for reuse
+
+API Request Example:
+```xml
+<bsvc:Submit_Accounting_Journal_Request bsvc:version="v42.2">
+  <bsvc:Business_Process_Parameters>
+    <bsvc:Auto_Complete>false</bsvc:Auto_Complete>
+  </bsvc:Business_Process_Parameters>
+  <bsvc:Accounting_Journal_Data>
+    <bsvc:Journal_Number>JE-2026-00123</bsvc:Journal_Number>
+    <bsvc:Company_Reference>
+      <bsvc:ID bsvc:type="Company_Reference_ID">US001</bsvc:ID>
+    </bsvc:Company_Reference>
+    <bsvc:Currency_Reference>
+      <bsvc:ID bsvc:type="Currency_ID">USD</bsvc:ID>
+    </bsvc:Currency_Reference>
+    <bsvc:Ledger_Type_Reference>
+      <bsvc:ID bsvc:type="Ledger_Type_ID">Actuals</bsvc:ID>
+    </bsvc:Ledger_Type_Reference>
+    <bsvc:Accounting_Date>2026-01-31</bsvc:Accounting_Date>
+    <bsvc:Journal_Source_Reference>
+      <bsvc:ID bsvc:type="Journal_Source_ID">Manual</bsvc:ID>
+    </bsvc:Journal_Source_Reference>
+    <bsvc:Memo>Monthly depreciation entry</bsvc:Memo>
+    <bsvc:Create_Reversal>false</bsvc:Create_Reversal>
+    <bsvc:Journal_Entry_Line_Replacement_Data>
+      <bsvc:Journal_Entry_Line>
+        <bsvc:Ledger_Account_Reference>
+          <bsvc:ID bsvc:type="Ledger_Account_ID">6520</bsvc:ID>
+        </bsvc:Ledger_Account_Reference>
+        <bsvc:Debit_Amount>10000</bsvc:Debit_Amount>
+        <bsvc:Line_Memo>Depreciation expense - Building</bsvc:Line_Memo>
+        <bsvc:Worktags_Reference>
+          <bsvc:ID bsvc:type="Cost_Center_ID">CC-ADMIN</bsvc:ID>
+        </bsvc:Worktags_Reference>
+      </bsvc:Journal_Entry_Line>
+      <bsvc:Journal_Entry_Line>
+        <bsvc:Ledger_Account_Reference>
+          <bsvc:ID bsvc:type="Ledger_Account_ID">1520</bsvc:ID>
+        </bsvc:Ledger_Account_Reference>
+        <bsvc:Credit_Amount>10000</bsvc:Credit_Amount>
+        <bsvc:Line_Memo>Accumulated depreciation</bsvc:Line_Memo>
+        <bsvc:Worktags_Reference>
+          <bsvc:ID bsvc:type="Cost_Center_ID">CC-ADMIN</bsvc:ID>
+        </bsvc:Worktags_Reference>
+      </bsvc:Journal_Entry_Line>
+    </bsvc:Journal_Entry_Line_Replacement_Data>
+  </bsvc:Accounting_Journal_Data>
+</bsvc:Submit_Accounting_Journal_Request>
+```
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- Create journal: Search "Accounting Journal"
+- Company: select[data-automation-id="company"]
+- Account search: input[data-automation-id="ledgerAccountPrompt"]
+- Debit amount: input[data-automation-id="debitAmount"]
+- Credit amount: input[data-automation-id="creditAmount"]
+- Worktags: div[data-automation-id="worktag"]
+- Submit: button[data-automation-id="SUBMIT"]
+
+Validation:
+- Debits = Credits (balanced)
+- All lines have worktags
+- Accounting date in open period
+- Accounts are active and valid
+- Amounts are numeric and > 0
+
+Error Handling:
+- "Journal out of balance" → adjust amounts
+- "Period closed" → change accounting date
+- "Invalid account" → verify account number
+- "Missing worktag" → assign required worktags
+
+Screenshot Strategy:
+1. Journal header creation
+2. Debit line entry
+3. Credit line entry
+4. Balance verification
+5. Approval submission
+6. Posting confirmation
+
+Performance:
+- Use API for bulk journal creation
+- Template recurring journals
+- Validate data before UI automation
+- Batch similar journals
+- Use integration for month-end close
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Close Period: Month-end close process
+- Financial Reporting: Trial balance, P&L, Balance Sheet
+- Bank Reconciliation: Reconcile cash accounts
+- Intercompany Settlement: Balance IC transactions
+- Budget vs Actuals: Variance analysis
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Clear, descriptive memos
+2. Always attach supporting documentation
+3. Use standard journal sources
+4. Review account balances before/after
+5. Use auto-reverse for accruals
+6. Create templates for recurring entries
+7. Submit journals promptly for approval
+8. Close periods after all entries posted
+9. Reconcile accounts monthly
+10. Maintain audit trail documentation
+
+================================================================================
+NOTES
+================================================================================
+
+- Journal must balance (debits = credits)
+- Posted journals cannot be deleted (only reversed)
+- Accounting date determines which period journal impacts
+- Journals can post to closed periods with special security
+- Intercompany journals create reciprocal entries
+- Multi-currency journals must balance in both currencies
+- Auto-reverse journals post automatically next period
+- Journal source drives reporting and analytics
+- Control total is optional validation tool
+- Book code enables multi-GAAP reporting (US GAAP, IFRS, Tax)
+
+================================================================================
