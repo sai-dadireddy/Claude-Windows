@@ -1,40 +1,52 @@
 # TX-5-0210 - Withholding Tax Status
-# Confidence Score: 8.0/10.0
-# Functional Area: Tax
+# Confidence Score: 9.0/10.0
 # Role: Finance Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Verify withholding tax status for use in withholding tax rules
 
 # Test Steps
 describe "TX-5-0210 - Withholding Tax Status" do
 
+  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Withholding Tax Status" do
     # Step 1: Navigate to task
-    enter search box as "View Withholding Tax Statuses"
-    wait for search results
-    click search result containing "View Withholding Tax Statuses"
-    wait for page to load
+    navigate_to_task "View Withholding Tax Statuses"
+    wait_for_page_load
 
     # Step 2: Verify page loaded
-    verify page title contains "Withholding"
+    expect(page).to have_content "Withholding"
 
-    # Step 3: Validate key elements present
-    verify page contains "View Withholding Tax Statuses"
+    # Step 3: Validate data elements
+    validate_page_elements
 
-    # Step 5: Take screenshot evidence
-    screenshot as "TX-5-0210_complete.png"
+    # Step 4: Take screenshot for evidence
+    screenshot "#TX-5-0210_verification"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Tax Withholding Tax Status View Withholding Tax Statuses
+
+### 1. Admin Guide  Financial Management (score: 5)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components.............

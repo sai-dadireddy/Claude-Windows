@@ -1,40 +1,47 @@
 # TX-5-0150 - Tax Declaration Definition Category
-# Confidence Score: 8.0/10.0
-# Functional Area: Tax
+# Confidence Score: 9.0/10.0
 # Role: Finance Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Verify the tax declaration definition category configuration
 
 # Test Steps
 describe "TX-5-0150 - Tax Declaration Definition Category" do
 
+  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Tax Declaration Definition Category" do
     # Step 1: Navigate to task
-    enter search box as "View Tax Declaration Definition Category"
-    wait for search results
-    click search result containing "View Tax Declaration Definition Category"
-    wait for page to load
+    navigate_to_task "View Tax Declaration Definition Category"
+    wait_for_page_load
 
     # Step 2: Verify page loaded
-    verify page title contains "Tax"
+    expect(page).to have_content "Tax"
 
-    # Step 3: Validate key elements present
-    verify page contains "View Tax Declaration Definition Category"
+    # Step 3: Validate data elements
+    validate_page_elements
 
-    # Step 5: Take screenshot evidence
-    screenshot as "TX-5-0150_complete.png"
+    # Step 4: Take screenshot for evidence
+    screenshot "#TX-5-0150_verification"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Tax Tax Declaration Definition Category View Tax Declaration Definition Category
+
+### 1. WSDL: Financial_Management (score: 5)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial Reporting, Tax,

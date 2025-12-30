@@ -1,3 +1,8 @@
+import sys
+import codecs
+sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
 #!/usr/bin/env python3
 """Generate Electron tests for Advanced_Compensation, Data_Management_FIN, Data_Management_HCM"""
 
@@ -154,7 +159,7 @@ def generate_test_file(scenario, output_dir):
     # Extract task
     task = extract_task_name(task_step)
     if not task:
-        print(f"  ⚠️  {scenario_id}: INCOMPLETE - Missing Task/Step")
+        print(f"  [!!]  {scenario_id}: INCOMPLETE - Missing Task/Step")
         return None
 
     # Query RAG
@@ -163,13 +168,13 @@ def generate_test_file(scenario, output_dir):
 
     # Determine status
     if confidence >= 7.0:
-        status = "✅ ACCEPTED"
+        status = "[OK] ACCEPTED"
         status_code = 'accepted'
     elif confidence >= 5.0:
-        status = "⚠️ NEEDS REVIEW"
+        status = "[!!] NEEDS REVIEW"
         status_code = 'review'
     else:
-        status = "❌ MANUAL"
+        status = "[XX] MANUAL"
         status_code = 'manual'
 
     print(f"    {status} (Confidence: {confidence:.1f}/10)")
@@ -251,16 +256,16 @@ def process_area(area_name, json_file):
             else:
                 stats['incomplete'] += 1
         except Exception as e:
-            print(f"  ❌ Error: {scenario.get('Scenario ID', 'UNKNOWN')}: {e}")
+            print(f"  [XX] Error: {scenario.get('Scenario ID', 'UNKNOWN')}: {e}")
             stats['incomplete'] += 1
 
     # Summary
     print(f"\n{'-'*80}")
     print(f"Summary for {area_name}:")
-    print(f"  ✅ Accepted (>= 7.0):     {stats['accepted']}")
-    print(f"  ⚠️  Needs Review (5-6.9):  {stats['review']}")
-    print(f"  ❌ Manual (< 5.0):        {stats['manual']}")
-    print(f"  ⚠️  Incomplete:            {stats['incomplete']}")
+    print(f"  [OK] Accepted (>= 7.0):     {stats['accepted']}")
+    print(f"  [!!]  Needs Review (5-6.9):  {stats['review']}")
+    print(f"  [XX] Manual (< 5.0):        {stats['manual']}")
+    print(f"  [!!]  Incomplete:            {stats['incomplete']}")
     print(f"  Total:                    {len(scenarios)}")
     print(f"{'-'*80}")
 
@@ -289,15 +294,15 @@ def main():
             for key in total_stats:
                 total_stats[key] += area_stats[key]
         else:
-            print(f"⚠️  Warning: {json_file} not found")
+            print(f"[!!]  Warning: {json_file} not found")
 
     # Grand total
     print(f"\n{'='*80}")
     print(f"GRAND TOTAL:")
-    print(f"  ✅ Accepted (>= 7.0):     {total_stats['accepted']}")
-    print(f"  ⚠️  Needs Review (5-6.9):  {total_stats['review']}")
-    print(f"  ❌ Manual (< 5.0):        {total_stats['manual']}")
-    print(f"  ⚠️  Incomplete:            {total_stats['incomplete']}")
+    print(f"  [OK] Accepted (>= 7.0):     {total_stats['accepted']}")
+    print(f"  [!!]  Needs Review (5-6.9):  {total_stats['review']}")
+    print(f"  [XX] Manual (< 5.0):        {total_stats['manual']}")
+    print(f"  [!!]  Incomplete:            {total_stats['incomplete']}")
     print(f"  Total Scenarios:          {sum(total_stats.values())}")
     print(f"{'='*80}\n")
     print(f"Output location: {base_dir}")

@@ -1,40 +1,50 @@
 # TX-5-0100 - Transaction Tax Item Groups
-# Confidence Score: 8.0/10.0
-# Functional Area: Tax
+# Confidence Score: 9.0/10.0
 # Role: Finance Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Verify the item grouping by purchase, expense or sales item type
 
 # Test Steps
 describe "TX-5-0100 - Transaction Tax Item Groups" do
 
+  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Transaction Tax Item Groups" do
     # Step 1: Navigate to task
-    enter search box as "View Transaction Tax Item Groups"
-    wait for search results
-    click search result containing "View Transaction Tax Item Groups"
-    wait for page to load
+    navigate_to_task "View Transaction Tax Item Groups"
+    wait_for_page_load
 
     # Step 2: Verify page loaded
-    verify page title contains "Transaction"
+    expect(page).to have_content "Transaction"
 
-    # Step 3: Validate key elements present
-    verify page contains "View Transaction Tax Item Groups"
+    # Step 3: Validate data elements
+    validate_page_elements
 
-    # Step 5: Take screenshot evidence
-    screenshot as "TX-5-0100_complete.png"
+    # Step 4: Take screenshot for evidence
+    screenshot "#TX-5-0100_verification"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Tax Transaction Tax Item Groups View Transaction Tax Item Groups
+
+### 1. Kb Hcm Terminate Employee (score: 5)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Comm
