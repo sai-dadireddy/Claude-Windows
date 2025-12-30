@@ -1,18 +1,21 @@
 # REC-1-0040: Tenant Setup - Notifications
 # Functional Area: Talent Acquisition
-# Confidence: 7.5/10.0
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: System Configurator
+
+# [NEEDS SME REVIEW - Insufficient task details]
 
 # Step 1: Login
 login|System Configurator
 
-# Step 2: Navigate to Recruiting Home
-search|Recruiting
-click|Recruiting
+# Step 2: Navigate to Setup
+search|Setup
+click|Recruiting Setup
 wait|2
 
-# Step 3: Tenant Setup - Notifications
-# Task: Edit Tenant Setup - Notifications
-# [NEEDS SPECIFIC STEPS]
+# Step 3: Configure Tenant Setup - Notifications
+verify|Configuration options are available
+# [MANUAL: Complete configuration based on requirements]
 
 # Final Step: Logout
 logout

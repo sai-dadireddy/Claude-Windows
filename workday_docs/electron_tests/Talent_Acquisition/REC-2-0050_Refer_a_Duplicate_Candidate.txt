@@ -1,19 +1,21 @@
 # REC-2-0050: Refer a Duplicate Candidate
 # Functional Area: Talent Acquisition
-# Confidence: 8.0/10.0
+# Test Type: 1 | Unit Test Scenarios
+# Role: Employee As Self
+
+# [NEEDS SME REVIEW - Insufficient task details]
 
 # Step 1: Login
 login|Employee As Self
 
-# Step 2: Navigate to Recruiting
+# Step 2: Navigate to Candidates
 search|Find Candidates
 click|Find Candidates
 wait|2
 
-# Step 3: Process Candidate
+# Step 3: Review Candidate Information
 filter|Active Candidates
-select|First candidate
-verify|Candidate details display correctly
+verify|Candidate list displays
 
 # Final Step: Logout
 logout

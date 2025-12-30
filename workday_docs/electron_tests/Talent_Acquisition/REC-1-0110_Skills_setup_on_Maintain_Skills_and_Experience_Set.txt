@@ -1,21 +1,19 @@
 # REC-1-0110: Skills setup on Maintain Skills and Experience Setup - Job Requisitions (confirm scope)
 # Functional Area: Talent Acquisition
-# Confidence: 5.0/10.0
-
-# [NEEDS SME REVIEW]
-# This test was generated with medium confidence and requires validation
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: Recruiting Administrator / HR Administrator
 
 # Step 1: Login
 login|Recruiting Administrator / HR Administrator
 
-# Step 2: Navigate to Recruiting Home
-search|Recruiting
-click|Recruiting
+# Step 2: Navigate to Setup
+search|Setup
+click|Recruiting Setup
 wait|2
 
-# Step 3: Skills setup on Maintain Skills and Experience Setup - Job Requisitions (confirm scope)
-# Task: Maintain Skills and Experience Setup
-# [NEEDS SPECIFIC STEPS]
+# Step 3: Configure Skills setup on Maintain Skills and Experience Setup - Job Requisitions (confirm scope)
+verify|Configuration options are available
+# [MANUAL: Complete configuration based on requirements]
 
 # Final Step: Logout
 logout

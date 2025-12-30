@@ -1,161 +1,21 @@
-# Electron Test: TLO-3-0110 - Verify Talent/Performance Role Assignments
+# TLO-3-0110: Verify Talent/Performance Role Assignments
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-3-0110
-- **Module**: Talent Optimization
-- **Test Type**: 2 | End to End Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# [NEEDS SME REVIEW - Insufficient task details]
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 1: Login
+login|Talent Administrator
 
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
 
-## Scenario Description
-Verify the correct workers are assigned to Talent Security Groups - Talent Administrator and any custom Talent/Performance security groups
+# Step 3: Verify Talent/Performance Role Assignments
+# Task: View Security Group
+# [MANUAL: Complete specific talent optimization actions]
 
-## Test Steps
-
-### Task/Step: View Security Group
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Verify Talent/Performance Role Assignments View Security Group
-
-### 1. Kb Hcm Change Job (score: 7)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 2. Kb Hcm Terminate Employee (score: 7)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-### 3. Workday Feature Descriptions Ditamap (score: 7)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-3-0110: Verify Talent/Performance Role Assignments', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('View Security Group', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: View Security Group
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Verify Talent/Performance Role Assignments View Security Group
-
-### 1. Kb Hcm Change Job (score: 7)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 2. Kb Hcm Terminate Employee (score: 7)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-### 3. Workday Feature Descriptio
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:17:35.808468
-Confidence: 80.00%
+# Final Step: Logout
+logout

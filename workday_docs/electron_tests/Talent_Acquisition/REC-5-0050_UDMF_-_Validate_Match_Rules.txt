@@ -1,0 +1,23 @@
+# REC-5-0050: UDMF - Validate Match Rules
+# Functional Area: Talent Acquisition
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Recruiting Administrator / 
+ Security Administrator
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Recruiting Administrator / 
+ Security Administrator
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: UDMF - Validate Match Rules
+# Task: Manage Match Rules
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

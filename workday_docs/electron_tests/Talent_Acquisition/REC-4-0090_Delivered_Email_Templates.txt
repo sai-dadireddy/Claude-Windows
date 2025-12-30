@@ -1,0 +1,19 @@
+# REC-4-0090: Delivered Email Templates
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiting Administrator
+
+# Step 1: Login
+login|Recruiting Administrator
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Delivered Email Templates
+# Task: Review redirect email inbox as per your deployment
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

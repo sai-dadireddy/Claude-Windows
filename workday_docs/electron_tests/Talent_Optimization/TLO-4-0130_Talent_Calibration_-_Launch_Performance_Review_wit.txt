@@ -1,0 +1,22 @@
+# TLO-4-0130: Talent Calibration - Launch Performance Review with Calibration
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Test Scenarios
+# Role: Talent Administrator
+
+# Step 1: Login
+login|Talent Administrator
+
+# Step 2: Navigate to Performance Management
+search|My Performance
+click|My Performance
+wait|2
+
+# Step 3: Access Performance Review
+click|Performance Review
+verify|Performance review displays
+
+# Step 4: Review Performance Data
+verify|Performance ratings are visible
+
+# Final Step: Logout
+logout

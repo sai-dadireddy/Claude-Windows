@@ -1,0 +1,21 @@
+# TLO-4-0180: Talent Calibration - Calibrate your Team (Managers Manager)
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Test Scenarios
+# Role: Managers Manager
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Managers Manager
+
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
+
+# Step 3: Talent Calibration - Calibrate your Team (Managers Manager)
+# Task: Inbox
+# [MANUAL: Complete specific talent optimization actions]
+
+# Final Step: Logout
+logout

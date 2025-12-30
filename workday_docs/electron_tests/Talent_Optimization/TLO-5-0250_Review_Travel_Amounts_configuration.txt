@@ -1,163 +1,21 @@
-# Electron Test: TLO-5-0250 - Review Travel Amounts configuration
+# TLO-5-0250: Review Travel Amounts configuration
+# Functional Area: Talent Optimization
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-5-0250
-- **Module**: Talent Optimization
-- **Test Type**: 3 | GOLD / Pre-Prod Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# [NEEDS SME REVIEW - Insufficient task details]
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 1: Login
+login|Talent Administrator
 
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
 
-## Scenario Description
-Verify that all expected Travel Amounts are present in the tenant
+# Step 3: Review Travel Amounts configuration
+# Task: View Travel Amounts
+# [MANUAL: Complete specific talent optimization actions]
 
-## Test Steps
-
-### Task/Step: View Travel Amounts
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Travel Amounts configuration View Travel Amounts
-
-### 1. Workday Feature Descriptions Ditamap (score: 7)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. WSDL: Talent (score: 5)
-Source: Talent.wsdl
-```
-WSDL: Talent
-Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
-Operations:
-  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
-  - Get_Assess_Talent: Retrieves the Potential Assess...
-```
-
-### 3. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron te...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-5-0250: Review Travel Amounts configuration', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('View Travel Amounts', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: View Travel Amounts
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Travel Amounts configuration View Travel Amounts
-
-### 1. Workday Feature Descriptions Ditamap (score: 7)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. WSDL: Talent (score: 5)
-Source: Talent.wsdl
-```
-WSDL: Talent
-Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
-Operations:
-  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
-  - Get_Assess_Talent: Retrieves the Potential Assess...
-```
-
-### 3. Electron Test Samples (sco
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:34:41.270927
-Confidence: 80.00%
+# Final Step: Logout
+logout

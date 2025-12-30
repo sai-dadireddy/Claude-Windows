@@ -1,160 +1,18 @@
-# Electron Test: TLO-4-0350-02 - Succession - Manage Succession Plan
+# TLO-4-0350-02: Succession - Manage Succession Plan
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Test Scenarios
+# Role: Succession Partner / Manager
 
-## Test Metadata
-- **Scenario ID**: TLO-4-0350-02
-- **Module**: Talent Optimization
-- **Test Type**: 2 | End to End Test Scenarios
-- **Workday Role**: Succession Partner / Manager
-- **Confidence Score**: 0.80
+# Step 1: Login
+login|Succession Partner / Manager
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 2: Navigate to Succession Planning
+search|Succession Planning
+click|Succession Planning
+wait|2
 
+# Step 3: Review Succession Plans
+verify|Succession plan data displays
 
-## Scenario Description
-Add workers to the Succession Plan using a variety of options (Talent Pool, add individual worker, etc.).
-
-## Test Steps
-
-### Task/Step: 2. Add Workers to Succession Plan
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Succession - Manage Succession Plan 2. Add Workers to Succession Plan
-
-### 1. Kb Hcm Change Job (score: 8)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 2. Kb Hcm Terminate Employee (score: 8)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-### 3. Admin Guide Integrations (1) (score: 8)
-Source: Admin-Guide-Integrations (1).pdf
-```
-Integrations
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Setup Considerations: Integrations................................................................... 18
-Launch and Manage Integrations......................................................................24
-Launch an Integrati...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Succession Partner / Manager
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-4-0350-02: Succession - Manage Succession Plan', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Succession Partner / Manager
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('2. Add Workers to Succession Plan', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: 2. Add Workers to Succession Plan
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Succession - Manage Succession Plan 2. Add Workers to Succession Plan
-
-### 1. Kb Hcm Change Job (score: 8)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 2. Kb Hcm Terminate Employee (score: 8)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-### 3. Admin Guide Integra
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 15 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: 1.5 Develop to Perform
-- Business Process Level 3: 1.5.2 Strategic Workforce Planning
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:30:08.356914
-Confidence: 80.00%
+# Final Step: Logout
+logout

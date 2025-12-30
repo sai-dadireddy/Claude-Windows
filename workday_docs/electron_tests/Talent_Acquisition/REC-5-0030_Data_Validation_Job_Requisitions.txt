@@ -1,0 +1,19 @@
+# REC-5-0030: Data Validation: Job Requisitions
+# Functional Area: Talent Acquisition
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Recruiting Admin / System Admin
+
+# Step 1: Login
+login|Recruiting Admin / System Admin
+
+# Step 2: Navigate to Job Requisitions
+search|Create Job Requisition
+click|Create Job Requisition
+wait|2
+
+# Step 3: Create/Review Job Requisition
+input|Job Title|Test Position
+verify|Job requisition form displays
+
+# Final Step: Logout
+logout

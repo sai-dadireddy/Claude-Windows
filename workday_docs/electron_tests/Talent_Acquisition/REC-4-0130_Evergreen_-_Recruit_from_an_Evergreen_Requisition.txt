@@ -1,0 +1,20 @@
+# REC-4-0130: Evergreen - Recruit from an Evergreen Requisition
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: nan
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Default User
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Evergreen - Recruit from an Evergreen Requisition
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

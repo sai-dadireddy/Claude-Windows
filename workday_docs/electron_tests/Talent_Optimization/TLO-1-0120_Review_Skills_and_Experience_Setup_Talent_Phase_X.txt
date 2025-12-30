@@ -1,165 +1,19 @@
-# Electron Test: TLO-1-0120 - Review Skills and Experience Setup (Talent Phase X)
+# TLO-1-0120: Review Skills and Experience Setup (Talent Phase X)
+# Functional Area: Talent Optimization
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-1-0120
-- **Module**: Talent Optimization
-- **Test Type**: 1 | Unit Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# Step 1: Login
+login|Talent Administrator
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
 
+# Step 3: Review Skills and Experience Setup (Talent Phase X)
+# Task: Maintain Skills and Experience Setup
+# [MANUAL: Complete specific talent optimization actions]
 
-## Scenario Description
-Verify Skills have been enabled Skills and Experience Setup task
-
-## Test Steps
-
-### Task/Step: Maintain Skills and Experience Setup
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Skills and Experience Setup (Talent Phase X) Maintain Skills and Experience Setup
-
-### 1. Admin Guide Authentication And Security (score: 6)
-Source: Admin-Guide-Authentication-and-Security.pdf
-```
-Authentication
-and Security
-Product Summary
-December 11, 2025
- | Contents | ii
-Contents
-Authentication and Security.................................................................................7
-Authentication...........................................................................................
-```
-
-### 2. Admin Guide Human Capital Management (score: 6)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information............................................................................................ ...
-```
-
-### 3. Admin Guide Release Notes (score: 6)
-Source: Admin-Guide-Release-Notes.pdf
-```
-Administrator Guide
-Release Notes
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-About Workday Documentation...........................................................................5
-October 31, 2025.........................................................................................
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-1-0120: Review Skills and Experience Setup (Talent Phase X)', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('Maintain Skills and Experience Setup', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: Maintain Skills and Experience Setup
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Skills and Experience Setup (Talent Phase X) Maintain Skills and Experience Setup
-
-### 1. Admin Guide Authentication And Security (score: 6)
-Source: Admin-Guide-Authentication-and-Security.pdf
-```
-Authentication
-and Security
-Product Summary
-December 11, 2025
- | Contents | ii
-Contents
-Authentication and Security.................................................................................7
-Authentication...........................................................................................
-```
-
-### 2. Admin Guide Human Capital Management (score: 6)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information...........................................
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:05:49.259599
-Confidence: 80.00%
+# Final Step: Logout
+logout

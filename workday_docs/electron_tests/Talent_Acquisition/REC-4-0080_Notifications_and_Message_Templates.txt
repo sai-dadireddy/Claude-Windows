@@ -1,0 +1,19 @@
+# REC-4-0080: Notifications and Message Templates
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiter / Employee as Self
+
+# Step 1: Login
+login|Recruiter / Employee as Self
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Notifications and Message Templates
+# Task: Review Notifications and Message Templates
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

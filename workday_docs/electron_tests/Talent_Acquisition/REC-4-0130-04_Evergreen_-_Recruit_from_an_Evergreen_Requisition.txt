@@ -1,0 +1,19 @@
+# REC-4-0130-04: Evergreen - Recruit from an Evergreen Requisition
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiter / Manager
+
+# Step 1: Login
+login|Recruiter / Manager
+
+# Step 2: Navigate to Job Requisitions
+search|Create Job Requisition
+click|Create Job Requisition
+wait|2
+
+# Step 3: Create/Review Job Requisition
+input|Job Title|Test Position
+verify|Job requisition form displays
+
+# Final Step: Logout
+logout

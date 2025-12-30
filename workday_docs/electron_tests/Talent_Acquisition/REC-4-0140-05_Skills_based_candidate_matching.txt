@@ -1,0 +1,21 @@
+# REC-4-0140-05: Skills based candidate matching
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiter / Manager
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Recruiter / Manager
+
+# Step 2: Navigate to Candidates
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Review Candidate Information
+filter|Active Candidates
+verify|Candidate list displays
+
+# Final Step: Logout
+logout

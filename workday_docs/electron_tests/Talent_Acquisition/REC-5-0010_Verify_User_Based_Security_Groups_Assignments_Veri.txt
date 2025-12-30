@@ -1,0 +1,25 @@
+# REC-5-0010: Verify User Based Security Groups Assignments & Verify Role Assignments
+# Functional Area: Talent Acquisition
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Recruiting Administrator / 
+Security Administrator
+
+# Step 1: Login
+login|Recruiting Administrator / 
+Security Administrator
+
+# Step 2: Navigate to Security Administration
+search|View Domain
+click|View Domain
+wait|2
+
+# Step 3: Review Security Group Assignments
+filter|User-Based Security Groups
+verify|Security groups display correctly
+
+# Step 4: Export Security Assignments
+click|Export to Excel
+verify|Export completes successfully
+
+# Final Step: Logout
+logout

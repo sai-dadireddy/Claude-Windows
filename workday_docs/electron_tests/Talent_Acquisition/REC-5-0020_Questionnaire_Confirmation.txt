@@ -1,0 +1,19 @@
+# REC-5-0020: Questionnaire Confirmation
+# Functional Area: Talent Acquisition
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Recruiting Admin / System Admin
+
+# Step 1: Login
+login|Recruiting Admin / System Admin
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Questionnaire Confirmation
+# Task: Maintain Questionnaires
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

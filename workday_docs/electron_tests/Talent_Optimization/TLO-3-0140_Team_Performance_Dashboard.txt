@@ -1,164 +1,22 @@
-# Electron Test: TLO-3-0140 - Team Performance Dashboard
+# TLO-3-0140: Team Performance Dashboard
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-3-0140
-- **Module**: Talent Optimization
-- **Test Type**: 2 | End to End Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# Step 1: Login
+login|Talent Administrator
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 2: Navigate to Performance Management
+search|My Performance
+click|My Performance
+wait|2
 
+# Step 3: Access Performance Review
+click|Performance Review
+verify|Performance review displays
 
-## Scenario Description
-Proxy/ login as a Manager.  Ensure the Team Performance Dashboard is available to the manager and contains the appropriate tasks/reports
+# Step 4: Review Performance Data
+verify|Performance ratings are visible
 
-## Test Steps
-
-### Task/Step: Team Performance Dashboard
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Team Performance Dashboard Team Performance Dashboard
-
-### 1. Workday Feature Descriptions Ditamap (score: 4)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Kb Hcm Change Job (score: 3)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 3. Kb Hcm Terminate Employee (score: 3)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-3-0140: Team Performance Dashboard', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('Team Performance Dashboard', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: Team Performance Dashboard
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Team Performance Dashboard Team Performance Dashboard
-
-### 1. Workday Feature Descriptions Ditamap (score: 4)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Kb Hcm Change Job (score: 3)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 3. Kb Hcm Termin
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:18:03.472334
-Confidence: 80.00%
+# Final Step: Logout
+logout

@@ -1,0 +1,19 @@
+# REC-5-0070: Validate Workday Doc Configuration
+# Functional Area: Talent Acquisition
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Recruiting Administrator
+
+# Step 1: Login
+login|Recruiting Administrator
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Validate Workday Doc Configuration
+# Task: 1. Access Workday Drive
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

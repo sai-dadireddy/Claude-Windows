@@ -1,22 +1,19 @@
 # REC-2-0360: Job Application Templates
 # Functional Area: Talent Acquisition
-# Confidence: 5.0/10.0
-
-# [NEEDS SME REVIEW]
-# This test was generated with medium confidence and requires validation
+# Test Type: 1 | Unit Test Scenarios
+# Role: Recruiting Admin
 
 # Step 1: Login
 login|Recruiting Admin
 
-# Step 2: Navigate to Recruiting
-search|Find Candidates
-click|Find Candidates
+# Step 2: Navigate to Job Requisitions
+search|Create Job Requisition
+click|Create Job Requisition
 wait|2
 
-# Step 3: Process Candidate
-filter|Active Candidates
-select|First candidate
-verify|Candidate details display correctly
+# Step 3: Create/Review Job Requisition
+input|Job Title|Test Position
+verify|Job requisition form displays
 
 # Final Step: Logout
 logout

@@ -1,167 +1,19 @@
-# Electron Test: TLO-5-0240 - Review Relocation Areas configuration
+# TLO-5-0240: Review Relocation Areas configuration
+# Functional Area: Talent Optimization
+# Test Type: 3 | GOLD / Pre-Prod Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-5-0240
-- **Module**: Talent Optimization
-- **Test Type**: 3 | GOLD / Pre-Prod Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# Step 1: Login
+login|Talent Administrator
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
 
+# Step 3: Review Relocation Areas configuration
+# Task: View Relocation Areas
+# [MANUAL: Complete specific talent optimization actions]
 
-## Scenario Description
-Verify that all expected Relocation Areas are present in the tenant
-
-## Test Steps
-
-### Task/Step: View Relocation Areas
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Relocation Areas configuration View Relocation Areas
-
-### 1. Workday Feature Descriptions Ditamap (score: 6)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Admin Guide Student (score: 5)
-Source: Admin-Guide-Student.pdf
-```
-Student
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Setup Considerations: Workday Student.......................................................... 15
-Academic Foundation........................................................................................19
-Steps: Set Up Academic ...
-```
-
-### 3. WSDL: Talent (score: 5)
-Source: Talent.wsdl
-```
-WSDL: Talent
-Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
-Operations:
-  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
-  - Get_Assess_Talent: Retrieves the Potential Assess...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-5-0240: Review Relocation Areas configuration', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('View Relocation Areas', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: View Relocation Areas
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Relocation Areas configuration View Relocation Areas
-
-### 1. Workday Feature Descriptions Ditamap (score: 6)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Admin Guide Student (score: 5)
-Source: Admin-Guide-Student.pdf
-```
-Student
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Setup Considerations: Workday Student.......................................................... 15
-Academic Foundation........................................................................................19
-Steps: Set Up Academic ...
-```
-
-### 3. WSD
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:34:33.832356
-Confidence: 80.00%
+# Final Step: Logout
+logout

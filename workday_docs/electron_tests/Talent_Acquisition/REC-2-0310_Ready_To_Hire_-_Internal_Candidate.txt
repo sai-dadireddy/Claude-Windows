@@ -1,21 +1,19 @@
 # REC-2-0310: Ready To Hire - Internal Candidate
 # Functional Area: Talent Acquisition
-# Confidence: 6.5/10.0
-
-# [NEEDS SME REVIEW]
-# This test was generated with medium confidence and requires validation
+# Test Type: 1 | Unit Test Scenarios
+# Role: Recruiter
 
 # Step 1: Login
 login|Recruiter
 
-# Step 2: Navigate to Recruiting Home
+# Step 2: Navigate to Recruiting
 search|Recruiting
 click|Recruiting
 wait|2
 
 # Step 3: Ready To Hire - Internal Candidate
 # Task: Move Forward to Ready To Hire
-# [NEEDS SPECIFIC STEPS]
+# [MANUAL: Complete specific recruiting actions]
 
 # Final Step: Logout
 logout

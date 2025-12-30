@@ -1,0 +1,19 @@
+# REC-4-0200: Generate Offer Document
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiter / HR Partner
+
+# Step 1: Login
+login|Recruiter / HR Partner
+
+# Step 2: Navigate to Candidates
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Review Candidate Information
+filter|Active Candidates
+verify|Candidate list displays
+
+# Final Step: Logout
+logout

@@ -1,22 +1,21 @@
 # REC-3-0080: Validate Workday Doc Configuration
 # Functional Area: Talent Acquisition
-# Confidence: 5.0/10.0
-
-# [NEEDS SME REVIEW]
-# This test was generated with medium confidence and requires validation
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: Recruiting Administrator
 
 # Step 1: Login
 login|Recruiting Administrator
 
 # Step 2: Navigate to Recruiting
-search|Find Candidates
-click|Find Candidates
+search|Recruiting
+click|Recruiting
 wait|2
 
-# Step 3: Process Candidate
-filter|Active Candidates
-select|First candidate
-verify|Candidate details display correctly
+# Step 3: Validate Workday Doc Configuration
+# Task: 1. Click on your profile icon and select Drive
+2. Review files in the Shared with Me section
+3. Revi
+# [MANUAL: Complete specific recruiting actions]
 
 # Final Step: Logout
 logout

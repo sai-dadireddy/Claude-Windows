@@ -1,12 +1,20 @@
 # REC-4-0010-02: Mass Action on Job Requisitions
 # Functional Area: Talent Acquisition
-# Confidence: 3.0/10.0
+# Test Type: 2 | End to End Test Scenarios
+# Role: Recruiting Administrator
 
-# [MANUAL TEST - LOW CONFIDENCE]
-# Reason: Insufficient RAG data for automated generation
-# Task: nan
+# [NEEDS SME REVIEW - Insufficient task details]
 
-# Please create manual test steps based on:
-# - Scenario: Mass Action on Job Requisitions
-# - Role: Recruiting Administrator
-# - Expected: nan
+# Step 1: Login
+login|Recruiting Administrator
+
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Mass Action on Job Requisitions
+# [MANUAL: Complete specific recruiting actions]
+
+# Final Step: Logout
+logout

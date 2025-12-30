@@ -1,169 +1,21 @@
-# Electron Test: TLO-3-0100 - Calibration Dashboard
+# TLO-3-0100: Calibration Dashboard
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-3-0100
-- **Module**: Talent Optimization
-- **Test Type**: 2 | End to End Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# [NEEDS SME REVIEW - Insufficient task details]
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 1: Login
+login|Talent Administrator
 
+# Step 2: Navigate to Talent
+search|Talent
+click|Talent
+wait|2
 
-## Scenario Description
-Validate that the Calibration Dashboard has been configured and added to the Home page
+# Step 3: Calibration Dashboard
+# Task: Maintain Dashboards
+# [MANUAL: Complete specific talent optimization actions]
 
-## Test Steps
-
-### Task/Step: Maintain Dashboards
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Calibration Dashboard Maintain Dashboards
-
-### 1. Workday Feature Descriptions Ditamap (score: 5)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Admin Guide Education And Government (score: 3)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management..............................................................................................
-```
-
-### 3. Admin Guide Glossary (score: 3)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
- | Full Glossary of Terms | 3
-...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-3-0100: Calibration Dashboard', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('Maintain Dashboards', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: Maintain Dashboards
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Calibration Dashboard Maintain Dashboards
-
-### 1. Workday Feature Descriptions Ditamap (score: 5)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday Adaptive Planning................................................................................ 5
-R...
-```
-
-### 2. Admin Guide Education And Government (score: 3)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management..............................................................................................
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:17:25.526480
-Confidence: 80.00%
+# Final Step: Logout
+logout

@@ -1,21 +1,21 @@
 # REC-3-0030: Tenant Setup - HCM
 # Functional Area: Talent Acquisition
-# Confidence: 6.5/10.0
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: System Configurator
 
-# [NEEDS SME REVIEW]
-# This test was generated with medium confidence and requires validation
+# [NEEDS SME REVIEW - Insufficient task details]
 
 # Step 1: Login
 login|System Configurator
 
-# Step 2: Navigate to Recruiting Home
-search|Recruiting
-click|Recruiting
+# Step 2: Navigate to Setup
+search|Setup
+click|Recruiting Setup
 wait|2
 
-# Step 3: Tenant Setup - HCM
-# Task: Tenant Setup - HCM
-# [NEEDS SPECIFIC STEPS]
+# Step 3: Configure Tenant Setup - HCM
+verify|Configuration options are available
+# [MANUAL: Complete configuration based on requirements]
 
 # Final Step: Logout
 logout

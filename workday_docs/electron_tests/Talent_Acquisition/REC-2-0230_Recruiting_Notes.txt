@@ -1,18 +1,23 @@
 # REC-2-0230: Recruiting Notes
 # Functional Area: Talent Acquisition
-# Confidence: 8.0/10.0
+# Test Type: 1 | Unit Test Scenarios
+# Role: Recruiter
 
 # Step 1: Login
 login|Recruiter
 
-# Step 2: Navigate to Security
+# Step 2: Navigate to Security Administration
 search|View Domain
 click|View Domain
 wait|2
 
-# Step 3: Extract Security Assignments
-report|Security Group Assignments
-verify|Security groups are assigned correctly
+# Step 3: Review Security Group Assignments
+filter|User-Based Security Groups
+verify|Security groups display correctly
+
+# Step 4: Export Security Assignments
+click|Export to Excel
+verify|Export completes successfully
 
 # Final Step: Logout
 logout

@@ -1,19 +1,26 @@
 # REC-1-0070: Unified Duplicate Management Framework - Verify Security
 # Functional Area: Talent Acquisition
-# Confidence: 8.5/10.0
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: Recruiting Administrator / 
+ Security Administrator
+
+# [NEEDS SME REVIEW - Insufficient task details]
 
 # Step 1: Login
 login|Recruiting Administrator / 
  Security Administrator
 
-# Step 2: Navigate to Security
-search|View Domain
-click|View Domain
+# Step 2: Navigate to Recruiting
+search|Recruiting
+click|Recruiting
 wait|2
 
-# Step 3: Extract Security Assignments
-report|Security Group Assignments
-verify|Security groups are assigned correctly
+# Step 3: Unified Duplicate Management Framework - Verify Security
+# Task: Security Domains:
+Manage: Duplicate Records for the Tenant
+Manage: Duplicate Records for a Person
+Se
+# [MANUAL: Complete specific recruiting actions]
 
 # Final Step: Logout
 logout

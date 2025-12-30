@@ -1,162 +1,22 @@
-# Electron Test: TLO-3-0380 - Review Feedback and Review Questions configuration
+# TLO-3-0380: Review Feedback and Review Questions configuration
+# Functional Area: Talent Optimization
+# Test Type: 2 | End to End Tenant Build Validation
+# Role: Talent Administrator
 
-## Test Metadata
-- **Scenario ID**: TLO-3-0380
-- **Module**: Talent Optimization
-- **Test Type**: 2 | End to End Tenant Build Validation
-- **Workday Role**: Talent Administrator
-- **Confidence Score**: 0.80
+# Step 1: Login
+login|Talent Administrator
 
-### Confidence Factors
-- Detailed scenario description
-- Clear task/step definition
-- API/WSDL information found
-- Workday role specified
+# Step 2: Navigate to Performance Management
+search|My Performance
+click|My Performance
+wait|2
 
+# Step 3: Access Performance Review
+click|Performance Review
+verify|Performance review displays
 
-## Scenario Description
-Verify that all expected Feedback and Review Questions are present in the tenant
+# Step 4: Review Performance Data
+verify|Performance ratings are visible
 
-## Test Steps
-
-### Task/Step: Feedback and Review Questions
-
-**Expected Result**: nan
-
-## Workday API Information
-
-### RAG Query Results
-```
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Feedback and Review Questions configuration Feedback and Review Questions
-
-### 1. Admin Guide Release Notes (score: 5)
-Source: Admin-Guide-Release-Notes.pdf
-```
-Administrator Guide
-Release Notes
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-About Workday Documentation...........................................................................5
-October 31, 2025.........................................................................................
-```
-
-### 2. Admin Guide Reporting And Analytics (score: 5)
-Source: Admin-Guide-Reporting-and-Analytics.pdf
-```
-Reporting and Analytics
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Reporting and Analytics.................................................................................... 13
-Analytics and Reporting Hub.............................................................................1...
-```
-
-### 3. Admin Guide Spend Management (score: 5)
-Source: Admin-Guide-Spend-Management.pdf
-```
-Spend Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Spend Management.......................................................................................... 10
-Strategic Sourcing............................................................................................. 1...
-```
-
-
-```
-
-## Electron Test Implementation
-
-### Prerequisites
-- User must have role: Talent Administrator
-- Test environment configured
-- Authentication credentials available
-
-### Test Code Structure
-
-```javascript
-const { test, expect } = require('@playwright/test');
-
-test.describe('TLO-3-0380: Review Feedback and Review Questions configuration', () => {
-  test.beforeEach(async ({ page }) => {
-    // Login as Talent Administrator
-    await page.goto('https://{{tenant}}.myworkday.com');
-    // TODO: Implement authentication
-  });
-
-  test('Feedback and Review Questions', async ({ page }) => {
-    // TODO: Implement test steps based on scenario
-
-    // Navigate to appropriate module
-    // Perform actions based on: Feedback and Review Questions
-
-    // Verify expected result: nan
-  });
-});
-```
-
-### API Integration Points
-
-```
-API endpoints identified in RAG response:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Talent Optimization Review Feedback and Review Questions configuration Feedback and Review Questions
-
-### 1. Admin Guide Release Notes (score: 5)
-Source: Admin-Guide-Release-Notes.pdf
-```
-Administrator Guide
-Release Notes
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-About Workday Documentation...........................................................................5
-October 31, 2025.........................................................................................
-```
-
-### 2. Admin Guide Reporting And Analytics (score: 5)
-Source: Admin-Guide-Reporting-and-Analytics.pdf
-```
-Reporting and Analytics
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Reporting and Analytics.................................................................................... 13
-Analytics and Reporting Hub..................................................................
-```
-
-
-### Data Requirements
-- Scenario Type: Base Scope
-- Country Code: GLOBAL
-- Industry: nan
-
-### Estimated Effort
-- Workday Estimate: 5 minutes
-- Test Implementation: TBD
-
-## Notes
-- Cross-functional: nan
-- Business Process Level 2: nan
-- Business Process Level 3: nan
-
-## Test Status
-- [ ] Test implemented
-- [ ] Test executed
-- [ ] Results verified
-- [ ] Edge cases covered
-
----
-Generated: 2025-12-30 16:22:04.199886
-Confidence: 80.00%
+# Final Step: Logout
+logout

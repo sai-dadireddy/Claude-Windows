@@ -1,19 +1,23 @@
 # REC-1-0080: Unified Duplicate Management Framework - Validate Match Rules
 # Functional Area: Talent Acquisition
-# Confidence: 7.5/10.0
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: Recruiting Administrator / 
+ Security Administrator
+
+# [NEEDS SME REVIEW - Insufficient task details]
 
 # Step 1: Login
 login|Recruiting Administrator / 
  Security Administrator
 
-# Step 2: Navigate to Recruiting Home
+# Step 2: Navigate to Recruiting
 search|Recruiting
 click|Recruiting
 wait|2
 
 # Step 3: Unified Duplicate Management Framework - Validate Match Rules
 # Task: Manage Match Rules
-# [NEEDS SPECIFIC STEPS]
+# [MANUAL: Complete specific recruiting actions]
 
 # Final Step: Logout
 logout

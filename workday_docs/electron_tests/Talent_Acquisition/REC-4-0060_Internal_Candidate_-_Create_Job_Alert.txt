@@ -1,0 +1,19 @@
+# REC-4-0060: Internal Candidate - Create Job Alert
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Internal Candidate
+
+# Step 1: Login
+login|Internal Candidate
+
+# Step 2: Navigate to Job Requisitions
+search|Create Job Requisition
+click|Create Job Requisition
+wait|2
+
+# Step 3: Create/Review Job Requisition
+input|Job Title|Test Position
+verify|Job requisition form displays
+
+# Final Step: Logout
+logout

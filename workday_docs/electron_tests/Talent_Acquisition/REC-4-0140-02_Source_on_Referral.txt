@@ -1,0 +1,21 @@
+# REC-4-0140-02: Source on Referral
+# Functional Area: Talent Acquisition
+# Test Type: 2 | End to End Test Scenarios
+# Role: Employee As Self
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Employee As Self
+
+# Step 2: Navigate to Candidates
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Review Candidate Information
+filter|Active Candidates
+verify|Candidate list displays
+
+# Final Step: Logout
+logout
