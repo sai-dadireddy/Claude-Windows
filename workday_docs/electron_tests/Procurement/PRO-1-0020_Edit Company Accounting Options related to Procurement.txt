@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0020
 FUNCTIONAL AREA: Procurement
 TEST NAME: Edit Company Accounting Options related to Procurement
-CONFIDENCE: [HIGH] Score: 18.0/10
-SOURCE: [RAG Enhanced]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
 DESCRIPTION:
@@ -12,20 +12,20 @@ Ensure company accounting options related to procurement are configured correctl
 WORKDAY ROLE: Finance Organization Administrator
 
 ELECTRON STEPS:
-1. enter search box as "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
-2. wait for search results (2 seconds)
-3. click search result containing "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
-4. wait for page to load (3 seconds)
-5. wait for page content to load (3 seconds)
-6. verify page loaded successfully
+1. enter search box as "Edit Company Accounting Options"
+2. wait for search results
+3. click search result containing "Edit Company Accounting Options"
+4. wait for page to load
+5. wait for page to fully load
+6. verify page loaded without errors
 7. screenshot as "PRO-1-0020_complete.png"
 
 VERIFICATION:
-- [ ] Task executed successfully
-- [ ] No errors displayed
+- [ ] Task completed successfully
+- [ ] No error messages displayed
 
 API ALTERNATIVE:
 - Query RAG for details
 
-RAG QUERY STATUS: SUCCESS (Score: 18)
+RAG QUERY STATUS: SUCCESS (Confidence: 9/10)
 ================================================================================

@@ -2,30 +2,35 @@
 TEST ID: INV-1-0020
 FUNCTIONAL AREA: Inventory
 TEST NAME: Stocking Locations
-CONFIDENCE: [HIGH] Score: 7.0/10
-SOURCE: [RAG Enhanced]
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
 DESCRIPTION:
-
-
 WORKDAY ROLE: 
 
+WORKDAY ROLE: ELECTRON STEPS:
+
 ELECTRON STEPS:
-1. enter search box as "Run report"
-2. wait for search results (2 seconds)
-3. click search result containing "Run report"
-4. wait for page to load (3 seconds)
-5. wait for page content to load (3 seconds)
-6. verify page loaded successfully
-7. screenshot as "INV-1-0020_complete.png"
+1. enter search box as "Create Stocking Location"
+2. wait for search results
+3. click search result containing "Create Stocking Location"
+4. wait for page to load
+5. wait for results table to load
+6. verify table contains data
+7. screenshot as "INV-1-0020_list.png"
+8. click first row to view details
+9. wait for detail page to load
+10. verify details displayed
+11. screenshot as "INV-1-0020_complete.png"
 
 VERIFICATION:
-- [ ] Task executed successfully
-- [ ] No errors displayed
+- [ ] Inventory/location data displayed
+- [ ] Details page accessible
+- [ ] Data appears complete
 
 API ALTERNATIVE:
 - Query RAG for details
 
-RAG QUERY STATUS: SUCCESS (Score: 7)
+RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
 ================================================================================

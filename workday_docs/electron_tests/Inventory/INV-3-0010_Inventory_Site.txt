@@ -2,31 +2,35 @@
 TEST ID: INV-3-0010
 FUNCTIONAL AREA: Inventory
 TEST NAME: Inventory Site
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
-TASK/STEP: Pull report "View Inventory Site" and verify Inventory site is Yes and review tabs for Location, Counting, Replenishment, Fulfillment, and Picking.
+DESCRIPTION:
+No description
+
+WORKDAY ROLE: Not specified
 
 ELECTRON STEPS:
-1. enter search box as "Pull report "View Inventory Site" and verify Inventory site is Yes and review tabs for Location, Counting, Replenishment, Fulfillment, and Picking."
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "INV-3-0010_complete.png"
+1. enter search box as "View Inventory Balance"
+2. wait for search results
+3. click search result containing "View Inventory Balance"
+4. wait for page to load
+5. wait for results table to load
+6. verify table contains data
+7. screenshot as "INV-3-0010_list.png"
+8. click first row to view details
+9. wait for detail page to load
+10. verify details displayed
+11. screenshot as "INV-3-0010_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Inventory/location data displayed
+- [ ] Details page accessible
+- [ ] Data appears complete
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Pull report "View Inventory Site" and verify Inventory site is Yes and review tabs for Location, Counting, Replenishment, Fulfillment, and Picking.
+API ALTERNATIVE:
+- Query RAG for details
 
-### 1. Electron Test Samples (score: 10)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_sc...
+RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
 ================================================================================

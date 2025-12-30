@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0100
 FUNCTIONAL AREA: Procurement
 TEST NAME: Requisition Types
-CONFIDENCE: [HIGH] Score: 8.0/10
-SOURCE: [RAG Enhanced]
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
 DESCRIPTION:
@@ -12,23 +12,24 @@ Review the requisition types. Requisition types are used for sourcing rules or a
 WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
-1. enter search box as "Maintain Requisition Types"
-2. wait for search results (2 seconds)
-3. click search result containing "Maintain Requisition Types"
-4. wait for page to load (3 seconds)
-5. click button "OK"
-6. wait for form to load (3 seconds)
-7. verify page contains "Requisition"
+1. enter search box as "Create Requisition Type"
+2. wait for search results
+3. click search result containing "Create Requisition Type"
+4. wait for page to load
+5. click button "OK" or "Add"
+6. wait for form to load
+7. verify page contains "Requisition" or "Purchase Order"
 8. screenshot as "PRO-1-0100_form.png"
 9. click button "Cancel"
 10. screenshot as "PRO-1-0100_complete.png"
 
 VERIFICATION:
-- [ ] Requisition form accessible
-- [ ] All required fields visible
+- [ ] Requisition/PO form accessible
+- [ ] Required fields visible
+- [ ] Cancel button works correctly
 
 API ALTERNATIVE:
 - Query RAG for details
 
-RAG QUERY STATUS: SUCCESS (Score: 8)
+RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
 ================================================================================

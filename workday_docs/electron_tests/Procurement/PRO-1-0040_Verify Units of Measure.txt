@@ -3,7 +3,7 @@ TEST ID: PRO-1-0040
 FUNCTIONAL AREA: Procurement
 TEST NAME: Verify Units of Measure
 CONFIDENCE: [HIGH] Score: 9.0/10
-SOURCE: [RAG Enhanced]
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
 DESCRIPTION:
@@ -13,19 +13,19 @@ WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
 1. enter search box as "Maintain Units of Measure"
-2. wait for search results (2 seconds)
+2. wait for search results
 3. click search result containing "Maintain Units of Measure"
-4. wait for page to load (3 seconds)
-5. wait for page content to load (3 seconds)
-6. verify page loaded successfully
+4. wait for page to load
+5. wait for page to fully load
+6. verify page loaded without errors
 7. screenshot as "PRO-1-0040_complete.png"
 
 VERIFICATION:
-- [ ] Task executed successfully
-- [ ] No errors displayed
+- [ ] Task completed successfully
+- [ ] No error messages displayed
 
 API ALTERNATIVE:
 - Query RAG for details
 
-RAG QUERY STATUS: SUCCESS (Score: 9)
+RAG QUERY STATUS: SUCCESS (Confidence: 9/10)
 ================================================================================

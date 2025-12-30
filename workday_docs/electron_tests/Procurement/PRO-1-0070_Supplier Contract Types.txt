@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0070
 FUNCTIONAL AREA: Procurement
 TEST NAME: Supplier Contract Types
-CONFIDENCE: [HIGH] Score: 9.0/10
-SOURCE: [RAG Enhanced]
+CONFIDENCE: [LOW] Score: 4.0/10
+SOURCE: [RAG Enhanced - Manual Review]
 ================================================================================
 
 DESCRIPTION:
@@ -12,23 +12,25 @@ Review the contract types and feature configurations and identify any adjustment
 WORKDAY ROLE: Accounts Payable Configurator
 
 ELECTRON STEPS:
-1. enter search box as "View Supplier Contract Types"
-2. wait for search results (2 seconds)
-3. click search result containing "View Supplier Contract Types"
-4. wait for page to load (3 seconds)
-5. verify supplier list displayed
-6. click link "Actions"
-7. screenshot as "PRO-1-0070_list.png"
-8. click button "View All"
-9. wait for data to load (2 seconds)
-10. screenshot as "PRO-1-0070_complete.png"
+1. enter search box as "Create Supplier Contract Type"
+2. wait for search results
+3. click search result containing "Create Supplier Contract Type"
+4. wait for page to load
+5. verify page title contains "Supplier"
+6. click link "Related Actions"
+7. screenshot as "PRO-1-0070_actions.png"
+8. click link "View" or "Edit"
+9. wait for details to load
+10. verify supplier details displayed
+11. screenshot as "PRO-1-0070_complete.png"
 
 VERIFICATION:
-- [ ] Supplier data displayed
+- [ ] Supplier list or details displayed correctly
+- [ ] Related Actions menu accessible
 - [ ] No error messages shown
 
 API ALTERNATIVE:
 - Query RAG for details
 
-RAG QUERY STATUS: SUCCESS (Score: 9)
+RAG QUERY STATUS: SUCCESS (Confidence: 4/10)
 ================================================================================
