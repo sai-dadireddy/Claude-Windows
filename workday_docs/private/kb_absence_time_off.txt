@@ -1,0 +1,373 @@
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management
+Category: Human Capital Management - Time Off / Absence
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Request Time Off process allows employees to request and track absences
+including vacation, sick leave, personal days, and other types of paid or
+unpaid time off. The process includes balance checking, manager approval,
+calendar updates, and payroll integration.
+
+Business Process: Request Time Off / Request Absence
+Functional Area: Time Tracking / Absence Management
+Initiator: Employee (self-service)
+Typical Duration: Same-day to 2 days (depending on manager approval)
+
+Types of Time Off:
+- Vacation/PTO: Paid time off for personal use
+- Sick Leave: Illness or medical appointments
+- Personal Day: Personal business
+- Bereavement: Death of family member
+- Jury Duty: Court-mandated service
+- Military Leave: Active duty or training
+- Unpaid Leave: Time off without pay
+- Parental Leave: Maternity/Paternity/Adoption
+- FMLA: Family Medical Leave Act (job-protected)
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. TIME OFF REQUEST
+   - Time Off Type
+   - Start Date/Time
+   - End Date/Time
+   - Total Days/Hours
+   - Comment/Reason
+
+2. BALANCE CHECK
+   - Available balance
+   - Accrued to date
+   - Used this year
+   - Remaining balance
+   - Future scheduled time off
+
+3. APPROVAL
+   - Manager approval
+   - HR review (for extended leave)
+   - Attendance calendar update
+
+4. PAYROLL INTEGRATION
+   - Pay impact calculation
+   - Paid vs unpaid days
+   - Deduction from accrual balance
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE TIME OFF REQUEST
+----------------------------------
+Navigation: Time Off → Request Time Off
+
+Employee Self-Service:
+1. Click "Request Time Off"
+2. Or: Calendar → Click date → "Request Time Off"
+
+Required Fields:
+- Time Off Type (dropdown)
+- Start Date
+- End Date
+- Comment/Reason
+
+STEP 2: SELECT TIME OFF TYPE
+-----------------------------
+Common Types:
+
+Vacation/PTO:
+- Requires available balance
+- Advance request recommended
+- Subject to blackout dates
+- Approval required
+
+Sick Leave:
+- May not require advance notice
+- Typically needs documentation if >3 days
+- May be subject to attendance policy
+- Approval may be automatic
+
+Personal Day:
+- Limited days per year
+- Advance notice preferred
+- Manager approval required
+
+STEP 3: SELECT DATES & DURATION
+--------------------------------
+Date Selection:
+
+Actions:
+1. Click Start Date on calendar
+2. Click End Date on calendar
+3. Or enter dates manually
+4. System calculates duration
+
+Duration Options:
+- Full Day(s): Entire workday
+- Partial Day: Specify start/end time
+- Half Day: Morning or afternoon
+- Hours: Specific number of hours
+
+System Calculations:
+- Excludes weekends
+- Excludes company holidays
+- Calculates based on work schedule
+- Shows total days/hours
+
+STEP 4: CHECK BALANCE
+----------------------
+Balance Display:
+
+System Shows:
+- Current balance (accrued to date)
+- Pending requests (not yet taken)
+- This request amount
+- Projected balance after request
+
+Validation:
+✓ Sufficient balance available
+✗ Insufficient balance (warning or block)
+✓ Accrual rate and schedule
+✓ Maximum carryover limits
+
+If Insufficient Balance:
+- Request unpaid time off
+- Request advance on future accruals
+- Reduce request duration
+- Choose different time off type
+
+STEP 5: ADD COMMENT/REASON
+---------------------------
+Comments:
+
+Best Practices:
+- Brief explanation
+- Contact info if emergency
+- Coverage plan if applicable
+- Return date confirmation
+
+Examples:
+- "Family vacation to Hawaii"
+- "Doctor appointment - will be available via mobile"
+- "Personal matter - returning Monday"
+- "Sick leave - fever and flu symptoms"
+
+STEP 6: REVIEW & SUBMIT
+------------------------
+Review Screen:
+
+Displays:
+- Time Off Type
+- Start Date/Time
+- End Date/Time
+- Total Days/Hours
+- Current Balance
+- Balance After Request
+- Approver (Manager)
+- Calendar Preview (days marked)
+
+Pre-Submission Checklist:
+□ Dates correct
+□ Duration accurate
+□ Sufficient balance
+□ Manager aware (for extended leave)
+□ Coverage arranged
+□ Comment added
+
+Actions:
+1. Review all details
+2. Click "Submit"
+3. System sends to manager for approval
+4. Confirmation email sent
+
+STEP 7: MANAGER APPROVAL
+-------------------------
+Manager View:
+
+Manager Receives:
+- Email notification
+- Inbox task
+- Calendar view of team absences
+
+Manager Actions:
+- Review request details
+- Check team coverage
+- Verify balance
+- Approve, Deny, or Send Back
+
+Approval Considerations:
+- Business needs/deadlines
+- Team coverage
+- Blackout periods
+- Prior commitments
+- Employee balance/history
+
+Denial Reasons:
+- Insufficient staffing
+- Blackout period
+- Critical deadline
+- Policy violation
+
+STEP 8: CONFIRMATION & CALENDAR UPDATE
+---------------------------------------
+After Approval:
+
+Employee Receives:
+- Approval confirmation email
+- Calendar automatically updated
+- Time off shows on Workday calendar
+- Reminder email before time off
+
+System Updates:
+- Employee calendar marked
+- Manager/team calendar shows absence
+- Outlook calendar updated (if integrated)
+- Out of office can be auto-set
+- Coverage assignments displayed
+
+STEP 9: TAKING TIME OFF
+------------------------
+During Absence:
+
+Automatic Actions:
+- Time off balance decremented
+- Payroll notified (if unpaid)
+- Out of office active
+- Workflow delegations (if set)
+
+Employee Responsibilities:
+- Set email out-of-office
+- Update Slack/Teams status
+- Hand off urgent items
+- Provide emergency contact
+
+STEP 10: RETURNING FROM TIME OFF
+---------------------------------
+After Return:
+
+Actions:
+- Time off automatically closes
+- No action needed unless:
+  - Extended due to illness (request additional)
+  - Returned early (cancel remaining days)
+  - FMLA/medical certification needed (upload docs)
+
+Balance Update:
+- Balance reflects time taken
+- New accruals added (if applicable)
+- Carryover calculated (year-end)
+
+================================================================================
+SPECIAL TIME OFF TYPES
+================================================================================
+
+FMLA (Family Medical Leave):
+- Up to 12 weeks unpaid, job-protected
+- Requires medical certification
+- HR approval required
+- Intermittent FMLA allowed
+- Return to work certification
+
+Parental Leave:
+- Maternity: 6-12 weeks
+- Paternity: 1-6 weeks
+- Adoption: 4-12 weeks
+- May be paid or unpaid (policy dependent)
+- HR approval required
+
+Sabbatical:
+- Extended leave (months)
+- Typically unpaid
+- Requires advance request (6+ months)
+- Executive approval
+- Return commitment
+
+Bereavement:
+- 3-5 days typically
+- Immediate family: more days
+- Extended family: fewer days
+- Documentation may be required
+- Approval typically automatic
+
+Jury Duty:
+- Paid in most states
+- Court summons required
+- No balance check needed
+- HR notification recommended
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- Request time off: button:contains("Request Time Off")
+- Time off type: select[data-automation-id="absenceType"]
+- Start date: input[data-automation-id="dateFrom"]
+- End date: input[data-automation-id="dateTo"]
+- Comment: textarea[data-automation-id="comment"]
+- Submit: button[data-automation-id="SUBMIT"]
+
+Use Cases for Automation:
+- Bulk time off entry for plant shutdowns
+- Import time off from external system
+- Scheduled time off for recurring events
+
+API Operations (Time_Tracking WSDL):
+- Request_Time_Off: Create absence request
+- Get_Time_Off_Entries: Retrieve time off data
+- Cancel_Time_Off: Cancel pending/future requests
+
+Validation:
+- Employee has sufficient balance
+- Dates are in future (unless backdating allowed)
+- No overlapping time off requests
+- Manager is active and assigned
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Enter Time: Timesheet submission
+- Approve Time: Manager approval of timesheets
+- Adjust Time Off Balance: Manual balance corrections
+- Year-End Carryover: Transfer balances to new year
+- Absence Calendar: Team absence visibility
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Request time off as early as possible (30+ days for extended leave)
+2. Check team calendar before requesting
+3. Arrange coverage before requesting
+4. Notify manager verbally for long absences
+5. Update request if plans change
+6. Cancel unused time off requests
+7. Track balance regularly
+8. Plan for carryover limits
+9. Use time off before losing it
+10. Document extended medical leave
+
+================================================================================
+NOTES
+================================================================================
+
+- Accrual happens per pay period or monthly (policy dependent)
+- Maximum carryover limits prevent unlimited accumulation
+- "Use it or lose it" policies may apply
+- Negative balances may be allowed (policy dependent)
+- Terminated employees paid out unused balance (if policy allows)
+- FMLA protected but unpaid (unless using PTO concurrently)
+- Time off requests can be canceled before start date
+- Past-dated time off requires special security
+- Managers can enter time off on behalf of employees
+- Integration with Outlook/Google calendar available
+
+================================================================================
