@@ -2,35 +2,38 @@
 TEST ID: HLP-3-0140
 FUNCTIONAL AREA: Case Management
 TEST NAME: Manage Help SLA
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
 TASK/STEP: Manage Help Case SLAs
 
 ELECTRON STEPS:
 1. enter search box as "Manage Help Case SLAs"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0140_complete.png"
+2. click search result containing "Manage Help Case SLAs"
+3. wait for page to load
+4. click button "Create SLA"
+5. enter SLA Name as "Standard Response SLA"
+6. enter Description as "24-hour response time SLA"
+7. enter Response Time Hours as "24"
+8. enter Resolution Time Hours as "72"
+9. select Case Type as "Benefits Case"
+10. click button "OK"
+11. wait for page to load
+12. verify message contains "successfully"
+13. screenshot as "HLP-3-0140_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Case SLA created successfully
+- Response and resolution times configured
+- SLA linked to case type
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Manage Help Case SLAs
-
-### 1. Admin Guide Education And Government (score: 3)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management......................................................
+Source: Workday Resource Center - Case Management Setup
+Help Case SLAs:
+- Define service level agreements for case response and resolution
+- Configure response time and resolution time thresholds
+- Associate SLAs with specific case types
+- Track SLA compliance through reports
 ================================================================================

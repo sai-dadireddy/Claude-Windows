@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: TT-1-0080
+FUNCTIONAL AREA: Time Tracking
+TEST NAME: Review DAX Time Tracking - Time Entry Templates report
+STATUS: ACCEPTED
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_time_tracking.txt]
+================================================================================
+
+DESCRIPTION:
+Run the report and address/review any reported issues with your Time Tracking Consultant.
+
+PREREQUISITES:
+- User logged in with Time Tracking Administrator permissions
+- Access to DAX reports
+- Time Tracking configuration completed
+
+ELECTRON STEPS:
+1. enter search box as "DAX Time Tracking - Time Entry Templates"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. click button "OK" to run report with default parameters
+6. wait for report to generate
+7. verify report displays with results
+8. review any reported issues or warnings
+9. screenshot as "TT-1-0080_complete.png"
+
+VERIFICATION:
+- [ ] Report runs successfully without errors
+- [ ] All time entry templates display correctly
+- [ ] Review any critical issues flagged
+- [ ] Note any warnings for consultant review
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+WORKDAY ROLE: Time Tracking Administrator
+EST. EFFORT: 5 minutes
+
+================================================================================
+RAG NOTES:
+- Time entry templates define how workers enter time
+- Includes entry method, submit options, totals display
+- Verify templates match business requirements
+================================================================================

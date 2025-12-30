@@ -2,52 +2,93 @@
 TEST ID: HCM-1-0290
 FUNCTIONAL AREA: HCM
 TEST NAME: Audit Role Assignments
-CONFIDENCE: [MEDIUM] Score: 4.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
-Verify that the role-based security assignments in the tenant are accurate.
+Verify that the role-based security assignments in the tenant are accurate. Extract organization role assignments and review for compliance with security policies.
 
 WORKDAY ROLE: Security Administrator
 EST. DURATION: 15 minutes
 
 PREREQUISITES:
 - User logged in with Security Administrator permissions
-- Required data available in tenant
+- Domain access: Security Configuration - View
+- Domain access: Organization Role Assignments - View
+- Organizations configured in tenant with role assignments
 
 ELECTRON STEPS:
 1. enter search box as "Extract Organization Role Assignment"
 2. wait for search results
 3. click search result containing "Extract Organization Role Assignment"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0290_complete.png"
+5. select Organization Type as "Supervisory Organization"
+6. select Include Inactive Workers as "No"
+7. enter Effective Date as "{current_date}"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "submitted"
+11. screenshot as "HCM-1-0290_extract_submitted.png"
+12. wait 30 seconds
+13. enter search box as "Inbox"
+14. wait for search results
+15. click search result containing "Inbox"
+16. wait for page to load
+17. click notification containing "Extract Organization Role Assignment"
+18. wait for page to load
+19. click link "Download"
+20. verify file downloaded
+21. screenshot as "HCM-1-0290_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Extract task initiated successfully
+- [ ] Organization Type filter works correctly
+- [ ] Include Inactive Workers filter works correctly
+- [ ] Effective Date accepts valid date
+- [ ] Extract job submitted without errors
+- [ ] Inbox notification received
+- [ ] Download link available
+- [ ] CSV/Excel file downloads successfully
+- [ ] Extract contains expected columns (Worker, Organization, Role, Effective Date)
+- [ ] Role assignments align with organizational structure
+- [ ] No unauthorized or orphaned role assignments found
 - [ ] No error messages displayed
 
+FIELD REFERENCE:
+- Organization Type: Dropdown (Supervisory, Cost Center, Location, Custom)
+- Organization: Prompt field to filter specific org
+- Role: Dropdown to filter specific role type
+- Worker: Prompt field to check specific worker
+- Include Inactive Workers: Checkbox (Yes/No)
+- Effective Date: Date picker for point-in-time view
+
+ALTERNATIVE: View Report Directly
+1. enter search box as "View Organization Role Assignments"
+2. wait for search results
+3. click search result containing "View Organization Role Assignments"
+4. wait for page to load
+5. select Organization as "{org_name}"
+6. click button "OK"
+7. wait for report to load
+8. verify report data displayed
+9. screenshot as "HCM-1-0290_view_report.png"
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Organization_Reference_IDs
+- REST: /organizationAssignments (GET)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Extract Organization Role Assignment
+KEY AUDIT ITEMS:
+- Manager roles match supervisory org hierarchy
+- HR Partner assignments align with supported orgs
+- Cost Center Manager assignments are appropriate
+- No duplicate or conflicting role assignments
+- Role effective dates are current
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
+ERROR HANDLING:
+- "No data found": Parameters too restrictive, broaden filters
+- "Insufficient permissions": User needs security admin access
+- "Invalid organization": Check organization name spelling
+- "Processing timeout": Narrow extract parameters for smaller dataset
 
-This file cont...
 ================================================================================

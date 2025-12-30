@@ -1,0 +1,113 @@
+================================================================================
+WORKDAY KB ARTICLE: PAY RUN GROUP CONFIGURATION (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Configuration
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Pay Run Groups in Workday Canada organize pay groups for consolidated payroll
+processing. They determine:
+- Which pay groups are processed together
+- Processing sequence and dependencies
+- Multi-company payroll coordination
+- Settlement run groupings
+
+Business Process: View/Configure Pay Run Group
+Functional Area: Payroll for Canada
+Initiator: Payroll Administrator
+Typical Duration: 10-20 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PAY RUN GROUP ELEMENTS
+   - Pay Run Group Name
+   - Pay Run Group ID
+   - Included Pay Groups
+   - Processing Order
+   - Company assignments
+
+2. PAY GROUP RELATIONSHIPS
+   - Primary pay groups
+   - Secondary/subordinate groups
+   - Cross-company groupings
+   - Period schedule alignment
+
+3. PROCESSING SETTINGS
+   - Calculation sequence
+   - Settlement run association
+   - Approval workflow alignment
+   - Batch processing configuration
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Pay Run Group:
+1. Search: "View Pay Run Group"
+2. Select pay run group
+3. Review included pay groups
+
+Configure Pay Run Group:
+1. Search: "Configure Pay Run Group"
+2. Create or modify pay run group
+3. Assign pay groups
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- All expected pay run groups exist
+- Pay groups correctly assigned
+- Processing order appropriate
+- No gaps in pay group coverage
+- Settlement associations correct
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access Pay Run Group Configuration
+1. enter search box as "View Pay Run Group"
+2. wait for search results
+3. click search result containing "View Pay Run Group"
+4. wait for page to load
+
+Step 2: Review Pay Run Groups
+5. verify pay run group list is displayed
+6. verify column "Pay Run Group Name" is visible
+7. verify column "Pay Groups" is visible
+8. scroll through list to view all groups
+9. screenshot as "{test_id}_pay_run_groups.png"
+
+Step 3: Review Pay Run Group Details
+10. click on first pay run group to view details
+11. wait for details to load
+12. verify included pay groups listed
+13. verify processing order displayed
+14. verify company assignments
+15. screenshot as "{test_id}_pay_run_group_detail.png"
+
+Step 4: Verify Configuration
+16. navigate back to pay run group list
+17. verify all Canadian pay groups are assigned
+18. verify no pay groups missing from any run group
+19. screenshot as "{test_id}_pay_run_group_complete.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Pay Run Group Summary
+- Pay Group Assignment Report
+- Payroll Processing Schedule
+- Pay Group Configuration Report
+
+================================================================================

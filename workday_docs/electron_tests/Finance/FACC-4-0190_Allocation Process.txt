@@ -2,13 +2,49 @@
 TEST ID: FACC-4-0190
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Allocation Process
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf + Financial_Management WSDL]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Run an allocation process to distribute costs from one or more source
+cost centers or accounts to target cost centers based on predefined
+allocation rules and statistical drivers (headcount, square footage, etc.).
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Finance Manager or Controller role
+- Allocation rules defined and active
+- Statistics or allocation bases populated for the period
+- Source transactions posted to GL
+- Target accounting period open
+
+ELECTRON STEPS:
+1. enter search box as "Run Allocation"
+2. wait for search results
+3. click search result containing "Run Allocation"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. select Allocation Rule as "{allocation_rule_name}"
+7. enter Accounting Date as "{current_period_date}"
+8. select Ledger Type as "Actuals"
+9. enter Period as "{fiscal_period}"
+10. click button "Preview" to validate allocation
+11. wait for preview results
+12. verify allocation amounts are correct
+13. verify source and target cost centers match
+14. click button "Submit"
+15. wait for confirmation
+16. verify message contains "allocation" and "submitted"
+17. screenshot as "FACC-4-0190_complete.png"
+
+VERIFICATION:
+- [ ] Allocation process completed successfully
+- [ ] Source amounts allocated to correct targets
+- [ ] Statistical drivers applied correctly
+- [ ] Resulting journals created and balanced
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Submit_Allocation (Financial_Management WSDL)
+- Get_Allocation_Rules to retrieve rule definitions
 ================================================================================

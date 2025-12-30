@@ -2,40 +2,105 @@
 TEST ID: BEN-2-0340
 FUNCTIONAL AREA: Benefits
 TEST NAME: Calculated Coverage Plan Change for Compensation Changes
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Compensation Change
+TASK/STEP: Verify Calculated Coverage Updates When Compensation Changes
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Compensation Change
+DESCRIPTION:
+Verify that benefit plans with calculated coverage (like life insurance
+based on salary multiples) automatically update when employee compensation
+changes. Coverage amounts should recalculate without manual intervention.
 
-### 1. Kb Hcm Change Job (score: 7)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Employee with calculated coverage benefit plan enrolled
+- Life insurance plan configured as multiple of salary
+- Test compensation change prepared
 
 ELECTRON STEPS:
-1. enter search box as "Compensation Change"
+1. enter search box as "View Benefit Elections"
 2. wait for search results
-3. click search result containing "Compensation Change"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0340_complete.png"
+3. click search result containing "View Benefit Elections"
+4. enter worker as "{test_employee_id}"
+5. wait for elections to load
+6. scroll to life insurance section
+7. note current coverage amount as "{original_coverage}"
+8. note current salary basis as "{original_salary}"
+9. screenshot as "BEN-2-0340_before.png"
+
+PROCESS COMPENSATION CHANGE:
+10. enter search box as "Request Compensation Change"
+11. wait for search results
+12. click search result containing "Request Compensation Change"
+13. enter worker as "{test_employee_id}"
+14. wait for worker profile to load
+15. enter effective date as "{effective_date}"
+16. select reason as "Merit Increase"
+17. enter new base pay as "{new_salary}"
+18. click button "Submit"
+19. wait for confirmation
+20. verify message contains "Compensation change submitted"
+21. screenshot as "BEN-2-0340_comp_change.png"
+
+APPROVE COMPENSATION CHANGE (if required):
+22. enter search box as "My Tasks"
+23. wait for search results
+24. click search result containing "My Tasks"
+25. click inbox item for compensation approval
+26. click button "Approve"
+27. wait for approval confirmation
+28. screenshot as "BEN-2-0340_approved.png"
+
+VERIFY CALCULATED COVERAGE UPDATE:
+29. enter search box as "View Benefit Elections"
+30. wait for search results
+31. click search result containing "View Benefit Elections"
+32. enter worker as "{test_employee_id}"
+33. wait for elections to load
+34. scroll to life insurance section
+35. verify coverage amount has been recalculated
+36. verify new coverage = new salary x coverage multiple
+37. verify effective date matches compensation change
+38. screenshot as "BEN-2-0340_after.png"
+
+VERIFICATION CALCULATION:
+39. enter search box as "View Worker History - Benefits"
+40. wait for search results
+41. click search result containing "View Worker History - Benefits"
+42. enter worker as "{test_employee_id}"
+43. verify benefit change event logged
+44. verify coverage amount change documented
+45. screenshot as "BEN-2-0340_history.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Original coverage amount documented
+- [ ] Compensation change processed successfully
+- [ ] Approval workflow completed (if required)
+- [ ] Life insurance coverage recalculated automatically
+- [ ] New coverage equals salary x multiplier
+- [ ] Benefit history shows coverage change
+- [ ] Effective dates align correctly
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Life insurance (or other calculated coverage) automatically recalculates
+when employee compensation changes, with coverage amount = salary x multiplier.
+
+CALCULATED COVERAGE EXAMPLES:
+- Basic Life Insurance: 1x annual salary
+- Supplemental Life: 2x, 3x, 4x salary options
+- AD&D: 1x or 2x salary
+- STD/LTD: Percentage of salary
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Coverage changes may trigger Evidence of Insurability (EOI) if over guaranteed issue
+- Compensation decreases may reduce coverage
+- Consider coverage maximums and minimums
+- Premium adjustments processed automatically
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Elections, Request_Compensation_Change
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

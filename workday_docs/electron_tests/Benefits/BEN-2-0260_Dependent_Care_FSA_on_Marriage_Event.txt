@@ -2,41 +2,89 @@
 TEST ID: BEN-2-0260
 FUNCTIONAL AREA: Benefits
 TEST NAME: Dependent Care FSA on Marriage Event
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Change Benefits > Marriage Event
+TASK/STEP: Change Benefits > Marriage Event (Dependent Care FSA)
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Change Benefits > Marriage Event
+DESCRIPTION:
+Process a marriage life event to adjust Dependent Care FSA elections.
+Marriage may affect FSA limits and allows changes to contribution amounts.
+May combine household childcare expenses for tax-advantaged savings.
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test employee eligible for Dependent Care FSA
+- Marriage event date and spouse information available
+- Information about spouse FSA elections (if any)
 
 ELECTRON STEPS:
-1. enter search box as "Change Benefits > Marriage Event"
+1. enter search box as "Change Benefits"
 2. wait for search results
-3. click search result containing "Change Benefits > Marriage Event"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0260_complete.png"
+3. click search result containing "Change Benefits"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for worker profile to load
+7. select benefit event type as "Life Event"
+8. select life event reason as "Marriage"
+9. enter event date as "{marriage_date}"
+10. click button "Continue"
+11. wait for benefits election page to load
+12. scroll to dependents section
+13. click button "Add Dependent"
+14. enter dependent first name as "{spouse_first_name}"
+15. enter dependent last name as "{spouse_last_name}"
+16. enter date of birth as "{spouse_dob}"
+17. select relationship as "Spouse"
+18. enter social security number as "{spouse_ssn}"
+19. select gender as "{spouse_gender}"
+20. click button "Save Dependent"
+21. verify new spouse appears in dependents list
+22. scroll to "Spending Accounts" section
+23. click link "Dependent Care FSA"
+24. wait for FSA details to load
+25. verify current election amount displayed
+26. enter annual contribution as "{new_fsa_amount}"
+27. verify per-paycheck deduction calculates correctly
+28. click button "Elect"
+29. click button "Review and Submit"
+30. wait for review page to load
+31. verify Dependent Care FSA election amount displays
+32. verify spouse is listed as dependent
+33. click button "Submit"
+34. wait for confirmation
+35. verify message contains "Benefits enrollment submitted successfully"
+36. screenshot as "BEN-2-0260_complete.png"
+
+POST-SUBMISSION VERIFICATION:
+37. enter search box as "View Benefit Elections"
+38. wait for search results
+39. click search result containing "View Benefit Elections"
+40. enter worker as "{test_employee_id}"
+41. verify Dependent Care FSA shows updated amount
+42. verify spouse listed in dependents
+43. screenshot as "BEN-2-0260_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Marriage life event successfully initiated
+- [ ] Spouse added as dependent
+- [ ] Dependent Care FSA election updated
+- [ ] Annual contribution amount adjusted correctly
+- [ ] Payroll deduction recalculated
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Spouse added to employee record, Dependent Care FSA contribution adjusted
+to accommodate household changes, payroll deductions updated.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Dependent Care FSA limit is $5,000 for married filing jointly
+- Limit reduces to $2,500 if married filing separately
+- If both spouses have employers with FSA, combined limit is $5,000
+- Marriage event has 31-day window for changes
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Election (Dependent Care FSA update)
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

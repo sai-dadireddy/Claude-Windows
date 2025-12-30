@@ -2,8 +2,8 @@
 TEST ID: HCM-1-0300
 FUNCTIONAL AREA: HCM
 TEST NAME: Review Worker Profile
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,39 +14,99 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Test worker available with populated profile data
+- Worker profile cards configured in tenant
+- Access to View Worker Profile task
 
 ELECTRON STEPS:
-1. enter search box as "View Profile Summary"
+1. enter search box as "{test_worker_name}"
 2. wait for search results
-3. click search result containing "View Profile Summary"
+3. click search result containing "{test_worker_name}"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0300_complete.png"
+5. verify page title contains "Worker Profile"
+6. screenshot as "HCM-1-0300_worker_profile.png"
+7. scroll to Overview section
+8. verify Overview card displays worker name and photo
+9. verify Overview card displays job title
+10. verify Overview card displays manager name
+11. screenshot as "HCM-1-0300_overview.png"
+12. scroll to Job section
+13. verify Job card displays current position
+14. verify Job card displays organization
+15. verify Job card displays location
+16. screenshot as "HCM-1-0300_job.png"
+17. scroll to Personal section
+18. verify Personal card displays contact information
+19. screenshot as "HCM-1-0300_personal.png"
+20. scroll to Career section
+21. verify Education card is present (if configured)
+22. verify Job History card is present (if configured)
+23. verify Skills card is present (if configured)
+24. screenshot as "HCM-1-0300_career.png"
+25. scroll to Compensation section
+26. verify Compensation card displays pay information
+27. screenshot as "HCM-1-0300_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Worker profile loads successfully
+- [ ] Overview card displays correctly
+- [ ] Job card displays current position information
+- [ ] Personal card displays contact information
+- [ ] Education card present (if worker has education data)
+- [ ] Job History card present (if worker has job history)
+- [ ] Skills card present (if skills configured)
+- [ ] Compensation card displays appropriately based on security
+- [ ] All expected profile sections/cards are visible
+- [ ] Card layout matches tenant configuration
 - [ ] No error messages displayed
+- [ ] Profile photo displays (if uploaded)
+
+EXPECTED PROFILE CARDS:
+- Overview: Name, Photo, Title, Manager, Organization
+- Job: Position, Business Title, Location, Time Type, Worker Type
+- Personal: Contact Info, Address, Emergency Contacts
+- Career: Education, Job History, Skills, Certifications
+- Compensation: Pay, Grade, Step (based on security access)
+- Time Off: Balances (if Time Tracking configured)
+- Benefits: Coverage (if Benefits configured)
+- Performance: Reviews, Goals (if Talent configured)
+
+FIELD REFERENCE:
+- Worker Name: Display name on profile
+- Employee ID: Worker reference number
+- Job Title: Business title or position title
+- Manager: Supervisory manager name
+- Organization: Supervisory organization name
+- Location: Work location
+- Hire Date: Original hire date
+- Email: Primary work email
+- Phone: Primary work phone
+
+ALTERNATIVE NAVIGATION:
+1. enter search box as "View Worker Profile"
+2. wait for search results
+3. click search result containing "View Worker Profile"
+4. wait for page to load
+5. enter Worker as "{test_worker_name}"
+6. click button "OK"
+7. wait for page to load
+8. (continue verification from step 5 above)
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Workers (comprehensive worker data)
+- REST: /workers/{ID} (worker details)
+- REST: /workers/{ID}/personalInformation
+- REST: /workers/{ID}/jobData
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Profile Summary
+PROFILE CONFIGURATION:
+- Profile cards configured via: Setup > Worker Profile > Configure Profile Cards
+- Card visibility controlled by security policies
+- Card order can be customized per tenant
 
-### 1. Kb Benefits Enrollment (score: 3)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
+ERROR HANDLING:
+- "Worker not found": Verify worker name/ID spelling
+- "Access denied": User lacks view permission for worker
+- "Card not displaying": Check profile card configuration
+- "Data missing": Verify worker has data for expected sections
 
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Admini...
 ================================================================================

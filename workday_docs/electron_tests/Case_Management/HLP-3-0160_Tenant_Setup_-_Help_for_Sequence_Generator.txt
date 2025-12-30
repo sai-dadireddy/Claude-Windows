@@ -2,35 +2,34 @@
 TEST ID: HLP-3-0160
 FUNCTIONAL AREA: Case Management
 TEST NAME: Tenant Setup - Help for Sequence Generator
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Tenant Setup
+TASK/STEP: Configure Help Case Sequence Generator
 
 ELECTRON STEPS:
-1. enter search box as "Tenant Setup"
-2. enter field "Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
-3. screenshot as "HLP-3-0160_complete.png"
+1. enter search box as "Edit Tenant Setup - Help"
+2. click search result containing "Edit Tenant Setup - Help"
+3. wait for page to load
+4. click tab "Sequence Generator"
+5. verify field "Case Number Prefix" is visible
+6. enter Case Number Prefix as "CASE"
+7. enter Starting Number as "10001"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0160_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Sequence Generator configured successfully
+- Case numbering pattern established
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tenant Setup
-
-### 1. Electron Test Samples (score: 7)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron t...
+Source: Workday Resource Center - Case Management Setup
+Sequence Generator Configuration:
+- Define case number prefix format
+- Set starting sequence number
+- Ensure unique case identifiers
 ================================================================================

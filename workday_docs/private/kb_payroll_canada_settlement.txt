@@ -1,0 +1,174 @@
+================================================================================
+WORKDAY KB ARTICLE: SETTLEMENT RUN (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Settlement
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Settlement Run in Workday Canada is the process of finalizing payroll and
+generating payments to employees. This includes:
+- Locking payroll results (no further changes)
+- Generating payment files (EFT/Direct Deposit)
+- Creating checks for non-EFT employees
+- Generating GL journal entries
+- Processing employee wage payments
+
+Settlement is a critical step that commits payroll results and initiates
+the payment process to employees.
+
+Business Process: Create Settlement Run
+Functional Area: Payroll for Canada
+Initiator: Payroll Settlement Specialist
+Typical Duration: 15-45 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. COMPANY HIERARCHY
+   - Parent company selection
+   - Child companies included
+   - Multi-company settlement support
+   - Quebec-specific company handling
+
+2. PAY GROUP SELECTION
+   - All Available Pay Groups option
+   - Specific pay group selection
+   - Pay Group Exceptions
+   - Multiple pay frequencies
+
+3. PAYMENT METHODS
+   - EFT (Electronic Funds Transfer)
+   - Direct Deposit (Canadian banks)
+   - Cheque (check) printing
+   - Wire transfers
+
+4. BANK ROUTING
+   - Bank account assignments
+   - Routing rules configuration
+   - CAD currency handling
+   - Multi-bank support
+
+5. GL POSTING
+   - Payroll journal entries
+   - Cost center allocation
+   - Account mapping
+   - Suspense account handling
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Create Settlement Run:
+1. Search: "Create Settlement Run"
+2. Select company hierarchy (for multi-company)
+3. Select filters (pay groups, exceptions)
+4. Verify settlement parameters
+5. Submit settlement run
+
+View Settlement Run:
+1. Search: "View Settlement Run"
+2. Select settlement run ID
+3. Review settlement details and status
+
+Cancel Settlement Run:
+1. Search: "Cancel Settlement Run"
+2. Select settlement run
+3. Confirm cancellation (before bank file submission)
+
+================================================================================
+PREREQUISITES
+================================================================================
+
+Before Settlement:
+- All pay calculations complete
+- No pay results in error status
+- Bank accounts assigned to employees
+- Bank routing rules configured
+- GL accounts mapped
+- Payroll approval completed
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Initiate Settlement Run
+1. enter search box as "Create Settlement Run"
+2. wait for search results
+3. click search result containing "Create Settlement Run"
+4. wait for page to load
+
+Step 2: Configure Settlement Parameters
+5. select company field as "{company_name}"
+6. wait for company data to load
+7. verify company hierarchy displayed (if multi-company)
+8. check checkbox "All Available Pay Groups"
+9. check checkbox "All Available Pay Group Exceptions"
+
+Step 3: Review and Submit
+10. verify payment date is displayed
+11. verify pay period dates are correct
+12. scroll to review all settings
+13. screenshot as "{test_id}_settlement_config.png"
+14. click button "Submit"
+15. wait for confirmation message
+
+Step 4: Monitor Settlement Progress
+16. wait for settlement processing to begin
+17. verify settlement run ID is generated
+18. click link "View Settlement Run" if available
+19. verify status shows "In Progress" or "Complete"
+20. screenshot as "{test_id}_settlement_status.png"
+
+Step 5: Verify Settlement Results
+21. verify no errors displayed
+22. verify employee count matches expected
+23. verify payment file generated
+24. verify GL entries created (no suspense postings)
+25. screenshot as "{test_id}_settlement_complete.png"
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Common Errors:
+- "No complete pay results": Run pay calculation first
+- "Missing bank account": Assign bank to employee
+- "Bank routing error": Check bank routing rules
+- "GL account not found": Map payroll accounts
+- "Suspense account posting": Fix accounting configuration
+
+Resolution Steps:
+1. Review error details
+2. Fix underlying configuration
+3. Recalculate affected pay results
+4. Re-attempt settlement
+
+================================================================================
+POST-SETTLEMENT TASKS
+================================================================================
+
+- Submit EFT file to bank
+- Print cheques (if applicable)
+- Review GL journal entries
+- Verify payroll register
+- Distribute payslips
+- Archive settlement documentation
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Settlement Run Summary
+- Payment Register
+- EFT File Report
+- Payroll GL Report
+- Settlement Exceptions Report
+
+================================================================================

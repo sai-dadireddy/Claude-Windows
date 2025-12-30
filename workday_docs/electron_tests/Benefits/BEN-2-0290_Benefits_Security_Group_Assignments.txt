@@ -2,42 +2,82 @@
 TEST ID: BEN-2-0290
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefits Security Group Assignments
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Various Tasks
+TASK/STEP: Assign User-Based Security Groups for Benefits Administration
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Various Tasks
+DESCRIPTION:
+Configure and verify security group assignments for benefits administration.
+This includes assigning users to Benefits Administrator, Benefits Partner,
+and other benefits-related security groups to control access to benefits
+tasks and data.
 
-### 1. Kb Hcm Hire Employee (score: 2)
-Source: kb_hcm_hire_employee.txt
-```
-# Workday Hire Employee Business Process - Knowledge Base
-
-## Source
-- Workday Community AI-Generated Answer
-- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-- Release: 2025R1
-- 
-... (truncated)
+PREREQUISITES:
+- User logged in with Security Administrator role
+- Test user accounts to assign security groups
+- Understanding of required benefits permissions
 
 ELECTRON STEPS:
-1. enter search box as "Various Tasks"
+1. enter search box as "Assign User-Based Security Groups"
 2. wait for search results
-3. click search result containing "Various Tasks"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0290_complete.png"
+3. click search result containing "Assign User-Based Security Groups"
+4. wait for page to load
+5. enter user to assign as "{test_user_id}"
+6. wait for user profile to load
+7. scroll to security group assignments section
+8. click button "Add"
+9. enter security group as "Benefits Administrator"
+10. click search result for "Benefits Administrator"
+11. click button "OK"
+12. verify "Benefits Administrator" added to list
+13. click button "Add"
+14. enter security group as "Benefits Partner"
+15. click search result for "Benefits Partner"
+16. click button "OK"
+17. verify "Benefits Partner" added to list
+18. click button "Submit"
+19. wait for confirmation
+20. verify message contains "Security group assignment completed"
+21. screenshot as "BEN-2-0290_complete.png"
+
+VERIFICATION OF SECURITY ASSIGNMENT:
+22. enter search box as "View Security Groups for User"
+23. wait for search results
+24. click search result containing "View Security Groups for User"
+25. enter user as "{test_user_id}"
+26. wait for results to load
+27. verify "Benefits Administrator" appears in list
+28. verify "Benefits Partner" appears in list
+29. screenshot as "BEN-2-0290_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Security group assignment task opened successfully
+- [ ] Benefits Administrator security group assigned
+- [ ] Benefits Partner security group assigned
+- [ ] Assignment reflected in user security profile
+- [ ] User can access benefits administration tasks
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+User assigned to Benefits Administrator and Benefits Partner security groups
+with appropriate access to benefits administration functions.
+
+COMMON BENEFITS SECURITY GROUPS:
+- Benefits Administrator: Full benefits configuration access
+- Benefits Partner: Day-to-day benefits operations
+- Benefits Analyst: Reporting and data analysis
+- Benefits Self-Service: Employee self-service enrollment
+- COBRA Administrator: COBRA processing access
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Security group changes effective immediately
+- Consider least-privilege principle
+- Document assignments for audit compliance
+- Test access after assignment before go-live
+- Source: [Workday Security Administration]
+
+API ALTERNATIVE:
+- SOAP: Put_Assign_User_Based_Security_Group
+- REST: /security/v1/userSecurityGroups
 ================================================================================

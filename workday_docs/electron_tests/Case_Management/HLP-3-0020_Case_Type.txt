@@ -2,33 +2,36 @@
 TEST ID: HLP-3-0020
 FUNCTIONAL AREA: Case Management
 TEST NAME: Case Type
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: View Case Type
+TASK/STEP: Create Case Type
 
 ELECTRON STEPS:
-1. enter search box as "View Case Type"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0020_complete.png"
+1. enter search box as "Create Case Type"
+2. click search result containing "Create Case Type"
+3. wait for page to load
+4. enter Case Type Name as "Test Case Type"
+5. enter Description as "Case type for test automation"
+6. select Service Category as "Benefits"
+7. select Case Type Eligibility Rule as "All Employees"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0020_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case Type created successfully
+- Case Type linked to Service Category
+- Eligibility Rule properly assigned
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Case Type
-
-### 1. Kb Absence Time Off (score: 3)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Management....
+Source: Workday Resource Center - Case Management Setup
+Steps to Create a Case Type:
+1. Select Create Case Type task
+2. Enter the Rule Conditions values including service category
+3. Set eligibility rules for who can create this case type
+4. Click OK to complete the case type creation
 ================================================================================

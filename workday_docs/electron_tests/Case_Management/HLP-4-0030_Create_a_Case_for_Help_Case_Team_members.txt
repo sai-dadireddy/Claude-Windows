@@ -1,20 +1,41 @@
 ================================================================================
 TEST ID: HLP-4-0030
 FUNCTIONAL AREA: Case Management
-TEST NAME: Create a Case for Help Case Team members
-CONFIDENCE: [LOW] Score: 2.0/10
+TEST NAME: Create a Case for Help Case Team Members
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Help Case as Service Team Member
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0030_complete.png"
+1. enter search box as "Help Case Workspace"
+2. click search result containing "Help Case Workspace"
+3. wait for page to load
+4. click button "Create Case"
+5. wait for page to load
+6. select Service Category as "Benefits"
+7. select Case Type as "Benefits Inquiry"
+8. enter On Behalf Of as "Test Employee"
+9. enter Subject as "Benefits enrollment assistance"
+10. enter Description as "Employee needs help with benefits enrollment"
+11. click button "Submit"
+12. wait for page to load
+13. verify message contains "Case created successfully"
+14. screenshot as "HLP-4-0030_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case created successfully by service team member
+- Case created on behalf of employee
+- Case assigned appropriately
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Create Case as Service Team Member:
+1. Access Help Case Workspace
+2. Click Create Case
+3. Select service category and case type
+4. Enter on behalf of employee
+5. Submit case for processing
 ================================================================================

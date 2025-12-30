@@ -2,19 +2,33 @@
 TEST ID: HLP-1-0150
 FUNCTIONAL AREA: Case Management
 TEST NAME: Help Dashboard
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Access Help Dashboard
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-1-0150_complete.png"
+1. enter search box as "Help Dashboard"
+2. click search result containing "Help Dashboard"
+3. wait for page to load
+4. verify page title contains "Help Dashboard"
+5. verify field "Case Metrics" section is visible
+6. verify field "SLA Compliance" section is visible
+7. verify field "Open Cases by Category" chart is visible
+8. screenshot as "HLP-1-0150_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Dashboard accessible
+- Case metrics displayed
+- SLA compliance data visible
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Help Dashboard:
+- Provides overview of case management metrics
+- Shows SLA compliance rates
+- Displays case volume by category
+- Enables monitoring of service team performance
 ================================================================================

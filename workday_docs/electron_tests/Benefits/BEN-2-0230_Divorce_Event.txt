@@ -2,41 +2,92 @@
 TEST ID: BEN-2-0230
 FUNCTIONAL AREA: Benefits
 TEST NAME: Divorce Event
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
 TASK/STEP: Change Benefits > Divorce Event; COBRA (US Only)
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Change Benefits > Divorce Event; COBRA (US Only)
+DESCRIPTION:
+Process a divorce life event to update benefit elections. Employee removes
+former spouse from coverage and adjusts benefit plans accordingly. May trigger
+COBRA notification for ex-spouse.
 
-### 1. Electron Test Samples (score: 5)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-Th
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test employee with active benefits enrolled (including spouse coverage)
+- Employee must have valid marriage/domestic partnership on record
+- Divorce event date available
 
 ELECTRON STEPS:
-1. enter search box as "Change Benefits > Divorce Event; COBRA (US Only)"
+1. enter search box as "Change Benefits"
 2. wait for search results
-3. click search result containing "Change Benefits > Divorce Event; COBRA (US Only)"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0230_complete.png"
+3. click search result containing "Change Benefits"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for worker profile to load
+7. select benefit event type as "Life Event"
+8. select life event reason as "Divorce/Legal Separation"
+9. enter event date as "{divorce_date}"
+10. click button "Continue"
+11. wait for benefits election page to load
+12. verify current elections display with spouse coverage
+13. click link "Medical" in benefits section
+14. select coverage level as "Employee Only"
+15. click button "Elect"
+16. click link "Dental" in benefits section
+17. select coverage level as "Employee Only"
+18. click button "Elect"
+19. click link "Vision" in benefits section
+20. select coverage level as "Employee Only"
+21. click button "Elect"
+22. scroll to dependents section
+23. click checkbox to remove ex-spouse "{spouse_name}" from coverage
+24. click button "Review and Submit"
+25. wait for review page to load
+26. verify message contains "Coverage changes will be effective"
+27. verify dependent removal is listed
+28. click button "Submit"
+29. wait for confirmation
+30. verify message contains "Benefits enrollment submitted successfully"
+31. screenshot as "BEN-2-0230_complete.png"
+
+POST-SUBMISSION VERIFICATION:
+32. enter search box as "View Benefit Elections"
+33. wait for search results
+34. click search result containing "View Benefit Elections"
+35. enter worker as "{test_employee_id}"
+36. verify coverage level shows "Employee Only" for medical
+37. verify ex-spouse no longer listed as covered dependent
+38. screenshot as "BEN-2-0230_verification.png"
+
+COBRA NOTIFICATION (US Only):
+39. enter search box as "COBRA Qualifying Events"
+40. wait for search results
+41. click search result containing "COBRA Qualifying Events"
+42. enter ex-spouse name as "{spouse_name}"
+43. verify COBRA event generated for divorce
+44. screenshot as "BEN-2-0230_cobra.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Divorce life event successfully initiated
+- [ ] Coverage levels changed from Family/Employee+Spouse to Employee Only
+- [ ] Ex-spouse removed from all benefit plans
+- [ ] COBRA notification generated for ex-spouse (if US)
+- [ ] Benefit costs recalculated for single coverage
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Employee benefits updated to remove ex-spouse, coverage levels adjusted,
+and COBRA notification sent to ex-spouse for continuation coverage.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Divorce event typically has 31-day window for changes
+- COBRA notification required within 14 days (US)
+- Dependent children may remain on coverage if custody arrangement supports
+- May need divorce decree documentation upload
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Election (change coverage after life event)
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

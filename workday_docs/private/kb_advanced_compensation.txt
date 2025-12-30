@@ -1,0 +1,243 @@
+================================================================================
+WORKDAY KB ARTICLE: ADVANCED COMPENSATION BUSINESS PROCESSES
+================================================================================
+
+Source: Workday Community & WSDL/REST API Analysis
+URL: Workday Advanced Compensation Administration
+Date: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Advanced Compensation in Workday enables organizations to manage merit plans,
+bonus plans, stock plans, compensation packages, matrices, scorecards, and
+compensation reviews. Key functionality includes plan configuration, eligibility
+rules, security settings, and automated compensation calculations.
+
+================================================================================
+KEY WORKDAY TASKS & NAVIGATION
+================================================================================
+
+1. COMPENSATION PLANS
+   - Search: "Maintain Compensation Plans" or "comp plans"
+   - Navigation: Compensation > Plans
+   - Tabs: Merit, Bonus, Stock, Allowance, Period Salary, Unit Salary
+   - Key Fields:
+     * Plan Name, Plan ID
+     * Targets (hidden/overridden)
+     * Applicable Profiles
+     * Eligibility Rules
+     * Waiting Period
+     * Time Proration Rule
+     * Rounding Rule
+     * Compensation Matrix (Merit)
+     * Scorecards (Bonus)
+     * Performance Factors (Bonus)
+
+2. EDIT COMPENSATION PACKAGE
+   - Search: "Edit Compensation Package"
+   - Navigation: Compensation > Compensation Packages
+   - Key Fields:
+     * Package Name
+     * Effective Date
+     * Merit Plans (multi-select)
+     * Bonus Plans (multi-select)
+     * Stock Plans (multi-select)
+     * Allowance Plans (multi-select)
+
+3. COMPENSATION MATRICES
+   - Search: "Maintain Compensation Matrices" or "comp mat"
+   - Navigation: Compensation > Matrices
+   - Key Fields:
+     * Matrix Name
+     * Effective Date
+     * Rows (performance rating/compa-ratio)
+     * Columns (performance rating/compa-ratio)
+     * Cell Values (percentage)
+
+4. STOCK GRANT TYPES
+   - Search: "Stock Grant Types"
+   - Navigation: Compensation > Stock > Grant Types
+   - Key Fields:
+     * Grant Type Name
+     * Grant Type ID
+     * Vesting Schedule
+     * Fair Market Value Rules
+
+5. COMPENSATION ELIGIBILITY RULES
+   - Search: "Maintain Compensation Eligibility Rules"
+   - Navigation: Compensation > Eligibility Rules
+   - Key Fields:
+     * Rule Name
+     * Worker Criteria
+     * Job Criteria
+     * Organization Criteria
+
+6. COMPENSATION SCORECARDS
+   - Search: "Compensation Scorecards" or "Maintain Scorecards"
+   - Navigation: Compensation > Scorecards
+   - Key Fields:
+     * Scorecard Name
+     * Scorecard Description
+     * Effective Date
+     * Default Goals (goalName, goalWeight)
+     * Scorecard Profiles
+     * Eligibility Rules
+
+7. COMPENSATION REVIEW
+   - Search: "Start Compensation Review"
+   - Navigation: Compensation > Reviews > Start Review
+   - Key Fields:
+     * Review Name
+     * Review Period
+     * Workers In Scope
+     * Budget Pools
+     * Guidelines
+
+================================================================================
+ELECTRON AUTOMATION PATTERNS
+================================================================================
+
+PATTERN 1: View Compensation Plans
+----------------------------------
+1. enter search box as "Maintain Compensation Plans"
+2. wait for search results
+3. click search result containing "Maintain Compensation Plans"
+4. wait for page to load
+5. click tab "{Merit|Bonus|Stock|Allowance}"
+6. click link for plan name
+7. verify plan configuration fields are displayed
+8. screenshot as "{TEST_ID}_plan_config.png"
+
+PATTERN 2: Edit Compensation Package
+------------------------------------
+1. enter search box as "Edit Compensation Package"
+2. wait for search results
+3. click search result containing "Edit Compensation Package"
+4. wait for page to load
+5. enter "Compensation Package" as "{package_name}"
+6. wait for package to load
+7. click checkbox for "{merit|bonus|stock} plan"
+8. click button "OK"
+9. verify confirmation message displayed
+10. screenshot as "{TEST_ID}_package_updated.png"
+
+PATTERN 3: Review Compensation Matrix
+-------------------------------------
+1. enter search box as "Maintain Compensation Matrices"
+2. wait for search results
+3. click search result containing "Compensation Matrices"
+4. wait for page to load
+5. click link for matrix name
+6. verify matrix grid is displayed
+7. verify row and column headers
+8. screenshot as "{TEST_ID}_matrix_view.png"
+
+PATTERN 4: Plan Security Verification (as Employee)
+---------------------------------------------------
+1. navigate to worker profile
+2. click tab "Compensation"
+3. verify target amounts are hidden/visible per security
+4. screenshot as "{TEST_ID}_security_check.png"
+
+PATTERN 5: Stock Grant Types Review
+-----------------------------------
+1. enter search box as "Stock Grant Types"
+2. wait for search results
+3. click search result containing "Stock Grant Types"
+4. wait for page to load
+5. verify grant type list is displayed
+6. click link for grant type name
+7. verify vesting schedule configuration
+8. screenshot as "{TEST_ID}_stock_grant.png"
+
+================================================================================
+REST API ENDPOINTS (compensation/v2)
+================================================================================
+
+GET /scorecardResults     - Retrieve scorecard results
+POST /scorecardResults    - Create new scorecard result
+GET /scorecards           - Retrieve compensation scorecards
+POST /scorecards          - Create compensation scorecard
+PUT /scorecards/{ID}      - Update compensation scorecard
+GET /workers              - Retrieve workers with compensation data
+POST /workers/{ID}/requestOneTimePayment - Request one-time payment
+
+Key Fields from API:
+- scorecardName, scorecardDescription
+- effectiveDate
+- defaultScorecardGoals (goalName, goalWeight)
+- scorecardProfiles (eligibilityRule, profileScorecardGoals)
+- evaluationDate
+- achievement (percentage 1-100)
+- weightedFundingPercent
+
+================================================================================
+COMPENSATION REVIEW PROCESS
+================================================================================
+
+1. Configure Compensation Review
+   - Search: "Configure Compensation Review"
+   - Set up review periods, guidelines, approvals
+
+2. Start Compensation Review
+   - Search: "Start Compensation Review"
+   - Select workers in scope
+   - Define budget pools
+
+3. Complete Compensation Review
+   - Managers receive tasks to award merit/bonus
+   - HR reviews and approves
+   - Compensation changes applied on effective date
+
+4. Compensation Review Reports
+   - Search: "Compensation Review Summary"
+   - View distribution analytics
+   - Export compensation data
+
+================================================================================
+COMMON FIELD NAMES IN WORKDAY UI
+================================================================================
+
+Merit Plan Configuration:
+- Compensation Plan
+- Plan Name
+- Effective Date
+- Target Percentage
+- Minimum Percentage
+- Maximum Percentage
+- Time Proration Rule
+- Compensation Matrix
+- Eligibility Rule
+- Waiting Period
+
+Bonus Plan Configuration:
+- Bonus Plan Name
+- Target Amount/Percentage
+- Scorecard
+- Performance Factor
+- Funding Allocation
+- Individual Allocation
+- Guarantee Period
+
+Stock Plan Configuration:
+- Stock Plan Name
+- Grant Type
+- Vesting Schedule
+- Exercise Price Rule
+- Fair Market Value
+- Stock Pool
+
+================================================================================
+SECURITY GROUPS
+================================================================================
+
+- Compensation Administrator: Full access to all compensation configuration
+- Compensation Partner: Limited configuration, can run reviews
+- Manager: View and award compensation within guidelines
+- Employee: View own compensation (targets may be hidden)
+
+================================================================================
+END OF KB ARTICLE
+================================================================================

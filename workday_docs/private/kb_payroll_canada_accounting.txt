@@ -1,0 +1,183 @@
+================================================================================
+WORKDAY KB ARTICLE: PAYROLL ACCOUNTING CONFIGURATION (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Accounting
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Payroll Accounting configuration in Workday Canada ensures that payroll costs
+are posted to the correct general ledger accounts. This includes:
+- Earnings account mapping
+- Deduction account mapping
+- Employer contribution accounts
+- Tax liability accounts
+- Suspense account monitoring
+- Cost center allocation rules
+
+Business Process: Verify Accounting Configuration and Results
+Functional Area: Payroll for Canada / Financial Accounting
+Initiator: Payroll Partner / Finance
+Typical Duration: 30-60 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. EARNINGS ACCOUNTS
+   - Salary expense accounts
+   - Hourly wage accounts
+   - Overtime expense accounts
+   - Bonus expense accounts
+   - Commission expense accounts
+
+2. DEDUCTION ACCOUNTS
+   - Employee deduction clearing
+   - Voluntary deduction liability
+   - RRSP liability account
+   - Benefits deduction accounts
+
+3. TAX LIABILITY ACCOUNTS
+   - Federal income tax payable
+   - Provincial income tax payable
+   - CPP payable (employee)
+   - CPP payable (employer)
+   - EI payable (employee)
+   - EI payable (employer)
+
+4. EMPLOYER CONTRIBUTION ACCOUNTS
+   - CPP employer expense
+   - EI employer expense
+   - WCB expense accounts
+   - Provincial health tax expense
+   - Group benefits expense
+
+5. SUSPENSE ACCOUNTS
+   - Unmapped earnings suspense
+   - Unmapped deductions suspense
+   - Error suspense account
+   - Clearing accounts
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Review Accounting Configuration:
+1. Search: "Maintain Payroll Accounting"
+2. Review account mappings
+3. Verify cost center rules
+
+View Payroll Postings:
+1. Search: "View Payroll Accounting Results"
+2. Select pay period
+3. Review journal entries before completion
+
+Fix Operational Journals:
+1. Search: "Fix Operational Journals With Errors"
+2. Review and resolve accounting errors
+3. Repost corrected entries
+
+================================================================================
+VALIDATION PROCESS
+================================================================================
+
+Step 1: Run Pay Calculation
+- Calculate payroll for all pay groups
+- Review any calculation errors
+- Ensure all employees processed
+
+Step 2: Review Accounting Entries
+- Check postings before completing payroll
+- Verify no suspense account entries
+- Confirm cost center allocations
+
+Step 3: Fix Any Errors
+- Run "Fix Operational Journals With Errors"
+- Update configuration as needed
+- Recalculate affected employees
+
+Step 4: Complete and Post
+- Complete payroll run
+- Verify GL journal entries created
+- Reconcile payroll to GL
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Run Pay Calculation
+1. enter search box as "Run Pay Calculation"
+2. wait for search results
+3. click search result containing "Run Pay Calculation"
+4. wait for page to load
+5. select pay group as "{pay_group}"
+6. verify pay period dates displayed
+7. click button "Submit"
+8. wait for calculation to complete
+9. screenshot as "{test_id}_pay_calc_submitted.png"
+
+Step 2: Review Accounting Results
+10. enter search box as "View Payroll Accounting Results"
+11. wait for search results
+12. click search result containing "View Payroll Accounting Results"
+13. wait for page to load
+14. select pay period and pay group
+15. wait for accounting entries to load
+16. verify journal entries displayed
+17. verify no suspense account entries
+18. screenshot as "{test_id}_accounting_review.png"
+
+Step 3: Check for Errors
+19. enter search box as "Fix Operational Journals With Errors"
+20. wait for search results
+21. click search result containing "Fix Operational Journals With Errors"
+22. wait for page to load
+23. verify error list (expect empty if configured correctly)
+24. screenshot as "{test_id}_journal_errors.png"
+
+Step 4: Complete Payroll
+25. enter search box as "Complete Payroll"
+26. wait for search results
+27. click search result containing "Complete Payroll"
+28. wait for page to load
+29. select payroll run
+30. click button "Complete"
+31. wait for completion confirmation
+32. screenshot as "{test_id}_payroll_complete.png"
+
+Step 5: Verify GL Postings
+33. enter search box as "View Journal Entry"
+34. wait for search results
+35. click search result containing "View Journal Entry"
+36. wait for page to load
+37. enter payroll journal reference
+38. verify debits and credits balanced
+39. verify no suspense postings
+40. screenshot as "{test_id}_gl_posting.png"
+
+================================================================================
+COMMON ISSUES
+================================================================================
+
+- Suspense account postings: Map missing pay codes
+- Unbalanced entries: Check rounding rules
+- Missing cost centers: Update worktag rules
+- Tax account errors: Verify tax liability setup
+- Integration errors: Can be ignored until E2E testing
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Payroll Accounting Summary
+- Journal Entry Detail
+- Payroll Cost Allocation Report
+- Suspense Account Analysis
+- GL Reconciliation Report
+
+================================================================================

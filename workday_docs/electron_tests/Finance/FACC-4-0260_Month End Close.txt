@@ -2,13 +2,54 @@
 TEST ID: FACC-4-0260
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Month End Close
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf + kb_finance_journal_entry.txt]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Execute the month-end close process to finalize accounting for a fiscal
+period. This includes running allocations, posting accruals, reconciling
+accounts, and locking the period to prevent further changes.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Controller or Finance Manager role
+- All transactions for the period posted
+- Reconciliations completed
+- Accrual and adjustment journals submitted
+- Approval workflows completed
+- Allocation processes run
+
+ELECTRON STEPS:
+1. enter search box as "Close Period"
+2. wait for search results
+3. click search result containing "Close Period"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. select Fiscal Year as "{fiscal_year}"
+7. select Period as "{period_to_close}"
+8. select Ledger Type as "Actuals"
+9. click button "Validate Readiness"
+10. wait for validation results
+11. verify all close checklist items complete
+12. verify no open transactions blocking close
+13. verify all required journals posted
+14. click button "Close Period"
+15. wait for close confirmation dialog
+16. click button "Confirm" to proceed with close
+17. wait for close processing
+18. verify message contains "period closed" or "successfully"
+19. verify period status shows "Closed"
+20. screenshot as "FACC-4-0260_complete.png"
+
+VERIFICATION:
+- [ ] Month-end close completed successfully
+- [ ] Period status changed to Closed
+- [ ] No transactions can be posted to closed period
+- [ ] Financial reports show final balances
+- [ ] Close audit trail created
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Close_Period (Financial_Management WSDL)
+- Get_Period_Close_Status for validation
 ================================================================================

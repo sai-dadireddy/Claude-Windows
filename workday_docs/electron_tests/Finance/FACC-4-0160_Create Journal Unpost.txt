@@ -2,13 +2,53 @@
 TEST ID: FACC-4-0160
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Create Journal Unpost
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG - kb_finance_journal_entry.txt + Financial_Management WSDL]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Unpost a previously posted accounting journal to remove its impact from
+the general ledger. This action creates a reversal entry and is used when
+a journal was posted in error or needs to be corrected before re-posting.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Finance Manager or Controller role
+- Original journal is in "Posted" status
+- Accounting period is still open
+- User has security to unpost journals
+
+ELECTRON STEPS:
+1. enter search box as "Find Journals"
+2. wait for search results
+3. click search result containing "Find Journals"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. enter Journal Number as "{journal_to_unpost}"
+7. click button "OK"
+8. wait for search results
+9. click link on journal number to open
+10. wait for journal details page
+11. verify journal Status shows "Posted"
+12. click button "Related Actions"
+13. click menu item "Accounting Journal"
+14. click menu item "Unpost Journal"
+15. wait for unpost dialog
+16. enter Reason as "Unposting for correction - FACC-4-0160"
+17. click button "Submit"
+18. wait for confirmation
+19. verify message contains "unpost" or "reversal created"
+20. verify journal Status shows "Unposted" or "Reversed"
+21. screenshot as "FACC-4-0160_complete.png"
+
+VERIFICATION:
+- [ ] Journal successfully unposted
+- [ ] Reversal entry created (if configured)
+- [ ] GL impact removed from ledger
+- [ ] Status updated to Unposted/Reversed
+- [ ] Audit trail maintained
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Unpost-Reverse_Accounting_Journal (Financial_Management WSDL)
+- Creates reversal entry and removes GL impact
 ================================================================================

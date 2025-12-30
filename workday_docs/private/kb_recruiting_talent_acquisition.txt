@@ -1,0 +1,632 @@
+================================================================================
+WORKDAY KB ARTICLE: RECRUITING & TALENT ACQUISITION BUSINESS PROCESSES
+================================================================================
+
+Source: Workday Community, WSDL Analysis (Recruiting.wsdl - 105 operations),
+        REST API (recruiting_v4.json)
+Updated: 2025-12-30
+Functional Area: Talent Acquisition / Recruiting
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Workday Recruiting provides end-to-end talent acquisition capabilities including:
+- Job Requisition Management
+- Candidate Management (Prospects, Applicants)
+- Job Postings (Internal/External Career Sites)
+- Interview Scheduling & Feedback
+- Offer Management
+- Background Checks
+- Evergreen Requisitions
+- Recruiting Agency Management
+
+================================================================================
+KEY WORKDAY TASKS & NAVIGATION
+================================================================================
+
+## 1. CREATE JOB REQUISITION
+Task: Create Job Requisition
+Navigation: Search "Create Job Requisition" | Recruiting Hub > Create Requisition
+WSDL Operation: Create_Job_Requisition
+
+Required Fields:
+- Supervisory Organization (org hierarchy)
+- Position (existing or create new)
+- Job Title
+- Job Profile
+- Worker Type (Employee/Contingent Worker)
+- Time Type (Full-time/Part-time)
+- Location
+- Primary Recruiting Contact
+- Hiring Manager
+
+Steps:
+1. Search "Create Job Requisition"
+2. Select Supervisory Organization
+3. Select or Create Position
+4. Enter Job Details (Title, Profile, Location)
+5. Set Recruiting Details (Contact, Hiring Manager)
+6. Configure Posting Details (if posting immediately)
+7. Submit for Approval
+
+Verification:
+- Job Requisition ID generated (JR-XXXXX format)
+- Status shows "Open" or "In Approval"
+- Position linked to requisition
+
+--------------------------------------------------------------------------------
+
+## 2. POST JOB
+Task: Post Job
+Navigation: Job Requisition > Related Actions > Post Job
+WSDL Operation: Post_Job
+
+Required Fields:
+- Job Requisition Reference
+- Career Site(s) (Internal/External)
+- Posting Start Date
+- Posting End Date (optional)
+
+Steps:
+1. Navigate to Job Requisition
+2. Click Related Actions > Post Job
+3. Select Career Site(s)
+4. Set Posting Dates
+5. Review Job Posting Content
+6. Submit
+
+Verification:
+- Job appears on selected career site(s)
+- Posting status shows "Active"
+- Job Posting reference created
+
+--------------------------------------------------------------------------------
+
+## 3. CREATE PROSPECT
+Task: Create Prospect
+Navigation: Search "Create Prospect" | Recruiting > Create Prospect
+REST API: POST /prospects
+
+Required Fields:
+- First Name
+- Last Name
+- Email Address
+- Source (how candidate was found)
+- Recruiting Region (optional)
+
+Steps:
+1. Search "Create Prospect"
+2. Enter Personal Information (Name, Email)
+3. Add Contact Information (Phone, Address)
+4. Select Recruiting Source
+5. Add Resume/Attachments (optional)
+6. Submit
+
+Verification:
+- Prospect record created
+- Prospect ID generated
+- Appears in talent pipeline
+
+--------------------------------------------------------------------------------
+
+## 4. EXTERNAL CANDIDATE JOB APPLICATION
+Task: External Candidate Applies for Job
+Navigation: Career Site > Job Posting > Apply
+REST API: POST /jobPostings/{ID}/applications
+
+Steps (External Candidate):
+1. Access External Career Site
+2. Search/Browse Job Postings
+3. Select Job and Click "Apply"
+4. Create Candidate Account (if new)
+5. Complete Application Form
+6. Upload Resume/Documents
+7. Answer Questionnaire (if configured)
+8. Submit Application
+
+Verification:
+- Application submitted confirmation
+- Application appears in Job Requisition
+- Candidate receives confirmation email
+
+--------------------------------------------------------------------------------
+
+## 5. INTERNAL CANDIDATE JOB APPLICATION
+Task: Internal Candidate Applies for Job
+Navigation: Internal Career Site > Career Hub > Find Jobs
+Role: Any Worker with internal mobility access
+
+Steps:
+1. Navigate to Internal Career Site
+2. Search for Open Positions
+3. Select Job and Click "Apply"
+4. Review Pre-populated Information
+5. Complete Additional Questions
+6. Submit Application
+
+Verification:
+- Application shows "Internal Candidate" flag
+- Manager notification triggered (if configured)
+- Application in candidate pool
+
+--------------------------------------------------------------------------------
+
+## 6. REVIEW CANDIDATE
+Task: Review Candidate
+Navigation: Job Requisition > Candidates > Review
+WSDL Operation: Get_Candidates
+
+Steps:
+1. Navigate to Job Requisition
+2. Click Candidates tab
+3. Select Candidate to Review
+4. Review Application Details
+5. View Resume/Attachments
+6. Add Recruiting Notes (optional)
+7. Move to Next Stage or Disposition
+
+Verification:
+- Candidate stage updated
+- Review timestamp recorded
+- Notes saved to candidate record
+
+--------------------------------------------------------------------------------
+
+## 7. SCREEN CANDIDATE
+Task: Screen Candidate
+Navigation: Job Application > Move to Screen Stage
+Business Process: Job Application > Screen step
+
+Steps:
+1. Select Candidate from Requisition
+2. Click "Move Candidate" or Related Actions
+3. Select "Screen" stage
+4. Complete Screening Questions
+5. Add Evaluation/Notes
+6. Submit
+
+Verification:
+- Candidate moved to Screen stage
+- Screening data captured
+- Next step in workflow triggered
+
+--------------------------------------------------------------------------------
+
+## 8. ASSESS CANDIDATE
+Task: Assess Candidate
+Navigation: Job Application > Assess Candidate
+WSDL Operation: Assess_Candidate
+
+Steps:
+1. Select Candidate in Interview stage
+2. Click "Assess Candidate"
+3. Complete Assessment Form
+4. Rate Skills/Competencies
+5. Add Overall Assessment Notes
+6. Submit
+
+Verification:
+- Assessment recorded
+- Stage updated if auto-advance configured
+- Assessment visible to recruiting team
+
+--------------------------------------------------------------------------------
+
+## 9. SCHEDULE INTERVIEW
+Task: Schedule Interview
+Navigation: Job Application > Schedule Interview
+WSDL Operations: Put_Interview, Get_Interviews
+
+Required Fields:
+- Interview Type
+- Date/Time
+- Location (or Virtual Meeting Link)
+- Interviewer(s)
+- Interview Duration
+
+Steps:
+1. Select Candidate
+2. Click "Schedule Interview"
+3. Select Interview Type
+4. Set Date, Time, Duration
+5. Add Interviewers
+6. Set Location/Virtual Link
+7. Add Interview Instructions
+8. Submit/Send Invites
+
+Verification:
+- Interview scheduled
+- Calendar invites sent to participants
+- Candidate notification sent
+
+--------------------------------------------------------------------------------
+
+## 10. INTERVIEW CANDIDATE
+Task: Complete Interview
+Navigation: My Tasks > Interview Events | Job Application > Interview
+WSDL Operation: Put_Interview_Feedback
+
+Steps:
+1. Access Interview Event
+2. Review Candidate Information
+3. Conduct Interview
+4. Complete Interview Feedback Form
+5. Rate Candidate (Overall Rating)
+6. Add Comments/Notes
+7. Submit Feedback
+
+Verification:
+- Feedback submitted
+- Rating captured
+- Move to next stage if all interviewers complete
+
+--------------------------------------------------------------------------------
+
+## 11. SUBMIT OFFER
+Task: Submit Offer
+Navigation: Job Application > Submit Offer | Related Actions > Offer
+WSDL Operation: Offer
+
+Required Fields:
+- Compensation Details
+- Start Date
+- Position Details
+- Offer Letter Template (optional)
+
+Steps:
+1. Select Candidate (Ready for Offer stage)
+2. Click "Submit Offer" or Related Actions > Offer
+3. Configure Compensation
+4. Set Proposed Start Date
+5. Review Position Details
+6. Select Offer Letter Template
+7. Preview Offer Letter
+8. Submit for Approval (if BP configured)
+
+Verification:
+- Offer created
+- Pending approval (if configured)
+- Candidate notified when approved
+
+--------------------------------------------------------------------------------
+
+## 12. PROCESS BACKGROUND CHECK
+Task: Initiate Background Check
+Navigation: Job Application > Background Check | Related Actions
+WSDL Operations: Put_Background_Check, Get_Background_Check
+
+Steps:
+1. Select Candidate (after offer acceptance)
+2. Click "Initiate Background Check"
+3. Select Background Check Package
+4. Review Candidate Consent
+5. Submit to Provider
+
+Verification:
+- Background check initiated
+- Status shows "In Progress"
+- Provider receives request
+
+--------------------------------------------------------------------------------
+
+## 13. READY TO HIRE
+Task: Move to Ready to Hire
+Navigation: Job Application > Move to Ready to Hire
+Business Process: Job Application completion step
+
+Steps:
+1. Verify all stages complete
+2. Background check cleared (if required)
+3. Click "Ready to Hire"
+4. Confirm Start Date
+5. Submit
+
+Verification:
+- Candidate status "Ready to Hire"
+- Hire process can be initiated
+- Pre-hire record created
+
+--------------------------------------------------------------------------------
+
+## 14. CREATE/MANAGE EVERGREEN REQUISITION
+Task: Create Evergreen Requisition
+Navigation: Search "Create Evergreen Requisition"
+WSDL Operations: Create_Evergreen_Requisition, Edit_Evergreen_Requisition
+
+Steps:
+1. Search "Create Evergreen Requisition"
+2. Configure Requisition Template
+3. Set Ongoing Hiring Parameters
+4. Define Job Posting Content
+5. Submit
+
+Verification:
+- Evergreen requisition created
+- Can link to regular requisitions
+- Ongoing candidate pool maintained
+
+--------------------------------------------------------------------------------
+
+## 15. MANAGE JOB REQUISITION FREEZE
+Task: Freeze/Unfreeze Job Requisition
+Navigation: Job Requisition > Related Actions > Freeze/Unfreeze
+WSDL Operation: Manage_Job_Requisition_Freeze
+
+Steps:
+1. Navigate to Job Requisition
+2. Click Related Actions > Manage Freeze
+3. Select Freeze or Unfreeze
+4. Add Reason (optional)
+5. Submit
+
+Verification:
+- Requisition status updated
+- Posting paused (if frozen)
+- Candidates notified (if configured)
+
+--------------------------------------------------------------------------------
+
+## 16. CLOSE JOB REQUISITION
+Task: Close Job Requisition
+Navigation: Job Requisition > Related Actions > Close
+WSDL Operation: Close_Job_Requisition
+
+Steps:
+1. Navigate to Job Requisition
+2. Verify no pending events
+3. Click Related Actions > Close
+4. Select Close Reason
+5. Disposition remaining candidates
+6. Submit
+
+Verification:
+- Requisition status "Closed"
+- Postings removed
+- Candidates dispositioned
+
+--------------------------------------------------------------------------------
+
+## 17. EMPLOYEE REFERRAL
+Task: Refer a Candidate
+Navigation: Career Hub > Refer a Candidate | Search "Refer a Candidate"
+WSDL Operation: Refer_a_Candidate
+
+Steps:
+1. Search "Refer a Candidate"
+2. Enter Candidate Information
+3. Select Job Requisition (optional)
+4. Add Referral Notes
+5. Submit
+
+Verification:
+- Referral submitted
+- Source marked as "Employee Referral"
+- Referring employee linked
+
+--------------------------------------------------------------------------------
+
+## 18. EMPLOYEE ENDORSEMENT
+Task: Endorse Internal Candidate
+Navigation: Worker Profile > Related Actions > Endorse
+
+Steps:
+1. Navigate to Worker Profile
+2. Click Related Actions > Endorse
+3. Select Endorsement Type
+4. Add Endorsement Comments
+5. Submit
+
+Verification:
+- Endorsement recorded
+- Visible on worker profile
+- Available during internal mobility
+
+--------------------------------------------------------------------------------
+
+## 19. RECRUITING NOTES
+Task: Add Recruiting Notes
+Navigation: Candidate/Job Application > Add Note
+
+Steps:
+1. Navigate to Candidate or Job Application
+2. Click Add Note
+3. Select Note Category
+4. Enter Note Content
+5. Set Visibility (Private/Team)
+6. Save
+
+Verification:
+- Note added to record
+- Timestamp and author captured
+- Visible based on permissions
+
+--------------------------------------------------------------------------------
+
+## 20. CONFIGURE RECRUITING SOURCES
+Task: Maintain Recruiting Sources
+Navigation: Search "Maintain Recruiting Sources" | Tenant Setup > Recruiting
+
+Steps:
+1. Search "Maintain Recruiting Sources"
+2. Add/Edit Source
+3. Set Source Name and Code
+4. Configure Source Category
+5. Activate/Deactivate
+6. Save
+
+Verification:
+- Source available in dropdowns
+- Reports reflect source data
+
+================================================================================
+RECRUITING SECURITY GROUPS
+================================================================================
+
+Key Security Groups:
+- Recruiter
+- Recruiting Administrator
+- Hiring Manager
+- External Candidate
+- Recruiting Agency User
+
+Domain Security:
+- Job Requisitions: View, Manage
+- Candidates: View, Manage
+- Job Postings: View, Manage
+- Offers: View, Initiate
+- Background Checks: View, Initiate
+
+================================================================================
+ELECTRON TEST PATTERNS
+================================================================================
+
+## Pattern: Create Job Requisition
+```
+login|Recruiter
+search|Create Job Requisition
+click|Create Job Requisition
+wait|3
+input|Supervisory Organization|{org_name}
+input|Position|{position_name}
+input|Job Title|{job_title}
+input|Job Profile|{job_profile}
+select|Worker Type|Employee
+select|Time Type|Full Time
+input|Primary Location|{location}
+input|Recruiting Contact|{recruiter_name}
+input|Hiring Manager|{manager_name}
+click|Submit
+wait|3
+verify|Job Requisition successfully submitted
+screenshot|{test_id}_complete.png
+logout
+```
+
+## Pattern: Post Job
+```
+login|Recruiter
+search|{job_requisition_id}
+click|{job_requisition_id}
+wait|2
+click|Related Actions
+click|Post Job
+wait|2
+select|Career Site|External Career Site
+input|Posting Start Date|{date}
+click|Submit
+wait|3
+verify|Job posted successfully
+screenshot|{test_id}_posted.png
+logout
+```
+
+## Pattern: Review Candidate
+```
+login|Recruiter
+search|Find Candidates
+click|Find Candidates
+wait|2
+filter|Job Requisition|{job_req_id}
+click|{candidate_name}
+wait|2
+verify|Application details display
+click|Add Note
+input|Note|Reviewed qualifications - strong match
+click|Save
+click|Move Candidate
+select|Stage|Screen
+click|Submit
+verify|Candidate moved to Screen stage
+screenshot|{test_id}_reviewed.png
+logout
+```
+
+## Pattern: Schedule Interview
+```
+login|Recruiter
+search|{job_application_id}
+click|{job_application_id}
+wait|2
+click|Schedule Interview
+wait|2
+select|Interview Type|Phone Screen
+input|Date|{interview_date}
+input|Start Time|10:00 AM
+input|Duration|30 minutes
+input|Interviewer|{interviewer_name}
+input|Location|Virtual - Teams
+click|Submit
+wait|3
+verify|Interview scheduled successfully
+screenshot|{test_id}_interview_scheduled.png
+logout
+```
+
+## Pattern: Submit Offer
+```
+login|Recruiter
+search|{candidate_name}
+click|{candidate_name}
+wait|2
+click|Submit Offer
+wait|3
+input|Proposed Start Date|{start_date}
+input|Base Salary|{salary_amount}
+select|Offer Letter Template|Standard Offer Letter
+click|Preview Offer Letter
+verify|Offer letter displays correctly
+click|Submit
+wait|3
+verify|Offer submitted for approval
+screenshot|{test_id}_offer_submitted.png
+logout
+```
+
+================================================================================
+API REFERENCE (REST & SOAP)
+================================================================================
+
+REST API (recruiting_v4):
+- GET /jobPostings - List job postings
+- GET /jobPostings/{ID} - Get specific posting
+- POST /prospects - Create prospect
+- GET /prospects/{ID} - Get prospect details
+- GET /interviews - List interviews
+- GET /interviews/{ID} - Get interview details
+
+SOAP (Recruiting.wsdl - 105 operations):
+Key Operations:
+- Create_Job_Requisition
+- Edit_Job_Requisition
+- Get_Job_Requisitions
+- Close_Job_Requisition
+- Post_Job
+- Unpost_Job
+- Put_Candidate
+- Get_Candidates
+- Assess_Candidate
+- Move_Candidate
+- Put_Interview
+- Get_Interviews
+- Put_Interview_Feedback
+- Offer
+- Put_Background_Check
+- Get_Background_Check
+- Refer_a_Candidate
+- Create_Evergreen_Requisition
+
+================================================================================
+CONFIDENCE SCORING
+================================================================================
+
+Based on WSDL coverage (105 operations) and REST API (recruiting_v4):
+- Job Requisition tasks: HIGH (8-9/10) - Full WSDL/API coverage
+- Candidate Management: HIGH (8/10) - Full coverage
+- Interview Scheduling: HIGH (8/10) - Good coverage
+- Offer Process: MEDIUM-HIGH (7/10) - Basic coverage
+- Background Checks: MEDIUM (6/10) - External integration dependent
+- Career Site Configuration: MEDIUM (6/10) - Limited documentation
+- Evergreen Requisitions: HIGH (8/10) - Good WSDL coverage
+
+================================================================================

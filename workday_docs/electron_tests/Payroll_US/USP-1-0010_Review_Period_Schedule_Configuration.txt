@@ -2,8 +2,8 @@
 TEST ID: USP-1-0010
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Period Schedule Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_payroll_period_schedule.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -14,45 +14,56 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Access to View Period Schedule task
+- List of expected period schedules for verification
 
 ELECTRON STEPS:
 1. enter search box as "View Period Schedule"
 2. wait for search results
 3. click search result containing "View Period Schedule"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0010_complete.png"
+5. verify page title contains "Period Schedule"
+6. select period schedule dropdown as "{Biweekly Schedule}"
+7. wait for periods to load
+8. verify period table displays all periods
+9. scroll to view Period Start Date column
+10. scroll to view Period End Date column
+11. scroll to view Payment Date column
+12. scroll to view Accounting Date Override column
+13. verify period dates are consecutive without gaps
+14. screenshot as "USP-1-0010_period_dates.png"
+15. click related actions menu
+16. click link "View Details"
+17. wait for details page to load
+18. verify Forward Accrual Settings section displays
+19. verify Continuous Payroll Calculation section displays
+20. screenshot as "USP-1-0010_forward_accrual.png"
+21. click button "Done"
+22. enter search box as "Maintain Period Schedule"
+23. wait for search results
+24. click search result containing "Maintain Period Schedule"
+25. wait for page to load
+26. verify period count matches expected periods per year
+27. screenshot as "USP-1-0010_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
+- [ ] All expected period schedules are present
+- [ ] Period start and end dates are correct
+- [ ] Payment dates fall on valid business days
+- [ ] Accounting Date Override configured where needed
+- [ ] Forward accrual settings match requirements
+- [ ] Correct number of periods per year (52 weekly, 26 biweekly, 24 semimonthly, 12 monthly)
+- [ ] Absence/Time Tracking links configured if applicable
+- [ ] Continuous Payroll Calculation configured if applicable
 - [ ] No error messages displayed
-- [ ] All required fields/sections are visible
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  WSDL: Payroll
+  Operation: Get_Period_Schedules
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Period Schedule
-
-### 1. Electron Test Samples (score: 8)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample El
+  Endpoint: /payroll/v2/periodSchedules
+  Method: GET
 
 ================================================================================

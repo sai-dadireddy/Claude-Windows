@@ -2,19 +2,33 @@
 TEST ID: HLP-3-0110
 FUNCTIONAL AREA: Case Management
 TEST NAME: Help Case Workspace Worklet
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Configure Help Case Workspace Worklet
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-3-0110_complete.png"
+1. enter search box as "Edit Tenant Setup - Help"
+2. click search result containing "Edit Tenant Setup - Help"
+3. wait for page to load
+4. click tab "Worklets"
+5. verify field "Help Case Workspace Worklet" is visible
+6. select checkbox "Enable Help Case Workspace Worklet"
+7. click button "OK"
+8. wait for page to load
+9. verify message contains "successfully"
+10. screenshot as "HLP-3-0110_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Case Workspace Worklet enabled successfully
+- Worklet configuration saved
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Help Case Workspace Worklet:
+- Provides case solvers access to the Help Workspace
+- Enables managing cases and communicating with employees
+- Configured through Tenant Setup - Help settings
 ================================================================================

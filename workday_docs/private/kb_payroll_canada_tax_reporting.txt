@@ -1,0 +1,195 @@
+================================================================================
+WORKDAY KB ARTICLE: COMPANY TAX REPORTING CONFIGURATION (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Tax Administration
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Company CAN Tax Reporting configuration defines how a Canadian company handles
+federal and provincial tax withholding and reporting. This includes:
+- Canada Revenue Agency (CRA) Business Number
+- Provincial tax accounts
+- Employment Insurance (EI) rates
+- Canada Pension Plan (CPP/QPP) configuration
+- Workers' Compensation Board (WCB) rates
+- Provincial health tax setup (where applicable)
+
+Proper configuration ensures accurate tax withholding, correct remittances,
+and compliance with CRA requirements.
+
+Business Process: View/Edit Company CAN Tax Reporting
+Functional Area: Payroll for Canada
+Initiator: Payroll Administrator
+Typical Duration: 15-30 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. FEDERAL TAX SETTINGS
+   - CRA Business Number (BN - 15 characters)
+   - CPP account number (RP program account)
+   - EI account number (RP program account)
+   - Income tax program account
+   - Remittance frequency (monthly, quarterly)
+
+2. PROVINCIAL TAX SETTINGS
+   - Provincial business numbers
+   - Provincial income tax (Quebec only - Revenu Quebec)
+   - QPP (Quebec Pension Plan) for Quebec
+   - QPIP (Quebec Parental Insurance Plan)
+   - Provincial health taxes (EHT Ontario, etc.)
+
+3. EMPLOYMENT INSURANCE (EI)
+   - EI premium rate (standard or reduced)
+   - EI reduced rate approval number
+   - EI maximum insurable earnings
+   - EI employer multiple
+
+4. CANADA PENSION PLAN (CPP/QPP)
+   - CPP contribution rate
+   - CPP2 enhanced rate (2024+)
+   - Maximum pensionable earnings
+   - QPP rates for Quebec employees
+
+5. WORKERS' COMPENSATION (WCB)
+   - Provincial WCB account numbers
+   - Industry classification codes
+   - WCB premium rates by province
+   - Annual rate verification
+
+6. PROVINCIAL HEALTH TAX
+   - Ontario EHT (Employer Health Tax)
+   - BC Employer Health Tax
+   - Manitoba HE Levy
+   - Other provincial levies
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Company CAN Tax Reporting:
+1. Search: "View Company CAN Tax Reporting"
+2. Select company
+3. Review federal and provincial settings
+
+Edit Company CAN Tax Reporting:
+1. Search: "Edit Company CAN Tax Reporting"
+2. Select company
+3. Update tax configuration
+4. Submit for approval
+
+Maintain CAN EI Reduced Rate:
+1. Search: "Maintain EI Reduced Rate"
+2. Enter reduced rate and approval number
+3. Associate with applicable companies
+
+Maintain WCB Configuration:
+1. Search: "Maintain Workers Compensation"
+2. Select province
+3. Update WCB rates and accounts
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Federal:
+- CRA Business Number valid (format: 123456789 RP0001)
+- CPP account configured
+- EI account configured
+- Remittance frequency appropriate
+- Income tax program account set
+
+Provincial (each operating province):
+- Provincial business numbers valid
+- Provincial income tax configured
+- Provincial health tax set (if applicable)
+- WCB rates current (update annually)
+- Quebec: RQ number and QPP/QPIP configured
+
+EI Configuration:
+- Standard or reduced rate selected
+- Reduced rate approval documented
+- EI maximum earnings current
+- Employer premium calculation correct
+
+CPP Configuration:
+- CPP/CPP2 rates current
+- Maximum pensionable earnings set
+- Quebec QPP rates configured separately
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access Company CAN Tax Reporting
+1. enter search box as "View Company CAN Tax Reporting"
+2. wait for search results
+3. click search result containing "View Company CAN Tax Reporting"
+4. wait for page to load
+
+Step 2: Select and View Company
+5. select company dropdown as "{company_name}"
+6. wait for tax configuration to load
+7. verify CRA Business Number field displays
+8. verify EI settings section visible
+9. verify CPP settings section visible
+10. screenshot as "{test_id}_federal_tax_ca.png"
+
+Step 3: Review EI Configuration
+11. scroll to EI section
+12. verify EI premium rate displayed
+13. verify EI reduced rate (if applicable)
+14. verify EI maximum insurable earnings
+15. screenshot as "{test_id}_ei_config.png"
+
+Step 4: Review Provincial Settings
+16. scroll to Provincial section
+17. verify provincial tax IDs configured
+18. verify provincial health tax settings (Ontario EHT, etc.)
+19. verify WCB rates by province
+20. screenshot as "{test_id}_provincial_tax_ca.png"
+
+Step 5: Review Quebec-Specific (if applicable)
+21. scroll to Quebec section (if Quebec operations)
+22. verify Revenu Quebec number
+23. verify QPP configuration
+24. verify QPIP settings
+25. screenshot as "{test_id}_quebec_tax.png"
+
+Step 6: Review WCB Configuration
+26. scroll to Workers Compensation section
+27. verify WCB account numbers by province
+28. verify WCB rates are current
+29. verify industry classification codes
+30. screenshot as "{test_id}_wcb_config.png"
+
+================================================================================
+ANNUAL UPDATES
+================================================================================
+
+Update each January:
+- CPP/CPP2 contribution rates
+- EI premium rates
+- Maximum pensionable/insurable earnings
+- WCB rates by province
+- Provincial health tax exemptions
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Company CAN Tax Configuration Summary
+- EI Premium Report
+- CPP Contribution Report
+- Provincial Tax Summary
+- WCB Premium Report
+- T4 Summary Report
+
+================================================================================

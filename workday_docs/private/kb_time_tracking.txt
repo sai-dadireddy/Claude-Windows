@@ -1,0 +1,316 @@
+================================================================================
+WORKDAY KB ARTICLE: TIME TRACKING CONFIGURATION AND OPERATIONS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Time Tracking Administration
+Category: Time Tracking / Time & Attendance
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Time Tracking in Workday allows organizations to capture employee time worked,
+manage time entry templates, calculate overtime and other time-based pay,
+and integrate with payroll for accurate compensation. The system supports
+hourly employees, project-based time tracking, and various time entry methods.
+
+Functional Area: Time Tracking
+Primary Roles: Time Tracking Administrator, Timekeeper, Manager, Employee As Self
+Related Modules: Payroll, Absence, Projects, General Ledger
+
+Core Components:
+- Time Entry Templates: Define how workers enter time
+- Time Entry Codes: Categories for time worked (regular, overtime, etc.)
+- Time Calculations: Rules for computing pay-related time
+- Time Calculation Groups: Collections of related calculations
+- Time Period Schedules: Define pay periods and lock dates
+- Work Schedule Calendars: Define expected work hours
+- Holiday Calendars: Define company holidays
+
+================================================================================
+KEY WORKDAY TASKS
+================================================================================
+
+1. AUDIT REPORTS
+   - Audit - Workers with Multiple Time Entry Templates
+   - Audit - Workers with Multiple Period Schedules
+   - Audit - Workers with Multiple Work Schedule Calendars
+   - Audit - Time Tracking Worker Eligibility
+   - Calculated Field Exception Audit
+   - TT Audit - Workers With No Time Entered
+   - TT Audit - Workers with Time Entered but not Submitted
+   - TT Audit - Workers with Time Submitted but not Approved
+   - TT Audit - Time Validation Exceptions for Period
+
+2. DAX/DART REPORTS
+   - DAX Time Tracking - Time Calculations
+   - DAX Time Tracking - Time Calculation Groups
+   - DAX Time Tracking - Time Entry Codes
+   - DAX Time Tracking - Time Entry Templates
+   - DAX Time Tracking - Holiday Calendars
+   - DAX Time Tracking - Earnings
+   - DART Time Tracking - Time Calculations
+   - DART Time Tracking - Time Calculation Groups
+   - DART Time Tracking - Time Entry Codes
+   - DART Time Tracking - Time Entry Templates
+   - DART Time Tracking - Holiday Calendars
+   - DART Time Tracking - Earnings
+
+3. CONFIGURATION TASKS
+   - All Time Entry Codes: View/edit time entry codes
+   - All Time Code Groups: View/edit time code groups
+   - All Time Calculations: View/edit time calculations
+   - All Time Calculation Groups: View/edit calculation groups
+   - View Time Calculation Tags: View calculation tags
+   - Maintain Time Entry Validations: Configure validations
+   - Edit Time Approval Template: Configure approval settings
+   - All Work Schedule Calendars: View work schedules
+   - View Period Schedule: View period schedules
+   - Time Configuration Analyzer Tool: Analyze configuration
+
+4. WORKLET VERIFICATION
+   - Time Worklet: Employee self-service time entry
+   - Team Time Worklet: Manager team time view
+   - Time and Absence Worklet: Combined time/absence view
+
+5. SECURITY VERIFICATION
+   - View Security Group: Verify role assignments
+   - Start Proxy: Test as different users
+
+================================================================================
+NAVIGATION PATHS
+================================================================================
+
+Time Entry Templates:
+Search: "All Time Entry Templates" OR "Time Entry Templates"
+Path: Time > Configuration > Time Entry Templates
+
+Time Entry Codes:
+Search: "All Time Entry Codes"
+Path: Time > Configuration > Time Entry Codes
+
+Time Calculations:
+Search: "All Time Calculations"
+Path: Time > Configuration > Time Calculations
+
+Time Entry (Employee):
+Search: "Enter Time"
+Path: Time Worklet > Enter Time
+
+Time Entry (Manager):
+Search: "Enter Time for Worker"
+Path: Team Time Worklet > Enter Time for Worker
+
+Review Time (Manager/Timekeeper):
+Search: "Review Time"
+Path: Team Time > Review Time
+
+Mass Submit Time:
+Search: "Mass Submit Time"
+Path: Time > Mass Actions > Mass Submit Time
+
+Mass Advance Business Process:
+Search: "Mass Advance Business Process"
+Path: Time > Mass Actions > Mass Advance Business Process
+
+================================================================================
+ELECTRON AUTOMATION PATTERNS
+================================================================================
+
+PATTERN 1: Running Audit Reports
+--------------------------------
+1. enter search box as "{Report Name}"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. click button "OK" or "Run"
+6. wait for report to load
+7. verify report displays with no critical errors
+8. screenshot as "{TEST_ID}_complete.png"
+
+PATTERN 2: Viewing Configuration Lists
+--------------------------------------
+1. enter search box as "{Configuration Task}"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. verify list displays expected items
+6. screenshot as "{TEST_ID}_complete.png"
+
+PATTERN 3: Entering Time
+------------------------
+1. enter search box as "Enter Time"
+2. wait for search results
+3. click first search result
+4. wait for time calendar to load
+5. click on date to enter time
+6. select time entry code from dropdown
+7. enter hours in hours field
+8. click button "Submit"
+9. wait for submission confirmation
+10. verify time entry displays on calendar
+11. screenshot as "{TEST_ID}_complete.png"
+
+PATTERN 4: Verifying Worklets
+-----------------------------
+1. enter search box as "{Worklet Name}"
+2. wait for search results
+3. click first search result containing "Worklet"
+4. wait for worklet to load
+5. verify expected tasks/reports are visible
+6. screenshot as "{TEST_ID}_complete.png"
+
+PATTERN 5: Security Group Verification
+--------------------------------------
+1. enter search box as "View Security Group"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. enter security group name in search field
+6. click button "OK"
+7. click link "Members" or "Assignable Role"
+8. verify expected users are assigned
+9. screenshot as "{TEST_ID}_complete.png"
+
+================================================================================
+FIELD NAMES AND UI ELEMENTS
+================================================================================
+
+Time Entry Template Fields:
+- Template Name
+- Time Entry Method (Hours, Clock In/Out)
+- Submit by Week/Period
+- Totals Configuration
+- Holiday Display
+- Work Week Start Day
+
+Time Entry Code Fields:
+- Code Name
+- Code Type (Regular, Overtime, etc.)
+- Worktag Requirements
+- Entry Method
+- Rounding Rules
+- Validation Rules
+
+Time Calculation Fields:
+- Calculation Name
+- Trigger Conditions
+- Output Time Entry Code
+- Calculation Formula
+- Eligible Workers
+
+Enter Time Screen:
+- Week/Period Selector
+- Time Entry Grid
+- Time Entry Code Dropdown
+- Hours/In-Out Fields
+- Worktag Fields (if configured)
+- Submit Button
+- Save Button
+- Clear Button
+
+Review Time Screen:
+- Worker Filter
+- Period Filter
+- Time Summary Grid
+- Approve Button
+- Submit Button
+- Mass Actions Dropdown
+
+================================================================================
+COMMON VALIDATIONS
+================================================================================
+
+Time Entry Validations:
+- Maximum hours per day
+- Maximum hours per week
+- Required worktags
+- Duplicate time entry
+- Future date restrictions
+- Past date restrictions
+- Clock in/out pair requirements
+- Minimum increment requirements
+
+Period Validations:
+- Open period check
+- Lock date check
+- Close date check
+
+Eligibility Validations:
+- Worker time tracking eligibility
+- Time entry template eligibility
+- Time code eligibility
+
+================================================================================
+INTEGRATION POINTS
+================================================================================
+
+Payroll Integration:
+- Time calculation tags linked to earnings
+- Automatic time to gross conversion
+- Period schedule alignment with pay periods
+
+Absence Integration:
+- Time off display on time calendar
+- TETO (Time Entry Time Off) support
+- TOTO (Time Off Time Off) support
+
+Project Integration:
+- Project worktag on time entries
+- Project billing from time
+
+GL Integration:
+- Financial worktags on time entries
+- Cost center/department tracking
+
+================================================================================
+ERROR MESSAGES AND TROUBLESHOOTING
+================================================================================
+
+Common Errors:
+- "Worker not eligible for time tracking"
+  Solution: Verify time entry template eligibility rules
+
+- "Multiple time entry templates match"
+  Solution: Review eligibility rules for overlap
+
+- "Period is locked"
+  Solution: Unlock period or contact administrator
+
+- "Maximum hours exceeded"
+  Solution: Review validation rules or adjust time entry
+
+- "Required worktag missing"
+  Solution: Enter required worktag values
+
+================================================================================
+RELATED WSDL OPERATIONS
+================================================================================
+
+Time_Tracking WSDL Operations:
+- Get_Time_Entry_Codes
+- Get_Time_Entry_Templates
+- Get_Time_Calculations
+- Get_Time_Calculation_Groups
+- Get_Period_Schedules
+- Submit_Time
+- Approve_Time
+- Get_Reported_Time_Blocks
+
+================================================================================
+TEST DATA REQUIREMENTS
+================================================================================
+
+For Time Tracking Testing:
+- At least 2 employees eligible for time tracking
+- At least 1 timekeeper with access
+- At least 1 manager with team members
+- Open time period for testing
+- Configured time entry template
+- Configured time entry codes
+- Holiday calendar with holidays
+- Work schedule calendar
+
+================================================================================

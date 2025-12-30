@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0080
 FUNCTIONAL AREA: HCM
 TEST NAME: Auto Generated IDs
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,40 +14,90 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Partner / Manager permissions
-- Required data available in tenant
+- At least one position created in prior test (HCM-2-0010)
+- At least one hire completed in prior test (HCM-2-0040)
+- Access to View ID Definition task
 
 ELECTRON STEPS:
-1. enter search box as "View ID Definition/Sequence Generator"
+1. enter search box as "Maintain Sequence Generators"
 2. wait for search results
-3. click search result containing "View ID Definition/Sequence Generator"
+3. click search result containing "Maintain Sequence Generators"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0080_complete.png"
+5. scroll to find "Worker ID" sequence
+6. verify Worker ID sequence shows correct prefix and counter
+7. screenshot as "HCM-2-0080_worker_id_sequence.png"
+8. scroll to find "Position ID" sequence
+9. verify Position ID sequence shows correct prefix and counter
+10. screenshot as "HCM-2-0080_position_id_sequence.png"
+11. enter search box as "Find Positions"
+12. wait for search results
+13. click search result containing "Find Positions"
+14. wait for page to load
+15. verify Position ID follows expected format
+16. screenshot as "HCM-2-0080_position_verify.png"
+17. enter search box as "Find Workers"
+18. wait for search results
+19. click search result containing "Find Workers"
+20. wait for page to load
+21. verify Worker ID follows expected format
+22. screenshot as "HCM-2-0080_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Sequence Generator task accessible
+- [ ] Worker ID sequence configured correctly
+- [ ] Position ID sequence configured correctly
+- [ ] Job Requisition ID sequence configured (if applicable)
+- [ ] IDs increment sequentially without gaps
+- [ ] ID format matches configured prefix and length
+- [ ] Recently created positions have correct ID format
+- [ ] Recently hired workers have correct ID format
+- [ ] No duplicate IDs exist
 - [ ] No error messages displayed
 
+SEQUENCE TYPES TO VERIFY:
+- Worker ID (Employee Number): Format typically "E" + 5-6 digits
+- Position ID: Format typically "P-" + 6 digits or organization prefix
+- Job Requisition ID: Format typically "JR-" + year + sequence
+- Applicant ID: Format typically "A" + 6 digits
+- Pre-Hire ID: Format typically "PH" + 6 digits
+
+FIELD REFERENCE:
+- Sequence Name: Identifies the ID type
+- Prefix: Text that appears before the number
+- Next Value: Current counter value
+- Increment: Step value (usually 1)
+- Minimum/Maximum: Range constraints
+- Pad Character: Leading character (usually 0)
+- Length: Total digits in sequence number
+
+ALTERNATIVE VERIFICATION:
+1. enter search box as "{recently_created_position_id}"
+2. wait for search results
+3. click search result containing "{recently_created_position_id}"
+4. wait for page to load
+5. verify position details display correctly
+6. note Position ID format
+7. enter search box as "{recently_hired_worker_id}"
+8. wait for search results
+9. click search result containing "{recently_hired_worker_id}"
+10. wait for page to load
+11. verify worker profile displays correctly
+12. note Worker ID format
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Workers (returns Worker_ID)
+- SOAP: Staffing.Get_Positions (returns Position_ID)
+- REST: /workers (includes employee number)
+- REST: /positions (includes position ID)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View ID Definition/Sequence Generator
+COMMON ID FORMAT EXAMPLES:
+- Worker ID: "E100001", "100001", "EMP-100001"
+- Position ID: "P-000001", "POS100001", "HQ-P-000001"
+- Job Requisition: "JR-2025-001", "REQ100001"
 
-### 1. Admin Guide  Financial Management (score: 3)
-Source: Admin-Guide--Financial-Management.pdf
-```
-Financial Management
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-Financial Management...................................................................................... 26
-Common Financial Components...................................
+ERROR HANDLING:
+- "Sequence not found": Verify sequence generator name
+- "Access denied": User needs setup administrator access
+- "Duplicate ID": Sequence may have conflicts, investigate
+
 ================================================================================

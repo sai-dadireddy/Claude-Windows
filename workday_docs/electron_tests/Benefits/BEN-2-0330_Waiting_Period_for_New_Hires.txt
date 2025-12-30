@@ -2,40 +2,98 @@
 TEST ID: BEN-2-0330
 FUNCTIONAL AREA: Benefits
 TEST NAME: Waiting Period for New Hires
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Hire Employee
+TASK/STEP: Configure and Verify Benefits Waiting Period for New Hires
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Hire Employee
+DESCRIPTION:
+Configure waiting period rules that determine when new hires become eligible
+for benefits. Verify that new hires are correctly held in waiting status
+until eligibility date, then automatically enrolled or notified.
 
-### 1. Kb Benefits Enrollment (score: 7)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Administratio
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Waiting period rules configured in system
+- Test new hire employee to verify waiting period
 
 ELECTRON STEPS:
-1. enter search box as "Hire Employee"
+1. enter search box as "Edit Benefit Waiting Period"
 2. wait for search results
-3. click search result containing "Hire Employee"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0330_complete.png"
+3. click search result containing "Edit Benefit Waiting Period"
+4. wait for page to load
+5. enter waiting period name as "{waiting_period_name}"
+6. wait for waiting period details to load
+7. select waiting period type as "Days from Hire"
+8. enter number of days as "30"
+9. select effective date rule as "First of Month After"
+10. click button "Submit"
+11. wait for confirmation
+12. verify message contains "Waiting period updated"
+13. screenshot as "BEN-2-0330_config.png"
+
+TEST NEW HIRE WITH WAITING PERIOD:
+14. enter search box as "Hire Employee"
+15. wait for search results
+16. click search result containing "Hire Employee"
+17. wait for page to load
+18. enter hire date as "{hire_date}"
+19. enter worker details as required
+20. complete hire process through submission
+21. verify hire completes successfully
+22. screenshot as "BEN-2-0330_hired.png"
+
+VERIFY WAITING PERIOD STATUS:
+23. enter search box as "View Worker"
+24. wait for search results
+25. click search result containing "View Worker"
+26. enter worker as "{new_hire_employee_id}"
+27. click link "Benefits" tab
+28. verify benefits status shows "In Waiting Period"
+29. verify eligibility date displays correctly
+30. verify calculated eligibility date = first of month after 30 days
+31. screenshot as "BEN-2-0330_waiting.png"
+
+VERIFY ELIGIBILITY AFTER WAITING PERIOD:
+32. enter search box as "Preview Benefit Eligibility"
+33. wait for search results
+34. click search result containing "Preview Benefit Eligibility"
+35. enter worker as "{new_hire_employee_id}"
+36. enter effective date as "{eligibility_date}"
+37. click button "OK"
+38. verify employee shows as eligible for benefits
+39. verify enrollment event created for new hire
+40. screenshot as "BEN-2-0330_eligible.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Waiting period configuration saved
+- [ ] New hire completed successfully
+- [ ] Employee shows "In Waiting Period" status
+- [ ] Calculated eligibility date is correct
+- [ ] Employee becomes eligible after waiting period
+- [ ] New hire enrollment event created
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+New hire waiting period correctly enforced, employee held from benefits
+until eligibility date, then enrollment event triggered automatically.
+
+COMMON WAITING PERIOD CONFIGURATIONS:
+- First of Month after 30 days
+- First of Month after 60 days
+- First of Month after 90 days
+- Date of Hire (no waiting period)
+- First of Next Month
+- Specific calendar date
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- ACA requires waiting period not exceed 90 days for health plans
+- Different waiting periods may apply to different plan types
+- Rehires may have adjusted or waived waiting periods
+- COBRA coverage not subject to waiting periods
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Waiting_Period, Hire_Employee
+- REST: /benefitsAdmin/v1/waitingPeriods
 ================================================================================

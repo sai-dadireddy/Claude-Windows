@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: TT-1-0120
+FUNCTIONAL AREA: Time Tracking
+TEST NAME: Verify Time Tracking Role Assignments
+STATUS: ACCEPTED
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_time_tracking.txt]
+================================================================================
+
+DESCRIPTION:
+Verify the correct workers are assigned to Time Tracking Security Groups - Time Tracking Administrator, Timekeeper and any custom Time Tracking security groups. Go to 'View Security Group', select the group and then for Admin roles click on 'Members' and for role-based roles, click on the security group name next to 'Assignable Role'.
+
+PREREQUISITES:
+- User logged in with Security Administrator permissions
+- Access to View Security Group task
+- Knowledge of expected Time Tracking role assignments
+
+ELECTRON STEPS:
+1. enter search box as "View Security Group"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. enter "Time Tracking Administrator" in security group search field
+6. click button "OK"
+7. wait for security group details to load
+8. click link "Members" to view assigned users
+9. verify expected users are assigned
+10. screenshot as "TT-1-0120_admin_complete.png"
+11. navigate back and search for "Timekeeper"
+12. click button "OK"
+13. click link "Assignable Role" to view role assignments
+14. verify timekeepers are assigned to appropriate organizations
+15. screenshot as "TT-1-0120_timekeeper_complete.png"
+
+VERIFICATION:
+- [ ] Time Tracking Administrator members verified
+- [ ] Timekeeper role assignments verified
+- [ ] Custom security groups verified (if applicable)
+- [ ] All expected users have appropriate access
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+WORKDAY ROLE: Security Administrator
+EST. EFFORT: 5 minutes
+
+================================================================================
+RAG NOTES:
+- Time Tracking Administrator is user-based (click Members)
+- Timekeeper is role-based (click Assignable Role)
+- Verify organizational scope of role assignments
+================================================================================

@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: TT-1-0020
+FUNCTIONAL AREA: Time Tracking
+TEST NAME: Time Period Schedule Eligibility
+STATUS: ACCEPTED
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_time_tracking.txt]
+================================================================================
+
+DESCRIPTION:
+Run the report to verify that no worker is eligible for more than one time period schedule
+
+PREREQUISITES:
+- User logged in with Time Tracking Administrator permissions
+- Access to audit reports
+- Time Tracking configuration completed
+
+ELECTRON STEPS:
+1. enter search box as "Audit - Workers with Multiple Period Schedules"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. click button "OK" to run report with default parameters
+6. wait for report to generate
+7. verify report displays with results
+8. verify no workers have multiple period schedules (or note exceptions)
+9. screenshot as "TT-1-0020_complete.png"
+
+VERIFICATION:
+- [ ] Report runs successfully without errors
+- [ ] No workers appear with multiple period schedules
+- [ ] If workers listed, review eligibility rules for overlap
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+WORKDAY ROLE: Time Tracking Administrator
+EST. EFFORT: 5 minutes
+
+================================================================================
+RAG NOTES:
+- Workers with multiple period schedules may cause time entry issues
+- Period schedule determines pay period boundaries
+- Review eligibility conditions if workers appear in report
+================================================================================

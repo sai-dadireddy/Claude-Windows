@@ -1,0 +1,115 @@
+================================================================================
+WORKDAY KB ARTICLE: PERIOD SCHEDULE CONFIGURATION
+================================================================================
+
+Source: Workday Payroll Administration
+Category: Payroll - Configuration
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Period schedules in Workday define the pay periods for employees. They control:
+- Period start and end dates
+- Payment dates
+- Accounting date overrides
+- Forward accrual settings
+- Links to Absence and Time Tracking
+
+A period schedule is assigned to pay groups and determines when employees are
+paid and how their pay is calculated for each period.
+
+Business Process: View/Edit Period Schedule
+Functional Area: Payroll Administration
+Initiator: Payroll Administrator
+Typical Duration: 5-15 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PERIOD SCHEDULE ELEMENTS
+   - Period ID (unique identifier)
+   - Period Start Date
+   - Period End Date
+   - Payment Date (check date)
+   - Accounting Date Override (for GL posting)
+   - Forward Accrual Indicator
+   - Continuous Payroll Calculation settings
+
+2. PERIOD TYPES
+   - Weekly (52 periods/year)
+   - Bi-weekly (26 periods/year)
+   - Semi-monthly (24 periods/year)
+   - Monthly (12 periods/year)
+   - Special (ad-hoc periods)
+
+3. ABSENCE/TIME TRACKING LINKS
+   - Time entry deadlines
+   - Timesheet approval deadlines
+   - Absence request periods
+   - PTO accrual alignment
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Period Schedule:
+1. Search: "View Period Schedule"
+2. Select the period schedule to view
+3. Review period dates and settings
+
+Maintain Period Schedule:
+1. Search: "Maintain Period Schedule"
+2. Select period schedule
+3. Add/modify periods as needed
+
+Edit Period Schedule:
+1. Search: "Edit Period Schedule"
+2. Select period schedule
+3. Modify settings (forward accrual, continuous calc)
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- All expected period schedules exist
+- Period dates are correct (no gaps or overlaps)
+- Payment dates fall on valid business days
+- Accounting date overrides are appropriate
+- Forward accrual settings match requirements
+- Absence/Time Tracking links are configured
+- Correct number of periods per year
+- Continuous Payroll settings configured (if applicable)
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step-by-Step Navigation:
+1. enter search box as "View Period Schedule"
+2. wait for search results
+3. click search result containing "View Period Schedule"
+4. wait for page to load
+5. select period schedule dropdown as "{schedule_name}"
+6. wait for periods to load
+7. verify period table displays periods
+8. scroll to view all periods
+9. verify period dates are consecutive
+10. verify payment dates are valid
+11. click related actions menu
+12. click link "View Details"
+13. verify forward accrual settings visible
+14. screenshot as "{test_id}_period_schedule.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- All Period Schedules
+- Period Schedule Details
+- Pay Group by Period Schedule
+- Payroll Calendar Report
+
+================================================================================

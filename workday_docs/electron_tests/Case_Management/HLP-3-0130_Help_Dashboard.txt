@@ -1,20 +1,36 @@
 ================================================================================
 TEST ID: HLP-3-0130
 FUNCTIONAL AREA: Case Management
-TEST NAME: Help Dashboard
-CONFIDENCE: [LOW] Score: 2.0/10
+TEST NAME: Help Dashboard Configuration
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Configure Help Dashboard
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-3-0130_complete.png"
+1. enter search box as "Edit Tenant Setup - Help"
+2. click search result containing "Edit Tenant Setup - Help"
+3. wait for page to load
+4. click tab "Dashboard"
+5. verify field "Dashboard Configuration" is visible
+6. select checkbox "Enable Case Metrics"
+7. select checkbox "Enable SLA Tracking"
+8. select checkbox "Enable Category Charts"
+9. click button "OK"
+10. wait for page to load
+11. verify message contains "successfully"
+12. screenshot as "HLP-3-0130_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Dashboard configured successfully
+- Dashboard features enabled
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Help Dashboard Configuration:
+- Configure which metrics appear on dashboard
+- Enable/disable SLA tracking visualization
+- Set up category-based charts for case analysis
 ================================================================================

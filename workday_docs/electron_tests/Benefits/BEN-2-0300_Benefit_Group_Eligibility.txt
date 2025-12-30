@@ -2,41 +2,96 @@
 TEST ID: BEN-2-0300
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefit Group Eligibility
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Benefit Group Eligibility
+TASK/STEP: Configure Benefit Group Eligibility Rules
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Group Eligibility
+DESCRIPTION:
+Configure eligibility rules that determine which employees are assigned to
+specific benefit groups. Benefit groups control which plans are available
+to employees based on job classification, location, and other criteria.
 
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 samp
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Benefit groups already created
+- Understanding of eligibility criteria requirements
 
 ELECTRON STEPS:
-1. enter search box as "Benefit Group Eligibility"
+1. enter search box as "Edit Benefit Group"
 2. wait for search results
-3. click search result containing "Benefit Group Eligibility"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0300_complete.png"
+3. click search result containing "Edit Benefit Group"
+4. wait for page to load
+5. enter benefit group as "{benefit_group_name}"
+6. wait for benefit group details to load
+7. scroll to eligibility rules section
+8. click button "Edit Eligibility Rules"
+9. wait for eligibility rule editor to load
+10. click button "Add Condition"
+11. select condition type as "Employee Type"
+12. select operator as "In"
+13. select values as "Regular", "Full-Time"
+14. click button "OK"
+15. click button "Add Condition"
+16. select condition type as "Location"
+17. select operator as "In"
+18. select values as "{eligible_locations}"
+19. click button "OK"
+20. click button "Add Condition"
+21. select condition type as "Job Family"
+22. select operator as "In"
+23. select values as "{eligible_job_families}"
+24. click button "OK"
+25. verify all conditions displayed correctly
+26. click button "Submit"
+27. wait for confirmation
+28. verify message contains "Eligibility rules updated"
+29. screenshot as "BEN-2-0300_complete.png"
+
+VERIFICATION OF ELIGIBILITY:
+30. enter search box as "Preview Benefit Group Eligibility"
+31. wait for search results
+32. click search result containing "Preview Benefit Group Eligibility"
+33. enter effective date as "{test_date}"
+34. enter benefit group as "{benefit_group_name}"
+35. click button "OK"
+36. wait for preview to load
+37. verify eligible employees list displays
+38. verify expected employees are included
+39. verify excluded employees are not shown
+40. screenshot as "BEN-2-0300_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Benefit group eligibility rules editor opened
+- [ ] Employee type condition added correctly
+- [ ] Location condition added correctly
+- [ ] Job family condition added correctly
+- [ ] Rules saved successfully
+- [ ] Preview shows correct eligible population
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Benefit group eligibility rules configured to include appropriate employee
+populations based on employee type, location, and job family criteria.
+
+COMMON ELIGIBILITY CONDITIONS:
+- Employee Type (Regular, Temporary, Contractor)
+- Employment Status (Active, Leave of Absence)
+- Location (Country, Region, Site)
+- Job Family / Job Profile
+- Management Level
+- Union Membership
+- Hours per Week (Full-time threshold)
+- Pay Rate Type (Salary, Hourly)
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Eligibility changes may trigger enrollment events
+- Test with sample employees before deployment
+- Document eligibility criteria for compliance
+- Consider timing of eligibility changes
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Group, Get_Benefit_Groups
+- REST: /benefitsAdmin/v1/benefitGroups
 ================================================================================

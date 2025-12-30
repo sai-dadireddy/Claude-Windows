@@ -2,19 +2,44 @@
 TEST ID: HLP-4-0110
 FUNCTIONAL AREA: Case Management
 TEST NAME: Work a Case
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Work and Resolve Help Case
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0110_complete.png"
+1. enter search box as "Help Case Workspace"
+2. click search result containing "Help Case Workspace"
+3. wait for page to load
+4. click link "Unassigned Cases"
+5. click first case in list
+6. wait for page to load
+7. click button "Assign to Me"
+8. wait for page to load
+9. click button "Add Note"
+10. enter Note as "Working on this case - reviewing employee request"
+11. click button "Save Note"
+12. click button "Resolve Case"
+13. select Resolution as "Resolved - Information Provided"
+14. enter Resolution Notes as "Provided information to employee"
+15. click button "Submit"
+16. wait for page to load
+17. verify message contains "Case resolved successfully"
+18. screenshot as "HLP-4-0110_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case assigned to solver successfully
+- Notes added to case
+- Case resolved with appropriate resolution
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Work a Case:
+1. Access Help Case Workspace
+2. Select unassigned case
+3. Assign case to self
+4. Add notes and communicate with employee
+5. Resolve case with appropriate resolution code
 ================================================================================

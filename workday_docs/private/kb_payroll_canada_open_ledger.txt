@@ -1,0 +1,79 @@
+================================================================================
+WORKDAY KB ARTICLE: OPEN LEDGER PERIODS (CANADA)
+================================================================================
+
+Source: Workday Financial Management
+Category: Finance - Ledger Administration
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Open Ledger Periods control when journal entries can be posted to specific
+accounting periods. For Canadian Payroll:
+- Payroll GL entries post to open periods only
+- Period must be open for payroll settlement
+- Month-end closing requires period closure
+
+Business Process: Verify Open Ledger Periods
+Functional Area: Financial Accounting
+Initiator: Finance Administrator / Payroll Administrator
+Typical Duration: 5-15 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. LEDGER PERIODS
+   - Fiscal year alignment
+   - Monthly periods
+   - Adjustment periods (13th period)
+   - Closing period status
+
+2. PERIOD STATUS
+   - Open: Entries allowed
+   - Closed: No entries permitted
+   - Future: Not yet opened
+   - Adjustment: Year-end only
+
+3. LEDGER TYPES
+   - Actuals ledger
+   - Budget ledger
+   - Commitment ledger
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access Ledger Period Status
+1. enter search box as "View Ledger Period Status"
+2. wait for search results
+3. click search result containing "View Ledger Period Status"
+4. wait for page to load
+
+Step 2: Review Open Periods
+5. select ledger as "Actuals"
+6. select fiscal year as "{current_year}"
+7. wait for periods to load
+8. verify current month status is "Open"
+9. verify prior month status (Open or Closed)
+10. screenshot as "{test_id}_ledger_periods.png"
+
+Step 3: Verify Payroll Period Alignment
+11. note the open ledger periods
+12. verify payroll payment dates fall within open periods
+13. screenshot as "{test_id}_ledger_period_complete.png"
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- Current payroll period is open
+- Prior period open (if retro adjustments needed)
+- Future periods not prematurely opened
+- Adjustment period closed (except year-end)
+- Actuals ledger period status correct
+
+================================================================================

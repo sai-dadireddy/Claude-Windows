@@ -4,8 +4,9 @@ FUNCTIONAL AREA: Advanced Compensation
 TEST NAME: Compensation Package
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 5 minutes
-CONFIDENCE SCORE: 6.0/10
-STATUS: [!!] NEEDS REVIEW
+CONFIDENCE: HIGH Score: 8.0/10
+SOURCE: [KB Article: kb_advanced_compensation.txt]
+STATUS: [OK] ACCEPTED
 ================================================================================
 
 DESCRIPTION:
@@ -16,57 +17,38 @@ Search: "Edit Comp Pack". Click Edit Compensation Package
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data: [Based on scenario requirements]
+- Required data: Compensation package name, plans to include
 
 ELECTRON STEPS:
-1. [NEEDS SME REVIEW - Confidence: 6.0/10]
-2. 
-3. # Task: Search: "Edit Comp Pack". Click Edit Compensation Package
-4. 
-5. enter search box as "Search: "Edit Comp Pack". Click Edit Compensation Package"
-6. wait for search results
-7. # [SME: Verify exact search result text]
-8. 
-9. # SME ACTION REQUIRED:
-10. # 1. Verify field names and interactions
-11. # 2. Add missing validation steps
-12. # 3. Update confidence score when complete
+1. enter search box as "Edit Compensation Package"
+2. wait for search results
+3. click search result containing "Edit Compensation Package"
+4. wait for page to load
+5. enter field "Compensation Package" as "{package_name}"
+6. wait for package details to load
+7. screenshot as "ACM-1-0070_package_loaded.png"
+8. verify section "Merit Plans" is displayed
+9. verify section "Bonus Plans" is displayed
+10. verify section "Stock Plans" is displayed
+11. verify section "Allowance Plans" is displayed
+12. click checkbox to select applicable merit plan
+13. click checkbox to select applicable bonus plan
+14. click checkbox to select applicable stock plan
+15. screenshot as "ACM-1-0070_plans_selected.png"
+16. click button "OK"
+17. wait for confirmation
+18. verify message contains "successfully"
+19. screenshot as "ACM-1-0070_complete.png"
 
 VERIFICATION:
+- [ ] Compensation package loads correctly
+- [ ] All plan type sections are visible (Merit, Bonus, Stock, Allowance)
+- [ ] Plans can be selected/deselected
+- [ ] Changes save successfully
 - [ ] No error messages displayed
 - [ ] Task completed successfully
 
-RAG ANALYSIS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Search: "Edit Comp Pack". Click Edit Compensation Package
-
-### 1. Kb Hcm Change Job (score: 6)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Re...
-```
-
-### 2. Kb Hcm Terminate Employee (score: 5)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Human Resources WSDL...
-```
-
-### 3. Kb Procurement Requisition (score: 5)
-Source: kb_pr
---------------------------------------------------------------------------------
+API ALTERNATIVE:
+- SOAP: Put_Compensation_Package (Compensation.wsdl)
 
 ================================================================================

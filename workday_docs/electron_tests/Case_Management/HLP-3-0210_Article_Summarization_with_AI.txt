@@ -2,33 +2,34 @@
 TEST ID: HLP-3-0210
 FUNCTIONAL AREA: Case Management
 TEST NAME: Article Summarization with AI
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Create Article
+TASK/STEP: Configure AI Article Summarization
 
 ELECTRON STEPS:
-1. enter search box as "Create Article"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0210_complete.png"
+1. enter search box as "Edit Tenant Setup - Help"
+2. click search result containing "Edit Tenant Setup - Help"
+3. wait for page to load
+4. click tab "AI Features"
+5. verify field "Article Summarization" is visible
+6. select checkbox "Enable AI Article Summarization"
+7. select Summarization Model as "Default"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0210_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- AI Article Summarization enabled successfully
+- Model configuration saved
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Article
-
-### 1. Kb Absence Time Off (score: 2)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Management....
+Source: Workday Resource Center - Case Management Setup
+AI Article Summarization:
+- Enable AI-powered article summarization
+- Provide quick summaries of help articles
+- Enhance employee self-service experience
 ================================================================================

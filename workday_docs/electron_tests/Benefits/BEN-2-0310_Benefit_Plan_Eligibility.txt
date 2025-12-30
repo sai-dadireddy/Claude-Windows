@@ -2,41 +2,94 @@
 TEST ID: BEN-2-0310
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefit Plan Eligibility
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Benefit Plan Eligibility
+TASK/STEP: Configure Benefit Plan Eligibility Rules
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Plan Eligibility
+DESCRIPTION:
+Configure eligibility rules for specific benefit plans within a benefit group.
+Plan-level eligibility provides finer control over who can enroll in specific
+plans based on additional criteria like age, tobacco use, or tenure.
 
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sampl
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Benefit plans already created
+- Benefit groups configured
+- Understanding of plan eligibility requirements
 
 ELECTRON STEPS:
-1. enter search box as "Benefit Plan Eligibility"
+1. enter search box as "Edit Benefit Plan"
 2. wait for search results
-3. click search result containing "Benefit Plan Eligibility"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0310_complete.png"
+3. click search result containing "Edit Benefit Plan"
+4. wait for page to load
+5. enter benefit plan as "{benefit_plan_name}"
+6. wait for plan details to load
+7. scroll to eligibility rules section
+8. click button "Edit Plan Eligibility"
+9. wait for eligibility editor to load
+10. click button "Add Eligibility Rule"
+11. select rule type as "Age-Based"
+12. enter minimum age as "{min_age}"
+13. enter maximum age as "{max_age}"
+14. click button "OK"
+15. click button "Add Eligibility Rule"
+16. select rule type as "Service-Based"
+17. enter minimum service months as "{min_service_months}"
+18. click button "OK"
+19. click button "Add Eligibility Rule"
+20. select rule type as "Hours-Based"
+21. enter minimum hours per week as "{min_hours}"
+22. click button "OK"
+23. verify all eligibility rules displayed
+24. click button "Submit"
+25. wait for confirmation
+26. verify message contains "Plan eligibility updated"
+27. screenshot as "BEN-2-0310_complete.png"
+
+VERIFICATION OF PLAN ELIGIBILITY:
+28. enter search box as "Benefit Plan Eligibility Report"
+29. wait for search results
+30. click search result containing "Benefit Plan Eligibility Report"
+31. enter benefit plan as "{benefit_plan_name}"
+32. enter effective date as "{test_date}"
+33. click button "OK"
+34. wait for report to load
+35. verify eligible employees meet all criteria
+36. verify ineligible employees correctly excluded
+37. screenshot as "BEN-2-0310_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Benefit plan eligibility editor opened
+- [ ] Age-based eligibility rule configured
+- [ ] Service-based eligibility rule configured
+- [ ] Hours-based eligibility rule configured
+- [ ] Rules saved successfully
+- [ ] Eligibility report validates criteria
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Benefit plan eligibility rules configured to control enrollment based on
+age, service tenure, and work hours criteria.
+
+COMMON PLAN ELIGIBILITY RULES:
+- Minimum/Maximum Age
+- Minimum Service Period (months/years)
+- Minimum Hours per Week
+- Full-Time/Part-Time Status
+- Tobacco User Status (for premium tier)
+- Wellness Program Participation
+- Geographic Location
+- Evidence of Insurability Requirement
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Plan eligibility is evaluated after group eligibility
+- Age calculated as of effective date
+- Service calculated from hire date
+- Consider Evidence of Insurability (EOI) requirements
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Plan, Get_Benefit_Plans
+- REST: /benefitsAdmin/v1/benefitPlans
 ================================================================================

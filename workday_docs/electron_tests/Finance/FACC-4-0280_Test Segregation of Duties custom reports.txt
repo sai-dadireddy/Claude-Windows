@@ -1,14 +1,50 @@
 ================================================================================
 TEST ID: FACC-4-0280
 FUNCTIONAL AREA: Accounting & Finance
-TEST NAME: Test Segregation of Duties custom reports
-CONFIDENCE: [LOW] Score: 0.0/10
+TEST NAME: Test Segregation of Duties Custom Reports
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Run and verify segregation of duties (SoD) custom reports to identify
+potential conflicts in user security assignments. These reports help ensure
+that users do not have incompatible permissions that could enable fraud
+or errors (e.g., ability to both create and approve same transaction type).
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Security Administrator or Internal Audit role
+- Segregation of duties rules configured
+- Custom SoD reports created
+- Users and security groups assigned
+
+ELECTRON STEPS:
+1. enter search box as "Run Segregation of Duties Report"
+2. wait for search results
+3. click search result containing "Segregation of Duties"
+4. wait for page to load
+5. select Report Name as "{sod_report_name}"
+6. select Company as "{test_company}"
+7. select Security Group or Domain as "{security_scope}"
+8. click button "OK" or "Run"
+9. wait for report generation
+10. verify report displays SoD conflicts
+11. verify conflicting security roles listed
+12. verify users with violations identified
+13. verify conflict type and severity shown
+14. click link to export report
+15. verify export file generated
+16. screenshot as "FACC-4-0280_complete.png"
+
+VERIFICATION:
+- [ ] SoD report runs successfully
+- [ ] Conflicts identified and listed
+- [ ] Affected users clearly identified
+- [ ] Conflicting roles/permissions shown
+- [ ] Report can be exported
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Custom_Report_Data (Workday Standard WSDL)
+- Report RaaS endpoint for automated extraction
 ================================================================================

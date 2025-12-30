@@ -1,0 +1,161 @@
+================================================================================
+WORKDAY KB ARTICLE: PAYROLL SECURITY GROUP ASSIGNMENTS
+================================================================================
+
+Source: Workday Security Administration
+Category: Payroll - Security
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Payroll security groups control access to payroll data and functions. Proper
+security configuration ensures:
+- Only authorized users can view/modify payroll data
+- Segregation of duties is maintained
+- Audit requirements are met
+- Compliance with data privacy regulations
+
+Key payroll security groups include administrators, partners, specialists,
+and auditors with varying levels of access.
+
+Business Process: View/Assign Security Group Membership
+Functional Area: Security Administration
+Initiator: Security Administrator
+Typical Duration: 5-10 minutes
+
+================================================================================
+KEY SECURITY GROUPS
+================================================================================
+
+1. USER-BASED SECURITY GROUPS (Administrators)
+   - Payroll Administrator
+   - Payroll Administrator FRA (France-specific)
+   - Payroll Calculations Administrator
+   - Payroll Integrations Administrator
+   - Payroll Settlement Specialist
+   - Payroll Auditor
+
+2. ROLE-BASED SECURITY GROUPS (Partners)
+   - Payroll Partner (assigned to workers)
+   - Organization Partner (assigned to pay groups)
+   - HR Partner (with payroll view access)
+
+3. SECURITY DOMAINS
+   - Payroll Results (view/modify)
+   - Payroll Configuration (setup tasks)
+   - Payroll Reporting (reports access)
+   - Settlement Processing (payment processing)
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Security Group Members:
+1. Search: "View Security Group"
+2. Select security group
+3. Click "Members" tab
+4. Review assigned users
+
+View Role Assignments:
+1. Search: "View Security Group"
+2. Select role-based security group
+3. Click "Assignable Role" tab
+4. Review role assignments by organization
+
+Assign Security Group Member:
+1. Search: "Assign User-Based Security Group"
+2. Search for user
+3. Select security group
+4. Submit
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+User-Based Groups:
+- Correct users assigned to each group
+- No unauthorized users in admin groups
+- Segregation of duties maintained
+- Auditors have read-only access
+
+Role-Based Groups:
+- Partners assigned to correct organizations
+- Role coverage for all pay groups
+- No orphaned organizations
+- Appropriate geographic coverage
+
+Access Validation:
+- Test user access to payroll functions
+- Verify data visibility limits
+- Confirm approval authority
+- Check reporting access
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+View User-Based Security Group:
+1. enter search box as "View Security Group"
+2. wait for search results
+3. click search result containing "View Security Group"
+4. wait for page to load
+5. select security group as "Payroll Administrator"
+6. wait for group details to load
+7. click tab "Members"
+8. verify member list displays
+9. scroll to view all members
+10. screenshot as "{test_id}_payroll_admin_members.png"
+
+View Role-Based Assignments:
+11. enter search box as "View Security Group"
+12. wait for search results
+13. click search result containing "View Security Group"
+14. wait for page to load
+15. select security group as "Payroll Partner"
+16. wait for group details to load
+17. click tab "Assignable Role"
+18. verify role assignments display
+19. verify organization column visible
+20. scroll to review all assignments
+21. screenshot as "{test_id}_payroll_partner_roles.png"
+
+Verify Multiple Groups:
+22. enter search box as "All Security Groups"
+23. wait for search results
+24. click search result containing "All Security Groups"
+25. wait for page to load
+26. enter filter as "Payroll"
+27. verify payroll security groups list
+28. screenshot as "{test_id}_all_payroll_groups.png"
+
+================================================================================
+SECURITY GROUPS CHECKLIST
+================================================================================
+
+Payroll Administrator:
+- [ ] All required admins assigned
+- [ ] No unauthorized users
+- [ ] Access level appropriate
+
+Payroll Partner:
+- [ ] Partners assigned to organizations
+- [ ] Coverage for all pay groups
+- [ ] No gaps in coverage
+
+Payroll Auditor:
+- [ ] Auditors have view-only access
+- [ ] External auditor access managed
+- [ ] Audit trail maintained
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Security Group Membership Report
+- Role Assignment Audit
+- Domain Security Policy Report
+- User Access Audit
+
+================================================================================

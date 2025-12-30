@@ -5,31 +5,36 @@ TEST NAME: Questionnaires
 CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: View Questionnaire
+TASK/STEP: Create Questionnaire for Case Type
 
 ELECTRON STEPS:
-1. enter search box as "View Questionnaire"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0080_complete.png"
+1. enter search box as "Create Questionnaire"
+2. click search result containing "Create Questionnaire"
+3. wait for page to load
+4. enter Questionnaire Name as "Benefits Case Questionnaire"
+5. enter Description as "Questionnaire for benefits case intake"
+6. click button "Add Question"
+7. enter Question Text as "What type of benefits issue are you experiencing?"
+8. select Question Type as "Single Select"
+9. click button "Add Option"
+10. enter Option as "Enrollment Issue"
+11. click button "Add Option"
+12. enter Option as "Coverage Question"
+13. click button "OK"
+14. wait for page to load
+15. verify message contains "successfully"
+16. screenshot as "HLP-3-0080_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Questionnaire created successfully
+- Questions and options configured
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Questionnaire
-
-### 1. Admin Guide Manage Workday (score: 7)
-Source: Admin-Guide-Manage-Workday.pdf
-```
-Manage Workday
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Manage Workday...............................................................................................12
-Tenant Configuration...............................................................................
+Source: Workday Resource Center - Case Management Setup
+Questionnaires:
+- Create questionnaires for case types to gather additional information
+- Configure questions with different answer types
+- Associate questionnaires with specific case types
 ================================================================================

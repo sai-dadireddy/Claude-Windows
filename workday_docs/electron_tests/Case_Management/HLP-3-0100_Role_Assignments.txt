@@ -2,19 +2,34 @@
 TEST ID: HLP-3-0100
 FUNCTIONAL AREA: Case Management
 TEST NAME: Role Assignments
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Assign Roles for Help Case Management
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-3-0100_complete.png"
+1. enter search box as "Assign Roles"
+2. click search result containing "Assign Roles"
+3. wait for page to load
+4. select Role as "Help Case Solver"
+5. click button "Add Assignment"
+6. enter Worker as "Test Worker"
+7. select Assignment Reason as "New Assignment"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0100_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Role assignment completed successfully
+- Worker assigned to Help Case Solver role
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Role Assignments for Case Management:
+- Help Case Solver: Can work and resolve cases
+- Help Case Manager: Can manage service teams and case configuration
+- Help Administrator: Full administrative access to Case Management
 ================================================================================

@@ -4,79 +4,48 @@ FUNCTIONAL AREA: Advanced Compensation
 TEST NAME: Compensation Matrices
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 5 minutes
-CONFIDENCE SCORE: 2.0/10
-STATUS: [XX] MANUAL
+CONFIDENCE: HIGH Score: 8.0/10
+SOURCE: [KB Article: kb_advanced_compensation.txt]
+STATUS: [OK] ACCEPTED
 ================================================================================
 
 DESCRIPTION:
 Verify the compensation matrix (matrices) are configured correctly.
 
 TASK/STEP:
-Search bar: "comp mat"   Click on Compensation Matrix.  Review your Compensation Matrix (Matrices)
+Search bar: "comp mat" Click on Compensation Matrix. Review your Compensation Matrix (Matrices)
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data: [Based on scenario requirements]
+- Required data: Compensation matrix names to review
 
 ELECTRON STEPS:
-1. [MANUAL REQUIRED - Insufficient KB coverage]
-2. Confidence Score: 2.0/10
-3. 
-4. RAG Results:
-5. Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp mat
-
-### 1. compensation (score: 2)
-Source: compensation_v2.json
-```
-API: compensation
-GET /scorecardResults - Provides the ability to set up and retrieve Scores on Scorecard Results.
-POST /scorecardResults - Creates a new Scorecard Result.
-GET /scorecardResults/{ID} - Provides the ability to set up and retrieve Scores on Scorecard Results.
-DELETE /scorecardResults/{...
-```
-
-### 2. p
+1. enter search box as "Maintain Compensation Matrices"
+2. wait for search results
+3. click search result containing "Maintain Compensation Matrices"
+4. wait for page to load
+5. screenshot as "ACM-1-0130_matrices_list.png"
+6. verify list of compensation matrices is displayed
+7. click link for first Compensation Matrix in list
+8. wait for matrix details to load
+9. verify field "Matrix Name" is displayed
+10. verify field "Effective Date" is displayed
+11. verify matrix grid is displayed with rows and columns
+12. screenshot as "ACM-1-0130_matrix_grid.png"
+13. verify row headers (performance rating or compa-ratio)
+14. verify column headers (performance rating or compa-ratio)
+15. verify cell values contain percentages
+16. screenshot as "ACM-1-0130_complete.png"
 
 VERIFICATION:
+- [ ] Compensation Matrices page loads correctly
+- [ ] List of matrices is displayed
+- [ ] Matrix grid shows rows, columns, and values
+- [ ] Cell values are numeric percentages
 - [ ] No error messages displayed
 - [ ] Task completed successfully
 
-RAG ANALYSIS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp mat
-
-### 1. compensation (score: 2)
-Source: compensation_v2.json
-```
-API: compensation
-GET /scorecardResults - Provides the ability to set up and retrieve Scores on Scorecard Results.
-POST /scorecardResults - Creates a new Scorecard Result.
-GET /scorecardResults/{ID} - Provides the ability to set up and retrieve Scores on Scorecard Results.
-DELETE /scorecardResults/{...
-```
-
-### 2. person (score: 2)
-Source: person_v4.json
-```
-API: person
-POST /phoneValidation - Validates phone number data to ensure it is valid for Workday.
-GET /people/{ID}/personalInformation - Retrieves a collection of personal information.
-GET /countries/{ID} - Retrieves information about a country.
-GET /people/{ID}/homeAddresses/{subresourceID} - Retr...
-```
-
-### 3. staffing (score: 2)
-Source: staffing_v7.json
-```
-API: staffing
-GET /values/organizationAssignmentChangesGroup/regions/ - 
-GET /jobChanges/{I
---------------------------------------------------------------------------------
+API ALTERNATIVE:
+- SOAP: Get_Compensation_Matrices (Compensation.wsdl)
 
 ================================================================================

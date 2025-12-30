@@ -2,35 +2,31 @@
 TEST ID: HLP-3-0060
 FUNCTIONAL AREA: Case Management
 TEST NAME: Manage Help Case Information
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
 TASK/STEP: Manage Help Case Information
 
 ELECTRON STEPS:
 1. enter search box as "Manage Help Case Information"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0060_complete.png"
+2. click search result containing "Manage Help Case Information"
+3. wait for page to load
+4. verify page title contains "Help Case Information"
+5. click tab "Configuration"
+6. verify field "Case Management Enabled" is visible
+7. verify field "Service Categories" section is visible
+8. verify field "Case Types" section is visible
+9. screenshot as "HLP-3-0060_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Case Information page displays correctly
+- Configuration settings are accessible
+- Service Categories and Case Types sections visible
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Manage Help Case Information
-
-### 1. Admin Guide Education And Government (score: 4)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management...............................................
+Source: Workday Resource Center - Case Management Setup
+Manage Help Case Information provides overview of Case Management configuration
+including enabled settings, service categories, case types, and routing rules.
 ================================================================================

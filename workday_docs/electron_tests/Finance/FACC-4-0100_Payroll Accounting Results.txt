@@ -2,13 +2,50 @@
 TEST ID: FACC-4-0100
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Payroll Accounting Results
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf + Payroll WSDL]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Review and verify payroll accounting results after payroll processing.
+This validates that payroll costs, liabilities, and related worktags have
+been correctly posted to the general ledger for the pay period.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Payroll Administrator or Finance Manager role
+- Payroll run completed and finalized
+- Payroll accounting created and posted
+- Target accounting period contains payroll entries
+
+ELECTRON STEPS:
+1. enter search box as "View Payroll Accounting Results"
+2. wait for search results
+3. click search result containing "View Payroll Accounting Results"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. select Pay Period as "{pay_period}"
+7. select Pay Group as "{pay_group}"
+8. click button "OK" or "Search"
+9. wait for results
+10. verify total payroll expense amounts
+11. verify liability accounts (taxes, deductions, net pay)
+12. verify cost center allocations correct
+13. verify worktags assigned to entries
+14. click link to view journal details
+15. verify journal balanced
+16. verify posting status shows "Posted"
+17. screenshot as "FACC-4-0100_complete.png"
+
+VERIFICATION:
+- [ ] Payroll accounting results displayed
+- [ ] Total amounts match payroll run
+- [ ] Expense accounts correctly debited
+- [ ] Liability accounts correctly credited
+- [ ] Worktag assignments accurate
+- [ ] Journal entries balanced and posted
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Accounting_Results (Payroll WSDL)
+- Get_Journals filtered by Payroll journal source
 ================================================================================

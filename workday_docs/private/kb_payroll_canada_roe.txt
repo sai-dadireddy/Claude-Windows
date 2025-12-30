@@ -1,0 +1,98 @@
+================================================================================
+WORKDAY KB ARTICLE: RECORD OF EMPLOYMENT (ROE) HISTORY (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Canada-Specific
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Record of Employment (ROE) is a Canadian government form required when an
+employee's earnings are interrupted. Workday tracks ROE history for:
+- Terminations
+- Layoffs
+- Leave of absence
+- Reduced hours
+- Retirement
+
+The ROE is submitted electronically to Service Canada via ROE Web.
+
+Business Process: Review ROE History / Generate ROE
+Functional Area: Payroll for Canada
+Initiator: Payroll Partner / HR
+Typical Duration: 10-20 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. ROE DATA
+   - Employee information
+   - Employer information (Business Number)
+   - Last day worked
+   - First day worked
+   - Total insurable earnings
+   - Reason for issuing ROE
+
+2. ROE REASONS
+   - A - Shortage of work/End of contract
+   - D - Illness/Injury
+   - E - Quit
+   - K - Other
+   - M - Dismissal
+   - N - Leave of absence
+   - P - Parental leave
+   - Z - Compassionate care
+
+3. INSURABLE EARNINGS
+   - Final pay period(s) breakdown
+   - Vacation pay
+   - Stat holiday pay
+   - Overtime earnings
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access ROE History
+1. enter search box as "View ROE History"
+2. wait for search results
+3. click search result containing "View ROE History"
+4. wait for page to load
+
+Step 2: Review ROE Records
+5. enter date range for review
+6. wait for ROE records to load
+7. verify ROE list displayed
+8. verify employee names visible
+9. verify ROE status column visible
+10. screenshot as "{test_id}_roe_history.png"
+
+Step 3: Review Individual ROE
+11. click on an ROE record to view details
+12. wait for ROE details to load
+13. verify last day worked is correct
+14. verify reason for issuing is accurate
+15. verify insurable earnings calculated
+16. screenshot as "{test_id}_roe_detail.png"
+
+Step 4: Verify Submission Status
+17. verify ROE submission status
+18. verify Service Canada confirmation (if submitted)
+19. screenshot as "{test_id}_roe_status.png"
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- All required ROEs generated
+- Correct reason codes used
+- Insurable earnings accurate
+- Submission to Service Canada confirmed
+- ROE history retained for audit
+
+================================================================================

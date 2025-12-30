@@ -2,41 +2,98 @@
 TEST ID: BEN-2-0250
 FUNCTIONAL AREA: Benefits
 TEST NAME: Dependent Event - Birth/Adoption Event
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Change Benefits > Birth/Adoption Event
+TASK/STEP: Change Benefits > Birth/Adoption Event (Add Dependent to Coverage)
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Change Benefits > Birth/Adoption Event
+DESCRIPTION:
+Process a birth or adoption life event to add new child as dependent on
+health, dental, and vision benefit plans. Updates coverage levels from
+Employee Only or Employee+Spouse to include children.
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file co
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test employee with active medical/dental/vision benefits
+- Birth/adoption event date and child information available
+- Birth certificate or adoption papers available for upload
 
 ELECTRON STEPS:
-1. enter search box as "Change Benefits > Birth/Adoption Event"
+1. enter search box as "Change Benefits"
 2. wait for search results
-3. click search result containing "Change Benefits > Birth/Adoption Event"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0250_complete.png"
+3. click search result containing "Change Benefits"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for worker profile to load
+7. select benefit event type as "Life Event"
+8. select life event reason as "Birth/Adoption"
+9. enter event date as "{birth_adoption_date}"
+10. click button "Continue"
+11. wait for benefits election page to load
+12. scroll to dependents section
+13. click button "Add Dependent"
+14. enter dependent first name as "{child_first_name}"
+15. enter dependent last name as "{child_last_name}"
+16. enter date of birth as "{child_dob}"
+17. select relationship as "Child"
+18. enter social security number as "{child_ssn}"
+19. select gender as "{child_gender}"
+20. click button "Upload Document"
+21. select file "{birth_certificate_path}"
+22. click button "Save Dependent"
+23. verify new dependent appears in list
+24. click link "Medical" in benefits section
+25. select coverage level as "Employee + Child(ren)" or "Family"
+26. verify new child is included in coverage
+27. click button "Elect"
+28. click link "Dental" in benefits section
+29. select coverage level as "Employee + Child(ren)" or "Family"
+30. verify new child is included in coverage
+31. click button "Elect"
+32. click link "Vision" in benefits section
+33. select coverage level as "Employee + Child(ren)" or "Family"
+34. verify new child is included in coverage
+35. click button "Elect"
+36. click button "Review and Submit"
+37. wait for review page to load
+38. verify new dependent listed on all health plans
+39. verify updated premium costs displayed
+40. click button "Submit"
+41. wait for confirmation
+42. verify message contains "Benefits enrollment submitted successfully"
+43. screenshot as "BEN-2-0250_complete.png"
+
+POST-SUBMISSION VERIFICATION:
+44. enter search box as "View Benefit Elections"
+45. wait for search results
+46. click search result containing "View Benefit Elections"
+47. enter worker as "{test_employee_id}"
+48. verify coverage level includes children
+49. verify new dependent listed under covered dependents
+50. screenshot as "BEN-2-0250_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Birth/Adoption life event successfully initiated
+- [ ] New dependent added to employee record
+- [ ] Coverage levels updated to include children
+- [ ] Medical plan includes new dependent
+- [ ] Dental plan includes new dependent
+- [ ] Vision plan includes new dependent
+- [ ] Premium costs recalculated
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+New child added as dependent and enrolled in medical, dental, and vision
+plans. Coverage levels updated and new ID cards will be issued.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Birth/adoption event has 31-day window for benefit changes
+- Dependent verification documents may be required
+- ID cards typically arrive 2-3 weeks after effective date
+- Coverage effective date is typically date of birth/adoption
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Election, Add_Dependent_Enrollment
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

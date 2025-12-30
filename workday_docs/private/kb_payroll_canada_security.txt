@@ -1,0 +1,136 @@
+================================================================================
+WORKDAY KB ARTICLE: PAYROLL SECURITY GROUP ASSIGNMENTS (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Security
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Payroll Security in Workday Canada controls access to:
+- Payroll data (view/edit permissions)
+- Payroll processing tasks
+- Settlement operations
+- Tax configuration
+- Payroll reports
+
+Security is managed through Security Groups with user assignments.
+
+Business Process: Review/Assign Payroll Security Groups
+Functional Area: Payroll for Canada / Security
+Initiator: Security Administrator
+Typical Duration: 15-30 minutes
+
+================================================================================
+KEY SECURITY GROUPS
+================================================================================
+
+1. PAYROLL ADMINISTRATOR
+   - Full access to payroll configuration
+   - Tax setup permissions
+   - Pay group management
+   - Period schedule management
+
+2. PAYROLL PARTNER
+   - Payroll processing permissions
+   - Results review and approval
+   - Input corrections
+   - Report access
+
+3. PAYROLL SETTLEMENT SPECIALIST
+   - Settlement run creation
+   - Payment processing
+   - Bank file generation
+   - Settlement review
+
+4. PAYROLL ANALYST
+   - Report access (read-only)
+   - Payroll data analysis
+   - No processing permissions
+
+5. HR PARTNER (LIMITED)
+   - View employee pay data
+   - Limited payroll visibility
+   - No processing access
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Security Group Members:
+1. Search: "View Security Group Members"
+2. Select payroll security group
+3. Review assigned users
+
+Assign Security Groups:
+1. Search: "Assign Security Groups"
+2. Select user
+3. Add payroll security groups
+
+Audit Security Assignments:
+1. Search: "Security Group Membership Report"
+2. Filter by payroll groups
+3. Export for review
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access Security Group Review
+1. enter search box as "View Security Group Members"
+2. wait for search results
+3. click search result containing "View Security Group Members"
+4. wait for page to load
+
+Step 2: Review Payroll Administrator Group
+5. select security group as "Payroll Administrator"
+6. wait for members to load
+7. verify assigned users displayed
+8. verify user count appropriate
+9. screenshot as "{test_id}_payroll_admin_security.png"
+
+Step 3: Review Payroll Partner Group
+10. select security group as "Payroll Partner"
+11. wait for members to load
+12. verify assigned users displayed
+13. screenshot as "{test_id}_payroll_partner_security.png"
+
+Step 4: Review Settlement Specialist Group
+14. select security group as "Payroll Settlement Specialist"
+15. wait for members to load
+16. verify assigned users displayed
+17. screenshot as "{test_id}_settlement_specialist_security.png"
+
+Step 5: Verify Role Assignments
+18. enter search box as "View Role Assignments"
+19. wait for search results
+20. click search result containing "View Role Assignments"
+21. wait for page to load
+22. verify payroll roles assigned
+23. screenshot as "{test_id}_role_assignments.png"
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- All payroll security groups have appropriate members
+- No excessive permissions granted
+- Segregation of duties maintained
+- Settlement access appropriately restricted
+- Report access aligned with job functions
+- Role assignments match security groups
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Security Group Membership Report
+- Role Assignment Report
+- User Security Profile Report
+- Payroll Access Audit Report
+
+================================================================================

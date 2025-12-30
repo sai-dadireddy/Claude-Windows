@@ -2,34 +2,34 @@
 TEST ID: HLP-3-0190
 FUNCTIONAL AREA: Case Management
 TEST NAME: Case Notification Setup
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
 TASK/STEP: Manage Case Notification Recipients
 
 ELECTRON STEPS:
 1. enter search box as "Manage Case Notification Recipients"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0190_complete.png"
+2. click search result containing "Manage Case Notification Recipients"
+3. wait for page to load
+4. click button "Add Notification Recipient"
+5. select Notification Type as "Case Created"
+6. select Recipient Type as "Service Team Members"
+7. select Service Team as "Benefits Service Team"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0190_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case Notification Recipients configured successfully
+- Notifications routed to appropriate team members
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Manage Case Notification Recipients
-
-### 1. Admin Guide Vndly Documentation (score: 4)
-Source: Admin-Guide-VNDLY-Documentation.pdf
-```
-Workday VNDLY
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-Workday VNDLY................................................................................................10
-.........................................................................
+Source: Workday Resource Center - Case Management Setup
+Case Notification Recipients:
+- Configure who receives notifications for case events
+- Set up notification routing to service team members
+- Customize notifications by case type and event type
 ================================================================================

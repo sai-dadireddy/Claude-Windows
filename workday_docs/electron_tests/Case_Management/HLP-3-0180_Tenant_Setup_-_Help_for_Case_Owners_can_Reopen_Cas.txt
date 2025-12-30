@@ -2,35 +2,34 @@
 TEST ID: HLP-3-0180
 FUNCTIONAL AREA: Case Management
 TEST NAME: Tenant Setup - Help for Case Owners can Reopen Cases
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Tenant Setup
+TASK/STEP: Configure Case Reopen Settings
 
 ELECTRON STEPS:
-1. enter search box as "Tenant Setup"
-2. enter field "Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
-3. screenshot as "HLP-3-0180_complete.png"
+1. enter search box as "Edit Tenant Setup - Help"
+2. click search result containing "Edit Tenant Setup - Help"
+3. wait for page to load
+4. click tab "Case Settings"
+5. verify field "Case Reopen Settings" is visible
+6. select checkbox "Allow Case Owners to Reopen Cases"
+7. enter Reopen Window Days as "30"
+8. click button "OK"
+9. wait for page to load
+10. verify message contains "successfully"
+11. screenshot as "HLP-3-0180_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case Reopen settings configured successfully
+- Reopen window defined
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tenant Setup
-
-### 1. Electron Test Samples (score: 7)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron t...
+Source: Workday Resource Center - Case Management Setup
+Case Reopen Configuration:
+- Allow case owners to reopen resolved cases
+- Define time window for case reopening
+- Control case lifecycle management
 ================================================================================

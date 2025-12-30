@@ -1,0 +1,146 @@
+================================================================================
+WORKDAY KB ARTICLE: COMPANY TAX REPORTING CONFIGURATION (US)
+================================================================================
+
+Source: Workday Payroll Administration
+Category: Payroll - Tax Administration
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Company US Tax Reporting configuration defines how a company handles federal,
+state, and local tax withholding and reporting. This includes:
+- Federal employer identification number (EIN)
+- State unemployment insurance (SUI) rates
+- Local tax setup and rates
+- Supplemental tax methods
+- Exempt statuses
+
+Proper configuration ensures accurate tax withholding, correct tax reporting,
+and compliance with federal, state, and local tax requirements.
+
+Business Process: View/Edit Company US Tax Reporting
+Functional Area: Payroll Administration
+Initiator: Payroll Administrator
+Typical Duration: 15-30 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. FEDERAL TAX SETTINGS
+   - Federal Employer ID (EIN)
+   - Supplemental Tax Method (Flat vs Aggregate)
+   - Federal Exempt Status
+   - Employer Type (501(c)(3), Government, etc.)
+   - FUTA liability settings
+
+2. STATE TAX SETTINGS
+   - State Tax ID / Account Number
+   - State Unemployment Insurance (SUI) Rate
+   - Supplemental Tax Method
+   - State Exempt Status
+   - Workers' Compensation setup
+   - SDI/TDI settings
+
+3. LOCAL TAX SETTINGS
+   - Local Tax Authority setup
+   - Local Tax IDs
+   - Local withholding rates
+   - Residency vs work location rules
+   - Reciprocity agreements
+
+4. TAX REPORTING ELECTIONS
+   - Combined Federal/State filing (EFPS)
+   - Electronic filing enrollment
+   - Third-party sick pay reporting
+   - Quarterly vs annual filing
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View Company US Tax Reporting:
+1. Search: "Company US Tax Reporting"
+2. Select company
+3. Review federal, state, local settings
+
+Edit Company US Tax Reporting:
+1. Search: "Edit Company US Tax Reporting"
+2. Select company
+3. Update tax configuration
+4. Submit for approval
+
+Maintain State Tax Configuration:
+1. Search: "Maintain US State Tax Configuration"
+2. Select state
+3. Update SUI rates and settings
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Federal:
+- Federal EIN is correct (9 digits: XX-XXXXXXX)
+- Supplemental tax method is appropriate
+- Employer type is accurate
+- FUTA settings correct
+
+State:
+- All operating states are configured
+- State tax IDs are valid
+- SUI rates are current (update annually)
+- Supplemental methods are correct
+- State exemptions are documented
+
+Local:
+- All applicable local taxes configured
+- Local tax IDs are correct
+- Withholding rates are current
+- Residency rules are accurate
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Review Federal Tax:
+1. enter search box as "Company US Tax Reporting"
+2. wait for search results
+3. click search result containing "Company US Tax Reporting"
+4. wait for page to load
+5. select company dropdown as "{company_name}"
+6. wait for tax data to load
+7. verify Federal EIN field displays
+8. verify Supplemental Tax Method field displays
+9. verify Employer Type field displays
+10. screenshot as "{test_id}_federal_tax.png"
+
+Review State Tax:
+11. click tab "State"
+12. wait for state list to load
+13. verify state tax table displays
+14. verify SUI Rate column visible
+15. verify State Tax ID column visible
+16. scroll through state list
+17. screenshot as "{test_id}_state_tax.png"
+
+Review Local Tax:
+18. click tab "Local"
+19. wait for local list to load
+20. verify local tax authorities display
+21. verify local tax IDs configured
+22. screenshot as "{test_id}_local_tax.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Company Tax Configuration Summary
+- Tax Authority Report
+- SUI Rate History
+- Multi-State Tax Summary
+- Quarterly Tax Liability Report
+
+================================================================================

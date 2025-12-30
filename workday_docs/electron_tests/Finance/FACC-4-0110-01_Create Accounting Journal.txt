@@ -1,20 +1,64 @@
 ================================================================================
 TEST ID: FACC-4-0110-01
 FUNCTIONAL AREA: Accounting & Finance
-TEST NAME: Create Accounting Journal
+TEST NAME: Create Accounting Journal (Variant 1 - Accrual)
 CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG - kb_finance_journal_entry.txt + Admin-Guide-Financial-Management.pdf]
 ================================================================================
 
+DESCRIPTION:
+Create an accrual accounting journal with auto-reverse functionality.
+Accrual journals record expenses or revenues before they are billed or
+received, and automatically reverse in the next period.
+
+PREREQUISITES:
+- User logged in with Accountant or Finance Manager role
+- Target company has open accounting period
+- Accrual ledger accounts configured
+- Auto-reverse functionality enabled
+
 ELECTRON STEPS:
-1. enter search box as "1. Create the Journal"
+1. enter search box as "Create Accounting Journal"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. fill required fields
-6. click "Submit" button
-7. screenshot as "FACC-4-0110-01_complete.png"
+3. click search result containing "Create Accounting Journal"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. enter Accounting Date as "{current_period_date}"
+7. select Ledger Type as "Actuals"
+8. select Journal Source as "Accrual"
+9. check "Create Reversal" checkbox
+10. enter Reversal Date as "{next_period_first_day}"
+11. enter Memo as "Accrual entry - FACC-4-0110-01 - Auto-reverse"
+12. click button "Add"
+13. wait for journal line section
+14. click link "Add Journal Line"
+15. enter Ledger Account as "{expense_account}"
+16. enter Debit Amount as "{accrual_amount}"
+17. select Cost Center as "{cost_center}"
+18. enter Line Memo as "Expense accrual"
+19. click button "OK"
+20. click link "Add Journal Line"
+21. enter Ledger Account as "{accrued_liabilities}"
+22. enter Credit Amount as "{accrual_amount}"
+23. select Cost Center as "{cost_center}"
+24. enter Line Memo as "Accrued liability"
+25. click button "OK"
+26. verify journal shows "In Balance"
+27. verify reversal indicator shows "Yes"
+28. click button "Submit"
+29. wait for confirmation
+30. verify message contains "submitted"
+31. screenshot as "FACC-4-0110-01_complete.png"
 
 VERIFICATION:
-- [ ] Transaction completed successfully
+- [ ] Accrual journal created successfully
+- [ ] Debits equal credits (balanced)
+- [ ] Auto-reverse flag enabled
+- [ ] Reversal date set correctly
+- [ ] Journal routed for approval
 - [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Submit_Accounting_Journal (Financial_Management WSDL)
+- Set Create_Reversal = true and Reversal_Date in request
 ================================================================================

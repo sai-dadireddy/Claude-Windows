@@ -4,19 +4,20 @@ FUNCTIONAL AREA: Advanced Compensation
 TEST NAME: Plan configuration: Merit
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 10 minutes
-CONFIDENCE SCORE: 2.0/10
-STATUS: [XX] MANUAL
+CONFIDENCE: HIGH Score: 8.0/10
+SOURCE: [KB Article: kb_advanced_compensation.txt]
+STATUS: [OK] ACCEPTED
 ================================================================================
 
 DESCRIPTION:
-To verify that the Merit plans are configured correctly: 
-- Targets hidden/overridden 
-- Applicable profiles 
-- Eligibility Rules 
-- Statutory Minimum 
-- Waiting Period 
-- Compensation Matrix 
-- Time Proration Rule 
+To verify that the Merit plans are configured correctly:
+- Targets hidden/overridden
+- Applicable profiles
+- Eligibility Rules
+- Statutory Minimum
+- Waiting Period
+- Compensation Matrix
+- Time Proration Rule
 - Rounding Rule
 
 TASK/STEP:
@@ -24,67 +25,38 @@ Search bar: "comp plans". Click on the Merit tab. From the Merit tab, select the
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data: [Based on scenario requirements]
+- Required data: Merit plan names to review
 
 ELECTRON STEPS:
-1. [MANUAL REQUIRED - Insufficient KB coverage]
-2. Confidence Score: 2.0/10
-3. 
-4. RAG Results:
-5. Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp plans
-
-### 1. Electron Test Samples (score: 2)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron te.
+1. enter search box as "Maintain Compensation Plans"
+2. wait for search results
+3. click search result containing "Maintain Compensation Plans"
+4. wait for page to load
+5. click tab "Merit"
+6. wait for tab content to load
+7. screenshot as "ACM-1-0010_merit_plans_list.png"
+8. click link for first Merit Plan in list
+9. wait for plan details to load
+10. verify field "Plan Name" is displayed
+11. verify field "Effective Date" is displayed
+12. verify section "Eligibility Rules" is displayed
+13. verify section "Time Proration Rule" is displayed
+14. verify section "Rounding Rule" is displayed
+15. verify section "Compensation Matrix" is displayed
+16. screenshot as "ACM-1-0010_merit_plan_config.png"
+17. scroll to "Waiting Period" section
+18. verify field "Waiting Period" configuration is displayed
+19. screenshot as "ACM-1-0010_complete.png"
 
 VERIFICATION:
+- [ ] Merit tab displays list of configured merit plans
+- [ ] All configuration fields are visible and populated
+- [ ] Eligibility Rules section shows applicable rules
+- [ ] Compensation Matrix is assigned if applicable
 - [ ] No error messages displayed
 - [ ] Task completed successfully
 
-RAG ANALYSIS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp plans
-
-### 1. Electron Test Samples (score: 2)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron te...
-```
-
-### 2. Kb Absence Time Off (score: 2)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Management...
-```
-
-### 3. Kb Benefits Enrollment (score: 2)
-Source: kb_benefits_enrollment.txt
-```
-=============================
---------------------------------------------------------------------------------
+API ALTERNATIVE:
+- SOAP: Get_Compensation_Plans (Compensation.wsdl)
 
 ================================================================================

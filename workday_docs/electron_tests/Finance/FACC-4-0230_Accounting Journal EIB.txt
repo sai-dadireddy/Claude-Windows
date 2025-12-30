@@ -2,13 +2,52 @@
 TEST ID: FACC-4-0230
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Accounting Journal EIB
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf + kb_finance_journal_entry.txt]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Load accounting journals in bulk using the Enterprise Interface Builder (EIB).
+This process imports journal entries from a spreadsheet template to create
+multiple journals efficiently for data migration or batch entry scenarios.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Integration Administrator or Finance Manager role
+- EIB template downloaded and populated with journal data
+- All account codes and worktags valid
+- Journal data balanced (debits = credits per journal)
+- Target accounting periods open
+
+ELECTRON STEPS:
+1. enter search box as "Load Accounting Journals"
+2. wait for search results
+3. click search result containing "Load Accounting Journals" or "Journal EIB"
+4. wait for page to load
+5. click button "Select Files"
+6. upload EIB spreadsheet file
+7. wait for file upload confirmation
+8. click button "OK"
+9. wait for validation to complete
+10. verify row count matches expected journals
+11. verify no validation errors displayed
+12. click button "Submit"
+13. wait for processing confirmation
+14. verify message contains "submitted" or "processing"
+15. click link "View Load Status"
+16. wait for status page
+17. verify journals loaded successfully
+18. screenshot as "FACC-4-0230_complete.png"
+
+VERIFICATION:
+- [ ] EIB file uploaded successfully
+- [ ] All rows validated without errors
+- [ ] Journals created in Workday
+- [ ] All journals balanced
+- [ ] Processing completed without failures
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Submit_Accounting_Journal (Financial_Management WSDL)
+- Batch submission supports multiple journals per request
+- EIB provides spreadsheet-based alternative for non-technical users
 ================================================================================

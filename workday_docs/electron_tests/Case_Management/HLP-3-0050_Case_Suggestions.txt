@@ -2,34 +2,34 @@
 TEST ID: HLP-3-0050
 FUNCTIONAL AREA: Case Management
 TEST NAME: Case Suggestions
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
 TASK/STEP: Maintain Case Suggestions
 
 ELECTRON STEPS:
 1. enter search box as "Maintain Case Suggestions"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0050_complete.png"
+2. click search result containing "Maintain Case Suggestions"
+3. wait for page to load
+4. click button "Add"
+5. enter Suggestion Name as "Test Suggestion"
+6. enter Description as "Suggestion for case deflection"
+7. select Case Type as "Benefits Case"
+8. enter Suggestion Content as "Review your benefits information in the Benefits worklet"
+9. click button "OK"
+10. wait for page to load
+11. verify message contains "successfully"
+12. screenshot as "HLP-3-0050_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case Suggestion created successfully
+- Suggestion linked to appropriate case type
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Case Suggestions
-
-### 1. Kb Payroll Run Payroll (score: 2)
-Source: kb_payroll_run_payroll.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Payroll WSDL
-Cate...
+Source: Workday Resource Center - Case Management Setup
+Case Suggestions help deflect cases by providing self-service resources
+to employees before they create cases. Configure suggestions to direct
+users to relevant articles and Workday tasks.
 ================================================================================

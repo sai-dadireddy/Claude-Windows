@@ -2,8 +2,8 @@
 TEST ID: HCM-1-0430
 FUNCTIONAL AREA: HCM
 TEST NAME: Unions - Audit Union Setup and Membership
-CONFIDENCE: [LOW] Score: 1.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,42 +14,106 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Unions configured in tenant
+- Union memberships assigned to workers
+- Access to Union configuration tasks
 
 ELECTRON STEPS:
-1. enter search box as "Unions Report"
+1. enter search box as "Maintain Unions"
 2. wait for search results
-3. click search result containing "Unions Report"
+3. click search result containing "Maintain Unions"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0430_complete.png"
+5. verify list of configured unions displays
+6. screenshot as "HCM-1-0430_unions_list.png"
+7. click first union in list
+8. wait for page to load
+9. verify Union ID displays correctly
+10. verify Union Name displays correctly
+11. verify Status shows "Active"
+12. verify Allowed Membership Types configured
+13. screenshot as "HCM-1-0430_union_details.png"
+14. click button "Related Actions"
+15. click menu item "View Union Members"
+16. wait for page to load
+17. verify member list displays
+18. screenshot as "HCM-1-0430_members.png"
+19. enter search box as "Union Membership"
+20. wait for search results
+21. click search result containing "Union Membership"
+22. wait for page to load
+23. select Include Terminated Workers as "Yes"
+24. click button "OK"
+25. wait for report to load
+26. verify current workers with union membership display
+27. verify terminated workers with union membership display
+28. screenshot as "HCM-1-0430_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Maintain Unions task accessible
+- [ ] All configured unions display in list
+- [ ] Union ID format is correct
+- [ ] Union Name is accurate
+- [ ] Union Status shows Active for active unions
+- [ ] Allowed Membership Types configured (Full, Associate, etc.)
+- [ ] Union Dues configuration present (if applicable)
+- [ ] View Union Members shows current members
+- [ ] Union Membership report accessible
+- [ ] Current workers with membership display
+- [ ] Previous/Terminated workers display when filtered
+- [ ] Membership details accurate (start date, end date, type)
 - [ ] No error messages displayed
 
+UNION CONFIGURATION ITEMS:
+- Union ID: Unique identifier for union
+- Union Name: Full name of union organization
+- Status: Active/Inactive
+- Membership Types: Full Member, Associate, Retired, etc.
+- Dues Information: Deduction codes, rates
+- Collective Agreements: Associated agreements
+
+FIELD REFERENCE:
+- Union: Reference ID and name
+- Membership Type: Category of membership
+- Membership Start Date: When worker joined
+- Membership End Date: When membership ended (if applicable)
+- Status: Active/Inactive membership status
+- Dues Amount: Deduction amount (if applicable)
+
+ALTERNATIVE: Check Individual Worker
+1. enter search box as "{worker_name}"
+2. click search result containing "{worker_name}"
+3. wait for page to load
+4. click tab "Job"
+5. scroll to Union Membership section
+6. verify union membership details display
+7. screenshot as "HCM-1-0430_worker_union.png"
+
+ALTERNATIVE: Extract Union Data
+1. enter search box as "Extract Union Membership"
+2. wait for search results
+3. click search result containing "Extract Union Membership"
+4. wait for page to load
+5. select Include Inactive as "Yes"
+6. click button "OK"
+7. wait for extract to complete
+8. download results
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Union_Memberships
+- SOAP: Human_Resources.Get_Unions
+- REST: /unions (GET list of unions)
+- REST: /workers/{ID}/unionMemberships
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Unions Report
+UNION MEMBERSHIP TYPES:
+- Full Member: Voting rights, full benefits
+- Associate Member: Limited benefits
+- Retired Member: Former employee member
+- Honorary Member: Special designation
 
-### 1. expense (score: 1)
-Source: expense_v1.json
-```
-API: expense
-GET /values/bespokePrompt/expenseGroup/ - 
-GET /reports/{ID} - Retrieves a single instance of an Expense Report.
-GET /expenseItems/{ID} - Retrieves a single instance of an expense item.
-GET /entries/{ID} - Retrieves a single instance of a Quick Expense.
-PUT /entries/{ID} - Updates an ex...
-```
+ERROR HANDLING:
+- "Union not found": Verify union configuration
+- "Access denied": User needs HR administrator access
+- "No members found": Union may not have assigned members
+- "Report timeout": Narrow filter criteria
 
-### 2. timeTr...
 ================================================================================

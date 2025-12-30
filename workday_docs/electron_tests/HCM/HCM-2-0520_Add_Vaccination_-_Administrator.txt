@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0520
 FUNCTIONAL AREA: HCM
 TEST NAME: Add Vaccination - Administrator
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,41 +14,74 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Domain access: Worker Data: Health and Safety (Add)
+- Domain access: Personal Data: Vaccination Information (View)
+- Test worker available in tenant
+- Vaccination types configured in tenant
 
 ELECTRON STEPS:
 1. enter search box as "Add Vaccination"
 2. wait for search results
 3. click search result containing "Add Vaccination"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0520_complete.png"
+5. enter Worker field as "{test_worker_name}"
+6. wait for worker search results
+7. click worker result containing "{test_worker_name}"
+8. wait for page to load
+9. select Vaccination Type as "COVID-19"
+10. select Dose Number as "First Dose"
+11. enter Vaccination Date as "{current_date}"
+12. select Vaccination Status as "Completed"
+13. enter Vaccine Manufacturer as "Pfizer-BioNTech"
+14. enter Lot Number as "EK9788"
+15. scroll to bottom of page
+16. click button "Submit"
+17. wait for page to load
+18. verify message contains "successfully"
+19. screenshot as "HCM-2-0520_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Vaccination task initiated successfully
+- [ ] Worker selection completed without errors
+- [ ] Vaccination Type dropdown populated correctly
+- [ ] Dose Number options available (First Dose, Second Dose, Booster)
+- [ ] Vaccination Date accepts valid date format
+- [ ] Vaccination Status options available (Completed, Scheduled, Declined)
+- [ ] Optional fields (Manufacturer, Lot Number) accept input
+- [ ] Submit completes without errors
+- [ ] Confirmation message displays "Vaccination has been successfully added"
+- [ ] Business process steps triggered as configured
 - [ ] No error messages displayed
 
+FIELD REFERENCE:
+- Worker: Prompt field to select employee
+- Vaccination Type: Dropdown (COVID-19, Influenza, Hepatitis B, etc.)
+- Dose Number: Dropdown (First Dose, Second Dose, Booster, Single Dose)
+- Vaccination Date: Date picker (cannot be future date)
+- Vaccination Status: Dropdown (Completed, Scheduled, Declined, Exempt)
+- Vaccine Manufacturer: Text field (Pfizer-BioNTech, Moderna, Johnson & Johnson)
+- Lot Number: Text field
+- Administered By: Text field (healthcare provider name)
+- Facility/Location: Text field
+
+ALTERNATIVE ACCESS PATH:
+1. enter search box as "{worker_name}"
+2. click search result containing "{worker_name}"
+3. wait for page to load
+4. click button "Related Actions"
+5. click menu item "Personal"
+6. click menu item "Add Vaccination"
+7. wait for page to load
+8. (continue from step 9 above)
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Put_Worker operation (includes vaccination data)
+- REST: /workers/{ID}/personalData (PATCH for health data)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Add Vaccination
+ERROR HANDLING:
+- "Worker not found": Verify worker name/ID is correct
+- "Invalid date": Ensure date is not in future, correct format (MM/DD/YYYY)
+- "Missing required field": Vaccination type and date are required
+- "Insufficient permissions": User needs Health and Safety domain access
 
-### 1. Admin Guide Human Capital Management (score: 2)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information..............................................................
 ================================================================================

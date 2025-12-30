@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0050
 FUNCTIONAL AREA: HCM
 TEST NAME: Review Probation Period
-CONFIDENCE: [MEDIUM] Score: 5.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,38 +14,106 @@ EST. DURATION: 30 minutes
 
 PREREQUISITES:
 - User logged in with HR Partner / Manager permissions
-- Required data available in tenant
+- Probation Period types configured in tenant
+- Test worker available for probation assignment
+- Probation review questionnaire configured (if applicable)
+- Access to Probation Period tasks
 
 ELECTRON STEPS:
-1. enter search box as "Add Probation Period, Employee Probation Periods, Review Probation Period"
+1. enter search box as "Add Probation Period"
 2. wait for search results
-3. click search result containing "Add Probation Period, Employee Probation Periods, Review Probation Period"
+3. click search result containing "Add Probation Period"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0050_complete.png"
+5. enter Worker field as "{test_worker_name}"
+6. wait for worker search results
+7. click worker result containing "{test_worker_name}"
+8. wait for page to load
+9. select Probation Type as "Standard Probation"
+10. enter Probation Start Date as "{hire_date}"
+11. verify Probation End Date auto-calculates based on duration
+12. select Probation Reason as "New Hire"
+13. screenshot as "HCM-2-0050_add_probation.png"
+14. click button "Submit"
+15. wait for page to load
+16. verify message contains "successfully"
+17. screenshot as "HCM-2-0050_probation_added.png"
+18. enter search box as "Employee Probation Periods"
+19. wait for search results
+20. click search result containing "Employee Probation Periods"
+21. wait for page to load
+22. enter Worker field as "{test_worker_name}"
+23. click button "OK"
+24. wait for report to load
+25. verify worker appears with active probation
+26. screenshot as "HCM-2-0050_probation_report.png"
+27. click link "{test_worker_name}"
+28. click button "Related Actions"
+29. click menu item "Review Probation Period"
+30. wait for page to load
+31. complete probation review questionnaire (if displayed)
+32. select Outcome as "Complete Probation Successfully"
+33. click button "Submit"
+34. wait for page to load
+35. verify message contains "submitted"
+36. screenshot as "HCM-2-0050_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Add Probation Period task accessible
+- [ ] Worker selection completes successfully
+- [ ] Probation Type dropdown shows configured types
+- [ ] Probation End Date auto-calculates from start date and duration
+- [ ] Probation Reason dropdown shows configured reasons
+- [ ] Probation Period submits without errors
+- [ ] Employee Probation Periods report loads
+- [ ] Worker appears in report with correct probation details
+- [ ] Review Probation Period task accessible
+- [ ] Questionnaire displays (if configured)
+- [ ] Outcome options available (Complete, Extend, Terminate)
+- [ ] Probation review submits successfully
+- [ ] Approval routing triggers (if configured)
 - [ ] No error messages displayed
 
+PROBATION CONFIGURATION ITEMS:
+- Probation Types: Standard, Extended, Performance-Based
+- Probation Durations: 30/60/90 days, 3/6 months
+- Probation Reasons: New Hire, Transfer, Promotion
+- Probation Outcomes: Complete, Extend, Terminate, Change Job
+
+FIELD REFERENCE:
+- Worker: Employee prompt field
+- Probation Type: Dropdown of configured types
+- Probation Start Date: Date picker (usually hire date)
+- Probation End Date: Auto-calculated or manual entry
+- Probation Duration: Days/Months based on type
+- Probation Reason: Dropdown of reasons
+- Outcome: Final disposition dropdown
+
+ALTERNATIVE: Edit Existing Probation
+1. enter search box as "Edit Probation Period"
+2. wait for search results
+3. click search result containing "Edit Probation Period"
+4. wait for page to load
+5. enter Worker as "{test_worker_name}"
+6. modify Probation End Date as "{new_end_date}"
+7. click button "Submit"
+
+ALTERNATIVE: Extend Probation
+1. From Employee Probation Periods report
+2. Select worker with active probation
+3. click button "Related Actions"
+4. click menu item "Extend Probation Period"
+5. enter Extension Duration as "30 days"
+6. enter Extension Reason as "Performance review needed"
+7. click button "Submit"
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Put_Probation_Period
+- REST: /workers/{ID}/probationPeriods (POST)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Add Probation Period, Employee Probation Periods, Review Probation Period
+ERROR HANDLING:
+- "Worker not found": Verify worker name/ID
+- "Invalid date": Check date format and range
+- "Overlapping probation": Worker may already have active probation
+- "Missing configuration": Probation types need tenant setup
 
-### 1. Electron Test Samples (score: 5)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-===========================================================...
 ================================================================================

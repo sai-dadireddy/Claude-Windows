@@ -2,13 +2,48 @@
 TEST ID: FACC-4-0200
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Noncontrolling Interest Process
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Run a noncontrolling interest (NCI) process to calculate and record the
+minority ownership share of subsidiary company net income or equity.
+This is used in consolidated financial statements where parent does not
+own 100% of subsidiary.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Controller or Finance Manager role
+- Company hierarchy with parent/subsidiary relationships defined
+- Ownership percentages configured for NCI
+- Subsidiary net income calculated and posted
+- Target accounting period open
+
+ELECTRON STEPS:
+1. enter search box as "Run Noncontrolling Interest"
+2. wait for search results
+3. click search result containing "Run Noncontrolling Interest"
+4. wait for page to load
+5. select Parent Company as "{parent_company}"
+6. select Subsidiary as "{subsidiary_company}"
+7. enter Accounting Date as "{current_period_date}"
+8. select Period as "{fiscal_period}"
+9. verify NCI Percentage shows "{nci_percentage}"
+10. click button "Calculate"
+11. wait for calculation results
+12. verify NCI Amount calculated correctly
+13. click button "Submit"
+14. wait for confirmation
+15. verify message contains "submitted"
+16. screenshot as "FACC-4-0200_complete.png"
+
+VERIFICATION:
+- [ ] NCI calculation completed successfully
+- [ ] Ownership percentage applied correctly
+- [ ] NCI journal entries created
+- [ ] Entries balanced
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Submit_Noncontrolling_Interest (Financial_Management WSDL)
 ================================================================================

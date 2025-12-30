@@ -2,51 +2,123 @@
 TEST ID: HCM-2-0340
 FUNCTIONAL AREA: HCM
 TEST NAME: Wage Theft Prevention Notice
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
-Generate a Wage Theft Prevention Notice for one or more employees. Take note of approval and acknowledgement routings as applicable and confirm process and document output.
+Generate a Wage Theft Prevention Notice for one or more employees. Take note of approval and acknowledgement routings as applicable and confirm process and document output. This is required for California employers under the Wage Theft Prevention Act.
 
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 10 minutes
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data available in tenant
+- Wage Theft Prevention Notice template configured
+- California employees in tenant
+- Access to Generate Wage Theft Prevention Notice task
 
 ELECTRON STEPS:
 1. enter search box as "Generate Wage Theft Prevention Notice"
 2. wait for search results
 3. click search result containing "Generate Wage Theft Prevention Notice"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0340_complete.png"
+5. enter Worker field as "{california_employee_name}"
+6. wait for worker search results
+7. click worker result containing "{california_employee_name}"
+8. wait for page to load
+9. verify Notice Date defaults to current date
+10. verify Pay Rate displays correctly
+11. verify Pay Period displays (Weekly, Bi-Weekly, Semi-Monthly, Monthly)
+12. verify Employer Name displays correctly
+13. verify Employer Address displays
+14. verify Work Location displays
+15. screenshot as "HCM-2-0340_notice_details.png"
+16. scroll to verify all required sections
+17. verify Overtime rate displays (if applicable)
+18. verify Allowances/deductions display (if applicable)
+19. click button "Submit"
+20. wait for page to load
+21. verify message contains "submitted" or "generated"
+22. screenshot as "HCM-2-0340_submitted.png"
+23. verify approval routing (if configured)
+24. verify notice document generated
+25. click link to view/download notice
+26. verify PDF notice opens correctly
+27. screenshot as "HCM-2-0340_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Generate Wage Theft Prevention Notice task accessible
+- [ ] Worker selection completes successfully
+- [ ] Notice Date displays correctly
+- [ ] Pay Rate accurate (hourly, salary)
+- [ ] Pay Period matches payroll configuration
+- [ ] Employer legal name displays
+- [ ] Employer address accurate
+- [ ] Work location displays
+- [ ] Overtime rate calculated correctly (1.5x, 2x)
+- [ ] Meal/rest break policy included
+- [ ] Workers compensation information present
+- [ ] Notice submits without errors
+- [ ] Approval routing works (if configured)
+- [ ] PDF document generates
+- [ ] Employee acknowledgement process works
 - [ ] No error messages displayed
 
+NOTICE REQUIRED INFORMATION:
+- Pay Rate: Hourly rate or salary
+- Overtime Rate: 1.5x regular rate (after 8 hours/day, 40 hours/week)
+- Double Time Rate: 2x regular rate (after 12 hours/day, 7th consecutive day)
+- Pay Period: How often employee is paid
+- Payday: Regular payday schedule
+- Employer Name: Legal business name
+- Employer Address: Business address
+- Employer Phone: Contact number
+- Workers Compensation Carrier: Insurance provider name
+- Sick Leave: Accrual policy
+
+FIELD REFERENCE:
+- Worker: Employee prompt field
+- Notice Date: Date notice is generated
+- Pay Rate: Current compensation rate
+- Pay Period: Payment frequency
+- Employer: Legal entity name
+- Work Location: Primary work address
+- Overtime Eligible: Yes/No based on FLSA status
+
+ALTERNATIVE: Mass Generate
+1. enter search box as "Mass Generate Wage Theft Prevention Notices"
+2. wait for search results
+3. click search result containing "Mass Generate"
+4. wait for page to load
+5. select Location as "California"
+6. select Include All Eligible Employees as "Yes"
+7. click button "Submit"
+8. wait for batch to process
+
+ALTERNATIVE: Employee Acknowledgement
+1. Proxy as employee who received notice
+2. navigate to Inbox
+3. click Wage Theft Prevention Notice task
+4. review notice details
+5. click button "Acknowledge"
+6. verify acknowledgement recorded
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Generate_Worker_Document
+- REST: /workers/{ID}/documents (POST)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Generate Wage Theft Prevention Notice
+COMPLIANCE NOTES:
+- Required for all California non-exempt employees
+- Must be provided within 7 days of hire
+- Required when pay rate changes
+- Must include all mandatory information per Labor Code Section 2810.5
+- Employee must acknowledge receipt
 
-### 1. Kb Benefits Enrollment (score: 2)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
+ERROR HANDLING:
+- "Worker not found": Verify worker name/ID
+- "Missing pay rate": Worker compensation data incomplete
+- "Template not found": Configure notice template
+- "Location ineligible": Only required for California workers
 
-Source: Workday Community & WSDL Analysis
-URL: Workda...
 ================================================================================

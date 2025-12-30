@@ -2,41 +2,88 @@
 TEST ID: BEN-2-0240
 FUNCTIONAL AREA: Benefits
 TEST NAME: Dependent Care FSA on Birth/Adoption Event
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Change Benefits > Birth/Adoption Event
+TASK/STEP: Change Benefits > Birth/Adoption Event (Dependent Care FSA)
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Change Benefits > Birth/Adoption Event
+DESCRIPTION:
+Process a birth or adoption life event to enroll in or increase Dependent Care
+FSA contributions. This allows employee to set aside pre-tax dollars for
+childcare expenses for the new dependent.
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file co
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test employee eligible for Dependent Care FSA
+- Birth/adoption event date and child information available
+- Current plan year must allow mid-year FSA changes
 
 ELECTRON STEPS:
-1. enter search box as "Change Benefits > Birth/Adoption Event"
+1. enter search box as "Change Benefits"
 2. wait for search results
-3. click search result containing "Change Benefits > Birth/Adoption Event"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0240_complete.png"
+3. click search result containing "Change Benefits"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for worker profile to load
+7. select benefit event type as "Life Event"
+8. select life event reason as "Birth/Adoption"
+9. enter event date as "{birth_adoption_date}"
+10. click button "Continue"
+11. wait for benefits election page to load
+12. scroll to "Spending Accounts" section
+13. click link "Dependent Care FSA"
+14. wait for FSA details to load
+15. enter annual contribution as "{fsa_amount}"
+16. verify per-paycheck deduction calculates correctly
+17. click button "Elect"
+18. scroll to dependents section
+19. click button "Add Dependent"
+20. enter dependent first name as "{child_first_name}"
+21. enter dependent last name as "{child_last_name}"
+22. enter date of birth as "{child_dob}"
+23. select relationship as "Child"
+24. enter social security number as "{child_ssn}"
+25. select gender as "{child_gender}"
+26. click button "Save Dependent"
+27. verify new dependent appears in list
+28. click button "Review and Submit"
+29. wait for review page to load
+30. verify Dependent Care FSA election amount displays
+31. verify new dependent is listed
+32. click button "Submit"
+33. wait for confirmation
+34. verify message contains "Benefits enrollment submitted successfully"
+35. screenshot as "BEN-2-0240_complete.png"
+
+POST-SUBMISSION VERIFICATION:
+36. enter search box as "View Benefit Elections"
+37. wait for search results
+38. click search result containing "View Benefit Elections"
+39. enter worker as "{test_employee_id}"
+40. verify Dependent Care FSA shows elected amount
+41. verify new dependent appears in dependents list
+42. screenshot as "BEN-2-0240_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Birth/Adoption life event successfully initiated
+- [ ] Dependent Care FSA election processed
+- [ ] Annual contribution amount set correctly
+- [ ] New dependent added to employee record
+- [ ] Payroll deduction calculated correctly
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Employee enrolled in Dependent Care FSA with specified contribution amount,
+new child added as dependent, and payroll deductions scheduled.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Dependent Care FSA annual limit is $5,000 (or $2,500 if married filing separately)
+- Birth/adoption event has 31-day window for changes
+- Child must be under age 13 for Dependent Care FSA eligibility
+- FSA elections are prorated based on event date
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Election (Dependent Care FSA enrollment)
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

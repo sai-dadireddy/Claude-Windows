@@ -1,0 +1,183 @@
+================================================================================
+WORKDAY KB ARTICLE: CALCULATION EXCEPTION AUDIT (ABSENCE)
+================================================================================
+
+Source: Workday Absence Management WSDL + Community Documentation
+Category: Absence Management / Time Off / Auditing
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Calculation Exception Audit report allows Absence Administrators to review
+and audit exceptions that occurred during time off balance calculations. This
+includes identifying accrual calculation errors, balance discrepancies, and
+any exceptions that require manual intervention.
+
+Business Process: Run Calculation Exception Audit Report
+Functional Area: Absence Management
+Initiator: Absence Administrator / HR Administrator
+Typical Duration: 5-10 minutes (depending on data volume)
+
+Common Exception Types:
+- Accrual calculation failures
+- Balance override conflicts
+- Retroactive time off adjustments
+- Plan configuration changes affecting balances
+- Worker position changes impacting eligibility
+- Time off plan assignment errors
+- Carryover calculation exceptions
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. REPORT PARAMETERS
+   - Effective Date Range (From/To)
+   - Worker(s) - specific employees or all
+   - Time Off Plan(s) - filter by plan
+   - Exception Type - type of calculation error
+   - Status - Resolved/Unresolved
+
+2. EXCEPTION DETAILS
+   - Worker ID and Name
+   - Time Off Plan
+   - Exception Date
+   - Exception Type
+   - Original Calculation
+   - Expected Calculation
+   - Variance
+   - Root Cause
+
+3. RESOLUTION OPTIONS
+   - Manual Balance Adjustment
+   - Recalculate Accrual
+   - Override Balance
+   - Mark as Resolved/Ignored
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: NAVIGATE TO CALCULATION EXCEPTION AUDIT
+------------------------------------------------
+Navigation: Search -> "Calculation Exception Audit"
+
+Actions:
+1. Enter "Calculation Exception Audit" in global search
+2. Click on the task from search results
+3. Wait for the report parameters page to load
+
+STEP 2: SET REPORT PARAMETERS
+-----------------------------
+Required Fields:
+- Effective Date From: Start date for audit period
+- Effective Date To: End date for audit period
+
+Optional Fields:
+- Worker: Specific employee(s) to audit (leave blank for all)
+- Time Off Plan: Filter by specific plan(s)
+- Exception Type: Filter by type of exception
+- Include Resolved: Whether to show already resolved exceptions
+
+STEP 3: RUN THE REPORT
+----------------------
+Actions:
+1. Review all filter parameters
+2. Click "OK" or "Run Report" button
+3. Wait for report generation
+
+STEP 4: REVIEW EXCEPTIONS
+-------------------------
+Report Columns:
+- Worker (Employee ID and Name)
+- Time Off Plan
+- Exception Date
+- Exception Type
+- Calculated Value
+- Expected Value
+- Difference
+- Status
+- Action Required
+
+Exception Analysis:
+- Review each exception row
+- Identify root cause
+- Determine if action needed
+- Document findings
+
+STEP 5: RESOLVE EXCEPTIONS (IF NEEDED)
+--------------------------------------
+For each exception requiring action:
+1. Click on worker name or exception row
+2. Navigate to related actions
+3. Choose appropriate resolution:
+   - Adjust Time Off Balance
+   - Put Absence Input
+   - Override Balance
+   - Mark as Resolved
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors (Workday UI):
+- Search box: input[data-automation-id="globalSearchInput"]
+- Date From: input[data-automation-id="effectiveDateFrom"]
+- Date To: input[data-automation-id="effectiveDateTo"]
+- Worker prompt: input[data-automation-id="workerInput"]
+- OK button: button[data-automation-id="REPORT_OK"]
+- Export button: button[data-automation-id="exportButton"]
+
+Wait Conditions:
+- Wait for search results to appear
+- Wait for report to load (may take 5-30 seconds)
+- Wait for data grid to populate
+
+Screenshot Opportunities:
+- Report parameters (before running)
+- Report results (exception list)
+- Individual exception details
+- Resolution confirmation
+
+API Operations (Absence_Management WSDL):
+- Get_Absence_Inputs: Retrieve absence input data
+- Put_Absence_Input: Create/update adjustments
+- Get_Time_Off_Plan_Balances: Check current balances
+- Get_Override_Balances: Check existing overrides
+- Put_Override_Balance: Apply balance overrides
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Request Time Off: Employee time off requests
+- Adjust Time Off Balance: Manual balance corrections
+- Put Absence Input: Accrual adjustments/overrides
+- Time Off Plan Configuration: Plan setup and rules
+- Carryover Processing: Year-end balance transfers
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Run audit weekly or after major configuration changes
+2. Focus on high-variance exceptions first
+3. Document all manual corrections
+4. Review patterns in exception types
+5. Address root causes, not just symptoms
+6. Use effective dating for corrections
+7. Verify corrections in subsequent audit runs
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Common Issues:
+- No data returned: Verify date range and filters
+- Timeout: Reduce date range or worker scope
+- Permission denied: Verify Absence Administrator role
+- Large result set: Export to Excel for analysis
+
+================================================================================

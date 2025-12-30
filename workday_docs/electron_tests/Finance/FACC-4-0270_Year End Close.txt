@@ -2,13 +2,57 @@
 TEST ID: FACC-4-0270
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Year End Close
-CONFIDENCE: [LOW] Score: 0.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf + kb_finance_journal_entry.txt]
 ================================================================================
 
-STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+DESCRIPTION:
+Execute the year-end close process to finalize accounting for the fiscal
+year. This closes all periods, calculates retained earnings from P&L
+accounts, and rolls forward balance sheet balances to the new fiscal year.
 
-SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+PREREQUISITES:
+- User logged in with Controller or CFO role
+- All 12 monthly periods closed
+- Year-end adjustments and accruals completed
+- Audit adjustments posted
+- All approval workflows completed
+- Intercompany settlements finalized
+
+ELECTRON STEPS:
+1. enter search box as "Close Fiscal Year"
+2. wait for search results
+3. click search result containing "Close Fiscal Year"
+4. wait for page to load
+5. select Company as "{test_company}"
+6. select Fiscal Year as "{fiscal_year_to_close}"
+7. click button "Validate Readiness"
+8. wait for validation results
+9. verify all months closed
+10. verify no open intercompany balances
+11. verify retained earnings account configured
+12. click button "Preview Close"
+13. wait for preview
+14. verify retained earnings calculation
+15. verify balance sheet rollforward amounts
+16. click button "Close Year"
+17. wait for close confirmation dialog
+18. click button "Confirm" to proceed
+19. wait for year-end processing
+20. verify message contains "year closed" or "successfully"
+21. verify fiscal year status shows "Closed"
+22. screenshot as "FACC-4-0270_complete.png"
+
+VERIFICATION:
+- [ ] Year-end close completed successfully
+- [ ] All periods in year marked as Closed
+- [ ] Retained earnings journal created
+- [ ] P&L accounts zeroed
+- [ ] Balance sheet balances rolled to new year
+- [ ] New fiscal year periods open
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Close_Fiscal_Year (Financial_Management WSDL)
+- Get_Year_End_Close_Status for validation
 ================================================================================

@@ -2,19 +2,49 @@
 TEST ID: FACC-1-0370
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Verify Transaction Tax Categories
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG - Admin-Guide-Financial-Management.pdf]
 ================================================================================
 
+DESCRIPTION:
+Verify that transaction tax categories are correctly configured in Workday.
+Tax categories determine how taxes are calculated, reported, and recovered
+for different types of transactions (sales, purchases, services, etc.).
+
+PREREQUISITES:
+- User logged in with Tax Administrator or Finance Manager role
+- Tax categories created during implementation
+- Tax rates and rules configured
+
 ELECTRON STEPS:
-1. enter search box as "Tax Categories Report"
+1. enter search box as "View Tax Categories"
 2. wait for search results
-3. click search result
-4. wait for report page
-5. set report parameters
-6. click "OK" or "Run" button
-7. screenshot as "FACC-1-0370_complete.png"
+3. click search result containing "View Tax Categories" or "Maintain Tax Categories"
+4. wait for page to load
+5. verify list of tax categories displayed
+6. click on tax category "{tax_category_name}" to view details
+7. wait for detail page
+8. verify Tax Category Code is correct
+9. verify Tax Category Name is correct
+10. verify Tax Type (Sales, Use, VAT, etc.) is correct
+11. verify Tax Applicability settings
+12. verify Recovery Rate if applicable
+13. verify Tax Authority assignment
+14. verify Effective Date range
+15. click button "Related Actions"
+16. click menu item "View Tax Rates"
+17. verify tax rates assigned to category
+18. screenshot as "FACC-1-0370_complete.png"
 
 VERIFICATION:
-- [ ] Transaction completed successfully
+- [ ] Tax categories listed correctly
+- [ ] Tax category details accurate
+- [ ] Tax types and rates configured
+- [ ] Recovery rules set up (if applicable)
+- [ ] Tax authorities properly linked
 - [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Tax_Categories (Financial_Management WSDL)
+- Get_Tax_Rates for rate information
 ================================================================================

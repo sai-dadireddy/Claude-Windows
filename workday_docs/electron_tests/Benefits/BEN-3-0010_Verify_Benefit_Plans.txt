@@ -2,41 +2,113 @@
 TEST ID: BEN-3-0010
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Benefit Plans
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Benefit Plans
+TASK/STEP: Verify Benefit Plans Configuration
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Plans
+DESCRIPTION:
+Review and verify all configured benefit plans including medical, dental,
+vision, life insurance, disability, FSA, HSA, and retirement plans.
+Ensure plan details, costs, and eligibility are correct.
 
-### 1. Electron Test Samples (score: 7)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron 
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Benefit plans already configured in system
+- Expected plan details available for comparison
 
 ELECTRON STEPS:
-1. enter search box as "Benefit Plans"
+1. enter search box as "View All Benefit Plans"
 2. wait for search results
-3. click search result containing "Benefit Plans"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0010_complete.png"
+3. click search result containing "View All Benefit Plans"
+4. wait for page to load
+5. verify list of benefit plans displays
+6. screenshot as "BEN-3-0010_all_plans.png"
+
+VERIFY MEDICAL PLANS:
+7. click filter "Plan Type"
+8. select filter value as "Medical"
+9. wait for filtered results
+10. verify medical plans listed with correct names
+11. click first medical plan "{medical_plan_name}"
+12. wait for plan details to load
+13. verify plan type shows "Medical"
+14. verify coverage target displays correctly
+15. verify premium costs match expected values
+16. verify benefit group assignment is correct
+17. screenshot as "BEN-3-0010_medical.png"
+18. click button "Back"
+
+VERIFY DENTAL PLANS:
+19. click filter "Plan Type"
+20. select filter value as "Dental"
+21. wait for filtered results
+22. click first dental plan "{dental_plan_name}"
+23. verify plan details and costs
+24. screenshot as "BEN-3-0010_dental.png"
+25. click button "Back"
+
+VERIFY LIFE INSURANCE PLANS:
+26. click filter "Plan Type"
+27. select filter value as "Life Insurance"
+28. wait for filtered results
+29. click first life insurance plan "{life_plan_name}"
+30. verify coverage calculation method
+31. verify multiplier if salary-based
+32. screenshot as "BEN-3-0010_life.png"
+33. click button "Back"
+
+VERIFY RETIREMENT PLANS:
+34. click filter "Plan Type"
+35. select filter value as "Retirement Savings"
+36. wait for filtered results
+37. click first retirement plan "{retirement_plan_name}"
+38. verify contribution limits displayed
+39. verify employer match formula
+40. screenshot as "BEN-3-0010_retirement.png"
+
+FINAL VERIFICATION:
+41. enter search box as "Benefit Plan Summary Report"
+42. wait for search results
+43. click search result containing "Benefit Plan Summary Report"
+44. wait for report to load
+45. verify all plan types represented
+46. verify plan count matches expected
+47. screenshot as "BEN-3-0010_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] All benefit plans listed correctly
+- [ ] Medical plans verified with correct costs
+- [ ] Dental plans verified with correct costs
+- [ ] Life insurance plans verified with correct coverage
+- [ ] Retirement plans verified with contribution limits
+- [ ] Benefit group assignments correct
+- [ ] No missing or duplicate plans
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+All benefit plans verified with correct configuration including plan names,
+types, costs, coverage details, and benefit group assignments.
+
+PLAN TYPES TO VERIFY:
+- Medical (PPO, HMO, HDHP)
+- Dental (PPO, DMO)
+- Vision
+- Life Insurance (Basic, Supplemental, Dependent)
+- Disability (STD, LTD)
+- Health FSA
+- Dependent Care FSA
+- HSA
+- 401(k) / Retirement
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Document any discrepancies for correction
+- Verify effective dates are correct
+- Check for plans that should be inactive
+- Compare to carrier contracts
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Plans
+- REST: /benefitsAdmin/v1/benefitPlans
 ================================================================================

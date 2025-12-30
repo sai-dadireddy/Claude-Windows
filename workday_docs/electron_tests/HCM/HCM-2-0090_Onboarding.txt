@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0090
 FUNCTIONAL AREA: HCM
 TEST NAME: Onboarding
-CONFIDENCE: [MEDIUM] Score: 6.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -14,42 +14,120 @@ EST. DURATION: 30 minutes
 
 PREREQUISITES:
 - User logged in with Employee / Contingent Worker As Self permissions
-- Required data available in tenant
+- Recently hired worker from HCM-2-0040 test
+- Onboarding Setup configured in tenant
+- Onboarding tasks assigned to new hire
+- Access to proxy as new hire (if testing as administrator)
 
 ELECTRON STEPS:
-1. enter search box as "Inbox"
+1. enter search box as "Proxy"
 2. wait for search results
-3. click search result containing "Inbox"
+3. click search result containing "Proxy"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0090_complete.png"
+5. enter Worker field as "{new_hire_worker_name}"
+6. click worker result containing "{new_hire_worker_name}"
+7. click button "OK"
+8. wait for page to load
+9. verify proxied as new hire (banner shows proxy status)
+10. screenshot as "HCM-2-0090_proxy_as_newhire.png"
+11. enter search box as "Inbox"
+12. wait for search results
+13. click search result containing "Inbox"
+14. wait for page to load
+15. verify Onboarding tasks appear in inbox
+16. screenshot as "HCM-2-0090_inbox_tasks.png"
+17. click task "Personal Information Review"
+18. wait for page to load
+19. verify personal information displays correctly
+20. click button "Submit"
+21. wait for page to load
+22. screenshot as "HCM-2-0090_personal_info.png"
+23. click task "Emergency Contacts"
+24. wait for page to load
+25. enter Contact Name as "Emergency Contact Name"
+26. enter Phone as "555-123-4567"
+27. select Relationship as "Spouse"
+28. click button "Submit"
+29. wait for page to load
+30. screenshot as "HCM-2-0090_emergency_contact.png"
+31. click task "Photo Upload" (if present)
+32. wait for page to load
+33. click button "Skip" or complete upload
+34. screenshot as "HCM-2-0090_photo.png"
+35. click task "Direct Deposit" (if present)
+36. wait for page to load
+37. complete payment election or click button "Skip"
+38. screenshot as "HCM-2-0090_direct_deposit.png"
+39. click task "Tax Elections" (if present)
+40. wait for page to load
+41. complete tax form or click button "Skip"
+42. screenshot as "HCM-2-0090_tax.png"
+43. enter search box as "Onboarding Dashboard"
+44. wait for search results
+45. click search result containing "Onboarding Dashboard"
+46. wait for page to load
+47. verify dashboard shows onboarding progress
+48. verify completed tasks marked as done
+49. screenshot as "HCM-2-0090_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Proxy to new hire successful
+- [ ] Inbox displays onboarding tasks
+- [ ] Task ordering matches configuration
+- [ ] Personal Information Review task accessible
+- [ ] Emergency Contacts task accessible
+- [ ] Contact information saves successfully
+- [ ] Photo Upload task available (if configured)
+- [ ] Direct Deposit task available (if configured)
+- [ ] Tax Elections task available (if configured)
+- [ ] Tasks can be submitted without errors
+- [ ] Approval routing triggers for applicable tasks
+- [ ] Onboarding Dashboard accessible
+- [ ] Dashboard shows accurate progress
+- [ ] Completion notifications received
 - [ ] No error messages displayed
 
+COMMON ONBOARDING TASKS:
+- Personal Information Review
+- Emergency Contacts
+- Photo Upload
+- Direct Deposit / Payment Elections
+- Tax Elections (W-4, State forms)
+- Policy Acknowledgments
+- I-9 Section 1
+- Benefits Enrollment
+- Training Assignments
+- Equipment Request
+
+FIELD REFERENCE (Emergency Contacts):
+- Contact Name: Full name of emergency contact
+- Relationship: Dropdown (Spouse, Parent, Sibling, Friend, Other)
+- Phone Number: Primary contact number
+- Alternate Phone: Secondary contact number
+- Address: Contact address (optional)
+
+ONBOARDING DASHBOARD ELEMENTS:
+- Progress Bar: Shows completion percentage
+- Task List: Ordered list of assigned tasks
+- Due Dates: Task deadlines
+- Status Indicators: Complete/Incomplete/In Progress
+- Welcome Message: Customized welcome content
+
+ALTERNATIVE: Access Without Proxy
+1. Login as new hire directly (using credentials from account creation)
+2. Navigate to Inbox
+3. Complete onboarding tasks as self-service
+4. (follow steps 11-49 above)
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Workers (includes onboarding status)
+- REST: /workers/{ID}/onboardingTasks
+- REST: /workers/{ID}/emergencyContacts (POST)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Inbox
+ERROR HANDLING:
+- "Proxy access denied": User lacks proxy permissions
+- "Task not found": Onboarding may be complete or not configured
+- "Validation error": Required fields missing on task
+- "Workflow failed": Check business process configuration
 
-### 1. Kb Absence Time Off (score: 6)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Management...
-```
-
-#...
 ================================================================================

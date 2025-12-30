@@ -2,41 +2,97 @@
 TEST ID: BEN-2-0320
 FUNCTIONAL AREA: Benefits
 TEST NAME: Dependent Eligibility
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Dependent Eligibility
+TASK/STEP: Configure Dependent Eligibility Rules
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Dependent Eligibility
+DESCRIPTION:
+Configure eligibility rules for dependents to be covered under benefit plans.
+Define age limits for children, domestic partner requirements, and
+documentation requirements for dependent verification.
 
-### 1. Electron Test Samples (score: 7)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample E
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Benefit plans configured
+- Understanding of dependent eligibility requirements per plan
 
 ELECTRON STEPS:
-1. enter search box as "Dependent Eligibility"
+1. enter search box as "Maintain Dependent Eligibility Rules"
 2. wait for search results
-3. click search result containing "Dependent Eligibility"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0320_complete.png"
+3. click search result containing "Maintain Dependent Eligibility Rules"
+4. wait for page to load
+5. click button "Create Dependent Eligibility Rule"
+6. enter rule name as "{eligibility_rule_name}"
+7. select relationship types as "Spouse", "Child", "Domestic Partner"
+8. scroll to child eligibility section
+9. enter maximum age for child as "26"
+10. select age exception as "Full-Time Student"
+11. enter student age limit as "26"
+12. enter disabled child age limit as "No Limit"
+13. scroll to spouse eligibility section
+14. select spouse verification required as "Yes"
+15. select verification document type as "Marriage Certificate"
+16. scroll to domestic partner section
+17. select domestic partner verification required as "Yes"
+18. select verification document type as "Domestic Partnership Affidavit"
+19. click button "Submit"
+20. wait for confirmation
+21. verify message contains "Dependent eligibility rule created"
+22. screenshot as "BEN-2-0320_complete.png"
+
+ASSIGN RULE TO BENEFIT PLAN:
+23. enter search box as "Edit Benefit Plan"
+24. wait for search results
+25. click search result containing "Edit Benefit Plan"
+26. enter benefit plan as "{benefit_plan_name}"
+27. scroll to dependent eligibility section
+28. select dependent eligibility rule as "{eligibility_rule_name}"
+29. click button "Submit"
+30. wait for confirmation
+31. screenshot as "BEN-2-0320_assigned.png"
 
 VERIFICATION:
-- [ ] nan
+32. enter search box as "View Dependent Eligibility"
+33. wait for search results
+34. click search result containing "View Dependent Eligibility"
+35. enter benefit plan as "{benefit_plan_name}"
+36. verify child age limit displays correctly
+37. verify spouse verification requirement displayed
+38. verify domestic partner rules displayed
+39. screenshot as "BEN-2-0320_verification.png"
+
+VERIFICATION:
+- [ ] Dependent eligibility rule editor opened
+- [ ] Child age limits configured
+- [ ] Student exception configured
+- [ ] Disabled child exception configured
+- [ ] Spouse verification requirements set
+- [ ] Domestic partner requirements set
+- [ ] Rule assigned to benefit plan
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Dependent eligibility rules configured with appropriate age limits,
+verification requirements, and assigned to benefit plans.
+
+COMMON DEPENDENT ELIGIBILITY CRITERIA:
+- Child maximum age (typically 26 for health plans - ACA requirement)
+- Full-time student extension
+- Disabled child no age limit
+- Spouse - legal marriage required
+- Domestic Partner - varies by state/company policy
+- Verification documentation requirements
+- Dependent cannot be covered under multiple plans
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- ACA requires coverage for children to age 26
+- Dependent verification may be required annually
+- HIPAA considerations for medical information
+- State laws may vary for domestic partners
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Dependent_Eligibility_Rule
+- REST: /benefitsAdmin/v1/dependentEligibilityRules
 ================================================================================

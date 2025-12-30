@@ -1,0 +1,120 @@
+================================================================================
+WORKDAY KB ARTICLE: FLSA CALENDAR CONFIGURATION
+================================================================================
+
+Source: Workday Payroll Administration
+Category: Payroll - FLSA Compliance
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+FLSA (Fair Labor Standards Act) calendars define the work week periods for
+overtime calculation purposes. The FLSA requires that overtime be calculated
+based on a fixed 7-day work period, which may differ from the pay period.
+
+FLSA calendars are critical for:
+- Determining when the 7-day work week starts
+- Calculating overtime correctly
+- Ensuring compliance with federal labor laws
+- Managing different work week starts for different employee groups
+
+Business Process: View/Maintain FLSA Work Period Calendar
+Functional Area: Payroll Administration
+Initiator: Payroll Administrator
+Typical Duration: 5-10 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. FLSA CALENDAR ELEMENTS
+   - Calendar Name
+   - Work Week Start Day (Sunday through Saturday)
+   - Work Week Start Time (typically midnight)
+   - Effective Date
+   - Status (Active/Inactive)
+
+2. FLSA CALENDAR RULES
+   - Eligibility criteria (which workers use which calendar)
+   - Worker attributes for assignment
+   - Priority order (when multiple rules may apply)
+   - Ensures single calendar per worker
+
+3. OVERTIME CALCULATION
+   - Weekly overtime threshold (typically 40 hours)
+   - Daily overtime rules (state-specific)
+   - Double-time rules (state-specific)
+   - Comp time alternatives
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+View FLSA Work Period Calendar:
+1. Search: "View FLSA Work Period Calendar"
+2. Review all configured calendars
+3. Verify start day for each calendar
+
+View FLSA Work Period Calendar Rules:
+1. Search: "View FLSA Work Period Calendar Rules"
+2. Review assignment rules
+3. Verify worker eligibility criteria
+
+Create FLSA Work Period Calendar:
+1. Search: "Create FLSA Work Period Calendar"
+2. Enter calendar name
+3. Select work week start day
+4. Set effective date
+5. Submit
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+FLSA Calendar:
+- All required calendars are configured
+- Work week start day is correct for each group
+- Calendars are active and effective-dated correctly
+- No duplicate calendars for same population
+
+FLSA Calendar Rules:
+- Rules cover all non-exempt employees
+- Each worker matches exactly one rule
+- Rule priority prevents conflicts
+- Eligibility criteria are accurate
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+View FLSA Calendar:
+1. enter search box as "View FLSA Work Period Calendar"
+2. wait for search results
+3. click search result containing "View FLSA Work Period Calendar"
+4. wait for page to load
+5. verify calendar list displays
+6. verify work week start day column visible
+7. screenshot as "{test_id}_flsa_calendars.png"
+
+View FLSA Calendar Rules:
+1. enter search box as "View FLSA Work Period Calendar Rules"
+2. wait for search results
+3. click search result containing "View FLSA Work Period Calendar Rules"
+4. wait for page to load
+5. verify rules table displays
+6. verify eligibility criteria column visible
+7. scroll to review all rules
+8. screenshot as "{test_id}_flsa_rules.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- FLSA Work Period Calendar Assignments
+- Workers by FLSA Calendar
+- FLSA Overtime Calculation Audit
+- Work Week Summary Report
+
+================================================================================

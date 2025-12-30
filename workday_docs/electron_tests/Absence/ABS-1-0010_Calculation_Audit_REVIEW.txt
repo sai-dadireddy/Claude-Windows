@@ -1,49 +1,55 @@
 ================================================================================
 TEST ID: ABS-1-0010
 FUNCTIONAL AREA: Absence
-TEST NAME: Calculation Audit
-STATUS: ⚠️ NEEDS SME REVIEW
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+TEST NAME: Calculation Exception Audit
+STATUS: ACCEPTED
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_absence_calculation_exception_audit.txt]
 ================================================================================
 
 DESCRIPTION:
-Task/Step: Calculation Exception Audit
+Task/Step: Calculation Exception Audit - Review and audit absence calculation
+exceptions to identify accrual errors, balance discrepancies, and time off
+plan configuration issues.
 
 PREREQUISITES:
 - User logged in with Absence Administrator permissions
-- Required permissions for Absence tasks
+- Required security role: Absence Administrator or HR Administrator
+- Date range for audit period identified
 
 ELECTRON STEPS:
 1. enter search box as "Calculation Exception Audit"
 2. wait for search results
-3. click first search result
+3. click first search result containing "Calculation Exception Audit"
 4. wait for page to load
-5. [NEEDS SME REVIEW] - Complete required fields based on business process
-6. [NEEDS SME REVIEW] - Submit form
-7. screenshot as "ABS-1-0010_complete.png"
+5. screenshot as "ABS-1-0010_parameters.png"
+6. enter Effective Date From as "{audit_start_date}"
+7. enter Effective Date To as "{audit_end_date}"
+8. click button "OK"
+9. wait for report to load
+10. wait 5 seconds
+11. screenshot as "ABS-1-0010_results.png"
+12. verify page contains "Calculation Exception Audit"
+13. screenshot as "ABS-1-0010_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Report parameters page loads successfully
+- [ ] Date range filters applied correctly
+- [ ] Report generates without errors
+- [ ] Exception list displays with worker details
 - [ ] No error messages displayed
 - [ ] Task completed successfully
+
+DATA REQUIREMENTS:
+- audit_start_date: Start of audit period (e.g., first of current month)
+- audit_end_date: End of audit period (e.g., current date)
 
 WORKDAY ROLE: Absence Administrator
 EST. EFFORT: 5 minutes
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Calculation Exception Audit
+API ALTERNATIVE:
+- SOAP: Get_Absence_Inputs (Absence_Management)
+- SOAP: Get_Time_Off_Plan_Balances (Absence_Management)
+- SOAP: Get_Override_Balances (Absence_Management)
 
-### 1. Kb Expense Report (score: 3)
-Source: kb_expense_report.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE EXPENSE REPORT BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Spend Managemen...
 ================================================================================

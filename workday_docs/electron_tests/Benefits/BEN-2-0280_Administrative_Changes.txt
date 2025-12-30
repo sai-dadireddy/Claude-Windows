@@ -2,39 +2,101 @@
 TEST ID: BEN-2-0280
 FUNCTIONAL AREA: Benefits
 TEST NAME: Administrative Changes
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
 TASK/STEP: Change Benefits > Administrative Change/Correction
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Change Benefits > Administrative Change/Correction
+DESCRIPTION:
+Process an administrative change to correct benefit elections, update
+enrollment records, or make changes outside of normal enrollment windows.
+Used by Benefits Administrators for corrections and special circumstances.
 
-### 1. Kb Hcm Change Job (score: 4)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analy
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Test employee with active benefit elections
+- Reason for administrative change documented
+- Approval from management (if required by policy)
 
 ELECTRON STEPS:
-1. enter search box as "Change Benefits > Administrative Change/Correction"
+1. enter search box as "Change Benefits"
 2. wait for search results
-3. click search result containing "Change Benefits > Administrative Change/Correction"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0280_complete.png"
+3. click search result containing "Change Benefits"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for worker profile to load
+7. select benefit event type as "Administrative"
+8. select administrative reason as "{admin_reason}"
+9. enter effective date as "{effective_date}"
+10. enter comments as "{change_justification}"
+11. click button "Continue"
+12. wait for benefits election page to load
+13. verify current elections displayed
+14. click link "{plan_to_modify}" in benefits section
+15. wait for plan details to load
+16. select coverage level as "{new_coverage_level}"
+17. click button "Elect"
+18. scroll to review changes section
+19. verify changes highlighted
+20. click button "Review and Submit"
+21. wait for review page to load
+22. verify administrative change reason displayed
+23. verify effective date correct
+24. verify benefit changes listed
+25. click button "Submit"
+26. wait for confirmation
+27. verify message contains "Administrative change submitted"
+28. screenshot as "BEN-2-0280_complete.png"
+
+APPROVAL WORKFLOW (if required):
+29. enter search box as "My Tasks"
+30. wait for search results
+31. click search result containing "My Tasks"
+32. click inbox item for benefit change approval
+33. verify administrative change details displayed
+34. click button "Approve"
+35. wait for approval confirmation
+36. screenshot as "BEN-2-0280_approved.png"
+
+POST-SUBMISSION VERIFICATION:
+37. enter search box as "View Benefit Elections"
+38. wait for search results
+39. click search result containing "View Benefit Elections"
+40. enter worker as "{test_employee_id}"
+41. verify updated benefit elections
+42. verify effective date matches administrative change
+43. screenshot as "BEN-2-0280_verification.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Administrative change initiated successfully
+- [ ] Change reason documented
+- [ ] Benefit elections updated correctly
+- [ ] Effective date applied properly
+- [ ] Approval workflow completed (if applicable)
+- [ ] Payroll deductions adjusted
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Administrative benefit change processed, elections updated with proper
+effective date, approval workflow completed if required.
+
+COMMON ADMINISTRATIVE REASONS:
+- Correction of enrollment error
+- Late enrollment exception
+- Carrier file correction
+- Dependent eligibility correction
+- Rate/tier correction
+- Plan design change
+- Qualifying event retroactive adjustment
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Administrative changes bypass normal enrollment rules
+- Audit trail maintained for compliance
+- May require management approval based on policy
+- Some changes may trigger carrier file retransmission
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Put_Benefit_Election (with administrative override)
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

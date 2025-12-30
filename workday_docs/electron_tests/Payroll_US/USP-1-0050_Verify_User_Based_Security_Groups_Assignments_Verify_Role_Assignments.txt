@@ -3,50 +3,81 @@ TEST ID: USP-1-0050
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
 CONFIDENCE: [HIGH] Score: 9.0/10
-SOURCE: [RAG]
+SOURCE: [KB Article: kb_payroll_security_groups.txt]
 ================================================================================
 
 DESCRIPTION:
 Verify the correct workers are assigned to Payroll Security Groups (i.e. Payroll Administrator, Payroll Administrator FRA, Payroll Calculations Administrator, Payroll Integrations Administrator, Payroll Partner, Organization Partner (on Pay Groups), Payroll Settlement Specialist and Payroll Auditor)
 
-WORKDAY ROLE: Payroll Administrator /
-Security Administrator
+WORKDAY ROLE: Security Administrator
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
-- User logged in with Payroll Administrator /
-Security Administrator permissions
-- System is in proper state for payroll operations
+- User logged in with Security Administrator permissions
+- List of expected users for each security group
+- List of expected role assignments by organization
 
 ELECTRON STEPS:
-1. enter search box as "Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Base Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s)."
+1. enter search box as "View Security Group"
 2. wait for search results
-3. click search result containing "Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Base Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s)."
+3. click search result containing "View Security Group"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0050_complete.png"
+5. verify page title contains "Security Group"
+6. select security group dropdown as "Payroll Administrator"
+7. wait for group details to load
+8. click tab "Members"
+9. wait for members list to load
+10. verify member list displays assigned users
+11. scroll to view all members
+12. screenshot as "USP-1-0050_payroll_admin.png"
+13. select security group dropdown as "Payroll Calculations Administrator"
+14. wait for group details to load
+15. click tab "Members"
+16. verify member list displays
+17. screenshot as "USP-1-0050_calc_admin.png"
+18. select security group dropdown as "Payroll Integrations Administrator"
+19. wait for group details to load
+20. click tab "Members"
+21. screenshot as "USP-1-0050_integrations_admin.png"
+22. select security group dropdown as "Payroll Settlement Specialist"
+23. wait for group details to load
+24. click tab "Members"
+25. screenshot as "USP-1-0050_settlement_specialist.png"
+26. select security group dropdown as "Payroll Auditor"
+27. wait for group details to load
+28. click tab "Members"
+29. screenshot as "USP-1-0050_payroll_auditor.png"
+30. select security group dropdown as "Payroll Partner"
+31. wait for group details to load
+32. click tab "Assignable Role"
+33. verify role assignments display with organizations
+34. scroll to view all role assignments
+35. screenshot as "USP-1-0050_payroll_partner_roles.png"
+36. select security group dropdown as "Organization Partner"
+37. wait for group details to load
+38. click tab "Assignable Role"
+39. verify pay groups are assigned to partners
+40. screenshot as "USP-1-0050_org_partner_roles.png"
+41. screenshot as "USP-1-0050_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] Payroll Administrator has correct members assigned
+- [ ] Payroll Calculations Administrator has correct members
+- [ ] Payroll Integrations Administrator has correct members
+- [ ] Payroll Settlement Specialist has correct members
+- [ ] Payroll Auditor has correct members (read-only access)
+- [ ] Payroll Partner role assigned to correct organizations
+- [ ] Organization Partner assigned to all pay groups
+- [ ] No unauthorized users in administrator groups
+- [ ] Segregation of duties maintained
 
 API ALTERNATIVE:
 SOAP:
-  ### 2. WSDL: Human_Resources (score: 24)
   WSDL: Human_Resources
+  Operation: Get_Security_Groups
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Base Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s).
-
-### 1. Tes
+  Endpoint: /common/v1/securityGroups
+  Method: GET
 
 ================================================================================

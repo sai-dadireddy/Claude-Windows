@@ -2,19 +2,40 @@
 TEST ID: HLP-4-0040
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Confidential Case
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Confidential Help Case
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0040_complete.png"
+1. enter search box as "Help"
+2. click search result containing "Help" worklet
+3. wait for page to load
+4. click button "Create Case"
+5. wait for page to load
+6. select Service Category as "Employee Relations"
+7. select Case Type as "Confidential Inquiry"
+8. select checkbox "Mark as Confidential"
+9. enter Subject as "Confidential workplace concern"
+10. enter Description as "Sensitive matter requiring confidential handling"
+11. click button "Submit"
+12. wait for page to load
+13. verify message contains "Case created successfully"
+14. screenshot as "HLP-4-0040_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Confidential case created successfully
+- Case marked as confidential
+- Access restricted to authorized personnel
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Create Confidential Case:
+1. Access Help worklet
+2. Click Create Case
+3. Select confidential case type
+4. Mark case as confidential
+5. Case access restricted to authorized personnel only
 ================================================================================

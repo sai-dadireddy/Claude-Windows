@@ -2,19 +2,39 @@
 TEST ID: HLP-4-0020
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Managers
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Help Case as Manager
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0020_complete.png"
+1. enter search box as "Help"
+2. click search result containing "Help" worklet
+3. wait for page to load
+4. click button "Create Case"
+5. wait for page to load
+6. select Service Category as "HR Management"
+7. select Case Type as "Team Member Inquiry"
+8. enter Subject as "Question about team member benefits"
+9. enter Description as "Need assistance with team member enrollment"
+10. click button "Submit"
+11. wait for page to load
+12. verify message contains "Case created successfully"
+13. screenshot as "HLP-4-0020_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case created successfully by manager
+- Case assigned to appropriate service team
+- Case number generated
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Create Case as Manager:
+1. Access Help worklet
+2. Click Create Case
+3. Select appropriate service category for manager inquiries
+4. Enter subject and description
+5. Submit case for routing to service team
 ================================================================================

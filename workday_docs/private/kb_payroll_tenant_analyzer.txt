@@ -1,0 +1,154 @@
+================================================================================
+WORKDAY KB ARTICLE: TENANT ANALYZER - PAYROLL
+================================================================================
+
+Source: Workday System Administration
+Category: Payroll - Validation & Audit
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Tenant Analyzer is a diagnostic tool that validates payroll configuration
+and identifies potential issues before they cause problems. It provides:
+- Configuration validation checks
+- Calculation exception audits
+- Data integrity verification
+- Best practice recommendations
+
+Running the Tenant Analyzer helps identify Critical errors that must be fixed,
+Warning issues that should be reviewed, and Informational items for awareness.
+
+Business Process: Run Tenant Analyzer
+Functional Area: System Administration / Payroll
+Initiator: Payroll Administrator or System Administrator
+Typical Duration: 15-30 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. VALIDATION CATEGORIES
+   - Payroll Setup Validation
+   - Tax Configuration Checks
+   - Pay Group Configuration
+   - Period Schedule Validation
+   - Earnings/Deductions Setup
+   - Integration Settings
+
+2. CALCULATION EXCEPTION AUDIT
+   - Failed calculations from prior runs
+   - Pending exceptions
+   - Recurring errors
+   - Data inconsistencies
+
+3. SEVERITY LEVELS
+   - Critical: Must be fixed before payroll
+   - Warning: Should be addressed soon
+   - Informational: For awareness only
+
+4. FUNCTIONAL TABS
+   - Overview (summary counts)
+   - Payroll (payroll-specific checks)
+   - Compensation (pay-related issues)
+   - Time Tracking (time entry issues)
+   - Benefits (deduction issues)
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Run Tenant Analyzer:
+1. Search: "Tenant Analyzer"
+2. Select functional area (Payroll)
+3. Run analysis
+4. Review results by category
+
+View Tenant Analyzer Results:
+1. Search: "View Tenant Analyzer Results"
+2. Filter by severity
+3. Review and action items
+
+Schedule Tenant Analyzer:
+1. Search: "Schedule Tenant Analyzer"
+2. Set frequency (daily, weekly)
+3. Configure notifications
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Pre-Payroll Review:
+- No critical errors in Payroll tab
+- All warning items reviewed
+- Calculation exceptions addressed
+- Tax configuration validated
+- Period schedule issues resolved
+
+Post-Run Actions:
+- Document all critical errors
+- Create tickets for warnings
+- Track resolution progress
+- Re-run after fixes
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Run and Review Tenant Analyzer:
+1. enter search box as "Tenant Analyzer"
+2. wait for search results
+3. click search result containing "Tenant Analyzer"
+4. wait for page to load
+5. verify analysis options display
+6. select country as "United States"
+7. click button "Run"
+8. wait for analysis to complete
+9. wait 10 seconds
+10. verify results summary displays
+11. screenshot as "{test_id}_tenant_analyzer_summary.png"
+
+Review Payroll Tab:
+12. click tab "Payroll"
+13. wait for payroll results to load
+14. verify payroll validation list displays
+15. scroll to view Critical errors section
+16. screenshot as "{test_id}_payroll_validations.png"
+
+Review Calculation Exceptions:
+17. click tab "Calculation Exceptions"
+18. wait for exceptions to load
+19. verify exception list displays
+20. scroll to review all exceptions
+21. screenshot as "{test_id}_calculation_exceptions.png"
+
+================================================================================
+COMMON ISSUES AND RESOLUTIONS
+================================================================================
+
+Issue: "Missing Period Schedule"
+Resolution: Configure period schedule for pay group
+
+Issue: "Invalid Tax Configuration"
+Resolution: Update company tax settings
+
+Issue: "Orphaned Pay Component"
+Resolution: Link pay component to earning/deduction
+
+Issue: "Calculation Exception - Worker"
+Resolution: Review and recalculate affected worker
+
+Issue: "Missing Payment Election"
+Resolution: Add payment election for worker
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Tenant Analyzer Trend Report
+- Configuration Validation Summary
+- Payroll Exception Audit
+- System Health Dashboard
+
+================================================================================

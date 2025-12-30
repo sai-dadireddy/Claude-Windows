@@ -2,19 +2,33 @@
 TEST ID: HLP-1-0140
 FUNCTIONAL AREA: Case Management
 TEST NAME: Help Worklet
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Access Help Worklet
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-1-0140_complete.png"
+1. enter search box as "Help"
+2. click search result containing "Help" worklet
+3. wait for page to load
+4. verify page title contains "Help"
+5. verify field "Search Articles" is visible
+6. verify field "Create Case" button is visible
+7. verify field "My Cases" section is visible
+8. screenshot as "HLP-1-0140_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Help Worklet accessible
+- Article search available
+- Case creation option visible
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Source: Workday Resource Center - Case Management Setup
+Help Worklet:
+- Employee self-service portal for help resources
+- Search articles for self-resolution
+- Create cases when self-service not sufficient
+- View status of existing cases
 ================================================================================

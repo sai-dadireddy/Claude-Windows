@@ -1,0 +1,168 @@
+================================================================================
+WORKDAY KB ARTICLE: PAYSLIP CONFIGURATION (CANADA)
+================================================================================
+
+Source: Workday Payroll for Canada
+Category: Payroll - Configuration
+Last Updated: 2025-12-30
+Country: CA
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Payslip configuration in Workday Canada controls how employee payslips are
+displayed, including:
+- Earnings display (regular, overtime, bonuses)
+- Deductions (CPP, EI, income tax, voluntary deductions)
+- Employer contributions
+- Year-to-date (YTD) totals
+- Pay component grouping
+- French/English language support
+
+The payslip is the online view shown to employees and may differ from printed
+check layouts. PDF check print layouts can be viewed separately.
+
+Business Process: Review Payslip Configuration / View Payslip
+Functional Area: Payroll for Canada
+Initiator: Payroll Partner / Payroll Administrator
+Typical Duration: 15-30 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PAY COMPONENT GROUPS
+   - Current Earnings (salary, hourly, OT, bonus)
+   - Current Deductions (CPP, EI, Federal Tax, Provincial Tax)
+   - Current Employer Contributions
+   - YTD Earnings
+   - YTD Deductions
+   - Net Pay section
+
+2. CANADIAN-SPECIFIC ELEMENTS
+   - CPP/QPP contributions (employee and employer)
+   - EI premiums (employee and employer)
+   - Federal income tax
+   - Provincial income tax
+   - Quebec-specific deductions (QPP, QPIP)
+   - RRSP contributions
+   - Group benefits deductions
+
+3. PAYSLIP SECTIONS
+   - Employee information
+   - Pay period details
+   - Current period earnings
+   - Current period deductions
+   - Current period employer costs
+   - Net pay
+   - Year-to-date summary
+   - Leave balances
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Review Payslip Configuration:
+1. Search: "Maintain Payslip Configuration"
+2. Select applicable pay group or company
+3. Review pay component group assignments
+4. Verify ordering and display settings
+
+View Employee Payslip:
+1. Search: "Pay Calculation Results for Worker"
+2. Enter worker ID or name
+3. Select pay period
+4. Click Related Actions > Payroll Result > View Payslip
+5. Review payslip display
+
+Generate Payslip PDF:
+1. From pay result, select Related Actions
+2. Click "Print Payslip"
+3. Download PDF for review
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Configuration:
+- All pay component groups configured
+- Correct ordering (earnings before deductions)
+- YTD sections visible
+- Net pay calculated correctly
+- Canadian statutory deductions displayed
+- Employer contributions section complete
+
+Display:
+- Employee name and ID correct
+- Pay period dates accurate
+- Check date correct
+- All earnings visible
+- CPP/QPP contributions shown
+- EI premiums displayed
+- Federal tax withheld
+- Provincial tax withheld
+- RRSP contributions (if applicable)
+- Net pay correct
+
+French Requirements (Quebec):
+- French language option available
+- Terminology correct in French
+- All amounts formatted properly
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access Pay Calculation Results
+1. enter search box as "Pay Calculation Results for Worker"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker"
+4. wait for page to load
+5. enter worker field as "{employee_id}"
+6. wait for pay results to display
+
+Step 2: View Payslip
+7. select the pay period row to review
+8. click related actions menu
+9. click menu item "Payroll Result"
+10. click menu item "View Payslip"
+11. wait for payslip to load
+
+Step 3: Verify Payslip Contents
+12. verify section "Current Earnings" is visible
+13. verify section "Current Deductions" is visible
+14. scroll to view all sections
+15. verify field "Net Pay" displays amount
+16. verify CPP contribution amount is displayed
+17. verify EI premium amount is displayed
+18. verify Federal Tax amount is displayed
+19. verify Provincial Tax amount is displayed
+20. screenshot as "{test_id}_payslip_review.png"
+
+Step 4: Verify YTD Totals
+21. scroll to YTD section
+22. verify YTD earnings total visible
+23. verify YTD deductions total visible
+24. screenshot as "{test_id}_payslip_ytd.png"
+
+================================================================================
+COMMON ISSUES
+================================================================================
+
+- Missing pay component groups: Update Payslip Configuration
+- Incorrect ordering: Reorder pay component groups
+- Missing YTD: Ensure YTD sections added to configuration
+- French not displaying: Check language settings for Quebec employees
+- Net pay mismatch: Review calculation rules
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Payslip Configuration Report
+- Pay Component Group Report
+- Employee Payslip History
+- Payroll Register
+
+================================================================================

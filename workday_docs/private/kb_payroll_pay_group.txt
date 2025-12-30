@@ -1,0 +1,149 @@
+================================================================================
+WORKDAY KB ARTICLE: ASSIGN PAY GROUP BUSINESS PROCESS
+================================================================================
+
+Source: Workday Payroll Administration
+Category: Payroll - Worker Assignment
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Assign Pay Group business process assigns workers to pay groups, which
+determines how and when they are paid. Pay groups control:
+- Period schedule (when pay periods occur)
+- Run category (regular, off-cycle)
+- Payment processing rules
+- Tax jurisdiction defaults
+
+Workday can automatically infer pay groups based on Pay Group Automatic
+Assignment Rules, or allow manual assignment.
+
+Business Process: Assign Pay Group
+Functional Area: Payroll Administration
+Initiator: Payroll Partner, HR Partner, or automated
+Typical Duration: 5-10 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PAY GROUP ELEMENTS
+   - Pay Group Name
+   - Period Schedule
+   - Run Category
+   - Default Payment Election Type
+   - Pay Frequency
+   - Company/Location association
+
+2. AUTOMATIC ASSIGNMENT RULES
+   - Eligibility criteria (job profile, location, employee type)
+   - Rule priority order
+   - Effective date handling
+   - Override capabilities
+
+3. BUSINESS PROCESS FLOW
+   - Initiation (hire, job change, manual)
+   - Pay Group Assignment step
+   - Approval workflow (if configured)
+   - Effective date confirmation
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Assign Pay Group (Manual):
+1. Search: "Assign Pay Group"
+2. Search for worker
+3. Select worker
+4. Choose pay group
+5. Set effective date
+6. Submit
+
+View Pay Group Assignment Rules:
+1. Search: "View Pay Group Automatic Assignment Rules"
+2. Review rules and priority
+3. Verify eligibility criteria
+
+Test Pay Group Assignment:
+1. Search: "Test Pay Group Automatic Assignment"
+2. Select worker
+3. View inferred pay group
+4. Verify rule applied
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Before Assignment:
+- Verify worker is eligible for pay group
+- Check effective date alignment
+- Confirm period schedule is appropriate
+- Review payment election requirements
+
+After Assignment:
+- Pay group correctly assigned
+- Effective date is correct
+- Worker appears in pay group reports
+- No conflicting assignments
+
+Rule Validation:
+- Each worker matches one rule
+- Rules cover all worker types
+- Priority order is correct
+- No rule conflicts
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Test Pay Group Assignment:
+1. enter search box as "Test Pay Group Automatic Assignment"
+2. wait for search results
+3. click search result containing "Test Pay Group Automatic Assignment"
+4. wait for page to load
+5. enter worker field as "{worker_id}"
+6. wait for worker to resolve
+7. click button "OK"
+8. wait for results to display
+9. verify inferred pay group displays
+10. verify assignment rule name displays
+11. screenshot as "{test_id}_pay_group_test.png"
+
+Assign Pay Group:
+1. enter search box as "Assign Pay Group"
+2. wait for search results
+3. click search result containing "Assign Pay Group"
+4. wait for page to load
+5. enter worker field as "{worker_id}"
+6. wait for worker to resolve
+7. click button "OK"
+8. wait for assignment page to load
+9. select pay group dropdown as "{pay_group_name}"
+10. enter effective date as "{effective_date}"
+11. click button "Submit"
+12. wait for confirmation
+13. verify message contains "successfully"
+14. screenshot as "{test_id}_pay_group_assigned.png"
+
+View Assignment Rules:
+1. enter search box as "View Pay Group Automatic Assignment Rules"
+2. wait for search results
+3. click search result containing "View Pay Group Automatic Assignment Rules"
+4. wait for page to load
+5. verify rules table displays
+6. verify priority column visible
+7. scroll to review all rules
+8. screenshot as "{test_id}_assignment_rules.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Workers by Pay Group
+- Pay Group Assignment Audit
+- Automatic Assignment Rule Coverage
+- Pay Group Configuration Summary
+
+================================================================================

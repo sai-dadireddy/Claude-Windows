@@ -2,33 +2,36 @@
 TEST ID: HLP-3-0200
 FUNCTIONAL AREA: Case Management
 TEST NAME: Article Audiences
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: View Article Audiences
+TASK/STEP: Configure Article Audiences
 
 ELECTRON STEPS:
-1. enter search box as "View Article Audiences"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-3-0200_complete.png"
+1. enter search box as "Manage Article Audiences"
+2. click search result containing "Manage Article Audiences"
+3. wait for page to load
+4. click button "Create Article Audience"
+5. enter Audience Name as "All Employees"
+6. enter Description as "Audience for all active employees"
+7. click button "Add Criteria"
+8. select Criteria Type as "Worker Status"
+9. select Value as "Active"
+10. click button "OK"
+11. wait for page to load
+12. verify message contains "successfully"
+13. screenshot as "HLP-3-0200_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Article Audience created successfully
+- Criteria configured for audience targeting
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Article Audiences
-
-### 1. Kb Absence Time Off (score: 2)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Man...
+Source: Workday Resource Center - Case Management Setup
+Article Audiences:
+- Define target audiences for help articles
+- Configure criteria for audience membership
+- Control article visibility based on worker attributes
 ================================================================================

@@ -2,54 +2,114 @@
 TEST ID: HCM-1-0320
 FUNCTIONAL AREA: HCM
 TEST NAME: Review Schools configuration
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
-Verify that all expected schools are present in the tenant
+Verify that all expected schools are present in the tenant for education tracking and worker profile data.
 
 WORKDAY ROLE: HR Administrator
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Schools reference data configured in tenant
+- Access to Maintain Schools task
 
 ELECTRON STEPS:
 1. enter search box as "Maintain Schools"
 2. wait for search results
 3. click search result containing "Maintain Schools"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0320_complete.png"
+5. verify list of schools displays
+6. screenshot as "HCM-1-0320_schools_list.png"
+7. scroll to verify expected schools appear
+8. enter filter text as "{expected_school_name}"
+9. wait for filter results
+10. verify filtered school appears
+11. screenshot as "HCM-1-0320_filtered.png"
+12. click school name to view details
+13. wait for page to load
+14. verify School ID displays correctly
+15. verify School Name displays correctly
+16. verify School Type displays (University, College, etc.)
+17. verify Country displays correctly
+18. verify Status shows "Active"
+19. screenshot as "HCM-1-0320_school_details.png"
+20. click button "Done" or navigate back
+21. enter search box as "All Schools"
+22. wait for search results
+23. click search result containing "All Schools"
+24. wait for page to load
+25. verify school count matches expectations
+26. screenshot as "HCM-1-0320_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Maintain Schools task accessible
+- [ ] Schools list loads successfully
+- [ ] Expected schools present in list
+- [ ] Filter/search functionality works
+- [ ] School details display correctly (ID, Name, Type)
+- [ ] School country/region assignment correct
+- [ ] Status shows Active for valid schools
+- [ ] School types configured (University, College, High School, etc.)
+- [ ] IPEDS codes present (for US schools)
+- [ ] All Schools report accessible
+- [ ] School count reasonable for tenant
 - [ ] No error messages displayed
 
+SCHOOL CONFIGURATION ITEMS:
+- School ID: Unique identifier (often IPEDS code for US)
+- School Name: Official institution name
+- School Type: University, College, Community College, High School, etc.
+- Country: Country where school is located
+- Region/State: State or province
+- Status: Active/Inactive
+- External ID: Integration reference
+
+FIELD REFERENCE:
+- School Name: Official name of educational institution
+- School Type: Dropdown (University, College, etc.)
+- Country: Reference to country
+- IPEDS Code: US Department of Education identifier
+- External ID: Integration system reference
+- Inactive: Checkbox for obsolete schools
+
+ALTERNATIVE: Add New School
+1. From Maintain Schools task
+2. click button "Add"
+3. enter School Name as "{new_school_name}"
+4. select School Type as "University"
+5. select Country as "United States"
+6. enter Region as "California"
+7. click button "OK"
+8. verify school added successfully
+
+ALTERNATIVE: Edit School
+1. From school details view
+2. click button "Edit"
+3. modify School Name or other fields
+4. click button "OK"
+5. verify changes saved
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Get_Schools
+- SOAP: Human_Resources.Put_School
+- REST: /schools (GET, POST)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Schools
+COMMON SCHOOL TYPES:
+- University: 4-year degree-granting institution
+- College: 2-4 year institution
+- Community College: 2-year institution
+- High School: Secondary education
+- Vocational School: Trade/technical training
+- Online: Distance learning institution
 
-### 1. Admin Guide Glossary (score: 2)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
- | Full Glossary of Terms |...
+ERROR HANDLING:
+- "School not found": Verify school name spelling
+- "Duplicate school": School may already exist
+- "Access denied": User needs HR administrator access
+- "Invalid country": Check country reference data
+
 ================================================================================

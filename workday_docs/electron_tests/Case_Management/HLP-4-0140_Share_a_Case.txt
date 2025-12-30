@@ -2,35 +2,41 @@
 TEST ID: HLP-4-0140
 FUNCTIONAL AREA: Case Management
 TEST NAME: Share a Case
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
-TASK/STEP: Share Case
+TASK/STEP: Share Help Case with Another Solver
 
 ELECTRON STEPS:
-1. enter search box as "Share Case"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-4-0140_complete.png"
+1. enter search box as "Help Case Workspace"
+2. click search result containing "Help Case Workspace"
+3. wait for page to load
+4. click link "My Cases"
+5. click case to share
+6. wait for page to load
+7. click button "Share Case"
+8. wait for page to load
+9. enter Share With as "Another Case Solver"
+10. select Share Type as "View Access"
+11. enter Share Note as "Sharing for consultation"
+12. click button "Submit"
+13. wait for page to load
+14. verify message contains "Case shared successfully"
+15. screenshot as "HLP-4-0140_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- Case shared successfully
+- Target solver has appropriate access
+- Share note recorded
+- No error messages displayed
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Share Case
-
-### 1. Admin Guide Education And Government (score: 2)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management.................................................................
+Source: Workday Resource Center - Case Management Setup
+Share a Case:
+1. Access case from Help Case Workspace
+2. Click Share Case button
+3. Select solver to share with
+4. Define share type and access level
+5. Submit to complete case sharing
 ================================================================================
