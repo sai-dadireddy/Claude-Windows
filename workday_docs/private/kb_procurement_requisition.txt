@@ -1,0 +1,850 @@
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Management WSDL
+Category: Procurement - Requisition Management
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Create Requisition business process is used to request the purchase of
+goods or services. Requisitions are the first step in the procure-to-pay cycle
+and can be converted to purchase orders once approved. This process supports
+both catalog and non-catalog items, services, and contingent worker requests.
+
+Business Process: Create Requisition
+Functional Area: Procurement / Resource Management
+Initiator: Any employee with Create Requisition security
+Typical Duration: 1-3 days (depending on approval chain and amount)
+
+Types of Requisitions:
+- Goods Requisition: Physical items (equipment, supplies, inventory)
+- Services Requisition: Professional services, consulting, maintenance
+- Contingent Worker Requisition: Temporary staff, contractors
+- Catalog Requisition: Items from supplier catalogs
+- Non-Catalog Requisition: Custom/one-time purchases
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. REQUISITION HEADER
+   - Requisition Number (auto-generated)
+   - Requestor (employee submitting)
+   - Company/Legal Entity
+   - Currency
+   - Submit Date
+   - Needed By Date
+   - Ship-To Location
+   - Bill-To Location
+   - Supplier (if known)
+   - Supplier Contract (if applicable)
+
+2. LINE ITEMS
+   - Item Description
+   - Purchase Item (catalog item)
+   - Spend Category
+   - Quantity
+   - Unit of Measure
+   - Unit Price
+   - Extended Amount (Qty × Price)
+   - Tax applicability
+   - Delivery Date
+
+3. WORKTAGS (Cost Allocation)
+   - Cost Center (required)
+   - Project (if project-related)
+   - Grant (for funded research)
+   - Program
+   - Gift (for development)
+   - Custom worktags
+
+4. APPROVALS
+   - Manager Approval
+   - Budget Check
+   - Spend Authorization (based on amount thresholds)
+   - Finance Review (for large amounts)
+   - Procurement Review
+
+5. ATTACHMENTS
+   - Quotes from suppliers
+   - Specifications/requirements
+   - Budget approval emails
+   - Contracts or SOWs
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE REQUISITION
+-----------------------------
+Navigation: Create → Purchase Requisition
+Or: Search "Create Requisition" in global search
+
+Required Fields:
+- Company
+- Currency
+- Requisition Type (Goods/Services/Contingent Worker)
+
+Actions:
+1. Click "Create" → "Purchase Requisition"
+2. Select Company/Legal Entity
+3. Choose Currency (defaults to company currency)
+4. Select Supplier (optional at this stage)
+5. Add Memo (optional, for internal notes)
+
+STEP 2: ADD LINE ITEMS
+-----------------------
+Sub-Process: Add Goods/Services Lines
+
+For Catalog Items:
+1. Click "Add" → "Add from Catalog"
+2. Search catalog by item name or ID
+3. Select item from catalog results
+4. System auto-fills: Description, Price, UOM, Spend Category
+5. Enter Quantity
+6. System calculates Extended Amount
+7. Set Delivery Date
+
+For Non-Catalog Items:
+1. Click "Add" → "Add Goods Line" or "Add Services Line"
+2. Manually enter Item Description
+3. Select Spend Category from dropdown
+4. Enter Unit Price
+5. Enter Quantity
+6. Select Unit of Measure
+7. System calculates Extended Amount
+
+Line Details:
+- Item Number/Description (required)
+- Spend Category (required for budget checking)
+- Quantity (default: 1)
+- Unit Price (required)
+- Extended Amount (auto-calculated)
+- Tax Applicability (Yes/No)
+- Suggested Supplier (optional)
+- Item Memo (optional)
+
+STEP 3: ADD WORKTAGS (Cost Allocation)
+---------------------------------------
+Sub-Process: Cost Allocation
+
+Required Worktags:
+- Cost Center (always required)
+- Additional worktags based on company policy
+
+Actions:
+1. Click on line item
+2. Click "Edit Worktags" or "Allocate"
+3. Select Cost Center
+4. Add Project (if project purchase)
+5. Add Grant (if grant-funded)
+6. Add Program, Location, etc. as required
+7. Verify allocation = 100%
+
+Split Allocation:
+- Single line can be split across multiple cost centers
+- Each allocation must have percentage
+- Total must equal 100%
+- Example: 60% Cost Center A, 40% Cost Center B
+
+STEP 4: SET DELIVERY DETAILS
+-----------------------------
+Sub-Process: Shipping & Delivery
+
+Ship-To Details:
+- Ship-To Address (defaults to requestor location)
+- Ship-To Contact (defaults to requestor)
+- Delivery Instructions
+- Requested Delivery Date
+
+Bill-To Details:
+- Bill-To Address (defaults to company address)
+- Bill-To Contact (typically AP team)
+
+Special Instructions:
+- Delivery window requirements
+- Special handling needs
+- Recipient if different from requestor
+
+STEP 5: ATTACH SUPPORTING DOCUMENTS
+------------------------------------
+Sub-Process: Attachments
+
+Recommended Attachments:
+- Supplier quotes (3 quotes for high-value items)
+- Product specifications
+- Budget approval email
+- Statement of Work (for services)
+- Contract (if pre-negotiated pricing)
+- Business justification
+
+Actions:
+1. Click "Attachments" tab
+2. Click "Add" → "Upload File"
+3. Select file from computer
+4. Add document category/type
+5. Add description
+6. Upload
+
+STEP 6: BUDGET CHECKING
+------------------------
+Sub-Process: Budget Validation
+
+Automated Budget Check:
+- System validates spend against budget
+- Checks cost center budget availability
+- Validates project budget (if applicable)
+- Checks grant balance (if grant-funded)
+
+Budget Check Results:
+✓ Within Budget: Proceeds to approval
+⚠ Warning: Over budget but within tolerance
+✗ Error: Hard budget exceeded, cannot proceed
+
+Actions if Over Budget:
+1. Reduce quantity or find lower price
+2. Split across multiple budget periods
+3. Request budget increase
+4. Use different cost center
+
+STEP 7: REVIEW & SUBMIT
+------------------------
+Sub-Process: Requisition Review
+
+Pre-Submission Checklist:
+□ All line items complete with descriptions
+□ Quantities and prices accurate
+□ Worktags assigned to all lines
+□ Delivery dates realistic
+□ Supplier selected (if known)
+□ Attachments uploaded
+□ Budget check passed
+□ Memo added for context
+
+Review Screen Shows:
+- Total Requisition Amount
+- Tax Amount (if applicable)
+- Grand Total
+- Budget Status
+- Approval Chain Preview
+
+Actions:
+1. Click "Review"
+2. Verify all details
+3. Check approval routing
+4. Click "Submit"
+5. Requisition enters approval workflow
+
+STEP 8: APPROVAL ROUTING
+-------------------------
+Approval Chain (typical):
+
+Level 1: Manager Approval
+- Requestor's direct manager
+- Approves business need
+- Validates budget appropriateness
+
+Level 2: Budget Owner (if different from manager)
+- Cost center manager
+- Ensures budget availability
+- Validates cost allocation
+
+Level 3: Spend Authorization
+- Based on dollar thresholds:
+  - $0-$5K: Manager only
+  - $5K-$25K: + Department Head
+  - $25K-$100K: + Finance Director
+  - $100K+: + CFO or Procurement VP
+
+Level 4: Procurement Review
+- Procurement team review for:
+  - Supplier validation
+  - Contract compliance
+  - Competitive pricing
+  - Strategic sourcing opportunities
+
+Level 5: Finance Review (large amounts)
+- CFO or Finance VP
+- For amounts over $100K
+- Strategic purchases
+- Capital expenditures
+
+Each Approver Can:
+- Approve (move to next level)
+- Deny (send back with comments)
+- Send Back (for corrections)
+- Add Approvers (additional stakeholders)
+- Reassign (if out of office)
+
+STEP 9: CONVERSION TO PURCHASE ORDER
+-------------------------------------
+Post-Approval Actions:
+
+Auto-Conversion (if enabled):
+- Requisition automatically creates PO
+- PO inherits all requisition details
+- PO issued to supplier
+- Requisition marked "Converted to PO"
+
+Manual Conversion:
+- Procurement team reviews approved requisitions
+- Consolidates multiple requisitions if same supplier
+- Creates PO from requisition
+- May negotiate better pricing
+- Issues PO to supplier
+
+Requisition Status Updates:
+- Draft → Submitted → In Approval → Approved → Converted to PO → Closed
+
+STEP 10: TRACKING & REPORTING
+------------------------------
+Requisition Tracking:
+
+Status Monitoring:
+- My Requisitions report
+- Business Process → Inbox
+- Email notifications at each approval step
+
+Key Reports:
+- Requisitions by Status
+- Requisitions by Requestor
+- Requisitions by Spend Category
+- Requisitions Pending Approval
+- Budget vs. Actual by Cost Center
+- Supplier Spend Analysis
+
+Metrics Tracked:
+- Cycle time (submission to approval)
+- Approval bottlenecks
+- Budget variance
+- Requisition volume trends
+- Supplier consolidation opportunities
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Resource_Management
+
+Key Operations:
+1. Submit_Purchase_Order
+   - While named "Purchase Order", can initiate requisition workflow
+   - Required: Company, Supplier (optional), Line Items
+   - Returns: Business Process ID
+
+2. Get_Purchase_Orders
+   - Retrieve requisition/PO details
+   - Can filter by status, date, requestor
+   - Returns: Full requisition data including approval status
+
+3. Get_Purchase_Items
+   - Search catalog items
+   - Parameters: Item_Name, Category, Supplier
+   - Returns: Item details, pricing, UOM
+
+4. Put_Purchase_Item
+   - Add/update catalog items
+   - Maintain item master data
+   - Used by procurement admins
+
+5. Get_Suppliers
+   - Search supplier master
+   - Validate supplier before requisition
+   - Returns: Supplier details, payment terms, contacts
+
+6. Submit_Catalog_Load
+   - Bulk upload catalog items
+   - Associate with supplier contracts
+   - Maintain pricing
+
+Note: Workday doesn't have a dedicated "Requisition" web service. Requisitions
+are typically created through the UI, and the Submit_Purchase_Order API is used
+for direct PO creation (bypassing requisition step).
+
+================================================================================
+AUTOMATION CONSIDERATIONS FOR ELECTRON
+================================================================================
+
+1. UI AUTOMATION ANCHORS
+   ----------------------
+   Key Selectors:
+   - Create button: button[data-automation-id="globalCreateButton"]
+   - Search: input[data-automation-id="globalSearchInput"]
+   - Company dropdown: select[data-automation-id="company"]
+   - Add Line button: button:contains("Add")
+   - Item search: input[data-automation-id="catalogSearchInput"]
+   - Quantity: input[data-automation-id="quantity"]
+   - Unit Price: input[data-automation-id="unitCost"]
+   - Worktag prompts: div[data-automation-id="worktag"]
+   - Submit: button[data-automation-id="SUBMIT"]
+
+   Navigation Path:
+   1. Click Create → Purchase Requisition
+   2. Select Company
+   3. Add line items (catalog or manual)
+   4. Assign worktags to each line
+   5. Add attachments
+   6. Review totals
+   7. Submit
+
+2. VALIDATION REQUIREMENTS
+   ------------------------
+   Pre-Submission Checks:
+   - Company selected
+   - At least one line item added
+   - Each line has: Description, Quantity, Price, Spend Category
+   - All lines have worktags (100% allocated)
+   - Budget check passed (no hard errors)
+   - Delivery dates not in past
+   - Total amount > 0
+
+   Business Rule Validations:
+   - Spend category matches item type
+   - Worktags are valid for company
+   - Cost center has budget availability
+   - Supplier is approved (if selected)
+   - Unit price within market range (if catalog)
+   - Tax applicability set correctly
+
+   Error Handling:
+   - "Budget exceeded" → reduce amount or split requisition
+   - "Invalid worktag" → select valid worktag for company
+   - "Missing required field" → populate all required fields
+   - "Supplier not approved" → select approved supplier
+   - "Item not in catalog" → use non-catalog entry
+
+3. BULK PROCESSING APPROACH
+   -------------------------
+   For Multiple Requisitions:
+
+   Option A: UI Automation Loop (Best for <10 requisitions)
+   - Read requisition details from CSV/Excel
+   - Loop through each requisition
+   - Fill form for each
+   - Screenshot confirmations
+   - Track business process IDs
+
+   Option B: EIB/Integration (For catalog maintenance)
+   - Use Submit_Catalog_Load for catalog items
+   - Use Put_Purchase_Item for item master
+   - Requisitions still need UI/manual creation
+
+   Option C: Direct PO Creation via API (Bypass requisition)
+   - Use Submit_Purchase_Order API
+   - Skip requisition step
+   - Requires pre-approval
+   - Used for blanket POs or recurring orders
+
+4. DATA EXTRACTION NEEDS
+   ----------------------
+   Input Requirements:
+   - Company Code
+   - Currency Code
+   - Line Items Array:
+     - Item Description
+     - Spend Category Code
+     - Quantity
+     - Unit Price
+     - Unit of Measure
+     - Delivery Date
+     - Cost Center Code
+     - Project Code (optional)
+     - Supplier ID (optional)
+
+   Optional Fields:
+   - Supplier Contract ID
+   - Ship-To Location
+   - Bill-To Location
+   - Memo/Justification
+   - Attachment file paths
+
+   Output Data to Capture:
+   - Requisition Number
+   - Business Process ID
+   - Submission Timestamp
+   - Total Amount
+   - Approval Chain Members
+   - Current Approval Status
+   - Budget Check Results
+
+5. SCREENSHOT STRATEGY
+   --------------------
+   Critical Screenshots:
+   1. Initial requisition form (header details)
+   2. Each line item addition (catalog or manual)
+   3. Worktag allocation screen
+   4. Budget check results
+   5. Review summary (before submit)
+   6. Submission confirmation with requisition number
+   7. Approval routing visualization
+
+   Screenshot Timing:
+   - After adding each significant line item
+   - After budget check completes
+   - Before final submission
+   - After successful submission
+   - On any errors or warnings
+
+   File Naming:
+   `requisition_{company}_{timestamp}_01_init.png`
+   `requisition_{company}_{timestamp}_02_line{n}.png`
+   `requisition_{company}_{timestamp}_03_worktags.png`
+   `requisition_{company}_{timestamp}_04_budget.png`
+   `requisition_{company}_{timestamp}_05_review.png`
+   `requisition_{company}_{timestamp}_06_confirmation.png`
+
+6. ERROR RECOVERY
+   ---------------
+   Common Issues:
+
+   Issue: "Budget check failed"
+   Solution: Verify cost center budget, reduce amount, or use different cost center
+
+   Issue: "Catalog item not found"
+   Solution: Use non-catalog entry, or request catalog addition from procurement
+
+   Issue: "Invalid worktag combination"
+   Solution: Check worktag rules for company, use valid combination
+
+   Issue: "Supplier not approved"
+   Solution: Select approved supplier, or request supplier setup
+
+   Issue: "Requisition already exists"
+   Solution: Check for duplicates, cancel if needed, create new
+
+   Issue: "Insufficient security"
+   Solution: Verify user has "Create Requisition" security role
+
+7. PERFORMANCE OPTIMIZATION
+   -------------------------
+   Best Practices:
+   - Pre-validate all data before UI automation
+   - Use catalog items when available (faster than manual entry)
+   - Batch similar requisitions for same supplier
+   - Cache worktag lookups to avoid repeated searches
+   - Screenshot only at key stages (not every field)
+   - Use clipboard paste for long descriptions
+   - Pre-select company/currency to reduce clicks
+
+8. COMPLIANCE & AUDIT
+   -------------------
+   Logging Requirements:
+   - Timestamp of submission
+   - Requestor (or service account if automated)
+   - Company/Legal Entity
+   - Total requisition amount
+   - Line item details (all)
+   - Worktag allocations
+   - Budget check results
+   - Approval chain
+   - Business Process ID
+   - Requisition number
+
+   Audit Trail:
+   - Save all screenshots
+   - Export requisition summary to PDF
+   - Log to CSV: requisition_log_{YYYY-MM-DD}.csv
+   - Retain for 7 years (procurement records retention)
+
+   Compliance Checks:
+   - Budget authority not exceeded
+   - Competitive quotes obtained (if required by policy)
+   - Sole source justification (if only one supplier)
+   - Conflict of interest disclosure
+   - Grant compliance (if grant-funded)
+
+================================================================================
+RELATED BUSINESS PROCESSES
+================================================================================
+
+Connected Workflows:
+- Create Purchase Order: Conversion from approved requisition
+- Create Supplier Invoice: Receiving goods/services and payment
+- Create Receipt: Acknowledging delivery
+- Request Budget Amendment: If budget insufficient
+- Create Supplier Contract: For negotiated agreements
+- Create Catalog Load: For adding catalog items
+
+Pre-Requisites:
+- User has "Create Requisition" security
+- Company/Cost Center configured
+- Budget exists for cost center
+- Spend categories configured
+- Suppliers set up (for known suppliers)
+- Worktag structures defined
+
+Post-Requisition Processes:
+- Approval workflow
+- Conversion to Purchase Order
+- PO issuance to supplier
+- Receipt of goods/services
+- Invoice matching and payment
+- Spend analysis and reporting
+
+================================================================================
+INTEGRATION POINTS
+================================================================================
+
+Systems Impacted:
+1. Workday Procurement: Requisition, PO creation
+2. Workday Financial Management: Budget checking, commitment accounting
+3. Workday Projects: Project budget validation
+4. Workday Grants: Grant fund tracking
+5. Supplier Portal: For supplier collaboration
+6. Catalog Systems: Punch-out catalogs
+7. Email: Approval notifications
+8. Reporting: Spend analytics
+
+Notification Triggers:
+- Requestor: Submission confirmation
+- Manager: Approval request
+- Budget Owner: Approval request
+- Procurement: Large amount review
+- Finance: Over-threshold approvals
+- Requestor: Approval/denial notifications
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. PLANNING
+   - Verify budget before creating requisition
+   - Get quotes from 3 suppliers for high-value items
+   - Check if supplier contract exists (better pricing)
+   - Estimate delivery time realistically
+   - Confirm cost center/project codes
+
+2. ITEMIZATION
+   - Be specific in item descriptions
+   - Include model numbers, SKUs, specifications
+   - Use catalog items when available
+   - Break down bundled services into line items
+   - Add memo for special requirements
+
+3. COST ALLOCATION
+   - Verify correct cost center
+   - Use project codes for project purchases
+   - Split allocation if shared benefit
+   - Follow grant compliance for grant purchases
+   - Document cost allocation rationale
+
+4. DOCUMENTATION
+   - Attach supplier quotes
+   - Include specifications or SOWs
+   - Add budget approval emails
+   - Attach contracts if pre-negotiated
+   - Document sole-source justification
+
+5. SUPPLIER SELECTION
+   - Use approved suppliers when possible
+   - Check supplier performance history
+   - Verify supplier has required insurance
+   - Confirm supplier payment terms
+   - Consider strategic supplier relationships
+
+6. APPROVAL ACCELERATION
+   - Add detailed memo explaining business need
+   - Attach all supporting documents
+   - Alert approvers via email/Slack
+   - Provide contact for questions
+   - Create requisition with sufficient lead time
+
+================================================================================
+ELECTRON AUTOMATION PSEUDOCODE
+================================================================================
+
+```python
+async def create_requisition(company_code, line_items, cost_center,
+                              supplier_id=None, attachments=None):
+    """
+    Automate Create Requisition business process
+
+    Args:
+        company_code: Company/Legal Entity code
+        line_items: List of dicts with item details
+        cost_center: Cost center for allocation
+        supplier_id: Optional supplier ID
+        attachments: List of file paths to attach
+
+    Returns:
+        dict: Requisition number and BP ID
+    """
+
+    # Step 1: Login to Workday
+    page = await browser.new_page()
+    await page.goto(WORKDAY_URL)
+    await login(page, username, password)
+
+    # Step 2: Navigate to Create Requisition
+    await page.click('button[data-automation-id="globalCreateButton"]')
+    await page.click('button:has-text("Purchase Requisition")')
+
+    # Screenshot: Initial form
+    await page.screenshot(path=f'requisition_{company_code}_01_init.png')
+
+    # Step 3: Select company
+    await page.select_option('select[data-automation-id="company"]', company_code)
+
+    # Optional: Select supplier
+    if supplier_id:
+        await page.fill('input[data-automation-id="supplierSearch"]', supplier_id)
+        await page.press('input[data-automation-id="supplierSearch"]', 'Enter')
+        await page.click('.supplier-result')
+
+    # Step 4: Add line items
+    for idx, item in enumerate(line_items):
+        await page.click('button:has-text("Add")')
+
+        if item.get('catalog_id'):
+            # Catalog item
+            await page.click('button:has-text("Add from Catalog")')
+            await page.fill('input[data-automation-id="catalogSearchInput"]',
+                          item['catalog_id'])
+            await page.press('input[data-automation-id="catalogSearchInput"]', 'Enter')
+            await page.wait_for_selector('.catalog-item-result')
+            await page.click('.catalog-item-result')
+        else:
+            # Non-catalog item
+            await page.click('button:has-text("Add Goods Line")')
+            await page.fill('input[data-automation-id="itemDescription"]',
+                          item['description'])
+            await page.select_option('select[data-automation-id="spendCategory"]',
+                                    item['spend_category'])
+            await page.fill('input[data-automation-id="unitCost"]',
+                          str(item['unit_price']))
+
+        # Set quantity
+        await page.fill('input[data-automation-id="quantity"]',
+                       str(item['quantity']))
+
+        # Screenshot: Line item added
+        await page.screenshot(path=f'requisition_{company_code}_02_line{idx+1}.png')
+
+        # Assign worktags
+        await page.click('button:has-text("Edit Worktags")')
+        await page.fill('input[data-automation-id="costCenterSearch"]', cost_center)
+        await page.press('input[data-automation-id="costCenterSearch"]', 'Enter')
+        await page.click('.cost-center-result')
+
+        # Add project if specified
+        if item.get('project_code'):
+            await page.fill('input[data-automation-id="projectSearch"]',
+                          item['project_code'])
+            await page.click('.project-result')
+
+        await page.click('button:has-text("OK")')
+
+    # Screenshot: All line items added
+    await page.screenshot(path=f'requisition_{company_code}_03_lines_complete.png')
+
+    # Step 5: Budget check
+    await page.click('button:has-text("Check Budget")')
+    await page.wait_for_selector('.budget-check-result')
+
+    # Verify budget check passed
+    budget_status = await page.text_content('.budget-check-result')
+    if 'error' in budget_status.lower():
+        raise Exception(f"Budget check failed: {budget_status}")
+
+    # Screenshot: Budget check
+    await page.screenshot(path=f'requisition_{company_code}_04_budget.png')
+
+    # Step 6: Add attachments
+    if attachments:
+        for attachment_path in attachments:
+            await page.click('button:has-text("Add Attachment")')
+            await page.set_input_files('input[type="file"]', attachment_path)
+            await page.wait_for_selector('.attachment-uploaded')
+
+    # Step 7: Review and submit
+    await page.click('button:has-text("Review")')
+    await page.wait_for_selector('.review-summary')
+
+    # Screenshot: Review
+    await page.screenshot(path=f'requisition_{company_code}_05_review.png')
+
+    # Get total amount
+    total_amount = await page.text_content('.total-amount')
+
+    # Submit
+    await page.click('button[data-automation-id="SUBMIT"]')
+    await page.wait_for_selector('.confirmation-message')
+
+    # Screenshot: Confirmation
+    await page.screenshot(path=f'requisition_{company_code}_06_confirmation.png')
+
+    # Step 8: Extract requisition details
+    requisition_number = await page.text_content('.requisition-number')
+    bp_id = await page.text_content('.business-process-id')
+
+    return {
+        'status': 'success',
+        'requisition_number': requisition_number,
+        'business_process_id': bp_id,
+        'total_amount': total_amount,
+        'company': company_code,
+        'line_count': len(line_items),
+        'timestamp': datetime.now().isoformat()
+    }
+```
+
+================================================================================
+SAMPLE DATA STRUCTURE
+================================================================================
+
+```json
+{
+  "company_code": "US001",
+  "currency": "USD",
+  "supplier_id": "SUP-12345",
+  "cost_center": "CC-IT-100",
+  "needed_by_date": "2026-02-15",
+  "ship_to_location": "NYC Office",
+  "memo": "Laptop replacement for new hire",
+  "line_items": [
+    {
+      "catalog_id": "LAPTOP-DELL-5520",
+      "description": "Dell Latitude 5520 Laptop",
+      "quantity": 1,
+      "unit_price": 1299.99,
+      "spend_category": "TECH-HARDWARE",
+      "delivery_date": "2026-02-15"
+    },
+    {
+      "description": "Laptop Docking Station",
+      "quantity": 1,
+      "unit_price": 199.99,
+      "unit_of_measure": "Each",
+      "spend_category": "TECH-ACCESSORIES",
+      "delivery_date": "2026-02-15",
+      "project_code": "PROJ-2026-001"
+    }
+  ],
+  "attachments": [
+    "/path/to/quote.pdf",
+    "/path/to/budget_approval.pdf"
+  ]
+}
+```
+
+================================================================================
+NOTES
+================================================================================
+
+- Requisitions do NOT create financial commitments until converted to PO
+- Budget checks are validation only, not hard commitments
+- Approved requisitions can sit unconverted for days/weeks
+- Procurement may consolidate multiple requisitions to same supplier
+- Requisition approval does not guarantee PO creation
+- Some organizations skip requisitions and create POs directly
+- Requisition-to-PO conversion may change line item details
+- Catalog pricing may be outdated; procurement may negotiate better
+- Requisitions can be canceled even after approval (if not yet converted)
+- Budget availability checked at requisition AND PO creation
+
+================================================================================
