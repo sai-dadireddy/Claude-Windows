@@ -2,37 +2,30 @@
 TEST ID: INV-1-0100
 FUNCTIONAL AREA: Inventory
 TEST NAME: Confirm Company Procurement Options
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: 1. Edit Company Procurement Options
-2. Select Company
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
-1. enter search box as "1. Edit Company Procurement Options
-2. Select Company"
-2. enter field "Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
-3. click appropriate action button
-4. screenshot as "INV-1-0100_complete.png"
+1. enter search box as "1. Edit Company Procurement Options"
+2. wait for search results (2 seconds)
+3. click search result containing "1. Edit Company Procurement Options"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0100_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 1. Edit Company Procurement Options
-2. Select Company
+API ALTERNATIVE:
+- Query RAG for details
 
-### 1. Electron Test Samples (score: 7)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-===============================================================================...
+RAG QUERY STATUS: SUCCESS (Score: 5)
 ================================================================================

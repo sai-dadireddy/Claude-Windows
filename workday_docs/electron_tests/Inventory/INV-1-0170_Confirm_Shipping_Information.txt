@@ -2,35 +2,30 @@
 TEST ID: INV-1-0170
 FUNCTIONAL AREA: Inventory
 TEST NAME: Confirm Shipping Information
-CONFIDENCE: [HIGH] Score: 8.5/10
+CONFIDENCE: [LOW] Score: 4.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: Maintain Shipping Information task
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
 1. enter search box as "Maintain Shipping Information task"
-2. submit form
-3. screenshot as "INV-1-0170_complete.png"
+2. wait for search results (2 seconds)
+3. click search result containing "Maintain Shipping Information task"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0170_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Shipping Information task
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
 
-### 1. Admin Guide Glossary (score: 4)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
- | Full G...
+RAG QUERY STATUS: SUCCESS (Score: 4)
 ================================================================================

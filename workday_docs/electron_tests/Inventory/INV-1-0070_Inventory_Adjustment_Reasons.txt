@@ -2,33 +2,30 @@
 TEST ID: INV-1-0070
 FUNCTIONAL AREA: Inventory
 TEST NAME: Inventory Adjustment Reasons
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: Run report "View Inventory Adjustment Reasons"
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
-1. enter search box as "Run report "View Inventory Adjustment Reasons""
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "INV-1-0070_complete.png"
+1. enter search box as "Run report"
+2. wait for search results (2 seconds)
+3. click search result containing "Run report"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0070_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Run report "View Inventory Adjustment Reasons"
+API ALTERNATIVE:
+- Query RAG for details
 
-### 1. Kb Payroll Run Payroll (score: 4)
-Source: kb_payroll_run_payroll.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Work...
+RAG QUERY STATUS: SUCCESS (Score: 7)
 ================================================================================

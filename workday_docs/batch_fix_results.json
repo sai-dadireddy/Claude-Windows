@@ -1,0 +1,302 @@
+[
+  {
+    "file": "PRO-1-0010_Suppliers.txt",
+    "task": "Suppliers Suppliers",
+    "confidence": 1,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0020_Edit Company Accounting Options related to Procurement.txt",
+    "task": "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default",
+    "confidence": 18,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0030_Edit Company Procurement Options.txt",
+    "task": "Related Action From Company > Edit Company Procurement Options",
+    "confidence": 13,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0040_Verify Units of Measure.txt",
+    "task": "Maintain Units of Measure",
+    "confidence": 9,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0050_Workcart Link Overrides.txt",
+    "task": "Create Requisition or View Cart (Options listed are the Cart Links)",
+    "confidence": 15,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0060_Spend Transaction Instructions for Requisitions.txt",
+    "task": "View Spend Transaction Instruction>Requisition",
+    "confidence": 9,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0070_Supplier Contract Types.txt",
+    "task": "View Supplier Contract Types",
+    "confidence": 9,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0080_Purchase Order Print Layouts.txt",
+    "task": "View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print",
+    "confidence": 14,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0090_Return Reasons.txt",
+    "task": "Maintain Return Reasons",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0100_Requisition Types.txt",
+    "task": "Maintain Requisition Types",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0110_Supplier Links_Punchout.txt",
+    "task": "Maintain Supplier Links",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0120_Match Rules.txt",
+    "task": "View Supplier Accounts Match Rule Set",
+    "confidence": 11,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0130_Confirm Procurement Posting Rules.txt",
+    "task": "View Account Posting Rule Set",
+    "confidence": 10,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0140_Confirm Procurement Custom Validations.txt",
+    "task": "Maintain Custom Validations",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0150_Confirm Role Based Procurement Assignments.txt",
+    "task": "Roles for Organization and Subordinates",
+    "confidence": 10,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0160_Confirm User Based Procurement Assignments.txt",
+    "task": "User-Based Security Group Assignments",
+    "confidence": 9,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0170_Maintain Worktag Usages.txt",
+    "task": "Accounts Payable Configurator",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-1-0180_Confirm Related Worktag Usage.txt",
+    "task": "Accounts Payable Configurator",
+    "confidence": 8,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0010_Create a Requisition.txt",
+    "task": "Create Requisition",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0020_Approve Requisition.txt",
+    "task": "Approve Requisition",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0030_View Business Process for Requisition Event.txt",
+    "task": "bp: Requisition Event",
+    "confidence": 2,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0040_Create a Requisition for Goods from a Web Item (PunchOut).txt",
+    "task": "Create Requisition. Click on",
+    "confidence": 4,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0050_Create a Requisition for a Deliverable Service.txt",
+    "task": "Create Requisition. Click on",
+    "confidence": 4,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0060_Create a Requisition with Line Splits by Quantity.txt",
+    "task": "Create Requisition",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "PRO-2-0070_Create a Requisition with Line Splits by Amount.txt",
+    "task": "Create Requisition",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0010_Inventory_Site.txt",
+    "task": "Pull report",
+    "confidence": 2,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0020_Stocking_Locations.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0030_Inventory_Location_Usage_Type.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0040_Purchase_Items.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0050_Item_Identifier_Types.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0060_Unit_of_Measure_Sets.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0070_Inventory_Adjustment_Reasons.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0080_Inventory_Put-Away_Rules.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0090_Inventory_ABC_Classification.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0100_Confirm_Company_Procurement_Options.txt",
+    "task": "1. Edit Company Procurement Options",
+    "confidence": 5,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0110_Review_Spend_Categories.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0120_Review_Units_of_Measure.txt",
+    "task": "Maintain Units of Measure",
+    "confidence": 9,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0130_Requisition_Types.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0140_User_Based_Inventory_Roles.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0150_Role-Based_Inventory_Roles.txt",
+    "task": "Run report",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0160_Confirm_Inventory_Posting_Rules.txt",
+    "task": "1. View Account Posting Rule Set",
+    "confidence": 6,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0170_Confirm_Shipping_Information.txt",
+    "task": "Maintain Shipping Information task",
+    "confidence": 4,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0180_Confirm_Custom_Validations.txt",
+    "task": "Maintain Custom Validations task",
+    "confidence": 4,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0190_Confirm_Worktag_Usages.txt",
+    "task": "Maintain Worktag Usage task",
+    "confidence": 4,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0200_Confirm_Related_worktag_usages.txt",
+    "task": "Maintain Related Worktag Usage task",
+    "confidence": 5,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0210_Create_Ad_Hoc_Putaway.txt",
+    "task": "1)Putaway Inventory",
+    "confidence": 1,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0220_Find_Inventory_Balance.txt",
+    "task": "Inventory Balance",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0230_Find_Inventory_Transaction.txt",
+    "task": "Inventory Transaction",
+    "confidence": 7,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0240_Inventory_Adjustment.txt",
+    "task": "nan",
+    "confidence": 6,
+    "status": "UPDATED"
+  },
+  {
+    "file": "INV-1-0250_Find_Inventory_Balance.txt",
+    "task": "Inventory Balance",
+    "confidence": 7,
+    "status": "UPDATED"
+  }
+]

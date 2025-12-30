@@ -2,33 +2,30 @@
 TEST ID: INV-1-0150
 FUNCTIONAL AREA: Inventory
 TEST NAME: Role-Based Inventory Roles
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: Run report "Role-Based Security Group Assignments"
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
-1. enter search box as "Run report "Role-Based Security Group Assignments""
-2. enter field "Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
-3. screenshot as "INV-1-0150_complete.png"
+1. enter search box as "Run report"
+2. wait for search results (2 seconds)
+3. click search result containing "Run report"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0150_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Run report "Role-Based Security Group Assignments"
+API ALTERNATIVE:
+- Query RAG for details
 
-### 1. Kb Hcm Change Job (score: 4)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analy...
+RAG QUERY STATUS: SUCCESS (Score: 7)
 ================================================================================

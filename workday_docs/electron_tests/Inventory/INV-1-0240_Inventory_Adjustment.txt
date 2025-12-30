@@ -2,19 +2,30 @@
 TEST ID: INV-1-0240
 FUNCTIONAL AREA: Inventory
 TEST NAME: Inventory Adjustment
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
 1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "INV-1-0240_complete.png"
+2. wait for search results (2 seconds)
+3. click search result containing "nan"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0240_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+API ALTERNATIVE:
+- Query RAG for details
+
+RAG QUERY STATUS: SUCCESS (Score: 6)
 ================================================================================

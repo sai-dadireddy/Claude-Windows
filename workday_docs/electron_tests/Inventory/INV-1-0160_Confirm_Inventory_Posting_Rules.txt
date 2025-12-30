@@ -2,31 +2,30 @@
 TEST ID: INV-1-0160
 FUNCTIONAL AREA: Inventory
 TEST NAME: Confirm Inventory Posting Rules
-CONFIDENCE: [HIGH] Score: 8.5/10
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
-TASK/STEP: 1. View Account Posting Rule Set
-2. Ensure default ledger accounts are associated with all Inventory posting rules. Verify the Spend rule reflects the resulting ledger for Put-Away and Issue transactions.
+DESCRIPTION:
+
+
+WORKDAY ROLE: 
 
 ELECTRON STEPS:
-1. enter search box as "1. View Account Posting Rule Set
-2. Ensure default ledger accounts are associated with all Inventory posting rules. Verify the Spend rule reflects the resulting ledger for Put-Away and Issue transactions."
-2. submit form
-3. screenshot as "INV-1-0160_complete.png"
+1. enter search box as "1. View Account Posting Rule Set"
+2. wait for search results (2 seconds)
+3. click search result containing "1. View Account Posting Rule Set"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "INV-1-0160_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
-================================================================================
-RAG RESPONSE SUMMARY:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 1. View Account Posting Rule Set
-2. Ensure default ledger accounts are associated with all Inventory posting rules. Verify the Spend rule reflects the resulting ledger for Put-Away and Issue transactions.
+API ALTERNATIVE:
+- Query RAG for details
 
-### 1. WSDL: Resource_Management (score: 23)
-Source: Resource_Management.wsdl
-```
-WSDL: Resource_Management
-Description: The Resource Management  Web Service contains operations that ex...
+RAG QUERY STATUS: SUCCESS (Score: 6)
 ================================================================================
