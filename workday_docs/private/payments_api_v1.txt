@@ -1,0 +1,65 @@
+# Workday Strategic Sourcing Payments API (v1.0)
+
+Source: https://apidocs.workdayspend.com/services/payments/v1.html
+Captured: 2025-12-30
+
+---
+
+## Servers
+
+| Environment | US | EU | CA |
+|-------------|----|----|---|
+| Production | api.us.workdayspend.com | api.eu.workdayspend.com | api.ca.workdayspend.com |
+| Sandbox | api.sandbox.us.workdayspend.com | api.sandbox.eu.workdayspend.com | api.sandbox.ca.workdayspend.com |
+
+Base path: /services/payments/v1
+
+## Authentication
+
+Required headers:
+- X-Api-Key - Company-wide API key
+- X-User-Token - User-specific API token
+- X-User-Email - User email
+
+## Rate Limiting: 5 requests/second
+
+---
+
+## Endpoints
+
+### Payment Currencies
+GET    /payment_currencies              - List all
+POST   /payment_currencies              - Create
+PATCH  /payment_currencies/{id}         - Update by ID
+DELETE /payment_currencies/{id}         - Delete by ID
+PATCH  /payment_currencies/{ext_id}/external_id  - Update by external ID
+DELETE /payment_currencies/{ext_id}/external_id  - Delete by external ID
+
+Object: { type, id, attributes: { alpha, numeric, external_id } }
+
+### Payment Types
+GET    /payment_types              - List all
+POST   /payment_types              - Create
+PATCH  /payment_types/{id}         - Update by ID
+DELETE /payment_types/{id}         - Delete by ID
+
+Object: { type, id, attributes: { name, external_id, payment_method } }
+payment_method: Cash, Check, etc.
+
+### Payment Terms
+GET    /payment_terms              - List all
+POST   /payment_terms              - Create
+PATCH  /payment_terms/{id}         - Update by ID
+DELETE /payment_terms/{id}         - Delete by ID
+
+Object: { type, id, attributes: { name, external_id } }
+
+---
+
+## Example
+
+curl -H "X-Api-Key: ${COMPANY_KEY}" \
+     -H "X-User-Token: ${USER_TOKEN}" \
+     -H "X-User-Email: ${USER_EMAIL}" \
+     -H "Content-Type: application/vnd.api+json" \
+     "https://api.us.workdayspend.com/services/payments/v1/payment_currencies"
