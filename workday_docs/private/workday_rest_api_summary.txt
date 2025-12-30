@@ -1,0 +1,388 @@
+================================================================================
+WORKDAY STRATEGIC SOURCING REST API SUMMARY
+================================================================================
+Generated: 2025-12-30
+Source: openapi_workday.txt (Workday API Documentation Export)
+
+================================================================================
+1. API TITLE AND VERSIONS
+================================================================================
+
+This documentation contains MULTIPLE Workday Strategic Sourcing APIs:
+
+| API Name                                    | Version |
+|---------------------------------------------|---------|
+| Workday Strategic Sourcing Attachments API  | 1.0     |
+| Workday Strategic Sourcing Awards API       | 1.0     |
+| Workday Strategic Sourcing Contracts API    | 1.1     |
+| Workday Strategic Sourcing Events API       | 1.2     |
+| Workday Strategic Sourcing Fields API       | 1.0     |
+| Workday Strategic Sourcing Projects API     | 1.0     |
+| Workday Strategic Sourcing Reports API      | 1.0     |
+| Workday Strategic Sourcing SCIM API         | 2.0     |
+| Workday Strategic Sourcing Spend Categories | 1.0     |
+| Workday Strategic Sourcing Supplier API     | 1.0     |
+| Workday Strategic Sourcing Legacy API       | 3.0     |
+
+================================================================================
+2. TOTAL NUMBER OF ENDPOINTS
+================================================================================
+
+Total Unique Endpoints: 255 (including duplicates from Legacy API)
+Primary API Endpoints: ~135 unique endpoints
+
+================================================================================
+3. ENDPOINT PATHS GROUPED BY RESOURCE
+================================================================================
+
+--- ATTACHMENTS ---
+GET    /attachments
+POST   /attachments
+GET    /attachments/{id}
+PATCH  /attachments/{id}
+GET    /attachments/{external_id}/external_id
+PATCH  /attachments/{external_id}/external_id
+
+--- AWARDS ---
+GET    /awards
+GET    /awards/{award_id}/award_line_items
+GET    /award_line_items/{id}
+
+--- CONTRACTS ---
+GET    /contracts
+POST   /contracts
+GET    /contracts/{id}
+PATCH  /contracts/{id}
+DELETE /contracts/{id}
+GET    /contracts/{external_id}/external_id
+PATCH  /contracts/{external_id}/external_id
+DELETE /contracts/{external_id}/external_id
+GET    /contracts/describe
+
+--- CONTRACT TYPES ---
+GET    /contract_types
+POST   /contract_types
+GET    /contract_types/{id}
+PATCH  /contract_types/{id}
+DELETE /contract_types/{id}
+GET    /contract_types/{external_id}/external_id
+PATCH  /contract_types/{external_id}/external_id
+DELETE /contract_types/{external_id}/external_id
+
+--- EVENTS ---
+GET    /events
+POST   /events
+GET    /events/{id}
+PATCH  /events/{id}
+DELETE /events/{id}
+GET    /events/describe
+POST   /events/{event_id}/relationships/supplier_companies
+DELETE /events/{event_id}/relationships/supplier_companies
+POST   /events/{event_external_id}/relationships/supplier_companies/external_id
+DELETE /events/{event_external_id}/relationships/supplier_companies/external_id
+POST   /events/{event_id}/relationships/supplier_contacts
+DELETE /events/{event_id}/relationships/supplier_contacts
+POST   /events/{event_external_id}/relationships/supplier_contacts/external_id
+DELETE /events/{event_external_id}/relationships/supplier_contacts/external_id
+
+--- EVENT TEMPLATES ---
+GET    /event_templates
+GET    /event_templates/{id}
+
+--- WORKSHEETS ---
+GET    /events/{event_id}/worksheets
+GET    /events/{event_id}/worksheets/{id}
+GET    /worksheets/describe
+
+--- LINE ITEMS ---
+GET    /events/{event_id}/worksheets/{worksheet_id}/line_items
+POST   /events/{event_id}/worksheets/{worksheet_id}/line_items
+POST   /events/{event_id}/worksheets/{worksheet_id}/line_items/bulk
+GET    /events/{event_id}/worksheets/{worksheet_id}/line_items/{id}
+PATCH  /events/{event_id}/worksheets/{worksheet_id}/line_items/{id}
+DELETE /events/{event_id}/worksheets/{worksheet_id}/line_items/{id}
+
+--- BIDS ---
+GET    /events/{event_id}/bids
+GET    /bids/{id}
+GET    /bids/describe
+GET    /bids/{bid_id}/bid_line_items
+GET    /bid_line_items/{id}
+GET    /bid_line_items
+GET    /bid_line_items/describe
+
+--- FIELD GROUPS ---
+GET    /field_groups
+POST   /field_groups
+GET    /field_groups/{id}
+PATCH  /field_groups/{id}
+DELETE /field_groups/{id}
+
+--- FIELDS ---
+GET    /fields
+POST   /fields
+GET    /fields/{id}
+PATCH  /fields/{id}
+DELETE /fields/{id}
+
+--- FIELD OPTIONS ---
+GET    /fields/{field_id}/field_options
+POST   /field_options
+PATCH  /field_options/{id}
+DELETE /field_options/{id}
+
+--- SPECIALIZED FIELDS (Legacy API) ---
+GET    /fields/contact_types
+POST   /fields/contact_types
+PATCH  /fields/contact_types/{id}
+DELETE /fields/contact_types/{id}
+GET    /fields/payment_terms
+POST   /fields/payment_terms
+PATCH  /fields/payment_terms/{id}
+DELETE /fields/payment_terms/{id}
+GET    /fields/payment_types
+POST   /fields/payment_types
+PATCH  /fields/payment_types/{id}
+DELETE /fields/payment_types/{id}
+GET    /fields/supplier_company_segmentations
+POST   /fields/supplier_company_segmentations
+PATCH  /fields/supplier_company_segmentations/{id}
+DELETE /fields/supplier_company_segmentations/{id}
+GET    /fields/supplier_company_segmentation_statuses
+POST   /fields/supplier_company_segmentation_statuses
+PATCH  /fields/supplier_company_segmentation_statuses/{id}
+DELETE /fields/supplier_company_segmentation_statuses/{id}
+GET    /fields/supplier_company_risks
+POST   /fields/supplier_company_risks
+PATCH  /fields/supplier_company_risks/{id}
+DELETE /fields/supplier_company_risks/{id}
+GET    /fields/supplier_categories
+POST   /fields/supplier_categories
+PATCH  /fields/supplier_categories/{id}
+DELETE /fields/supplier_categories/{id}
+GET    /fields/supplier_groups
+POST   /fields/supplier_groups
+PATCH  /fields/supplier_groups/{id}
+DELETE /fields/supplier_groups/{id}
+GET    /fields/payment_currencies
+POST   /fields/payment_currencies
+PATCH  /fields/payment_currencies/{id}
+DELETE /fields/payment_currencies/{id}
+
+--- PROJECTS ---
+GET    /projects
+POST   /projects
+GET    /projects/{id}
+PATCH  /projects/{id}
+DELETE /projects/{id}
+GET    /projects/{external_id}/external_id
+PATCH  /projects/{external_id}/external_id
+DELETE /projects/{external_id}/external_id
+GET    /projects/describe
+POST   /projects/{project_id}/relationships/supplier_companies
+DELETE /projects/{project_id}/relationships/supplier_companies
+POST   /projects/{project_external_id}/relationships/supplier_companies/external_id
+DELETE /projects/{project_external_id}/relationships/supplier_companies/external_id
+POST   /projects/{project_id}/relationships/supplier_contacts
+DELETE /projects/{project_id}/relationships/supplier_contacts
+POST   /projects/{project_external_id}/relationships/supplier_contacts/external_id
+DELETE /projects/{project_external_id}/relationships/supplier_contacts/external_id
+
+--- PROJECT TYPES ---
+GET    /project_types
+GET    /project_types/{id}
+
+--- REPORTS ---
+GET    /contract_milestone_reports/entries
+GET    /contract_milestone_reports/schema
+GET    /contract_reports/entries
+GET    /contract_reports/schema
+GET    /event_reports/entries
+GET    /event_reports/{event_report_id}/entries
+GET    /event_reports
+GET    /event_reports/schema
+GET    /performance_review_answer_reports/entries
+GET    /performance_review_answer_reports/schema
+GET    /performance_review_reports/entries
+GET    /performance_review_reports/schema
+GET    /project_milestone_reports/entries
+GET    /project_milestone_reports/schema
+GET    /project_reports/entries
+GET    /project_reports/schema
+GET    /savings_reports/entries
+GET    /savings_reports/schema
+GET    /supplier_reports/entries
+GET    /supplier_reports/schema
+GET    /supplier_review_reports/entries
+GET    /supplier_review_reports/schema
+
+--- SCIM (Users) ---
+GET    /suppliers
+GET    /suppliers/{supplier_id}
+
+--- SPEND CATEGORIES ---
+GET    /spend_categories
+POST   /spend_categories
+GET    /spend_categories/{id}
+PATCH  /spend_categories/{id}
+DELETE /spend_categories/{id}
+GET    /spend_categories/{external_id}/external_id
+PATCH  /spend_categories/{external_id}/external_id
+DELETE /spend_categories/{external_id}/external_id
+
+--- SUPPLIER COMPANIES ---
+GET    /supplier_companies
+POST   /supplier_companies
+GET    /supplier_companies/{id}
+PATCH  /supplier_companies/{id}
+DELETE /supplier_companies/{id}
+GET    /supplier_companies/{external_id}/external_id
+PATCH  /supplier_companies/{external_id}/external_id
+DELETE /supplier_companies/{external_id}/external_id
+GET    /supplier_companies/describe
+
+--- SUPPLIER CONTACTS ---
+GET    /supplier_companies/{company_id}/supplier_contacts
+POST   /supplier_contacts
+GET    /supplier_contacts/{id}
+PATCH  /supplier_contacts/{id}
+DELETE /supplier_contacts/{id}
+GET    /supplier_companies/{external_id}/supplier_contacts/external_id
+GET    /supplier_contacts/{external_id}/external_id
+PATCH  /supplier_contacts/{external_id}/external_id
+DELETE /supplier_contacts/{external_id}/external_id
+POST   /supplier_contacts/external_id (Legacy)
+
+--- SUPPLIER CLASSIFICATIONS ---
+GET    /supplier_classifications
+POST   /supplier_classifications
+GET    /supplier_classifications/{id}
+PATCH  /supplier_classifications/{id}
+DELETE /supplier_classifications/{id}
+GET    /supplier_classifications/{external_id}/external_id
+PATCH  /supplier_classifications/{external_id}/external_id
+DELETE /supplier_classifications/{external_id}/external_id
+
+--- SUPPLIER COMPANY SEGMENTATIONS ---
+GET    /supplier_company_segmentations
+POST   /supplier_company_segmentations
+PATCH  /supplier_company_segmentations/{id}
+DELETE /supplier_company_segmentations/{id}
+
+--- SUPPLIER COMPANY RISKS ---
+GET    /supplier_company_risks
+POST   /supplier_company_risks
+PATCH  /supplier_company_risks/{id}
+DELETE /supplier_company_risks/{id}
+
+--- SUPPLIER COMPANY SEGMENTATION STATUSES ---
+GET    /supplier_company_segmentation_statuses
+POST   /supplier_company_segmentation_statuses
+PATCH  /supplier_company_segmentation_statuses/{id}
+DELETE /supplier_company_segmentation_statuses/{id}
+
+--- SUPPLIER CATEGORIES ---
+GET    /supplier_categories
+POST   /supplier_categories
+PATCH  /supplier_categories/{id}
+DELETE /supplier_categories/{id}
+PATCH  /supplier_categories/{external_id}/external_id
+DELETE /supplier_categories/{external_id}/external_id
+
+--- SUPPLIER GROUPS ---
+GET    /supplier_groups
+POST   /supplier_groups
+PATCH  /supplier_groups/{id}
+DELETE /supplier_groups/{id}
+PATCH  /supplier_groups/{external_id}/external_id
+DELETE /supplier_groups/{external_id}/external_id
+
+--- CONTACT TYPES ---
+GET    /contact_types
+POST   /contact_types
+PATCH  /contact_types/{id}
+DELETE /contact_types/{id}
+PATCH  /contact_types/{external_id}/external_id
+DELETE /contact_types/{external_id}/external_id
+
+================================================================================
+4. AUTHENTICATION METHOD
+================================================================================
+
+The Workday Strategic Sourcing API uses API KEY authentication.
+Every request requires ALL 3 HTTP headers:
+
+| HTTP Header    | Description                    |
+|----------------|--------------------------------|
+| X-Api-Key      | Company-wide API key           |
+| X-User-Token   | User-specific API token        |
+| X-User-Email   | User email address             |
+
+These credentials can be generated from the "API tokens" section of the user's Profile page.
+
+Security Requirements:
+- All API requests MUST be made over HTTPS
+- HTTP calls will fail
+- Unauthenticated requests will fail
+- Keep API keys secure - do not share in public repositories or client-side code
+
+================================================================================
+5. BASE URL / SERVERS
+================================================================================
+
+The API is available in multiple regions and environments:
+
+--- US REGION ---
+Production: https://api.us.workdayspend.com/services/{service}/v{version}
+Sandbox:    https://api.sandbox.us.workdayspend.com/services/{service}/v{version}
+
+--- EU REGION ---
+Production: https://api.eu.workdayspend.com/services/{service}/v{version}
+Sandbox:    https://api.sandbox.eu.workdayspend.com/services/{service}/v{version}
+
+--- CA REGION ---
+Production: https://api.ca.workdayspend.com/services/{service}/v{version}
+Sandbox:    https://api.sandbox.ca.workdayspend.com/services/{service}/v{version}
+
+Service-Specific Base URLs:
+| Service          | Path                           |
+|------------------|--------------------------------|
+| Attachments      | /services/attachments/v1       |
+| Awards           | /services/awards/v1            |
+| Contracts        | /services/contracts/v1         |
+| Events           | /services/events/v1            |
+| Fields           | /services/fields/v1            |
+| Projects         | /services/projects/v1          |
+| Reports          | /services/reports/v1           |
+| SCIM (Users)     | /services/scim/v2              |
+| Spend Categories | /services/spend_categories/v1  |
+| Suppliers        | /services/suppliers/v1         |
+
+================================================================================
+ADDITIONAL INFORMATION
+================================================================================
+
+API Specification: JSON API Specification (https://jsonapi.org)
+Content-Type: application/vnd.api+json
+
+Rate Limiting:
+- 5 requests per second (per company, shared across all API keys)
+- Returns 429 Too Many Requests when exceeded
+- Recommended: Implement retry logic with 1-second delay
+
+Version Header: X-Api-Version (e.g., "X-Api-Version: 1.0")
+
+Date/Time Format: ISO 8601 (UTC timezone for responses)
+
+Pagination:
+- Default: 10 results per page
+- Maximum: 100 results per page
+- Use page[size] query parameter
+
+External IDs:
+- Optional mutable field for third-party system integration
+- Used to prevent duplicates and enable cross-system lookups
+
+================================================================================
+END OF SUMMARY
+================================================================================
