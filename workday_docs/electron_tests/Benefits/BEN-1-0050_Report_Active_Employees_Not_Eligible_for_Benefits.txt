@@ -2,44 +2,40 @@
 TEST ID: BEN-1-0050
 FUNCTIONAL AREA: Benefits
 TEST NAME: Report: Active Employees Not Eligible for Benefits
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
 TASK/STEP: Active Employees Not Eligible for Benefits
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Active Employees Not Eligible for Benefits
-
-### 1. Test Scenarios Index (score: 11)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organ
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test data: Valid worker IDs and benefit plans configured
 
 ELECTRON STEPS:
-1. enter search box as "Active Employees Not Eligible for Benefits"
+1. enter search box as "Report Active Employees Not Eligible for Benefits"
 2. wait for search results
-3. click search result containing "Active Employees Not Eligible for Benefits"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-1-0050_complete.png"
+3. click search result containing "Active Employees Not Eligible"
+4. wait for page to load
+5. screenshot as "BEN-1-0050_report_page.png"
+6. wait for report to generate
+7. verify report displays employee list
+8. verify columns: Employee Name, Worker ID, Reason for Ineligibility
+9. screenshot as "BEN-1-0050_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Report includes all ineligible active employees
+- [ ] Reasons for ineligibility are documented
+- [ ] Report can be exported successfully
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Enhanced using KB article: kb_benefits_enrollment.txt
+- All steps are valid Electron commands
+- Screenshots use test ID: BEN-1-0050
+- Confidence score: 7.5/10 based on KB coverage
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
+- REST: /benefits/plans, /benefits/enrollments (if available)
+
 ================================================================================

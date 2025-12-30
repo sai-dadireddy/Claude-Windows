@@ -1,0 +1,229 @@
+# Workday Add Vaccination Business Process - Knowledge Base
+
+## Source
+- Workday HCM Vaccination Management
+- Documentation: Worker Health & Safety - COVID-19 Vaccination Tracking
+- Release: 2025R1
+- Created: 2025-12-30
+
+## Overview
+
+The **Add Vaccination** business process allows HR administrators and workers to record vaccination information in Workday. This process supports tracking vaccination status, doses, dates, and related documentation for compliance and health safety requirements.
+
+## Key Components
+
+### 1. Initiation
+The process can be initiated by:
+- **HR Administrator**: Adding vaccination records for any worker
+- **Worker (Self-Service)**: Adding their own vaccination information
+- **Manager**: Adding vaccination data for direct reports (if configured)
+
+### 2. Access Points
+
+#### From Worker Profile:
+1. Search for worker name or ID
+2. Navigate to worker profile
+3. Select "Related Actions"
+4. Select "Personal" > "Add Vaccination"
+
+#### From Tenant Search:
+1. Enter "Add Vaccination" in the search box
+2. Select the task from search results
+3. Enter worker name when prompted
+
+### 3. Required Fields
+
+**Vaccination Information:**
+- **Worker**: The employee receiving the vaccination
+- **Vaccination Type**: Type of vaccine (e.g., COVID-19, Influenza, Hepatitis B)
+- **Dose Number**: First dose, second dose, booster, etc.
+- **Vaccination Date**: Date the vaccination was administered
+- **Vaccination Status**: Completed, Scheduled, Declined, etc.
+
+**Optional Fields:**
+- Vaccine Manufacturer
+- Lot Number
+- Expiration Date
+- Administration Site (location on body)
+- Administered By (healthcare provider)
+- Facility/Location
+- Notes/Comments
+- Attach documentation (vaccination card image)
+
+### 4. Validation Rules
+- Vaccination date cannot be in the future
+- Dose number must be sequential for multi-dose vaccines
+- Vaccination status must be appropriate for the dose
+
+### 5. Security and Permissions
+
+Required domain permissions:
+- **Add**: Worker Data: Health and Safety
+- **View**: Personal Data: Vaccination Information
+
+Typical security groups:
+- HR Administrator
+- Worker (for self-service)
+- Health and Safety Administrator
+
+## Implementation Steps
+
+### Standard Workflow:
+
+1. **Navigate to Task**:
+   - Search for "Add Vaccination"
+   - Or access from worker profile > Related Actions > Personal
+
+2. **Select Worker**:
+   - Enter worker name or ID
+   - Select from search results
+
+3. **Enter Vaccination Details**:
+   - Select vaccination type
+   - Enter dose number
+   - Enter vaccination date
+   - Select vaccination status
+
+4. **Add Optional Information**:
+   - Manufacturer, lot number
+   - Healthcare provider details
+   - Attach documentation
+
+5. **Review and Submit**:
+   - Verify all information is accurate
+   - Click "Submit"
+
+6. **Confirmation**:
+   - System displays confirmation message
+   - Vaccination record is added to worker profile
+
+### Business Process Steps (if configured):
+
+If Add Vaccination is configured as a business process with approvals:
+1. **Initiation**: User enters vaccination data
+2. **Review**: Manager or HR reviews submission
+3. **Approval**: Designated approver confirms accuracy
+4. **Completion**: Record is finalized in the system
+
+## Automation Considerations for Electron
+
+### Navigation Steps:
+1. **Search Method**:
+   ```
+   enter search box as "Add Vaccination"
+   wait for search results
+   click search result containing "Add Vaccination"
+   ```
+
+2. **Worker Selection**:
+   ```
+   wait for page to load
+   enter Worker field as "{worker_name}"
+   wait for worker search results
+   click worker result containing "{worker_name}"
+   ```
+
+3. **Vaccination Data Entry**:
+   ```
+   select Vaccination Type as "COVID-19"
+   select Dose Number as "First Dose"
+   enter Vaccination Date as "{date}"
+   select Vaccination Status as "Completed"
+   ```
+
+4. **Optional Fields**:
+   ```
+   enter Vaccine Manufacturer as "Pfizer"
+   enter Lot Number as "{lot_number}"
+   enter Administered By as "{provider_name}"
+   ```
+
+5. **Submission**:
+   ```
+   click button "Submit"
+   wait for confirmation
+   verify message contains "successfully"
+   screenshot as "vaccination_complete.png"
+   ```
+
+### UI Selectors:
+- Worker field: "Worker" or "Employee"
+- Vaccination Type dropdown: "Vaccination Type" or "Vaccine Type"
+- Date field: "Vaccination Date" or "Date Administered"
+- Submit button: "Submit" or "OK"
+
+### Validation:
+- Confirmation message: "Vaccination has been successfully added"
+- Worker profile shows new vaccination record
+- Vaccination count updated in health summary
+
+### Error Handling:
+Common errors:
+- "Worker not found" - Invalid worker ID
+- "Invalid date" - Future date or incorrect format
+- "Missing required field" - Vaccination type or date not entered
+- "Insufficient permissions" - User lacks domain access
+
+### Screenshots:
+- Initial task screen
+- Worker selection screen
+- Vaccination entry form (filled)
+- Confirmation message
+
+## Common Use Cases
+
+### Scenario 1: COVID-19 Vaccination Tracking
+- Record primary series (Dose 1, Dose 2)
+- Record booster doses
+- Track vaccination card uploads
+- Monitor compliance for return-to-office policies
+
+### Scenario 2: Flu Shot Campaign
+- Mass entry during annual flu season
+- Track vaccination rates by department
+- Generate compliance reports
+
+### Scenario 3: Healthcare Worker Requirements
+- Track required vaccinations (Hepatitis B, MMR, etc.)
+- Monitor expiration dates for boosters
+- Ensure compliance with healthcare regulations
+
+## Related Business Processes
+
+- Update Vaccination
+- Cancel/Rescind Vaccination
+- Worker Profile Management
+- Health and Safety Reporting
+- Vaccination Compliance Reports
+
+## Reporting and Analytics
+
+Available reports:
+- Worker Vaccination Status
+- Vaccination Compliance by Organization
+- Upcoming Booster Due Dates
+- Vaccination Type Summary
+
+## Best Practices
+
+1. **Accuracy**: Verify vaccination dates and types before submission
+2. **Documentation**: Always attach vaccination card or certificate when available
+3. **Timeliness**: Enter vaccination data promptly to maintain accurate records
+4. **Privacy**: Handle vaccination data according to privacy regulations (HIPAA, GDPR)
+5. **Validation**: Double-check dose numbers for multi-dose vaccines
+
+## References
+
+- Workday HCM: Worker Health and Safety
+- COVID-19 Vaccination Tracking Feature
+- Personal Information Management
+- Worker Profile Administration
+
+## Effective Management
+
+By effectively managing vaccination data in Workday, organizations can:
+- Maintain accurate health and safety records
+- Monitor vaccination compliance
+- Support return-to-workplace planning
+- Generate regulatory reports
+- Protect worker privacy while tracking critical health information

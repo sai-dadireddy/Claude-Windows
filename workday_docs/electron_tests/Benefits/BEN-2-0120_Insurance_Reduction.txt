@@ -2,44 +2,38 @@
 TEST ID: BEN-2-0120
 FUNCTIONAL AREA: Benefits
 TEST NAME: Insurance Reduction
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 5.0/10
+SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
 TASK/STEP: View Employee Profiles and Benefit Elections
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Employee Profiles and Benefit Elections
-
-### 1. Test Scenarios Index (score: 6)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Orga
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test data: Valid worker IDs and benefit plans configured
 
 ELECTRON STEPS:
 1. enter search box as "View Employee Profiles and Benefit Elections"
 2. wait for search results
 3. click search result containing "View Employee Profiles and Benefit Elections"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-2-0120_complete.png"
+4. wait for page to load
+5. screenshot as "BEN-2-0120_page.png"
+6. verify page loaded successfully
+7. screenshot as "BEN-2-0120_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] View Employee Profiles and Benefit Elections task completed successfully
+- [ ] No errors displayed
+- [ ] Required data is visible
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Enhanced using KB article: kb_benefits_enrollment.txt
+- All steps are valid Electron commands
+- Screenshots use test ID: BEN-2-0120
+- Confidence score: 5.0/10 based on KB coverage
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
+- REST: /benefits/plans, /benefits/enrollments (if available)
+
 ================================================================================

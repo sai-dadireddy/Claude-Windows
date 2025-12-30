@@ -2,44 +2,39 @@
 TEST ID: BEN-1-0040
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefits Eligibility by Benefits Group
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
 TASK/STEP: Benefits Eligibility by Benefits Group
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefits Eligibility by Benefits Group
-
-### 1. Test Scenarios Index (score: 9)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizati
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test data: Valid worker IDs and benefit plans configured
 
 ELECTRON STEPS:
 1. enter search box as "Benefits Eligibility by Benefits Group"
 2. wait for search results
-3. click search result containing "Benefits Eligibility by Benefits Group"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-1-0040_complete.png"
+3. click search result containing "Benefits Eligibility"
+4. wait for page to load
+5. screenshot as "BEN-1-0040_eligibility_page.png"
+6. verify eligibility rules are displayed
+7. verify group assignments are shown
+8. screenshot as "BEN-1-0040_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Eligibility rules are correctly configured
+- [ ] Group assignments are accurate
+- [ ] No eligibility gaps exist
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Enhanced using KB article: kb_benefits_enrollment.txt
+- All steps are valid Electron commands
+- Screenshots use test ID: BEN-1-0040
+- Confidence score: 8.5/10 based on KB coverage
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
+- REST: /benefits/plans, /benefits/enrollments (if available)
+
 ================================================================================

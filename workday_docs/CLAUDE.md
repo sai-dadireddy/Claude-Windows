@@ -246,14 +246,27 @@ STEP 1: Search local KB articles
   - Match functional area to KB
 
 STEP 2: If still < 7.0, use browser MCP to scrape Workday KB
-  mcp__claude-in-chrome__navigate(url="https://resourcecenter.workday.com")
-  mcp__claude-in-chrome__form_input(ref="search", value="{Task / Step}")
-  mcp__claude-in-chrome__get_page_text(tabId=...)
 
-  Human-like delays:
+  **CRITICAL: CREATE YOUR OWN TAB FIRST!**
+  # Step 1: Create own tab (NEVER share with other agents)
+  context = mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=True)
+  new_tab = mcp__claude-in-chrome__tabs_create_mcp()
+  tabId = new_tab.id  # Use THIS tabId for ALL calls
+
+  # Step 2: Navigate and search
+  mcp__claude-in-chrome__navigate(url="https://resourcecenter.workday.com", tabId=tabId)
+  mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=tabId)
+  mcp__claude-in-chrome__find(query="search box", tabId=tabId)
+  mcp__claude-in-chrome__form_input(ref="search_ref", value="{Task / Step}", tabId=tabId)
+  mcp__claude-in-chrome__computer(action="key", text="Enter", tabId=tabId)
+  mcp__claude-in-chrome__get_page_text(tabId=tabId)
+
+  **BROWSER TAB ISOLATION RULES:**
+  - ALWAYS create own tab with tabs_create_mcp()
+  - NEVER reuse tabs from other agents
   - wait 2-5 seconds between actions
   - scroll before clicking
-  - max 10 pages per session
+  - max 10-20 pages per session
 
 STEP 3: Save new knowledge to KB
   - Create kb_{area}_{task}.txt
