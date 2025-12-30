@@ -178,13 +178,24 @@ def extract_electron_actions(scenario_data):
 def generate_electron_test(scenario_data, confidence):
     """Generate Electron test file content"""
 
-    scenario_id = scenario_data.get('Scenario ID', 'UNKNOWN')
-    scenario_name = scenario_data.get('Scenario Name', 'Unnamed Scenario')
-    task = scenario_data.get('Task / Step', '')
-    expected = scenario_data.get('Customer Expected Result', '')
-    role = scenario_data.get('Workday Role', 'Employee')
+    scenario_id = str(scenario_data.get('Scenario ID', 'UNKNOWN'))
+    scenario_name = str(scenario_data.get('Scenario Name', 'Unnamed Scenario'))
+    task = str(scenario_data.get('Task / Step', ''))
+    expected = str(scenario_data.get('Customer Expected Result', ''))
+    role = str(scenario_data.get('Workday Role', 'Employee'))
+
+    # Handle NaN values
+    if task == 'nan' or not task:
+        task = 'No task specified'
+    if expected == 'nan' or not expected:
+        expected = 'No expected result specified'
+    if role == 'nan' or not role:
+        role = 'Employee'
 
     actions = extract_electron_actions(scenario_data)
+
+    # Safe truncate
+    task_short = task[:80] if len(task) > 80 else task
 
     test_content = f'''const {{ test, expect }} = require('@playwright/test');
 
@@ -205,7 +216,7 @@ test.describe('{scenario_name}', () => {{
         // Add authentication steps
     }});
 
-    test('should complete: {task[:80]}', async ({{ page }}) => {{
+    test('should complete: {task_short}', async ({{ page }}) => {{
 '''
 
     if confidence >= 7.0:
