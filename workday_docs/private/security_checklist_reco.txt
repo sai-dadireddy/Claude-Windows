@@ -1,0 +1,46 @@
+# Workday REST API Security Checklist (reco.ai)
+
+Source: https://www.reco.ai/hub/workday-rest-api-integration-security
+
+## Authentication
+
+### OAuth 2.0 (Required)
+- Use Bearer Token in Authorization header
+- Implement refresh token rotation
+- Store Client ID/Secret in secure vault (NOT in code)
+- Generate non-expiring refresh tokens for ISUs
+- Rotate tokens periodically
+
+## Security Checklist
+
+[ ] Register API clients with appropriate scopes ONLY
+[ ] Implement OAuth 2.0 for ALL authentication
+[ ] Store secrets in credential vaults, NOT in code
+[ ] Enable comprehensive API activity logging
+[ ] Conduct regular security audits
+[ ] Implement least privilege access
+[ ] Monitor for suspicious API usage patterns
+[ ] Rotate credentials on schedule
+[ ] Validate all API requests/responses
+[ ] Use ISUs for automation, NEVER personal accounts
+
+## Access Control
+
+- Assign ONLY permissions strictly necessary (least privilege)
+- Create dedicated ISU for EACH integration
+- Restrict API client scopes to required functional areas
+
+## Monitoring
+
+- Review API logs regularly for unusual activities
+- Implement continuous monitoring of usage patterns
+- Set up alerts for:
+  - Failed authentication attempts
+  - Unusual data access patterns
+  - High volume requests
+
+## Data Protection
+
+- HTTPS required for ALL API endpoints
+- Validate and sanitize all data inputs/outputs
+- Encrypt sensitive data at rest

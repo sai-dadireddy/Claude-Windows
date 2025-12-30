@@ -1,0 +1,71 @@
+# Getting Employees from Workday API with Python (merge.dev)
+
+Source: https://www.merge.dev/blog/how-to-get-employees-from-the-workday-api-with-python
+
+## Setup
+
+```python
+import json
+import requests
+import xmltodict
+
+# Credentials
+TENANT = "your_tenant_name"
+USERNAME = "your_username"
+PASSWORD = "your_password"
+ENDPOINT = "https://{tenant}.myworkday.com/ccx/service/{tenant}/Human_Resources/v42.2"
+```
+
+## SOAP Request Structure
+
+Workday uses SOAP, not REST. Request has 3 parts:
+
+1. **Envelope** - outer wrapper with namespace
+2. **Header** - authentication credentials
+3. **Body** - API call parameters
+
+## Finding Endpoints
+
+### For HRIS:
+1. Search Workday for "Public Web Services"
+2. Navigate to Human Resources > "View WSDL"
+3. Get hostname and endpoint URL from WSDL page bottom
+
+### For ATS:
+1. Access "Domain Security Policy" under Web Services
+2. Search "Recruiting Web Services"
+3. Add security group permissions
+
+## Making the API Call
+
+```python
+# SOAP Body for Get_Workers
+soap_body = '''<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:bsvc="urn:com.workday/bsvc">
+    <soapenv:Header>
+        <wsse:Security xmlns:wsse="...">
+            <wsse:UsernameToken>
+                <wsse:Username>{username}</wsse:Username>
+                <wsse:Password>{password}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <bsvc:Get_Workers_Request bsvc:version="v42.2"/>
+    </soapenv:Body>
+</soapenv:Envelope>'''
+
+response = requests.post(ENDPOINT, data=soap_body, headers={'Content-Type': 'text/xml'})
+
+# Convert XML to dict
+data = xmltodict.parse(response.text)
+employees = data['env:Envelope']['env:Body']['wd:Get_Workers_Response']['wd:Response_Data']
+```
+
+## Response Contains
+- Contact information
+- Hire dates
+- Weekly hours
+- Employment status
+- Compensation details

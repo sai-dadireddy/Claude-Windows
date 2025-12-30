@@ -1,0 +1,67 @@
+# Workday SOAP API Tutorial (apideck.com)
+
+Source: https://www.apideck.com/blog/a-comprehensive-tutorial-on-setting-up-and-using-the-workday-api
+
+## Setup Steps
+
+### 1. Create Integration System Security Group (ISSG)
+Search "Create Security Group" in Workday portal.
+
+### 2. Configure Domain Permissions
+- Navigate to View Domain report
+- Select Person Data and Worker Data for HRIS
+- Grant ISSG: GET, POST, PUT permissions
+
+### 3. Create Integration System User (ISU)
+- Search "Create Integration System User"
+- Enter username
+- Configure session timeout (optional)
+- Link ISSG to ISU via Security Profile
+
+## Endpoint Format
+
+```
+https://{tenant}.myworkday.com/ccx/service/{tenant}/Human_Resources/v42.2?wsdl
+```
+
+## Get_Employee API
+
+Input: Employee_Reference ID
+Output: Employee_Data containing:
+- Personal information
+- Worker status
+- Compensation details
+
+## Code Example (TypeScript with strong-soap)
+
+```typescript
+import * as soap from 'strong-soap';
+
+const wsdlUrl = 'https://{tenant}.myworkday.com/ccx/service/{tenant}/Human_Resources/v42.2?wsdl';
+
+soap.createClient(wsdlUrl, (err, client) => {
+    const args = {
+        Employee_Reference: {
+            ID: { _: 'employee_id_here', $: { type: 'Employee_ID' } }
+        }
+    };
+
+    // Add WS-Security
+    const wsSecurity = new soap.WSSecurity(username, password);
+    client.setSecurity(wsSecurity);
+
+    client.Get_Employee(args, (err, result) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log(result.Employee_Data);
+    });
+});
+```
+
+## Common Use Cases
+
+- Employee data sync (personal details, roles, compensation)
+- Accounting integration (payroll, benefits)
+- HR automation (onboarding/offboarding workflows)

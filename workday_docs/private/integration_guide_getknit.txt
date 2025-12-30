@@ -1,0 +1,79 @@
+# Workday API Integration Guide (getknit.dev)
+
+Source: https://www.getknit.dev/blog/workday-api-integration-in-depth
+
+## Core API Types
+
+### SOAP APIs
+- Structure: XML-based with strict WSDL contracts
+- Auth: Integration System User (ISU) with username/password
+- Best for: Payroll, financial transactions, compliance-critical processes
+
+### REST APIs
+- Structure: JSON-based, lightweight
+- Auth: OAuth 2.0 tokens
+- Best for: Modern SaaS integrations, quick data exchanges
+
+## Authentication Methods
+
+### ISU (Integration System User)
+Dedicated system account for API integration with granular access control.
+
+### OAuth 2.0
+Modern token-based auth, especially useful for REST APIs.
+
+## Setup Steps
+
+1. Obtain Web Services Endpoint (Public Web Services in Workday)
+2. Create Integration System User (ISU) with session timeout = 0
+3. Configure Security Group (Integration System Security Group)
+4. Set Domain Permissions
+5. Register API Client (get Client ID + Secret)
+6. Generate Refresh Token (non-expiring)
+7. Test in Sandbox first
+
+## Code Examples
+
+### SOAP Request
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:bsvc="urn:com.workday/bsvc">
+    <soapenv:Header>
+        <wsse:Security>
+            <wsse:UsernameToken>
+                <wsse:Username>{ISU USERNAME}</wsse:Username>
+                <wsse:Password>{ISU PASSWORD}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <bsvc:Get_Workers_Request bsvc:version="v40.1">
+        </bsvc:Get_Workers_Request>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+### REST Example
+```bash
+curl --location 'https://{host}.workday.com/ccx/api/v1/{tenant}/workers' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+## Common Errors
+
+| Error | Solution |
+|-------|----------|
+| Invalid client credentials | Verify OAuth setup, check token expiration |
+| Access denied | Confirm ISU has proper security group permissions |
+| Data field mismatch | Validate input against Workday data model |
+| Rate limiting | Implement throttling and retry logic |
+
+## PECI vs Web Services
+
+| Feature | PECI | Web Services |
+|---------|------|-------------|
+| Data Flow | Outbound only | Inbound/Outbound |
+| Operations | Read-only | CREATE, UPDATE, DELETE |
+| Scope | Limited by country | Global |
+
+## Note: Workday does NOT support webhooks natively - requires polling.
