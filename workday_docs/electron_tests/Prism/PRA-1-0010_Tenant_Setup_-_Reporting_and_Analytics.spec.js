@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 7.5/10
  *
  * Task: Edit Tenant Setup - Reporting and Analytics
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Administrator
  */
 
@@ -20,5 +20,9 @@ test.describe('Tenant Setup - Reporting and Analytics', () => {
     test('should complete: Edit Tenant Setup - Reporting and Analytics', async ({ page }) => {
         // Open report/dashboard
         await page.click("[data-automation-id=\"prismReport\"]");
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

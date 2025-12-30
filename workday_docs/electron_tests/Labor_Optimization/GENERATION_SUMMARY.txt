@@ -1,0 +1,13 @@
+Generation Summary for Labor Optimization
+Generated: 2025-12-30 17:02:40
+============================================================
+
+Total Scenarios: 24
+Files Generated: 24
+
+Confidence Breakdown:
+  High (7.0-10.0):     3 scenarios
+  Medium (5.0-6.9):   21 scenarios [NEEDS SME REVIEW]
+  Low (0.0-4.9):       0 scenarios [MANUAL]
+
+Success Rate: 12.5%

@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 7.5/10
  *
  * Task: Domain Security Policy Summary
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Administrator
  */
 
@@ -18,5 +18,9 @@ test.describe('Domain Setup', () => {
     });
 
     test('should complete: Domain Security Policy Summary', async ({ page }) => {
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

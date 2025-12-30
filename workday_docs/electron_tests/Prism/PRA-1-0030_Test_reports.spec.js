@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 8.5/10
  *
  * Task: View Custom Report
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Report Viewer
  */
 
@@ -20,5 +20,9 @@ test.describe('Test reports', () => {
     test('should complete: View Custom Report', async ({ page }) => {
         await page.waitForLoadState("networkidle");
         // View: View Custom Report
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

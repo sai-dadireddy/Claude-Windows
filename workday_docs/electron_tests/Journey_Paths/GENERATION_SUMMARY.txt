@@ -1,0 +1,13 @@
+Generation Summary for Journey Paths
+Generated: 2025-12-30 17:02:40
+============================================================
+
+Total Scenarios: 18
+Files Generated: 18
+
+Confidence Breakdown:
+  High (7.0-10.0):    11 scenarios
+  Medium (5.0-6.9):    7 scenarios [NEEDS SME REVIEW]
+  Low (0.0-4.9):       0 scenarios [MANUAL]
+
+Success Rate: 61.1%

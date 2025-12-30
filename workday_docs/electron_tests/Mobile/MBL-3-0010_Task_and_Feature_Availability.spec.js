@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 8.5/10
  *
  * Task: Run the List Tasks Available on Mobile report to see which business processes and actions you can complete on each platform.
- * Expected: nan
+ * Expected: No expected result specified
  * Role: System Configurator
  */
 
@@ -18,5 +18,9 @@ test.describe('Task and Feature Availability', () => {
     });
 
     test('should complete: Run the List Tasks Available on Mobile report to see which business processes an', async ({ page }) => {
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

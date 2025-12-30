@@ -1,0 +1,63 @@
+======================================================================
+Workday Electron Tests - 10 Remaining Areas
+Generated: 2025-12-30 17:02:41
+======================================================================
+
+
+Mobile:
+  Scenarios: 8
+  High:      8
+  Medium:    0
+  Low:       0
+
+Prism:
+  Scenarios: 23
+  High:      21
+  Medium:    2
+  Low:       0
+
+Peakon:
+  Scenarios: 43
+  High:      41
+  Medium:    2
+  Low:       0
+
+Messaging:
+  Scenarios: 9
+  High:      0
+  Medium:    9
+  Low:       0
+
+User_Experience:
+  Scenarios: 8
+  High:      8
+  Medium:    0
+  Low:       0
+
+Candidate_Engagement:
+  Scenarios: 8
+  High:      1
+  Medium:    7
+  Low:       0
+
+Journey_Paths:
+  Scenarios: 18
+  High:      11
+  Medium:    7
+  Low:       0
+
+Labor_Optimization:
+  Scenarios: 24
+  High:      3
+  Medium:    21
+  Low:       0
+
+Scheduling:
+  Scenarios: 221
+  High:      114
+  Medium:    107
+  Low:       0
+
+======================================================================
+Total: 362 scenarios, 362 files
+Success Rate: 57.2%

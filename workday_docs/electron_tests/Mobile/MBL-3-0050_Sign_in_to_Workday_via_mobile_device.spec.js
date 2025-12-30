@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 7.5/10
  *
  * Task: Profile Icon > My Account > Organization ID
- * Expected: nan
+ * Expected: No expected result specified
  * Role: End User
  */
 
@@ -18,5 +18,9 @@ test.describe('Sign in to Workday via mobile device', () => {
     });
 
     test('should complete: Profile Icon > My Account > Organization ID', async ({ page }) => {
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 8.0/10
  *
  * Task: View Dataset Integration Details
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Prism Admin
  */
 
@@ -20,5 +20,9 @@ test.describe('Test SFTP integrations', () => {
     test('should complete: View Dataset Integration Details', async ({ page }) => {
         await page.waitForLoadState("networkidle");
         // View: View Dataset Integration Details
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

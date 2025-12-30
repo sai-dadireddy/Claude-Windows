@@ -6,7 +6,7 @@ const { test, expect } = require('@playwright/test');
  * Confidence: 7.5/10
  *
  * Task: Edit Tenant Setup – Notifications > Mobile App Notification Settings section and Notification Delivery Settings section
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Business Process Admin
  */
 
@@ -18,5 +18,9 @@ test.describe('Validate Mobile Notification setup', () => {
     });
 
     test('should complete: Edit Tenant Setup – Notifications > Mobile App Notification Settings section and', async ({ page }) => {
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

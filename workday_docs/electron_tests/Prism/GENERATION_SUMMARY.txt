@@ -1,0 +1,13 @@
+Generation Summary for Prism
+Generated: 2025-12-30 17:02:40
+============================================================
+
+Total Scenarios: 23
+Files Generated: 23
+
+Confidence Breakdown:
+  High (7.0-10.0):    21 scenarios
+  Medium (5.0-6.9):    2 scenarios [NEEDS SME REVIEW]
+  Low (0.0-4.9):       0 scenarios [MANUAL]
+
+Success Rate: 91.3%

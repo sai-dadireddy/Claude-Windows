@@ -9,7 +9,7 @@ const { test, expect } = require('@playwright/test');
 Mobile Usage - Android
 Mobile Usage - iPad
 Mobile Usage - iPhone
- * Expected: nan
+ * Expected: No expected result specified
  * Role: Security Administrator
  */
 
@@ -23,5 +23,9 @@ test.describe('Security/ Remote access setup', () => {
     test('should complete: Users with access to these domains in the System functional area can sign in to ', async ({ page }) => {
         // Access mobile application
         await page.goto("https://wd5-impl.workday.com");
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });

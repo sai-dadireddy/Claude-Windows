@@ -1,0 +1,26 @@
+const { test, expect } = require('@playwright/test');
+
+/**
+ * Test: Test survey via PEX Card
+ * Scenario ID: EMPVCE-4-0020
+ * Confidence: 5.5/10
+ *
+ * Task: No task specified
+ * Expected: No expected result specified
+ * Role: Employee
+ */
+
+test.describe('Test survey via PEX Card', () => {
+    test.beforeEach(async ({ page }) => {
+        // Login as Employee
+        await page.goto('https://wd5-impl.workday.com');
+        // Add authentication steps
+    });
+
+    test('should complete: No task specified', async ({ page }) => {
+        // [NEEDS SME REVIEW] - Confidence: 5.5/10
+        // Task: No task specified
+        // Expected: No expected result specified
+
+    });
+});

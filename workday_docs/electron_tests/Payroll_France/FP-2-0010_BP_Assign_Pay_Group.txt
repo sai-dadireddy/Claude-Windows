@@ -1,0 +1,62 @@
+================================================================================
+TEST ID: FP-2-0010
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: BP: Assign Pay Group
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Start the Assign Pay Group task for an employee. Make sure that pay group is automatically inferred based on Pay Group Automatic Assignment rules. Also ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process. Make sure to test this process for each Pay Group Automatic Assignment Rule.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Assign Pay Group"
+2. wait for search results
+3. click search result containing "Assign Pay Group"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+6. screenshot as "FP-2-0010_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Assign Pay Group
+
+### 1. Kb Hcm Hire Employee (score: 8)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: 2025R1...
+================================================================================

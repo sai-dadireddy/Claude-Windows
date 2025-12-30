@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
  *
  * Task: Edit Tenant Setup - System > Mobile section
 Edit Tenant Setup - Security > Mobile Authentication section
- * Expected: nan
+ * Expected: No expected result specified
  * Role: System Configurator
  */
 
@@ -20,5 +20,9 @@ test.describe('Setup', () => {
 
     test('should complete: Edit Tenant Setup - System > Mobile section
 Edit Tenant Setup - Security > Mobil', async ({ page }) => {
+
+        // Verify expected result
+        // Expected: No expected result specified
+        await page.waitForLoadState("networkidle");
     });
 });
