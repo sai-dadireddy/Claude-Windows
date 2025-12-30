@@ -1,0 +1,83 @@
+================================================================================
+TEST ID: ACM-3-0150
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Stock Vesting Schedules
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 3.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Review the stock vesting schedule and confirm they are configured as per requirements.
+
+TASK/STEP:
+Search bar: "Stock Vest Sched"
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 3.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Stock Vest Sched
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administra
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Stock Vest Sched
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration
+Ca...
+```
+
+### 2. Admin Guide Glossary (score: 3)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 3. User Guide Workday Prism Analytics (score: 3)
+Source: User-Guide-Workday-Prism-Analytics.pdf
+--------------------------------------------------------------------------------
+
+================================================================================

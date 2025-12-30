@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: UKP-2-0030
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Review Payslip Configuration
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+Run a pay calculation for an employee and go to the employee's pay results. Review the payslip (Related Action > Payroll Result > View Payslip) to ensure that payslip is displaying as per requirements. Enter additional payroll input and re-calculate pay result as needed to make sure all Pay Component Groups linked on the Payslip Configuration can be confirmed to be working as expected. Note: Payslip is the online view and may differ from the check print layout. The check print layout can be viewed online as a PDF.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Worker"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "UKP-2-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Worker
+
+### 1. Kb Hcm Terminate Employee (score: 5)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wor...
+================================================================================
