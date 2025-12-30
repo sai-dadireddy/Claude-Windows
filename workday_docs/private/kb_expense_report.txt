@@ -1,0 +1,515 @@
+================================================================================
+WORKDAY KB ARTICLE: CREATE EXPENSE REPORT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Spend Management
+Category: Spend Management - Expense Reporting
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Create Expense Report process allows employees to submit business expenses
+for reimbursement. The process includes expense categorization, receipt
+attachment, policy compliance checking, approval workflow, and payment
+processing.
+
+Business Process: Create Expense Report
+Functional Area: Spend Management / Expense Management
+Initiator: Employee (self-service)
+Typical Duration: Same-day to 5 days (depending on approval chain)
+
+Types of Expenses:
+- Travel: Airfare, hotel, rental car, mileage
+- Meals & Entertainment: Client dinners, team meals
+- Office Supplies: Pens, paper, equipment
+- Professional Development: Training, conferences, books
+- Telecommunications: Mobile phone, internet
+- Miscellaneous: Parking, tolls, tips
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. EXPENSE REPORT HEADER
+   - Report Name/Description
+   - Business Purpose
+   - Expense Period (dates of travel/expenses)
+   - Currency
+   - Total Amount
+
+2. EXPENSE LINES
+   - Expense Type (Airfare, Hotel, Meals, etc.)
+   - Transaction Date
+   - Merchant/Vendor
+   - Amount
+   - Currency (if foreign)
+   - Receipt (attachment)
+   - Itemization (for detailed breakdown)
+
+3. COST ALLOCATION
+   - Worktags (Cost Center, Project, Grant)
+   - Percentage allocation (if split)
+   - Billable to client (yes/no)
+
+4. POLICY COMPLIANCE
+   - Per diem limits
+   - Receipt requirements
+   - Approval thresholds
+   - Alcohol restrictions
+   - Prohibited expenses
+
+5. APPROVAL & PAYMENT
+   - Manager approval
+   - Finance review (for high amounts)
+   - Audit/compliance check
+   - Payment processing (ACH to bank)
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: CREATE EXPENSE REPORT
+------------------------------
+Navigation: Expenses → Create Expense Report
+
+Employee Self-Service:
+1. Click "Create Expense Report"
+2. Or: From mobile app "Add Expense"
+
+Required Fields:
+- Report Name (e.g., "NYC Client Visit - Jan 2026")
+- Business Purpose
+- Expense Start Date
+- Expense End Date
+
+Optional:
+- Memo/Notes
+- Project (if project-related)
+- Client (if billable)
+
+STEP 2: ADD EXPENSE LINE - AIRFARE
+-----------------------------------
+Airfare Expense:
+
+Fields:
+- Expense Type: Airfare
+- Transaction Date: Flight date
+- Merchant: Airline name
+- Amount: Ticket cost
+- Currency: USD
+- Receipt: Upload boarding pass or receipt
+
+Additional Details:
+- From City
+- To City
+- Round Trip or One-Way
+- Class (Economy, Business, First)
+
+Policy Rules:
+- Economy class required for domestic
+- Business class allowed for international >6 hours
+- Must book 14+ days in advance (policy dependent)
+- Airline fee reimbursable (bag, seat selection)
+
+STEP 3: ADD EXPENSE LINE - HOTEL
+---------------------------------
+Hotel Expense:
+
+Fields:
+- Expense Type: Hotel/Lodging
+- Transaction Date: Check-out date
+- Merchant: Hotel name
+- Amount: Total charges
+- Currency
+- Receipt: Upload hotel folio
+
+Itemization:
+- Nightly rate × Number of nights
+- Taxes
+- Resort fees
+- Parking (separate expense or included)
+
+Policy Rules:
+- Max nightly rate varies by city tier
+- Extended stay may require special approval
+- Personal charges must be backed out
+- Itemized receipt required (not just credit card slip)
+
+STEP 4: ADD EXPENSE LINE - MEALS
+---------------------------------
+Meal Expense:
+
+Fields:
+- Expense Type: Breakfast, Lunch, or Dinner
+- Transaction Date: Date of meal
+- Merchant: Restaurant name
+- Amount: Total bill including tip
+- Currency
+- Receipt: Upload receipt
+
+Additional:
+- Attendees: List names (for client meals)
+- Business Purpose: Why meal was necessary
+
+Policy Rules:
+- Per diem limits by city (e.g., $25 breakfast, $50 dinner)
+- Receipts required for meals >$25
+- Alcohol may be excluded from reimbursement
+- Client meals require attendee list
+- Tip limited to 20%
+
+STEP 5: ADD EXPENSE LINE - MILEAGE
+-----------------------------------
+Mileage Expense:
+
+Fields:
+- Expense Type: Mileage
+- Transaction Date: Date of travel
+- Merchant: "Personal Vehicle"
+- Miles Driven: Total miles
+- Rate: IRS standard rate ($0.70/mile for 2026)
+- Amount: Auto-calculated (miles × rate)
+
+Additional:
+- From Location
+- To Location
+- Business Purpose
+
+Policy Rules:
+- Use IRS standard mileage rate
+- Round trip distance
+- No receipt required
+- Cannot claim mileage + gas (double dipping)
+- Commute miles not reimbursable
+
+STEP 6: ADD EXPENSE LINE - OTHER
+---------------------------------
+Other Common Expenses:
+
+Parking:
+- Date, merchant, amount
+- Receipt if >$25
+
+Taxi/Uber/Lyft:
+- Date, amount, from/to locations
+- Receipt required
+
+Tolls:
+- Date, location, amount
+- Receipt if available
+
+Office Supplies:
+- Itemize if multiple items
+- Business purpose
+- Receipt required
+
+Conference Registration:
+- Event name, dates
+- Business justification
+- Receipt/confirmation
+
+STEP 7: ATTACH RECEIPTS
+------------------------
+Receipt Requirements:
+
+Required Receipts For:
+- Any single expense >$25
+- Airfare (boarding pass)
+- Hotel (itemized folio)
+- Rental car (final receipt)
+- All foreign expenses
+
+Receipt Not Required For:
+- Mileage
+- Per diem meals
+- Expenses <$25 (policy dependent)
+- Parking <$25
+
+Upload Methods:
+1. Photo from mobile app
+2. Scan and upload PDF
+3. Email to Workday (receipts@)
+4. Forward confirmation emails
+
+Receipt Quality:
+- Clear, legible
+- All four corners visible
+- Merchant name visible
+- Date visible
+- Total amount visible
+- Payment method visible
+
+STEP 8: ALLOCATE TO WORKTAGS
+-----------------------------
+Cost Allocation:
+
+Required Worktags:
+- Cost Center (always required)
+- Project (if project expense)
+- Grant (if grant-funded)
+- Client (if billable)
+
+Split Allocation:
+- Single expense across multiple projects
+- Example: Conference 50% Project A, 50% Project B
+- Total must = 100%
+
+Actions:
+1. Click on expense line
+2. Click "Edit Worktags"
+3. Select Cost Center
+4. Add Project/Grant if applicable
+5. Set Billable flag if client expense
+6. Click "OK"
+
+STEP 9: ITEMIZE (If Needed)
+----------------------------
+Itemization Required For:
+
+Hotel Folio:
+- Room rate × nights
+- Taxes
+- Resort fees
+- Parking
+- Room service
+- (Back out personal items like movies)
+
+Conference Costs:
+- Registration fee
+- Materials/books
+- Meals (if included)
+- Workshops
+
+Group Meals:
+- Total bill
+- Attendees split
+
+Actions:
+1. Click expense line
+2. Click "Itemize"
+3. Add itemization lines
+4. Total must match expense amount
+
+STEP 10: REVIEW POLICY COMPLIANCE
+----------------------------------
+Policy Checks:
+
+System Validates:
+✓ Receipts attached where required
+✓ Expenses within per diem limits
+✓ Approvals for over-limit expenses
+✓ No duplicate expenses
+✓ Worktags valid for company
+✓ Business purpose provided
+✓ Expenses within report date range
+
+Warnings:
+⚠ Expense exceeds policy limit
+⚠ Missing receipt
+⚠ Personal expense suspected
+⚠ Duplicate merchant/date/amount
+
+Errors (Blockers):
+✗ No cost center assigned
+✗ Invalid worktag combination
+✗ Negative amount
+✗ Future date expense
+
+STEP 11: REVIEW & SUBMIT
+-------------------------
+Expense Report Summary:
+
+Displays:
+- Report name and purpose
+- Total number of expenses
+- Total amount
+- Currency
+- Expense breakdown by type
+- Approval chain
+- Policy exceptions (if any)
+
+Pre-Submission Checklist:
+□ All expenses added
+□ Receipts attached
+□ Worktags assigned
+□ Itemizations complete
+□ Business purpose clear
+□ Personal expenses excluded
+□ Policy compliance reviewed
+
+Actions:
+1. Click "Review"
+2. Verify all details
+3. Acknowledge policy compliance
+4. Click "Submit"
+5. System routes to approvers
+
+STEP 12: APPROVAL WORKFLOW
+---------------------------
+Approval Chain:
+
+Level 1: Manager Approval
+- Reviews business necessity
+- Validates expenses reasonable
+- Checks for personal expenses
+- Approves <$5K typically
+
+Level 2: Finance Review (if >$5K or policy exception)
+- Validates policy compliance
+- Checks receipt quality
+- Reviews cost allocations
+- Verifies billable coding
+
+Level 3: Controller (if >$25K)
+- High-value expense review
+- Special approval for exceptions
+
+Each Approver Can:
+- Approve
+- Deny (send back with comments)
+- Send Back for Corrections
+- Add Approvers
+
+STEP 13: PAYMENT PROCESSING
+----------------------------
+After Approval:
+
+Automatic Actions:
+- Expense report approved
+- Payment queued
+- Reimbursement amount calculated
+- GL journal entries created
+- Payment sent to payroll (or AP)
+
+Payment Methods:
+1. Payroll Integration (most common)
+   - Added to next paycheck
+   - Visible on pay stub
+   - Taxed if appropriate
+
+2. AP Payment (immediate)
+   - ACH to bank account
+   - Check mailed
+   - Faster for urgent reimbursements
+
+3. Corporate Card (if used)
+   - Expense matched to card transaction
+   - No reimbursement needed
+   - Reconciliation automatic
+
+Payment Timing:
+- Payroll method: Next pay cycle (1-2 weeks)
+- AP payment: 3-5 business days
+- Check: 7-10 business days
+
+STEP 14: POST-PAYMENT
+----------------------
+After Reimbursement:
+
+Employee Receives:
+- Payment confirmation email
+- Amount paid
+- Payment method
+- GL posting details
+
+Expense Report Status:
+- Closed
+- Archived
+- Searchable for audit
+
+Tax Implications:
+- Most reimbursements non-taxable
+- Exceptions: Moving expenses, excess per diem
+- Taxable amounts reported on W-2
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- Create report: button:contains("Create Expense Report")
+- Report name: input[data-automation-id="reportName"]
+- Add expense: button:contains("Add Expense")
+- Expense type: select[data-automation-id="expenseType"]
+- Amount: input[data-automation-id="amount"]
+- Attach receipt: button[data-automation-id="attachFile"]
+- Submit: button[data-automation-id="SUBMIT"]
+
+Use Cases for Automation:
+- Bulk expense import from corporate card
+- Auto-create reports from email receipts
+- Mileage calculation from calendar
+- Per diem auto-population for travel
+
+Validation:
+- All expenses have receipts (if required)
+- Amounts positive
+- Dates within report period
+- Worktags assigned
+- Policy compliance passed
+
+Error Handling:
+- "Missing receipt" → upload receipt
+- "Policy violation" → get approval or adjust
+- "Invalid worktag" → select valid allocation
+- "Duplicate expense" → verify not duplicate
+
+Screenshot Strategy:
+1. Expense report header creation
+2. Each major expense line addition
+3. Receipt attachment
+4. Policy compliance summary
+5. Review before submission
+6. Approval confirmation
+
+Performance:
+- Mobile app for real-time expense capture
+- Email receipts to Workday for auto-attach
+- Use templates for recurring expenses
+- Bulk upload from corporate card feed
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Business Travel Planning: Book travel via Concur/Egencia
+- Corporate Card Reconciliation: Match card charges
+- Mileage Tracking: GPS-based mileage capture
+- Per Diem Requests: Flat rate for travel days
+- Cash Advance: Pre-trip advance payment
+- Vendor Invoice Processing: For team expenses
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Submit expenses within 30 days of transaction
+2. Use mobile app to capture receipts immediately
+3. Organize receipts by trip/project
+4. Separate personal and business expenses
+5. Itemize hotel folios to back out personal charges
+6. List attendees for client meals
+7. Explain unusual or high-value expenses
+8. Use correct expense types for accurate reporting
+9. Allocate project expenses correctly for client billing
+10. Review corporate card statements promptly
+
+================================================================================
+NOTES
+================================================================================
+
+- Late expense submissions may be denied (60-90 day limit)
+- Foreign currency expenses convert at transaction date rate
+- Credit card rewards/points belong to employee (policy dependent)
+- Missing receipts may result in denial or taxable income
+- Personal expenses on business trips not reimbursable
+- Alcohol may be excluded from reimbursement (policy dependent)
+- Expenses must have clear business purpose
+- Corporate card disputes handled separately from expense reports
+- Audit may request additional documentation years later (save records)
+- Expense patterns monitored for fraud detection
+
+================================================================================
