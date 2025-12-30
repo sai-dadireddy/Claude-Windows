@@ -1,18 +1,16 @@
 ================================================================================
-TEST ID: FACC-4-0180-02
+TEST ID: FACC-4-0180
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Recurring Journals
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "2. Find Recurring Journal Template"
+1. enter search box as "Recurring Journals"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit"
-7. screenshot as "FACC-4-0180-02_complete.png"
+3. click search result containing "Recurring Journals"
+4. wait for page to load
+5. screenshot as "FACC-4-0180_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully

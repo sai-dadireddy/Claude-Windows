@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0010
 FUNCTIONAL AREA: Procurement
 TEST NAME: Suppliers
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [INFERRED]
+CONFIDENCE: [LOW] Score: 1.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -12,17 +12,23 @@ Review supplier data for completeness and data quality.
 WORKDAY ROLE: Supplier Administrator
 
 ELECTRON STEPS:
-1. enter search box as "Find Suppliers or Extract Suppliers"
+1. enter search box as "Suppliers Suppliers"
 2. wait for search results (2 seconds)
-3. click search result containing "Find Suppliers or Extract Suppliers"
+3. click search result containing "Suppliers Suppliers"
 4. wait for page to load (3 seconds)
-5. screenshot as "PRO-1-0010_complete.png"
+5. verify supplier list displayed
+6. click link "Actions"
+7. screenshot as "PRO-1-0010_list.png"
+8. click button "View All"
+9. wait for data to load (2 seconds)
+10. screenshot as "PRO-1-0010_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Supplier data displayed
+- [ ] No error messages shown
 
 API ALTERNATIVE:
-- SOAP: Query RAG for details
+- Query RAG for details
 
-RAG QUERY STATUS: TIMEOUT
+RAG QUERY STATUS: SUCCESS (Score: 1)
 ================================================================================

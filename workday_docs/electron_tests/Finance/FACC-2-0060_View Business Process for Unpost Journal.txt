@@ -2,36 +2,17 @@
 TEST ID: FACC-2-0060
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: View Business Process for Unpost Journal
-CONFIDENCE: [HIGH] Score: 8.0/10
+CONFIDENCE: [MEDIUM] Score: 6.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "View Business Process Definition > Accounting Journal Unpost-Reverse Event"
+1. enter search box as "View Business Process for Unpost Journal"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
-7. screenshot as "FACC-2-0060_complete.png"
+3. click search result containing "View Business Process for Unpost Journal"
+4. wait for page to load
+5. screenshot as "FACC-2-0060_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Business Process Definition > Accounting Journal Unpost-Reverse Event
-
-### 1. Kb Finance Journal Entry (score: 8)
-Source: kb_finance_journal_entry.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
-================================================================================
-
-Source: Wo
-...
 ================================================================================

@@ -1,0 +1,377 @@
+# Workday Audit Role Assignments - Knowledge Base
+
+## Source
+- Workday Security Administration
+- Documentation: Role-Based Security Configuration & Organization Role Assignments
+- Release: 2025R1
+- Created: 2025-12-30
+
+## Overview
+
+The **Audit Role Assignments** process allows security administrators to review and verify that organization-based role assignments in the tenant are accurate and aligned with security policies. This is a critical audit task for maintaining proper access controls and compliance.
+
+## Key Components
+
+### 1. Purpose of Audit
+Auditing role assignments helps organizations:
+- Verify role assignments match organizational structure
+- Ensure compliance with security policies
+- Identify unauthorized or orphaned role assignments
+- Support internal and external audits
+- Maintain least-privilege access principles
+
+### 2. Organization Roles vs. Security Groups
+
+**Organization Roles:**
+- Automatically assigned based on organizational position
+- Examples: Manager, HR Partner, Cost Center Manager, Location Manager
+- Driven by organizational data (supervisory org, cost center, location)
+- Dynamic - change as organization changes
+
+**Security Groups:**
+- Manually assigned memberships
+- Examples: HR Administrator, Payroll Administrator, System Administrator
+- Static assignments requiring manual maintenance
+- Used for functional/system access
+
+### 3. Extract Organization Role Assignment Task
+
+This is the primary report/extraction tool for auditing role assignments:
+- **Task Name**: "Extract Organization Role Assignment"
+- **Output**: CSV/Excel file with all organization role assignments
+- **Fields Included**: Worker, Organization, Role, Effective Date, Reason
+
+### 4. Key Audit Areas
+
+**Supervisory Organization Roles:**
+- Manager roles for supervisory orgs
+- HR Partner assignments
+- Recruiter assignments
+
+**Cost Center Roles:**
+- Cost Center Manager
+- Financial responsibilities
+
+**Location Roles:**
+- Location Manager
+- Facility Administrator
+
+**Custom Organization Roles:**
+- Organization-specific custom roles
+- Industry-specific role assignments
+
+## Implementation Steps
+
+### Standard Audit Workflow:
+
+1. **Navigate to Extract Task**:
+   - Search for "Extract Organization Role Assignment"
+   - Click on task from search results
+
+2. **Configure Extract Parameters**:
+   - **Organization Type** (optional): Filter by Supervisory, Cost Center, Location, etc.
+   - **Organization** (optional): Specific organization to audit
+   - **Role** (optional): Specific role to audit
+   - **Worker** (optional): Check specific worker's role assignments
+   - **Include Inactive Workers**: Yes/No
+   - **Effective Date**: As of which date to pull assignments
+
+3. **Run Extract**:
+   - Click "OK" or "Submit"
+   - System generates extract file
+
+4. **Wait for Processing**:
+   - Large extracts may take several minutes
+   - Check workday inbox for completion notification
+
+5. **Download Results**:
+   - Navigate to workday inbox
+   - Find extract completion notification
+   - Click link to download CSV/Excel file
+
+6. **Review Extract Data**:
+   - Open file in Excel or CSV viewer
+   - Review columns:
+     - Worker Name and ID
+     - Organization Name and ID
+     - Organization Type
+     - Role Name
+     - Role Assignment Effective Date
+     - Reason for Assignment
+
+7. **Identify Issues**:
+   - Unauthorized role assignments
+   - Missing expected role assignments
+   - Duplicate or conflicting roles
+   - Orphaned roles (worker no longer in organization)
+   - Roles assigned to wrong organization level
+
+8. **Document Findings**:
+   - Create list of discrepancies
+   - Note required corrections
+   - Identify root causes
+
+9. **Remediation** (if issues found):
+   - Correct organizational data (if roles are auto-assigned)
+   - Manually adjust role assignments (if necessary)
+   - Update security configuration (if systemic issue)
+
+10. **Verification**:
+    - Re-run extract after corrections
+    - Verify issues are resolved
+    - Document audit completion
+
+### Alternative: View Organization Role Assignments Report
+
+For real-time viewing without extract:
+1. Search for "View Organization Role Assignments"
+2. Select organization or role to review
+3. System displays current assignments
+4. Review on-screen (not exportable)
+
+## Automation Considerations for Electron
+
+### Navigation Steps:
+1. **Search for Extract Task**:
+   ```
+   enter search box as "Extract Organization Role Assignment"
+   wait for search results
+   click search result containing "Extract Organization Role Assignment"
+   ```
+
+2. **Configure Extract Parameters**:
+   ```
+   wait for page to load
+   select Organization Type as "Supervisory Organization" (optional)
+   enter Organization as "{org_name}" (optional)
+   select Include Inactive Workers as "No"
+   enter Effective Date as "{current_date}"
+   ```
+
+3. **Submit Extract**:
+   ```
+   click button "OK" or "Submit"
+   wait for confirmation
+   verify message contains "submitted"
+   screenshot as "extract_submitted.png"
+   ```
+
+4. **Access Inbox for Results**:
+   ```
+   wait 30 seconds (for processing)
+   enter search box as "Inbox"
+   click search result "Inbox"
+   wait for page to load
+   ```
+
+5. **Download Extract File**:
+   ```
+   scroll to find "Extract Organization Role Assignment"
+   click notification containing "Extract Organization Role Assignment"
+   wait for page to load
+   click link "Download" or file name
+   verify file downloaded
+   screenshot as "extract_downloaded.png"
+   ```
+
+6. **Alternative: View Report Directly**:
+   ```
+   enter search box as "View Organization Role Assignments"
+   click search result "View Organization Role Assignments"
+   wait for page to load
+   select Organization as "{org_name}"
+   click button "OK"
+   wait for report to load
+   verify report data displayed
+   screenshot as "role_assignments_report.png"
+   ```
+
+### UI Selectors:
+- Search Box: "Search Workday"
+- Extract Task: "Extract Organization Role Assignment"
+- Organization Type Dropdown: "Organization Type"
+- Organization Field: "Organization"
+- Effective Date: "Effective Date" or "As of Date"
+- Submit Button: "OK", "Submit"
+- Inbox: "Inbox" or "My Inbox"
+- Download Link: "Download", file name link
+
+### Validation:
+- Extract submitted confirmation message
+- Inbox notification received
+- File downloads successfully
+- CSV/Excel file contains expected columns
+- Data matches expected organization structure
+
+### Error Handling:
+Common errors:
+- "No data found" - Parameters too restrictive or no assignments exist
+- "Insufficient permissions" - User lacks View access to organization roles
+- "Invalid organization" - Organization name not recognized
+- "Processing timeout" - Extract too large, need to narrow parameters
+- "File not available" - Need to wait longer for processing
+
+### Screenshots:
+- Extract parameters screen
+- Submit confirmation
+- Inbox notification
+- Downloaded file preview
+- Report view (if using View task)
+
+## Common Audit Scenarios
+
+### Scenario 1: Annual Security Audit
+- Extract all organization role assignments
+- Compare against expected organizational structure
+- Identify and remediate discrepancies
+- Document audit findings for compliance
+
+### Scenario 2: Manager Role Verification
+- Filter for "Manager" role
+- Verify each manager has appropriate supervisory org role
+- Check for managers who left organization but still have role
+- Update organizational data to correct role assignments
+
+### Scenario 3: Cost Center Manager Audit
+- Extract cost center manager roles
+- Compare against authorized cost center manager list
+- Identify unauthorized assignments
+- Remove or correct improper assignments
+
+### Scenario 4: Pre-Go-Live Data Validation
+- Extract all organization role assignments before go-live
+- Verify conversion data accuracy
+- Ensure all expected managers have roles
+- Confirm no duplicate or conflicting assignments
+
+### Scenario 5: Quarterly Compliance Review
+- Run extract quarterly
+- Compare against previous quarter
+- Identify role assignment changes
+- Review changes for appropriateness
+- Document review for compliance records
+
+## Related Reports and Tasks
+
+### Security Reports:
+- **View Organization Role Assignments**: Real-time view of assignments
+- **Security Group Membership**: Audit security group assignments
+- **Domain Security Policy**: Review domain-based access
+- **Security Profile Assignments**: Audit security profiles
+
+### Organizational Reports:
+- **Supervisory Organizations**: Review org structure
+- **Organization Hierarchy**: View reporting relationships
+- **Manager Hierarchy**: Verify manager chain
+
+### Audit Reports:
+- **User Activity Report**: Review user login and activity
+- **Security Configuration Changes**: Track security changes
+- **Access Certification**: Periodic access reviews
+
+## Best Practices
+
+1. **Regular Audits**: Run organization role assignment audits quarterly or after major org changes
+2. **Effective Dating**: Use effective date parameter to see historical assignments
+3. **Filtering**: Use parameters to narrow large extracts for performance
+4. **Documentation**: Maintain audit trail of findings and remediation actions
+5. **Automated Alerts**: Configure business process notifications for org changes
+6. **Role Design**: Keep organization role design simple and consistent
+7. **Testing**: Test role assignments in sandbox before production changes
+
+## Configuration Considerations
+
+### Extract Configuration
+- Default parameters for regular audits
+- Scheduled extracts (if integration configured)
+- Custom extract formats
+- File naming conventions
+
+### Security Configuration
+- Who can run organization role extracts (typically security administrators only)
+- Access to organization role assignment data
+- Ability to view other workers' role assignments
+- Permission to modify role assignments
+
+### Organization Role Definition
+- Clear role assignment rules
+- Documented criteria for each organization role
+- Consistent role naming conventions
+- Regular review of role definitions
+
+## Integration Points
+
+### Security Profile Integration
+- Organization roles grant security profile memberships
+- Profiles provide domain access
+- Changes to org roles trigger profile re-evaluation
+
+### Business Process Integration
+- Organization roles determine business process routing
+- Manager roles enable approval capabilities
+- HR Partner roles enable employee access
+
+### Reporting Integration
+- Organization roles determine report access
+- Roles filter data in security-aware reports
+- Dashboard permissions based on organization roles
+
+## Compliance Considerations
+
+### SOX Compliance
+- Segregation of duties verification
+- Role conflict identification
+- Access certification support
+- Audit trail maintenance
+
+### Data Privacy (GDPR, CCPA)
+- Ensure role assignments align with data access needs
+- Least privilege principle
+- Access justification documentation
+- Right to audit support
+
+### Industry Regulations
+- Healthcare (HIPAA): Role-based access to PHI
+- Finance (SOX, FINRA): Segregation of duties
+- Government (FISMA, NIST): Role definitions and certifications
+
+## Remediation Workflows
+
+If audit identifies issues:
+
+1. **Organizational Data Corrections**:
+   - Update supervisory org assignments
+   - Correct manager hierarchies
+   - Fix cost center assignments
+   - Adjust location assignments
+
+2. **Manual Role Assignment Adjustments**:
+   - Add missing role assignments
+   - Remove unauthorized assignments
+   - Update role effective dates
+   - Document reasons for changes
+
+3. **Security Configuration Updates**:
+   - Modify organization role definitions
+   - Update assignment rules
+   - Change security profiles
+   - Reconfigure business processes
+
+## References
+
+- Workday Security Administration Guide
+- Organization Role Configuration
+- Security Audit and Compliance
+- Role-Based Security Model
+- Organization Structure Administration
+
+## Effective Management
+
+By effectively auditing organization role assignments, organizations can:
+- Maintain proper access controls
+- Ensure compliance with security policies
+- Support internal and external audits
+- Identify and remediate security risks
+- Maintain principle of least privilege
+- Document security governance
+- Enable efficient access certification processes

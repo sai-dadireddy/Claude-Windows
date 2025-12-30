@@ -1,18 +1,16 @@
 ================================================================================
-TEST ID: FACC-4-0100-03
+TEST ID: FACC-4-0100
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Translations - Translate Base Values
-CONFIDENCE: [MEDIUM] Score: 4.0/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "Various base values (by in scope functional area)"
+1. enter search box as "Translations - Translate Base Values"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit"
-7. screenshot as "FACC-4-0100-03_complete.png"
+3. click search result containing "Translations - Translate Base Values"
+4. wait for page to load
+5. screenshot as "FACC-4-0100_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully

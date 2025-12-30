@@ -1,18 +1,15 @@
 ================================================================================
-TEST ID: FACC-3-0090-02
+TEST ID: FACC-3-0090
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Translations - Confirm Languages setup
-CONFIDENCE: [MEDIUM] Score: 4.0/10
+CONFIDENCE: [LOW] Score: 4.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "Edit Tenant Setup - Global"
-2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit"
-7. screenshot as "FACC-3-0090-02_complete.png"
+[MANUAL TEST - INSUFFICIENT KB COVERAGE]
+This test requires SME input to generate valid Electron automation steps.
+RAG confidence score was too low (< 5.0).
+
 
 VERIFICATION:
 - [ ] Transaction completed successfully

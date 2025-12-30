@@ -1,18 +1,15 @@
 ================================================================================
-TEST ID: FACC-4-0240-16
+TEST ID: FACC-4-0240
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Intercompany Customer Payment Settlement
-CONFIDENCE: [MEDIUM] Score: 4.0/10
+CONFIDENCE: [LOW] Score: 4.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "4. Record Intercompany Receipt"
-2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit"
-7. screenshot as "FACC-4-0240-16_complete.png"
+[MANUAL TEST - INSUFFICIENT KB COVERAGE]
+This test requires SME input to generate valid Electron automation steps.
+RAG confidence score was too low (< 5.0).
+
 
 VERIFICATION:
 - [ ] Transaction completed successfully

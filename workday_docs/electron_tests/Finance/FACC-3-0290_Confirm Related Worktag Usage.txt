@@ -2,33 +2,19 @@
 TEST ID: FACC-3-0290
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Related Worktag Usage
-CONFIDENCE: [HIGH] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 9.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "Maintain Related Worktag Usage"
+1. enter search box as "Confirm Related Worktag Usage"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
+3. click search result containing "Confirm Related Worktag Usage"
+4. wait for page to load
+5. verify data displayed correctly
+6. check required fields are populated
 7. screenshot as "FACC-3-0290_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Related Worktag Usage
-
-### 1. WSDL: Financial_Management (score: 9)
-Source: Financial_Management.wsdl
-```
-WSDL: Financial_Management
-Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial Reporting, Tax, Financial Organizations, Basic Worktags, Related 
-...
 ================================================================================

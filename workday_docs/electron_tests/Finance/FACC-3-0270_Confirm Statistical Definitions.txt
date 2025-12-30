@@ -2,39 +2,16 @@
 TEST ID: FACC-3-0270
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Statistical Definitions
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [LOW] Score: 2.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "View Statistic Definition"
-2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
-7. screenshot as "FACC-3-0270_complete.png"
+[MANUAL TEST - INSUFFICIENT KB COVERAGE]
+This test requires SME input to generate valid Electron automation steps.
+RAG confidence score was too low (< 5.0).
+
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Statistic Definition
-
-### 1. Admin Guide Adaptive Planning And Consolidation (score: 3)
-Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
-```
-Adaptive Planning
-and Consolidation
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Adaptive Planning and Consolidation (AP&C).................................................... 7
-Financial Accounting in AP&C.............
-...
 ================================================================================

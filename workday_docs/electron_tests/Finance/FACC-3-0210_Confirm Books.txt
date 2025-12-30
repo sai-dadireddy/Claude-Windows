@@ -2,39 +2,16 @@
 TEST ID: FACC-3-0210
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Books
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [LOW] Score: 2.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "Books"
-2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
-7. screenshot as "FACC-3-0210_complete.png"
+[MANUAL TEST - INSUFFICIENT KB COVERAGE]
+This test requires SME input to generate valid Electron automation steps.
+RAG confidence score was too low (< 5.0).
+
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Books
-
-### 1. Kb Benefits Enrollment (score: 6)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Administration
-Ca...
-
-...
 ================================================================================

@@ -1,42 +1,17 @@
 ================================================================================
-TEST ID: FACC-4-0090-01
+TEST ID: FACC-4-0090
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Payroll Accounting Configuration
-CONFIDENCE: [HIGH] Score: 8.0/10
+CONFIDENCE: [LOW] Score: 3.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "View Account Posting Rule Set"
-2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
-7. screenshot as "FACC-4-0090-01_complete.png"
+[MANUAL TEST - INSUFFICIENT KB COVERAGE]
+This test requires SME input to generate valid Electron automation steps.
+RAG confidence score was too low (< 5.0).
+
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Account Posting Rule Set
-
-### 1. Test Scenarios Index (score: 10)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Ext
-...
 ================================================================================

@@ -11,8 +11,14 @@ from workday_rag import WorkdayRAG
 def extract_task_name(file_path):
     """Extract task name from filename"""
     # Example: FACC-1-0130_Edit Tenant Setup Financials.txt
-    # Extract: Edit Tenant Setup Financials
+    # Also handles: FACC-4-0240-01_Intercompany Supplier Settlement.txt
+    # Extract: Edit Tenant Setup Financials or Intercompany Supplier Settlement
     filename = Path(file_path).name
+    # Try pattern with sub-number first (FACC-X-XXXX-XX_TaskName.txt)
+    match = re.match(r'FACC-\d+-\d+-\d+_(.+)\.txt', filename)
+    if match:
+        return match.group(1)
+    # Try standard pattern (FACC-X-XXXX_TaskName.txt)
     match = re.match(r'FACC-\d+-\d+_(.+)\.txt', filename)
     if match:
         return match.group(1)

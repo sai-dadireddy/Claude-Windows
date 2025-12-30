@@ -2,8 +2,8 @@
 TEST ID: HCM-5-0290
 FUNCTIONAL AREA: HCM
 TEST NAME: Audit Role Assignments
-CONFIDENCE: [MEDIUM] Score: 4.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [KB Article: kb_hcm_audit_role_assignments.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -15,39 +15,50 @@ EST. DURATION: 15 minutes
 PREREQUISITES:
 - User logged in with Security Administrator permissions
 - Required data available in tenant
+- Access to organization role assignment data
 
 ELECTRON STEPS:
 1. enter search box as "Extract Organization Role Assignment"
 2. wait for search results
 3. click search result containing "Extract Organization Role Assignment"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-5-0290_complete.png"
+5. select Organization Type as "Supervisory Organization"
+6. select Include Inactive Workers as "No"
+7. enter Effective Date as "{current_date}"
+8. click button "OK" or "Submit"
+9. wait for confirmation
+10. verify message contains "submitted"
+11. screenshot as "HCM-5-0290_extract_submitted.png"
+12. wait 30 seconds
+13. enter search box as "Inbox"
+14. click search result "Inbox"
+15. wait for page to load
+16. scroll to find "Extract Organization Role Assignment"
+17. click notification containing "Extract Organization Role Assignment"
+18. wait for page to load
+19. click link "Download" or file name
+20. verify file downloaded
+21. screenshot as "HCM-5-0290_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Extract parameters configured successfully
+- [ ] Extract submitted successfully
+- [ ] Inbox notification received
+- [ ] File downloaded successfully
+- [ ] CSV/Excel file contains organization role assignment data
 - [ ] No error messages displayed
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources WSDL - Organization and role assignment operations
+- REST: Not available in current API schemas
 
 RAG NOTES:
-Loaded 63 docs from public/private
+Loaded 66 docs from public/private
 Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
+Total: 121 documents
 ## Results for: Extract Organization Role Assignment
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file cont...
+### 1. Kb Hcm Audit Role Assignments (score: 9)
+Comprehensive KB article detailing extract task workflow, parameters,
+file download process, and audit procedures for organization role assignments.
 ================================================================================

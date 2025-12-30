@@ -2,39 +2,17 @@
 TEST ID: FACC-2-0100
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: View Business Process for Accounting Adjustment
-CONFIDENCE: [HIGH] Score: 7.0/10
+CONFIDENCE: [MEDIUM] Score: 6.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "View Business Process Definition > Accounting Adjustment Event"
+1. enter search box as "View Business Process for Accounting Adjustment"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit" button
-7. screenshot as "FACC-2-0100_complete.png"
+3. click search result containing "View Business Process for Accounting Adjustment"
+4. wait for page to load
+5. screenshot as "FACC-2-0100_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
-
-RAG INSIGHTS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Business Process Definition > Accounting Adjustment Event
-
-### 1. Admin Guide Education And Government (score: 8)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government.................................................................................6
-Grants Management..........
-...
 ================================================================================
