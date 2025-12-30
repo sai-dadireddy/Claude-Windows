@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-1-0020
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Verify Spend Categories
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Review the usages assigned to Spend Categories.  If applicable, validate that relevant spend categories are setup to allow for freight or other charges to be allocated.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Extract Spend Categories"
+2. wait for search results
+3. click search result containing "Extract Spend Categories"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify report displays data
+9. click "Export to Excel" button
+10. wait for export confirmation
+11. screenshot as "SA-1-0020_step11.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Spend Categories
+- Template Used: extract
+- RAG Query: "Extract Spend Categories"
+
+NOTES:
+
+================================================================================

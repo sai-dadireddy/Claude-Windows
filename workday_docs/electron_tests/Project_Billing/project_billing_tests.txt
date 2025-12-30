@@ -1,0 +1,2020 @@
+================================================================================
+WORKDAY ELECTRON TESTS - PROJECT BILLING
+================================================================================
+Generated: 2025-12-30
+Total Scenarios: 210
+================================================================================
+
+# PB-1-0010: Validate Business Document Sequence IDs
+# Description: ID Generator for Customer Contracts
+ID Generator for Customer Invoices
+ID Generator for Consolidated Customer Invoices
+ID Generator for Customer Invoice Credit Adjustments
+ID Generator for Customer Invoice Debit Adjustments
+ID Generator for Customer Invoice Rebills
+# Role: Common Finance Configurator
+
+electron.get('Business Document Sequence IDs')
+
+# PB-1-0020: Validate Business Entity Sequence IDs
+# Description: ID Generator for Customer
+# Role: Common Finance Configurator
+
+electron.get('Business Entity Sequence IDs')
+
+# PB-1-0030: Validate the following 3 Expenses Options that are relevant to Project Billing
+# Description: Expense Options
+- Hide Billable Checkbox on Expense Report and Spend Authorization Line
+- Bill Expense Lines when Expense Report is Approved (versus Paid)
+- Restrict Selection of Project Worktags by Resource Plan
+# Role: Common Finance Configurator
+
+electron.get('the following 3 Expenses Options that are relevant to Project Billing')
+
+# PB-1-0040: Validate the following 4 Customer Account Options that are relevant to Project Billing
+# Description: Customer Account Options
+- Enable Unique Invoice IDs for Credits, Debits, and Rebills
+- Customer Display Name Format
+- Restrict Invoice Field Editing
+- Enable Interest and Late Fees
+# Role: Common Finance Configurator
+
+electron.get('the following 4 Customer Account Options that are relevant to Project Billing')
+
+# PB-1-0050: Validate the following 7 Customer Contract Options that are relevant to Project Billing.
+# Description: Customer Contract Options
+- Only Include Non-Recoverable Tax on Billable Transactions
+- Require Paid Prepayment Status for Prepaid Billing
+- Invoice Prepaid Installments with Other Transaction Types
+- Calculate Contract Line Fee on Rounded Transaction Value
+- Create and Submit Installment for Credit and Rebill
+- Include Closed Revenue Recognition Installments in Period-End Revenue Accounting
+- Revenue Recognition Default Currency Rate (this is usually the "Revenue Recognition Installment Date" for Project Billing)
+
+electron.get('the following 7 Customer Contract Options that are relevant to Project Billing.')
+
+# PB-1-0060: Verify Worktag Usage relevant to Project Billing
+# Description: Validate Worktag Usage values for:
+- Customer Contract
+- Customer Invoice
+- Time Tracking
+- Accounting Journal
+# Role: Finance Administrator
+
+electron.get('Worktag Usage relevant to Project Billing')
+
+# PB-1-0070: Verify Related Worktag Usage relevant to Project Billing
+# Description: Validate Related Worktag Usage values for:
+- Project
+- Customer
+# Role: Finance Administrator
+
+electron.get('Related Worktag Usage relevant to Project Billing')
+
+# PB-1-0080: Verify Daily Rate Transaction Grouping configuration
+# Description: Verify:
+- Name
+- Description
+- Worker
+- Project Role
+- Project Phase
+- Project Task
+- Worktag Types
+- Default
+# Role: Contract Administrator
+
+electron.get('Daily Rate Transaction Grouping configuration')
+
+# PB-1-0090: Verify Revenue Adjustment Reasons
+# Description: Validate Revenue Adjustment Reasons per requirements:
+- Reason Code
+- Description
+- Default
+# Role: Contract Administrator
+
+electron.get('Revenue Adjustment Reasons')
+
+# PB-1-0100: Verify Ad Hoc Project Transaction Custom References
+# Description: Validate Ad Hoc Project Transaction Custom References per requirements:
+- Enabled (Y/N)
+- Consolidated Billing (Y/N)
+- Reference Name
+# Role: Contract Administrator
+
+electron.get('Ad Hoc Project Transaction Custom References')
+
+# PB-1-0110: Verify the Project Billing Configuration
+# Description: Validate the following per requirements:
+
+Project Transfer Options
+- Accounting Adjustment Date
+- Accounting Adjustment Reason
+- Transfer Reason Required
+Transfer Reasons
+- Name
+- Description
+- One Transfer Reason allowed as Default
+Revenue Options
+- Revenue Offset for Invoiced Billable Transactions
+- Enable Deferred Billable Project Costs Accounting
+Billing Options
+- Automatically Recalculate Transactions
+- Recalculate Transactions with Billing Status 
+- Reset Invoiced Transactions to Billing Status
+# Role: Contract Administrator
+
+electron.get('the Project Billing Configuration')
+
+# PB-1-0120: Validate Project Billing Rate Dimensions
+# Description: Verify Project Billing Rate Dimensions per requirements if applicable
+- Category Name
+- Category Name Order
+- Description
+- Category Member Names
+- Category Member Name Order
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Dimensions')
+
+# PB-1-0130: Validate Project Billing Rate Sheets
+# Description: Verify the Project Billing Rate Sheets per requirements
+- Name (Required)
+- Currency (Required)
+- Company 
+- Customer 
+- Worktags 
+- Unit of Time (Required)
+- Transaction Grouping
+- Effective Date (Required)
+- Billing Rate Dimensions
+- Project Roles (Required)
+- Rate (Required)
+- Time Definition Settings (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheets')
+
+# PB-1-0140: Validate Project Billing Rate Sheet Configuration
+# Description: Verify the Project Billing Rate Sheet Configuration per requirements:
+- Project Billing Rate Sheet
+- Associated Worktags
+- Rate Dimensions (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheet Configuration')
+
+# PB-1-0150: Validate Standard Billing Rates by Rule
+# Description: Verify the Standard Billing Rates by Rule configuration per requirements:
+- Project Rate Rule
+- Project Rate Rule Ordering
+- Currency
+- Effective Date
+- Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Rule')
+
+# PB-1-0160: Validate Standard Billing Rates by Worker
+# Description: Verify the Standard Billing Rates by Worker configuration per requirements:
+- Worker
+- Currency
+- Effective Date
+- Worker Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Worker')
+
+# PB-1-0170: Validate Project Invoice Summary Definition
+# Description: Verify the Project Invoice Summary Definition per Requirements:
+- Project Transaction Source
+- Name
+- Tenant Default
+- Description
+- Summarize By Worktags
+- Summary By Dimensions
+- Sort Information
+- Sort Information Order
+# Role: Contract Administrator
+
+electron.get('Project Invoice Summary Definition')
+
+# PB-1-0180: Verify Schedule Types
+# Description: Verify Schedule Types per requirements from Project Billing:
+- Schedule Type
+- Description
+Use Types (Y/N)
+- Prepaid
+- Usage Based Subscription
+- Billing
+- Revenue Recognition
+- Multi-Period
+- Consolidated Billing Schedule
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# PB-1-0190: Validate Customer Contract Template
+# Description: Verify Customer Contract Template per requirements. 
+- Name (Required)
+- Description
+- Contract Type (Required)
+- Multiple-Element Revenue Allocation
+- Billing Schedule Templates (if applicable)
+- Sales Item
+- Revenue Category
+- Project Transaction Source
+- Line Type (Required)
+- Revenue Treatment (Required)
+# Role: Contract Administrator
+
+electron.get('Customer Contract Template')
+
+# PB-1-0200: Validate Consolidated Billing Schedule Template
+# Description: Verify Consolidated Billing Schedule Template per requirements from Project Billing: 
+- Template Name (Required)
+- Schedule Type (Required)
+- Schedule Description
+- Invoice Type
+- Invoice Memo
+- Recurring Invoice
+- Auto Submit Invoices for Approval (Y/N)
+- Auto Submit Schedules (Y/N)
+- Installment Options tab
+- Transaction Options tab
+# Role: Contract Administrator
+
+electron.get('Consolidated Billing Schedule Template')
+
+# PB-1-0210: Validate Project Budget Template
+# Description: Verify Project Budget Template per requirements from Project Billing:
+- Project Budget Template Name
+- Plan Structure
+- Override Template with Related Worktags from Project (Y/N)
+- Ledger Account/Summary
+- Worktags
+# Role: Project Administrator
+
+electron.get('Project Budget Template')
+
+# PB-1-0220: Validate Percent Complete Configuration
+# Description: Verify Percent Completion Configuration per Requirements:
+- Percent Complete Configuration Name
+- Effective Date
+- Configure at Company or Project Hierarchy or Project level setting
+- ID of Company / Project Hierarchy / Project
+- Estimated Cost Factor
+- Ledger Account(s)
+- Dimension (if applicable)
+- Dimension Value (if applicable)
+# Role: Contract Administrator
+
+electron.get('Percent Complete Configuration')
+
+# PB-1-0230: Assignable Roles
+# Description: Confirm Assignable Roles (Delivered and Custom) for Project Billing are accurately defined in the Maintain Assignable Role task with the correct enabled for Organization per requirements.
+# Role: Security Administrator
+
+electron.get('Assignable Roles')
+
+# PB-1-0240: Role Assignments
+# Description: Confirm that the Assignable Roles for Project Billing have been properly assigned or are defaulting from the Project Hierarchy (or Organization Type) per requirements.
+- Customer Contract Specialist
+- Revenue Specialist
+- Customer Billing Specialist
+- Project Billing Specialist
+
+NOTE - May be additional roles or custom roles to review based on client solution.
+# Role: Security Administrator
+
+electron.get('Role Assignments')
+
+# PB-1-0250: Custom Validations
+# Description: Verify all required Custom Validations (Critical and Warning) have been configured for: 
+- Customer Contract
+- Customer Contract Amendment
+- Billing Schedule
+- Revenue Recognition Schedule
+- Customer Invoice
+- Customer Invoice Adjustment
+# Role: Common Finance Configurator
+
+electron.get('Custom Validations')
+
+# PB-1-0260: Project Billing Business Process Validation
+# Description: Review the following Business Processes related to Project Billing.  Ensure all business processes contain the correct:
+- Initiating Security Groups
+- Business Process Steps
+- Step Conditions (Entry & Exit)
+- Custom Notifications (if applicable)
+
+Project Business Processes include:
+- Customer Contract Event
+- Customer Contract Amendment Event
+- Contract Rate Sheet Event
+- Billing Schedule Event
+- Revenue Recognition Schedule Event
+- Revenue Recognition Installment Event
+- Percent Complete Project Event
+- Project Transaction Adjustment Event
+- Ad Hoc Project Transaction Event
+- Customer Invoice Proposal Event
+- Customer Invoice Event
+# Role: Business Process Administrator; System Auditor
+
+electron.get('Project Billing Business Process Validation')
+
+# PB-1-0270: Project Billing Custom Objects
+# Description: Validate Custom Objects for Project Billing (if applicable).  Can include the following areas:
+- Customer Contract
+- Customer Contract Line
+- Customer Invoice
+- Customer Invoice Adjustment
+- Customer Invoice Line
+# Role: Contract Administrator
+
+electron.get('Project Billing Custom Objects')
+
+# PB-1-0280: Create Project
+# Description: Create project using the project hierarchy, project template and project plan template created in the step above. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project')
+electron.create('Project')
+# Task: Create Project
+electron.submit()
+
+# PB-1-0290: Approve Project
+# Description: Approve Project. Test Business Process routing based on the configured conditions for each Business Process step.
+# Role: Various (depending on approval process)
+
+electron.get('Approve Project')
+
+# PB-1-0300: Add Resource to Project
+# Description: Assign resources to the project. Choose any project role and use the Assign a Worker Allocation type. Be sure to include a Start Date/End Date and % Allocation in order for Resource Forecast to be correct. Add specific Worker to Resource Plan Line Submit.
+# Role: Project Resource Manager
+
+electron.navigate('Add Resource to Project')
+electron.create('Add Resource to Project')
+# Task: Add Resources to Project (Assign a Worker)
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-1-0310: Create Project Plan
+# Description: Create project plan. Use Project Plan template if available. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project Plan')
+electron.create('Project Plan')
+# Task: Create Project Plan
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-1-0320: Assign Resources to Project Plan
+# Description: Assign Task Resources to the Project plan
+# Role: TBD
+
+electron.get('Assign Resources to Project Plan')
+
+# PB-1-0330: Create Resource Forecast
+# Description: Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK Resource Forecast based on Resource Start/End dates and % Allocation should be generated.
+# Role: Project Manager
+
+electron.navigate('Resource Forecast')
+electron.create('Resource Forecast')
+# Task: Open Project, Navigate to Resources > Resource Forecast and hit the ADD Button. Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK.
+electron.submit()
+
+# PB-1-0340: Create Project Budget
+# Description: Enter a Plan Name. Enter a Calculation Type. Choose your Resource Forecast. Click OK. A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.navigate('Project Budget')
+electron.create('Project Budget')
+# Task: Create Project Budget
+# Sub-task: Open Project, Navigate to Financials> Plan and hit the CREATE BUDGET Button
+electron.submit()
+
+# PB-1-0350: View Project Budget
+# Description: Review detailed project budget based on Forecasted Hours.
+# Role: Project Manager
+
+electron.get('Project Budget')
+
+# PB-1-0360: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-1-0370: Record and approve expenses charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter an Expense Report, coding to the Project. Complete any required steps until the Expense Report is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve expenses charged to Project')
+
+# PB-1-0380: Record and approve supplier invoice.
+# Description: Enter a Supplier Invoice and code to the Project. Select the Billable Checkbox.  Carry the invoice through any approval process. Complete any required steps until the Invoice is approved.
+# Role: Accounts Payable Data Entry Specialist
+
+electron.get('Record and approve supplier invoice.')
+
+# PB-1-0390: Confirm project hours recorded to project task
+# Description: Verify the hours are entered against the correct task once the hours have been approved.
+# Role: Project Financial Analyst
+
+electron.get('Confirm project hours recorded to project task')
+
+# PB-1-0400: Verify fully burdened cost rate for project employee
+# Description: Verify the Fully burden cost rate for the employee.
+# Role: Project Financial Analyst
+
+electron.get('fully burdened cost rate for project employee')
+
+# PB-1-0410: Verify standard cost rate for project employee
+# Description: Verify the standard cost rate for the employee if not using fully burden rate.
+# Role: Project Financial Analyst
+
+electron.get('standard cost rate for project employee')
+
+# PB-1-0420: Confirm recording of project expenses and supplier invoices
+# Description: Verify expenses and supplier invoices can be seen tagged to the project.
+# Role: Project Financial Analyst
+
+electron.get('Confirm recording of project expenses and supplier invoices')
+
+# PB-1-0430: Create multi-line project contract with billing/revenue schedules (Time and Expense)
+# Description: Create a Contract with three Project related Contract Lines. Reference the Billable Project. Choose Line Type Project Time and Expense. Be sure to reference a Contract Rate Sheet on each line and create Billing/Revenue Schedules
+# Role: Customer Contract Specialist
+
+electron.navigate('multi-line project contract with billing/revenue schedules (Time and Expense)')
+electron.create('multi-line project contract with billing/revenue schedules (Time and Expense)')
+# Task: Create Customer Contract to Bill for Project Time, Expense, and Spend
+# Sub-task: Create Customer Contract
+electron.submit()
+
+# PB-1-0440: Validate project is associated to contract and billable transactions.
+# Description: Verify the Contract created above as well as Billable Transactions for Time, Expense and Supplier Invoice.
+# Role: Project Billing Specialist
+
+electron.get('project is associated to contract and billable transactions.')
+
+# PB-1-0450: Review Billable Project Transactions
+# Description: Confirm existence of transactions for your project on the "Transactions Ready to Review" tab. Hit the Review Transactions button for any of the transactions. Choose actions for each billable line. Try to choose an action of each type (Approve, Do Not Bill, Mark as Ready to Bill).
+# Role: Project Manager
+
+electron.get('Review Billable Project Transactions')
+
+# PB-1-0460: Create Customer Invoices for Billable Transactions
+# Description: Choose Billable Project and then hit OK. Select Invoice Date of Current Date and then Invoices to be created and click OK. Once process is finished, you should see invoice number. Click to open the invoice.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoices for Billable Transactions')
+electron.create('Customer Invoices for Billable Transactions')
+# Task: Create Customer Invoices for Billable Transactions
+# Sub-task: Go to Create Customer Invoices for Billable Transactions
+electron.submit()
+
+# PB-1-0470: Verify associated accounting for billable transactions
+# Description: As a related action off the invoice, go to Accounting > View Accounting Verify Accounting.
+# Role: Customer Billing Specialist
+
+electron.get('associated accounting for billable transactions')
+
+# PB-2-0010: Copy Project
+# Description: Navigate to the billable project that was created for the Time and Expense Contract. Select related actions and copy the project. Include Resource plan and project plan in copy.
+# Role: Project Administrator
+
+electron.get('Copy Project')
+
+# PB-2-0020: Create Resource Forecast
+# Description: Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK Resource Forecast based on Resource Start/End dates and % Allocation should be generated.
+# Role: Project Manager
+
+electron.navigate('Resource Forecast')
+electron.create('Resource Forecast')
+# Task: Open Project, Navigate to Resources > Resource Forecast and hit the ADD Button. Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK.
+electron.submit()
+
+# PB-2-0030: Create Resource Forecast Snapshot
+# Description: Create snapshot to capture total estimated hours on forecast.
+# Role: Project Manager
+
+electron.navigate('Resource Forecast Snapshot')
+electron.create('Resource Forecast Snapshot')
+# Task: Open Project, Navigate to Resources > Resource Forecast and select the create snapshot button.
+electron.submit()
+
+# PB-2-0040: Edit Project Plan
+# Description: Edit project plan that was copied from the original billable project. Use Project Plan template if available. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year. Mark project plan task as milestone. Ensure an estimate is populated for the task marked as milestone.
+# Role: Project Administrator
+
+electron.search('Project Plan')
+electron.edit('Project Plan')
+# Task: Create Project Plan
+electron.save()
+
+# PB-2-0050: Create Project Budget
+# Description: Enter a Plan Name. Enter a Calculation Type. Choose your Resource Forecast. Click OK. A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.navigate('Project Budget')
+electron.create('Project Budget')
+# Task: Create Project Budget
+# Sub-task: Open Project, Navigate to Financials> Plan and hit the CREATE BUDGET Button
+electron.submit()
+
+# PB-2-0060: Create single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Hours)
+# Description: Create a Contract with one Project related Contract LIne. Reference the Billable Project that was copied from the original billable project.
+# Role: Customer Contract Specialist
+
+electron.navigate('single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Hours)')
+electron.create('single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Hours)')
+electron.submit()
+
+# PB-2-0070: Create Billing Schedule for Fixed Fee Contract Line
+# Description: Create Billing Schedule for fixed fee contract line. Ensure the billing schedule is installment based, select milestone from the copied project, generate installments, submit and approve billing schedule.
+# Role: Customer Billing Specialist
+
+electron.navigate('Billing Schedule for Fixed Fee Contract Line')
+electron.create('Billing Schedule for Fixed Fee Contract Line')
+# Task: Create Billing Schedule for Customer Contract
+# Sub-task: Open customer contract > related actions > Create Billing Schedule
+electron.submit()
+
+# PB-2-0080: View Project Budget
+# Description: Review detailed project budget based on Forecasted Hours.
+# Role: Project Manager
+
+electron.get('Project Budget')
+
+# PB-2-0090: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved. Ensure time is logged to the Billable Project connected to the Fixed Fee Contract Line.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-2-0100: Mark Milestone Percent Complete as 100%
+# Description: Navigate to the copied billable project, select the task marked as a milestone and set the percent complete to 100%. Note: Once the project plan is submitted the milestone will be released and the billing schedule will be available for billing.
+# Role: Project Manager
+
+electron.get('Mark Milestone Percent Complete as 100%')
+
+# PB-2-0110: Create Customer Invoices for Billing Installments
+# Description: Choose Billable Project and then hit OK. Select Invoice Date of Current Date and then Invoices to be created and click OK. Once process is finished, you should see invoice number. Click to open the invoice.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoices for Billing Installments')
+electron.create('Customer Invoices for Billing Installments')
+# Task: Create Customer Invoices for Billing Installments
+electron.submit()
+
+# PB-2-0120: Verify Percent Complete for Revenue Recognition
+# Description: Use this task to verify/override the POC that has been associated with a billable project from related project hours or project costs. Navigate to the "Review Percent Complete for Revenue" task, filter by appropriate criteria to select the project that was used in the fixed fee line. Select Percent Complete Method of Hours. Select line, under Forecast Snapshot column select the resource forecast created previously. Change any open field, add comment, click submit.
+# Role: Revenue Specialist
+
+electron.get('Percent Complete for Revenue Recognition')
+
+# PB-2-0130: Create Revenue Installments for Billable Transactions
+# Description: Create revenue installment for the percent complete fixed fee line. Select Fixed Fee Project for Transaction Type and specify the billable project.
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Installments for Billable Transactions')
+electron.create('Revenue Installments for Billable Transactions')
+# Task: Create Revenue Installments for Billable Transactions
+electron.submit()
+
+# PB-2-0140: Create Revenue Recognition Accounting
+# Description: Create revenue recognition accounting for the installment generated for the Fixed Fee percent complete contract line.
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Recognition Accounting')
+electron.create('Revenue Recognition Accounting')
+# Task: Create Revenue Recognition Accounting
+electron.submit()
+
+# PB-2-0150: Configure Automatic Recalculation of Billable Transactions
+# Description: Enable the checkbox for Automatically Recalculate Transactions
+Select Billing Status = Awaiting Review
+# Role: Project Administrator
+
+electron.get('Configure Automatic Recalculation of Billable Transactions')
+
+# PB-2-0160: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-2-0170: Review Billable Project Transactions to Confirm Existing/Current Bill Rates
+# Description: Ensure that some billable transactions have a Bill Status = Awaiting Review & some are "Ready to Bill"
+
+Validate that the Bill Rate for the billable transactions is the current bill rate from the contract rate sheet
+# Role: Project Billing Specialist
+
+electron.get('Review Billable Project Transactions to Confirm Existing/Current Bill Rates')
+
+# PB-2-0180: Change/Edit Contract Rate Sheet
+# Description: Change the bill rates on a contract rate sheet
+# Role: Customer Contract Specialist
+
+electron.search('Change/Edit Contract Rate Sheet')
+electron.edit('Change/Edit Contract Rate Sheet')
+# Task: Find Contract Rate Sheets
+electron.save()
+
+# PB-2-0190: Confirm Bill Rate Changes
+# Description: Validate that the Bill Rate was automatically updated for the billable transactions where Bill Status = Awaiting Review
+# Role: Project Billing Specialist
+
+electron.get('Confirm Bill Rate Changes')
+
+# PB-2-0200: Manual Recalculation of Bill Rates
+# Description: Confirm that the billable transactions where Bill Status = Ready to Bill was not automatically recalculated.
+
+Manually recalculate (Recalculate button) the billable transactions where Bill Status = Ready to Bill
+# Role: Project Billing Specialist
+
+electron.get('Manual Recalculation of Bill Rates')
+
+# PB-2-0210: Validate Configuration for Prepaid Billing
+# Description: Confirm Tenant Setup - Financials for Prepaid Billing > Customer Contracts section > Select the Require Paid Prepayment Status for Prepaid Billing check box to bill transactions against a prepayment only after you apply a customer payment to the related installment.
+
+Confirm Accounting Posting Rules for Prepaid Billing
+
+Confirm a Schedule Type of Consolidated Billing has been set up
+# Role: Finance Configurator
+
+electron.get('Configuration for Prepaid Billing')
+
+# PB-2-0220: Create Customer Contract for Prepaid Billing
+# Description: 1. In the Line Details section of the Goods and Services tab, select Prepaid from the Line Type prompt.
+Confirm that Deferred from the Revenue Treatment field is automatically selected
+2. Create additional contract lines - Goods/Services of Line Type = Fixed Amount and Project T&E
+3. All these additional lines will be part of a Consolidated Billing Schedule
+# Role: Customer Contract Specialist
+
+electron.navigate('Customer Contract for Prepaid Billing')
+electron.create('Customer Contract for Prepaid Billing')
+# Task: Create Customer Contract
+electron.submit()
+
+# PB-2-0230: Create Consolidated Billing Schedule for the Customer Contract
+# Description: Select a schedule type that you enabled for consolidated billing from the Schedule Type prompt.
+On the Prepaid tab, map prepaid customer contract lines to installment and transaction type lines on the same billing schedule.
+Associate the prepaid mapping to prepaid installments.
+# Role: Customer Contract Specialist
+
+electron.navigate('Consolidated Billing Schedule for the Customer Contract')
+electron.create('Consolidated Billing Schedule for the Customer Contract')
+# Task: Create Billing Schedule from the Customer Contract Related Action
+electron.submit()
+
+# PB-2-0240: Create a Prepaid Installment Invoice
+# Description: Create a customer invoice off the related action of the Prepaid Installment on the Billing Schedule Prepaid tab or via the Task "Create Customer Invoices for Consolidated Billing" to create the prepaid installment invoice.
+
+Once the customer invoice is approved, validate the Accounting: DR AR, CR Prepaid Revenue (from the Deferred Revenue APR).
+# Role: Customer Contract Specialist
+
+electron.navigate('a Prepaid Installment Invoice')
+electron.create('a Prepaid Installment Invoice')
+# Task: Billing Schedule > Prepaid tab > Prepaid Installment
+electron.submit()
+
+# PB-2-0250: Enter Billable Transactions: Time
+# Description: Enter billable transactions such as Time, submitted and approved
+# Role: Employee As Self
+
+electron.get('Enter Billable Transactions: Time')
+
+# PB-2-0260: Create Customer Invoices for Consolidated Billing
+# Description: Include billable transactions, eligible installments in the Consolidated bill
+
+Access the task "Create Customer Invoices for Consolidated Billing" again to consume installment and billable transaction activities.
+When you create a consolidated customer invoice, Workday:
+- Applies prepayments to billing installments and transactions.
+- Creates offset lines to consume prepayment installments (DR Prepaid Revenue CR Revenue or Deferred Revenue (depending on the contract line's Revenue Treatment)
+# Role: Project Billing Specialist
+
+electron.navigate('Customer Invoices for Consolidated Billing')
+electron.create('Customer Invoices for Consolidated Billing')
+# Task: Create Customer Invoices for Consolidated Billing
+electron.submit()
+
+# PB-2-0270: Create capital project
+# Description: Create a project that is flagged for capital processing. Approve project as necessary
+# Role: TBD
+
+electron.navigate('capital project')
+electron.create('capital project')
+# Task: Create Project
+electron.submit()
+
+# PB-2-0280: Assign resources to project
+# Description: Assign resources to the project for reporting time and expenses
+# Role: TBD
+
+electron.get('Assign resources to project')
+
+# PB-2-0290: Verify Project Labor Cost Configuration
+# Description: Review the Labor Cost Calculation Method for labor. If using standard or fully burdened cost, perform scenarios for Standard Cost and Fully Burden Cost rates.
+# Role: TBD
+
+electron.get('Project Labor Cost Configuration')
+
+# PB-2-0300: Verify Standard Costing
+# Description: View Project Standard Cost Rate Sheet. Ensure the there are rate sheets for all companies that will process project activity.
+# Role: TBD
+
+electron.get('Standard Costing')
+
+# PB-2-0310: Verify Fully Burdened Cost Rates
+# Description: Check that the set up of fully burdened cost rate definition is populated.
+# Role: TBD
+
+electron.get('Fully Burdened Cost Rates')
+
+# PB-2-0320: Enter expense report
+# Description: Enter 3 expense report lines… one that will meet the WIP exclusion rules, one that will be expensed, and one that will be capitalized.
+# Role: TBD
+
+electron.get('Enter expense report')
+
+# PB-2-0330: Enter supplier invoice
+# Description: Create a supplier invoice against a capital project and approve
+# Role: TBD
+
+electron.get('Enter supplier invoice')
+
+# PB-2-0340: Verify APRs for Capitalization
+# Description: Ensure the the Project Labor Cost Recovery and WIP account post rules are set up.
+# Role: TBD
+
+electron.get('APRs for Capitalization')
+
+# PB-2-0350: Verify the BPs for Capitalization are set up
+# Description: Check the Asset Registration and Verify Capital Project Expense BPs are set up.
+# Role: TBD
+
+electron.get('the BPs for Capitalization are set up')
+
+# PB-2-0360: Enter time for capital project labor
+# Description: Create a timesheet for a week's worth of labor against the capital project. Approve time sheet.
+# Role: TBD
+
+electron.get('Enter time for capital project labor')
+
+# PB-2-0370: Run labor cost summarization
+# Description: Create labor cost summarization for the time sheet.
+# Role: TBD
+
+electron.get('Run labor cost summarization')
+
+# PB-2-0380: Review Capital Project Transactions
+# Description: Mark on of the expense report items as an expense. If the BP: Verify Capital Expense has routing approval, check that this transaction is routed. Verify that the expense report line that should have been matched to the WIP exclusion rule is not eligible for capitalization. On the Capital Project Workbench view the labor transaction summary. There will be no labor transaction if it matched the WIP exclusion rule. Create a project asset, and associate the supplier invoice, labor, and expense report line to be capitalized. Capitalize the asset.
+# Role: TBD
+
+electron.get('Review Capital Project Transactions')
+
+# PB-3-0010: Validate Business Document Sequence IDs
+# Description: ID Generator for Customer Contracts
+ID Generator for Customer Invoices
+ID Generator for Consolidated Customer Invoices
+ID Generator for Customer Invoice Credit Adjustments
+ID Generator for Customer Invoice Debit Adjustments
+ID Generator for Customer Invoice Rebills
+# Role: Common Finance Configurator
+
+electron.get('Business Document Sequence IDs')
+
+# PB-3-0020: Validate Business Entity Sequence IDs
+# Description: ID Generator for Customer
+# Role: Common Finance Configurator
+
+electron.get('Business Entity Sequence IDs')
+
+# PB-3-0030: Validate the following 3 Expenses Options that are relevant to Project Billing
+# Description: Expense Options
+- Hide Billable Checkbox on Expense Report and Spend Authorization Line
+- Bill Expense Lines when Expense Report is Approved (versus Paid)
+- Restrict Selection of Project Worktags by Resource Plan
+# Role: Common Finance Configurator
+
+electron.get('the following 3 Expenses Options that are relevant to Project Billing')
+
+# PB-3-0040: Validate the following 4 Customer Account Options that are relevant to Project Billing
+# Description: Customer Account Options
+- Enable Unique Invoice IDs for Credits, Debits, and Rebills
+- Customer Display Name Format
+- Restrict Invoice Field Editing
+- Enable Interest and Late Fees
+# Role: Common Finance Configurator
+
+electron.get('the following 4 Customer Account Options that are relevant to Project Billing')
+
+# PB-3-0050: Validate the following 7 Customer Contract Options that are relevant to Project Billing.
+# Description: Customer Contract Options
+- Only Include Non-Recoverable Tax on Billable Transactions
+- Require Paid Prepayment Status for Prepaid Billing
+- Invoice Prepaid Installments with Other Transaction Types
+- Calculate Contract Line Fee on Rounded Transaction Value
+- Create and Submit Installment for Credit and Rebill
+- Include Closed Revenue Recognition Installments in Period-End Revenue Accounting
+- Revenue Recognition Default Currency Rate (this is usually the "Revenue Recognition Installment Date" for Project Billing)
+
+electron.get('the following 7 Customer Contract Options that are relevant to Project Billing.')
+
+# PB-3-0060: Verify Worktag Usage relevant to Project Billing
+# Description: Validate Worktag Usage values for:
+- Customer Contract
+- Customer Invoice
+- Time Tracking
+- Accounting Journal
+# Role: Finance Administrator
+
+electron.get('Worktag Usage relevant to Project Billing')
+
+# PB-3-0070: Verify Related Worktag Usage relevant to Project Billing
+# Description: Validate Related Worktag Usage values for:
+- Project
+- Customer
+# Role: Finance Administrator
+
+electron.get('Related Worktag Usage relevant to Project Billing')
+
+# PB-3-0080: Verify Daily Rate Transaction Grouping configuration
+# Description: Verify:
+- Name
+- Description
+- Worker
+- Project Role
+- Project Phase
+- Project Task
+- Worktag Types
+- Default
+# Role: Contract Administrator
+
+electron.get('Daily Rate Transaction Grouping configuration')
+
+# PB-3-0090: Verify Revenue Adjustment Reasons
+# Description: Validate Revenue Adjustment Reasons per requirements:
+- Reason Code
+- Description
+- Default
+# Role: Contract Administrator
+
+electron.get('Revenue Adjustment Reasons')
+
+# PB-3-0100: Verify Ad Hoc Project Transaction Custom References
+# Description: Validate Ad Hoc Project Transaction Custom References per requirements:
+- Enabled (Y/N)
+- Consolidated Billing (Y/N)
+- Reference Name
+# Role: Contract Administrator
+
+electron.get('Ad Hoc Project Transaction Custom References')
+
+# PB-3-0110: Verify the Project Billing Configuration
+# Description: Validate the following per requirements:
+
+Project Transfer Options
+- Accounting Adjustment Date
+- Accounting Adjustment Reason
+- Transfer Reason Required
+Transfer Reasons
+- Name
+- Description
+- One Transfer Reason allowed as Default
+Revenue Options
+- Revenue Offset for Invoiced Billable Transactions
+- Enable Deferred Billable Project Costs Accounting
+Billing Options
+- Automatically Recalculate Transactions
+- Recalculate Transactions with Billing Status 
+- Reset Invoiced Transactions to Billing Status
+# Role: Contract Administrator
+
+electron.get('the Project Billing Configuration')
+
+# PB-3-0120: Validate Project Billing Rate Dimensions
+# Description: Verify Project Billing Rate Dimensions per requirements if applicable
+- Category Name
+- Category Name Order
+- Description
+- Category Member Names
+- Category Member Name Order
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Dimensions')
+
+# PB-3-0130: Validate Project Billing Rate Sheets
+# Description: Verify the Project Billing Rate Sheets per requirements
+- Name (Required)
+- Currency (Required)
+- Company 
+- Customer 
+- Worktags 
+- Unit of Time (Required)
+- Transaction Grouping
+- Effective Date (Required)
+- Billing Rate Dimensions
+- Project Roles (Required)
+- Rate (Required)
+- Time Definition Settings (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheets')
+
+# PB-3-0140: Validate Project Billing Rate Sheet Configuration
+# Description: Verify the Project Billing Rate Sheet Configuration per requirements:
+- Project Billing Rate Sheet
+- Associated Worktags
+- Rate Dimensions (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheet Configuration')
+
+# PB-3-0150: Validate Standard Billing Rates by Rule
+# Description: Verify the Standard Billing Rates by Rule configuration per requirements:
+- Project Rate Rule
+- Project Rate Rule Ordering
+- Currency
+- Effective Date
+- Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Rule')
+
+# PB-3-0160: Validate Standard Billing Rates by Worker
+# Description: Verify the Standard Billing Rates by Worker configuration per requirements:
+- Worker
+- Currency
+- Effective Date
+- Worker Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Worker')
+
+# PB-3-0170: Validate Project Invoice Summary Definition
+# Description: Verify the Project Invoice Summary Definition per Requirements:
+- Project Transaction Source
+- Name
+- Tenant Default
+- Description
+- Summarize By Worktags
+- Summary By Dimensions
+- Sort Information
+- Sort Information Order
+# Role: Contract Administrator
+
+electron.get('Project Invoice Summary Definition')
+
+# PB-3-0180: Verify Schedule Types
+# Description: Verify Schedule Types per requirements from Project Billing:
+- Schedule Type
+- Description
+Use Types (Y/N)
+- Prepaid
+- Usage Based Subscription
+- Billing
+- Revenue Recognition
+- Multi-Period
+- Consolidated Billing Schedule
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# PB-3-0190: Validate Customer Contract Template
+# Description: Verify Customer Contract Template per requirements. 
+- Name (Required)
+- Description
+- Contract Type (Required)
+- Multiple-Element Revenue Allocation
+- Billing Schedule Templates (if applicable)
+- Sales Item
+- Revenue Category
+- Project Transaction Source
+- Line Type (Required)
+- Revenue Treatment (Required)
+# Role: Contract Administrator
+
+electron.get('Customer Contract Template')
+
+# PB-3-0200: Validate Consolidated Billing Schedule Template
+# Description: Verify Consolidated Billing Schedule Template per requirements from Project Billing: 
+- Template Name (Required)
+- Schedule Type (Required)
+- Schedule Description
+- Invoice Type
+- Invoice Memo
+- Recurring Invoice
+- Auto Submit Invoices for Approval (Y/N)
+- Auto Submit Schedules (Y/N)
+- Installment Options tab
+- Transaction Options tab
+# Role: Contract Administrator
+
+electron.get('Consolidated Billing Schedule Template')
+
+# PB-3-0210: Validate Project Budget Template
+# Description: Verify Project Budget Template per requirements from Project Billing:
+- Project Budget Template Name
+- Plan Structure
+- Override Template with Related Worktags from Project (Y/N)
+- Ledger Account/Summary
+- Worktags
+# Role: Project Administrator
+
+electron.get('Project Budget Template')
+
+# PB-3-0220: Validate Percent Complete Configuration
+# Description: Verify Percent Completion Configuration per Requirements:
+- Percent Complete Configuration Name
+- Effective Date
+- Configure at Company or Project Hierarchy or Project level setting
+- ID of Company / Project Hierarchy / Project
+- Estimated Cost Factor
+- Ledger Account(s)
+- Dimension (if applicable)
+- Dimension Value (if applicable)
+# Role: Contract Administrator
+
+electron.get('Percent Complete Configuration')
+
+# PB-3-0230: Assignable Roles
+# Description: Confirm Assignable Roles (Delivered and Custom) for Project Billing are accurately defined in the Maintain Assignable Role task with the correct enabled for Organization per requirements.
+# Role: Security Administrator
+
+electron.get('Assignable Roles')
+
+# PB-3-0240: Role Assignments
+# Description: Confirm that the Assignable Roles for Project Billing have been properly assigned or are defaulting from the Project Hierarchy (or Organization Type) per requirements.
+- Customer Contract Specialist
+- Revenue Specialist
+- Customer Billing Specialist
+- Project Billing Specialist
+
+NOTE - May be additional roles or custom roles to review based on client solution.
+# Role: Security Administrator
+
+electron.get('Role Assignments')
+
+# PB-3-0250: Custom Validations
+# Description: Verify all required Custom Validations (Critical and Warning) have been configured for: 
+- Customer Contract
+- Customer Contract Amendment
+- Billing Schedule
+- Revenue Recognition Schedule
+- Customer Invoice
+- Customer Invoice Adjustment
+# Role: Common Finance Configurator
+
+electron.get('Custom Validations')
+
+# PB-3-0260: Project Billing Business Process Validation
+# Description: Review the following Business Processes related to Project Billing.  Ensure all business processes contain the correct:
+- Initiating Security Groups
+- Business Process Steps
+- Step Conditions (Entry & Exit)
+- Custom Notifications (if applicable)
+
+Project Business Processes include:
+- Customer Contract Event
+- Customer Contract Amendment Event
+- Contract Rate Sheet Event
+- Billing Schedule Event
+- Revenue Recognition Schedule Event
+- Revenue Recognition Installment Event
+- Percent Complete Project Event
+- Project Transaction Adjustment Event
+- Ad Hoc Project Transaction Event
+- Customer Invoice Proposal Event
+- Customer Invoice Event
+# Role: Business Process Administrator; System Auditor
+
+electron.get('Project Billing Business Process Validation')
+
+# PB-3-0270: Project Billing Custom Objects
+# Description: Validate Custom Objects for Project Billing (if applicable).  Can include the following areas:
+- Customer Contract
+- Customer Contract Line
+- Customer Invoice
+- Customer Invoice Adjustment
+- Customer Invoice Line
+# Role: Contract Administrator
+
+electron.get('Project Billing Custom Objects')
+
+# PB-4-0010: Create Project
+# Description: Create project using the project hierarchy, project template and project plan template created in the step above. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project')
+electron.create('Project')
+# Task: Create Project
+electron.submit()
+
+# PB-4-0020: Approve Project
+# Description: Approve Project. Test Business Process routing based on the configured conditions for each Business Process step.
+# Role: Various (depending on approval process)
+
+electron.get('Approve Project')
+
+# PB-4-0030: Add Resource to Project
+# Description: Assign resources to the project. Choose any project role and use the Assign a Worker Allocation type. Be sure to include a Start Date/End Date and % Allocation in order for Resource Forecast to be correct. Add specific Worker to Resource Plan Line Submit.
+# Role: Project Resource Manager
+
+electron.navigate('Add Resource to Project')
+electron.create('Add Resource to Project')
+# Task: Add Resources to Project (Assign a Worker)
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-4-0040: Create Project Plan
+# Description: Create project plan. Use Project Plan template if available. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project Plan')
+electron.create('Project Plan')
+# Task: Create Project Plan
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-4-0050: Assign Resources to Project Plan
+# Description: Assign Task Resources to the Project plan
+# Role: TBD
+
+electron.get('Assign Resources to Project Plan')
+
+# PB-4-0060: Create Resource Forecast
+# Description: Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK Resource Forecast based on Resource Start/End dates and % Allocation should be generated.
+# Role: Project Manager
+
+electron.navigate('Resource Forecast')
+electron.create('Resource Forecast')
+# Task: Open Project, Navigate to Resources > Resource Forecast and hit the ADD Button. Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK.
+electron.submit()
+
+# PB-4-0070: Create Project Budget
+# Description: Enter a Plan Name. Enter a Calculation Type. Choose your Resource Forecast. Click OK. A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.navigate('Project Budget')
+electron.create('Project Budget')
+# Task: Create Project Budget
+# Sub-task: Open Project, Navigate to Financials> Plan and hit the CREATE BUDGET Button
+electron.submit()
+
+# PB-4-0080: View Project Budget
+# Description: Review detailed project budget based on Forecasted Hours.
+# Role: Project Manager
+
+electron.get('Project Budget')
+
+# PB-4-0090: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-4-0100: Record and approve expenses charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter an Expense Report, coding to the Project. Complete any required steps until the Expense Report is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve expenses charged to Project')
+
+# PB-4-0110: Record and approve supplier invoice.
+# Description: Enter a Supplier Invoice and code to the Project. Select the Billable Checkbox.  Carry the invoice through any approval process. Complete any required steps until the Invoice is approved.
+# Role: Accounts Payable Data Entry Specialist
+
+electron.get('Record and approve supplier invoice.')
+
+# PB-4-0120: Confirm project hours recorded to project task
+# Description: Verify the hours are entered against the correct task once the hours have been approved.
+# Role: Project Financial Analyst
+
+electron.get('Confirm project hours recorded to project task')
+
+# PB-4-0130: Verify fully burdened cost rate for project employee
+# Description: Verify the Fully burden cost rate for the employee.
+# Role: Project Financial Analyst
+
+electron.get('fully burdened cost rate for project employee')
+
+# PB-4-0140: Verify standard cost rate for project employee
+# Description: Verify the standard cost rate for the employee if not using fully burden rate.
+# Role: Project Financial Analyst
+
+electron.get('standard cost rate for project employee')
+
+# PB-4-0150: Confirm recording of project expenses and supplier invoices
+# Description: Verify expenses and supplier invoices can be seen tagged to the project.
+# Role: Project Financial Analyst
+
+electron.get('Confirm recording of project expenses and supplier invoices')
+
+# PB-4-0160: Create multi-line project contract with billing/revenue schedules (Time and Expense)
+# Description: Create a Contract with three Project related Contract Lines. Reference the Billable Project. Choose Line Type Project Time and Expense. Be sure to reference a Contract Rate Sheet on each line and create Billing/Revenue Schedules
+# Role: Customer Contract Specialist
+
+electron.navigate('multi-line project contract with billing/revenue schedules (Time and Expense)')
+electron.create('multi-line project contract with billing/revenue schedules (Time and Expense)')
+# Task: Create Customer Contract to Bill for Project Time, Expense, and Spend
+# Sub-task: Create Customer Contract
+electron.submit()
+
+# PB-4-0170: Validate project is associated to contract and billable transactions.
+# Description: Verify the Contract created above as well as Billable Transactions for Time, Expense and Supplier Invoice.
+# Role: Project Billing Specialist
+
+electron.get('project is associated to contract and billable transactions.')
+
+# PB-4-0180: Review Billable Project Transactions
+# Description: Confirm existence of transactions for your project on the "Transactions Ready to Review" tab. Hit the Review Transactions button for any of the transactions. Choose actions for each billable line. Try to choose an action of each type (Approve, Do Not Bill, Mark as Ready to Bill).
+# Role: Project Manager
+
+electron.get('Review Billable Project Transactions')
+
+# PB-4-0190: Create Customer Invoices for Billable Transactions
+# Description: Choose Billable Project and then hit OK. Select Invoice Date of Current Date and then Invoices to be created and click OK. Once process is finished, you should see invoice number. Click to open the invoice.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoices for Billable Transactions')
+electron.create('Customer Invoices for Billable Transactions')
+# Task: Create Customer Invoices for Billable Transactions
+# Sub-task: Go to Create Customer Invoices for Billable Transactions
+electron.submit()
+
+# PB-4-0200: Verify associated accounting for billable transactions
+# Description: As a related action off the invoice, go to Accounting > View Accounting Verify Accounting.
+# Role: Customer Billing Specialist
+
+electron.get('associated accounting for billable transactions')
+
+# PB-4-0210: Copy Project
+# Description: Navigate to the billable project that was created for the Time and Expense Contract. Select related actions and copy the project. Include Resource plan and project plan in copy.
+# Role: Project Administrator
+
+electron.get('Copy Project')
+
+# PB-4-0220: Edit Project Plan
+# Description: Edit project plan that was copied from the original billable project. Use Project Plan template if available. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year. Mark project plan task as milestone. Ensure an estimate is populated for the task marked as milestone.
+# Role: Project Administrator
+
+electron.search('Project Plan')
+electron.edit('Project Plan')
+# Task: Create Project Plan
+electron.save()
+
+# PB-4-0230: Create Project Budget
+# Description: Enter a Plan Name. Enter a Calculation Type. Choose your Resource Forecast. Click OK. A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.navigate('Project Budget')
+electron.create('Project Budget')
+# Task: Create Project Budget
+# Sub-task: Open Project, Navigate to Financials> Plan and hit the CREATE BUDGET Button
+electron.submit()
+
+# PB-4-0240: Create single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Cost)
+# Description: Create a Contract with one Project related Contract Line. Reference the Billable Project that was copied from the original billable project. Ensure the contract line is marked for deferred revenue or accrued revenue.
+# Role: Customer Contract Specialist
+
+electron.navigate('single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Cost)')
+electron.create('single-line project contract with billing/revenue schedules (Fixed Fee Milestone with Percent Complete by Cost)')
+# Task: Create Customer Contract
+electron.submit()
+
+# PB-4-0250: Create Billing Schedule for Fixed Fee Contract Line
+# Description: Create Billing Schedule for fixed fee contract line. Ensure the billing schedule is installment based, select milestone from the copied project, generate installments, submit and approve billing schedule.
+# Role: Customer Billing Specialist
+
+electron.navigate('Billing Schedule for Fixed Fee Contract Line')
+electron.create('Billing Schedule for Fixed Fee Contract Line')
+# Task: Create Billing Schedule for Customer Contract
+# Sub-task: Open customer contract > related actions > Create Billing Schedule
+electron.submit()
+
+# PB-4-0260: Create Revenue Schedule for Fixed Fee Contract Line
+# Description: Create Revenue Schedule for fixed fee contract line. Select installment based, revenue recognition method of  Percent Complete and Percent Complete Method of Cost.
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Schedule for Fixed Fee Contract Line')
+electron.create('Revenue Schedule for Fixed Fee Contract Line')
+# Task: Create Revenue Recognition Schedule
+# Sub-task: Open customer contract > related actions > Create Revenue Recognition Schedule
+electron.submit()
+
+# PB-4-0270: View Project Budget
+# Description: Review detailed project budget based on Forecasted Hours.
+# Role: Project Manager
+
+electron.get('Project Budget')
+
+# PB-4-0280: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved. Ensure time is logged to the Billable Project connected to the Fixed Fee Contract Line.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-4-0290: Record and approve expenses charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter an Expense Report, coding to the Project. Complete any required steps until the Expense Report is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve expenses charged to Project')
+
+# PB-4-0300: Record and approve supplier invoice.
+# Description: Enter a Supplier Invoice and code to the Project. Select the Billable Checkbox.  Carry the invoice through any approval process. Complete any required steps until the Invoice is approved.
+# Role: Accounts Payable Data Entry Specialist
+
+electron.get('Record and approve supplier invoice.')
+
+# PB-4-0310: Mark Milestone Percent Complete as 100%
+# Description: Navigate to the copied billable project, select the task marked as a milestone and set the percent complete to 100%. Note: Once the project plan is submitted the milestone will be released and the billing schedule will be available for billing.
+# Role: Project Manager
+
+electron.get('Mark Milestone Percent Complete as 100%')
+
+# PB-4-0320: Create Project Labor Cost Summarization
+# Description: Create labor cost journals from time entered against project. Select run now in task, specify specific company or company hierarchies.
+# Role: Project Manager
+
+electron.navigate('Project Labor Cost Summarization')
+electron.create('Project Labor Cost Summarization')
+# Task: Create Project Labor Cost Summarization
+electron.submit()
+
+# PB-4-0330: Verify Labor Cost Summarization Accounting
+# Description: Use the Find Journals filtered by the journal source of Project Labor Cost to verify the accounting entries from the labor cost summarization.
+# Role: Accounting Operations Lead
+
+electron.get('Labor Cost Summarization Accounting')
+
+# PB-4-0340: Create Customer Invoices for Billing Installments
+# Description: Choose Billable Project and then hit OK. Select Invoice Date of Current Date and then Invoices to be created and click OK. Once process is finished, you should see invoice number. Click to open the invoice.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoices for Billing Installments')
+electron.create('Customer Invoices for Billing Installments')
+# Task: Create Customer Invoices for Billing Installments
+electron.submit()
+
+# PB-4-0350: Verify Percent Complete for Revenue Recognition
+# Description: Use this task to verify/override the POC that has been associated with a billable project from related project hours or project costs. Navigate to the "Review Percent Complete for Revenue" task, filter by appropriate criteria to select the project that was used in the fixed fee line. Select Percent Complete Method of Hours. Select line, under Forecast Snapshot column select the resource forecast created previously. Change any open field, add comment, click submit.
+# Role: Revenue Specialist
+
+electron.get('Percent Complete for Revenue Recognition')
+
+# PB-4-0360: Create Revenue Installments for Billable Transactions
+# Description: Create revenue installment for the percent complete fixed fee line. Select Fixed Fee Project for Transaction Type and specify the billable project.
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Installments for Billable Transactions')
+electron.create('Revenue Installments for Billable Transactions')
+# Task: Create Revenue Installments for Billable Transactions
+electron.submit()
+
+# PB-4-0370: Create Revenue Recognition Accounting
+# Description: Create revenue recognition accounting for the installment generated for the Fixed Fee percent complete contract line.
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Recognition Accounting')
+electron.create('Revenue Recognition Accounting')
+# Task: Create Revenue Recognition Accounting
+electron.submit()
+
+# PB-4-0380: Configure Automatic Recalculation of Billable Transactions
+# Description: Enable the checkbox for Automatically Recalculate Transactions
+Select Billing Status = Awaiting Review
+# Role: Project Administrator
+
+electron.get('Configure Automatic Recalculation of Billable Transactions')
+
+# PB-4-0390: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-4-0400: Review Billable Project Transactions to Confirm Existing/Current Bill Rates
+# Description: Ensure that some billable transactions have a Bill Status = Awaiting Review & some are "Ready to Bill"
+
+Validate that the Bill Rate for the billable transactions is the current bill rate from the contract rate sheet
+# Role: Project Billing Specialist
+
+electron.get('Review Billable Project Transactions to Confirm Existing/Current Bill Rates')
+
+# PB-4-0410: Change/Edit Contract Rate Sheet
+# Description: Change the bill rates on a contract rate sheet
+# Role: Customer Contract Specialist
+
+electron.search('Change/Edit Contract Rate Sheet')
+electron.edit('Change/Edit Contract Rate Sheet')
+# Task: Find Contract Rate Sheets
+electron.save()
+
+# PB-4-0420: Confirm Bill Rate Changes
+# Description: Validate that the Bill Rate was automatically updated for the billable transactions where Bill Status = Awaiting Review
+# Role: Project Billing Specialist
+
+electron.get('Confirm Bill Rate Changes')
+
+# PB-4-0430: Manual Recalculation of Bill Rates
+# Description: Confirm that the billable transactions where Bill Status = Ready to Bill was not automatically recalculated.
+
+Manually recalculate (Recalculate button) the billable transactions where Bill Status = Ready to Bill
+# Role: Project Billing Specialist
+
+electron.get('Manual Recalculation of Bill Rates')
+
+# PB-4-0440: Validate Configuration for Prepaid Billing
+# Description: Confirm Tenant Setup - Financials for Prepaid Billing > Customer Contracts section > Select the Require Paid Prepayment Status for Prepaid Billing check box to bill transactions against a prepayment only after you apply a customer payment to the related installment.
+
+Confirm Accounting Posting Rules for Prepaid Billing
+
+Confirm a Schedule Type of Consolidated Billing has been set up
+# Role: Finance Configurator
+
+electron.get('Configuration for Prepaid Billing')
+
+# PB-4-0450: Create Customer Contract for Prepaid Billing
+# Description: 1. In the Line Details section of the Goods and Services tab, select Prepaid from the Line Type prompt.
+Confirm that Deferred from the Revenue Treatment field is automatically selected
+2. Create additional contract lines - Goods/Services of Line Type = Fixed Amount and Project T&E
+3. All these additional lines will be part of a Consolidated Billing Schedule
+# Role: Customer Contract Specialist
+
+electron.navigate('Customer Contract for Prepaid Billing')
+electron.create('Customer Contract for Prepaid Billing')
+# Task: Create Customer Contract
+electron.submit()
+
+# PB-4-0460: Create Consolidated Billing Schedule for the Customer Contract
+# Description: Select a schedule type that you enabled for consolidated billing from the Schedule Type prompt.
+On the Prepaid tab, map prepaid customer contract lines to installment and transaction type lines on the same billing schedule.
+Associate the prepaid mapping to prepaid installments.
+# Role: Customer Contract Specialist
+
+electron.navigate('Consolidated Billing Schedule for the Customer Contract')
+electron.create('Consolidated Billing Schedule for the Customer Contract')
+# Task: Create Billing Schedule from the Customer Contract Related Action
+electron.submit()
+
+# PB-4-0470: Create a Prepaid Installment Invoice
+# Description: Create a customer invoice off the related action of the Prepaid Installment on the Billing Schedule Prepaid tab or via the Task "Create Customer Invoices for Consolidated Billing" to create the prepaid installment invoice.
+
+Once the customer invoice is approved, validate the Accounting: DR AR, CR Prepaid Revenue (from the Deferred Revenue APR)
+# Role: Customer Contract Specialist
+
+electron.navigate('a Prepaid Installment Invoice')
+electron.create('a Prepaid Installment Invoice')
+# Task: Billing Schedule > Prepaid tab > Prepaid Installment
+electron.submit()
+
+# PB-4-0480: Enter Billable Transactions: Time
+# Description: Enter billable transactions such as Time, submitted and approved
+# Role: Employee As Self
+
+electron.get('Enter Billable Transactions: Time')
+
+# PB-4-0490: Create Customer Invoices for Consolidated Billing
+# Description: Include billable transactions, eligible installments in the Consolidated bill
+
+Access the task "Create Customer Invoices for Consolidated Billing" again to consume installment and billable transaction activities.
+When you create a consolidated customer invoice, Workday:
+- Applies prepayments to billing installments and transactions.
+- Creates offset lines to consume prepayment installments (DR Prepaid Revenue CR Revenue or Deferred Revenue (depending on the contract line's Revenue Treatment)
+# Role: Project Billing Specialist
+
+electron.navigate('Customer Invoices for Consolidated Billing')
+electron.create('Customer Invoices for Consolidated Billing')
+# Task: Create Customer Invoices for Consolidated Billing
+electron.submit()
+
+# PB-4-0500: Verify Contracts
+# Description: Verify complete list of converted/created Contract. Review the following in addition to populated fields per requirements:
+Contract Header
+- Contract Name
+- Company
+- Sold-To Customer
+- Bill-To Customer
+- Currency
+- Contract Type
+- Effective Date
+- Contract Amount
+- Billed Amount
+- Worktags
+Contract Lines
+- Project
+- Project Transaction Source(s)
+- Line Type
+- Line Amount
+- Line Status
+- Revenue Treatment
+- Worktags
+- Billing Schedule
+- Revenue Recognition Schedule
+# Role: Contract Administrator
+
+electron.get('Contracts')
+
+# PB-5-0010: Validate Business Document Sequence IDs
+# Description: ID Generator for Customer Contracts
+ID Generator for Customer Invoices
+ID Generator for Consolidated Customer Invoices
+ID Generator for Customer Invoice Credit Adjustments
+ID Generator for Customer Invoice Debit Adjustments
+ID Generator for Customer Invoice Rebills
+# Role: Common Finance Configurator
+
+electron.get('Business Document Sequence IDs')
+
+# PB-5-0020: Validate Business Entity Sequence IDs
+# Description: ID Generator for Customer
+# Role: Common Finance Configurator
+
+electron.get('Business Entity Sequence IDs')
+
+# PB-5-0030: Validate the following 3 Expenses Options that are relevant to Project Billing
+# Description: Expense Options
+- Hide Billable Checkbox on Expense Report and Spend Authorization Line
+- Bill Expense Lines when Expense Report is Approved (versus Paid)
+- Restrict Selection of Project Worktags by Resource Plan
+# Role: Common Finance Configurator
+
+electron.get('the following 3 Expenses Options that are relevant to Project Billing')
+
+# PB-5-0040: Validate the following 4 Customer Account Options that are relevant to Project Billing
+# Description: Customer Account Options
+- Enable Unique Invoice IDs for Credits, Debits, and Rebills
+- Customer Display Name Format
+- Restrict Invoice Field Editing
+- Enable Interest and Late Fees
+# Role: Common Finance Configurator
+
+electron.get('the following 4 Customer Account Options that are relevant to Project Billing')
+
+# PB-5-0050: Validate the following 7 Customer Contract Options that are relevant to Project Billing.
+# Description: Customer Contract Options
+- Only Include Non-Recoverable Tax on Billable Transactions
+- Require Paid Prepayment Status for Prepaid Billing
+- Invoice Prepaid Installments with Other Transaction Types
+- Calculate Contract Line Fee on Rounded Transaction Value
+- Create and Submit Installment for Credit and Rebill
+- Include Closed Revenue Recognition Installments in Period-End Revenue Accounting
+- Revenue Recognition Default Currency Rate (this is usually the "Revenue Recognition Installment Date" for Project Billing)
+
+electron.get('the following 7 Customer Contract Options that are relevant to Project Billing.')
+
+# PB-5-0060: Verify Worktag Usage relevant to Project Billing
+# Description: Validate Worktag Usage values for:
+- Customer Contract
+- Customer Invoice
+- Time Tracking
+- Accounting Journal
+# Role: Finance Administrator
+
+electron.get('Worktag Usage relevant to Project Billing')
+
+# PB-5-0070: Verify Related Worktag Usage relevant to Project Billing
+# Description: Validate Related Worktag Usage values for:
+- Project
+- Customer
+# Role: Finance Administrator
+
+electron.get('Related Worktag Usage relevant to Project Billing')
+
+# PB-5-0080: Verify Daily Rate Transaction Grouping configuration
+# Description: Verify:
+- Name
+- Description
+- Worker
+- Project Role
+- Project Phase
+- Project Task
+- Worktag Types
+- Default
+# Role: Contract Administrator
+
+electron.get('Daily Rate Transaction Grouping configuration')
+
+# PB-5-0090: Verify Revenue Adjustment Reasons
+# Description: Validate Revenue Adjustment Reasons per requirements:
+- Reason Code
+- Description
+- Default
+# Role: Contract Administrator
+
+electron.get('Revenue Adjustment Reasons')
+
+# PB-5-0100: Verify Ad Hoc Project Transaction Custom References
+# Description: Validate Ad Hoc Project Transaction Custom References per requirements:
+- Enabled (Y/N)
+- Consolidated Billing (Y/N)
+- Reference Name
+# Role: Contract Administrator
+
+electron.get('Ad Hoc Project Transaction Custom References')
+
+# PB-5-0110: Verify the Project Billing Configuration
+# Description: Validate the following per requirements:
+
+Project Transfer Options
+- Accounting Adjustment Date
+- Accounting Adjustment Reason
+- Transfer Reason Required
+Transfer Reasons
+- Name
+- Description
+- One Transfer Reason allowed as Default
+Revenue Options
+- Revenue Offset for Invoiced Billable Transactions
+- Enable Deferred Billable Project Costs Accounting
+Billing Options
+- Automatically Recalculate Transactions
+- Recalculate Transactions with Billing Status 
+- Reset Invoiced Transactions to Billing Status
+# Role: Contract Administrator
+
+electron.get('the Project Billing Configuration')
+
+# PB-5-0120: Validate Project Billing Rate Dimensions
+# Description: Verify Project Billing Rate Dimensions per requirements if applicable
+- Category Name
+- Category Name Order
+- Description
+- Category Member Names
+- Category Member Name Order
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Dimensions')
+
+# PB-5-0130: Validate Project Billing Rate Sheets
+# Description: Verify the Project Billing Rate Sheets per requirements
+- Name (Required)
+- Currency (Required)
+- Company 
+- Customer 
+- Worktags 
+- Unit of Time (Required)
+- Transaction Grouping
+- Effective Date (Required)
+- Billing Rate Dimensions
+- Project Roles (Required)
+- Rate (Required)
+- Time Definition Settings (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheets')
+
+# PB-5-0140: Validate Project Billing Rate Sheet Configuration
+# Description: Verify the Project Billing Rate Sheet Configuration per requirements:
+- Project Billing Rate Sheet
+- Associated Worktags
+- Rate Dimensions (if applicable)
+# Role: Contract Administrator
+
+electron.get('Project Billing Rate Sheet Configuration')
+
+# PB-5-0150: Validate Standard Billing Rates by Rule
+# Description: Verify the Standard Billing Rates by Rule configuration per requirements:
+- Project Rate Rule
+- Project Rate Rule Ordering
+- Currency
+- Effective Date
+- Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Rule')
+
+# PB-5-0160: Validate Standard Billing Rates by Worker
+# Description: Verify the Standard Billing Rates by Worker configuration per requirements:
+- Worker
+- Currency
+- Effective Date
+- Worker Billing Rate
+# Role: Contract Administrator
+
+electron.get('Standard Billing Rates by Worker')
+
+# PB-5-0170: Validate Project Invoice Summary Definition
+# Description: Verify the Project Invoice Summary Definition per Requirements:
+- Project Transaction Source
+- Name
+- Tenant Default
+- Description
+- Summarize By Worktags
+- Summary By Dimensions
+- Sort Information
+- Sort Information Order
+# Role: Contract Administrator
+
+electron.get('Project Invoice Summary Definition')
+
+# PB-5-0180: Verify Schedule Types
+# Description: Verify Schedule Types per requirements from Project Billing:
+- Schedule Type
+- Description
+Use Types (Y/N)
+- Prepaid
+- Usage Based Subscription
+- Billing
+- Revenue Recognition
+- Multi-Period
+- Consolidated Billing Schedule
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# PB-5-0190: Validate Customer Contract Template
+# Description: Verify Customer Contract Template per requirements. 
+- Name (Required)
+- Description
+- Contract Type (Required)
+- Multiple-Element Revenue Allocation
+- Billing Schedule Templates (if applicable)
+- Sales Item
+- Revenue Category
+- Project Transaction Source
+- Line Type (Required)
+- Revenue Treatment (Required)
+# Role: Contract Administrator
+
+electron.get('Customer Contract Template')
+
+# PB-5-0200: Validate Consolidated Billing Schedule Template
+# Description: Verify Consolidated Billing Schedule Template per requirements from Project Billing: 
+- Template Name (Required)
+- Schedule Type (Required)
+- Schedule Description
+- Invoice Type
+- Invoice Memo
+- Recurring Invoice
+- Auto Submit Invoices for Approval (Y/N)
+- Auto Submit Schedules (Y/N)
+- Installment Options tab
+- Transaction Options tab
+# Role: Contract Administrator
+
+electron.get('Consolidated Billing Schedule Template')
+
+# PB-5-0210: Validate Project Budget Template
+# Description: Verify Project Budget Template per requirements from Project Billing:
+- Project Budget Template Name
+- Plan Structure
+- Override Template with Related Worktags from Project (Y/N)
+- Ledger Account/Summary
+- Worktags
+# Role: Project Administrator
+
+electron.get('Project Budget Template')
+
+# PB-5-0220: Validate Percent Complete Configuration
+# Description: Verify Percent Completion Configuration per Requirements:
+- Percent Complete Configuration Name
+- Effective Date
+- Configure at Company or Project Hierarchy or Project level setting
+- ID of Company / Project Hierarchy / Project
+- Estimated Cost Factor
+- Ledger Account(s)
+- Dimension (if applicable)
+- Dimension Value (if applicable)
+# Role: Contract Administrator
+
+electron.get('Percent Complete Configuration')
+
+# PB-5-0230: Assignable Roles
+# Description: Confirm Assignable Roles (Delivered and Custom) for Project Billing are accurately defined in the Maintain Assignable Role task with the correct enabled for Organization per requirements.
+# Role: Security Administrator
+
+electron.get('Assignable Roles')
+
+# PB-5-0240: Role Assignments
+# Description: Confirm that the Assignable Roles for Project Billing have been properly assigned or are defaulting from the Project Hierarchy (or Organization Type) per requirements.
+- Customer Contract Specialist
+- Revenue Specialist
+- Customer Billing Specialist
+- Project Billing Specialist
+
+NOTE - May be additional roles or custom roles to review based on client solution.
+# Role: Security Administrator
+
+electron.get('Role Assignments')
+
+# PB-5-0250: Custom Validations
+# Description: Verify all required Custom Validations (Critical and Warning) have been configured for: 
+- Customer Contract
+- Customer Contract Amendment
+- Billing Schedule
+- Revenue Recognition Schedule
+- Customer Invoice
+- Customer Invoice Adjustment
+# Role: Common Finance Configurator
+
+electron.get('Custom Validations')
+
+# PB-5-0260: Project Billing Business Process Validation
+# Description: Review the following Business Processes related to Project Billing.  Ensure all business processes contain the correct:
+- Initiating Security Groups
+- Business Process Steps
+- Step Conditions (Entry & Exit)
+- Custom Notifications (if applicable)
+
+Project Business Processes include:
+- Customer Contract Event
+- Customer Contract Amendment Event
+- Contract Rate Sheet Event
+- Billing Schedule Event
+- Revenue Recognition Schedule Event
+- Revenue Recognition Installment Event
+- Percent Complete Project Event
+- Project Transaction Adjustment Event
+- Ad Hoc Project Transaction Event
+- Customer Invoice Proposal Event
+- Customer Invoice Event
+# Role: Business Process Administrator; System Auditor
+
+electron.get('Project Billing Business Process Validation')
+
+# PB-5-0270: Project Billing Custom Objects
+# Description: Validate Custom Objects for Project Billing (if applicable).  Can include the following areas:
+- Customer Contract
+- Customer Contract Line
+- Customer Invoice
+- Customer Invoice Adjustment
+- Customer Invoice Line
+# Role: Contract Administrator
+
+electron.get('Project Billing Custom Objects')
+
+# PB-5-0280: Verify Contracts
+# Description: Verify complete list of converted/created Contract. Review the following in addition to populated fields per requirements:
+Contract Header
+- Contract Name
+- Company
+- Sold-To Customer
+- Bill-To Customer
+- Currency
+- Contract Type
+- Effective Date
+- Contract Amount
+- Billed Amount
+- Worktags
+Contract Lines
+- Project
+- Project Transaction Source(s)
+- Line Type
+- Line Amount
+- Line Status
+- Revenue Treatment
+- Worktags
+- Billing Schedule
+- Revenue Recognition Schedule
+# Role: Contract Administrator
+
+electron.get('Contracts')
+
+# PB-5-0290: Create Project
+# Description: Create project using the project hierarchy, project template and project plan template created in the step above. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project')
+electron.create('Project')
+# Task: Create Project
+electron.submit()
+
+# PB-5-0300: Approve Project
+# Description: Approve Project. Test Business Process routing based on the configured conditions for each Business Process step.
+# Role: Various (depending on approval process)
+
+electron.get('Approve Project')
+
+# PB-5-0310: Add Resource to Project
+# Description: Assign resources to the project. Choose any project role and use the Assign a Worker Allocation type. Be sure to include a Start Date/End Date and % Allocation in order for Resource Forecast to be correct. Add specific Worker to Resource Plan Line Submit.
+# Role: Project Resource Manager
+
+electron.navigate('Add Resource to Project')
+electron.create('Add Resource to Project')
+# Task: Add Resources to Project (Assign a Worker)
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-5-0320: Create Project Plan
+# Description: Create project plan. Use Project Plan template if available. Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year.
+# Role: Project Administrator
+
+electron.navigate('Project Plan')
+electron.create('Project Plan')
+# Task: Create Project Plan
+# Sub-task: Complete any required Approval Steps
+electron.submit()
+
+# PB-5-0330: Assign Resources to Project Plan
+# Description: Assign Task Resources to the Project plan
+# Role: TBD
+
+electron.get('Assign Resources to Project Plan')
+
+# PB-5-0340: Create Resource Forecast
+# Description: Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK Resource Forecast based on Resource Start/End dates and % Allocation should be generated.
+# Role: Project Manager
+
+electron.navigate('Resource Forecast')
+electron.create('Resource Forecast')
+# Task: Open Project, Navigate to Resources > Resource Forecast and hit the ADD Button. Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK.
+electron.submit()
+
+# PB-5-0350: Create Project Budget
+# Description: Enter a Plan Name. Enter a Calculation Type. Choose your Resource Forecast. Click OK. A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.navigate('Project Budget')
+electron.create('Project Budget')
+# Task: Create Project Budget
+# Sub-task: Open Project, Navigate to Financials> Plan and hit the CREATE BUDGET Button
+electron.submit()
+
+# PB-5-0360: View Project Budget
+# Description: Review detailed project budget based on Forecasted Hours.
+# Role: Project Manager
+
+electron.get('Project Budget')
+
+# PB-5-0370: Record and approve time charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project. Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve time charged to Project')
+
+# PB-5-0380: Record and approve expenses charged to Project
+# Description: For a Worker Assigned to the Project, log in and enter an Expense Report, coding to the Project. Complete any required steps until the Expense Report is approved.
+# Role: Employee As Self
+
+electron.get('Record and approve expenses charged to Project')
+
+# PB-5-0390: Record and approve supplier invoice.
+# Description: Enter a Supplier Invoice and code to the Project. Select the Billable Checkbox.  Carry the invoice through any approval process. Complete any required steps until the Invoice is approved.
+# Role: Accounts Payable Data Entry Specialist
+
+electron.get('Record and approve supplier invoice.')
+
+# PB-5-0400: Confirm project hours recorded to project task
+# Description: Verify the hours are entered against the correct task once the hours have been approved.
+# Role: Project Financial Analyst
+
+electron.get('Confirm project hours recorded to project task')
+
+# PB-5-0410: Verify fully burdened cost rate for project employee
+# Description: Verify the Fully burden cost rate for the employee.
+# Role: Project Financial Analyst
+
+electron.get('fully burdened cost rate for project employee')
+
+# PB-5-0420: Verify standard cost rate for project employee
+# Description: Verify the standard cost rate for the employee if not using fully burden rate.
+# Role: Project Financial Analyst
+
+electron.get('standard cost rate for project employee')
+
+# PB-5-0430: Confirm recording of project expenses and supplier invoices
+# Description: Verify expenses and supplier invoices can be seen tagged to the project.
+# Role: Project Financial Analyst
+
+electron.get('Confirm recording of project expenses and supplier invoices')
+
+# PB-5-0440: Create multi-line project contract with billing/revenue schedules (Time and Expense)
+# Description: Create a Contract with three Project related Contract Lines. Reference the Billable Project. Choose Line Type Project Time and Expense. Be sure to reference a Contract Rate Sheet on each line and create Billing/Revenue Schedules
+# Role: Customer Contract Specialist
+
+electron.navigate('multi-line project contract with billing/revenue schedules (Time and Expense)')
+electron.create('multi-line project contract with billing/revenue schedules (Time and Expense)')
+# Task: Create Customer Contract to Bill for Project Time, Expense, and Spend
+# Sub-task: Create Customer Contract
+electron.submit()
+
+# PB-5-0450: Validate project is associated to contract and billable transactions.
+# Description: Verify the Contract created above as well as Billable Transactions for Time, Expense and Supplier Invoice.
+# Role: Project Billing Specialist
+
+electron.get('project is associated to contract and billable transactions.')
+
+# PB-5-0460: Review Billable Project Transactions
+# Description: Confirm existence of transactions for your project on the "Transactions Ready to Review" tab. Hit the Review Transactions button for any of the transactions. Choose actions for each billable line. Try to choose an action of each type (Approve, Do Not Bill, Mark as Ready to Bill).
+# Role: Project Manager
+
+electron.get('Review Billable Project Transactions')
+
+# PB-5-0470: Create Customer Invoices for Billable Transactions
+# Description: Choose Billable Project and then hit OK. Select Invoice Date of Current Date and then Invoices to be created and click OK. Once process is finished, you should see invoice number. Click to open the invoice.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoices for Billable Transactions')
+electron.create('Customer Invoices for Billable Transactions')
+# Task: Create Customer Invoices for Billable Transactions
+# Sub-task: Go to Create Customer Invoices for Billable Transactions
+electron.submit()
+
+# PB-5-0480: Verify associated accounting for billable transactions
+# Description: As a related action off the invoice, go to Accounting > View Accounting Verify Accounting.
+# Role: Customer Billing Specialist
+
+electron.get('associated accounting for billable transactions')

@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-2-0040
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: View Business Process for Supplier Event
+WORKDAY ROLE: Business Process Administrator
+EST. DURATION: nan minutes
+RAG CONFIDENCE: 2.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Show default Business Process for Supplier Invoice Event. Discuss required modifications.
+ 
+ For direct intercompany invoices, be aware that the supplier side of the direct intercompany invoice will not post until it is approved through the supplier invoice BP. If intercompany invoice should only be approved at customer invoice BP, condition rule should be set up to bypass approval if invoice is direct intercompany.
+
+PREREQUISITES:
+- User logged in with Business Process Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "bp: Supplier Event"
+2. wait for search results
+3. click search result containing "bp: Supplier Event"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-2-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: View Business Process for Supplier Event
+- Template Used: default
+- RAG Query: "bp: Supplier Event"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

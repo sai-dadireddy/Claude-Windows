@@ -1,0 +1,1618 @@
+================================================================================
+WORKDAY ELECTRON TESTS - GRANTS MANAGEMENT
+================================================================================
+Generated: 2025-12-30
+Total Scenarios: 237
+================================================================================
+
+# GM-1-0010: View Grant
+# Description: View a Grant
+# Role: Award Contract Specialist
+
+electron.get('Grant')
+
+# GM-1-0020: View Grant Hierarchy
+# Description: View a Grant Hierarchy
+# Role: Award Contract Specialist
+
+electron.get('Grant Hierarchy')
+
+# GM-1-0030: View Sponsor
+# Description: View a Sponsor
+# Role: Award Contract Specialist
+
+electron.get('Sponsor')
+
+# GM-1-0040: View Sponsor Types
+# Description: Review Sponsor Types values
+# Role: Sponsor Administrator
+
+electron.get('Sponsor Types')
+
+# GM-1-0050: View Object Class Mapping
+# Description: Review Object Class Mapping
+# Role: Grant Configurator
+
+electron.get('Object Class Mapping')
+
+# GM-1-0060: Sponsor Award Types
+# Description: Review Sponsor Award Types
+# Role: Grant Configurator
+
+electron.get('Sponsor Award Types')
+
+# GM-1-0070: Award Amendment Reasons
+# Description: Review Award Amendment Reasons
+# Role: Grant Configurator
+
+electron.get('Award Amendment Reasons')
+
+# GM-1-0080: Award Purpose codes
+# Description: Review Award Purpose Codes
+# Role: Grant Configurator
+
+electron.get('Award Purpose codes')
+
+# GM-1-0090: View Award Posting Interval group
+# Description: View Award Posting Interval group
+# Role: Grant Configurator
+
+electron.get('Award Posting Interval group')
+
+# GM-1-0100: View Award Summary Schedule
+# Description: View Award Summary Schedule
+# Role: Grant Configurator
+
+electron.get('Award Summary Schedule')
+
+# GM-1-0110: View Facilities and Administration Waived Allocation Profile
+# Description: View Facilities and Administration Waived Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Waived Allocation Profile')
+
+# GM-1-0120: View Facilities and Administration Cost Rate Agreement
+# Description: View Facilities and Administration Cost Rate Agreement
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Rate Agreement')
+
+# GM-1-0130: View Facilities and Administration Revenue Allocation Profile
+# Description: View Facilities and Administration Revenue Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Revenue Allocation Profile')
+
+# GM-1-0140: View Facilities and Administration Cost Basis Types
+# Description: View Facilities and Administration Cost Basis Types
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Basis Types')
+
+# GM-1-0150: Audit Awards with Invalid Object Class Set Configuration
+# Description: Audit Awards with Invalid Object Class Set Configuration
+# Role: Award Contract Specialist
+
+electron.get('Audit Awards with Invalid Object Class Set Configuration')
+
+# GM-1-0160: View Catalog of Federal Domestic Assistance (CFDA)
+# Description: View Catalog of Federal Domestic Assistance (CFDA)
+# Role: Award Contract Specialist
+
+electron.get('Catalog of Federal Domestic Assistance (CFDA)')
+
+# GM-1-0170: View NSF Codes
+# Description: View NSF Codes
+# Role: Award Contract Specialist
+
+electron.get('NSF Codes')
+
+# GM-1-0180: View Spend Restriction
+# Description: View Spend Restriction
+# Role: Award Contract Specialist
+
+electron.get('Spend Restriction')
+
+# GM-1-0190: Find Subrecipients
+# Description: View the Subrecipients that have been configured
+# Role: Award Contract Specialist, Subrecipient Administrator
+
+electron.get('Find Subrecipients')
+
+# GM-1-0200: View Budget Plan Structure for Award
+# Description: View the budget plan structure for Plan Type Award
+# Role: Budget Administrator
+
+electron.get('Budget Plan Structure for Award')
+
+# GM-1-0210: View Award Attachment Categories
+# Description: View Award Attachment Categories
+# Role: Award Contract Specialist
+
+electron.get('Award Attachment Categories')
+
+# GM-1-0220: View Award Lifecycle Statuses
+# Description: View Award Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Statuses')
+
+# GM-1-0230: View Award Lifecycle Status Combinations
+# Description: View Award Lifecycle Status Combinations
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Combinations')
+
+# GM-1-0240: View Award Lifecycle Status Update Rules
+# Description: View Award Lifecycle Status Update Rules
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Update Rules')
+
+# GM-1-0250: View Award Task Statuses
+# Description: View Award Task Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Task Statuses')
+
+# GM-1-0260: View Award Task Types
+# Description: View Award Task Types
+# Role: Award Contract Specialist
+
+electron.get('Award Task Types')
+
+# GM-1-0270: View Award Task List Templates
+# Description: View Award Task List Templates
+# Role: Award Contract Specialist
+
+electron.get('Award Task List Templates')
+
+# GM-1-0280: View Award Personnel Responsibilities
+# Description: View Award Personnel Responsibilities
+# Role: Sponsored Programs Manager
+
+electron.get('Award Personnel Responsibilities')
+
+# GM-1-0290: View Award Proposal Submission Type
+# Description: View Award Proposal Submission Type
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Submission Type')
+
+# GM-1-0300: View Award and Award Proposal Budget Structure Mappings
+# Description: View Award and Award Proposal Budget Structure Mappings
+# Role: Budget Administrator
+
+electron.get('Award and Award Proposal Budget Structure Mappings')
+
+# GM-1-0310: View Award Proposal Lifecycle Statuses
+# Description: View Award Proposal Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Lifecycle Statuses')
+
+# GM-2-0010: Create a Sponsor - LOC
+# Description: Create a Sponsor that will use LOC as the payment method on the Award. Verify required fields have been met.
+# Role: Sponsor Administrator
+
+electron.navigate('a Sponsor - LOC')
+electron.create('a Sponsor - LOC')
+# Task: Create Sponsor
+electron.submit()
+
+# GM-2-0020: Create a Sponsor - Check
+# Description: Create a Sponsor that will use Check as the payment method on the Award. Verify required fields have been met.
+# Role: Sponsor Administrator
+
+electron.navigate('a Sponsor - Check')
+electron.create('a Sponsor - Check')
+# Task: Create Sponsor
+electron.submit()
+
+# GM-2-0030: Create Letter of Credit
+# Description: Create LOC and select the Sponsor that was designated as the LOC Sponsor
+# Role: Grant Configurator
+
+electron.navigate('Letter of Credit')
+electron.create('Letter of Credit')
+# Task: Create Letter of Credit
+electron.submit()
+
+# GM-2-0040: Edit Sponsor
+# Description: Make a change to a Sponsor
+# Role: Award Contract Specialist
+
+electron.search('Sponsor')
+electron.edit('Sponsor')
+# Task: Edit Sponsor
+electron.save()
+
+# GM-2-0050: Create Award - Cost Reimbursable, LOC
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Letter of Credit as payment method.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, LOC')
+electron.create('Award - Cost Reimbursable, LOC')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0060: Create Award - Cost Reimbursable, non-LOC
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Check as payment method.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, non-LOC')
+electron.create('Award - Cost Reimbursable, non-LOC')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0070: Correct Award
+# Description: Make a change to the Award. View Award: Related Actions > Correct
+# Role: Award Contract Specialist
+
+electron.get('Correct Award')
+
+# GM-2-0080: Create Award - Cost Reimbursable, Cost Share
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Enter Cost Share information.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, Cost Share')
+electron.create('Award - Cost Reimbursable, Cost Share')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0090: Create Award - full Prepaid Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Revenue is recognized on expenses.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - full Prepaid Amount')
+electron.create('Award - full Prepaid Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0100: Create Award - partial Prepaid Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Revenue is recognized on expenses.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - partial Prepaid Amount')
+electron.create('Award - partial Prepaid Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0110: Create Award - Fixed Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Installment Billing Schedule
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Fixed Amount')
+electron.create('Award - Fixed Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-2-0120: Copy Award
+# Description: Copy an Award
+# Role: Award Contract Specialist
+
+electron.get('Copy Award')
+
+# GM-2-0130: Amend an Award
+# Description: Other Information Tab: select an Amendment Reason, Effective Date and Submit for approval.  Confirm the Award version changes from 0 to 1
+# Role: Award Contract Specialist
+
+electron.get('Amend an Award')
+
+# GM-2-0140: Create Grant Hierarchy
+# Description: create a Grant Hierarchy for Testing and add all test Grants to the new Hierarchy as they are created
+# Role: Award Contract Specialist (unconstrained)
+
+electron.navigate('Grant Hierarchy')
+electron.create('Grant Hierarchy')
+# Task: Create Grant
+electron.submit()
+
+# GM-2-0150: Create Grant from Grant Worktag
+# Description: Create Grant from Grant Worktag
+# Role: Award Contract Specialist
+
+electron.navigate('Grant from Grant Worktag')
+electron.create('Grant from Grant Worktag')
+# Task: Create Grant
+electron.submit()
+
+# GM-2-0160: Edit Grant
+# Description: make a change to the Grant such as changing a Role.  Related Actions > Roles
+# Role: Award Contract Specialist
+
+electron.search('Grant')
+electron.edit('Grant')
+# Task: Edit Grant
+electron.save()
+
+# GM-2-0170: Create Subrecipient
+# Description: select an existing Supplier and make them a Subrecipient
+# Role: Subrecipient Administrator
+
+electron.navigate('Subrecipient')
+electron.create('Subrecipient')
+# Task: Create Subrecipient
+electron.submit()
+
+# GM-2-0180: Amend Award - Create Budget Amendment
+# Description: Enter Award Amendment: Supplemental Funding; Amend Budget: Plan Tab, Plan Related Actions > Plan > Create Amendment
+# Role: Grant Budget Specialist
+
+electron.navigate('Amend Award - Create Budget Amendment')
+electron.create('Amend Award - Create Budget Amendment')
+# Task: View Award: Related Actions > Amend
+electron.submit()
+
+# GM-2-0190: Create source spend billable transactions for Grant(s)
+# Description: Need FIN Actuals spend transactions against the Grants for all Awards being tested.  Spend Actuals Transactions include: Supplier Invoice, Accounting Journal, Expense Report.
+# Role: Based on source transaction
+
+electron.navigate('source spend billable transactions for Grant(s)')
+electron.create('source spend billable transactions for Grant(s)')
+# Task: Various
+electron.submit()
+
+# GM-2-0200: Award Cost Processable Audit for Supplier Invoices
+# Description: Review the Supplier Invoices for billable Awards, F&A rates calculated, etc.
+# Role: Grant Manager, Grant Financial Analyst, AP Analyst, Accountant
+
+electron.get('Award Cost Processable Audit for Supplier Invoices')
+
+# GM-2-0210: Create Invoices for Cost Reimbursable Award Transactions
+# Description: Need billable spend transactions first. View Award: Related Actions > Award >Create Customer Invoice for Award Grant Transactions.  Run this task for all Awards.
+# Role: Award Contract Specialist
+
+electron.navigate('Invoices for Cost Reimbursable Award Transactions')
+electron.create('Invoices for Cost Reimbursable Award Transactions')
+# Task: View Award: Related Actions > Award >Create Customer Invoice for Award Grant Transactions
+electron.submit()
+
+# GM-2-0220: Record Letter of Credit Draw Down
+# Description: Verify the LOC Draw Amount is the same as the Sponsor Invoice
+# Role: Award Contract Specialist
+
+electron.search('Record Letter of Credit Draw Down')
+electron.edit('Record Letter of Credit Draw Down')
+# Task: Record Letter of Credit Draw Down
+electron.save()
+
+# GM-2-0230: Letter of Credit Draw Report
+# Description: Run the Letter of Credit Draw Report for the LOC Draw that was just done
+# Role: Award Contract Specialist
+
+electron.search('Letter of Credit Draw Report')
+electron.edit('Letter of Credit Draw Report')
+# Task: Letter of Credit Draw Report
+electron.save()
+
+# GM-2-0240: Generate Payment for Letter of Credit Draw Report
+# Description: this is the approval notification from the Record Letter of Credit Draw Down task.  Enter the amount of the Draw (should be the same amount)
+# Role: Award Billing Specialist
+
+electron.search('Generate Payment for Letter of Credit Draw Report')
+electron.edit('Generate Payment for Letter of Credit Draw Report')
+# Task: Generate Payment for Letter of Credit Draw Report
+electron.save()
+
+# GM-2-0250: Record and Apply Customer Payment
+# Description: Record payment for the invoice created. Select the sponsor invoice in the Remittance Advice section. View accounting for the transaction.
+# Role: Customer Payment Specialist
+
+electron.get('Record and Apply Customer Payment')
+
+# GM-2-0260: Create a Customer Deposit
+# Description: Create a deposit for the payment in the previous script
+# Role: Customer Deposit Specialist
+
+electron.navigate('a Customer Deposit')
+electron.create('a Customer Deposit')
+# Task: Create Customer Deposit
+electron.submit()
+
+# GM-2-0270: Run Aging Report
+# Description: Customers: select Sponsor
+# Role: Award Billing Specialist
+
+electron.get('Run Aging Report')
+
+# GM-2-0280: Run Aging Detail Report
+# Description: Customers: select Sponsor
+# Role: Award Billing Specialist
+
+electron.get('Run Aging Detail Report')
+
+# GM-2-0290: Release Retention on Award
+# Description: Release the retention for billing to the sponsor. Update the Billing Schedule: By the Billing Schedule magnifying glass, click on Related Actions > Retention > Release Retention
+# Role: Award Contract Specialist
+
+electron.get('Release Retention on Award')
+
+# GM-2-0300: Edit Award Schedule
+# Description: Award Amendment: no cost extension.  Change the end date on the Award Calendar/Schedule, Award Lines
+# Role: Award Contract Specialist
+
+electron.search('Award Schedule')
+electron.edit('Award Schedule')
+# Task: View Award: Related Actions > Award > Amend
+electron.save()
+
+# GM-2-0310: Reprocess Award Costs
+# Description: will need a situation that would trigger a re-calculation of F&A: change in F&A rate, F&A exception, change in Revenue Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Reprocess Award Costs')
+
+# GM-2-0320: Inactivate Grant
+# Description: Mark a Grant as Inactive
+# Role: Award Contract Specialist
+
+electron.get('Inactivate Grant')
+
+# GM-2-0330: Supplier Invoice Summary for Subrecipients
+# Description: Run the report: Supplier Invoice Summary for Subrecipients
+# Role: Accounts Payable Analyst
+
+electron.get('Supplier Invoice Summary for Subrecipients')
+
+# GM-2-0340: Maintain Subaward
+# Description: A supplier contract is needed with proper subaward indicators. Add the supplier contract to the subaward record.
+# Role: Award Contract Specialist
+
+electron.get('Maintain Subaward')
+
+# GM-2-0350: Maintain Subaward Risk Assessments
+# Description: Maintain Subaward Risk Assessments. Update Subaward with risk evaluation information
+# Role: Award Contract Specialist
+
+electron.get('Maintain Subaward Risk Assessments')
+
+# GM-2-0360: Maintain Subrecipient Risk Records
+# Description: Maintain Subrecipient Risk Records. Update Subrecipient with risk evaluation information
+# Role: Award Contract Specialist
+
+electron.get('Maintain Subrecipient Risk Records')
+
+# GM-2-0370: Find Subrecipient Risk Records report
+# Description: Find Subrecipient Risk Records report
+# Role: Award Contract Specialist
+
+electron.get('Find Subrecipient Risk Records report')
+
+# GM-2-0380: Find Subaward Risk Assessments
+# Description: Subaward Risk Assessments report
+
+electron.get('Find Subaward Risk Assessments')
+
+# GM-2-0390: Find My Subaward Risk Assessments
+# Description: Find My Subaward Risk Assessments.  This report is run if there is security based on Principal Investigator or Grant Manager where a user can only see those subawards that he/she is associated with.
+# Role: Grant Manager
+Principal Investigator
+Award Contract Specialist
+
+electron.get('Find My Subaward Risk Assessments')
+
+# GM-2-0400: Add an Award Task to an Award
+# Description: Add a non-billing milestone Award Task to an Award
+# Role: Award Contract Specialist
+
+electron.navigate('Add an Award Task to an Award')
+electron.create('Add an Award Task to an Award')
+# Task: Maintain Award Tasks
+electron.submit()
+
+# GM-2-0410: Create Award Proposal and Award Proposal Grant
+# Description: Create Award Proposal and Award Proposal Grant
+# Role: Award Contract Specialist
+
+electron.navigate('Award Proposal and Award Proposal Grant')
+electron.create('Award Proposal and Award Proposal Grant')
+# Task: Create Award Proposal and Award Proposal Grant
+electron.submit()
+
+# GM-2-0420: Change Award Proposal
+# Description: Change Award Proposal
+# Role: Award Contract Specialist
+
+electron.get('Change Award Proposal')
+
+# GM-2-0430: Create Award from Proposal
+# Description: Create Award from Proposal
+# Role: Award Contract Specialist
+
+electron.navigate('Award from Proposal')
+electron.create('Award from Proposal')
+# Task: Create Award from Proposal
+electron.submit()
+
+# GM-2-0440: Create Award Budget Template from Proposal Budget Template
+# Description: Create Award Budget Template from Proposal Budget Template
+# Role: Award Contract Specialist
+
+electron.navigate('Award Budget Template from Proposal Budget Template')
+electron.create('Award Budget Template from Proposal Budget Template')
+# Task: Create Award Budget Template from Proposal Budget Template
+electron.submit()
+
+# GM-3-0010: View Grant
+# Description: View a Grant
+# Role: Award Contract Specialist
+
+electron.get('Grant')
+
+# GM-3-0020: View Grant Hierarchy
+# Description: View a Grant Hierarchy
+# Role: Award Contract Specialist
+
+electron.get('Grant Hierarchy')
+
+# GM-3-0030: View Sponsor
+# Description: View a Sponsor
+# Role: Award Contract Specialist
+
+electron.get('Sponsor')
+
+# GM-3-0040: View Sponsor Types
+# Description: Review Sponsor Types values
+# Role: Sponsor Administrator
+
+electron.get('Sponsor Types')
+
+# GM-3-0050: View Object Class Mapping
+# Description: Review Object Class Mapping
+# Role: Grant Configurator
+
+electron.get('Object Class Mapping')
+
+# GM-3-0060: Sponsor Award Types
+# Description: Review Sponsor Award Types
+# Role: Grant Configurator
+
+electron.get('Sponsor Award Types')
+
+# GM-3-0070: Award Amendment Reasons
+# Description: Review Award Amendment Reasons
+# Role: Grant Configurator
+
+electron.get('Award Amendment Reasons')
+
+# GM-3-0080: Award Purpose codes
+# Description: Review Award Purpose Codes
+# Role: Grant Configurator
+
+electron.get('Award Purpose codes')
+
+# GM-3-0090: View Award Posting Interval group
+# Description: View Award Posting Interval group
+# Role: Grant Configurator
+
+electron.get('Award Posting Interval group')
+
+# GM-3-0100: View Award Summary Schedule
+# Description: View Award Summary Schedule
+# Role: Grant Configurator
+
+electron.get('Award Summary Schedule')
+
+# GM-3-0110: View Facilities and Administration Waived Allocation Profile
+# Description: View Facilities and Administration Waived Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Waived Allocation Profile')
+
+# GM-3-0120: View Facilities and Administration Cost Rate Agreement
+# Description: View Facilities and Administration Cost Rate Agreement
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Rate Agreement')
+
+# GM-3-0130: View Facilities and Administration Revenue Allocation Profile
+# Description: View Facilities and Administration Revenue Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Revenue Allocation Profile')
+
+# GM-3-0140: View Facilities and Administration Cost Basis Types
+# Description: View Facilities and Administration Cost Basis Types
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Basis Types')
+
+# GM-3-0150: Audit Awards with Invalid Object Class Set Configuration
+# Description: Audit Awards with Invalid Object Class Set Configuration
+# Role: Award Contract Specialist
+
+electron.get('Audit Awards with Invalid Object Class Set Configuration')
+
+# GM-3-0160: View Catalog of Federal Domestic Assistance (CFDA)
+# Description: View Catalog of Federal Domestic Assistance (CFDA)
+# Role: Award Contract Specialist
+
+electron.get('Catalog of Federal Domestic Assistance (CFDA)')
+
+# GM-3-0170: View NSF Codes
+# Description: View NSF Codes
+# Role: Award Contract Specialist
+
+electron.get('NSF Codes')
+
+# GM-3-0180: View Spend Restriction
+# Description: View Spend Restriction
+# Role: Award Contract Specialist
+
+electron.get('Spend Restriction')
+
+# GM-3-0190: Find Subrecipients
+# Description: Task: Find Subrecipients
+# Role: Award Contract Specialist, Subrecipient Administrator
+
+electron.get('Find Subrecipients')
+
+# GM-3-0200: View Budget Plan Structure for Award
+# Description: View the budget plan structure for Plan Type Award
+# Role: Budget Administrator
+
+electron.get('Budget Plan Structure for Award')
+
+# GM-3-0210: View Award Attachment Categories
+# Description: View Award Attachment Categories
+# Role: Award Contract Specialist
+
+electron.get('Award Attachment Categories')
+
+# GM-3-0220: Salary Over The Cap
+# Description: View Salary Caps – Establish Salary Cap amounts and durations for individual Salary Cap amounts
+# Role: Salary Cap Administrator,
+Grant Configurator
+
+electron.get('Salary Over The Cap')
+
+# GM-3-0230: View Salary Caps
+# Description: View Salary Caps
+# Role: Salary Cap Administrator
+
+electron.get('Salary Caps')
+
+# GM-3-0240: View Award Credit Definitions
+# Description: View Award Credit Definitions
+# Role: Award Contract Specialist
+
+electron.get('Award Credit Definitions')
+
+# GM-3-0250: View Award Proposal Credit for Award Proposal
+# Description: View Award Proposal Credit for Award Proposal
+# Role: Award Proposal Specialist
+
+electron.get('Award Proposal Credit for Award Proposal')
+
+# GM-3-0260: Subrecipient Contact Types
+# Description: View Subrecipient Contact Types
+# Role: Award Contract Specialist
+
+electron.get('Subrecipient Contact Types')
+
+# GM-3-0270: View Award Lifecycle Statuses
+# Description: View Award Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Statuses')
+
+# GM-3-0280: View Award Lifecycle Status Combinations
+# Description: View Award Lifecycle Status Combinations
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Combinations')
+
+# GM-3-0290: View Award Lifecycle Status Update Rules
+# Description: View Award Lifecycle Status Update Rules
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Update Rules')
+
+# GM-3-0300: View Award Task Statuses
+# Description: View Award Task Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Task Statuses')
+
+# GM-3-0310: View Award Task Types
+# Description: View Award Task Types
+# Role: Award Contract Specialist
+
+electron.get('Award Task Types')
+
+# GM-3-0320: View Award Task List Templates
+# Description: View Award Task List Templates
+# Role: Award Contract Specialist
+
+electron.get('Award Task List Templates')
+
+# GM-3-0330: View Award Personnel Responsibilities
+# Description: View Award Personnel Responsibilities
+# Role: Sponsored Programs Manager
+
+electron.get('Award Personnel Responsibilities')
+
+# GM-3-0340: View Award Proposal Submission Type
+# Description: View Award Proposal Submission Type
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Submission Type')
+
+# GM-3-0350: View Award and Award Proposal Budget Structure Mappings
+# Description: View Award and Award Proposal Budget Structure Mappings
+# Role: Budget Administrator
+
+electron.get('Award and Award Proposal Budget Structure Mappings')
+
+# GM-3-0360: View Award Proposal Lifecycle Statuses
+# Description: View Award Proposal Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Lifecycle Statuses')
+
+# GM-3-0370: View Effort Certification Type
+# Description: View Effort Certification Type
+# Role: Finance Administrator
+
+electron.get('Effort Certification Type')
+
+# GM-3-0380: View Effort Certification Eligibility Rule
+# Description: View Effort Certification Eligibility Rule
+# Role: Finance Administrator
+
+electron.get('Effort Certification Eligibility Rule')
+
+# GM-3-0390: View Effort Certification Change Reason Codes
+# Description: View Effort Certification Change Reason Codes
+# Role: Finance Administrator
+
+electron.get('Effort Certification Change Reason Codes')
+
+# GM-3-0400: View Effort Certification Texts
+# Description: View Effort Certification Texts
+# Role: Finance Administrator
+
+electron.get('Effort Certification Texts')
+
+# GM-3-0410: View Effort Certification Survey
+# Description: View Effort Certification Survey
+# Role: Finance Administrator
+
+electron.get('Effort Certification Survey')
+
+# GM-3-0420: Confirm Payroll and Time Tracking transactions have been identified
+# Description: For testing payroll accounting and time tracking, PCA, effort, fringe, etc., need to confirm with Payroll team that all needed data will be entered
+# Role: Award Contract Specialist, Payroll Partner
+
+electron.get('Confirm Payroll and Time Tracking transactions have been identified')
+
+# GM-4-0010: Create a Sponsor - LOC
+# Description: Create a Sponsor that will use LOC as the payment method on the Award. Verify required fields have been met.
+# Role: Sponsor Administrator
+
+electron.navigate('a Sponsor - LOC')
+electron.create('a Sponsor - LOC')
+# Task: Create Sponsor
+electron.submit()
+
+# GM-4-0020: Create a Sponsor - Check
+# Description: Create a Sponsor that will use Check as the payment method on the Award. Verify required fields have been met.
+# Role: Sponsor Administrator
+
+electron.navigate('a Sponsor - Check')
+electron.create('a Sponsor - Check')
+# Task: Create Sponsor
+electron.submit()
+
+# GM-4-0030: Create Letter of Credit
+# Description: Create LOC and select the Sponsor that was designated as the LOC Sponsor
+# Role: Grant Configurator
+
+electron.navigate('Letter of Credit')
+electron.create('Letter of Credit')
+# Task: Create Letter of Credit
+electron.submit()
+
+# GM-4-0040: Create Catalog of Federal Domestic Assistance Item
+# Description: Task: Maintain Catalog of Federal Domestic Assistance
+# Role: Award Contract Specialist
+
+electron.navigate('Catalog of Federal Domestic Assistance Item')
+electron.create('Catalog of Federal Domestic Assistance Item')
+# Task: Create Catalog of Federal Domestic Assistance Item
+electron.submit()
+
+# GM-4-0050: Edit Sponsor
+# Description: Make a change to a Sponsor
+# Role: Award Contract Specialist
+
+electron.search('Sponsor')
+electron.edit('Sponsor')
+# Task: Edit Sponsor
+electron.save()
+
+# GM-4-0060: Create Award - Cost Reimbursable, LOC
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Letter of Credit as payment method.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, LOC')
+electron.create('Award - Cost Reimbursable, LOC')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0070: Create Award - Cost Reimbursable, non-LOC
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Check as payment method.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, non-LOC')
+electron.create('Award - Cost Reimbursable, non-LOC')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0080: Create Award - Cost Reimbursable, Cost Share
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Enter Cost Share information.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Cost Reimbursable, Cost Share')
+electron.create('Award - Cost Reimbursable, Cost Share')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0090: Correct Award
+# Description: Make a change to the Award. View Award: Related Actions > Correct
+# Role: Award Contract Specialist
+
+electron.get('Correct Award')
+
+# GM-4-0100: Copy Award
+# Description: Copy an Award
+# Role: Award Contract Specialist
+
+electron.get('Copy Award')
+
+# GM-4-0110: Amend an Award
+# Description: Other Information Tab: select an Amendment Reason, Effective Date and Submit for approval.  Confirm the Award version changes from 0 to 1
+# Role: Award Contract Specialist
+
+electron.get('Amend an Award')
+
+# GM-4-0120: Create Award - Fixed Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Installment Billing Schedule
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - Fixed Amount')
+electron.create('Award - Fixed Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0130: Create Award - full Prepaid Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Revenue is recognized on expenses.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - full Prepaid Amount')
+electron.create('Award - full Prepaid Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0140: Create Award - partial Prepaid Amount
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule.  Revenue is recognized on expenses.
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - partial Prepaid Amount')
+electron.create('Award - partial Prepaid Amount')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0150: Create Award - with Retention
+# Description: Create Award, Award Calendar/Schedule, Award Budget, and Transaction Billing Schedule
+# Role: Award Contract Specialist, Grant Budget Specialist
+
+electron.navigate('Award - with Retention')
+electron.create('Award - with Retention')
+# Task: Create Award
+electron.submit()
+
+# GM-4-0160: Create Grant Hierarchy
+# Description: create a Grant Hierarchy for Testing and add all test Grants to the new Hierarchy as they are created
+# Role: Award Contract Specialist (unconstrained)
+
+electron.navigate('Grant Hierarchy')
+electron.create('Grant Hierarchy')
+# Task: Create Grant
+electron.submit()
+
+# GM-4-0170: Create Grant from Grant Worktag
+# Description: Task: Create Grant
+# Role: Award Contract Specialist
+
+electron.navigate('Grant from Grant Worktag')
+electron.create('Grant from Grant Worktag')
+# Task: Create Grant
+electron.submit()
+
+# GM-4-0180: Edit Grant
+# Description: make a change to the Grant such as changing a Role.  Related Actions > Roles
+# Role: Award Contract Specialist
+
+electron.search('Grant')
+electron.edit('Grant')
+# Task: Edit Grant
+electron.save()
+
+# GM-4-0190: Edit Grant Hierarchy
+# Description: Task: Edit Grant Hierarchy
+# Role: Award Contract Specialist (unconstrained)
+
+electron.search('Grant Hierarchy')
+electron.edit('Grant Hierarchy')
+# Task: Edit Grant Hierarchy
+electron.save()
+
+# GM-4-0200: Create Subrecipient
+# Description: select an existing Supplier and make them a Subrecipient
+# Role: Subrecipient Administrator
+
+electron.navigate('Subrecipient')
+electron.create('Subrecipient')
+# Task: Create Subrecipient
+electron.submit()
+
+# GM-4-0210: Amend Award - Create Budget Amendment
+# Description: Enter Award Amendment: Supplemental Funding; Amend Budget: Plan Tab, Plan Related Actions > Plan > Create Amendment
+# Role: Grant Budget Specialist
+
+electron.navigate('Amend Award - Create Budget Amendment')
+electron.create('Amend Award - Create Budget Amendment')
+# Task: View Award > Award > Amend
+electron.submit()
+
+# GM-4-0220: Create Source Pre-Encumbrances for Grant(s)
+# Description: Create Requisition using a Grant worktag.
+# Role: Employee As Self, Buyer
+
+electron.navigate('Source Pre-Encumbrances for Grant(s)')
+electron.create('Source Pre-Encumbrances for Grant(s)')
+# Task: Create Requisition
+electron.submit()
+
+# GM-4-0230: Create Source Encumbrances for Grant(s)
+# Description: Source/Create and dispatch a Purchase Order using a Grant worktag.
+# Role: Buyer
+
+electron.navigate('Source Encumbrances for Grant(s)')
+electron.create('Source Encumbrances for Grant(s)')
+# Task: Create Purchase Order
+electron.submit()
+
+# GM-4-0240: Create source spend billable transactions for Grant(s)
+# Description: Need spend transactions against the Grants for all Awards being tested.  Spend Transactions include: Supplier Invoice, Accounting Journal, Expense Report, Payroll Journal.  For the Partial Prepaid Award, want to have expenses that exceed the prepaid amount. Need Cost Share Transactions. Check the accounting entries for all Actuals source transactions for Grant Revenue and F&A.
+# Role: Based on source transaction
+
+electron.navigate('source spend billable transactions for Grant(s)')
+electron.create('source spend billable transactions for Grant(s)')
+# Task: Various
+electron.submit()
+
+# GM-4-0250: Award Cost Processable Audit for Supplier Invoices
+# Description: Review the Supplier Invoices for billable Awards, F&A rates calculated, etc.
+# Role: Grant Manager, Grant Financial Analyst, AP Analyst, Accountant
+
+electron.get('Award Cost Processable Audit for Supplier Invoices')
+
+# GM-4-0260: Create Invoices for Cost Reimbursable Award Transactions
+# Description: Need billable spend transactions first. View Award: Related Actions > Award >Create Customer Invoice for Award Grant Transactions.  Run this task for all Awards.
+# Role: Award Contract Specialist
+
+electron.navigate('Invoices for Cost Reimbursable Award Transactions')
+electron.create('Invoices for Cost Reimbursable Award Transactions')
+# Task: View Award: Related Actions > Award >Create Customer Invoice for Award Grant Transactions
+electron.submit()
+
+# GM-4-0270: Record Letter of Credit Draw Down
+# Description: Verify the LOC Draw Amount is the same as the Sponsor Invoice
+# Role: Award Contract Specialist
+
+electron.search('Record Letter of Credit Draw Down')
+electron.edit('Record Letter of Credit Draw Down')
+# Task: Record Letter
+electron.save()
+
+# GM-4-0280: Letter of Credit Draw Report
+# Description: Run the Letter of Credit Draw Report for the LOC Draw that was just done
+# Role: Award Contract Specialist
+
+electron.search('Letter of Credit Draw Report')
+electron.edit('Letter of Credit Draw Report')
+# Task: Letter of Credit Draw Report
+electron.save()
+
+# GM-4-0290: Generate Payment for Letter of Credit Draw Report
+# Description: this is the approval notification from the Record Letter of Credit Draw Down task.  Enter the amount of the Draw (should be the same amount)
+# Role: Award Billing Specialist
+
+electron.search('Generate Payment for Letter of Credit Draw Report')
+electron.edit('Generate Payment for Letter of Credit Draw Report')
+# Task: Generate Payment for Letter of Credit Draw Report
+electron.save()
+
+# GM-4-0300: Create Customer Invoices for Billing Installments
+# Description: Create a sponsor invoice for the 1st billing installment.
+# Role: Award Contract Specialist
+
+electron.navigate('Customer Invoices for Billing Installments')
+electron.create('Customer Invoices for Billing Installments')
+# Task: View Award: Related Actions > Award >Create Customer Invoice for Billing Installments
+electron.submit()
+
+# GM-4-0310: Record and Apply Customer Payment
+# Description: Record payment for the invoice created. Select the sponsor invoice in the Remittance Advice section. View accounting for the transaction.
+# Role: Customer Payment Specialist
+
+electron.get('Record and Apply Customer Payment')
+
+# GM-4-0320: Create a Customer Deposit
+# Description: Create a deposit for the payment in the previous script
+# Role: Customer Deposit Specialist
+
+electron.navigate('a Customer Deposit')
+electron.create('a Customer Deposit')
+# Task: Create Customer Deposit
+electron.submit()
+
+# GM-4-0330: Record and Apply Customer Payment with write-off
+# Description: Record and Apply a Payment to a Sponsor Invoice that is a small short-pay and write off the remaining balance.
+# Role: Customer Payment Specialist
+
+electron.get('Record and Apply Customer Payment with write-off')
+
+# GM-4-0340: Record Customer Payment with on-account balance
+# Description: Record and Apply a Payment to a Sponsor Invoice that has a large overpayment. Place the overpayment On Account.
+# Role: Customer Payment Specialist
+
+electron.get('Record Customer Payment with on-account balance')
+
+# GM-4-0350: Perform Customer Invoice Maintenance
+# Description: Apply on-account balance to another invoice for that sponsor
+# Role: Customer Payment Specialist
+
+electron.get('Perform Customer Invoice Maintenance')
+
+# GM-4-0360: Run Aging Report
+# Description: Customers: select Sponsor
+# Role: Award Billing Specialist
+
+electron.get('Run Aging Report')
+
+# GM-4-0370: Run Aging Detail Report
+# Description: Customers: select Sponsor
+# Role: Award Billing Specialist
+
+electron.get('Run Aging Detail Report')
+
+# GM-4-0380: Release retention on Award
+# Description: Release the retention for billing to the sponsor.
+# Role: Award Contract Specialist
+
+electron.get('Release retention on Award')
+
+# GM-4-0390: Edit Award Schedule
+# Description: Award Amendment: no cost extension.  Change the end date on the Award Calendar/Schedule, Award Lines
+# Role: Award Contract Specialist
+
+electron.search('Award Schedule')
+electron.edit('Award Schedule')
+# Task: View Award: Related Actions > Award > Amend
+electron.save()
+
+# GM-4-0400: Reprocess Award Costs
+# Description: will need a situation that would trigger a re-calculation of F&A: change in F&A rate, F&A exception, change in Revenue Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Reprocess Award Costs')
+
+# GM-4-0410: Inactivate Grant
+# Description: Mark a Grant as Inactive
+# Role: Award Contract Specialist
+
+electron.get('Inactivate Grant')
+
+# GM-4-0420: Supplier Invoice for Award Cost Processing Audit Report
+# Description: Run the Supplier Invoice for Award Cost Processing Audit Report
+# Role: Award Contract Specialist
+
+electron.get('Supplier Invoice for Award Cost Processing Audit Report')
+
+# GM-4-0430: Funding for My Awards
+# Description: Funding for My Awards
+# Role: Award Contract Specialist, Grant Manager
+
+electron.get('Funding for My Awards')
+
+# GM-4-0440: Purchases for My Awards
+# Description: need purchase orders against Grants to have data for this report
+# Role: Award Contract Specialist, Grant Manager
+
+electron.get('Purchases for My Awards')
+
+# GM-4-0450: Award Spend Restriction Audit Report
+# Description: Award Spend Restriction Audit Report
+# Role: Award Contracts Specialist
+
+electron.get('Award Spend Restriction Audit Report')
+
+# GM-4-0460: Supplier Invoice Summary for Subrecipients
+# Description: Supplier Invoice Summary for Subrecipients
+# Role: Accounts Payable Analyst
+
+electron.get('Supplier Invoice Summary for Subrecipients')
+
+# GM-4-0470: Payroll Accounting Validation for Grants
+# Description: Include payroll against some Grants during the payroll run.  Make sure some come from Payroll Costing Allocations and others from Time Sheet overrides (if applicable).  Verify the accounting, worktags, confirm optional worktag balancing is correct.
+# Role: Accountant
+
+electron.get('Payroll Accounting Validation for Grants')
+
+# GM-4-0480: Fringe Accounting Validation for Grants
+# Description: Confirm Fringe Benefit accounting is correct for Grants.  Verify the accounting, worktags, and confirm optional worktag balancing is correct.
+# Role: Accountant
+
+electron.get('Fringe Accounting Validation for Grants')
+
+# GM-4-0490: LOC Draw Amount doesn't match the Amount to Draw on LOC Draw Down Line
+# Description: LOC Draw, change the amount in the Amount to Draw field to something different from what the system originally reports that you should request as the draw amount.  If you decide to draw less, confirm there's an AR Balance for the next draw.  If you decide to draw more, go through the steps to resolve unapplied payment.
+# Role: Award Billing Specialist
+
+electron.get('LOC Draw Amount doesn't match the Amount to Draw on LOC Draw Down Line')
+
+# GM-4-0500: Maintain Subaward Risk Assessments
+# Description: Maintain Subaward Risk Assessments. Update Subaward with risk evaluation information
+# Role: Award Contract Specialist
+
+electron.get('Maintain Subaward Risk Assessments')
+
+# GM-4-0510: Maintain Subrecipient Risk Records
+# Description: Maintain Subrecipient Risk Records. Update Subrecipient with risk evaluation information
+# Role: Award Contract Specialist
+
+electron.get('Maintain Subrecipient Risk Records')
+
+# GM-4-0520: Find Subrecipient Risk Records report
+# Description: Find Subrecipient Risk Records report
+# Role: Award Contract Specialist
+
+electron.get('Find Subrecipient Risk Records report')
+
+# GM-4-0530: Find Subaward Risk Assessments
+# Description: Subaward Risk Assessments report
+
+electron.get('Find Subaward Risk Assessments')
+
+# GM-4-0540: Find My Subaward Risk Assessments
+# Description: Find My Subaward Risk Assessments.  This report is run if there is security based on Principal Investigator or Grant Manager where a user can only see those subawards that he/she is associated with.
+# Role: Grant Manager
+Principal Investigator
+Award Contract Specialist
+
+electron.get('Find My Subaward Risk Assessments')
+
+# GM-4-0550: Update Award Line Lifecycle Status
+# Description: Update Award Line Lifecycle Status to a status that will trigger an error (warning or error) in another functional area such as on a purchase order or supplier invoice.  Coordinate with procurement or AP team to enter a transaction that will trigger the custom validation
+# Role: Award Contract Specialist
+Accounts Payable Specialist or Buyer
+
+electron.search('Award Line Lifecycle Status')
+electron.edit('Award Line Lifecycle Status')
+# Task: View Award: Related Actions > Award > Amend Award
+electron.save()
+
+# GM-4-0560: Update Award Line Lifecycle Status that is not allowable for Award Header Lifecycle Status
+# Description: Change Award Header Lifecycle status to a value that is not allowed given the Award Line Lifecycle Status based on the Award Lifecycle Status Combination. Ex: Award Header cannot be set to Closed if the Award Line Lifecycle Status is set to Open.
+# Role: Award Contract Specialist
+
+electron.search('Award Line Lifecycle Status that is not allowable for Award Header Lifecycle Status')
+electron.edit('Award Line Lifecycle Status that is not allowable for Award Header Lifecycle Status')
+# Task: View Award: Related Actions > Award  > Correct
+electron.save()
+
+# GM-4-0570: Update Award Header Status to an unallowable value based on Contract Start or End Date or Tasks Status
+# Description: Change the Award Header Lifecycle Status to a value that is not allowed given the allowable statuses based on the Contract Start/End Date.  Or change the Award Header Lifecycle Status to a value that's not allowed given the status of an Award Task.  Ex: cannot change Award Header Lifecycle Status to 90 days to Close if there are more than 90 days before the Contract End Date
+# Role: Award Contract Specialist
+
+electron.search('Award Header Status to an unallowable value based on Contract Start or End Date or Tasks Status')
+electron.edit('Award Header Status to an unallowable value based on Contract Start or End Date or Tasks Status')
+# Task: View Award: Related Actions > Award > Amend Award
+electron.save()
+
+# GM-4-0580: Test Budget Date routing BP on Supplier Invoice
+# Description: Enter a Supplier Invoice with a budget date that is outside of the Award Line From or To Dates.  BP should route to an approver who can change the budget date so that it falls within the Award Line dates and can be picked up for billing.
+# Role: Accounts Payable Specialist
+
+electron.get('Test Budget Date routing BP on Supplier Invoice')
+
+# GM-4-0590: Maintain Award Task, Non-Billing Milestone
+# Description: Add an Award Task (use Award Task Template if there is one) to an existing Award
+# Role: Award Contract Specialist
+
+electron.get('Maintain Award Task, Non-Billing Milestone')
+
+# GM-4-0600: Maintain Award Task, Billing Milestone
+# Description: Add a Billing Milestone Task to an Award
+# Role: Award Contract Specialist
+
+electron.get('Maintain Award Task, Billing Milestone')
+
+# GM-4-0610: Milestone Billing using Award Tasks
+# Description: Update Billing Milestone Award Task to complete and run milestone billing, create customer invoice
+# Role: Award Contract Specialist
+
+electron.get('Milestone Billing using Award Tasks')
+
+# GM-4-0620: Create Award Proposal and Award Proposal Grant
+# Description: Create Award Proposal and Award Proposal Grant
+# Role: Award Contract Specialist
+
+electron.navigate('Award Proposal and Award Proposal Grant')
+electron.create('Award Proposal and Award Proposal Grant')
+# Task: Create Award Proposal and Award Proposal Grant
+electron.submit()
+
+# GM-4-0630: Change Award Proposal
+# Description: Change Award Proposal
+# Role: Award Contract Specialist
+
+electron.get('Change Award Proposal')
+
+# GM-4-0640: Create Award from Proposal
+# Description: Create Award from Proposal
+# Role: Award Contract Specialist
+
+electron.navigate('Award from Proposal')
+electron.create('Award from Proposal')
+# Task: Create Award from Proposal
+electron.submit()
+
+# GM-4-0650: Create Award Budget Template from Proposal Budget Template
+# Description: Create Award Budget Template from Proposal Budget Template
+# Role: Award Contract Specialist
+
+electron.navigate('Award Budget Template from Proposal Budget Template')
+electron.create('Award Budget Template from Proposal Budget Template')
+# Task: Create Award Budget Template from Proposal Budget Template
+electron.submit()
+
+# GM-4-0660: Record Spend transactions against cost reimbursable multi-company award
+# Description: Record expense transactions against the cost reimbursable multi-company award
+# Role: Accounts Payable Specialist
+Accountant
+
+electron.get('Record Spend transactions against cost reimbursable multi-company award')
+
+# GM-4-0670: Grant Multi-Company Audit Costing Allocation
+# Description: Grant Multi-Company Audit Costing Allocation
+# Role: Payroll Partner
+
+electron.get('Grant Multi-Company Audit Costing Allocation')
+
+# GM-4-0680: Grant Multi-Company Audit for Pay Calculate Results
+# Description: Grant Multi-Company Audit for Pay Calculate Results
+# Role: Payroll Partner
+
+electron.get('Grant Multi-Company Audit for Pay Calculate Results')
+
+# GM-4-0690: Find Award Tasks
+# Description: Find Award Tasks
+# Role: Award Contract Specialist
+
+electron.get('Find Award Tasks')
+
+# GM-4-0700: Certify Effort
+# Description: Certify Effort
+# Role: Employee as Self
+
+electron.get('Certify Effort')
+
+# GM-4-0710: Pro Forma Effort Certification
+# Description: Pro Forma Effort Certification
+# Role: Effort Certification Manager
+
+electron.get('Pro Forma Effort Certification')
+
+# GM-4-0720: Run Effort Certification
+# Description: Run Effort Certification
+# Role: Effort Certification Manager
+
+electron.get('Run Effort Certification')
+
+# GM-4-0730: Append Effort Certification
+# Description: Append Effort Certification
+# Role: Effort Certification Manager
+
+electron.get('Append Effort Certification')
+
+# GM-4-0740: Recertify Effort Certification
+# Description: Recertify Effort Certification
+# Role: Effort Certification Manager
+
+electron.get('Recertify Effort Certification')
+
+# GM-4-0750: Effort Certification Status Report
+# Description: Effort Certification Status Report
+# Role: Effort Certification Manager
+
+electron.get('Effort Certification Status Report')
+
+# GM-4-0760: View Effort Certification Survey Results
+# Description: View Effort Certification Survey Results
+# Role: Compensation Finance Partner
+Company Costing Manager
+
+electron.get('Effort Certification Survey Results')
+
+# GM-4-0770: Mass Changed Effort Certification Accounting Impact Report
+# Description: Mass Changed Effort Certification Accounting Impact Report
+# Role: Compensation Finance Partner
+Company Costing Manager
+
+electron.get('Mass Changed Effort Certification Accounting Impact Report')
+
+# GM-4-0780: Changed Effort Certification Accounting Impact Report for Worker
+# Description: Changed Effort Certification Accounting Impact Report for Worker
+# Role: Compensation Finance Partner
+Company Costing Manager
+
+electron.get('Changed Effort Certification Accounting Impact Report for Worker')
+
+# GM-4-0790: Mass Cancel Effort Certification
+# Description: Mass Cancel Effort Certification
+# Role: Finance Administrator
+
+electron.search('Mass Cancel Effort Certification')
+electron.cancel('Mass Cancel Effort Certification')
+
+# GM-5-0010: View Grant
+# Description: View a Grant
+# Role: Award Contract Specialist
+
+electron.get('Grant')
+
+# GM-5-0020: View Grant Hierarchy
+# Description: View a Grant Hierarchy
+# Role: Award Contract Specialist
+
+electron.get('Grant Hierarchy')
+
+# GM-5-0030: View Sponsor
+# Description: View a Sponsor
+# Role: Award Contract Specialist
+
+electron.get('Sponsor')
+
+# GM-5-0040: View Sponsor Types
+# Description: Review Sponsor Types values
+# Role: Sponsor Administrator
+
+electron.get('Sponsor Types')
+
+# GM-5-0050: View Object Class Mapping
+# Description: Review Object Class Mapping
+# Role: Grant Configurator
+
+electron.get('Object Class Mapping')
+
+# GM-5-0060: Sponsor Award Types
+# Description: Review Sponsor Award Types
+# Role: Grant Configurator
+
+electron.get('Sponsor Award Types')
+
+# GM-5-0070: Award Amendment Reasons
+# Description: Review Award Amendment Reasons
+# Role: Grant Configurator
+
+electron.get('Award Amendment Reasons')
+
+# GM-5-0080: Award Purpose codes
+# Description: Review Award Purpose Codes
+# Role: Grant Configurator
+
+electron.get('Award Purpose codes')
+
+# GM-5-0090: View Award Posting Interval group
+# Description: View Award Posting Interval group
+# Role: Grant Configurator
+
+electron.get('Award Posting Interval group')
+
+# GM-5-0100: View Award Summary Schedule
+# Description: View Award Summary Schedule
+# Role: Grant Configurator
+
+electron.get('Award Summary Schedule')
+
+# GM-5-0110: View Facilities and Administration Waived Allocation Profile
+# Description: View Facilities and Administration Waived Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Waived Allocation Profile')
+
+# GM-5-0120: View Facilities and Administration Cost Rate Agreement
+# Description: View Facilities and Administration Cost Rate Agreement
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Rate Agreement')
+
+# GM-5-0130: View Facilities and Administration Revenue Allocation Profile
+# Description: View Facilities and Administration Revenue Allocation Profile
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Revenue Allocation Profile')
+
+# GM-5-0140: View Facilities and Administration Cost Basis Types
+# Description: View Facilities and Administration Cost Basis Types
+# Role: Award Contract Specialist
+
+electron.get('Facilities and Administration Cost Basis Types')
+
+# GM-5-0150: Audit Awards with Invalid Object Class Set Configuration
+# Description: Audit Awards with Invalid Object Class Set Configuration
+# Role: Award Contract Specialist
+
+electron.get('Audit Awards with Invalid Object Class Set Configuration')
+
+# GM-5-0160: View Catalog of Federal Domestic Assistance (CFDA)
+# Description: View Catalog of Federal Domestic Assistance (CFDA)
+# Role: Award Contract Specialist
+
+electron.get('Catalog of Federal Domestic Assistance (CFDA)')
+
+# GM-5-0170: View NSF Codes
+# Description: View NSF Codes
+# Role: Award Contract Specialist
+
+electron.get('NSF Codes')
+
+# GM-5-0180: View Spend Restriction
+# Description: View Spend Restriction
+# Role: Award Contract Specialist
+
+electron.get('Spend Restriction')
+
+# GM-5-0190: Find Subrecipients
+# Description: Find Subrecipients
+# Role: Award Contract Specialist, Subrecipient Administrator
+
+electron.get('Find Subrecipients')
+
+# GM-5-0200: View Budget Plan Structure for Award
+# Description: View the budget plan structure for Plan Type Award
+# Role: Budget Administrator
+
+electron.get('Budget Plan Structure for Award')
+
+# GM-5-0210: View Award Attachment Categories
+# Description: View Award Attachment Categories
+# Role: Award Contract Specialist
+
+electron.get('Award Attachment Categories')
+
+# GM-5-0220: Salary Over The Cap
+# Description: View Salary Caps – Establish Salary Cap amounts and durations for individual Salary Cap amounts
+# Role: Salary Cap Administrator,
+Grant Configurator
+
+electron.get('Salary Over The Cap')
+
+# GM-5-0230: View Salary Caps
+# Description: View Salary Caps
+# Role: Salary Cap Administrator
+
+electron.get('Salary Caps')
+
+# GM-5-0240: View Award Credit Definitions
+# Description: View Award Credit Definitions
+# Role: Award Contract Specialist
+
+electron.get('Award Credit Definitions')
+
+# GM-5-0250: View Award Proposal Credit for Award Proposal
+# Description: View Award Proposal Credit for Award Proposal
+# Role: Award Proposal Specialist
+
+electron.get('Award Proposal Credit for Award Proposal')
+
+# GM-5-0260: Subrecipient Contact Types
+# Description: View Subrecipient Contact Types
+# Role: Award Contract Specialist
+
+electron.get('Subrecipient Contact Types')
+
+# GM-5-0270: View Award Lifecycle Statuses
+# Description: View Award Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Statuses')
+
+# GM-5-0280: View Award Lifecycle Status Combinations
+# Description: View Award Lifecycle Status Combinations
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Combinations')
+
+# GM-5-0290: View Award Lifecycle Status Update Rules
+# Description: View Award Lifecycle Status Update Rules
+# Role: Award Contract Specialist
+
+electron.get('Award Lifecycle Status Update Rules')
+
+# GM-5-0300: View Award Task Statuses
+# Description: View Award Task Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Task Statuses')
+
+# GM-5-0310: View Award Task Types
+# Description: View Award Task Types
+# Role: Award Contract Specialist
+
+electron.get('Award Task Types')
+
+# GM-5-0320: View Award Task List Templates
+# Description: View Award Task List Templates
+# Role: Award Contract Specialist
+
+electron.get('Award Task List Templates')
+
+# GM-5-0330: View Award Personnel Responsibilities
+# Description: View Award Personnel Responsibilities
+# Role: Sponsored Programs Manager
+
+electron.get('Award Personnel Responsibilities')
+
+# GM-5-0340: View Award Proposal Submission Type
+# Description: View Award Proposal Submission Type
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Submission Type')
+
+# GM-5-0350: View Award and Award Proposal Budget Structure Mappings
+# Description: View Award and Award Proposal Budget Structure Mappings
+# Role: Budget Administrator
+
+electron.get('Award and Award Proposal Budget Structure Mappings')
+
+# GM-5-0360: View Award Proposal Lifecycle Statuses
+# Description: View Award Proposal Lifecycle Statuses
+# Role: Award Contract Specialist
+
+electron.get('Award Proposal Lifecycle Statuses')
+
+# GM-5-0370: View Effort Certification Type
+# Description: View Effort Certification Type
+# Role: Finance Administrator
+
+electron.get('Effort Certification Type')
+
+# GM-5-0380: View Effort Certification Eligibility Rule
+# Description: View Effort Certification Eligibility Rule
+# Role: Finance Administrator
+
+electron.get('Effort Certification Eligibility Rule')
+
+# GM-5-0390: View Effort Certification Change Reason Codes
+# Description: View Effort Certification Change Reason Codes
+# Role: Finance Administrator
+
+electron.get('Effort Certification Change Reason Codes')
+
+# GM-5-0400: View Effort Certification Texts
+# Description: View Effort Certification Texts
+# Role: Finance Administrator
+
+electron.get('Effort Certification Texts')
+
+# GM-5-0410: View Effort Certification Survey
+# Description: View Effort Certification Survey
+# Role: Finance Administrator
+
+electron.get('Effort Certification Survey')

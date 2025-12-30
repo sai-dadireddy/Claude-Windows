@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-1-0260
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Classifications
+WORKDAY ROLE: Supplier Administrator
+EST. DURATION: 15 minutes
+RAG CONFIDENCE: 3.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+if in Scope - verify configuration of Supplier Classifications
+
+PREREQUISITES:
+- User logged in with Supplier Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Supplier Classifications"
+2. wait for search results
+3. click search result containing "Maintain Supplier Classifications"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-1-0260_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Classifications
+- Template Used: maintain
+- RAG Query: "Maintain Supplier Classifications"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

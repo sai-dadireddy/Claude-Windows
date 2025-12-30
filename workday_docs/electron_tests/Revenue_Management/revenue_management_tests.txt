@@ -1,0 +1,801 @@
+================================================================================
+WORKDAY ELECTRON TESTS - REVENUE MANAGEMENT
+================================================================================
+Generated: 2025-12-30
+Total Scenarios: 126
+================================================================================
+
+# CC-1-0010: Verify Revenue Categories and Hierarchies
+# Description: Verify Revenue Categories are loaded and accurate. Verify the assignment of Revenue Hierarchies.
+# Role: Common Finance Configurator
+
+electron.get('Revenue Categories and Hierarchies')
+
+# CC-1-0020: Verify Sales Items and Sales Item Groups
+# Description: Verify Sales Items are loaded and accurate. Verify Sales Items assignment of Sales Item Group.
+# Role: Common Finance Configurator
+
+electron.get('Sales Items and Sales Item Groups')
+
+# CC-1-0030: Verify Customer Contract Types
+# Description: Verify Customer Contract Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Types')
+
+# CC-1-0040: Verify Customer Contract Amendment Types
+# Description: Verify Customer Contract Amendment Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Amendment Types')
+
+# CC-1-0050: Verify Schedule Types
+# Description: Verify Schedule Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# CC-1-0060: Verify Billing Cycles
+# Description: Verify Billing Cycles are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Cycles')
+
+# CC-1-0070: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-1-0080: Multi-Element Revenue - Revenue Allocation Configuration
+# Description: Verify revenue allocation configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Revenue Allocation Configuration')
+
+# CC-1-0090: Multi-Element Revenue - Fair Value
+# Description: Verify fair value price list is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Fair Value')
+
+# CC-1-0100: Deferred Cost Schedule Configuration
+# Description: Verify deferred cost schedule configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost Schedule Configuration')
+
+# CC-1-0110: Deferred Cost - Cost Types
+# Description: Verify cost types configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost - Cost Types')
+
+# CC-1-0120: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-1-0130: Verify Revenue Recognition Schedule Templates
+# Description: Verify the Revenue Recognition Schedule Template configuration
+# Role: Contract Administrator
+
+electron.get('Revenue Recognition Schedule Templates')
+
+# CC-1-0140: View Account Posting Rules
+# Description: Verify the following rules have the correct ledger account:  Deferred Revenue Revenue Receivables
+# Role: Common Finance Configurator
+
+electron.get('Account Posting Rules')
+
+# CC-1-0150: Confirm Role Based Customer Contract Assignments Assignments
+# Description: Confirm that these Role Based Security Roles have been properly assigned or are defaulting to each Company:  Customer Contract Specialist  Billing Specialist  Revenue Specialist
+# Role: Security Administrator
+
+electron.get('Confirm Role Based Customer Contract Assignments Assignments')
+
+# CC-1-0160: Confirm User Based Customer Contract Assignments Assignments
+# Description: Run User-Based Security Group Assignments report and Verify that these user Based Security Roles have been properly assigned:  Customer Administrator
+# Role: Cost Center Financial Analyst
+
+electron.get('Confirm User Based Customer Contract Assignments Assignments')
+
+# CC-1-0170: Worktag Usages
+# Description: Verify all required Worktag Usages have been configured for:  Customer Contract
+# Role: Common Finance Configurator
+
+electron.get('Worktag Usages')
+
+# CC-1-0180: Confirm Related Worktag Usage
+# Description: Review the Related Worktag usage for:  Customers Sales Item Revenue Category
+# Role: Common Finance Configurator
+
+electron.get('Confirm Related Worktag Usage')
+
+# CC-2-0010: Create Customer Contract
+# Description: Create Customer Contract. Enter a contract line for 12,000 using any revenue category under Goods & Services. Uncheck deferred revenue. Ensure customer contract routes successfully through the BP: Customer Contract Event. Default is initiation ony.
+# Role: Customer Contract Specialist
+
+electron.navigate('Customer Contract')
+electron.create('Customer Contract')
+# Task: Create Customer Contract
+electron.submit()
+
+# CC-2-0020: Approve Customer Contract
+# Description: Approve Customer Contract created in previous step  Confirm that Approval process is correct per requirements
+# Role: Various (depending on approval process)
+
+electron.get('Approve Customer Contract')
+
+# CC-2-0030: Change Customer Contract
+# Description: Find and pull up an existing customer contract. Related Actions > Change Customer Contract. Change contract header to include header details such as PO, Description, etc. Verify changes are made successfully.
+# Role: Customer Contract Specialist
+
+electron.get('Change Customer Contract')
+
+# CC-2-0040: Amend Customer Contract
+# Description: Find and pull up an existing customer contract. Related Actions > Amend Customer Contract. Add a line for 6,000 using any revenue category under Goods & Services. Uncheck deferred revenue. Update contract header amount. Submit and ensure customer contract amendment routes successfully through the BP: Customer Contract Amendment Event. Default is Initiation only.
+# Role: Customer Contract Specialist
+
+electron.get('Amend Customer Contract')
+
+# CC-2-0050: Approve Customer Contract Amendment
+# Description: Approve Customer Contract Amendment created in previous step  Confirm that Approval process is correct per requirements
+# Role: Various (depending on approval process)
+
+electron.get('Approve Customer Contract Amendment')
+
+# CC-2-0060: Create Customer Invoice from Customer Contract
+# Description: Create Customer invoice tied to a line on the previously created customer contract. Ensure accounting is accurate, debiting Accounts Receivable and crediting Revenue.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoice from Customer Contract')
+electron.create('Customer Invoice from Customer Contract')
+# Task: Create Customer Invoice for Billing Installments
+electron.submit()
+
+# CC-2-0070: Create Customer Contract
+# Description: Create Customer Contract. Enter a contract line for 12,000 using any revenue category under Goods & Services. Mark it as "Deferred" Revenue Treatment in the "Revenue and Billing" Tab and include Revenue Recognition Schedule Template. Add an Installment Billing Schedule Template on the Billing Tab. Ensure customer contract routes successfully through the BP: Customer Contract Event. Default is initiation ony.
+# Role: Customer Contract Specialist
+
+electron.navigate('Customer Contract')
+electron.create('Customer Contract')
+# Task: Create Customer Contract
+electron.submit()
+
+# CC-2-0080: Approve Customer Contract
+# Description: Approve Customer Contract created in previous step Confirm that Approval process is correct per requirements
+# Role: Various (depending on approval process)
+
+electron.get('Approve Customer Contract')
+
+# CC-2-0090: Verify that Schedules have been created
+# Description: Go to Previously created customer contract and navigate to the "Schedules" Tab to verify that there is a Revenue Recognition and Billing Schedule in Approved Status.
+# Role: Customer Contract Specialist
+
+electron.get('that Schedules have been created')
+
+# CC-2-0100: Create Customer Invoice from Customer Contract
+# Description: Create Customer invoice tied to a line on the previously created customer contract. Ensure accounting is accurate, debiting Accounts Receivable and crediting Deferred Revenue.
+# Role: Customer Billing Specialist
+
+electron.navigate('Customer Invoice from Customer Contract')
+electron.create('Customer Invoice from Customer Contract')
+# Task: Create Customer Invoice for Billing Installments
+electron.submit()
+
+# CC-2-0110: Create Revenue Recognition Accounting
+# Description: Create Revenue Recognition Accounting through the previously created Revenue Recognition Schedule by running the task "Create Revenue Recognition Accounting"
+# Role: Revenue Specialist
+
+electron.navigate('Revenue Recognition Accounting')
+electron.create('Revenue Recognition Accounting')
+# Task: Create Revenue Recognition Accounting
+electron.submit()
+
+# CC-2-0120: Review Business Process for Customer Contract Event; Discuss any required modifications.
+# Description: Review Business Process for Customer Contracts; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Customer Contract Event; Discuss any required modifications.')
+
+# CC-2-0130: Review Business Process for Customer Contract Amendment Event; Discuss any required modifications.
+# Description: Review Business Process for Customer Contract Amendments; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Customer Contract Amendment Event; Discuss any required modifications.')
+
+# CC-2-0140: Review Business Process for Revenue Recognition Installment Event; Discuss any required modifications.
+# Description: Review Business Process for Revenue Recognition Installments; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Revenue Recognition Installment Event; Discuss any required modifications.')
+
+# CC-2-0150: Review Business Process for Revenue Schedule Event; Discuss any required modifications.
+# Description: Review Business Process for Revenue Schedules; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Revenue Schedule Event; Discuss any required modifications.')
+
+# CC-2-0160: Review Business Process for Billing Schedule Event; Discuss any required modifications.
+# Description: Review Business Process for Billing Schedules; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Billing Schedule Event; Discuss any required modifications.')
+
+# CC-2-0170: Review Business Process for Intercompany Customer Contract Event; Discuss any required modifications.
+# Description: Review Business Process for Intercompany Customer Contract Event; Discuss any required modifications.
+# Role: Business Process Administrator
+
+electron.get('Review Business Process for Intercompany Customer Contract Event; Discuss any required modifications.')
+
+# CC-3-0010: Verify Customers
+# Description: Verify Customers are loaded and accurate  Verify the assignment of Customer Hierarchy
+# Role: Customer Administrator
+
+electron.get('Customers')
+
+# CC-3-0020: Verify Revenue Categories and Hierarchies
+# Description: Verify Revenue Categories are loaded and accurate. Verify the assignment of Revenue Hierarchies.
+# Role: Common Finance Configurator
+
+electron.get('Revenue Categories and Hierarchies')
+
+# CC-3-0030: Verify Sales Items and Sales Item Groups
+# Description: Verify Sales Items are loaded and accurate. Verify Sales Items assignment of Sales Item Group.
+# Role: Common Finance Configurator
+
+electron.get('Sales Items and Sales Item Groups')
+
+# CC-3-0040: Verify Customer Contract Types
+# Description: Verify Customer Contract Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Types')
+
+# CC-3-0050: Verify Customer Contract Amendment Types
+# Description: Verify Customer Contract Amendment Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Amendment Types')
+
+# CC-3-0060: Verify Schedule Types
+# Description: Verify Schedule Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# CC-3-0070: Verify Billing Cycles
+# Description: Verify Billing Cycles are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Cycles')
+
+# CC-3-0080: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-3-0090: Multi-Element Revenue - Revenue Allocation Configuration
+# Description: Verify revenue allocation configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Revenue Allocation Configuration')
+
+# CC-3-0100: Multi-Element Revenue - Fair Value
+# Description: Verify fair value price list is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Fair Value')
+
+# CC-3-0110: Deferred Cost Schedule Configuration
+# Description: Verify deferred cost schedule configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost Schedule Configuration')
+
+# CC-3-0120: Deferred Cost - Cost Types
+# Description: Verify cost types configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost - Cost Types')
+
+# CC-3-0130: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-3-0140: Verify Revenue Recognition Schedule Templates
+# Description: Verify the Revenue Recognition Schedule Template configuration
+# Role: Contract Administrator
+
+electron.get('Revenue Recognition Schedule Templates')
+
+# CC-3-0150: View Account Posting Rules
+# Description: Verify the following rules have the correct ledger account:  Deferred Revenue Revenue Receivables
+# Role: Common Finance Configurator
+
+electron.get('Account Posting Rules')
+
+# CC-3-0160: Confirm Role Based Customer Contract Assignments Assignments
+# Description: Confirm that these Role Based Security Roles have been properly assigned or are defaulting to each Company:  Customer Contract Specialist  Billing Specialist  Revenue Specialist
+# Role: Security Administrator
+
+electron.get('Confirm Role Based Customer Contract Assignments Assignments')
+
+# CC-3-0170: Confirm User Based Customer Contract Assignments Assignments
+# Description: Run User-Based Security Group Assignments report and Verify that these user Based Security Roles have been properly assigned:  Customer Administrator
+# Role: Security Administrator
+
+electron.get('Confirm User Based Customer Contract Assignments Assignments')
+
+# CC-3-0180: Worktag Usages
+# Description: Verify all required Worktag Usages have been configured for:  Customer Contract
+# Role: Common Finance Configurator
+
+electron.get('Worktag Usages')
+
+# CC-3-0190: Confirm Related Worktag Usage
+# Description: Review the Related Worktag usage for:  Customers Sales Item Revenue Category
+# Role: Common Finance Configurator
+
+electron.get('Confirm Related Worktag Usage')
+
+# CC-4-0010: Create, Change and Amend Customer Contract
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+electron.submit()
+
+# CC-4-0010-01: Create, Change and Amend Customer Contract
+# Description: Create Customer Contract without deferred revenue. Ensure customer contract routes successfully through the BP: Customer Contract Event. Default is Initiation only.
+# Role: Customer Contract Specialist
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+# Task: 1. Create Customer Contract
+# Sub-task: Create Customer Contract
+electron.submit()
+
+# CC-4-0010-02: Create, Change and Amend Customer Contract
+# Description: Find Customer Contract created in item 1. Related Actions > Change Customer Contract. Change customer contract header to include header details such as PO, Description, etc. Verify changes are made successfully.
+# Role: Customer Contract Specialist
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+# Task: 2. Change a Customer Contract
+# Sub-task: Customer Contract > Related Actions > Change Customer Contract
+electron.submit()
+
+# CC-4-0010-03: Create, Change and Amend Customer Contract
+# Description: Find Customer Contract created in item 1. Related Actions > Amend Customer Contract. Amend contract to add a line. Verify changes made successfully and amendment version is populated. Ensure customer contract amendment routes successfully through the BP: Customer Contract Amendment Event. Default is Initiation only.
+# Role: Customer Contract Specialist
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+# Task: 3. Create Customer Contract Amendment
+# Sub-task: Customer Contract > Related Actions > Amend Customer Contract
+electron.submit()
+
+# CC-4-0010-04: Create, Change and Amend Customer Contract
+# Description: Find existing customer contract ("Find Customer Contracts"). Related Actions > Copy. Verify contract is copied successfully.
+# Role: Customer Contract Specialist
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+# Task: 5. Copy a Customer Contract
+# Sub-task: Customer Contract > Related Actions > Copy
+electron.submit()
+
+# CC-4-0010-05: Create, Change and Amend Customer Contract
+# Description: Verify attachment is successful
+# Role: Customer Contract Specialist
+
+electron.navigate(', Change and Amend Customer Contract')
+electron.create(', Change and Amend Customer Contract')
+# Task: 6. Add Attachment to Contract
+# Sub-task: Customer Contract > Related Actions > Manage Attachments
+electron.submit()
+
+# CC-4-0020: Modify Customer Contract Billing
+
+electron.search('Modify Customer Contract Billing')
+electron.edit('Modify Customer Contract Billing')
+electron.save()
+
+# CC-4-0020-01: Modify Customer Contract Billing
+# Description: Find an existing billing schedule. Using the related actions > change, change details on the billing schedule. Verify billing schedule is changed successfully and routed through the BP: Billing Schedule Event.
+# Role: Billing Specialist
+
+electron.search('Modify Customer Contract Billing')
+electron.edit('Modify Customer Contract Billing')
+# Task: 1. Change Billing Schedule
+electron.save()
+
+# CC-4-0020-02: Modify Customer Contract Billing
+# Description: Find an existing billing schedule. Navigate to Attachments and attach a file. Verify attachment is successful
+# Role: Billing Specialist
+
+electron.search('Modify Customer Contract Billing')
+electron.edit('Modify Customer Contract Billing')
+# Task: 2. Add Attachment to Billing Schedule
+electron.save()
+
+# CC-4-0030: Modify Customer Contract Revenue Recognition
+
+electron.search('Modify Customer Contract Revenue Recognition')
+electron.edit('Modify Customer Contract Revenue Recognition')
+electron.save()
+
+# CC-4-0030-01: Modify Customer Contract Revenue Recognition
+# Description: Find an existing revenue schedule. Using the related actions > change, change details in the revenue schedule. Verify revenue schedule is changed successfully and routed through the BP: Revenue Schedule Event.
+# Role: Revenue Specialist
+
+electron.search('Modify Customer Contract Revenue Recognition')
+electron.edit('Modify Customer Contract Revenue Recognition')
+# Task: 1. Change Revenue Recognition Schedule
+electron.save()
+
+# CC-4-0030-02: Modify Customer Contract Revenue Recognition
+# Description: Find an existing revenue schedule. Navigate to Attachments and attach a file. Verify attachment is successful
+# Role: Revenue Specialist
+
+electron.search('Modify Customer Contract Revenue Recognition')
+electron.edit('Modify Customer Contract Revenue Recognition')
+# Task: 2. Add Attachment to Revenue Recognition Schedule
+electron.save()
+
+# CC-4-0040: Usage Based Contract & Billing
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-01: Usage Based Contract & Billing
+# Description: Create a customer contract with usage based billing. Verify contract is submitted and approved.
+# Role: Customer Contract Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-02: Usage Based Contract & Billing
+# Description: Create a billing schedule for the usage based contract line. Validate all fields are entered appropriately and billing schedule is successfully submitted through the BP: Billing Schedule Event. Ensure usage based billing schedule routes successfully through the BP: Billing Schedule Event. Default is Initiation only.
+# Role: Customer Contract Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-03: Usage Based Contract & Billing
+# Description: Create a revenue schedule for the usage based contract line. Validate all fields are entered appropriately and revenue schedule is successfully submitted through the BP: Revenue Schedule Event. Ensure usage based revenue schedule routes successfully through the BP: Revenue Schedule Event. Default is Initiation only.
+# Role: Customer Contract Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-04: Usage Based Contract & Billing
+# Description: Record usage based transactions. Verify transactions are routed appropriately and marked as Ready to Bill.
+# Role: Customer Contract Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-05: Usage Based Contract & Billing
+# Description: Review billable usage based transactions. Filter by billing status "Awaiting Review"
+# Role: Customer Billing Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-06: Usage Based Contract & Billing
+# Description: Create a customer invoice for billable transactions derived from usage based contract line/billing schedule. Verify customer contract is updated accurately and invoice is routed for approval through the BP: Customer Invoice Event.
+# Role: Customer Billing Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-07: Usage Based Contract & Billing
+# Description: Create Revenue Recognition Installment for Usage Recorded
+# Role: Revenue Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0040-08: Usage Based Contract & Billing
+# Description: Create Revenue Recognition Accounting
+# Role: Revenue Specialist
+
+electron.get('Usage Based Contract & Billing')
+
+# CC-4-0050: Milestone Based Contract & Billing
+
+electron.get('Milestone Based Contract & Billing')
+
+# CC-4-0050-01: Milestone Based Contract & Billing
+# Description: Create a customer contract with customer milestone. Validate all fields are entered appropriately and contract is submitted and approved through BP: Customer Contract Event.
+# Role: Customer Contract Specialist
+
+electron.get('Milestone Based Contract & Billing')
+
+# CC-4-0050-02: Milestone Based Contract & Billing
+# Description: Create Billing Schedule for Customer Contract created in previous step. On Billing Schedule Add Milestone by selecting Milestone > Create Date Milestone 
+
+Review that installment Status now say "Pending Milestone"
+# Role: Customer Billing Specialist
+
+electron.get('Milestone Based Contract & Billing')
+
+# CC-4-0050-03: Milestone Based Contract & Billing
+# Description: Select milestone created from item 1 and mark as complete.
+# Role: Customer Contract Specialist
+
+electron.get('Milestone Based Contract & Billing')
+
+# CC-4-0050-04: Milestone Based Contract & Billing
+# Description: Populate contract criteria from item 1 and select installments to create invoices for. Process invoice(s). Verify accounting by Related Actions > Accounting > View Accounting
+# Role: Customer Billing Specialist
+
+electron.get('Milestone Based Contract & Billing')
+
+# CC-4-0060: Deferred Cost
+
+electron.get('Deferred Cost')
+
+# CC-4-0060-01: Deferred Cost
+# Description: Create a customer contract with a deferred cost schedule. Validate all fields are entered appropriately and contract is submitted and approved through BP: Customer Contract Event.
+# Role: Customer Contract Specialist
+
+electron.get('Deferred Cost')
+
+# CC-4-0060-02: Deferred Cost
+# Description: Create a deferred cost transaction for amortization based on customer contract created in item 1.
+# Role: Customer Contract Specialist
+
+electron.get('Deferred Cost')
+
+# CC-4-0070: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-01: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Create project using the project hierarchy, project template and project plan template created in the step above.  Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year
+# Role: Project Administrator
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-02: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Approve Project. Test Business Process routing based on the configured conditions for each Business Process step.
+# Role: Various (depending on approval process)
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-03: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Create project plan. Use Project Plan template if available.  Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year
+# Role: Project Administrator
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-04: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Assign resources to the project.  Choose any project role and use the Assign a Worker Allocation type.  Be sure to include a Start Date/End Date and % Allocation in order for Resource Forecast to be correct.  Add specific Worker to Resource Plan Line  Submit
+# Role: Project Resource Manager
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-05: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Choose the appropriate Forecast Level View, Frequency View, and Forecast Source and hit OK  Resource Forecast based on Resource Start/End dates and % Allocation should be generated.
+# Role: Project Manager
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-06: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Enter a Plan Name Enter a Calculation Type Choose your Resource Forecast Click OK  A Budget should be automatically calculated based on Resource Forecasts and Standard Costs established for the Project Resources.
+# Role: Project Manager
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-07: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: A detailed project budget based on Forecasted Hours is displayed
+# Role: Project Manager
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-08: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: For a Worker Assigned to the Project, log in and enter Time, coding to the Project.  Complete any required steps until the Time is approved.
+# Role: Employee As Self
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-09: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: For a Worker Assigned to the Project, log in and enter an Expense Report, coding to the Project. Complete any required steps until the Expense Report is approved.
+# Role: Employee As Self
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-10: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Enter a Supplier Invoice, coding to the Project. Select the Billable Checkbox  Carry the time through any approval process.  Complete any required steps until the Invoice is approved.
+# Role: Accounts Payable Data Entry Specialist
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-11: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Verify the hours are entered against the correct task once the hours have been approved.
+# Role: Project Financial Analyst
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-12: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Verify the Fully burden cost rate for the employee
+# Role: Project Financial Analyst
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-13: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Verify the standard cost rate for the employee if not using fully burden rate
+# Role: Project Financial Analyst
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-14: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Verify expenses and supplier invoices can be seen tagged to the project
+# Role: Project Financial Analyst
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-15: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Create a Contract with three Project related Contract Lines Reference the Billable Project  Choose Line Type Project Time and Expense  Be sure to reference a Contract Rate Sheet on each line and create Billing/Revenue Schedules
+# Role: Customer Contract Specialist
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-16: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: You should see the Contract created above as well as Billable Transactions for Time, Expense and Supplier Invoice
+# Role: Project Billing Specialist
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-17: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: You should see transactions for your project on the "Transactions Ready to Review" tab  Hit the Review Transactions button for any of the transactions. Choose actions for each billable line. Try to choose an action of each type (Approve, Do Not Bill, Mark as Ready to Bill)
+# Role: Project Manager
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-18: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: Choose Billable Project and then hit OK  Select Invoice Date of Current Date and then Invoices to be created and click OK  Once process is finished, you should see invoice number. Click to open the invoice
+# Role: Billing Specialist
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0070-19: Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**
+# Description: As a related action off the invoice, go to Accounting > View Accounting  Verify Accounting
+# Role: Billing Specialist
+
+electron.get('Project Creation through Transaction Entry. Reporting and Approval of Billable Transactions (Billable Project) **Only Use for PSA Project**')
+
+# CC-4-0080: Multi-Element Contract & Revenue
+
+electron.get('Multi-Element Contract & Revenue')
+
+# CC-4-0080-01: Multi-Element Contract & Revenue
+# Description: Create customer contract with multi-element revenue allocation box checked. Enter fair value on the contract line(s). Check the box for deferred revenue. Ensure all fields are entered accurately and contract successfully routes through the BP: Customer Contract Event. Default is initiation only.
+# Role: Customer Contract Specialist
+
+electron.get('Multi-Element Contract & Revenue')
+
+# CC-4-0080-02: Multi-Element Contract & Revenue
+# Description: Navigate to customer contract from item 1. Review MEA fields, verify MEA checkbox, Fair Value Price List, Line amount and list amount. Related Actions > Customer Contract > Run Multiple-Element Revenue Allocation. Select auto-update revenue recognition schedule checkbox.
+# Role: Customer Contract Specialist
+
+electron.get('Multi-Element Contract & Revenue')
+
+# CC-4-0080-03: Multi-Element Contract & Revenue
+# Description: Create Revenue Recognition Accounting
+# Role: Revenue Specialist
+
+electron.get('Multi-Element Contract & Revenue')
+
+# CC-5-0010: Verify Customers
+# Description: Verify Customers are loaded and accurate  Verify the assignment of Customer Hierarchy
+# Role: Customer Administrator
+
+electron.get('Customers')
+
+# CC-5-0020: Verify Revenue Categories and Hierarchies
+# Description: Verify Revenue Categories are loaded and accurate. Verify the assignment of Revenue Hierarchies.
+# Role: Common Finance Configurator
+
+electron.get('Revenue Categories and Hierarchies')
+
+# CC-5-0030: Verify Sales Items and Sales Item Groups
+# Description: Verify Sales Items are loaded and accurate. Verify Sales Items Revenue Treatment and assignment of Sales Item Group.
+# Role: Common Finance Configurator
+
+electron.get('Sales Items and Sales Item Groups')
+
+# CC-5-0040: Verify Customer Contract Types
+# Description: Verify Customer Contract Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Types')
+
+# CC-5-0050: Verify Customer Contract Amendment Types
+# Description: Verify Customer Contract Amendment Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Customer Contract Amendment Types')
+
+# CC-5-0060: Verify Schedule Types
+# Description: Verify Schedule Types are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Schedule Types')
+
+# CC-5-0070: Verify Billing Cycles
+# Description: Verify Billing Cycles are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Cycles')
+
+# CC-5-0080: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-5-0090: Multi-Element Revenue - Revenue Allocation Configuration
+# Description: Verify revenue allocation configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Revenue Allocation Configuration')
+
+# CC-5-0100: Multi-Element Revenue - Fair Value
+# Description: Verify fair value price list is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Multi-Element Revenue - Fair Value')
+
+# CC-5-0110: Deferred Cost Schedule Configuration
+# Description: Verify deferred cost schedule configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost Schedule Configuration')
+
+# CC-5-0120: Deferred Cost - Cost Types
+# Description: Verify cost types configuration is loaded and accurate
+# Role: Contract Administrator
+
+electron.get('Deferred Cost - Cost Types')
+
+# CC-5-0130: Verify Billing Schedule Templates
+# Description: Verify Billing Schedule Templates are loaded and accurate.
+# Role: Contract Administrator
+
+electron.get('Billing Schedule Templates')
+
+# CC-5-0140: Verify Revenue Recognition Schedule Templates
+# Description: Verify the Revenue Recognition Schedule Template configuration
+# Role: Contract Administrator
+
+electron.get('Revenue Recognition Schedule Templates')
+
+# CC-5-0150: View Account Posting Rules
+# Description: Verify the following rules have the correct ledger account:  Deferred Revenue Revenue Receivables
+# Role: Common Finance Configurator
+
+electron.get('Account Posting Rules')
+
+# CC-5-0160: Confirm Role Based Customer Contract Assignments Assignments
+# Description: Confirm that these Role Based Security Roles have been properly assigned or are defaulting to each Company:  Customer Contract Specialist  Billing Specialist  Revenue Specialist
+# Role: Security Administrator
+
+electron.get('Confirm Role Based Customer Contract Assignments Assignments')
+
+# CC-5-0170: Confirm User Based Customer Contract Assignments Assignments
+# Description: Run User-Based Security Group Assignments report and Verify that these user Based Security Roles have been properly assigned:  Customer Administrator
+# Role: Security Administrator
+
+electron.get('Confirm User Based Customer Contract Assignments Assignments')
+
+# CC-5-0180: Worktag Usages
+# Description: Verify all required Worktag Usages have been configured for:  Customer Contract
+# Role: Common Finance Configurator
+
+electron.get('Worktag Usages')
+
+# CC-5-0190: Confirm Related Worktag Usage
+# Description: Review the Related Worktag usage for:  Customers Sales Item Revenue Category
+# Role: Common Finance Configurator
+
+electron.get('Confirm Related Worktag Usage')

@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-1-0270
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Confirm Supplier Accounts Options
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 10.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Review and confirm the Supplier Accounts settings for the tenant.
+Alternatively, note that this setting can be by individual supplier.
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Edit Tenant Setup - Financials"
+2. wait for search results
+3. click search result containing "Edit Tenant Setup - Financials"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-1-0270_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Supplier Accounts Options
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Supplier Accounts Options
+- Template Used: maintain
+- RAG Query: "Edit Tenant Setup - Financials"
+
+NOTES:
+
+================================================================================

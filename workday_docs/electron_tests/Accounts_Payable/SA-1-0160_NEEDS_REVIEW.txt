@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-1-0160
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Verify Companies as Customers or Suppliers
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+If direct intercompany is in scope, ensure that companies are mapped to customers and/or suppliers. Verify setup across each company. If worktags must be copied from customer invoice to supplier invoice, enable "Copy Worktags". If Transaction tax codes and withholding tax codes must be copied from customer invoice to supplier invoice, enable "Copy Tax Fields". If attachments from customer invoice must be copied to supplier invoice, enable "Copy Attachments". If invoice lines should have intercompany affiliate for intercompany P&L elimination, enable "Default Affiliate" to populate company as supplier as an intercompany affiliate.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Companies as Customers or Suppliers"
+2. wait for search results
+3. click search result containing "Maintain Companies as Customers or Suppliers"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-1-0160_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Companies as Customers or Suppliers
+- Template Used: maintain
+- RAG Query: "Maintain Companies as Customers or Suppliers"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================
