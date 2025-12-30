@@ -1,0 +1,17 @@
+filename,type,category,authority,description
+Admin-Guide-Human-Capital-Management.pdf,admin,HCM,high,Core HCM functionality - hiring compensation benefits org management
+Admin-Guide-Payroll.pdf,admin,Payroll,high,Payroll processing tax deductions pay statements
+Admin-Guide--Financial-Management.pdf,admin,Financials,high,General ledger AP AR assets banking
+Admin-Guide-Spend-Management.pdf,admin,Financials,high,Procurement expenses supplier management
+Admin-Guide-Reporting-and-Analytics.pdf,admin,Analytics,high,Reports dashboards calculated fields Prism Analytics
+Admin-Guide-Integrations.pdf,admin,Platform,high,EIBs connectors cloud connect integration security
+Admin-Guide-Manage-Workday.pdf,admin,Platform,high,Tenant config business processes security orgs
+Admin-Guide-Authentication-and-Security.pdf,admin,Platform,high,SSO MFA security groups domain security
+Admin-Guide-Workday-Studio.pdf,admin,Platform,high,Custom integrations Studio development
+Admin-Guide-Adaptive-Planning-and-Consolidation.pdf,admin,Planning,high,Adaptive Planning budgeting forecasting
+Admin-Guide-Student.pdf,admin,Education,medium,Workday Student for higher education
+Admin-Guide-VNDLY-Documentation.pdf,admin,HCM,medium,Extended workforce contingent labor management
+Admin-Guide-Glossary.pdf,admin,Reference,medium,Workday terminology definitions
+Admin-Guide-Release-Notes.pdf,admin,Reference,medium,Documentation updates and changes
+User-Guide-Workday-People-Analytics.pdf,user,Analytics,medium,People Analytics dashboards and insights
+User-Guide-Workday-Notification-Designer.pdf,user,Platform,medium,Custom notification templates
