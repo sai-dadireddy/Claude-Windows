@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0070
 FUNCTIONAL AREA: Procurement
 TEST NAME: Supplier Contract Types
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [INFERRED]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -16,13 +16,19 @@ ELECTRON STEPS:
 2. wait for search results (2 seconds)
 3. click search result containing "View Supplier Contract Types"
 4. wait for page to load (3 seconds)
-5. screenshot as "PRO-1-0070_complete.png"
+5. verify supplier list displayed
+6. click link "Actions"
+7. screenshot as "PRO-1-0070_list.png"
+8. click button "View All"
+9. wait for data to load (2 seconds)
+10. screenshot as "PRO-1-0070_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Supplier data displayed
+- [ ] No error messages shown
 
 API ALTERNATIVE:
-- SOAP: Query RAG for details
+- Query RAG for details
 
-RAG QUERY STATUS: TIMEOUT
+RAG QUERY STATUS: SUCCESS (Score: 9)
 ================================================================================

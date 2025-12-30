@@ -1,0 +1,312 @@
+# Workday Extract Tasks - Generic Pattern Knowledge Base
+
+## Source
+- Workday Integration & Reporting
+- Documentation: Extract Tasks & Data Export
+- Release: 2025R1
+- Created: 2025-12-30
+
+## Overview
+
+**Extract tasks** in Workday are standardized data export utilities that allow users to extract configuration data, master data, and transactional data for auditing, reporting, and integration purposes. Most extract tasks follow a consistent workflow pattern.
+
+## Common Extract Task Types
+
+### Organizational Data Extracts:
+- Extract Companies
+- Extract Locations
+- Extract Cost Centers
+- Extract Regions
+- Extract Supervisory Organizations
+
+### Worker Data Extracts:
+- Extract Worker Names
+- Extract Worker Organization Assignments
+- Extract Worker Job Details
+- Extract Worker Service Dates
+- Extract Worker Contact Information
+- Extract Worker IDs
+- Extract Worker Personal Information
+- Extract Employee Core Compensation Details
+
+### Configuration Data Extracts:
+- Extract Job Profiles
+- Extract Compensation Grades and Grade Profiles
+- Extract Compensation Plans
+- Extract Security Group Assignments
+- Extract Organization Role Assignments
+- Extract Worker Union Memberships
+
+## Standard Extract Task Workflow
+
+### Navigation:
+1. Search for specific extract task (e.g., "Extract Companies")
+2. Select task from search results
+3. Task interface opens with parameters
+
+### Common Parameters:
+
+Most extract tasks include some or all of these parameters:
+
+**Filtering Parameters:**
+- **Organization**: Limit to specific organization(s)
+- **Worker**: Limit to specific worker(s)
+- **Effective Date**: Data as of which date
+- **Include Inactive**: Yes/No checkbox
+
+**Output Format Parameters:**
+- **File Format**: Usually CSV (default) or Excel
+- **Include Headers**: Yes (recommended)
+- **Delimiter**: Comma, Tab, Pipe
+
+**Scope Parameters:**
+- **Include Supervisory Organizations**: Yes/No
+- **Include Subordinate Organizations**: Yes/No
+- **Include Related Data**: Depends on extract type
+
+### Execution:
+1. Configure parameters (or use defaults)
+2. Click "OK" or "Submit"
+3. System displays confirmation message
+4. Extract runs in background
+
+### Retrieval:
+1. Wait for processing (30 seconds to several minutes)
+2. Navigate to Workday Inbox
+3. Find extract completion notification
+4. Click notification to view details
+5. Click download link or file name
+6. File downloads to local machine
+7. Open in Excel or CSV viewer for review
+
+## Automation Considerations for Electron
+
+### Generic Extract Task Pattern:
+
+```
+# Step 1: Navigate to Extract Task
+enter search box as "{Extract Task Name}"
+wait for search results
+click search result containing "{Extract Task Name}"
+wait for page to load
+
+# Step 2: Configure Parameters (optional - most have good defaults)
+select Include Inactive as "No"
+enter Effective Date as "{current_date}"
+
+# Step 3: Submit Extract
+click button "OK" or "Submit"
+wait for confirmation
+verify message contains "submitted" or "processing"
+screenshot as "{test_id}_extract_submitted.png"
+
+# Step 4: Retrieve Results from Inbox
+wait 30 seconds
+enter search box as "Inbox"
+click search result "Inbox"
+wait for page to load
+scroll to find "{Extract Task Name}"
+click notification containing "{Extract Task Name}"
+wait for page to load
+
+# Step 5: Download File
+click link "Download" or file name
+verify file downloaded
+screenshot as "{test_id}_complete.png"
+```
+
+### Extract-Specific Variations:
+
+**Worker-Specific Extracts:**
+If extract requires worker selection:
+```
+enter Worker field as "{worker_name}"
+wait for worker search results
+click worker result containing "{worker_name}"
+```
+
+**Organization-Specific Extracts:**
+If extract requires organization selection:
+```
+enter Organization field as "{org_name}"
+wait for organization search results
+click organization result containing "{org_name}"
+```
+
+**Date Range Extracts:**
+If extract supports date ranges:
+```
+enter From Date as "{start_date}"
+enter To Date as "{end_date}"
+```
+
+## UI Selectors for Extract Tasks
+
+**Common Field Names:**
+- Include Inactive: "Include Inactive", "Include Terminated"
+- Effective Date: "Effective Date", "As of Date", "Date"
+- Organization: "Organization", "Supervisory Organization"
+- Worker: "Worker", "Employee"
+- Submit Button: "OK", "Submit", "Run"
+
+**Inbox Selectors:**
+- Inbox Link: "Inbox", "My Inbox"
+- Notification: Extract task name in notification title
+- Download Link: "Download", file name (usually ends in .csv or .xlsx)
+
+## Validation Steps
+
+**Post-Submission:**
+- Confirmation message displayed
+- Message contains "submitted" or "processing" or similar success indicator
+
+**Post-Download:**
+- File downloaded successfully to downloads folder
+- File format is CSV or Excel
+- File is not empty
+- File contains header row
+- Data rows present (if data exists)
+
+## Error Handling
+
+**Common Errors:**
+
+1. **"No data found"**:
+   - Cause: No data matches parameters, or data doesn't exist
+   - Resolution: Adjust parameters, verify data exists in tenant
+
+2. **"Insufficient permissions"**:
+   - Cause: User lacks View access to data domain
+   - Resolution: Request security access from administrator
+
+3. **"Invalid organization"**:
+   - Cause: Organization name not recognized or misspelled
+   - Resolution: Use organization picker instead of typing
+
+4. **"Processing timeout"**:
+   - Cause: Extract too large, system busy
+   - Resolution: Narrow parameters, try during off-peak hours
+
+5. **"File not available"**:
+   - Cause: Processing not complete yet
+   - Resolution: Wait longer, check inbox again after 2-5 minutes
+
+## Extract Task Categories
+
+### Setup/Configuration Audits:
+Purpose: Verify configuration data accuracy
+Examples: Extract Job Profiles, Extract Compensation Plans
+Typical Users: HR Administrators, System Administrators
+
+### Worker Data Audits:
+Purpose: Verify worker data accuracy, support data conversion validation
+Examples: Extract Worker Names, Extract Worker Organization Assignments
+Typical Users: HR Auditors, Data Migration Teams
+
+### Compliance/Security Audits:
+Purpose: Support compliance reviews, security audits
+Examples: Extract Security Group Assignments, Extract Organization Role Assignments
+Typical Users: Security Administrators, Audit Teams
+
+### Integration Support:
+Purpose: Provide data for external systems
+Examples: Various worker and organizational extracts
+Typical Users: Integration Developers, Third-Party System Administrators
+
+## Best Practices
+
+1. **Default Parameters**: Most extracts work well with default parameters
+2. **Effective Dating**: Always specify effective date for point-in-time snapshots
+3. **File Naming**: Note the auto-generated file name for tracking
+4. **Regular Audits**: Schedule regular extracts for ongoing data quality monitoring
+5. **Documentation**: Document parameters used and audit findings
+6. **Performance**: Run large extracts during off-peak hours
+7. **Storage**: Save extract files with clear naming conventions for future reference
+
+## Security Considerations
+
+**Domain Permissions Required:**
+- Most extracts require **View** access to relevant domain
+- Examples:
+  - Worker extracts: Worker Data domains (Contact Info, Organization Assignments, etc.)
+  - Organization extracts: Organization Setup domains
+  - Security extracts: Security Administration domains
+
+**Typical Security Groups:**
+- HR Auditor
+- HR Administrator
+- Integration Administrator
+- Security Administrator
+- System Administrator
+
+## Integration with Other Processes
+
+**Data Conversion Validation:**
+- Used extensively during implementation to validate converted data
+- Compare extract results with source system data
+- Identify discrepancies for correction
+
+**Ongoing Audits:**
+- Quarterly or annual compliance reviews
+- Pre/post major configuration changes
+- Support for external audits (SOX, etc.)
+
+**Reporting:**
+- Supplement standard Workday reports
+- Provide data for custom analytics
+- Export for executive dashboards
+
+## Alternative Approaches
+
+**Instead of Extract Tasks, consider:**
+
+1. **Custom Reports**: For regularly-needed data with specific format
+2. **Report Writer**: For complex data queries
+3. **Integration Services**: For scheduled, automated exports
+4. **EIB (Enterprise Interface Builder)**: For regular file-based integration
+5. **REST/SOAP APIs**: For real-time data access
+
+## Common Extract Tasks by Functional Area
+
+### Human Capital Management (HCM):
+- Extract Workers
+- Extract Worker Organization Assignments
+- Extract Worker Job Details
+- Extract Worker Service Dates
+- Extract Worker Contact Information
+
+### Organization Structure:
+- Extract Companies
+- Extract Locations
+- Extract Cost Centers
+- Extract Regions
+- Extract Supervisory Organizations
+
+### Compensation:
+- Extract Compensation Grades and Grade Profiles
+- Extract Compensation Plans
+- Extract Employee Core Compensation Details
+
+### Security:
+- Extract User-Based Security Assignments
+- Extract Organization Role Assignments
+
+### Time Tracking:
+- Extract Worker Time Blocks
+- Extract Time Off Balances
+
+## References
+
+- Workday Integration Guide
+- Workday Reporting & Analytics
+- Data Auditing Best Practices
+- Extract Task Catalog
+
+## Effective Use
+
+By understanding the common pattern for extract tasks, you can:
+- Quickly execute any extract task following the standard workflow
+- Efficiently audit configuration and master data
+- Support data conversion validation
+- Provide data for integration and reporting
+- Maintain data quality through regular extracts

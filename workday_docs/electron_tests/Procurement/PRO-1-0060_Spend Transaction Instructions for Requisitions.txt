@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0060
 FUNCTIONAL AREA: Procurement
 TEST NAME: Spend Transaction Instructions for Requisitions
-CONFIDENCE: [HIGH] Score: 8.5/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -16,13 +16,19 @@ ELECTRON STEPS:
 2. wait for search results (2 seconds)
 3. click search result containing "View Spend Transaction Instruction>Requisition"
 4. wait for page to load (3 seconds)
-5. screenshot as "PRO-1-0060_complete.png"
+5. click button "OK"
+6. wait for form to load (3 seconds)
+7. verify page contains "Requisition"
+8. screenshot as "PRO-1-0060_form.png"
+9. click button "Cancel"
+10. screenshot as "PRO-1-0060_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Requisition form accessible
+- [ ] All required fields visible
 
 API ALTERNATIVE:
-- SOAP: Check WSDL index for available operations
+- Query RAG for details
 
-RAG QUERY STATUS: SUCCESS
+RAG QUERY STATUS: SUCCESS (Score: 9)
 ================================================================================

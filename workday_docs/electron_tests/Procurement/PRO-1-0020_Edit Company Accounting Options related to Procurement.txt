@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0020
 FUNCTIONAL AREA: Procurement
 TEST NAME: Edit Company Accounting Options related to Procurement
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [INFERRED]
+CONFIDENCE: [HIGH] Score: 18.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -16,13 +16,16 @@ ELECTRON STEPS:
 2. wait for search results (2 seconds)
 3. click search result containing "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
 4. wait for page to load (3 seconds)
-5. screenshot as "PRO-1-0020_complete.png"
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "PRO-1-0020_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
 API ALTERNATIVE:
-- SOAP: Query RAG for details
+- Query RAG for details
 
-RAG QUERY STATUS: TIMEOUT
+RAG QUERY STATUS: SUCCESS (Score: 18)
 ================================================================================
