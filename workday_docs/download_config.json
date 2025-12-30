@@ -1,0 +1,131 @@
+{
+  "base_url": "https://doc.workday.com",
+  "pdf_base": "/content/dam/fmdita-outputs/pdfs/admin-guide/en-us/",
+  "guides_page": "https://doc.workday.com/en-us/guides.html",
+  "auth_required": true,
+  "auth_url": "https://doc.workday.com",
+  "guides": [
+    {
+      "name": "Human Capital Management",
+      "url": "/admin-guide/en-us/human-capital-management/human-capital-management.html",
+      "pdf": "Admin-Guide-Human-Capital-Management.pdf",
+      "access": "confirmed"
+    },
+    {
+      "name": "Financial Management",
+      "url": "/admin-guide/en-us/financial-management/financial-management.html",
+      "pdf": "Admin-Guide-Financial-Management.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Spend Management",
+      "url": "/admin-guide/en-us/spend-management/spend-management.html",
+      "pdf": "Admin-Guide-Spend-Management.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Payroll",
+      "url": "/admin-guide/en-us/payroll/payroll.html",
+      "pdf": "Admin-Guide-Payroll.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Strategic Sourcing Managers",
+      "url": "/admin-guide/en-us/strategic-sourcing/sourcing-managers-user-guide.html",
+      "pdf": "Admin-Guide-Strategic-Sourcing-Managers.pdf",
+      "access": "public"
+    },
+    {
+      "name": "Strategic Sourcing Suppliers",
+      "url": "/admin-guide/en-us/strategic-sourcing/suppliers-user-guide.html",
+      "pdf": "Admin-Guide-Strategic-Sourcing-Suppliers.pdf",
+      "access": "public"
+    },
+    {
+      "name": "Manage Workday",
+      "url": "/admin-guide/en-us/manage-workday/manage-workday.html",
+      "pdf": "Admin-Guide-Manage-Workday.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Authentication and Security",
+      "url": "/admin-guide/en-us/authentication-and-security/authentication-and-security.html",
+      "pdf": "Admin-Guide-Authentication-and-Security.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Integrations EIB",
+      "url": "/admin-guide/en-us/integrations/integrations.html",
+      "pdf": "Admin-Guide-Integrations.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Reporting and Analytics",
+      "url": "/admin-guide/en-us/reporting-and-analytics/reporting-and-analytics.html",
+      "pdf": "Admin-Guide-Reporting-and-Analytics.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Prism Analytics",
+      "url": "/admin-guide/en-us/prism-analytics/prism-analytics.html",
+      "pdf": "Admin-Guide-Prism-Analytics.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Workday Studio",
+      "url": "/admin-guide/en-us/workday-studio/workday-studio.html",
+      "pdf": "Admin-Guide-Workday-Studio.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Education and Government",
+      "url": "/admin-guide/en-us/education-and-government/education-and-government.html",
+      "pdf": "Admin-Guide-Education-and-Government.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Adaptive Planning",
+      "url": "/admin-guide/en-us/adaptive-planning/adaptive-planning.html",
+      "pdf": "Admin-Guide-Adaptive-Planning.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "People Analytics",
+      "url": "/user-guide/en-us/people-analytics/people-analytics.html",
+      "pdf": "User-Guide-People-Analytics.pdf",
+      "access": "public"
+    },
+    {
+      "name": "Discovery Boards",
+      "url": "/user-guide/en-us/discovery-boards/discovery-boards.html",
+      "pdf": "User-Guide-Discovery-Boards.pdf",
+      "access": "public"
+    },
+    {
+      "name": "Glossary",
+      "url": "/admin-guide/en-us/glossary/full-glossary-of-terms.html",
+      "pdf": "Admin-Guide-Glossary.pdf",
+      "access": "locked"
+    },
+    {
+      "name": "Use Case Library",
+      "url": "/admin-guide/en-us/use-case-library/use-case-library.html",
+      "pdf": "Admin-Guide-Use-Case-Library.pdf",
+      "access": "public"
+    }
+  ],
+  "download_strategy": {
+    "method": "browser_automation",
+    "delay_between_downloads_sec": 30,
+    "use_random_delay": true,
+    "random_delay_range": [20, 60],
+    "max_downloads_per_session": 5,
+    "require_login": true
+  },
+  "notes": [
+    "PDF URLs follow pattern: base_url + pdf_base + pdf filename",
+    "Access levels: public (no login), locked (need customer login), confirmed (tested access)",
+    "Use Workday agent with browser automation to download with natural timing",
+    "Each session: login -> download 3-5 PDFs -> logout -> wait -> repeat"
+  ]
+}
