@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-2-0660
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Record Cash Sale - Non revenue
+WORKDAY ROLE: Customer Payment Specialist
+EST. DURATION: 15 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Create Cash Sale, select expenditure credit revenue category, ensure spend category selection is required, line item description, deposit, and bank account is required for submission.
+
+PREREQUISITES:
+- User logged in with Customer Payment Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Record non-revenue cash sale"
+2. wait for search results
+3. click search result containing "Record non-revenue cash sale"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-2-0660_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Record Cash Sale - Non revenue
+- Template Used: default
+- Task/Step: Record non-revenue cash sale
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

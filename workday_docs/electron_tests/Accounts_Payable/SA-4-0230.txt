@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0230
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Upload Invoice with Unsupported File type
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Upload an attachment that is not one of the Upload and Scan supported file types.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-4-0230_complete.png"
+
+VERIFICATION:
+- [ ] The upload should fail with an error type of "File Type not Supported"
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Upload Invoice with Unsupported File type
+- Template Used: default
+- Task/Step: Supplier Invoice Work Area> Upload and Scan
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

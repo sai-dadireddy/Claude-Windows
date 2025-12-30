@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-1-0140
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Confirm Trackable Spend Category Configuration
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 10 minutes
+TEMPLATE: EXTRACT
+================================================================================
+
+DESCRIPTION:
+Confirm trackable spend categories are:  Not also flagged for expense usage Not also flagged for ad hoc payment usage Are in the correct spend category hierarchy
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Extract Spend Categories"
+2. wait for search results
+3. click search result containing "Extract Spend Categories"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify report displays data
+9. verify column headers are correct
+10. scroll down to review data
+11. click "Export to Excel" button
+12. wait for export confirmation
+13. screenshot as "BA-1-0140_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Trackable Spend Category Configuration
+- Template Used: extract
+- Task/Step: Extract Spend Categories
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

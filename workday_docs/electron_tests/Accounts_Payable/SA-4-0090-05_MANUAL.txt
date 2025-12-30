@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0090-05
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Invoice from Contract to Check
+WORKDAY ROLE: Cost Center Manager
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 3.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Approve Supplier Invoice. Test Business Process routing based on the configured conditions for each Business Process step.
+
+PREREQUISITES:
+- User logged in with Cost Center Manager permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "5. Approve Invoice"
+2. wait for search results
+3. click search result containing "5. Approve Invoice"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0090-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Invoice from Contract to Check
+- Template Used: default
+- RAG Query: "5. Approve Invoice"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

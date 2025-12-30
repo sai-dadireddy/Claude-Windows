@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: BA-4-0200-03
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from a Capital Project
+WORKDAY ROLE: Project Administrator
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create project plan. Use Project Plan template if available.  Make sure Project Start Date = First Day of Current Month and Project End Date = Last Day of Current Year
+
+PREREQUISITES:
+- User logged in with Project Administrator permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. Create Project Plan"
+2. wait for search results
+3. click search result containing "3. Create Project Plan"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "BA-4-0200-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Complete any required Approval Steps
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from a Capital Project
+- Template Used: maintain
+- Task/Step: 3. Create Project Plan
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

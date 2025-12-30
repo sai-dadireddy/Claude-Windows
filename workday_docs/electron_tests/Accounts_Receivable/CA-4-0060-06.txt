@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: CA-4-0060-06
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Create Customer to Create Customer invoice in different currency with revenue schedule to update base currency adjustment installments
+WORKDAY ROLE: Revenue Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create Journal for revenue recognition
+
+PREREQUISITES:
+- User logged in with Revenue Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "6. Create revenue recognition accounting on an installment"
+2. wait for search results
+3. click search result containing "6. Create revenue recognition accounting on an installment"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-4-0060-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related Action off Revenue Recognition installment> Create revenue recognition accounting
+
+RELATED INFORMATION:
+- Scenario Name: Create Customer to Create Customer invoice in different currency with revenue schedule to update base currency adjustment installments
+- Template Used: maintain
+- Task/Step: 6. Create revenue recognition accounting on an installment
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

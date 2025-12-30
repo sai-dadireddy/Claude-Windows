@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-2-0450
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Find Supplier Invoice Down Payments or Supplier > Financial Snapshot > Down Payment Balance
+WORKDAY ROLE: Accounts Payable Settlement Specialist
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Identify Supplier Invoice Down Payments
+
+PREREQUISITES:
+- User logged in with Accounts Payable Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Supplier Invoices > Down Payment"
+2. wait for search results
+3. click search result containing "Find Supplier Invoices > Down Payment"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. screenshot as "SA-2-0450_step9.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Find Supplier Invoice Down Payments or Supplier > Financial Snapshot > Down Payment Balance
+- Template Used: find
+- RAG Query: "Find Supplier Invoices > Down Payment"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

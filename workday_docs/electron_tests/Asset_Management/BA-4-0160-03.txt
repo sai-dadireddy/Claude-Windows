@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0160-03
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Dispose of an Asset - Expire
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Dispose of expired assets
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1c. Expire an asset"
+2. wait for search results
+3. click search result containing "1c. Expire an asset"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0160-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Dispose Expired Assets
+
+RELATED INFORMATION:
+- Scenario Name: Dispose of an Asset - Expire
+- Template Used: default
+- Task/Step: 1c. Expire an asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

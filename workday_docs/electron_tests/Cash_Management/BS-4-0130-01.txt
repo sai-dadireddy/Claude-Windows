@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BS-4-0130-01
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Supplier Invoice to Settlement to GL (Check)
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Find Payment and take the related action, Reprint Check
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "9. Reprint Check"
+2. wait for search results
+3. click search result containing "9. Reprint Check"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BS-4-0130-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Find Payments
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice to Settlement to GL (Check)
+- Template Used: default
+- Task/Step: 9. Reprint Check
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

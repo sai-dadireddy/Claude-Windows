@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BS-4-0190-03
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Procurement Card to Settlement to GL
+WORKDAY ROLE: Procurement Administrator
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Upon approval, verify that Spend accounting entries have been created as expected via related action off the Procurement Card Transaction Verification.  If worktags were entered or modified as part of the verification process, you should see an CR and DR to the Before and After Spend
+
+PREREQUISITES:
+- User logged in with Procurement Administrator permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. Find Procurement Card Transaction Verifications"
+2. wait for search results
+3. click search result containing "3. Find Procurement Card Transaction Verifications"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "BS-4-0190-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > View Accounting off Verified Procurement Card Transaction
+
+RELATED INFORMATION:
+- Scenario Name: Procurement Card to Settlement to GL
+- Template Used: find
+- Task/Step: 3. Find Procurement Card Transaction Verifications
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

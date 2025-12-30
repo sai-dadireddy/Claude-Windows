@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: SA-4-0100-05
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 13.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+View Recurring Supplier Invoice
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Verify that the Recurring Supplier Invoice shows as updated for Supplier Invoices Generated, Amount Invoiced and Amount Remaining."
+2. wait for search results
+3. click search result containing "Verify that the Recurring Supplier Invoice shows as updated for Supplier Invoices Generated, Amount Invoiced and Amount Remaining."
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0100-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Supplier Invoice
+- Template Used: default
+- RAG Query: "Verify that the Recurring Supplier Invoice shows as updated for Supplier Invoices Generated, Amount Invoiced and Amount Remaining."
+
+NOTES:
+
+================================================================================

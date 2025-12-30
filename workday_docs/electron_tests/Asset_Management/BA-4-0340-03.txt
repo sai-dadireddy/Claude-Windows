@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0340-03
+FUNCTIONAL AREA: Asset Management
+TEST NAME: FRA Derogatory: Derogatory Reversal
+WORKDAY ROLE: Accountant
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Derogatory Asset Reversal when Accounting Depreciation > Tax Depreciation
+
+PREREQUISITES:
+- User logged in with Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "- Record depreciation for multiple periods. 
+- Select a period where Accounting Depreciation expense is greater than tax depreciation expense. 
+- Run FRA Derogatory Asset Accounting Overview for Assets."
+2. wait for search results
+3. click search result containing "- Record depreciation for multiple periods. 
+- Select a period where Accounting Depreciation expense is greater than tax depreciation expense. 
+- Run FRA Derogatory Asset Accounting Overview for Assets."
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BA-4-0340-03_complete.png"
+
+VERIFICATION:
+- [ ] The difference between the accounting depreciation and the calculated tax depreciation for the period is equal to the "Derogatory Reintegration" displayed in the FRA Derogatory Accounting Overview for Assets.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: FRA Derogatory: Derogatory Reversal
+- Template Used: view
+- Task/Step: - Record depreciation for multiple periods. 
+- Select a period where Accounting Depreciation expense is greater than tax depreciation expense. 
+- Run FRA Derogatory Asset Accounting Overview for Assets.
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

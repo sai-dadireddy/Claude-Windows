@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-2-0160
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Adjust Useful Life
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Adjust the useful life of an asset due to changes in estimates
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Adjust asset useful life"
+2. wait for search results
+3. click search result containing "Adjust asset useful life"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-2-0160_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > Adjust Useful Life off Business Asset
+
+RELATED INFORMATION:
+- Scenario Name: Adjust Useful Life
+- Template Used: default
+- Task/Step: Adjust asset useful life
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

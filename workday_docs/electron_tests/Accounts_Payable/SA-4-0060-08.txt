@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SA-4-0060-08
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Scheduled Invoice from Supplier Contract to Check
+WORKDAY ROLE: Various (depending on approval process)
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Verify that Settlement Run is routing as expected
+
+PREREQUISITES:
+- User logged in with Various (depending on approval process) permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "8. Approve Settlement Run"
+2. wait for search results
+3. click search result containing "8. Approve Settlement Run"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-4-0060-08_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Inbox (Various-Depending on process)
+
+RELATED INFORMATION:
+- Scenario Name: Scheduled Invoice from Supplier Contract to Check
+- Template Used: default
+- Task/Step: 8. Approve Settlement Run
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

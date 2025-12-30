@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BS-3-0010
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Bank Accounts and Financial Institutions
+WORKDAY ROLE: Bank Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: EXTRACT
+================================================================================
+
+DESCRIPTION:
+Verify list of Bank Accounts and their Financial Institutions and branches for Completeness.   Verify that correct Company or Company Hierarchy has been loaded for each bank account.   Verify that correct Bank Account Currency has been defined. If other currencies are allowed for a given account, verify that these have also been identified.   Verify Payment Types for Bank Account are loaded and added correctly to the bank accounts.   Verify that Country has been correctly identified for each bank account.   Verify Bank Account Numbers   Verify other bank account ID numbers, including Bank ID/Routing, IBAN, Fraction, and Formatted MICR. These will vary based on Bank Country.   If Bank Statements will be LOADED for this bank account, verify BAI2 or ISO format.   Verify Advanced vs Non Advanced and Auto vs Manual Bank Recon will be used.   For Advanced Mode, verify Rule Sets.   Verify other Reconciliation Configuration is correct   Verify that Primary Account Usage is accurate and whether additional usage should be allowed   Verify Check Print Layout (Blank vs Preprinted) and whether Positive Pay will be required.   In Settlement Setup, verify Payment Integrations have been identified for Checks and Electronic File Integrations.
+
+PREREQUISITES:
+- User logged in with Bank Configurator permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Extract Bank Accounts"
+2. wait for search results
+3. click search result containing "Extract Bank Accounts"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify report displays data
+9. verify column headers are correct
+10. scroll down to review data
+11. click "Export to Excel" button
+12. wait for export confirmation
+13. screenshot as "BS-3-0010_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Bank Accounts and Financial Institutions
+- Template Used: extract
+- Task/Step: Extract Bank Accounts
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

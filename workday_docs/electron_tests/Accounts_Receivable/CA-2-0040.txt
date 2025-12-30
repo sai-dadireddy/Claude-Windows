@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: CA-2-0040
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Edit Customer
+WORKDAY ROLE: Customer Administrator
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Perform various edits that can be made to the customer, such as credit limit, contacts, logo, notes, payment details and related worktags
+
+PREREQUISITES:
+- User logged in with Customer Administrator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Edit Button on Tabs: Summary; Credit & Collections; Payment Details; Banking;"
+2. wait for search results
+3. click search result containing "Edit Button on Tabs: Summary; Credit & Collections; Payment Details; Banking;"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-2-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Edit Customer
+- Template Used: maintain
+- Task/Step: Edit Button on Tabs: Summary; Credit & Collections; Payment Details; Banking;
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

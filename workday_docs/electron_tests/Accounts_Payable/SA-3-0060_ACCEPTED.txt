@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: SA-3-0060
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Verify Supplier Categories
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 7.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Review supplier categories in the tenant and identify any that need to be added
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Categories"
+2. wait for search results
+3. click search result containing "Supplier Categories"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-3-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Supplier Categories
+- Template Used: default
+- RAG Query: "Supplier Categories"
+
+NOTES:
+
+================================================================================

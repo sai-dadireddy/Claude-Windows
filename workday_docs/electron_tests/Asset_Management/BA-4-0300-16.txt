@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: BA-4-0300-16
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Leases: Operating Lease Multi-book
+WORKDAY ROLE: Supplier Contract Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Generate an alternate contract to record the Operating Lease under GAAP
+
+PREREQUISITES:
+- User logged in with Supplier Contract Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Mass Generate Alternate Lease Contracts"
+2. wait for search results
+3. click search result containing "Mass Generate Alternate Lease Contracts"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0300-16_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Select Alternate Contract Type
+Select Alternate Accounting Method of ROU Asset Operating Expense
+
+RELATED INFORMATION:
+- Scenario Name: Leases: Operating Lease Multi-book
+- Template Used: default
+- Task/Step: Mass Generate Alternate Lease Contracts
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-4-0300-06
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Customer Balance Details
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Run the Customer Balances Details report - review the transaction types, amounts, due dates, aging days, write-offs, and the open balance. You can drill into any individual transaction.
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Customer Balance Details"
+2. wait for search results
+3. click search result containing "Customer Balance Details"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-4-0300-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Customer Balance Details
+- Template Used: default
+- Task/Step: Customer Balance Details
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SA-2-0410
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Detect and Display Duplicate Suppliers
+WORKDAY ROLE: Supplier Administrator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 6.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Ability to detect potential supplier duplicates when you create new suppliers to include key pieces of supplier information
+
+PREREQUISITES:
+- User logged in with Supplier Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier
+External Supplier Request
+Supplier Request
+
+Find Supplier Duplicate"
+2. wait for search results
+3. click search result containing "Create Supplier
+External Supplier Request
+Supplier Request
+
+Find Supplier Duplicate"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. screenshot as "SA-2-0410_step9.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Detect and Display Duplicate Suppliers
+- Template Used: find
+- RAG Query: "Create Supplier
+External Supplier Request
+Supplier Request
+
+Find Supplier Duplicate"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

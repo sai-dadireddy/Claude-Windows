@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: BS-5-0030
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Bank Routing Rules
+WORKDAY ROLE: Cash Configurator
+EST. DURATION: 15 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+For each company, verify the default bank account has been identified as well as any conditions that may require payments to be made from a different bank account
+
+PREREQUISITES:
+- User logged in with Cash Configurator permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "View Bank Routing Rules"
+2. wait for search results
+3. click search result containing "View Bank Routing Rules"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BS-5-0030_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Bank Routing Rules
+- Template Used: view
+- Task/Step: View Bank Routing Rules
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-4-0030-07
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Create Customer to Create Revenue Invoice to Record/Apply Payment (Auto) to Deposit
+WORKDAY ROLE: Customer Contract Administrator, Customer Billing Specialist, Customer Payment Specialist, Customer Deposit Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Verify Accounting for Customer Invoice
+
+PREREQUISITES:
+- User logged in with Customer Contract Administrator, Customer Billing Specialist, Customer Payment Specialist, Customer Deposit Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "5. View Customer Invoice Accounting"
+2. wait for search results
+3. click search result containing "5. View Customer Invoice Accounting"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "CA-4-0030-07_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related Action off Customer Invoice> Accounting > View Accounting
+
+RELATED INFORMATION:
+- Scenario Name: Create Customer to Create Revenue Invoice to Record/Apply Payment (Auto) to Deposit
+- Template Used: view
+- Task/Step: 5. View Customer Invoice Accounting
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

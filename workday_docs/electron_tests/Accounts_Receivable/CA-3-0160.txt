@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: CA-3-0160
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Confirm Custom Validations
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Verify all required Custom Validations have been configured for: Cash Sale Customer Invoice Customer Invoice Adjustment Customer Refund
+
+If direct intercompany is in scope, be wary of custom validations or required worktags on the supplier invoice area. If there are any custom validations or worktags that are enforced for the supplier invoice but are not added upfront in the customer invoice, the supplier invoice will not be submitted and will need to be manually edited before it can be submitted. Add any required worktags as custom validations and mirror custom validations relevant for supplier invoice to customer invoice
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Custom Validations"
+2. wait for search results
+3. click search result containing "Maintain Custom Validations"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-3-0160_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Custom Validations
+- Template Used: maintain
+- Task/Step: Maintain Custom Validations
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

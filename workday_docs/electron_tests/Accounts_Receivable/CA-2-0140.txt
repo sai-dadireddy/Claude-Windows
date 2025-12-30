@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-2-0140
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Auto-Apply Customer Payment
+WORKDAY ROLE: Customer Payment Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Review the ability to auto-apply multiple customer payments
+
+PREREQUISITES:
+- User logged in with Customer Payment Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Auto-Apply Customer Payment"
+2. wait for search results
+3. click search result containing "Auto-Apply Customer Payment"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-2-0140_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Auto-Apply Customer Payment
+- Template Used: default
+- Task/Step: Auto-Apply Customer Payment
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

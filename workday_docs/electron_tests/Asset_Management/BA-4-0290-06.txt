@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BA-4-0290-06
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Leases: Operating Lease Depreciation Expense (IFRS) (non multi-book)
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Register Asset from Supplier Contract: As Business Asset Accountant, go to the Inbox and review trackable lines. Make sure the Trackable checkbox is selected by default and that the Accounting Treatment has defaulted to Depreciable Capital Asset. If these defaults are not correct then review the asset book rules and supplier contract for the spend category being used.  Approve the Review Trackable Lines
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Review Trackable Lines"
+2. wait for search results
+3. click search result containing "Review Trackable Lines"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BA-4-0290-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Inbox (BA Accountant)
+
+RELATED INFORMATION:
+- Scenario Name: Leases: Operating Lease Depreciation Expense (IFRS) (non multi-book)
+- Template Used: view
+- Task/Step: Review Trackable Lines
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

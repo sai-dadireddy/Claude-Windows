@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BS-4-0200-02
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Create Payment Return to GL
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+On Return Payment screen, leave Return Date = Current Date  Choose return code R01- Insufficient Funds  Click OK
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "8. Enter Payment Return Details"
+2. wait for search results
+3. click search result containing "8. Enter Payment Return Details"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BS-4-0200-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Enter Payment Return Details
+
+RELATED INFORMATION:
+- Scenario Name: Create Payment Return to GL
+- Template Used: default
+- Task/Step: 8. Enter Payment Return Details
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

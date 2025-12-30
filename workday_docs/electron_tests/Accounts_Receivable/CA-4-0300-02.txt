@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-4-0300-02
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Create Dunning Level Group to to Print Dunning Letters
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+2. Print Dunning Letters. Choose which level(s) to include in the run. Select customers to include / exclude from the run. Choose which types of invoice documents to include in the run. Generate the associated Invoice PDFs.
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Print Dunning Letters"
+2. wait for search results
+3. click search result containing "Print Dunning Letters"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-4-0300-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Create Dunning Level Group to to Print Dunning Letters
+- Template Used: default
+- Task/Step: Print Dunning Letters
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

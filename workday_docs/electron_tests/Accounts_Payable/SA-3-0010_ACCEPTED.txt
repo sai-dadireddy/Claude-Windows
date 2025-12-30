@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-3-0010
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Suppliers
+WORKDAY ROLE: Supplier Administrator
+EST. DURATION: 120 minutes
+RAG CONFIDENCE: 9.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Review supplier data for completeness and data quality.
+
+PREREQUISITES:
+- User logged in with Supplier Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Suppliers or Extract Suppliers"
+2. wait for search results
+3. click search result containing "Find Suppliers or Extract Suppliers"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify report displays data
+9. click "Export to Excel" button
+10. wait for export confirmation
+11. screenshot as "SA-3-0010_step11.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Suppliers
+- Template Used: extract
+- RAG Query: "Find Suppliers or Extract Suppliers"
+
+NOTES:
+
+================================================================================

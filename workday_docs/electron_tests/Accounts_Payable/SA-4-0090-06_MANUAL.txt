@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-4-0090-06
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Invoice from Contract to Check
+WORKDAY ROLE: Accounts Payable Settlement Specialist
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Verify that you are able to select the Supplier Invoice created above. Verify that Settlement Run has been submitted for approval.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "6. Create Settlement Run"
+2. wait for search results
+3. click search result containing "6. Create Settlement Run"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0090-06_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Invoice from Contract to Check
+- Template Used: maintain
+- RAG Query: "6. Create Settlement Run"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

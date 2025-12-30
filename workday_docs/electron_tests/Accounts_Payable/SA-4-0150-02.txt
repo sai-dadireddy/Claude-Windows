@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0150-02
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Month End Close
+WORKDAY ROLE: Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Review Prepaid Amortizations to ensure they were accurately run for the month.  Use the delivered Find Journal Lines report and filter on Journal Source for Prepaid Spend Amortization
+
+PREREQUISITES:
+- User logged in with Accountant permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Journal Lines"
+2. wait for search results
+3. click search result containing "Find Journal Lines"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "SA-4-0150-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Month End Close
+- Template Used: find
+- Task/Step: Find Journal Lines
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

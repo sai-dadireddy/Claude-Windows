@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: BA-4-0200-18
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from a Capital Project
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create a Project Asset. Choose any trackable Spend Category Hit OK
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "18. Create Project Asset"
+2. wait for search results
+3. click search result containing "18. Create Project Asset"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "BA-4-0200-18_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Open Project, Navigate to Financials> Capitalization and hit the ADD PROJECT ASSETS Button
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from a Capital Project
+- Template Used: maintain
+- Task/Step: 18. Create Project Asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

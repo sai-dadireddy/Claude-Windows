@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-2-0330
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: If in Scope - Payment Discounts on Supplier Invoice
+WORKDAY ROLE: Various (depending on approval process)
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Per Supplier Event BP configuration, go to the Inbox and approve the Supplier.
+
+PREREQUISITES:
+- User logged in with Various (depending on approval process) permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "2. Approve Supplier or Supplier Change"
+2. wait for search results
+3. click search result containing "2. Approve Supplier or Supplier Change"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-2-0330_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: If in Scope - Payment Discounts on Supplier Invoice
+- Template Used: default
+- RAG Query: "2. Approve Supplier or Supplier Change"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

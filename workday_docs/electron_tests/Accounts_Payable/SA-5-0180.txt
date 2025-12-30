@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SA-5-0180
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Confirm User Based Procurement Assignments
+WORKDAY ROLE: Security Administrator
+EST. DURATION: 5 minutes
+TEMPLATE: EXTRACT
+================================================================================
+
+DESCRIPTION:
+Run  Extract User-Based Security Group Assignments report and Verify that these user Based Security Roles for Supplier Accounts have been properly assigned: Supplier Administrator
+
+PREREQUISITES:
+- User logged in with Security Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Extract User-Based Security Group Assignments"
+2. wait for search results
+3. click search result containing "Extract User-Based Security Group Assignments"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify report displays data
+9. verify column headers are correct
+10. scroll down to review data
+11. click "Export to Excel" button
+12. wait for export confirmation
+13. screenshot as "SA-5-0180_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm User Based Procurement Assignments
+- Template Used: extract
+- Task/Step: Extract User-Based Security Group Assignments
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

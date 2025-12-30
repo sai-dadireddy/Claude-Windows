@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: BS-4-0160-02
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Cash Advance to Settlement to GL (Check)
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Verify that you are able to select Cash Advance created above.  Verify that Settlement Run has been submitted for approval
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. Create Settlement Run"
+2. wait for search results
+3. click search result containing "3. Create Settlement Run"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "BS-4-0160-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Payment Source > Cash Advances
+
+RELATED INFORMATION:
+- Scenario Name: Cash Advance to Settlement to GL (Check)
+- Template Used: maintain
+- Task/Step: 3. Create Settlement Run
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

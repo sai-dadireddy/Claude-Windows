@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SA-4-0290
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Mass Reassign Supplier Invoices
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Mass reassign invoices to another AP processor in My Work Queue.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> My Work Queue"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> My Work Queue"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-4-0290_complete.png"
+
+VERIFICATION:
+- [ ] The invoices are now assigned to another user.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Mass Reassign
+
+RELATED INFORMATION:
+- Scenario Name: Mass Reassign Supplier Invoices
+- Template Used: default
+- Task/Step: Supplier Invoice Work Area> My Work Queue
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

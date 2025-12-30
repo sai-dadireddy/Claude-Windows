@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: CA-4-0160
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Customer Invoice Maintenance Event
+WORKDAY ROLE: Customer Billing Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Perform Customer Invoice Maintenance. Verify required fields have been met and it successfully routes through the business process. Ensure business process executes expected results with security, routings, validations and condition rules.
+
+PREREQUISITES:
+- User logged in with Customer Billing Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Perform Customer Invoice Maintenance"
+2. wait for search results
+3. click search result containing "Perform Customer Invoice Maintenance"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-4-0160_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Ensure approved outstanding invoices exist in tenant to run
+
+RELATED INFORMATION:
+- Scenario Name: Customer Invoice Maintenance Event
+- Template Used: default
+- Task/Step: Perform Customer Invoice Maintenance
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

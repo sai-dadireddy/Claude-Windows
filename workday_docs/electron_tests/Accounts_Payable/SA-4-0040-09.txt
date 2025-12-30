@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0040-09
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Prepaid Supplier Invoice to Payment
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Accounting should DR Spend and CR Prepaid Spend
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "9. View Prepaid Amortization Installment Accounting"
+2. wait for search results
+3. click search result containing "9. View Prepaid Amortization Installment Accounting"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "SA-4-0040-09_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Open Supplier Invoice  Go to Prepaid Details Tab  At the bottom of the page, you should see 1 installment in the "Prepaid Spend Amortization" grid  Go to Related action > Accounting > View Accounting
+
+RELATED INFORMATION:
+- Scenario Name: Prepaid Supplier Invoice to Payment
+- Template Used: view
+- Task/Step: 9. View Prepaid Amortization Installment Accounting
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

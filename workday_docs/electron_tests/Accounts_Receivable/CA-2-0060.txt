@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: CA-2-0060
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Add Business Connection
+WORKDAY ROLE: Customer Administrator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Add Customer Ship-To Connection via Addresses and Contacts > Connection Map Tab on Customer Profile. Edit and Add Customer with Default Ship-to Address
+
+PREREQUISITES:
+- User logged in with Customer Administrator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Edit Connection Map on Addresses and Contacts > Connection Map Tab"
+2. wait for search results
+3. click search result containing "Edit Connection Map on Addresses and Contacts > Connection Map Tab"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Add Business Connection
+- Template Used: maintain
+- Task/Step: Edit Connection Map on Addresses and Contacts > Connection Map Tab
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

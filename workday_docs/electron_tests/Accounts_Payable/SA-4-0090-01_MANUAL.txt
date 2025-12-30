@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-4-0090-01
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Invoice from Contract to Check
+WORKDAY ROLE: Buyer
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Create Supplier Contract using a contract type that allows scheduled invoices
+
+PREREQUISITES:
+- User logged in with Buyer permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier contract"
+2. wait for search results
+3. click search result containing "1. Create Supplier contract"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0090-01_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Invoice from Contract to Check
+- Template Used: maintain
+- RAG Query: "1. Create Supplier contract"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

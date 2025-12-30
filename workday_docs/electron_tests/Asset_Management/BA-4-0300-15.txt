@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BA-4-0300-15
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Leases: Operating Lease Multi-book
+WORKDAY ROLE: Business Asset Operations Lead
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Review the depreciation expense accounting.
+
+PREREQUISITES:
+- User logged in with Business Asset Operations Lead permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Journals > filter by Journal Source "Depreciation""
+2. wait for search results
+3. click search result containing "Find Journals > filter by Journal Source "Depreciation""
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "BA-4-0300-15_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Leases: Operating Lease Multi-book
+- Template Used: find
+- Task/Step: Find Journals > filter by Journal Source "Depreciation"
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

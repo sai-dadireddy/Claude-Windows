@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-4-0090-01
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Invoice from Contract to Check
+WORKDAY ROLE: Buyer
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create Supplier Contract using a contract type that allows scheduled invoices
+
+PREREQUISITES:
+- User logged in with Buyer permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier contract"
+2. wait for search results
+3. click search result containing "1. Create Supplier contract"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "SA-4-0090-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Invoice from Contract to Check
+- Template Used: maintain
+- Task/Step: 1. Create Supplier contract
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

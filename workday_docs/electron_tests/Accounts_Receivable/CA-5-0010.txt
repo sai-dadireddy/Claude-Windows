@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: CA-5-0010
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Customer Groups
+WORKDAY ROLE: Customer Administrator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Review list of Customer Groups for completeness
+
+PREREQUISITES:
+- User logged in with Customer Administrator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Customer Groups"
+2. wait for search results
+3. click search result containing "Maintain Customer Groups"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-5-0010_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Customer Groups
+- Template Used: maintain
+- Task/Step: Maintain Customer Groups
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

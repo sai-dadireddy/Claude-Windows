@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0100-03
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Generate Installments
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Related Action from Scheduled Installment--:Generate Supplier Invoice"
+2. wait for search results
+3. click search result containing "Related Action from Scheduled Installment--:Generate Supplier Invoice"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-4-0100-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Supplier Invoice
+- Template Used: default
+- Task/Step: Related Action from Scheduled Installment--:Generate Supplier Invoice
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

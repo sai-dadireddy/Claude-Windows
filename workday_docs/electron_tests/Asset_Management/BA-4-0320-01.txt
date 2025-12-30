@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: BA-4-0320-01
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Leases: Finance Lease
+WORKDAY ROLE: Supplier Contract Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create a Supplier Contract for a finance lease with a contract term greater than one year.
+
+PREREQUISITES:
+- User logged in with Supplier Contract Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "BA-4-0320-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Leases: Finance Lease
+- Template Used: maintain
+- Task/Step: Create Supplier Contract
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

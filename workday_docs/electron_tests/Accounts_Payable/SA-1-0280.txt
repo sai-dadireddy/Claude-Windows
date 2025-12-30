@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-1-0280
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: 1099 Configuration
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+(US) Review the 1099 configuration for 1099-Misc and 1099-NEC.
+Note:If Spend Category Hierarchies are mapped to a box then individual categories within that hierarchy cannot also be mapped.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "View 1099 Configuration"
+2. wait for search results
+3. click search result containing "View 1099 Configuration"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "SA-1-0280_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: 1099 Configuration
+- Template Used: view
+- Task/Step: View 1099 Configuration
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

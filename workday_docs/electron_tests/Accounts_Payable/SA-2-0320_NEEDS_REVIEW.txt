@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-2-0320
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: If in Scope - Payment Discounts on Supplier Invoice
+WORKDAY ROLE: Finance Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Create supplier or create supplier change. Under payment options section, use the "Exclude from Supplier Invoice Document Calculation" field to select the amounts which you want to exclude from the final discount calculation. Add payment terms with discount included to the default payment terms field.
+
+PREREQUISITES:
+- User logged in with Finance Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier or Create Supplier Change"
+2. wait for search results
+3. click search result containing "1. Create Supplier or Create Supplier Change"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-2-0320_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: If in Scope - Payment Discounts on Supplier Invoice
+- Template Used: maintain
+- RAG Query: "1. Create Supplier or Create Supplier Change"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

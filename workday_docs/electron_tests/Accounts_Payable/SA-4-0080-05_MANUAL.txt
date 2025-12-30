@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-4-0080-05
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Contract Purchase Orders to Check
+WORKDAY ROLE: Buyer
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 3.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Create Receipt against Purchase Order created above
+
+PREREQUISITES:
+- User logged in with Buyer permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "5. Create Receipt"
+2. wait for search results
+3. click search result containing "5. Create Receipt"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0080-05_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Contract Purchase Orders to Check
+- Template Used: maintain
+- RAG Query: "5. Create Receipt"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

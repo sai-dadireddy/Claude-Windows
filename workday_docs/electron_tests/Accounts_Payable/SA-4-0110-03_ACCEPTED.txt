@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: SA-4-0110-03
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Create a Supplier Invoice with VAT/GST and default tax option of calculate tax due to supplier. Use fully recoverable tax recoverability.
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Verify the invoice was processed accurately and appropriate approvals and notifications were initiated. Verify accounting is accurate.
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoice"
+2. wait for search results
+3. click search result containing "Create Supplier Invoice"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0110-03_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Create a Supplier Invoice with VAT/GST and default tax option of calculate tax due to supplier. Use fully recoverable tax recoverability.
+- Template Used: maintain
+- RAG Query: "Create Supplier Invoice"
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0240-05
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Month End Close
+WORKDAY ROLE: Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Reconcile Assets to Ledger for both Gross Fixed Assets and Accumulated Depreciation
+
+PREREQUISITES:
+- User logged in with Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Assets to Ledger Reconciliation
+Asset Operational to Ledger Balance Variance"
+2. wait for search results
+3. click search result containing "Assets to Ledger Reconciliation
+Asset Operational to Ledger Balance Variance"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0240-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Month End Close
+- Template Used: default
+- Task/Step: Assets to Ledger Reconciliation
+Asset Operational to Ledger Balance Variance
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

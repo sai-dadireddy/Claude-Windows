@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: SA-3-0210
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Confirm Related Worktag Usage
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 9.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Review the Related Worktag usage for:  Spend Category
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Related Worktag Usage"
+2. wait for search results
+3. click search result containing "Maintain Related Worktag Usage"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-3-0210_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Confirm Related Worktag Usage
+- Template Used: maintain
+- RAG Query: "Maintain Related Worktag Usage"
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-2-0440
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Settle Supplier Invoice Down Payment Invoice
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+RAG CONFIDENCE: 2.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Ability to settlement the Supplier Invoice Down Payment Invoice
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Settlement"
+2. wait for search results
+3. click search result containing "Create Settlement"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-2-0440_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Settle Supplier Invoice Down Payment Invoice
+- Template Used: maintain
+- RAG Query: "Create Settlement"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

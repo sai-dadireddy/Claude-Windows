@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-2-0110
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Schedule Prepaid Amortization Installments
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Schedule the prepaid installments to be amortized automatically. Alternatively, amortization can be done manually from the schedule
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Schedule Prepaid Spend Amortization Installments"
+2. wait for search results
+3. click search result containing "Schedule Prepaid Spend Amortization Installments"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-2-0110_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Schedule Prepaid Amortization Installments
+- Template Used: default
+- Task/Step: Schedule Prepaid Spend Amortization Installments
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

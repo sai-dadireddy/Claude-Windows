@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0100-02
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+View the Recurring Supplier Invoice
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Recurring Supplier Invoice"
+2. wait for search results
+3. click search result containing "Find Recurring Supplier Invoice"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "SA-4-0100-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Supplier Invoice
+- Template Used: find
+- Task/Step: Find Recurring Supplier Invoice
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-4-0050-01
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: 1099 Supplier to Report
+WORKDAY ROLE: Supplier Administrator
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Create a 1099 supplier and route for approval  Tax Authority Form Type = 1099 (MISC/NEC)
+
+PREREQUISITES:
+- User logged in with Supplier Administrator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create a 1099 Supplier"
+2. wait for search results
+3. click search result containing "1. Create a 1099 Supplier"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0050-01_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: 1099 Supplier to Report
+- Template Used: maintain
+- RAG Query: "1. Create a 1099 Supplier"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

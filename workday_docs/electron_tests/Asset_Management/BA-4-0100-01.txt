@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0100-01
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Change In Service Date of Asset
+WORKDAY ROLE: Business Asset Tracking Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Change the date the asset was originally placed in service. Note: asset must be Issued or In Service for capitalized assets with place in service option of 'Manually or When Issued'
+
+PREREQUISITES:
+- User logged in with Business Asset Tracking Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Change asset in service date"
+2. wait for search results
+3. click search result containing "1. Change asset in service date"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0100-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > Adjust In Service Date off Business Asset
+
+RELATED INFORMATION:
+- Scenario Name: Change In Service Date of Asset
+- Template Used: default
+- Task/Step: 1. Change asset in service date
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

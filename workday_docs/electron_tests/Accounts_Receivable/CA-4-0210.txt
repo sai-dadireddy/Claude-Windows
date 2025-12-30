@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: CA-4-0210
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Bad Debt Event
+WORKDAY ROLE: Accounts Receivable Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Create a Customer. Verify required fields have been met and it successfully routes through the business process.  Ensure business process executes expected results with security, routings, validations and condition rules.
+
+PREREQUISITES:
+- User logged in with Accounts Receivable Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Write Off Bad Debt"
+2. wait for search results
+3. click search result containing "Write Off Bad Debt"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-4-0210_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Ensure short-paid invoices exist in the tenant to execute
+
+RELATED INFORMATION:
+- Scenario Name: Bad Debt Event
+- Template Used: default
+- Task/Step: Write Off Bad Debt
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

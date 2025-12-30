@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-2-0220
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Record on behalf of payment
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+If on behalf of intercompany is in scope
+
+Record payment for customer invoice using On Behalf of Company do NOT apply the payment, Create deposit separately using the on behalf of company (this can also be done off of the related actions for the payment), Apply payment now to the invoice (this can be done off of the related actions for the payment again), settle the intercompany payment and record the intercompany receipt
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoice"
+2. wait for search results
+3. click search result containing "Create Supplier Invoice"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-2-0220_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Record on behalf of payment
+- Template Used: maintain
+- RAG Query: "Create Supplier Invoice"
+
+NOTES:
+
+================================================================================

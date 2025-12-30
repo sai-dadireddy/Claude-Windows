@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0020-07
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Invoice to Electronic Payment
+WORKDAY ROLE: Various (depending on approval process)
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Following the steps above, create and approve a supplier invoice with discount terms with landed costs (tax, other charges, freight amount).
+
+PREREQUISITES:
+- User logged in with Various (depending on approval process) permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoice"
+2. wait for search results
+3. click search result containing "Create Supplier Invoice"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0020-07_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Approve Supplier Invoice
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice to Electronic Payment
+- Template Used: maintain
+- RAG Query: "Create Supplier Invoice"
+
+NOTES:
+
+================================================================================

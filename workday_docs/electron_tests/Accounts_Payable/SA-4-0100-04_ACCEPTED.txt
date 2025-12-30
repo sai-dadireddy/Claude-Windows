@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: SA-4-0100-04
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 20.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+View/Edit Supplier Invoice
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Supplier Invoices - if changes are needed go to Related Actions->Edit.  Once complete, verify that Supplier Invoice is in Approved status."
+2. wait for search results
+3. click search result containing "Find Supplier Invoices - if changes are needed go to Related Actions->Edit.  Once complete, verify that Supplier Invoice is in Approved status."
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. screenshot as "SA-4-0100-04_step9.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Supplier Invoice
+- Template Used: find
+- RAG Query: "Find Supplier Invoices - if changes are needed go to Related Actions->Edit.  Once complete, verify that Supplier Invoice is in Approved status."
+
+NOTES:
+
+================================================================================

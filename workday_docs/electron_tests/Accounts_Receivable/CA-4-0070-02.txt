@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-4-0070-02
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Month End Close
+WORKDAY ROLE: Accounts Receivable Analyst
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Find Undeposited Customer Payments. Once all payments have been recorded, look for any payments that have not been deposited.
+
+PREREQUISITES:
+- User logged in with Accounts Receivable Analyst permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Customer Payments"
+2. wait for search results
+3. click search result containing "Find Customer Payments"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "CA-4-0070-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Month End Close
+- Template Used: find
+- Task/Step: Find Customer Payments
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

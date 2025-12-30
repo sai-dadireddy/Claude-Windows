@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-2-0290
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Print Customer Invoices
+WORKDAY ROLE: Customer Collections Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Verify the invoice is printed and emailed
+
+PREREQUISITES:
+- User logged in with Customer Collections Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Print Customer Invoices"
+2. wait for search results
+3. click search result containing "Print Customer Invoices"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-2-0290_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Print Customer Invoices
+- Template Used: default
+- Task/Step: Print Customer Invoices
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BS-2-0110
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Bank Reconciliation
+WORKDAY ROLE: Bank Reconciliation Specialist
+EST. DURATION: 15 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Choose Company and Bank that has activity in Tenant.  Type: Manual Entry Bank Statement  Statement Start and End Date : Current Date  Beginning Balance 0  Ending Balance : Net of items entered below (e.g. -1000)  1) A check in the tenant that will auto reconcile by Reference (Use Statement Code 475-Check Paid, Populate Reference with Check Number)  2) Put in a Bank Fee Line (Statement Code 698-Miscellaneous Fees) to show how first notice rules work  Once entered, hit Submit for Reconciliation
+
+PREREQUISITES:
+- User logged in with Bank Reconciliation Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Record Bank Statement"
+2. wait for search results
+3. click search result containing "Record Bank Statement"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BS-2-0110_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Bank Reconciliation
+- Template Used: default
+- Task/Step: Record Bank Statement
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

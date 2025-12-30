@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-4-0020-08
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Invoice to Electronic Payment
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 3.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Settle the invoice within the discount. Confirm the discount excludes landed costs appropriately. 
+Verify the accounting correctly captures the discount taken account.
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "View Payment Accounting"
+2. wait for search results
+3. click search result containing "View Payment Accounting"
+4. wait for page to load
+5. verify data displays
+6. screenshot as "SA-4-0020-08_step6.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > View Accounting off Approved Payment
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice to Electronic Payment
+- Template Used: view
+- RAG Query: "View Payment Accounting"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

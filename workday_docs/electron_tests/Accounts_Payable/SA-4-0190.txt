@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0190
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Upload Non-PO Invoice with no Company
+WORKDAY ROLE: AP Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Upload a supplier invoice that has a supplier address that does not match the supplier record.
+
+PREREQUISITES:
+- User logged in with AP Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Work Area> Upload and Scan"
+2. wait for search results
+3. click search result containing "Supplier Invoice Work Area> Upload and Scan"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "SA-4-0190_complete.png"
+
+VERIFICATION:
+- [ ] Depends on your Supplier Accounts OCR Tenant Options. If you are have ML matching on for the Company and no default Company delected, the company will return blank on the draft invoice. If you have a default company selected in the tenant options, the Company should pull from there.
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Upload Non-PO Invoice with no Company
+- Template Used: default
+- Task/Step: Supplier Invoice Work Area> Upload and Scan
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

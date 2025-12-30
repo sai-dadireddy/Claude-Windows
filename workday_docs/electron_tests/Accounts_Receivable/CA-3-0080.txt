@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: CA-3-0080
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Payment Terms
+WORKDAY ROLE: Accounts Receivable Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Verify payment terms are loaded and accurate.
+
+PREREQUISITES:
+- User logged in with Accounts Receivable Configurator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Payment Terms"
+2. wait for search results
+3. click search result containing "Maintain Payment Terms"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-3-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Payment Terms
+- Template Used: maintain
+- Task/Step: Maintain Payment Terms
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

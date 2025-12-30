@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: CA-2-0640
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Change Cash Sale (Include Cash Sale)
+WORKDAY ROLE: Customer Payment Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Ensure Revenue approver can change a Cash Sale. Update amount and submit for approval. Ensure TOS modification approver reviews Cash Sale/Deposit change.
+
+PREREQUISITES:
+- User logged in with Customer Payment Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Find Customer Payments with Include Cash Sale filter
+2. Use Related Action on Cash Sale > Change.
+3. Submit"
+2. wait for search results
+3. click search result containing "1. Find Customer Payments with Include Cash Sale filter
+2. Use Related Action on Cash Sale > Change.
+3. Submit"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "CA-2-0640_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Change Cash Sale (Include Cash Sale)
+- Template Used: find
+- Task/Step: 1. Find Customer Payments with Include Cash Sale filter
+2. Use Related Action on Cash Sale > Change.
+3. Submit
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: CA-2-0550
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Verify Integration Worktag Mapping for Customer Account Integrations
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Review Integration Worktag Mapping table(s) for Customer Account integrations.  This can include inbound, outbound, and Workday to Workday integrations.
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "View Integration Worktag Mapping"
+2. wait for search results
+3. click search result containing "View Integration Worktag Mapping"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "CA-2-0550_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Verify Integration Worktag Mapping for Customer Account Integrations
+- Template Used: view
+- Task/Step: View Integration Worktag Mapping
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

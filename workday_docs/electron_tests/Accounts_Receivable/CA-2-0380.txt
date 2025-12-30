@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-2-0380
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Apply Customer Payment with write-off
+WORKDAY ROLE: Customer Collections Specialist, Customer Payment Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Apply payment recorded to sample invoice. On Apply Customer Payment Screen, use the Write-off functionality to write-off a portion of the invoice at time of payment application. Review Accounting after Payment has been applied
+
+PREREQUISITES:
+- User logged in with Customer Collections Specialist, Customer Payment Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Apply Customer Payment"
+2. wait for search results
+3. click search result containing "Apply Customer Payment"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-2-0380_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Apply Customer Payment with write-off
+- Template Used: default
+- Task/Step: Apply Customer Payment
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

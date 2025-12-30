@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-2-0250
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from Supplier Invoice
+WORKDAY ROLE: Business Asset Tracking Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Register the asset, add any required asset identifying information and submit.
+
+PREREQUISITES:
+- User logged in with Business Asset Tracking Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. Register Asset"
+2. wait for search results
+3. click search result containing "3. Register Asset"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-2-0250_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Inbox (Business Asset Tracking Specialist) - Register Asset
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from Supplier Invoice
+- Template Used: default
+- Task/Step: 3. Register Asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

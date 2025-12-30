@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-2-0390
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Refund
+WORKDAY ROLE: Accounts Payable Settlement Specialist
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 8.0/10.0 ✅ HIGH CONFIDENCE
+================================================================================
+
+DESCRIPTION:
+Associate supplier refunds to supplier invoice adjustments, which clears negative balances due to a supplier
+
+PREREQUISITES:
+- User logged in with Accounts Payable Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Record Supplier Refund
+2. Save and Apply Refund"
+2. wait for search results
+3. click search result containing "1. Record Supplier Refund
+2. Save and Apply Refund"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-2-0390_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Refund
+- Template Used: default
+- RAG Query: "1. Record Supplier Refund
+2. Save and Apply Refund"
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: BA-2-0230
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Create a supplier invoice with a line for a trackable spend category above the depreciation threshold amount and a line below the threshold amount. Complete any supplier invoice approvals required
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier Invoice for Business Asset"
+2. wait for search results
+3. click search result containing "1. Create Supplier Invoice for Business Asset"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "BA-2-0230_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Create Supplier Invoice
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from Supplier Invoice
+- Template Used: maintain
+- Task/Step: 1. Create Supplier Invoice for Business Asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-4-0140-05
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Payment Discounts on Supplier Invoice
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Create settlement run. Add invoice created above to settlement run. Select details under the summary section of the settlement run, then click into the magnifying glass under the payment section. Discount will be listed here.
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "5. Create Settlement Run"
+2. wait for search results
+3. click search result containing "5. Create Settlement Run"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0140-05_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Payment Discounts on Supplier Invoice
+- Template Used: maintain
+- RAG Query: "5. Create Settlement Run"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

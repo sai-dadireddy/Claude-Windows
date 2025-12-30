@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-1-0210
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Worktag Usages
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Verify all required Worktag Usages have been configured for:  Supplier Invoice
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Worktag Usages"
+2. wait for search results
+3. click search result containing "Maintain Worktag Usages"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "SA-1-0210_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Worktag Usages
+- Template Used: maintain
+- Task/Step: Maintain Worktag Usages
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

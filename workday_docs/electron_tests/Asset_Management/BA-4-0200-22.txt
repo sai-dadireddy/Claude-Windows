@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BA-4-0200-22
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from a Capital Project
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Enter Company, Year, and Period In the Worktags field, enter your Capital Project Hit OK  Find a Line with Journal Source = Capital Project Cost Reclassification and click on the Journal  Note reclassification from the WIP Account to the Spend Account
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "22. Review Transactional Accounting for Supplier Invoice reclassification"
+2. wait for search results
+3. click search result containing "22. Review Transactional Accounting for Supplier Invoice reclassification"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BA-4-0200-22_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Journal Lines report
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from a Capital Project
+- Template Used: view
+- Task/Step: 22. Review Transactional Accounting for Supplier Invoice reclassification
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

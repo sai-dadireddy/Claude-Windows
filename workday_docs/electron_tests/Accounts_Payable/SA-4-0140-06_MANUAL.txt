@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0140-06
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Payment Discounts on Supplier Invoice
+WORKDAY ROLE: Various (depending on approval process)
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Verify that Settlement Run is routing as expected
+
+PREREQUISITES:
+- User logged in with Various (depending on approval process) permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "6. Approve Settlement Run"
+2. wait for search results
+3. click search result containing "6. Approve Settlement Run"
+4. wait for page to load
+5. complete required fields
+6. click "Submit" button
+7. wait for confirmation
+8. verify success message displays
+9. screenshot as "SA-4-0140-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Payment Discounts on Supplier Invoice
+- Template Used: default
+- RAG Query: "6. Approve Settlement Run"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

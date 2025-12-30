@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0020-01
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Invoice to Electronic Payment
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Create supplier invoice - verify Payment type is an electronic payment (ACH, EFT etc)
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier Invoice"
+2. wait for search results
+3. click search result containing "1. Create Supplier Invoice"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0020-01_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Create Supplier Invoice
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice to Electronic Payment
+- Template Used: maintain
+- RAG Query: "1. Create Supplier Invoice"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

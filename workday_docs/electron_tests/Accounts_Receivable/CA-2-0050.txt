@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: CA-2-0050
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Add Customer Contact
+WORKDAY ROLE: Customer Administrator
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Add Customer Contact on Addresses and Contacts > Customer Contacts Tab on Customer Profile. Add Contact and Setup Contact as Bill-to Contact using Buttons on Tab
+
+PREREQUISITES:
+- User logged in with Customer Administrator permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Add and Set Up Bill-To Contacts option on Addresses and Contacts>Customer Contacts Tab"
+2. wait for search results
+3. click search result containing "Add and Set Up Bill-To Contacts option on Addresses and Contacts>Customer Contacts Tab"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-2-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Add Customer Contact
+- Template Used: default
+- Task/Step: Add and Set Up Bill-To Contacts option on Addresses and Contacts>Customer Contacts Tab
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

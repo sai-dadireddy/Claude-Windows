@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BA-2-0040
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Manually Place Asset In Service
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: FIND
+================================================================================
+
+DESCRIPTION:
+Confirm Asset has an accounting treatment of Depreciable Capital Asset. Place asset in service in current period. Confirm Depreciation Summary and Depreciation Info tabs have been added to the View Business Asset Composite View and review depreciation schedule.
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Assets (Status = Registered)  Related action > Place In Service off Business Asset"
+2. wait for search results
+3. click search result containing "Find Assets (Status = Registered)  Related action > Place In Service off Business Asset"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. verify data accuracy
+10. screenshot as "BA-2-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Manually Place Asset In Service
+- Template Used: find
+- Task/Step: Find Assets (Status = Registered)  Related action > Place In Service off Business Asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

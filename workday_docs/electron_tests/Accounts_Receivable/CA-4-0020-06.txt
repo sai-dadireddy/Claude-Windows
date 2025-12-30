@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: CA-4-0020-06
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Create Customer to Create Revenue Invoice to Record/Apply Payment (Manual) to Deposit
+WORKDAY ROLE: Customer Contract Administrator, Customer Billing Specialist, Customer Payment Specialist, Customer Deposit Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Enter Company, Payment Type of Check, Remit From Customer from Invoice above, and Payment Amount  Hit Save and Apply Payment  On Payment Application screen, select invoice created above and Click Submit
+
+PREREQUISITES:
+- User logged in with Customer Contract Administrator, Customer Billing Specialist, Customer Payment Specialist, Customer Deposit Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "6. Record and Apply Customer Payment"
+2. wait for search results
+3. click search result containing "6. Record and Apply Customer Payment"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "CA-4-0020-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Record Customer Payment
+
+RELATED INFORMATION:
+- Scenario Name: Create Customer to Create Revenue Invoice to Record/Apply Payment (Manual) to Deposit
+- Template Used: default
+- Task/Step: 6. Record and Apply Customer Payment
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

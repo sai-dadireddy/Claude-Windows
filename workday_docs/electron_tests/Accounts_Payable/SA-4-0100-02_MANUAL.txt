@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0100-02
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Recurring Supplier Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+View the Recurring Supplier Invoice
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Find Recurring Supplier Invoice"
+2. wait for search results
+3. click search result containing "Find Recurring Supplier Invoice"
+4. wait for page to load
+5. verify search page displays
+6. click "OK" to search with default criteria
+7. wait for results to load
+8. verify results display
+9. screenshot as "SA-4-0100-02_step9.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Recurring Supplier Invoice
+- Template Used: find
+- RAG Query: "Find Recurring Supplier Invoice"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================

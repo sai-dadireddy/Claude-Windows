@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BA-4-0200-13
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Register Asset from a Capital Project
+WORKDAY ROLE: Project Financial Analyst
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Verify the Fully burden cost rate for the employee
+
+PREREQUISITES:
+- User logged in with Project Financial Analyst permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "13. View fully burden cost in the project/financial tab/Plan"
+2. wait for search results
+3. click search result containing "13. View fully burden cost in the project/financial tab/Plan"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BA-4-0200-13_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Go to Financials > Plan tab and drill into Worker Time for "Project Cost (Fully Burdened Rates)" line
+
+RELATED INFORMATION:
+- Scenario Name: Register Asset from a Capital Project
+- Template Used: view
+- Task/Step: 13. View fully burden cost in the project/financial tab/Plan
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

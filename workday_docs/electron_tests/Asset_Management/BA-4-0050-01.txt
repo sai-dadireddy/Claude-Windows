@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0050-01
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Issue Asset
+WORKDAY ROLE: Business Asset Tracking Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Choose a transaction Effective Date and an Issue To employee. Note that the worktags default to worker the asset is issued to.
+
+PREREQUISITES:
+- User logged in with Business Asset Tracking Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "1. Issue Assets"
+2. wait for search results
+3. click search result containing "1. Issue Assets"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0050-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > Issue to a Worker off Business Asset
+
+RELATED INFORMATION:
+- Scenario Name: Issue Asset
+- Template Used: default
+- Task/Step: 1. Issue Assets
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

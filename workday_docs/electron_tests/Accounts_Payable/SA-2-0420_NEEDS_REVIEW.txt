@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: SA-2-0420
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Invoice Down Payment Invoice
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Ability to create Supplier Invoice Down Payment Invoice
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoice Down Payment Invoice"
+2. wait for search results
+3. click search result containing "Create Supplier Invoice Down Payment Invoice"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-2-0420_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice Down Payment Invoice
+- Template Used: maintain
+- RAG Query: "Create Supplier Invoice Down Payment Invoice"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

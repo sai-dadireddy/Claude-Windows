@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0040-03
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Prepaid Supplier Invoice to Payment
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Accounting should DR Prepaid Spend and CR AP
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. View Supplier Invoice Accounting"
+2. wait for search results
+3. click search result containing "3. View Supplier Invoice Accounting"
+4. wait for page to load
+5. verify data displays
+6. screenshot as "SA-4-0040-03_step6.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related Action off Invoice > Accounting > View Accounting
+
+RELATED INFORMATION:
+- Scenario Name: Prepaid Supplier Invoice to Payment
+- Template Used: view
+- RAG Query: "3. View Supplier Invoice Accounting"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

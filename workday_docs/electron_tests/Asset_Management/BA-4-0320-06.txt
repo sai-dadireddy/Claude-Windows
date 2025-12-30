@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-4-0320-06
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Leases: Finance Lease
+WORKDAY ROLE: Business Asset Tracking Specialist
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+As Business Asset Tracking Specialist, complete asset registration information and Submit.
+
+PREREQUISITES:
+- User logged in with Business Asset Tracking Specialist permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Register Asset (Supplier Contract)"
+2. wait for search results
+3. click search result containing "Register Asset (Supplier Contract)"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-4-0320-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Inbox (BA Tracking Specialist)
+
+RELATED INFORMATION:
+- Scenario Name: Leases: Finance Lease
+- Template Used: default
+- Task/Step: Register Asset (Supplier Contract)
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

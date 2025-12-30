@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: SA-1-0150
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Payment Discounts on Supplier Invoice
+WORKDAY ROLE: Accounts Payable Configurator
+EST. DURATION: 5 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Verify the settings for Exclude From Supplier Invoice Discount Calculation. Note that settings can be overridden at the supplier level in the Payment Options section.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Edit Tenant Setup - Financials"
+2. wait for search results
+3. click search result containing "Edit Tenant Setup - Financials"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "SA-1-0150_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+RELATED INFORMATION:
+- Scenario Name: Payment Discounts on Supplier Invoice
+- Template Used: maintain
+- Task/Step: Edit Tenant Setup - Financials
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

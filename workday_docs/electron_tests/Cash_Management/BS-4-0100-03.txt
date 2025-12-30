@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BS-4-0100-03
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Bank Statement to to GL
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+View Bank Statement to verify that:  1) Status of Bank Statement is Reconciled   2) "475-Check Paid" Statement Line has been auto-reconciled to the expected Check in Workday  3) "242 Collection of Interest Income" Statement Line has been reconciled and an Ad Hoc Bank Transaction has been Automatically created  4) "275 ZBA Credit" Statement Line has been reconciled and an Ad Hoc Bank Transaction has been Automatically created
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. View Bank Statement"
+2. wait for search results
+3. click search result containing "3. View Bank Statement"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BS-4-0100-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+View Bank Statement
+
+RELATED INFORMATION:
+- Scenario Name: Bank Statement to to GL
+- Template Used: view
+- Task/Step: 3. View Bank Statement
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

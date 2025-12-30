@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: SA-4-0070-03
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Manual Invoice from Supplier Contract to Check
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+EST. DURATION: 10 minutes
+RAG CONFIDENCE: 5.0/10.0 ⚠️ NEEDS SME REVIEW
+================================================================================
+
+DESCRIPTION:
+Enter Company and Supplier from the contract that was used for the manual invoice type.  Add Lines to the invoice from the Supplier Contract.
+
+PREREQUISITES:
+- User logged in with Accounts Payable Data Entry Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "3. Create Invoice from Supplier Invoice Workbench"
+2. wait for search results
+3. click search result containing "3. Create Invoice from Supplier Invoice Workbench"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify settings are correct
+8. screenshot as "SA-4-0070-03_step8.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Supplier Invoice Workbench
+
+RELATED INFORMATION:
+- Scenario Name: Manual Invoice from Supplier Contract to Check
+- Template Used: maintain
+- RAG Query: "3. Create Invoice from Supplier Invoice Workbench"
+
+NOTES:
+- ⚠️ This test requires SME review before execution
+- Verify field names and values match actual Workday UI
+
+================================================================================

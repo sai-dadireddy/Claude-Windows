@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: CA-4-0050-04
+FUNCTIONAL AREA: Accounts Receivable
+TEST NAME: Create Deferred Revenue Invoice
+WORKDAY ROLE: Revenue Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: MAINTAIN
+================================================================================
+
+DESCRIPTION:
+Choose Revenue Recognition Method of Number of Days From Date = Current Date Number of Installments = 5  Hit Save and continue  On View Revenue Recognition Schedule page, click Generate Installments  On Generate Installments for Revenue Recognition Schedule page, view Installments and Click OK  You will be taken back to View Revenue Recognition Schedule page, click Submit then OK
+
+PREREQUISITES:
+- User logged in with Revenue Specialist permissions
+- Required access to Accounts Receivable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "4. Create Deferred Revenue Recognition Schedule"
+2. wait for search results
+3. click search result containing "4. Create Deferred Revenue Recognition Schedule"
+4. wait for page to load
+5. verify configuration page displays
+6. review configuration settings
+7. verify all required fields are populated
+8. verify settings are correct
+9. screenshot as "CA-4-0050-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Go to Customer Invoice Line and, as a related action, go to > Customer Invoice Line > Create Revenue Recognition Schedule
+
+RELATED INFORMATION:
+- Scenario Name: Create Deferred Revenue Invoice
+- Template Used: maintain
+- Task/Step: 4. Create Deferred Revenue Recognition Schedule
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

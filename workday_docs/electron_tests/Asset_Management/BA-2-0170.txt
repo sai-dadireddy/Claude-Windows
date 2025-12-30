@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: BA-2-0170
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Impair Asset
+WORKDAY ROLE: Business Asset Accountant
+EST. DURATION: 5 minutes
+TEMPLATE: DEFAULT
+================================================================================
+
+DESCRIPTION:
+Write-down the asset cost using an asset impairment
+
+PREREQUISITES:
+- User logged in with Business Asset Accountant permissions
+- Required access to Asset Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "Impair asset"
+2. wait for search results
+3. click search result containing "Impair asset"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "BA-2-0170_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > Impair off Business Asset
+
+RELATED INFORMATION:
+- Scenario Name: Impair Asset
+- Template Used: default
+- Task/Step: Impair asset
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

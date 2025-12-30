@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: BS-4-0100-04
+FUNCTIONAL AREA: Cash Management
+TEST NAME: Bank Statement to to GL
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+TEMPLATE: VIEW
+================================================================================
+
+DESCRIPTION:
+Review and verify ZBA Accounting Entries
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Cash Management domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "4. Verify Accounting for First Notice Item (ZBA)"
+2. wait for search results
+3. click search result containing "4. Verify Accounting for First Notice Item (ZBA)"
+4. wait for page to load
+5. verify data displays
+6. verify information is accurate
+7. screenshot as "BS-4-0100-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related Action off Ad Hoc Bank Transaction to View Accounting
+
+RELATED INFORMATION:
+- Scenario Name: Bank Statement to to GL
+- Template Used: view
+- Task/Step: 4. Verify Accounting for First Notice Item (ZBA)
+
+NOTES:
+- This test was generated using template-based automation
+- Verify field names match actual Workday UI before execution
+- Adjust wait times based on system performance
+
+================================================================================

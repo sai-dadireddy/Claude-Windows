@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: SA-4-0020-06
+FUNCTIONAL AREA: Accounts Payable
+TEST NAME: Supplier Invoice to Electronic Payment
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 5 minutes
+RAG CONFIDENCE: 4.0/10.0 ❌ MANUAL REQUIRED
+================================================================================
+
+DESCRIPTION:
+Upon approval and completion of Settlement Run - verify that Cash and Accounts Payable accounting entries have been created as expected via related action off the Supplier Invoice Payment.
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required access to Accounts Payable domain
+- Test data prepared and available
+
+ELECTRON STEPS:
+1. enter search box as "6. View Payment Accounting"
+2. wait for search results
+3. click search result containing "6. View Payment Accounting"
+4. wait for page to load
+5. verify data displays
+6. screenshot as "SA-4-0020-06_step6.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data accuracy verified
+- [ ] Screenshots captured with test ID prefix
+
+SUB-TASKS:
+Related action > View Accounting off Approved Payment
+
+RELATED INFORMATION:
+- Scenario Name: Supplier Invoice to Electronic Payment
+- Template Used: view
+- RAG Query: "6. View Payment Accounting"
+
+NOTES:
+- ❌ Insufficient knowledge base coverage for automation
+- Manual testing required - SME must create detailed steps
+
+================================================================================
