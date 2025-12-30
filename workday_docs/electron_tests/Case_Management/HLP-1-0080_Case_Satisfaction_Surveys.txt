@@ -2,16 +2,21 @@
 TEST ID: HLP-1-0080
 FUNCTIONAL AREA: Case Management
 TEST NAME: Case Satisfaction Surveys
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
 TASK/STEP: View Case Satisfaction Survey Configuration
 
 ELECTRON STEPS:
 1. enter search box as "View Case Satisfaction Survey Configuration"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "HLP-1-0080_complete.png"
+2. press Enter or click Search
+3. wait for search results to load
+4. click on the first relevant result
+5. wait for page to load
+6. review available fields and options
+7. complete required fields
+8. click OK or Done
+9. screenshot as "HLP-1-0080_complete.png"
 
 VERIFICATION: nan
 

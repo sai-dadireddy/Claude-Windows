@@ -2,8 +2,8 @@
 TEST ID: HCM-4-0300
 FUNCTIONAL AREA: HCM
 TEST NAME: Update Skills for Worker
-CONFIDENCE: [MEDIUM] Score: 5.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [KB Article: kb_hcm_update_skills_for_worker.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -15,40 +15,53 @@ EST. DURATION: 10 minutes
 PREREQUISITES:
 - User logged in with HR Administrator permissions
 - Required data available in tenant
+- Worker ID for skills update
 
 ELECTRON STEPS:
-1. enter search box as "Worker Profile > Career for Worker Profile > Skills"
+1. enter search box as "{worker_name}"
 2. wait for search results
-3. click search result containing "Worker Profile > Career for Worker Profile > Skills"
-4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-4-0300_complete.png"
+3. click worker result containing "{worker_name}"
+4. wait for worker profile to load
+5. click tab "Career"
+6. wait for page to load
+7. scroll to "Skills"
+8. click button "Edit" in Skills section
+9. wait for skills editor to load
+10. click button "Add" or "Add Skill"
+11. enter Skill field as "Python Programming"
+12. wait for skill search results
+13. click skill result "Python Programming"
+14. select Proficiency Level as "Advanced"
+15. enter Years of Experience as "5"
+16. scroll to "Suggested Skills" section
+17. verify suggested skills are displayed
+18. click button "Add" next to first suggested skill
+19. select Proficiency Level as "Intermediate"
+20. click button "Submit" or "Save"
+21. wait for confirmation
+22. verify message contains "successfully updated"
+23. screenshot as "HCM-4-0300_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Worker profile accessed successfully
+- [ ] Career tab loaded with Skills section
+- [ ] New skill "Python Programming" added with Advanced proficiency
+- [ ] Suggested skills section displayed
+- [ ] Suggested skill added successfully
+- [ ] Confirmation message: "Skills have been successfully updated"
 - [ ] No error messages displayed
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources WSDL - Worker skills and experience operations
+- REST: staffing v7 API - Worker organization and profile data
 
 RAG NOTES:
-Loaded 63 docs from public/private
+Loaded 65 docs from public/private
 Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Worker Profile > Career for Worker Profile > Skills
+Total: 120 documents
+## Results for: Update Skills for Worker
 
-### 1. Admin Guide Glossary (score: 5)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidentia...
+### 1. Kb Hcm Update Skills For Worker (score: 9)
+Comprehensive knowledge base article with detailed navigation, field names,
+proficiency levels, suggested skills feature, and business process workflow.
 ================================================================================

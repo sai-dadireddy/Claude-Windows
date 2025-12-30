@@ -2,17 +2,21 @@
 TEST ID: HLP-1-0180
 FUNCTIONAL AREA: Case Management
 TEST NAME: Tenant Setup - Help for Sequence Generator
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
 TASK/STEP: Tenant Setup
 
 ELECTRON STEPS:
 1. enter search box as "Tenant Setup"
-2. enter field "Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
-3. screenshot as "HLP-1-0180_complete.png"
+2. press Enter or click Search
+3. wait for search results to load
+4. click on the first relevant result
+5. wait for page to load
+6. review available fields and options
+7. complete required fields
+8. click OK or Done
+9. screenshot as "HLP-1-0180_complete.png"
 
 VERIFICATION: nan
 

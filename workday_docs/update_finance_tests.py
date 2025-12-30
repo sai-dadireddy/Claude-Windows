@@ -129,7 +129,7 @@ def process_file(file_path, rag, dry_run=True):
     # Extract task name from filename
     task_name = extract_task_name(file_path)
     if not task_name:
-        print(f"  ❌ Could not extract task name from filename")
+        print(f"  ERROR - Could not extract task name from filename")
         return False
 
     print(f"  Task: {task_name}")
@@ -140,15 +140,15 @@ def process_file(file_path, rag, dry_run=True):
 
     # Check if it has placeholder text
     if 'complete required actions' not in content:
-        print(f"  ⏭️  SKIP - Already has detailed steps")
+        print(f"  SKIP - Already has detailed steps")
         return False
 
     # Query RAG
-    print(f"  🔍 Querying RAG...")
+    print(f"  Querying RAG...")
     results = rag.search(task_name, top_k=3)
 
     if results:
-        print(f"  📊 Top RAG score: {results[0]['score']:.1f}")
+        print(f"  Top RAG score: {results[0]['score']:.1f}")
 
     # Generate steps
     steps, confidence = generate_electron_steps(task_name, results, test_data['test_id'])
@@ -158,12 +158,13 @@ def process_file(file_path, rag, dry_run=True):
 
     # Write or preview
     if dry_run:
-        print(f"  📝 PREVIEW (confidence: {confidence:.1f}):")
-        print("\n" + updated_content[:400] + "..." if len(updated_content) > 400 else updated_content)
+        print(f"  PREVIEW (confidence: {confidence:.1f}):")
+        preview = updated_content[:400] + "..." if len(updated_content) > 400 else updated_content
+        print(preview)
     else:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(updated_content)
-        print(f"  ✅ Updated (confidence: {confidence:.1f})")
+        print(f"  UPDATED (confidence: {confidence:.1f})")
 
     return True
 

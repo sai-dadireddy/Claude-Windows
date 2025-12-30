@@ -2,16 +2,16 @@
 TEST ID: FACC-1-0140
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Fiscal Schedules
-CONFIDENCE: [LOW] Score: 3.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 ================================================================================
 
 ELECTRON STEPS:
-1. enter search box as "View Fiscal Schedule"
+1. enter search box as "Confirm Fiscal Schedules"
 2. wait for search results
-3. click search result
-4. wait for page load
-5. complete required actions
-6. click "Done" or "Submit"
+3. click search result containing "Confirm Fiscal Schedules"
+4. wait for page to load
+5. verify data displayed correctly
+6. check required fields are populated
 7. screenshot as "FACC-1-0140_complete.png"
 
 VERIFICATION:

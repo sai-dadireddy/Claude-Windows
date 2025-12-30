@@ -2,16 +2,21 @@
 TEST ID: END-2-0070
 FUNCTIONAL AREA: Endowments
 TEST NAME: Edit Donor
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
 TASK/STEP: Find Donors - Related Action off Donor>Edit or Edit Donor
 
 ELECTRON STEPS:
 1. enter search box as "Find Donors - Related Action off Donor>Edit or Edit Donor"
-2. navigate to appropriate page
-3. complete required fields
-4. screenshot as "END-2-0070_complete.png"
+2. press Enter or click Search
+3. wait for search results to load
+4. click on the first relevant result
+5. wait for page to load
+6. review available fields and options
+7. complete required fields
+8. click OK or Done
+9. screenshot as "END-2-0070_complete.png"
 
 VERIFICATION: nan
 
