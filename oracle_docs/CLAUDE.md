@@ -58,15 +58,51 @@ https://{host}/PSIGW/HttpListeningConnector
 - **Routing**: Connect service operations to handlers
 - **Connectors**: HTTP, REST, JMS, FTP, SMTP
 
-## Scraping Strategy
+## Download Strategy Decision Tree
 
-### For MOS (My Oracle Support)
-Use **Claude-in-Chrome** with human-like behavior:
-1. Navigate using `mcp__claude-in-chrome__navigate`
-2. Wait naturally between actions (2-5 seconds)
-3. Scroll before clicking
-4. Extract with `mcp__claude-in-chrome__read_page`
-5. Save to `private/` folder
+| Source | Method | Why |
+|--------|--------|-----|
+| **docs.oracle.com** (public) | `curl -sLO` | No auth, direct URLs |
+| **MOS KB articles** (content) | Claude-in-Chrome `read_page` | Auth required |
+| **MOS downloads** (PDFs/ZIPs) | Claude-in-Chrome **click** | Uses `javascript:;` handlers |
+| **PeopleBooks PDFs** | `curl -sLO` | Direct URLs, no auth |
+
+### Public Docs (docs.oracle.com) - USE CURL
+```bash
+# Direct download - no auth needed
+curl -sLO "https://docs.oracle.com/cd/G41076_01/psft/pdf/pt862tacs-b112025.pdf"
+
+# Batch download with delays (3-5 sec)
+for url in $pdf_urls; do
+  curl -sLO "$url"
+  sleep 3
+done
+```
+
+### MOS (support.oracle.com) - USE CLAUDE-IN-CHROME
+
+**For reading KB content:**
+```python
+mcp__claude-in-chrome__navigate(url="https://support.oracle.com/...", tabId=TAB_ID)
+mcp__claude-in-chrome__computer(action="wait", duration=3)
+mcp__claude-in-chrome__read_page(tabId=TAB_ID)  # Extract content
+```
+
+**For downloading files (PDFs/ZIPs):**
+MOS uses `javascript:;` handlers - must click to download:
+```python
+# 1. Find download links
+mcp__claude-in-chrome__find(query="PDF download", tabId=TAB_ID)
+
+# 2. Click to trigger download (auth check happens here)
+mcp__claude-in-chrome__computer(action="left_click", ref="download_ref", tabId=TAB_ID)
+
+# 3. Wait for download
+mcp__claude-in-chrome__computer(action="wait", duration=5)
+
+# 4. Move from Downloads to oracle_docs
+# mv ~/Downloads/file.pdf ~/oracle_docs/private/
+```
 
 ### Anti-Bot Best Practices
 - Use your logged-in Chrome session
@@ -74,12 +110,7 @@ Use **Claude-in-Chrome** with human-like behavior:
 - Don't scrape too fast
 - Scroll naturally before interacting
 - Avoid hidden elements (honeypots)
-
-### For Public Docs (docs.oracle.com)
-Can use direct fetch since no auth required:
-```bash
-curl -sL "https://docs.oracle.com/..." > output.html
-```
+- **MOS downloads**: Must click, can't curl (JavaScript handlers)
 
 ## Document ID Mapping
 
