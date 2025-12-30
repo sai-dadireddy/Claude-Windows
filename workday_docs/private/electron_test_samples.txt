@@ -1,0 +1,674 @@
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron test scenarios covering key functional areas:
+1. HCM (Human Capital Management)
+2. Payroll for the United States
+3. Procurement
+4. Benefits
+5. Accounting & Finance
+
+Each scenario follows the standard Electron test template with detailed steps,
+verification criteria, and API alternatives.
+
+================================================================================
+
+
+================================================================================
+TEST ID: HCM-1-0010
+FUNCTIONAL AREA: HCM (Human Capital Management)
+TEST NAME: Audit Company Setup
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 5 minutes
+================================================================================
+
+DESCRIPTION:
+Verify that all companies loaded into the tenant are accurate. Review 'Included
+Organizations' for any Cost Center Company Hierarchy (if applicable). This test
+ensures data integrity and completeness of organizational company structures.
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Company data has been loaded into the tenant
+- Access to reporting domain for company extraction
+
+ELECTRON STEPS:
+1. enter search box as "Extract Companies"
+2. wait for search results
+3. click search result containing "Extract Companies"
+4. wait for page to load
+5. verify report parameters page displays
+6. click "OK" to run report with default parameters
+7. wait for report to generate
+8. verify column headers: Company Reference ID, Company Name, Organization Type
+9. scroll down to review company list
+10. verify each company has complete data (no blank fields)
+11. click "Export to Excel" button
+12. wait for export confirmation
+13. screenshot as "HCM-1-0010_company_extract.png"
+14. enter search box as "Find Organizations"
+15. wait for search results
+16. click search result containing "Find Organizations"
+17. wait for page to load
+18. select organization type filter "Company"
+19. click "OK" to search
+20. wait for results to load
+21. verify company count matches extract report
+22. screenshot as "HCM-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] All companies are present in the extract
+- [ ] Company data is complete (no missing Reference IDs or names)
+- [ ] Cost Center Company Hierarchy includes expected organizations
+- [ ] Company count matches between extract and search results
+- [ ] Data quality is accurate and matches source system
+
+API ALTERNATIVE:
+- SOAP Service: Human_Resources
+  Operation: Get_Organizations
+  Request Parameters:
+    - Organization_Type: Company
+    - Include_Inactive: false
+
+  Sample SOAP Request:
+  <bsvc:Get_Organizations_Request>
+    <bsvc:Request_Criteria>
+      <bsvc:Organization_Type_Reference>
+        <bsvc:ID bsvc:type="Organization_Type_ID">COMPANY</bsvc:ID>
+      </bsvc:Organization_Type_Reference>
+    </bsvc:Request_Criteria>
+  </bsvc:Get_Organizations_Request>
+
+- REST API: Not directly available (use SOAP for organizational data)
+
+RELATED WSDL OPERATIONS:
+- Get_Organization: Retrieve detailed organization data
+- Find_Organization: Search for organizations by criteria
+- Get_Locations: Retrieve location data associated with companies
+
+================================================================================
+
+
+================================================================================
+TEST ID: USP-1-0010
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Review Period Schedule Configuration
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 5 minutes
+================================================================================
+
+DESCRIPTION:
+Verify that all expected period schedules are present in the tenant, dates are
+correct (period start, period end, payment date, and Accounting Date Override)
+and that forward accrual settings are as expected. Verify that period schedules
+are linked to Absence/Time Tracking as applicable. Ensure that the correct
+number of periods are in place for each year. If applicable, add Continuous
+Payroll Calculation configuration.
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Period schedules have been configured in the tenant
+- Fiscal year and calendar configuration is complete
+- Access to payroll configuration domain
+
+ELECTRON STEPS:
+1. enter search box as "View Period Schedule"
+2. wait for search results
+3. click search result containing "View Period Schedule"
+4. wait for page to load
+5. verify period schedule selection page displays
+6. click dropdown "Select Period Schedule"
+7. select first period schedule from list
+8. click "OK" to view schedule
+9. wait for schedule details to load
+10. verify schedule details section displays:
+    - Period Schedule Name
+    - Frequency (Weekly, Bi-Weekly, Semi-Monthly, Monthly)
+    - Number of periods per year
+11. scroll to period dates table
+12. verify column headers: Period, Period Start, Period End, Payment Date, Accounting Date Override
+13. for each period row:
+    - verify Period Start Date is present
+    - verify Period End Date is present
+    - verify Payment Date is present
+    - verify dates are in logical sequence
+14. click "Forward Accrual Settings" tab
+15. verify forward accrual configuration is as expected
+16. screenshot as "USP-1-0010_period_schedule.png"
+17. click "Time Tracking" tab (if applicable)
+18. verify time tracking linkage is configured
+19. click "Absence" tab (if applicable)
+20. verify absence linkage is configured
+21. screenshot as "USP-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] All expected period schedules are present in the tenant
+- [ ] Period start dates, end dates, and payment dates are accurate
+- [ ] Accounting Date Override is configured correctly (if applicable)
+- [ ] Forward accrual settings match requirements
+- [ ] Period schedules are linked to Absence/Time Tracking as needed
+- [ ] Correct number of periods exist for each fiscal year
+- [ ] Continuous Payroll Calculation is configured (if applicable)
+- [ ] Period dates follow logical sequence without gaps or overlaps
+
+API ALTERNATIVE:
+- SOAP Service: Payroll
+  Operation: Get_Period_Schedules
+  Request Parameters:
+    - Period_Schedule_Reference (optional for specific schedule)
+    - Include_Period_Schedule_Data: true
+
+  Sample SOAP Request:
+  <bsvc:Get_Period_Schedules_Request>
+    <bsvc:Request_Criteria>
+      <bsvc:Include_Period_Schedule_Data>true</bsvc:Include_Period_Schedule_Data>
+    </bsvc:Request_Criteria>
+  </bsvc:Get_Period_Schedules_Request>
+
+- REST API: Payroll API (if available in your tenant version)
+  Endpoint: /api/v1/{tenant}/periodSchedules
+  Method: GET
+  Parameters: ?limit=100&offset=0
+
+RELATED WSDL OPERATIONS:
+- Get_Payroll_Calendar: Retrieve payroll calendar configuration
+- Get_Time_Off_Plan: Review time off plans linked to period schedules
+- Submit_Payroll_Input: Submit payroll for a specific period
+
+NOTES:
+- Period schedules cannot be deleted once payroll has been run
+- Changes to period dates may require payroll recalculation
+- Verify period schedule assignment to employee populations
+
+================================================================================
+
+
+================================================================================
+TEST ID: PRO-1-0010
+FUNCTIONAL AREA: Procurement
+TEST NAME: Suppliers Data Quality Review
+WORKDAY ROLE: Supplier Administrator
+EST. DURATION: 120 minutes
+================================================================================
+
+DESCRIPTION:
+Review supplier data for completeness and data quality. This comprehensive
+review ensures that all supplier records contain accurate and complete
+information including contact details, payment terms, tax information, and
+banking details. Critical for procurement operations and financial compliance.
+
+PREREQUISITES:
+- User logged in with Supplier Administrator permissions
+- Supplier data has been loaded or migrated into the tenant
+- Access to supplier management and reporting domains
+- Understanding of required supplier data fields per company policy
+
+ELECTRON STEPS:
+1. enter search box as "Find Suppliers"
+2. wait for search results
+3. click search result containing "Find Suppliers"
+4. wait for page to load
+5. verify supplier search page displays
+6. leave search criteria blank (to retrieve all suppliers)
+7. click "OK" to search
+8. wait for results to load
+9. verify supplier list displays with columns:
+   - Supplier Name
+   - Supplier Category
+   - Status (Active/Inactive)
+   - Tax ID
+   - Payment Terms
+10. note total supplier count displayed
+11. screenshot as "PRO-1-0010_supplier_list.png"
+12. click first supplier in list
+13. wait for supplier detail page to load
+14. verify "Supplier Details" section contains:
+    - Supplier Name (required)
+    - Supplier Category (required)
+    - Status (Active/Inactive)
+    - Currency (required)
+15. click "Tax Information" tab
+16. verify tax data:
+    - Tax ID Type (SSN, EIN, etc.)
+    - Tax ID Number
+    - Tax Country
+17. screenshot as "PRO-1-0010_tax_info.png"
+18. click "Payment Terms" tab
+19. verify payment terms configuration:
+    - Payment Terms (Net 30, Net 60, etc.)
+    - Discount Terms (if applicable)
+    - Payment Method
+20. click "Banking Information" tab
+21. verify banking details (if ACH/Wire enabled):
+    - Bank Name
+    - Account Number (masked)
+    - Routing Number
+    - Account Type (Checking/Savings)
+22. screenshot as "PRO-1-0010_banking_info.png"
+23. click "Contact Information" tab
+24. verify contact details:
+    - Primary Contact Name
+    - Email Address
+    - Phone Number
+    - Address (Street, City, State, Postal Code, Country)
+25. click "Back to Search Results"
+26. enter search box as "Extract Suppliers"
+27. wait for search results
+28. click search result containing "Extract Suppliers"
+29. wait for report parameters page to load
+30. select report parameters:
+    - Include Inactive: No
+    - Include Tax Information: Yes
+    - Include Banking: Yes
+31. click "OK" to run extract
+32. wait for report to generate
+33. verify extract includes all key fields
+34. click "Export to Excel"
+35. wait for download confirmation
+36. screenshot as "PRO-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] All suppliers are present in the system
+- [ ] Supplier names are complete and properly formatted
+- [ ] Tax IDs are present and valid format
+- [ ] Payment terms are configured for all active suppliers
+- [ ] Banking information is complete for ACH-enabled suppliers
+- [ ] Contact information includes email and phone for all suppliers
+- [ ] Addresses are complete with all required fields
+- [ ] Supplier categories are assigned appropriately
+- [ ] No duplicate supplier records exist
+- [ ] Data quality issues are documented for remediation
+- [ ] Extract report matches UI data
+
+API ALTERNATIVE:
+- SOAP Service: Resource_Management
+  Operation: Get_Suppliers
+  Request Parameters:
+    - Include_Inactive: false
+    - Include_Reference_Only: false
+
+  Sample SOAP Request:
+  <bsvc:Get_Suppliers_Request>
+    <bsvc:Request_Criteria>
+      <bsvc:Include_Inactive>false</bsvc:Include_Inactive>
+    </bsvc:Request_Criteria>
+    <bsvc:Response_Group>
+      <bsvc:Include_Reference>true</bsvc:Include_Reference>
+      <bsvc:Include_Supplier_Data>true</bsvc:Include_Supplier_Data>
+    </bsvc:Response_Group>
+  </bsvc:Get_Suppliers_Request>
+
+- REST API: Procurement API
+  Endpoint: /api/v1/{tenant}/suppliers
+  Method: GET
+  Parameters: ?limit=100&offset=0&active=true
+
+RELATED WSDL OPERATIONS:
+- Put_Supplier: Create or update supplier records
+- Get_Supplier_Invoices: Review supplier invoice history
+- Get_Spend_Category: Review supplier spend categories
+
+DATA QUALITY CHECKS:
+1. Required Fields: Name, Category, Currency, Tax ID
+2. Recommended Fields: Payment Terms, Contact Email, Phone
+3. Conditional Fields: Banking (if ACH enabled), Tax Forms (if US)
+4. Validation Rules: Tax ID format, Email format, Phone format
+
+REMEDIATION PROCESS:
+- Document incomplete records in spreadsheet
+- Prioritize by supplier spend volume
+- Contact procurement team for missing data
+- Update supplier records via UI or web service
+- Re-validate after updates
+
+================================================================================
+
+
+================================================================================
+TEST ID: BEN-1-0010
+FUNCTIONAL AREA: Benefits
+TEST NAME: Verify Benefit Plans
+WORKDAY ROLE: Benefits Administrator
+EST. DURATION: 30 minutes
+================================================================================
+
+DESCRIPTION:
+Verify benefit plan configuration by checking each component of each plan to
+ensure accuracy. This includes plan structure, eligibility rules, coverage
+levels, employee and employer contributions, and dependent/beneficiary options.
+Critical for benefits enrollment and accurate premium calculations.
+
+PREREQUISITES:
+- User logged in with Benefits Administrator permissions
+- Benefit plans have been configured in the tenant
+- Understanding of company benefit plan design
+- Access to benefits administration domain
+
+ELECTRON STEPS:
+1. enter search box as "Benefit Plans"
+2. wait for search results
+3. click search result containing "Benefit Plans"
+4. wait for page to load
+5. verify benefit plans list displays
+6. note plan categories:
+   - Health Plans (Medical, Dental, Vision)
+   - Insurance Plans (Life, Disability)
+   - Retirement Plans (401k, Pension)
+   - Other Benefits (FSA, HSA, Commuter)
+7. screenshot as "BEN-1-0010_plan_list.png"
+8. click first health plan in list
+9. wait for plan details page to load
+10. verify "Plan Details" section:
+    - Plan Name
+    - Plan Type (Medical, Dental, etc.)
+    - Status (Active/Inactive)
+    - Effective Date Range
+    - Plan Owner (Insurance Carrier)
+11. click "Eligibility Rules" tab
+12. verify eligibility configuration:
+    - Eligible Employee Types (Full-time, Part-time)
+    - Waiting Period (Immediate, 30 days, 60 days, etc.)
+    - Eligibility Event Rules
+13. screenshot as "BEN-1-0010_eligibility.png"
+14. click "Coverage Levels" tab
+15. verify coverage options:
+    - Employee Only
+    - Employee + Spouse
+    - Employee + Children
+    - Employee + Family
+16. for each coverage level, verify:
+    - Coverage Level Name
+    - Employee Cost (per pay period)
+    - Employer Cost (per pay period)
+17. screenshot as "BEN-1-0010_coverage_levels.png"
+18. click "Contribution Calculations" tab
+19. verify contribution rules:
+    - Contribution Basis (Flat Amount, Percentage, etc.)
+    - Employee Contribution Amount/Percentage
+    - Employer Contribution Amount/Percentage
+    - Frequency (Per Pay Period, Monthly, Annual)
+20. click "Dependent Rules" tab
+21. verify dependent configuration:
+    - Eligible Dependent Types (Spouse, Child, Domestic Partner)
+    - Age Limits for Children
+    - Student Status Extensions
+22. click "Beneficiary Rules" tab (for insurance plans)
+23. verify beneficiary options:
+    - Primary Beneficiary allowed
+    - Contingent Beneficiary allowed
+    - Percentage allocation rules
+24. screenshot as "BEN-1-0010_dependents_beneficiaries.png"
+25. click "Back to Benefit Plans"
+26. repeat steps 8-24 for additional key plans:
+    - One Dental Plan
+    - One Life Insurance Plan
+    - One Retirement Plan
+27. enter search box as "Extract Benefit Plans"
+28. wait for search results
+29. click search result containing "Extract Benefit Plans"
+30. wait for report parameters
+31. select "Active Plans Only"
+32. click "OK" to run extract
+33. wait for report generation
+34. verify extract includes all configured plans
+35. screenshot as "BEN-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] All benefit plans are configured and active
+- [ ] Plan names and types are correct
+- [ ] Effective dates match plan documents
+- [ ] Eligibility rules match company policy
+- [ ] Coverage levels include all required options
+- [ ] Employee and employer contributions are accurate
+- [ ] Contribution calculations use correct formula
+- [ ] Dependent eligibility rules match plan design
+- [ ] Beneficiary rules are configured for insurance plans
+- [ ] Age limits and student extensions are correct
+- [ ] Plan owner/carrier information is accurate
+- [ ] Extract report matches UI configuration
+
+API ALTERNATIVE:
+- SOAP Service: Benefits_Administration
+  Operation: Get_Benefit_Plans
+  Request Parameters:
+    - Include_Inactive: false
+    - Include_Plan_Details: true
+
+  Sample SOAP Request:
+  <bsvc:Get_Benefit_Plans_Request>
+    <bsvc:Request_Criteria>
+      <bsvc:Include_Inactive>false</bsvc:Include_Inactive>
+    </bsvc:Request_Criteria>
+    <bsvc:Response_Group>
+      <bsvc:Include_Reference>true</bsvc:Include_Reference>
+      <bsvc:Include_Benefit_Plan_Data>true</bsvc:Include_Benefit_Plan_Data>
+    </bsvc:Response_Group>
+  </bsvc:Get_Benefit_Plans_Request>
+
+- REST API: Benefits API (if available)
+  Endpoint: /api/v1/{tenant}/benefitPlans
+  Method: GET
+  Parameters: ?limit=100&active=true
+
+RELATED WSDL OPERATIONS:
+- Get_Benefit_Coverages: Review coverage elections for employees
+- Get_Enrollment_Events: Review enrollment event processing
+- Submit_Benefits_Enrollment: Process enrollment changes
+
+VALIDATION CHECKLIST:
+Per Plan Component:
+1. Plan Structure: Name, Type, Status, Dates ✓
+2. Eligibility: Employee types, waiting periods ✓
+3. Coverage: Levels, costs, employer contributions ✓
+4. Dependents: Types, age limits, extensions ✓
+5. Beneficiaries: Rules, allocation, contingent ✓
+6. Contributions: Basis, amounts, frequency ✓
+
+COMMON ISSUES TO CHECK:
+- Contribution amounts not matching plan documents
+- Missing coverage levels (e.g., Employee + Children)
+- Incorrect eligibility waiting periods
+- Missing dependent age limits
+- Beneficiary rules not configured for life insurance
+- Effective dates not aligned with plan year
+
+================================================================================
+
+
+================================================================================
+TEST ID: FACC-1-0010
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Confirm Organization Types
+WORKDAY ROLE: Finance Organization Admin
+EST. DURATION: 5 minutes
+================================================================================
+
+DESCRIPTION:
+Verify list of Organization Types for completeness. Organization Types define
+the classification structure for financial and operational reporting hierarchies.
+This test ensures all required organization types are configured to support
+chart of accounts, cost centers, and financial reporting requirements.
+
+PREREQUISITES:
+- User logged in with Finance Organization Admin permissions
+- Organization types have been configured during tenant setup
+- Understanding of required organization hierarchy structure
+- Access to organizational setup domain
+
+ELECTRON STEPS:
+1. enter search box as "Organization Types"
+2. wait for search results
+3. click search result containing "Organization Types"
+4. wait for page to load
+5. verify organization types list displays
+6. verify standard organization types are present:
+   - Company
+   - Cost Center
+   - Region
+   - Supervisory Organization
+   - Fund
+   - Grant
+   - Program
+   - Project
+   - Gift (if applicable for non-profits)
+   - Custom Organization Types (if configured)
+7. for each organization type in list:
+   - verify Organization Type Name is displayed
+   - verify Reference ID is displayed
+   - verify Active status indicator
+8. screenshot as "FACC-1-0010_org_types_list.png"
+9. click on "Company" organization type
+10. wait for detail page to load
+11. verify organization type details:
+    - Organization Type Name: Company
+    - Reference ID: COMPANY
+    - Description present
+    - Active: Yes
+12. verify "Used In" section shows:
+    - Organization Hierarchies (which hierarchies use this type)
+    - Reporting structures
+13. click "Related Actions" dropdown
+14. verify available actions:
+    - Edit Organization Type
+    - View Organizations of This Type
+15. screenshot as "FACC-1-0010_company_details.png"
+16. click "Back to Organization Types"
+17. click on "Cost Center" organization type
+18. wait for detail page to load
+19. verify cost center configuration:
+    - Used for financial accounting: Yes
+    - Cost Center ID format requirements
+    - Hierarchy associations
+20. screenshot as "FACC-1-0010_cost_center_details.png"
+21. click "Back to Organization Types"
+22. verify custom organization types (if applicable):
+    - Custom Type 1 (if configured)
+    - Custom Type 2 (if configured)
+23. enter search box as "Extract Organization Types"
+24. wait for search results
+25. if extract report exists:
+    - click search result
+    - run report
+    - verify all organization types are included
+26. screenshot as "FACC-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] All standard organization types are present:
+      • Company ✓
+      • Cost Center ✓
+      • Region ✓
+      • Supervisory Organization ✓
+      • Fund ✓ (if applicable)
+      • Grant ✓ (if applicable)
+      • Program ✓ (if applicable)
+      • Project ✓ (if applicable)
+- [ ] Custom organization types match requirements (if any)
+- [ ] Each organization type has valid Reference ID
+- [ ] Organization types are set to Active status
+- [ ] Cost Center type is configured for financial accounting
+- [ ] Company type is configured for legal entity reporting
+- [ ] Organization types are assigned to correct hierarchies
+- [ ] No duplicate organization types exist
+- [ ] Organization type descriptions are clear and accurate
+
+API ALTERNATIVE:
+- SOAP Service: Financial_Management
+  Operation: Get_Organization_Types
+  Request Parameters:
+    - Include_Inactive: false
+
+  Sample SOAP Request:
+  <bsvc:Get_Organization_Types_Request>
+    <bsvc:Request_Criteria>
+      <bsvc:Include_Inactive>false</bsvc:Include_Inactive>
+    </bsvc:Request_Criteria>
+    <bsvc:Response_Group>
+      <bsvc:Include_Reference>true</bsvc:Include_Reference>
+      <bsvc:Include_Organization_Type_Data>true</bsvc:Include_Organization_Type_Data>
+    </bsvc:Response_Group>
+  </bsvc:Get_Organization_Types_Request>
+
+- SOAP Service: Human_Resources
+  Operation: Get_Organization_Types (alternate service)
+
+  Note: Organization Types may be available via multiple WSDL services
+  depending on functional area (Finance vs. HR vs. Projects)
+
+- REST API: Organization API (if available)
+  Endpoint: /api/v1/{tenant}/organizationTypes
+  Method: GET
+  Parameters: ?active=true
+
+RELATED WSDL OPERATIONS:
+- Get_Organizations: Retrieve organizations of specific types
+- Get_Organization_Hierarchies: Review hierarchy structures
+- Put_Organization_Type: Create or update organization types
+
+ORGANIZATION TYPE USAGE:
+
+Financial Accounting:
+- Company: Legal entity for financial reporting and compliance
+- Cost Center: Cost allocation and departmental budgeting
+- Fund: Restricted fund accounting (non-profit, higher ed)
+- Grant: Grant and award tracking
+
+Human Resources:
+- Supervisory Organization: Reporting structure and manager hierarchy
+- Location: Geographic organization structure
+- Cost Center: HR cost allocation
+
+Projects & Grants:
+- Project: Project-based organization and cost tracking
+- Program: Program-level organization structure
+- Grant: Grant-funded project organization
+
+CONFIGURATION NOTES:
+- Organization types cannot be deleted if organizations exist
+- Changes to organization type configuration affect reporting
+- Cost Center type must be enabled for financial accounting
+- Custom organization types require careful planning
+- Consult with enterprise architect before adding new types
+
+VALIDATION RULES:
+1. Required Types: Company, Cost Center, Supervisory Org
+2. Recommended Types: Region, Location (if multi-site)
+3. Conditional Types: Fund, Grant (non-profit/higher ed only)
+4. Custom Types: Must align with reporting requirements
+5. Reference IDs: Must be unique and follow naming standards
+
+================================================================================
+
+END OF ELECTRON TEST SCENARIOS
+================================================================================
+
+DOCUMENT INFORMATION:
+- Total Scenarios: 5
+- Functional Areas Covered: 5
+- Total Estimated Duration: 165 minutes
+- Generated from: test_scenarios_v2.xlsx (6858 total scenarios)
+
+USAGE NOTES:
+1. These scenarios are templates - customize for your specific tenant
+2. Screenshots should be saved with consistent naming: {TEST_ID}_{description}.png
+3. Verification checklists must be completed for test to pass
+4. API alternatives provided for automation opportunities
+5. WSDL operations listed for SOAP API integration reference
+
+NEXT STEPS:
+1. Review scenarios with business stakeholders
+2. Customize verification criteria for your requirements
+3. Execute scenarios in test environment
+4. Document any deviations or issues found
+5. Use API alternatives to automate repetitive validations
+
+For additional scenarios or functional areas, refer to the complete Excel file:
+C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\private\test_scenarios_v2.xlsx
+
+For Workday API documentation and WSDL operations:
+C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\wsdl\
+C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\wsdl_index.json
+
+================================================================================
