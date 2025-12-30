@@ -260,7 +260,7 @@ def main():
         else:
             stats['manual'] += 1
 
-        print(f"  ✓ Generated: {os.path.basename(filepath)} (confidence: {confidence:.1f})")
+        print(f"  [OK] Generated: {os.path.basename(filepath)} (confidence: {confidence:.1f})")
 
     # Print summary
     print("\n" + "="*70)

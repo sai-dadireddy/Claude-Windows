@@ -1,0 +1,8 @@
+TEST ID: PRO-4-0060
+STATUS: [MANUAL REQUIRED]
+REASON: Missing Task/Step - need SME input
+
+SCENARIO NAME: Scheduled Invoice from Supplier Contract to Check
+DESCRIPTION: nan
+EXPECTED RESULT: nan
+WORKDAY ROLE: nan

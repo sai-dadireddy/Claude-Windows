@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: PRO-3-1680
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Inventory Transaction
+(Optional based on Requisition type / Purchase order Type)
+CONFIDENCE: [HIGH] Score: 9.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Inventory Transaction
+(Optional based on Requisition type / Purchase order Type)
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Putaway transaction occurred and check Accounting."
+2. wait for search results (2 seconds)
+3. click search result containing "Verify Putaway transaction occurred and check Accounting."
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1680_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Accountant
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

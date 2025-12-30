@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: PRO-3-1650
+FUNCTIONAL AREA: Procurement
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Issue Purchase Order
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "From the related action from the PO ID -> Purchase Order -> Issue
+OK
+
+Verify Purchase Order is "Issued""
+2. wait for search results (2 seconds)
+3. click search result containing "From the related action from the PO ID -> Purchase Order -> Issue
+OK
+
+Verify Purchase Order is "Issued""
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1650_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

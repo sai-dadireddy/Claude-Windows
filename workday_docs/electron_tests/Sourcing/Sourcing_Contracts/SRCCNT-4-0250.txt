@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRCCNT-4-0250
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Approve a Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 21.0)
+================================================================================
+
+DESCRIPTION:
+Approve a contract document
+
+TASK / STEP:
+1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Select the 'Approve' button
+3. Click on the 'Submit Response' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Select the 'Approve' button
+3. Click on the 'Submit Response' button"
+2. wait for search results
+3. click search result containing "1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Select the 'Approve' button
+3. Click on the 'Submit Response' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: Note: Depending on the approval flow requirements, the contract will then be routed to the next approver (or updated to Approved status if there is no other approval requirement)
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0250_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: Depending on the approval flow requirements, the contract will then be routed to the next approver (or updated to Approved status if there is no other approval requirement)
+
+================================================================================

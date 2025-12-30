@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: SRCSM-4-0160
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Create Onboarding Form Intake Request
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 44.0)
+================================================================================
+
+DESCRIPTION:
+Review intake form for supplier onboarding request
+
+TASK / STEP:
+1. Use intake link populated under the Supplier Forms project type
+2. Navigate to link in your browser. 
+3. Populate the request reviewing custom fields & tabs. 
+4. Click on the 'Submit Request' button when done.
+5. Review the Intake Form Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request.
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Use intake link populated under the Supplier Forms project type
+2. Navigate to link in your browser. 
+3. Populate the request reviewing custom fields & tabs. 
+4. Click on the 'Submit Request' button when done.
+5. Review the Intake Form Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request."
+2. wait for search results
+3. click search result containing "1. Use intake link populated under the Supplier Forms project type
+2. Navigate to link in your browser. 
+3. Populate the request reviewing custom fields & tabs. 
+4. Click on the 'Submit Request' button when done.
+5. Review the Intake Form Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCSM-4-0160_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

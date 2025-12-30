@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0030-07
+FUNCTIONAL AREA: Procurement
+TEST NAME: Procurement Card Load to Payment
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that Settlement Run is routing as expected for approval
+
+WORKDAY ROLE: Various (depending on approval process)
+
+ELECTRON STEPS:
+1. enter search box as "7. Approve Settlement Run"
+2. wait for search results (2 seconds)
+3. click search result containing "7. Approve Settlement Run"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0030-07_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

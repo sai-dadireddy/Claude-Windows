@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-3-1640
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Purchase Order
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Purchase Order
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Company - Enter company from Requisition
+Document Date On or After - Date of Test
+Requisition - Enter requisition ID
+OK
+
+Click on Spyglass to view the Purchase Order
+Verify the item is the Substitute Item"
+2. wait for search results (2 seconds)
+3. click search result containing "Company - Enter company from Requisition
+Document Date On or After - Date of Test
+Requisition - Enter requisition ID
+OK
+
+Click on Spyglass to view the Purchase Order
+Verify the item is the Substitute Item"
+4. wait for page to load (3 seconds)
+5. ## Results for: Company - Enter company from Requisition
+6. Requisition - Enter requisition ID
+7. Click on Spyglass to view the Purchase Order
+8. screenshot as "PRO-3-1640_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

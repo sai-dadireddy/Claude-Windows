@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0020-05
+FUNCTIONAL AREA: Procurement
+TEST NAME: Process Match Exception
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+The Supplier Invoice will run through matching. Match status should be "Exceptions" Verify that Match Exception was routed to the correct role.  In user's Inbox, hit the button that says "Request Match Exception Override" Specify Override Reason and then hit OK
+
+WORKDAY ROLE: Various (depending on approval process)
+
+ELECTRON STEPS:
+1. enter search box as "5. View Match Exception and request Match Exception Override"
+2. wait for search results (2 seconds)
+3. click search result containing "5. View Match Exception and request Match Exception Override"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0020-05_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

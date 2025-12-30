@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: EXP-1-0050
+CONFIDENCE SCORE: 7.0/10.0
+FUNCTIONAL AREA: Expenses
+TEST NAME: Payment Election Rules
+================================================================================
+
+DESCRIPTION:
+Verify Payment Election Rule setup.
+
+ELECTRON STEPS:
+1. enter search box as "Payment Election Rules for "Election Rule Name" Expense Payment"
+2. wait for search results
+3. click search result containing "Payment Election Rules for "Election Rule Name" Expense Payment"
+4. wait for page to load
+5. screenshot as "EXP-1-0050_complete.png"
+
+================================================================================

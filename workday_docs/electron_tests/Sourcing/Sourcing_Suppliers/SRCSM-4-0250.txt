@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: SRCSM-4-0250
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Launch a Performance Review
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 30.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Pipeline OR from a Contract soon-to-expire
+2. Create a new Performance Review Project
+3. Add supplier
+4. On the Reviews tab, click New and select from the templates or add a blank review (Master template)
+4a. Modify the scorecard questions, weights, and stakeholder visibility as needed prior to publishing
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Pipeline OR from a Contract soon-to-expire
+2. Create a new Performance Review Project
+3. Add supplier
+4. On the Reviews tab, click New and select from the templates or add a blank review (Master template)
+4a. Modify the scorecard questions, weights, and stakeholder visibility as needed prior to publishing"
+2. wait for search results
+3. click search result containing "1. Navigate to Pipeline OR from a Contract soon-to-expire
+2. Create a new Performance Review Project
+3. Add supplier
+4. On the Reviews tab, click New and select from the templates or add a blank review (Master template)
+4a. Modify the scorecard questions, weights, and stakeholder visibility as needed prior to publishing"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCSM-4-0250_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

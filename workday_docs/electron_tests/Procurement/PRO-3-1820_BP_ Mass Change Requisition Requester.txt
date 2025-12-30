@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1820
+FUNCTIONAL AREA: Procurement
+TEST NAME: BP: Mass Change Requisition Requester
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [INFERRED]
+================================================================================
+
+DESCRIPTION:
+BP: Mass Change Requisition Requester
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Business Process is configured"
+2. wait for search results (2 seconds)
+3. click search result containing "Verify Business Process is configured"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1820_complete.png"
+
+VERIFICATION:
+- [ ] Business Process Administrator
+
+API ALTERNATIVE:
+- SOAP: Query RAG for details
+
+RAG QUERY STATUS: TIMEOUT
+================================================================================

@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRCCNT-4-0410
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Mass Contract Upload
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 17.0)
+================================================================================
+
+DESCRIPTION:
+importing Contract header data + attachments into WSS Contract records
+
+TASK / STEP:
+1. Follow these instructions to import contract data into Strategic Sourcing https://community.workday.com/articles/935103
+2. View imported Contracts on the Contracts Workbench
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Follow these instructions to import contract data into Strategic Sourcing https://community.workday.com/articles/935103
+2. View imported Contracts on the Contracts Workbench"
+2. wait for search results
+3. click search result containing "1. Follow these instructions to import contract data into Strategic Sourcing https://community.workday.com/articles/935103
+2. View imported Contracts on the Contracts Workbench"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0410_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

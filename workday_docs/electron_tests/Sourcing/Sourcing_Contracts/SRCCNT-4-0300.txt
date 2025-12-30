@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRCCNT-4-0300
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Create a Contract Intake Request
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 47.0)
+================================================================================
+
+DESCRIPTION:
+Create a initial contract document by using a contract intake form
+
+TASK / STEP:
+1. Login to WSS as a stakeholder (from an Intake link or from https://sandbox.scoutrfp.com/ [Sandbox] )
+2. If login by using an intake link, the system will take you directly to the intake form
+3. If you login by using the scoutrfp URL, go to Home, and click on the 'Create Contract' button
+4. Populate the form and click on the 'Submit Request' button when done.
+5. Review the Intake Form (Ticket) Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request.
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Login to WSS as a stakeholder (from an Intake link or from https://sandbox.scoutrfp.com/ [Sandbox] )
+2. If login by using an intake link, the system will take you directly to the intake form
+3. If you login by using the scoutrfp URL, go to Home, and click on the 'Create Contract' button
+4. Populate the form and click on the 'Submit Request' button when done.
+5. Review the Intake Form (Ticket) Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request."
+2. wait for search results
+3. click search result containing "1. Login to WSS as a stakeholder (from an Intake link or from https://sandbox.scoutrfp.com/ [Sandbox] )
+2. If login by using an intake link, the system will take you directly to the intake form
+3. If you login by using the scoutrfp URL, go to Home, and click on the 'Create Contract' button
+4. Populate the form and click on the 'Submit Request' button when done.
+5. Review the Intake Form (Ticket) Number that has been assigned to you. Depending on the intake routing logic configurations, a sourcing manager might already be assigned to your contract intake request."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0300_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

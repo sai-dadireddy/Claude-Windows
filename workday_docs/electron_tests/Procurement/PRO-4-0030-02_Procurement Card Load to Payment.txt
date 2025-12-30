@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0030-02
+FUNCTIONAL AREA: Procurement
+TEST NAME: Procurement Card Load to Payment
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Specify Date Range for the Load you are looking for Choose Usage of Procurement  Open Credit Card Transaction File line Go to "Corporate Credit Card Accounts Processed" tab  As related Action, go to Accounting > View Accounting  Note that the Procurement Card Load generates accounting to:  DR Spend based on Credit Card setup CR Account per Credit Card Payable Posting Rule
+
+WORKDAY ROLE: Credit Card Transaction Administrator
+
+ELECTRON STEPS:
+1. enter search box as "2. Verify File Loaded Successfully"
+2. wait for search results (2 seconds)
+3. click search result containing "2. Verify File Loaded Successfully"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0030-02_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

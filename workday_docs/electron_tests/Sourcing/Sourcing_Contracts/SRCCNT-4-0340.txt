@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: SRCCNT-4-0340
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Revise a Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 33.0)
+================================================================================
+
+DESCRIPTION:
+Revise a contract
+
+TASK / STEP:
+1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction (Note: certain fields are locked and cannot be changed)
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction (Note: certain fields are locked and cannot be changed)
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button"
+2. wait for search results
+3. click search result containing "1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction (Note: certain fields are locked and cannot be changed)
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: certain fields are locked and cannot be changed
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0340_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: certain fields are locked and cannot be changed
+
+================================================================================

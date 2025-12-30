@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0370
+FUNCTIONAL AREA: HCM
+TEST NAME: Translations - Translate Base Values
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Access the Translations dashboard. The task will be available in the left-hand menu. Ensure configured base values have corresponding translated values as expected.
+
+WORKDAY ROLE: Translator
+EST. DURATION: 60 minutes
+
+PREREQUISITES:
+- User logged in with Translator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Various base values (by in scope functional area)"
+2. wait for search results
+3. click search result containing "Various base values (by in scope functional area)"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0370_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Various base values (by in scope functional area)
+
+### 1. Admin Guide Adaptive Planning And Consolidation (score: 5)
+Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
+```
+Adaptive Planning
+and Consolidation
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Adaptive Planning and Consolidation (AP&C).................................................... 7
+Financial Account...
+================================================================================

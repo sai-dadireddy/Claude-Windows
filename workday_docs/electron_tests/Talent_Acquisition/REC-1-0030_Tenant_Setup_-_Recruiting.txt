@@ -1,0 +1,19 @@
+# REC-1-0030: Tenant Setup - Recruiting
+# Functional Area: Talent Acquisition
+# Confidence: 7.5/10.0
+
+# Step 1: Login
+login|System Configurator
+
+# Step 2: Navigate to Recruiting
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Process Candidate
+filter|Active Candidates
+select|First candidate
+verify|Candidate details display correctly
+
+# Final Step: Logout
+logout

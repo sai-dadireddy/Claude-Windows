@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: PRO-3-1780
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create Requisition
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create Requisition
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Ensure test requisition goes into an Review or Approval Process. Do not process requisition through.
+
+Create Requisition
+Add using any Requisition Type
+After adding item and after you Check Out
+Submit
+"Up Next" will appear
+Note - Who is the Approver
+
+Do Not Process requisition - leave "In Process"
+
+Note Requisition ID
+Note Requester ID (Who entered the requisition)"
+2. wait for search results (2 seconds)
+3. click search result containing "Ensure test requisition goes into an Review or Approval Process. Do not process requisition through.
+
+Create Requisition
+Add using any Requisition Type
+After adding item and after you Check Out
+Submit
+"Up Next" will appear
+Note - Who is the Approver
+
+Do Not Process requisition - leave "In Process"
+
+Note Requisition ID
+Note Requester ID (Who entered the requisition)"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1780_complete.png"
+
+VERIFICATION:
+- [ ] Buyer or Employee as self
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

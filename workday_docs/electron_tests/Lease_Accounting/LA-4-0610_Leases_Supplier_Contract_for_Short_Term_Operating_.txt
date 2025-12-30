@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: LA-4-0610
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Short Term Operating Lease
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: nan
+
+ELECTRON STEPS:
+1. enter search box as "nan"
+2. [MANUAL] No RAG guidance available - manual test required
+3. screenshot as "LA-4-0610_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+================================================================================

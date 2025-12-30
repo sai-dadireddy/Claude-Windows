@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: SRCCNT-4-0270
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Activate a Contract
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 20.0)
+================================================================================
+
+DESCRIPTION:
+Activate a contract
+
+TASK / STEP:
+1. Open a contract in Approved status. Note, if contract approval is not in place, find a contract in 'In Progress' status.
+2. Change the status of the contract to Active
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract in Approved status. Note, if contract approval is not in place, find a contract in 'In Progress' status.
+2. Change the status of the contract to Active"
+2. wait for search results
+3. click search result containing "1. Open a contract in Approved status. Note, if contract approval is not in place, find a contract in 'In Progress' status.
+2. Change the status of the contract to Active"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: If contract approval is in place, a contract can only be activated after it's fully approved
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0270_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: If contract approval is in place, a contract can only be activated after it's fully approved
+
+================================================================================

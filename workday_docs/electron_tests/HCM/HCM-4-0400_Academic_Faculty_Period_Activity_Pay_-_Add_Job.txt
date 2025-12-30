@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0400
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Period Activity Pay - Add Job
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a position for Department Chair and add the position to a worker. Ensure propose compensation step does not trigger during Add Job but Period Activity Pay steps triggers on Add Job. Ensure appropriate approvals trigger during Period Activity BP.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Additional Job"
+2. wait for search results
+3. click search result containing "Add Additional Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0400_complete.png"
+
+VERIFICATION:
+- [ ] Additional Job is assigned to Department Chair.  Appropriate Add Additional Job steps and subprocess are initiated and completed based on BP: Add Additional Job configuration.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Additional Job
+
+### 1. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re....
+================================================================================

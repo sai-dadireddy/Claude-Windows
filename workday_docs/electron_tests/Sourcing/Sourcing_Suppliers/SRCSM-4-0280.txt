@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRCSM-4-0280
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Finalize the Supplier Review
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 12.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. On the Performance Review Event, Navigate to the Results section
+2. Click Finalize Review
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. On the Performance Review Event, Navigate to the Results section
+2. Click Finalize Review"
+2. wait for search results
+3. click search result containing "1. On the Performance Review Event, Navigate to the Results section
+2. Click Finalize Review"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: Note: All finalized reviews show on the supplier's profile under the Performance Reviews section
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0280_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: All finalized reviews show on the supplier's profile under the Performance Reviews section
+
+================================================================================

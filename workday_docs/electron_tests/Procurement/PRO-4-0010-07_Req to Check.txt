@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0010-07
+FUNCTIONAL AREA: Procurement
+TEST NAME: Req to Check
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login as user who created Req. Go to Purchases Dashboard (add if not displayed) and find link to Create Receipt  At Create Receipt screen, put in Purchase Order, Select "Fully Receive" and then click OK
+
+WORKDAY ROLE: Employee As Self
+
+ELECTRON STEPS:
+1. enter search box as "7. Create a Receipt"
+2. wait for search results (2 seconds)
+3. click search result containing "7. Create a Receipt"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0010-07_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

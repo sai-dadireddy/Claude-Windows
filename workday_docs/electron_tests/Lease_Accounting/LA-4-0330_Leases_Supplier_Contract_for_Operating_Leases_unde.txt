@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: LA-4-0330
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Operating Leases under two reporting standards
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Assign Asset Accounting Information
+
+ELECTRON STEPS:
+1. enter search box as "Assign Asset Accounting Information"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-4-0330_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Assign Asset Accounting Information
+
+### 1. Admin Guide Release Notes (score: 9)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+About Workday Documentation...........................................................................5
+October 31, 2025.........................................................
+================================================================================

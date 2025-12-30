@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: HCM-4-0390
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Period Activity Pay - Hire
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a position for Adjunct and move to hire - ensure compensation does not default on position or hire, but Period Activity Pay task triggers on hire. Ensure appropriate approvals trigger during Period Activity BP.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Hire"
+2. wait for search results
+3. click search result containing "Hire"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-4-0390_complete.png"
+
+VERIFICATION:
+- [ ] Adjunct worker Hired into new Postion.  Appropriate Hire steps and sub processes are initated and completed based on BP: Hire configuration.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Hire
+
+### 1. Kb Benefits Enrollment (score: 6)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration
+Ca...
+`...
+================================================================================

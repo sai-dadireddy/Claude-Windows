@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: SRCSM-4-0180
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Enable Supplier Edits to Form
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 42.0)
+================================================================================
+
+DESCRIPTION:
+Test supplier ability to make form edits
+
+TASK / STEP:
+1. Acting as supplier, update profile to change address
+1a. Acting as supplier, update profile to edit bank account number & name
+2. Grant Access in WSS to the new profile
+3. Confirm correct Workday BPs are initiating based on change. Ensure data change is reflected in Workday
+3a. Approve supplier change in Workday
+3b. Reject supplier change in Workday. Note whether data has reverted in WSS once integration runs
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Acting as supplier, update profile to change address
+1a. Acting as supplier, update profile to edit bank account number & name
+2. Grant Access in WSS to the new profile
+3. Confirm correct Workday BPs are initiating based on change. Ensure data change is reflected in Workday
+3a. Approve supplier change in Workday
+3b. Reject supplier change in Workday. Note whether data has reverted in WSS once integration runs"
+2. wait for search results
+3. click search result containing "1. Acting as supplier, update profile to change address
+1a. Acting as supplier, update profile to edit bank account number & name
+2. Grant Access in WSS to the new profile
+3. Confirm correct Workday BPs are initiating based on change. Ensure data change is reflected in Workday
+3a. Approve supplier change in Workday
+3b. Reject supplier change in Workday. Note whether data has reverted in WSS once integration runs"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0180_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

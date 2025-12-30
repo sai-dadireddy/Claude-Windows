@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-5-0190
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Worker Data Conversion (Staffing Information)
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the staffing information loaded for workers are accurate. Verify that the expected fields have been populated and spot check for accuracy. If historical terminated workers were converted, include review of terminated workers.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract Worker Job Details"
+2. wait for search results
+3. click search result containing "Extract Worker Job Details"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "HCM-5-0190_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Worker Job Details
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - H...
+================================================================================

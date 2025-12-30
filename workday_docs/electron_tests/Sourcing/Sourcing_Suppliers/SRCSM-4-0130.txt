@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: SRCSM-4-0130
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Create Supplier and Send to Workday (domestic supplier)
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 29.0)
+================================================================================
+
+DESCRIPTION:
+Test supplier connection to Workday
+
+TASK / STEP:
+1. Create Supplier Forms project & add domestic supplier
+2. Publish Onboarding Form to supplier 
+3. Acting as Supplier, submit onboarding information for domestic based supplier 
+       3a. Acting as supplier, submit onboarding information for supplier
+4. Change the supplier status to Approved in WSS
+5. Run Connector
+6. Approve the supplier in Workday
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Create Supplier Forms project & add domestic supplier
+2. Publish Onboarding Form to supplier 
+3. Acting as Supplier, submit onboarding information for domestic based supplier 
+       3a. Acting as supplier, submit onboarding information for supplier
+4. Change the supplier status to Approved in WSS
+5. Run Connector
+6. Approve the supplier in Workday"
+2. wait for search results
+3. click search result containing "1. Create Supplier Forms project & add domestic supplier
+2. Publish Onboarding Form to supplier 
+3. Acting as Supplier, submit onboarding information for domestic based supplier 
+       3a. Acting as supplier, submit onboarding information for supplier
+4. Change the supplier status to Approved in WSS
+5. Run Connector
+6. Approve the supplier in Workday"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0130_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

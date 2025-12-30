@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: EXP-1-0020
+CONFIDENCE SCORE: 10.0/10.0
+FUNCTIONAL AREA: Expenses
+TEST NAME: Account Posting Rules related to Expenses
+================================================================================
+
+DESCRIPTION:
+Verify that the correct default accounts have been defined where applicable for Expenses: Credit Card Payable, Expense Advance, Expenses Payable, Expense Payable to Supplier, Expense Payee Receivable and Spend Categories in the Spend rule. Note that the Spend rule is shared with Supplier spend.
+
+ELECTRON STEPS:
+1. enter search box as "View Account Posting Rule Set"
+2. wait for search results
+3. click search result containing "View Account Posting Rule Set"
+4. wait for page to load
+5. screenshot as "EXP-1-0020_complete.png"
+
+================================================================================

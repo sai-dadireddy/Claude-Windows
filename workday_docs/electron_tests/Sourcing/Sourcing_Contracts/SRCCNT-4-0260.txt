@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRCCNT-4-0260
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Reject a Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+Reject a contract document
+
+TASK / STEP:
+1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Enter comments (justification for rejection) 
+3. Select the Reject button
+4. Click on the 'Submit Response' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Enter comments (justification for rejection) 
+3. Select the Reject button
+4. Click on the 'Submit Response' button"
+2. wait for search results
+3. click search result containing "1. Login to WSS as an approver by clicking on the link in the approval request email notification
+2. Enter comments (justification for rejection) 
+3. Select the Reject button
+4. Click on the 'Submit Response' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRCCNT-4-0260_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

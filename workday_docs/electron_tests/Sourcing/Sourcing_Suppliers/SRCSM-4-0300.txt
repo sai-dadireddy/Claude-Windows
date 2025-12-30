@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: SRCSM-4-0300
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Complete Action Item
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 13.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments"
+2. wait for search results
+3. click search result containing "1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRCSM-4-0300_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

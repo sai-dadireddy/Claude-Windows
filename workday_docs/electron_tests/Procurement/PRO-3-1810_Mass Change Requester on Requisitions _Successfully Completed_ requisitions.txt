@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: PRO-3-1810
+FUNCTIONAL AREA: Procurement
+TEST NAME: Mass Change Requester on Requisitions
+"Successfully Completed" requisitions
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Mass Change Requester on Requisitions
+"Successfully Completed" requisitions
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Update a Requisition Requester for a Requisition in "Successfully Completed" status"
+2. wait for search results (2 seconds)
+3. click search result containing "Update a Requisition Requester for a Requisition in "Successfully Completed" status"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1810_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

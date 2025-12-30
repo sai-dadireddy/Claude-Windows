@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRCCNT-4-0400
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Snooze a Contract Needing Attention
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+Take a contract out of the needing attention list
+
+TASK / STEP:
+1. Open a contract that has been flagged as 'needs attention'
+2. Change the status to 'Doesn't Need Attention'
+3. Set a 'Snooze or Ignore' period
+4. Assign a reason
+5. Click on the 'Update' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract that has been flagged as 'needs attention'
+2. Change the status to 'Doesn't Need Attention'
+3. Set a 'Snooze or Ignore' period
+4. Assign a reason
+5. Click on the 'Update' button"
+2. wait for search results
+3. click search result containing "1. Open a contract that has been flagged as 'needs attention'
+2. Change the status to 'Doesn't Need Attention'
+3. Set a 'Snooze or Ignore' period
+4. Assign a reason
+5. Click on the 'Update' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0400_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

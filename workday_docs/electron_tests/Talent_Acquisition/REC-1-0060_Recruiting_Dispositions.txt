@@ -1,0 +1,19 @@
+# REC-1-0060: Recruiting Dispositions
+# Functional Area: Talent Acquisition
+# Confidence: 7.5/10.0
+
+# Step 1: Login
+login|Recruiting Administrator
+
+# Step 2: Navigate to Recruiting
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Process Candidate
+filter|Active Candidates
+select|First candidate
+verify|Candidate details display correctly
+
+# Final Step: Logout
+logout

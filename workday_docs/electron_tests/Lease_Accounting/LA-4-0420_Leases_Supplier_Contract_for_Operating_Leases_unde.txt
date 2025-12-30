@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: LA-4-0420
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Operating Leases under two reporting standards
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Journals > filter by Journal Source "Initial Recognition of Lease"
+
+ELECTRON STEPS:
+1. enter search box as "Find Journals > filter by Journal Source "Initial Recognition of Lease""
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-4-0420_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Journals > filter by Journal Source "Initial Recognition of Lease"
+
+### 1. Kb Finance Journal Entry (score: 8)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workd...
+================================================================================

@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0320
+FUNCTIONAL AREA: HCM
+TEST NAME: Add Vaccination - Worker
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login or proxy as a worker and use the Add My Vaccination task. Ensure the business process steps are triggered as expected.
+
+WORKDAY ROLE: Employee as Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee as Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Vaccination"
+2. wait for search results
+3. click search result containing "Add Vaccination"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0320_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Vaccination
+
+### 1. Admin Guide Human Capital Management (score: 2)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information..............................................................
+================================================================================

@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SRCCNT-4-0380
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Review Contract History Log
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 11.0)
+================================================================================
+
+DESCRIPTION:
+View contract history log
+
+TASK / STEP:
+1. Open a contract
+2. Click on the 'Options' drop-down field, and select 'History'
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract
+2. Click on the 'Options' drop-down field, and select 'History'"
+2. wait for search results
+3. click search result containing "1. Open a contract
+2. Click on the 'Options' drop-down field, and select 'History'"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0380_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1760
+FUNCTIONAL AREA: Procurement
+TEST NAME: BP: Mass Change Requisition Requester
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+BP: Mass Change Requisition Requester
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Business Process is configured"
+2. wait for search results (2 seconds)
+3. click search result containing "Verify Business Process is configured"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1760_complete.png"
+
+VERIFICATION:
+- [ ] Business Process Administrator
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

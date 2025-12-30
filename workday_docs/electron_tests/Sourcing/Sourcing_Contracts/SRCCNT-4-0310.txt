@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRCCNT-4-0310
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Open a Contract Request
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 20 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 34.0)
+================================================================================
+
+DESCRIPTION:
+Open and update a contract request coming from a stakeholder
+
+TASK / STEP:
+1. Navigate to Contracts
+2. Select a contract request transaction in the Request section of the contract workbench
+3. Change the contract status to In Progress or assign a Sub In-Progress status as defined by the Contract Type configurations
+4. Update and enrich the contract document (change information, populate custom fields, assign milestones, collaborate on a contract document, add more stakeholders, etc)
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Contracts
+2. Select a contract request transaction in the Request section of the contract workbench
+3. Change the contract status to In Progress or assign a Sub In-Progress status as defined by the Contract Type configurations
+4. Update and enrich the contract document (change information, populate custom fields, assign milestones, collaborate on a contract document, add more stakeholders, etc)"
+2. wait for search results
+3. click search result containing "1. Navigate to Contracts
+2. Select a contract request transaction in the Request section of the contract workbench
+3. Change the contract status to In Progress or assign a Sub In-Progress status as defined by the Contract Type configurations
+4. Update and enrich the contract document (change information, populate custom fields, assign milestones, collaborate on a contract document, add more stakeholders, etc)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0310_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

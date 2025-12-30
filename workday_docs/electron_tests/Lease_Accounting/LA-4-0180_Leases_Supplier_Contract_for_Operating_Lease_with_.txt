@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: LA-4-0180
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Operating Lease with ROU Asset Depreciation Expense accounting method (reporting Operating Leases under only one standard)
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Place Asset in Service
+
+ELECTRON STEPS:
+1. enter search box as "Place Asset in Service"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-4-0180_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Place Asset in Service
+
+### 1. Kb Hcm Terminate Employee (score: 4)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - H...
+================================================================================

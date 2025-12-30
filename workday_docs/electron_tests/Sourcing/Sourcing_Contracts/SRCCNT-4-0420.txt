@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: SRCCNT-4-0420
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Enter Contract Header Information WSS Contract
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 29.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Workday SSO Enabled and working
+Supplier Onboarded
+
+TASK / STEP:
+1. Navigate to Workday tenant and click on Workday Strategic Sourcing Workley
+2. In Strategic Sourcing, click to create New Contract from Contracts Workbench
+3. Complete default and custom fields including Financial Company, and Currency
+4. Add Onboarded Supplier in Supplier tab
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Workday tenant and click on Workday Strategic Sourcing Workley
+2. In Strategic Sourcing, click to create New Contract from Contracts Workbench
+3. Complete default and custom fields including Financial Company, and Currency
+4. Add Onboarded Supplier in Supplier tab"
+2. wait for search results
+3. click search result containing "1. Navigate to Workday tenant and click on Workday Strategic Sourcing Workley
+2. In Strategic Sourcing, click to create New Contract from Contracts Workbench
+3. Complete default and custom fields including Financial Company, and Currency
+4. Add Onboarded Supplier in Supplier tab"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0420_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

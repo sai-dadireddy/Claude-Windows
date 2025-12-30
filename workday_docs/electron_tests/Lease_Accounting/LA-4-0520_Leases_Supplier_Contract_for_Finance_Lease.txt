@@ -1,0 +1,29 @@
+================================================================================
+TEST ID: LA-4-0520
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Finance Lease
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Register Asset (Supplier Contract)
+
+ELECTRON STEPS:
+1. enter search box as "Register Asset (Supplier Contract)"
+2. submit form
+3. screenshot as "LA-4-0520_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Register Asset (Supplier Contract)
+
+### 1. WSDL: Financial_Management (score: 3)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial Reporting, Tax, Financial Organizations, Basic Worktags, Rela...
+================================================================================

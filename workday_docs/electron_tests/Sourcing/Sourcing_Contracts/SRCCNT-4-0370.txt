@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRCCNT-4-0370
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Cancel a Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 20.0)
+================================================================================
+
+DESCRIPTION:
+End an in progress or requested contract by cancelling it
+
+TASK / STEP:
+1. Open a contract in In Progress or Requested status
+2. Change the contract status to 'Canceled'
+3. Enter a reason
+4. Click on the 'Update Status' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract in In Progress or Requested status
+2. Change the contract status to 'Canceled'
+3. Enter a reason
+4. Click on the 'Update Status' button"
+2. wait for search results
+3. click search result containing "1. Open a contract in In Progress or Requested status
+2. Change the contract status to 'Canceled'
+3. Enter a reason
+4. Click on the 'Update Status' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0370_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

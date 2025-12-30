@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0430
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Period Activity Pay - Change Job
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Process a change job transaction for a person with active activity pay, do not change the person's position.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Change Job"
+2. wait for search results
+3. click search result containing "Change Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0430_complete.png"
+
+VERIFICATION:
+- [ ] With no [custom validation], Change Job is successfully completed with no validation for active Activity Pay scheduled payments.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Change Job
+
+### 1. staffing (score: 7)
+Source: staffing_v7.json
+```
+API: staffing
+GET /values/organizationAssignmentChangesGroup/regions/ - 
+GET /jobChanges/{ID}/location - Returns the location information for the specified job change ID.
+POST /workers/{ID}/organizationAssignmentChanges - Initiates an organization assignment change for a specific worker.
+GET /worker...
+```
+
+### 2. Kb Bene...
+================================================================================

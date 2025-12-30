@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-5-0260
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Worker Data Conversion (Previous System Compensation History)
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the workers' compensation history from a previous system is accurate, if applicable. Verify that the expected fields have been populated and spot check for accuracy. If historical terminated workers were converted, include review of terminated workers.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract Previous System Compensation History"
+2. wait for search results
+3. click search result containing "Extract Previous System Compensation History"
+4. wait for page to load
+5. RAG-extracted steps:
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-5-0260_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Previous System Compensation History
+
+### 1. Workday Feature Descriptions Ditamap (score: 5)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning........................
+================================================================================

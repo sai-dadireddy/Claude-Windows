@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0010-08
+FUNCTIONAL AREA: Procurement
+TEST NAME: Req to Check
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Enter Company and Supplier on PO created above Click OK   > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click "search." Check the lines of the records that you want to add > Click OK, then Click "Complete Supplier Invoice"  Create an invoice from the workbench in order to create it directly from receipts (3 way matching) or POs (2 way matching).
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+
+ELECTRON STEPS:
+1. enter search box as "8. Create an Invoice from the Workbench"
+2. wait for search results (2 seconds)
+3. click search result containing "8. Create an Invoice from the Workbench"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0010-08_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

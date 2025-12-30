@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0020-06
+FUNCTIONAL AREA: Procurement
+TEST NAME: Process Match Exception
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that Match Exception Override request was routed based on setup of "Supplier Accounts Match Exception Override Event" Approve any necessary steps
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+
+ELECTRON STEPS:
+1. enter search box as "6. Approve Supplier Accounts Match Exception Override Event Business Process"
+2. wait for search results (2 seconds)
+3. click search result containing "6. Approve Supplier Accounts Match Exception Override Event Business Process"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0020-06_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

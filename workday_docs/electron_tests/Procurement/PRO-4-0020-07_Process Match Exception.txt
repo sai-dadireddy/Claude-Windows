@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0020-07
+FUNCTIONAL AREA: Procurement
+TEST NAME: Process Match Exception
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Supplier Invoice Match Status should now be "Override"
+
+WORKDAY ROLE: Various (depending on approval process)
+
+ELECTRON STEPS:
+1. enter search box as "7. Verify Status of Supplier Invoice"
+2. wait for search results (2 seconds)
+3. click search result containing "7. Verify Status of Supplier Invoice"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0020-07_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

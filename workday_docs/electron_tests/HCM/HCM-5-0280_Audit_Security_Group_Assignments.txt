@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: HCM-5-0280
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Security Group Assignments
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the user-based security assignments in the tenant are accurate.
+
+WORKDAY ROLE: Security Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Security Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract User-Based Security Assignments"
+2. wait for search results
+3. click search result containing "Extract User-Based Security Assignments"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-5-0280_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract User-Based Security Assignments
+
+### 1. Test Scenarios Index (score: 4)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizat...
+================================================================================

@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0020-04
+FUNCTIONAL AREA: Procurement
+TEST NAME: Process Match Exception
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+All the details from the Purchase Order will be copied into the Supplier Invoice  Change the unit cost from 100 to 1000 in order to trigger a Match Exception  Submit
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+
+ELECTRON STEPS:
+1. enter search box as "4. Create a Supplier Invoice from the PO"
+2. wait for search results (2 seconds)
+3. click search result containing "4. Create a Supplier Invoice from the PO"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0020-04_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

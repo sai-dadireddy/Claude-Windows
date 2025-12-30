@@ -1,0 +1,8 @@
+TEST ID: PRO-4-0040
+STATUS: [MANUAL REQUIRED]
+REASON: Missing Task/Step - need SME input
+
+SCENARIO NAME: Contract Invoices to Check
+DESCRIPTION: nan
+EXPECTED RESULT: nan
+WORKDAY ROLE: nan

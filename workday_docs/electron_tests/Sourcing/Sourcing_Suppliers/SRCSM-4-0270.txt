@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRCSM-4-0270
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Compare Stakeholder Reviews
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. On the Performance Review Event, Click Compare Stakeholder reviews
+2. (Optional) Export Evaluation
+3. Expand the sections out to see question detail
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. On the Performance Review Event, Click Compare Stakeholder reviews
+2. (Optional) Export Evaluation
+3. Expand the sections out to see question detail"
+2. wait for search results
+3. click search result containing "1. On the Performance Review Event, Click Compare Stakeholder reviews
+2. (Optional) Export Evaluation
+3. Expand the sections out to see question detail"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRCSM-4-0270_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRCSM-4-0090
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Review Form Templates
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+Review questions asked from suppliers in Onboarding Forms
+
+TASK / STEP:
+1. Create Project from Pipeline Home Page
+2. Change Project Type to Supplier Forms type (may be renamed)
+3. Navigate to Forms > Add Forms
+4. Click to Preview each form
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Create Project from Pipeline Home Page
+2. Change Project Type to Supplier Forms type (may be renamed)
+3. Navigate to Forms > Add Forms
+4. Click to Preview each form"
+2. wait for search results
+3. click search result containing "1. Create Project from Pipeline Home Page
+2. Change Project Type to Supplier Forms type (may be renamed)
+3. Navigate to Forms > Add Forms
+4. Click to Preview each form"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0090_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

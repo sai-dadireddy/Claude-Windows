@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0010-10
+FUNCTIONAL AREA: Procurement
+TEST NAME: Req to Check
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [INFERRED]
+================================================================================
+
+DESCRIPTION:
+Verify that you are able to select Supplier Invoice created above.  Verify that Settlement Run has been submitted for approval
+
+WORKDAY ROLE: Settlement Specialist
+
+ELECTRON STEPS:
+1. enter search box as "10. Create Settlement Run"
+2. wait for search results (2 seconds)
+3. click search result containing "10. Create Settlement Run"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0010-10_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Query RAG for details
+
+RAG QUERY STATUS: TIMEOUT
+================================================================================

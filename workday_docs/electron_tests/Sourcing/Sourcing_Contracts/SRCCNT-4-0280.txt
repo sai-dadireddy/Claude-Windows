@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRCCNT-4-0280
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Send Contract to Docusign or Adobe Sign
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 24.0)
+================================================================================
+
+DESCRIPTION:
+Send a contract to Docusign (requires Docusign license)
+
+TASK / STEP:
+1. Open a contract containing a document that needs to be sent to Docusign. Docusign can be triggered from a document in the Attachments or Contract Documents > Finalized section.
+2. Click on the 'Send to Docusign' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract containing a document that needs to be sent to Docusign. Docusign can be triggered from a document in the Attachments or Contract Documents > Finalized section.
+2. Click on the 'Send to Docusign' button"
+2. wait for search results
+3. click search result containing "1. Open a contract containing a document that needs to be sent to Docusign. Docusign can be triggered from a document in the Attachments or Contract Documents > Finalized section.
+2. Click on the 'Send to Docusign' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: If the 'Require contract approval before signature' configuration is activated at the contract type level, the contract will need to be fully approved, before it can be sent to Docusign
+
+Note: Signature gathering process in Docusign is outside the scope of this testing scenario. Refer to Docusign manual for instructions to use the signature routing process.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0280_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: If the 'Require contract approval before signature' configuration is activated at the contract type level, the contract will need to be fully approved, before it can be sent to Docusign
+
+Note: Signature gathering process in Docusign is outside the scope of this testing scenario. Refer to Docusign manual for instructions to use the signature routing process.
+
+================================================================================

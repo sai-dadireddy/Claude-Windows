@@ -55,16 +55,16 @@ GENERATED TEST FILE FORMAT
 Each .txt file contains:
 
 1. METADATA
-   - Scenario ID (e.g., TLO-1-0010)
-   - Module name
-   - Test type
-   - Workday role required
-   - CONFIDENCE SCORE (0.0-1.0)
+   - Scenario ID (e.g., CP-1-0010, FP-1-0010, PI-1-0010)
+   - Functional Area (Payroll Canada/UK/France/Interface)
+   - Country Code (CA, GB, FR)
+   - Workday role required (Payroll Administrator)
+   - CONFIDENCE SCORE (0.0-10.0)
 
 2. CONFIDENCE SCORING
-   >= 0.70  HIGH      - Ready for implementation
-   0.40-0.69 MEDIUM   - Needs SME review
-   < 0.40   LOW       - Manual investigation required
+   >= 7.0   HIGH      - Ready for implementation
+   5.0-6.9  MEDIUM    - Needs SME review
+   < 5.0    LOW       - Manual investigation required
 
 3. SCENARIO DETAILS
    - Description

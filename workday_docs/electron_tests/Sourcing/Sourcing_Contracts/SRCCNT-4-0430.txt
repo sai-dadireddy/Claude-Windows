@@ -1,0 +1,68 @@
+================================================================================
+TEST ID: SRCCNT-4-0430
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Mark Contract as Active in WSS
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 35.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Supplier Contracts Connector enabled
+Workday SSO Enabled and working
+Supplier Onboarded 
+Financial Company, Currency Selected 
+
+WD Preconditions: 
+Integration attribute configured to Approved
+BP has no Routing configured.
+
+TASK / STEP:
+1. Ensure required Contract Header data is complete
+2. Ensure Contract Start Date is in the past
+3. Send Contract for Approval (if applicable) and Approve. Or mark contract as Active
+4. Run Supplier Contracts Integration System to sync Contract to Workday
+5. Login to Workday to view Contract Header information
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Ensure required Contract Header data is complete
+2. Ensure Contract Start Date is in the past
+3. Send Contract for Approval (if applicable) and Approve. Or mark contract as Active
+4. Run Supplier Contracts Integration System to sync Contract to Workday
+5. Login to Workday to view Contract Header information"
+2. wait for search results
+3. click search result containing "1. Ensure required Contract Header data is complete
+2. Ensure Contract Start Date is in the past
+3. Send Contract for Approval (if applicable) and Approve. Or mark contract as Active
+4. Run Supplier Contracts Integration System to sync Contract to Workday
+5. Login to Workday to view Contract Header information"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0430_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

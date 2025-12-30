@@ -1,0 +1,66 @@
+================================================================================
+TEST ID: SRCSM-4-0240
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Review & Finalize Supplier Onboarding Form
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 16.0)
+================================================================================
+
+DESCRIPTION:
+Review, validate onboarding information & approve (if applicable).  As a second step, approve the Supplier's status in WSS
+
+TASK / STEP:
+1. Finalize Form in WSS (as Sourcing Manager)
+2. Change the supplier status to "Approved" in WSS
+3. Run Connector (Connector only)
+4. Approve the supplier in WD (Connector only)
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Finalize Form in WSS (as Sourcing Manager)
+2. Change the supplier status to "Approved" in WSS
+3. Run Connector (Connector only)
+4. Approve the supplier in WD (Connector only)"
+2. wait for search results
+3. click search result containing "1. Finalize Form in WSS (as Sourcing Manager)
+2. Change the supplier status to "Approved" in WSS
+3. Run Connector (Connector only)
+4. Approve the supplier in WD (Connector only)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: Ensure that the Supplier Event BP is run and the new supplier is routed for review/approval
+ 
+After approval, Check that the status of the supplier is in Approved/Active status in WD and the information the supplier had provided is included in WD
+
+Note: The information from the supplier onboarding form can only be sent to WD Financials until the WSS supplier status is changed to "Approved". Once approved, all supplier changes will need to be made in WD.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCSM-4-0240_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Ensure that the Supplier Event BP is run and the new supplier is routed for review/approval
+ 
+After approval, Check that the status of the supplier is in Approved/Active status in WD and the information the supplier had provided is included in WD
+
+Note: The information from the supplier onboarding form can only be sent to WD Financials until the WSS supplier status is changed to "Approved". Once approved, all supplier changes will need to be made in WD.
+
+================================================================================

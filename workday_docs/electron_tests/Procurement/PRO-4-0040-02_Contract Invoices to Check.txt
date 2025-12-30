@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0040-02
+FUNCTIONAL AREA: Procurement
+TEST NAME: Contract Invoices to Check
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the Contract is routing as expected for approval
+
+WORKDAY ROLE: Supplier Contract Specialist
+
+ELECTRON STEPS:
+1. enter search box as "2. Approve Supplier contract"
+2. wait for search results (2 seconds)
+3. click search result containing "2. Approve Supplier contract"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0040-02_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

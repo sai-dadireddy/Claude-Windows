@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0050-05
+FUNCTIONAL AREA: Procurement
+TEST NAME: Contract Purchase Orders to Check
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create Receipt against Purchase Order created above
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "5. Create Receipt"
+2. wait for search results (2 seconds)
+3. click search result containing "5. Create Receipt"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0050-05_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

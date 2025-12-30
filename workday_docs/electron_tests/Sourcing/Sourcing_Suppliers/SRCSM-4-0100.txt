@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRCSM-4-0100
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Add a new Supplier Contact in Workday
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 33.0)
+================================================================================
+
+DESCRIPTION:
+Add new contact to supplier
+
+TASK / STEP:
+1. Use an existing WSS supplier that came from Workday via the connector
+2. Add a new supplier contact (supplier contacts tab) in Workday – Contact Name, Email Address
+3. Initiate a supplier change in Workday (ex: assign or delete an existing supplier group)
+4. Run Connector
+5. Review the supplier profile in WSS to confirm new contact created
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Use an existing WSS supplier that came from Workday via the connector
+2. Add a new supplier contact (supplier contacts tab) in Workday – Contact Name, Email Address
+3. Initiate a supplier change in Workday (ex: assign or delete an existing supplier group)
+4. Run Connector
+5. Review the supplier profile in WSS to confirm new contact created"
+2. wait for search results
+3. click search result containing "1. Use an existing WSS supplier that came from Workday via the connector
+2. Add a new supplier contact (supplier contacts tab) in Workday – Contact Name, Email Address
+3. Initiate a supplier change in Workday (ex: assign or delete an existing supplier group)
+4. Run Connector
+5. Review the supplier profile in WSS to confirm new contact created"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0100_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

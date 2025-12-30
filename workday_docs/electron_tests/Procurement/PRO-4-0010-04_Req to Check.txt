@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0010-04
+FUNCTIONAL AREA: Procurement
+TEST NAME: Req to Check
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Open requisition.  On Requisition line, Purchase Order number should be in "sourced" column. Click on it to open the Purchase Order  If not in Approved Status, Submit for Approval
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "4. View Purchase Order created from Requisition"
+2. wait for search results (2 seconds)
+3. click search result containing "4. View Purchase Order created from Requisition"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0010-04_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

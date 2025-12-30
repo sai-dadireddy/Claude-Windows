@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0350
+FUNCTIONAL AREA: HCM
+TEST NAME: Translations - Request Translation
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Log in as an authorized security group for Request Translation process to submit a translations request for an available instance. Use related actions and locate the Translation section > Request Translation.
+
+WORKDAY ROLE: Authorized security group
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Authorized security group permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Request Translation"
+2. wait for search results
+3. click search result containing "Request Translation"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0350_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Request Translation
+
+### 1. Admin Guide Release Notes (score: 2)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+About Workday Documentation...........................................................................5
+October 31, 2025.........................................................................
+================================================================================

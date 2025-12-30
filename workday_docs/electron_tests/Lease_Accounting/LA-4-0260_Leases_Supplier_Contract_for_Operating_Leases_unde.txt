@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: LA-4-0260
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Operating Leases under two reporting standards
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Supplier Contract
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Contract"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-4-0260_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Supplier Contract
+
+### 1. Kb Procurement Requisition (score: 8)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Res...
+================================================================================

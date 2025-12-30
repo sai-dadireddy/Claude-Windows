@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0030-03
+FUNCTIONAL AREA: Procurement
+TEST NAME: Procurement Card Load to Payment
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login as user who has loaded, unverified Procurement Card Transactions Go to Purchases Dashboard (add if not displayed) and find link to Verify Procurement Card Transactions   Select one of the items and click OK Edit Spend Category, Supplier, and Worktags as desired Click Submit
+
+WORKDAY ROLE: Employee as Self
+
+ELECTRON STEPS:
+1. enter search box as "3. Verify Procurement Card Transactions"
+2. wait for search results (2 seconds)
+3. click search result containing "3. Verify Procurement Card Transactions"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0030-03_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

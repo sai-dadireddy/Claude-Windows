@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: PRO-3-1800
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Mass Change Requisition Requester Requests
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Mass Change Requisition Requester Requests
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Company = Company from Requisition
+Enter any additional data
+OK
+
+Requisition will show the From / To change
+
+Click on Requisition ID
+Click on Process tab - you will see the Mass Change along with the new Requester
+
+Note that the Requisition will be awaiting Approval
+
+Notice the Approver might have changed
+
+Process Requisition though all Approvals (optional)"
+2. wait for search results (2 seconds)
+3. click search result containing "Company = Company from Requisition
+Enter any additional data
+OK
+
+Requisition will show the From / To change
+
+Click on Requisition ID
+Click on Process tab - you will see the Mass Change along with the new Requester
+
+Note that the Requisition will be awaiting Approval
+
+Notice the Approver might have changed
+
+Process Requisition though all Approvals (optional)"
+4. wait for page to load (3 seconds)
+5. Enter any additional data
+6. Click on Requisition ID
+7. Click on Process tab - you will see the Mass Change along with the new Requester
+8. screenshot as "PRO-3-1800_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

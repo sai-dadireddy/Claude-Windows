@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0070-01
+FUNCTIONAL AREA: Procurement
+TEST NAME: Manual Invoice from Supplier Contract to Check
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create Supplier contract with a contract type that allows manual invoices
+
+WORKDAY ROLE: Supplier Contract Specialist
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Supplier Contract"
+2. wait for search results (2 seconds)
+3. click search result containing "1. Create Supplier Contract"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0070-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

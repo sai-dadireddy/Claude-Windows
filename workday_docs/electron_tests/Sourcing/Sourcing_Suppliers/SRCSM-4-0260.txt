@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRCSM-4-0260
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Respond to a Performance Review
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 30.0)
+================================================================================
+
+DESCRIPTION:
+Respond as a business stakeholder that works closely with supplier
+
+TASK / STEP:
+1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments"1. Navigate to Pipeline
+2. Open the performance review project
+3. Click the Results section under Reviews and select Open Scorecard
+4. Complete the scorecard and submit the review"
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments"1. Navigate to Pipeline
+2. Open the performance review project
+3. Click the Results section under Reviews and select Open Scorecard
+4. Complete the scorecard and submit the review""
+2. wait for search results
+3. click search result containing "1. From notification, access & review Action Item
+2. Mark action Item complete, including any relevant comments"1. Navigate to Pipeline
+2. Open the performance review project
+3. Click the Results section under Reviews and select Open Scorecard
+4. Complete the scorecard and submit the review""
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRCSM-4-0260_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: PRO-3-1670
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Inventory Balance 
+(Optional based on Requisition type / Purchase order Type)
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Inventory Balance 
+(Optional based on Requisition type / Purchase order Type)
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify balance was Incremented"
+2. wait for search results (2 seconds)
+3. click search result containing "Verify balance was Incremented"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1670_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Specialist
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

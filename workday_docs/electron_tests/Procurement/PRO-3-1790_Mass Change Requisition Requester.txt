@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: PRO-3-1790
+FUNCTIONAL AREA: Procurement
+TEST NAME: Mass Change Requisition Requester
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Mass Change Requisition Requester
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Request Name = Enter a Request Name
+Company = Company from Requisition
+From Requester = Who entered the requisition
+OK
+
+To Requester = New requester to replace original requester
+
+In the grid below - filter on Document Status = In Process
+Check the Check box next to the requisition ID
+Submit"
+2. wait for search results (2 seconds)
+3. click search result containing "Request Name = Enter a Request Name
+Company = Company from Requisition
+From Requester = Who entered the requisition
+OK
+
+To Requester = New requester to replace original requester
+
+In the grid below - filter on Document Status = In Process
+Check the Check box next to the requisition ID
+Submit"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1790_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

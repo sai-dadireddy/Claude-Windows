@@ -1,0 +1,22 @@
+# REC-1-0090: Unified Duplicate Management Framework - Validate Validate Scheduled Jobs exist
+# Functional Area: Talent Acquisition
+# Confidence: 6.5/10.0
+
+# [NEEDS SME REVIEW]
+# This test was generated with medium confidence and requires validation
+
+# Step 1: Login
+login|Recruiting Administrator / 
+ Security Administrator
+
+# Step 2: Navigate to Recruiting Home
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Unified Duplicate Management Framework - Validate Validate Scheduled Jobs exist
+# Task: View Scheduled Runs for Duplicate Management
+# [NEEDS SPECIFIC STEPS]
+
+# Final Step: Logout
+logout

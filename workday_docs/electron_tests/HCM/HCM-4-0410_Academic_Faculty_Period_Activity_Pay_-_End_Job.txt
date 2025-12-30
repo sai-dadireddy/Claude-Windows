@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0410
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Period Activity Pay - End Job
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+End job for a worker with Period Activity Pay, ensure Academic Partner receives End Period Activity Pay task if worker has unpaid scheduled payments for Activity Pay after end job's pay through date.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "End Additional Job"
+2. wait for search results
+3. click search result containing "End Additional Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0410_complete.png"
+
+VERIFICATION:
+- [ ] As part of End Additional Job for worker with unpaid Activity Pay scheduled payments, Academic Partner receives End Period Activity Pay task for completion.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: End Additional Job
+
+### 1. Kb Hcm Terminate Employee (score: 8)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human...
+================================================================================

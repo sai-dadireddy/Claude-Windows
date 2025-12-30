@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-5-0270
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Former Worker Data Conversion
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+If historical terminated workers were converted as Former Workers, run the Former Workers report, select by Employee Type and verify the former worker history is accurate, if applicable.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Former Workers"
+2. wait for search results
+3. click search result containing "Former Workers"
+4. wait for page to load
+5. RAG-extracted steps:
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-5-0270_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Former Workers
+
+### 1. Admin Guide Human Capital Management (score: 7)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information...............................................................
+================================================================================

@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: PRO-3-1660
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create Receipt
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create Receipt
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "From the Related action from the PO ID -> Receipt -> Create Receipt
+PO should default in 
+OK
+
+Fully Receive
+Submit
+
+** If this PO / Receipt was to be putaway into an Inventory Site - Ensure auto putaway ran."
+2. wait for search results (2 seconds)
+3. click search result containing "From the Related action from the PO ID -> Receipt -> Create Receipt
+PO should default in 
+OK
+
+Fully Receive
+Submit
+
+** If this PO / Receipt was to be putaway into an Inventory Site - Ensure auto putaway ran."
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1660_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

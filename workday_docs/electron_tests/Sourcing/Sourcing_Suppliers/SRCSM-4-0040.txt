@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: SRCSM-4-0040
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Review Supplier Review Form Approval Groups & Options
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 34.0)
+================================================================================
+
+DESCRIPTION:
+Review form internal settings
+
+TASK / STEP:
+1. Navigate to Templates
+2. Supplier Review Forms and Select Template
+3. Manage Supplier Review tab > Approval Group
+4. View Approval Options
+5. Click Edit Info in Action Bar to review Valid Until Date
+6. Repeat for all Form Templates
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Templates
+2. Supplier Review Forms and Select Template
+3. Manage Supplier Review tab > Approval Group
+4. View Approval Options
+5. Click Edit Info in Action Bar to review Valid Until Date
+6. Repeat for all Form Templates"
+2. wait for search results
+3. click search result containing "1. Navigate to Templates
+2. Supplier Review Forms and Select Template
+3. Manage Supplier Review tab > Approval Group
+4. View Approval Options
+5. Click Edit Info in Action Bar to review Valid Until Date
+6. Repeat for all Form Templates"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0040_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

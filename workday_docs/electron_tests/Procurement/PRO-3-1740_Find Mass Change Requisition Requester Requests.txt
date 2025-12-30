@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: PRO-3-1740
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Mass Change Requisition Requester Requests
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Mass Change Requisition Requester Requests
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Company = Company from Requisition
+Enter any additional data
+OK
+
+Requisition will show the From / To change
+
+Click on Requisition ID
+Click on Process tab - you will see the Mass Change - new requester"
+2. wait for search results (2 seconds)
+3. click search result containing "Company = Company from Requisition
+Enter any additional data
+OK
+
+Requisition will show the From / To change
+
+Click on Requisition ID
+Click on Process tab - you will see the Mass Change - new requester"
+4. wait for page to load (3 seconds)
+5. Enter any additional data
+6. Click on Requisition ID
+7. Click on Process tab - you will see the Mass Change - new requester
+8. screenshot as "PRO-3-1740_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

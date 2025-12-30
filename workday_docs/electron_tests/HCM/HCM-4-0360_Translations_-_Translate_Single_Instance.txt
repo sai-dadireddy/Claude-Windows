@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-4-0360
+FUNCTIONAL AREA: HCM
+TEST NAME: Translations - Translate Single Instance
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Log in as Translator and manually translate a single instance. Use related actions and locate the Translation section > Translate Instance.
+
+WORKDAY ROLE: Translator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Translator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Translate Instance"
+2. wait for search results
+3. click search result containing "Translate Instance"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0360_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Translate Instance
+
+### 1. Admin Guide  Financial Management (score: 2)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components......................................................
+================================================================================

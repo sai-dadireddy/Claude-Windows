@@ -1,0 +1,77 @@
+================================================================================
+TEST ID: SRCCNT-4-0440
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Revise an Active Contract
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 38.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Supplier Contracts Connector enabled
+Workday SSO Enabled and working
+Supplier Onboarded 
+Financial Company, Currency Selected
+
+WD Preconditions: 
+Integration attribute configured to Approved
+BP has no Routing configured.
+
+TASK / STEP:
+1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction 
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button
+7. Run Supplier Contracts Integration System to sync Revision to Workday
+8. Login to Workday to view amendment
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction 
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button
+7. Run Supplier Contracts Integration System to sync Revision to Workday
+8. Login to Workday to view amendment"
+2. wait for search results
+3. click search result containing "1. Open a contract in Active status
+2. Click on the 'Revise' button, confirm contract revision, and go to contract revision
+3. Update the contract transaction 
+4. Change the contract status to 'Send for Approval'
+5. Approve the contract (if applicable)
+6. After the contract is approved, open the contract and click on the 'Complete Revision' button
+7. Run Supplier Contracts Integration System to sync Revision to Workday
+8. Login to Workday to view amendment"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0440_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

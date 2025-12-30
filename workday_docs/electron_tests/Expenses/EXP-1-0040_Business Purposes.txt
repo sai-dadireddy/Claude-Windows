@@ -1,0 +1,15 @@
+================================================================================
+TEST ID: EXP-1-0040
+CONFIDENCE SCORE: 3.0/10.0
+FUNCTIONAL AREA: Expenses
+TEST NAME: Business Purposes
+================================================================================
+
+DESCRIPTION:
+Verify list of Business Purposes.
+
+ELECTRON STEPS:
+[MANUAL TEST - Insufficient knowledge base coverage]
+1. View Business Purposes
+
+================================================================================

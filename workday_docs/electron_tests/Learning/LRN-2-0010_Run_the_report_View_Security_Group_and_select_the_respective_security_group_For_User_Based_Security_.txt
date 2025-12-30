@@ -1,0 +1,23 @@
+# Scenario ID: LRN-2-0010
+# Functional Area: Learning
+# Status: AUTO-GENERATED
+# Confidence: 8.0/10.0
+# Original Task: Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+#======================================================================
+
+# Task: Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+# RAG Context Summary:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run the report "View Security Group" and select the respective security group:
+For User Bas...
+
+search "View Security Group"
+wait 2
+click "link:View Security Group"
+wait 3

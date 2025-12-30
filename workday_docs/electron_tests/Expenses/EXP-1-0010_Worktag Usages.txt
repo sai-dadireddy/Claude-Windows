@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: EXP-1-0010
+CONFIDENCE SCORE: 8.0/10.0
+FUNCTIONAL AREA: Expenses
+TEST NAME: Worktag Usages
+================================================================================
+
+DESCRIPTION:
+Verify all required Worktag Usages have been configured for:  Expense Reports, Corporate Credit Card Account, and Spend Authorization
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Worktag Usage"
+2. wait for search results
+3. click search result containing "Maintain Worktag Usage"
+4. wait for page to load
+5. screenshot as "EXP-1-0010_complete.png"
+
+================================================================================

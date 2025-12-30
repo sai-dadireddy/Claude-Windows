@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: ABS-1-0010
+FUNCTIONAL AREA: Absence
+TEST NAME: Calculation Audit
+STATUS: ⚠️ NEEDS SME REVIEW
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+DESCRIPTION:
+Task/Step: Calculation Exception Audit
+
+PREREQUISITES:
+- User logged in with Absence Administrator permissions
+- Required permissions for Absence tasks
+
+ELECTRON STEPS:
+1. enter search box as "Calculation Exception Audit"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. [NEEDS SME REVIEW] - Complete required fields based on business process
+6. [NEEDS SME REVIEW] - Submit form
+7. screenshot as "ABS-1-0010_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+WORKDAY ROLE: Absence Administrator
+EST. EFFORT: 5 minutes
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Calculation Exception Audit
+
+### 1. Kb Expense Report (score: 3)
+Source: kb_expense_report.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE EXPENSE REPORT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Spend Managemen...
+================================================================================

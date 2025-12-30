@@ -1,0 +1,103 @@
+================================================================================
+TEST ID: SRCSM-4-0230
+FUNCTIONAL AREA: Sourcing - Suppliers
+TEST NAME: Suppliers onboarded and NOT onboarded in different line items
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 27.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Award to Requisition Connector enabled
+Workday SSO Enabled and working
+Requisition is being created for multiple Service lines with different suppliers in it 
+Supplier(s) both onboarded and not onboarded
+General Project is created
+Valid Financial Company, Currency Selected (USD) 
+
+WD Preconditions: 
+Integration attribute configured to Submit
+BP has no Routing configured.
+
+TASK / STEP:
+WSS Test Steps 
+1. Create Requisition with multiple services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration:
+* integration successfully completed with errors
+* Log File confirms requisitions not created
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "WSS Test Steps 
+1. Create Requisition with multiple services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration:
+* integration successfully completed with errors
+* Log File confirms requisitions not created"
+2. wait for search results
+3. click search result containing "WSS Test Steps 
+1. Create Requisition with multiple services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration:
+* integration successfully completed with errors
+* Log File confirms requisitions not created"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: From Find Requisition Task find created requisition
+VIEW Requisition on UI
+1. Requisition in status of approved
+2. Confirm details passed correctly 
+3. Verify two new fields External_id, Sourceable_id
+4. Check disabled field on Requisition UI
+5. For Requisition header verify information defaulted.  
+6. Check Requisition Service Lines Mapping
+7. Check Requisition Goods Line Mapping
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCSM-4-0230_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: From Find Requisition Task find created requisition
+VIEW Requisition on UI
+1. Requisition in status of approved
+2. Confirm details passed correctly 
+3. Verify two new fields External_id, Sourceable_id
+4. Check disabled field on Requisition UI
+5. For Requisition header verify information defaulted.  
+6. Check Requisition Service Lines Mapping
+7. Check Requisition Goods Line Mapping
+
+================================================================================
