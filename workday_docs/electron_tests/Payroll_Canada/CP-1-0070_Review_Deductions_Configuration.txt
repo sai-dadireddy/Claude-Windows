@@ -3,7 +3,7 @@ TEST ID: CP-1-0070
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Review Deductions Configuration
-CONFIDENCE: [HIGH] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,23 +20,23 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "All Deductions"
+1. enter search box as "Configure Deductions"
 2. wait for search results
-3. click search result containing "All Deductions"
+3. click search result containing "Configure Deductions"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-1-0070_complete.png"
+5. verify deductions list displayed
+6. verify pre-tax deductions (401k, HSA, FSA)
+7. verify post-tax deductions (loans, garnishments)
+8. verify employer deductions
+9. review frequency and calculation methods
+10. screenshot as "CP-1-0070_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All deduction types configured
+- [ ] Pre-tax and post-tax deductions separated
+- [ ] Employer deductions exist
+- [ ] Calculation methods correct
+- [ ] GL accounts mapped
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

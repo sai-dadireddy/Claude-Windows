@@ -2,7 +2,7 @@
 TEST ID: USP-3-0080
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Earnings Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,24 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "All Earnings"
+1. enter search box as "Configure Earnings"
 2. wait for search results
-3. click search result containing "All Earnings"
+3. click search result containing "Configure Earnings"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-3-0080_complete.png"
+5. verify earnings list displayed
+6. verify salary earnings types
+7. verify hourly earnings types
+8. verify overtime earnings types
+9. verify bonus earnings types
+10. review tax treatment for each earning
+11. screenshot as "USP-3-0080_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All earnings types configured
+- [ ] Salary, hourly, overtime, bonus types exist
+- [ ] Tax treatment correct for each earning
+- [ ] GL accounts mapped to earnings
+- [ ] No deprecated earnings codes
 
 API ALTERNATIVE:
 SOAP:

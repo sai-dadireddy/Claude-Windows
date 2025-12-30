@@ -1,0 +1,52 @@
+# Workday Test Enhancement - Next Session Prompt
+
+## Copy this prompt to start the next session:
+
+---
+
+**TASK: Enhance 2,317 low-confidence Workday Electron test files**
+
+## Background
+- 4,978 test files generated in workday_docs/electron_tests/
+- 2,317 files have LOW/MEDIUM confidence with placeholder text
+- Need to research Workday KB and update with actual Electron steps
+
+## Files Location
+- Tests: C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/
+- RAG: python workday_docs/workday_rag.py "{task}"
+- Agent: ~/.claude/agents/workday-expert.md
+
+## CRITICAL - BROWSER TAB ISOLATION
+Each agent MUST create its own tab:
+
+  context = mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=True)
+  new_tab = mcp__claude-in-chrome__tabs_create_mcp()
+  tabId = new_tab.id  # Use THIS for ALL calls
+
+  mcp__claude-in-chrome__navigate(url="https://resourcecenter.workday.com", tabId=tabId)
+  mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=tabId)
+  mcp__claude-in-chrome__find(query="search box", tabId=tabId)
+  mcp__claude-in-chrome__form_input(ref="search_ref", value="{task}", tabId=tabId)
+  mcp__claude-in-chrome__computer(action="key", text="Enter", tabId=tabId)
+  mcp__claude-in-chrome__get_page_text(tabId=tabId)
+
+## Areas Needing Enhancement
+Finance: 327, HCM: 319, Benefits: 238, Procurement: 186, Payroll_US: 173
+Inventory: 173, Payroll_UK: 167, Endowments: 144, Case_Management: 144
+
+## Workflow per File
+1. Read test file, extract task name
+2. Query RAG: python workday_rag.py "{task}"
+3. If score < 7.0, use browser to search Workday KB
+4. Update test file with valid Electron commands
+5. Update confidence score
+
+## Rules
+- NEVER generate placeholders
+- ONLY use valid Electron commands
+- Run agents SEQUENTIALLY (not parallel) to avoid browser conflicts
+- Wait 3-5 seconds between browser actions
+- Max 20 page loads per agent
+
+## Find Files Needing Enhancement
+grep -rl "RAG data available but" workday_docs/electron_tests/ --include="*.txt" | wc -l

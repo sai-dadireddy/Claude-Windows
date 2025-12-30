@@ -3,7 +3,7 @@ TEST ID: CP-5-0130
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: CAN Tax Elections Review
-CONFIDENCE: [MEDIUM] Score: 6.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,19 +20,23 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "TD1 Worker CAN Tax Election Report"
+1. enter search box as "Tax Elections"
 2. wait for search results
-3. click search result containing "TD1 Worker CAN Tax Election Report"
+3. click search result containing "Tax Elections"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
-6. screenshot as "CP-5-0130_complete.png"
+5. verify employee tax elections list
+6. verify federal withholding settings
+7. verify state withholding settings
+8. verify local tax settings
+9. filter for employees with missing elections
+10. screenshot as "CP-5-0130_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All employees have tax elections
+- [ ] Federal W-4 forms on file
+- [ ] State withholding configured
+- [ ] Multi-state employees handled correctly
+- [ ] No missing tax elections
 
 API ALTERNATIVE:
 - SOAP: Get_Payroll_Results, Put_Provinc, Get_Province_Annual_Elections

@@ -3,7 +3,7 @@ TEST ID: CP-5-0160
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Pay Group Assignments Review
-CONFIDENCE: [HIGH] Score: 9.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,19 +20,22 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "No delivered report exists - needs to be added to dapzulu"
+1. enter search box as "Pay Group Assignments"
 2. wait for search results
-3. click search result containing "No delivered report exists - needs to be added to dapzulu"
+3. click search result containing "Pay Group Assignments"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-5-0160_complete.png"
+5. verify employee pay group assignments
+6. verify all active employees have assignments
+7. verify assignment effective dates
+8. verify no duplicate assignments
+9. screenshot as "CP-5-0160_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All active employees assigned to pay groups
+- [ ] Effective dates are correct
+- [ ] No duplicate assignments
+- [ ] Pay group assignments match job data
+- [ ] No unassigned employees
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

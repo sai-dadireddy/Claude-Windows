@@ -2,8 +2,8 @@
 TEST ID: HCM-4-0310
 FUNCTIONAL AREA: HCM
 TEST NAME: Add Vaccination - Administrator
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [KB Article: kb_hcm_add_vaccination.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -15,40 +15,44 @@ EST. DURATION: 5 minutes
 PREREQUISITES:
 - User logged in with HR Administrator permissions
 - Required data available in tenant
+- Worker ID for vaccination record entry
 
 ELECTRON STEPS:
 1. enter search box as "Add Vaccination"
 2. wait for search results
 3. click search result containing "Add Vaccination"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-4-0310_complete.png"
+5. enter Worker field as "{worker_name}"
+6. wait for worker search results
+7. click worker result containing "{worker_name}"
+8. select Vaccination Type as "COVID-19"
+9. select Dose Number as "First Dose"
+10. enter Vaccination Date as "{vaccination_date}"
+11. select Vaccination Status as "Completed"
+12. enter Vaccine Manufacturer as "Pfizer"
+13. click button "Submit"
+14. wait for confirmation
+15. verify message contains "successfully"
+16. screenshot as "HCM-4-0310_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Worker selected successfully
+- [ ] Vaccination details entered accurately
+- [ ] Confirmation message displayed: "Vaccination has been successfully added"
 - [ ] No error messages displayed
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources WSDL - Worker vaccination management operations
+- REST: Not available in current API schemas
 
 RAG NOTES:
-Loaded 63 docs from public/private
+Loaded 64 docs from public/private
 Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
+Total: 119 documents
 ## Results for: Add Vaccination
 
-### 1. Admin Guide Human Capital Management (score: 2)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information..............................................................
+### 1. Kb Hcm Add Vaccination (score: 7)
+Source: kb_hcm_add_vaccination.txt
+Knowledge base article provides detailed business process steps including field names,
+navigation paths, and validation rules for the Add Vaccination task.
 ================================================================================

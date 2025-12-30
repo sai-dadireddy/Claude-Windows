@@ -20,23 +20,25 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "All Pay Groups"
+1. enter search box as "Configure Pay Group"
 2. wait for search results
-3. click search result containing "All Pay Groups"
+3. click search result containing "Configure Pay Group"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-3-0030_complete.png"
+5. verify pay group list is displayed
+6. verify column "Pay Group Name" is visible
+7. verify column "Pay Frequency" is visible
+8. verify column "Period Schedule" is visible
+9. click on first pay group to review details
+10. verify payment election rules
+11. verify run categories assigned
+12. screenshot as "CP-3-0030_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All pay groups configured
+- [ ] Pay frequency correct (weekly, biweekly, monthly, etc.)
+- [ ] Period schedules linked appropriately
+- [ ] Payment election rules configured
+- [ ] Run categories assigned to pay groups
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

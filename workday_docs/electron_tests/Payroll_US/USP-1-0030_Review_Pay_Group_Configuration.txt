@@ -2,7 +2,7 @@
 TEST ID: USP-1-0030
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Pay Group Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,25 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "All Pay Groups"
+1. enter search box as "Configure Pay Group"
 2. wait for search results
-3. click search result containing "All Pay Groups"
+3. click search result containing "Configure Pay Group"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0030_complete.png"
+5. verify pay group list is displayed
+6. verify column "Pay Group Name" is visible
+7. verify column "Pay Frequency" is visible
+8. verify column "Period Schedule" is visible
+9. click on first pay group to review details
+10. verify payment election rules
+11. verify run categories assigned
+12. screenshot as "USP-1-0030_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All pay groups configured
+- [ ] Pay frequency correct (weekly, biweekly, monthly, etc.)
+- [ ] Period schedules linked appropriately
+- [ ] Payment election rules configured
+- [ ] Run categories assigned to pay groups
 
 API ALTERNATIVE:
 SOAP:

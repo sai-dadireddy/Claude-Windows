@@ -2,7 +2,7 @@
 TEST ID: USP-1-0150
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Payment Election Review
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,23 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "QA - Worker Pay Group and Payment Elections"
+1. enter search box as "Payment Elections"
 2. wait for search results
-3. click search result containing "QA - Worker Pay Group and Payment Elections"
+3. click search result containing "Payment Elections"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0150_complete.png"
+5. verify payment elections list
+6. verify employee bank account information
+7. verify payment methods (ACH, check, etc.)
+8. verify split payments configuration
+9. filter for employees with missing payment elections
+10. screenshot as "USP-1-0150_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All employees have payment elections
+- [ ] Bank accounts validated
+- [ ] Payment methods configured
+- [ ] Split payments work correctly
+- [ ] No missing payment elections
 
 API ALTERNATIVE:
 SOAP:

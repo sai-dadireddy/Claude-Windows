@@ -2,7 +2,7 @@
 TEST ID: USP-5-0090
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Deductions Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,23 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "All Deductions"
+1. enter search box as "Configure Deductions"
 2. wait for search results
-3. click search result containing "All Deductions"
+3. click search result containing "Configure Deductions"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0090_complete.png"
+5. verify deductions list displayed
+6. verify pre-tax deductions (401k, HSA, FSA)
+7. verify post-tax deductions (loans, garnishments)
+8. verify employer deductions
+9. review frequency and calculation methods
+10. screenshot as "USP-5-0090_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All deduction types configured
+- [ ] Pre-tax and post-tax deductions separated
+- [ ] Employer deductions exist
+- [ ] Calculation methods correct
+- [ ] GL accounts mapped
 
 API ALTERNATIVE:
 SOAP:

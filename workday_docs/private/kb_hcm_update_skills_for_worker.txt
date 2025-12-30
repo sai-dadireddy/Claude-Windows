@@ -1,0 +1,349 @@
+# Workday Update Skills for Worker Business Process - Knowledge Base
+
+## Source
+- Workday HCM Talent Management
+- Documentation: Worker Profile - Career Tab - Skills Management
+- Release: 2025R1
+- Created: 2025-12-30
+
+## Overview
+
+The **Update Skills for Worker** task allows HR administrators, managers, and workers to maintain and update the skills profile for an employee. This process supports talent management, career development, and workforce planning by tracking both current skills and proficiency levels.
+
+## Key Components
+
+### 1. Initiation
+The process can be initiated by:
+- **Worker (Self-Service)**: Adding or updating their own skills
+- **HR Administrator**: Managing skills for any worker
+- **Manager**: Updating skills for direct reports (if configured)
+
+### 2. Access Points
+
+#### From Worker Profile:
+1. Search for worker name or ID
+2. Navigate to worker profile
+3. Select "Career" tab
+4. Select "Skills" section
+5. Click "Edit" or "Add Skills"
+
+#### From Tenant Search:
+1. Enter "Update Skills" or search worker name
+2. Navigate to worker profile
+3. Access Career tab > Skills
+
+### 3. Skills Categories
+
+**Skill Types:**
+- **Hard Skills**: Technical competencies, certifications, software proficiency
+- **Soft Skills**: Communication, leadership, problem-solving
+- **Language Skills**: Languages spoken and proficiency levels
+- **Industry-Specific Skills**: Domain expertise, specialized knowledge
+
+### 4. Required/Optional Fields
+
+**Required Fields:**
+- **Worker**: The employee whose skills are being updated
+- **Skill Name**: Specific skill being added or updated
+- **Proficiency Level**: Beginner, Intermediate, Advanced, Expert
+
+**Optional Fields:**
+- Years of Experience with this skill
+- Last Used Date
+- Certified (Yes/No)
+- Certification Name and Date
+- Interest Level (for skills worker wants to develop)
+- Verification Source (Self-reported, Manager-verified, Assessment)
+- Comments/Notes
+
+### 5. Suggested Skills Feature
+
+Workday's AI-powered suggestions can:
+- Recommend skills based on job profile
+- Suggest skills common in similar roles
+- Identify trending skills in the industry
+- Highlight skills gap compared to career aspirations
+
+### 6. Security and Permissions
+
+Required domain permissions:
+- **Add/Modify**: Worker Data: Skills and Experience
+- **View**: Personal Data: Skills
+
+Typical security groups:
+- HR Administrator
+- Worker (for self-service)
+- Manager (for direct reports)
+- Talent Management Administrator
+
+## Implementation Steps
+
+### Standard Workflow:
+
+1. **Navigate to Worker Profile**:
+   - Search for worker name or ID
+   - Click on worker profile from results
+
+2. **Access Career Tab**:
+   - Select "Career" tab
+   - Navigate to "Skills" section
+
+3. **Edit Skills**:
+   - Click "Edit" button or pencil icon
+   - Skills editor opens
+
+4. **Add New Skill**:
+   - Click "Add" or "+" button
+   - Search for skill in skill library
+   - Select skill from dropdown or search results
+
+5. **Set Proficiency Level**:
+   - Select proficiency: Beginner, Intermediate, Advanced, Expert
+   - Enter years of experience (optional)
+   - Set last used date (optional)
+
+6. **Add Certification Details** (if applicable):
+   - Mark as "Certified"
+   - Enter certification name
+   - Enter certification date
+   - Attach certificate document (optional)
+
+7. **Review Suggested Skills**:
+   - System displays suggested skills based on role
+   - Review and add relevant suggested skills
+   - Dismiss non-applicable suggestions
+
+8. **Update Existing Skills**:
+   - Modify proficiency level
+   - Update years of experience
+   - Update last used date
+   - Add new certifications
+
+9. **Remove Obsolete Skills**:
+   - Select skill to remove
+   - Click delete or remove button
+   - Confirm deletion
+
+10. **Review and Submit**:
+    - Verify all skills are accurate
+    - Click "Submit" or "Save"
+    - System updates worker skill profile
+
+11. **Confirmation**:
+    - System displays confirmation message
+    - Skills visible on worker profile Career tab
+
+### Business Process Approval (if configured):
+
+If Update Skills requires approval:
+1. **Initiation**: User enters/updates skills
+2. **Review**: Manager reviews changes
+3. **Approval**: HR or Talent Management approves
+4. **Completion**: Skills profile is updated
+
+## Automation Considerations for Electron
+
+### Navigation Steps:
+1. **Search for Worker**:
+   ```
+   enter search box as "{worker_name}"
+   wait for search results
+   click worker result containing "{worker_name}"
+   ```
+
+2. **Access Career Tab**:
+   ```
+   wait for worker profile to load
+   click tab "Career"
+   wait for page to load
+   scroll to "Skills"
+   click button "Edit" in Skills section
+   ```
+
+3. **Add New Skill**:
+   ```
+   wait for skills editor to load
+   click button "Add" or "Add Skill"
+   enter Skill field as "Python Programming"
+   wait for skill search results
+   click skill result "Python Programming"
+   select Proficiency Level as "Advanced"
+   enter Years of Experience as "5"
+   ```
+
+4. **Update Existing Skill**:
+   ```
+   click skill row containing "Java Programming"
+   select Proficiency Level as "Expert"
+   enter Years of Experience as "8"
+   click checkbox "Certified"
+   enter Certification Name as "Oracle Certified Professional"
+   ```
+
+5. **Add from Suggested Skills**:
+   ```
+   scroll to "Suggested Skills" section
+   verify suggested skills are displayed
+   click button "Add" next to skill "Machine Learning"
+   select Proficiency Level as "Intermediate"
+   ```
+
+6. **Remove Skill**:
+   ```
+   click skill row containing "COBOL"
+   click button "Remove" or delete icon
+   click button "OK" to confirm deletion
+   ```
+
+7. **Submit Changes**:
+   ```
+   click button "Submit" or "Save"
+   wait for confirmation
+   verify message contains "successfully updated"
+   screenshot as "skills_updated_complete.png"
+   ```
+
+### UI Selectors:
+- Career Tab: "Career" or "Career for Worker Profile"
+- Skills Section: "Skills" or "Skills and Experience"
+- Edit Button: "Edit", pencil icon, or "Manage Skills"
+- Add Skill Button: "Add", "+", or "Add Skill"
+- Skill Search Field: "Skill" or "Search Skills"
+- Proficiency Dropdown: "Proficiency Level" or "Skill Level"
+- Submit Button: "Submit", "Save", or "OK"
+
+### Validation:
+- Confirmation message: "Skills have been successfully updated"
+- Updated skills visible in Career tab
+- Proficiency levels correctly displayed
+- Suggested skills section shows relevant recommendations
+
+### Error Handling:
+Common errors:
+- "Skill not found" - Skill not in library, need to request addition
+- "Invalid proficiency level" - Selection required
+- "Missing required field" - Skill name not entered
+- "Insufficient permissions" - User lacks domain access
+- "Duplicate skill" - Skill already exists in profile
+
+### Screenshots:
+- Worker profile - Career tab
+- Skills section before edit
+- Skills editor with new skill added
+- Suggested skills section
+- Confirmation message
+- Updated skills section
+
+## Common Use Cases
+
+### Scenario 1: Self-Service Skills Update
+- Worker logs in during performance review period
+- Updates skills acquired during the year
+- Adds new certifications
+- Increases proficiency levels based on experience
+
+### Scenario 2: Manager-Driven Skills Assessment
+- Manager reviews team member skills
+- Updates proficiency based on project performance
+- Adds skills observed but not self-reported
+- Identifies skill gaps for development planning
+
+### Scenario 3: HR Talent Planning
+- HR reviews organization-wide skills inventory
+- Updates worker skills based on training completion
+- Adds certifications from external systems
+- Maintains accurate skills database for succession planning
+
+### Scenario 4: Onboarding New Hire
+- HR adds skills from resume during onboarding
+- Worker reviews and confirms skill list
+- Adds additional skills not captured
+- Sets baseline for future development
+
+## Related Business Processes
+
+- Worker Profile Management
+- Performance Review
+- Career Development Planning
+- Succession Planning
+- Learning and Development
+- Job Profile Management
+- Talent Assessment
+
+## Reporting and Analytics
+
+Available reports:
+- Skills Inventory by Organization
+- Skills Gap Analysis
+- Certification Expiration Report
+- Top Skills by Department
+- Skill Proficiency Distribution
+- Suggested Skills Adoption Rate
+
+## Best Practices
+
+1. **Accuracy**: Be honest about proficiency levels - avoid over-rating
+2. **Currency**: Update skills regularly, especially after training or projects
+3. **Comprehensiveness**: Include both technical and soft skills
+4. **Validation**: Get manager verification for critical skills
+5. **Certifications**: Always attach supporting documentation
+6. **Development**: Use suggested skills to identify growth opportunities
+7. **Privacy**: Consider which skills to make visible in employee directory
+
+## Integration Points
+
+### Skills Library Management
+- Central skills taxonomy maintained by HR
+- Skills can be requested if not in library
+- Skills mapped to job profiles and competencies
+- Industry-standard skill classifications supported
+
+### Talent Marketplace Integration
+- Skills feed into internal talent marketplace
+- Workers matched to projects based on skills
+- Gig assignments recommended based on skill profile
+- Career path suggestions based on current skills
+
+### Learning Integration
+- Skills gaps trigger learning recommendations
+- Training completions auto-update skill proficiency
+- Certifications from LMS synced to worker profile
+- Skill-based learning paths suggested
+
+## Configuration Considerations
+
+### Skills Library
+- Maintain standardized skill names (avoid duplicates like "Python" and "Python Programming")
+- Define consistent proficiency level definitions
+- Map skills to competencies and job families
+- Enable/disable suggested skills feature
+
+### Security
+- Configure who can view worker skills (public vs. private)
+- Set permissions for who can edit skills
+- Enable/disable self-service skill updates
+- Configure approval requirements
+
+### Suggestions
+- Configure AI-powered skill recommendations
+- Set skill suggestion sources (job profile, peer comparison, industry trends)
+- Enable/disable suggested skills notifications
+
+## References
+
+- Workday HCM: Talent Management
+- Skills and Experience Configuration
+- Worker Profile Administration
+- Career Development Planning
+- Talent Marketplace Integration
+
+## Effective Management
+
+By effectively managing worker skills in Workday, organizations can:
+- Maintain accurate talent inventory
+- Identify skills gaps and training needs
+- Support career development and succession planning
+- Match talent to opportunities
+- Make data-driven workforce planning decisions
+- Improve internal mobility and talent utilization
+- Support strategic workforce initiatives

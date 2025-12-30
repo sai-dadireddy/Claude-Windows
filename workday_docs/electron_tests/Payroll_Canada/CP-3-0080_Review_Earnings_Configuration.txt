@@ -3,7 +3,7 @@ TEST ID: CP-3-0080
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Review Earnings Configuration
-CONFIDENCE: [HIGH] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,23 +20,24 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "All Earnings"
+1. enter search box as "Configure Earnings"
 2. wait for search results
-3. click search result containing "All Earnings"
+3. click search result containing "Configure Earnings"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-3-0080_complete.png"
+5. verify earnings list displayed
+6. verify salary earnings types
+7. verify hourly earnings types
+8. verify overtime earnings types
+9. verify bonus earnings types
+10. review tax treatment for each earning
+11. screenshot as "CP-3-0080_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All earnings types configured
+- [ ] Salary, hourly, overtime, bonus types exist
+- [ ] Tax treatment correct for each earning
+- [ ] GL accounts mapped to earnings
+- [ ] No deprecated earnings codes
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

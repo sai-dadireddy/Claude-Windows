@@ -3,7 +3,7 @@ TEST ID: CP-2-0060
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Verify Additional Run Category Configuration
-CONFIDENCE: [HIGH] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,19 +20,24 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "Pay Calculation Results for Group of Workers"
+1. enter search box as "Configure Run Category"
 2. wait for search results
-3. click search result containing "Pay Calculation Results for Group of Workers"
+3. click search result containing "Configure Run Category"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-2-0060_complete.png"
+5. verify run category list is displayed
+6. verify column "Run Category Name" is visible
+7. verify column "Pay Group" is visible
+8. verify column "Frequency" is visible
+9. review configuration for each run category
+10. verify off-cycle run categories exist
+11. screenshot as "CP-2-0060_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All run categories configured
+- [ ] Run category names are descriptive
+- [ ] Pay groups correctly assigned
+- [ ] Frequency settings appropriate
+- [ ] Off-cycle categories exist for special payments
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

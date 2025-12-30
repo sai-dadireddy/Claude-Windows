@@ -349,9 +349,9 @@ def main():
 
             if enhance_test_file(file_path):
                 enhanced_count += 1
-                print(f"  ✓ Enhanced: {file_path.name}")
+                print(f"  [+] Enhanced: {file_path.name}")
             else:
-                print(f"  - Skipped: {file_path.name}")
+                print(f"  [-] Skipped: {file_path.name}")
 
     print(f"\n{'='*60}")
     print(f"Enhancement Complete")

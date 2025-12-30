@@ -2,7 +2,7 @@
 TEST ID: USP-3-0160
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: US Tax Elections Review
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,23 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "USA QA Pay Worker Tax Elections"
+1. enter search box as "Tax Elections"
 2. wait for search results
-3. click search result containing "USA QA Pay Worker Tax Elections"
+3. click search result containing "Tax Elections"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-3-0160_complete.png"
+5. verify employee tax elections list
+6. verify federal withholding settings
+7. verify state withholding settings
+8. verify local tax settings
+9. filter for employees with missing elections
+10. screenshot as "USP-3-0160_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All employees have tax elections
+- [ ] Federal W-4 forms on file
+- [ ] State withholding configured
+- [ ] Multi-state employees handled correctly
+- [ ] No missing tax elections
 
 API ALTERNATIVE:
 SOAP:

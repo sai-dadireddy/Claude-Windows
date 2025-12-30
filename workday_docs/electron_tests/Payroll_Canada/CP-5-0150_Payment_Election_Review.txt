@@ -3,7 +3,7 @@ TEST ID: CP-5-0150
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payment Election Review
-CONFIDENCE: [HIGH] Score: 9.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,19 +20,23 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "No delivered report exists - needs to be added to dapzulu"
+1. enter search box as "Payment Elections"
 2. wait for search results
-3. click search result containing "No delivered report exists - needs to be added to dapzulu"
+3. click search result containing "Payment Elections"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-5-0150_complete.png"
+5. verify payment elections list
+6. verify employee bank account information
+7. verify payment methods (ACH, check, etc.)
+8. verify split payments configuration
+9. filter for employees with missing payment elections
+10. screenshot as "CP-5-0150_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All employees have payment elections
+- [ ] Bank accounts validated
+- [ ] Payment methods configured
+- [ ] Split payments work correctly
+- [ ] No missing payment elections
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

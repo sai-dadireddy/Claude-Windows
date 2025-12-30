@@ -3,7 +3,7 @@ TEST ID: CP-1-0040
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Review Payment Election Rule Configuration
-CONFIDENCE: [HIGH] Score: 8.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,28 +20,22 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "Payment Election Rules"
+1. enter search box as "Configure Payment Election Rule"
 2. wait for search results
-3. click search result containing "Payment Election Rules"
+3. click search result containing "Configure Payment Election Rule"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Workday Community AI-Generated Answer
-   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-   - Release: 2025R1
-   - ...
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-1-0040_complete.png"
+5. verify payment election rules table
+6. verify column "Rule Name" is visible
+7. verify column "Payment Type" is visible
+8. verify default payment methods configured
+9. verify bank account validation rules
+10. screenshot as "CP-1-0040_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Payment election rules configured
+- [ ] Default payment methods set
+- [ ] Bank account validation active
+- [ ] Payment types defined (ACH, check, wire, etc.)
 
 API ALTERNATIVE:
 - SOAP: Get_Payroll_Results

@@ -2,7 +2,7 @@
 TEST ID: USP-2-0100
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Verify Additional Run Category Configuration
-CONFIDENCE: [HIGH] Score: 9.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,24 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "Pay Calculation Results for Group of Workers, All Pay Groups"
+1. enter search box as "Configure Run Category"
 2. wait for search results
-3. click search result containing "Pay Calculation Results for Group of Workers, All Pay Groups"
+3. click search result containing "Configure Run Category"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-2-0100_complete.png"
+5. verify run category list is displayed
+6. verify column "Run Category Name" is visible
+7. verify column "Pay Group" is visible
+8. verify column "Frequency" is visible
+9. review configuration for each run category
+10. verify off-cycle run categories exist
+11. screenshot as "USP-2-0100_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All run categories configured
+- [ ] Run category names are descriptive
+- [ ] Pay groups correctly assigned
+- [ ] Frequency settings appropriate
+- [ ] Off-cycle categories exist for special payments
 
 API ALTERNATIVE:
 SOAP:

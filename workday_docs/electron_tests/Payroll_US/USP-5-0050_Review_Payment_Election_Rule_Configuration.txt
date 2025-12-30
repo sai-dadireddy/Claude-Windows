@@ -2,7 +2,7 @@
 TEST ID: USP-5-0050
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Payment Election Rule Configuration
-CONFIDENCE: [HIGH] Score: 9.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,22 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "Payment Election Rules"
+1. enter search box as "Configure Payment Election Rule"
 2. wait for search results
-3. click search result containing "Payment Election Rules"
+3. click search result containing "Configure Payment Election Rule"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0050_complete.png"
+5. verify payment election rules table
+6. verify column "Rule Name" is visible
+7. verify column "Payment Type" is visible
+8. verify default payment methods configured
+9. verify bank account validation rules
+10. screenshot as "USP-5-0050_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] Payment election rules configured
+- [ ] Default payment methods set
+- [ ] Bank account validation active
+- [ ] Payment types defined (ACH, check, wire, etc.)
 
 API ALTERNATIVE:
 SOAP:

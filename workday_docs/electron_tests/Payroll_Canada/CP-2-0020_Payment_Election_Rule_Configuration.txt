@@ -3,7 +3,7 @@ TEST ID: CP-2-0020
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payment Election Rule Configuration
-CONFIDENCE: [MEDIUM] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,23 +20,22 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "Maintain Payment Elections for Worker"
+1. enter search box as "Configure Payment Election Rule"
 2. wait for search results
-3. click search result containing "Maintain Payment Elections for Worker"
+3. click search result containing "Configure Payment Election Rule"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-2-0020_complete.png"
+5. verify payment election rules table
+6. verify column "Rule Name" is visible
+7. verify column "Payment Type" is visible
+8. verify default payment methods configured
+9. verify bank account validation rules
+10. screenshot as "CP-2-0020_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Payment election rules configured
+- [ ] Default payment methods set
+- [ ] Bank account validation active
+- [ ] Payment types defined (ACH, check, wire, etc.)
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results

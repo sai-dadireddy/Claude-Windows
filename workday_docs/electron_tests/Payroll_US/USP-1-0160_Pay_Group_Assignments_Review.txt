@@ -2,7 +2,7 @@
 TEST ID: USP-1-0160
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Pay Group Assignments Review
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -17,19 +17,22 @@ PREREQUISITES:
 - System is in proper state for payroll operations
 
 ELECTRON STEPS:
-1. enter search box as "Pay Group Report w Position ID - With No Pay Group"
+1. enter search box as "Pay Group Assignments"
 2. wait for search results
-3. click search result containing "Pay Group Report w Position ID - With No Pay Group"
+3. click search result containing "Pay Group Assignments"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0160_complete.png"
+5. verify employee pay group assignments
+6. verify all active employees have assignments
+7. verify assignment effective dates
+8. verify no duplicate assignments
+9. screenshot as "USP-1-0160_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All active employees assigned to pay groups
+- [ ] Effective dates are correct
+- [ ] No duplicate assignments
+- [ ] Pay group assignments match job data
+- [ ] No unassigned employees
 
 API ALTERNATIVE:
 SOAP:
