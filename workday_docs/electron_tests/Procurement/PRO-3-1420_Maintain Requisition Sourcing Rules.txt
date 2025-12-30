@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1420
+FUNCTIONAL AREA: Procurement
+TEST NAME: Maintain Requisition Sourcing Rules
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Maintain Requisition Sourcing Rules
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Requisition Sourcing Rules"
+2. wait for search results (2 seconds)
+3. click search result containing "Maintain Requisition Sourcing Rules"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1420_complete.png"
+
+VERIFICATION:
+- [ ] Procurement Configurator
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

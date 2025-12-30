@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-4-0130-05
+FUNCTIONAL AREA: HCM
+TEST NAME: End Domestic or International Assignment for Employee
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that time off accruals calculate as expected for the remaining position.
+
+WORKDAY ROLE: Absence Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Absence Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "5. Accrual Calculations"
+2. wait for search results
+3. click search result containing "5. Accrual Calculations"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0130-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 5. Accrual Calculations
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample...
+================================================================================

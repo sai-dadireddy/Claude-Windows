@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-4-0150
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Run Pay Calculation
+DESCRIPTION: Use the "Run Pay Calculation" task to generate initial payroll and accounting results for all pay groups in scope. (Completed test initially for hourly pay group)
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: USP-4-0090-02
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Retro Comp Change Payroll Impact
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run retro pay calculation.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "2. Run Retro Calculation"
+2. wait for search results
+3. click search result containing "2. Run Retro Calculation"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0090-02_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 3. WSDL: Payroll (score: 4)
+  WSDL: Payroll
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Run Retro Calculation
+
+### 1. Kb Payroll Run Payroll (score: 4)
+Source: kb_payroll_run_payroll.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Payroll WSDL
+Categ
+
+================================================================================

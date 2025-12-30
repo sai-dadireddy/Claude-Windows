@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: BEN-5-0130
+FUNCTIONAL AREA: Benefits
+TEST NAME: Verify Benefit Groups
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Benefit Group
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Benefit Group
+
+### 1. Kb Hcm Change Job (score: 7)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+``
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Benefit Group"
+2. wait for search results
+3. click search result containing "Benefit Group"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-5-0130_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

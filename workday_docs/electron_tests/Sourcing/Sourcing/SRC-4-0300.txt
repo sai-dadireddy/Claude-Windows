@@ -1,0 +1,65 @@
+================================================================================
+TEST ID: SRC-4-0300
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Build Proposal
+WORKDAY ROLE: Supplier User (Sourcing Manager alternate account)
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 32.0)
+================================================================================
+
+DESCRIPTION:
+Build Proposal as Supplier(s)
+
+TASK / STEP:
+1. Add any required attachments
+2. Respond to the built in questionnaires
+3. Fill out the attached worksheets
+4. Once complete, click Submit Bid
+
+Note: suppliers can export questions to excel to complete them and then upload responses back.
+
+PREREQUISITES:
+- User logged in with Supplier User (Sourcing Manager alternate account) permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Add any required attachments
+2. Respond to the built in questionnaires
+3. Fill out the attached worksheets
+4. Once complete, click Submit Bid
+
+Note: suppliers can export questions to excel to complete them and then upload responses back."
+2. wait for search results
+3. click search result containing "1. Add any required attachments
+2. Respond to the built in questionnaires
+3. Fill out the attached worksheets
+4. Once complete, click Submit Bid
+
+Note: suppliers can export questions to excel to complete them and then upload responses back."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: Note: suppliers can export questions to excel to complete them and then upload responses back.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0300_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: suppliers can export questions to excel to complete them and then upload responses back.
+
+================================================================================

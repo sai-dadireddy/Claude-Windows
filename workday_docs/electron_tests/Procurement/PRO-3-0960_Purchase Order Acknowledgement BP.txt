@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-0960
+FUNCTIONAL AREA: Procurement
+TEST NAME: Purchase Order Acknowledgement BP
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verity Purchase Order Acknowledgement BP has the new service step
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verity Purchase Order Acknowledgement BP has the new service step"
+2. wait for search results (2 seconds)
+3. click search result containing "Verity Purchase Order Acknowledgement BP has the new service step"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-0960_complete.png"
+
+VERIFICATION:
+- [ ] Business Process Administrator
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

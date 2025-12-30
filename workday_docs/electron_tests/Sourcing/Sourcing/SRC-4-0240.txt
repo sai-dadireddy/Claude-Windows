@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: SRC-4-0240
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create Questions Template
+WORKDAY ROLE: Company Admin
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 48.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to the Templates module
+2. Under the Questions section, click on "Add Question Template"
+3. Create a Blank template and give it a name
+4. Add a Section Title and one of each of the question types from the left-hand menu
+5. Notice that you can copy and paste multiple questions that can be created at once
+6. Preview - to see what it will look like from a supplier view
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to the Templates module
+2. Under the Questions section, click on "Add Question Template"
+3. Create a Blank template and give it a name
+4. Add a Section Title and one of each of the question types from the left-hand menu
+5. Notice that you can copy and paste multiple questions that can be created at once
+6. Preview - to see what it will look like from a supplier view"
+2. wait for search results
+3. click search result containing "1. Navigate to the Templates module
+2. Under the Questions section, click on "Add Question Template"
+3. Create a Blank template and give it a name
+4. Add a Section Title and one of each of the question types from the left-hand menu
+5. Notice that you can copy and paste multiple questions that can be created at once
+6. Preview - to see what it will look like from a supplier view"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0240_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

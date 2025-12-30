@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-4-0430
+FUNCTIONAL AREA: Endowments
+TEST NAME: Set Investment Pool Payout Rates
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Record Investment Pool Payout Rate
+
+ELECTRON STEPS:
+1. enter search box as "Record Investment Pool Payout Rate"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-4-0430_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Record Investment Pool Payout Rate
+
+### 1. Admin Guide Education And Government (score: 5)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.........................................
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: INV-3-1140-18
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Consignment Usage Requisitions
+Requisition Type = Consignment Bill and Replace
+
+ELECTRON STEPS:
+1. enter search box as "Create Consignment Usage Requisitions
+Requisition Type = Consignment Bill and Replace"
+2. submit form
+3. screenshot as "INV-3-1140-18_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Consignment Usage Requisitions
+Requisition Type = Consignment Bill and Replace
+
+### 1. Kb Procurement Purchase Order (score: 8)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+======================================================================...
+================================================================================

@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: INV-3-1140-22
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Receipt - Receive Consignment Bill and Replace Purchase Order
+Generally, Depending on customer setup - Auto Putaway should occur automatically.
+
+ELECTRON STEPS:
+1. enter search box as "Create Receipt - Receive Consignment Bill and Replace Purchase Order
+Generally, Depending on customer setup - Auto Putaway should occur automatically."
+2. submit form
+3. screenshot as "INV-3-1140-22_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Receipt - Receive Consignment Bill and Replace Purchase Order
+Generally, Depending on customer setup - Auto Putaway should occur automatically.
+
+### 1. WSDL: Financial_Management (score: 15)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data rela...
+================================================================================

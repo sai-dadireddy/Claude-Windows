@@ -1,0 +1,169 @@
+# Electron Test: TLO-4-0360-02 - Assess Potential
+
+## Test Metadata
+- **Scenario ID**: TLO-4-0360-02
+- **Module**: Talent Optimization
+- **Test Type**: 2 | End to End Test Scenarios
+- **Workday Role**: Manager
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Complete potential assessment and ensure all information can be entered as expected.
+
+## Test Steps
+
+### Task/Step: 2. Assess Potential
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Assess Potential 2. Assess Potential
+
+### 1. Admin Guide Integrations (1) (score: 3)
+Source: Admin-Guide-Integrations (1).pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 2. Admin Guide Integrations (score: 3)
+Source: Admin-Guide-Integrations.pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 3. User Guide Workday People Analytics (1) (score: 3)
+Source: User-Guide-Workday-People-Analytics (1).pdf
+```
+Workday People
+Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+People Analytics.................................................................................................. 4
+Set ...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Manager
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-4-0360-02: Assess Potential', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Manager
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('2. Assess Potential', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: 2. Assess Potential
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Assess Potential 2. Assess Potential
+
+### 1. Admin Guide Integrations (1) (score: 3)
+Source: Admin-Guide-Integrations (1).pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 2. Admin Guide Integrations (score: 3)
+Source: Admin-Guide-Integrations.pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 3. User Guide Workday People Analyt
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 5 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5.2 Strategic Workforce Planning
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:30:42.159573
+Confidence: 80.00%

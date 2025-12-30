@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: INV-3-1140-25
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Supplier Invoice - Select Bill and Replace Purchase Order
+Accounting will be generated.
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoice - Select Bill and Replace Purchase Order
+Accounting will be generated."
+2. click appropriate action button
+3. submit form
+4. screenshot as "INV-3-1140-25_complete.png"
+
+VERIFICATION: Inventory Accountant
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Supplier Invoice - Select Bill and Replace Purchase Order
+Accounting will be generated.
+
+### 1. WSDL: Financial_Management (score: 13)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial ...
+================================================================================

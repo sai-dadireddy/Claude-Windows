@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRC-4-0290
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Ask a Question in an Event
+WORKDAY ROLE: Supplier User (Sourcing Manager alternate account)
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 18.0)
+================================================================================
+
+DESCRIPTION:
+Ask a Question in an Event as Supplier(s)
+
+TASK / STEP:
+1. Click Message Center
+2. Click Send a New Question
+3. Type the question and click Send Question
+4. Click Back to return to the event
+
+PREREQUISITES:
+- User logged in with Supplier User (Sourcing Manager alternate account) permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Click Message Center
+2. Click Send a New Question
+3. Type the question and click Send Question
+4. Click Back to return to the event"
+2. wait for search results
+3. click search result containing "1. Click Message Center
+2. Click Send a New Question
+3. Type the question and click Send Question
+4. Click Back to return to the event"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0290_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

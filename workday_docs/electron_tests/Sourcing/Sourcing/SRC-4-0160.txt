@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRC-4-0160
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Update Stakeholders
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+Update Stakeholders
+
+TASK / STEP:
+1. Click the Stakeholders tab on the new request
+2. Add a Stakeholder
+3. Change the role permissions to read/write
+4. Update the Email option to receive notifications
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Click the Stakeholders tab on the new request
+2. Add a Stakeholder
+3. Change the role permissions to read/write
+4. Update the Email option to receive notifications"
+2. wait for search results
+3. click search result containing "1. Click the Stakeholders tab on the new request
+2. Add a Stakeholder
+3. Change the role permissions to read/write
+4. Update the Email option to receive notifications"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0160_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

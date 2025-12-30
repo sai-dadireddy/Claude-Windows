@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0190
 FUNCTIONAL AREA: Procurement
 TEST NAME: Consignment Setup / Transaction Test
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 9.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,28 +13,16 @@ WORKDAY ROLE: nan
 
 ELECTRON STEPS:
 1. enter search box as "Verify all Consignment Setup values and Test Consignment Transactions"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Verify all Consignment Setup values and Test Consignment Transactions"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0190_complete.png"
 
 VERIFICATION:
 - [ ] nan
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Verify all Consignment Setup values and Test Consignment Transactions
-
-### 1. WSDL: Human_Resources (score: 7)
-Source: Human_Resources.wsdl
-```
-WSDL: Human_Resources
-Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

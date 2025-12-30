@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRC-4-0330
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Chat with a supplier
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 29.0)
+================================================================================
+
+DESCRIPTION:
+Chat with a Supplier during RFx lifecycle
+
+TASK / STEP:
+1. Navigate to an event with multiple supplier responses
+2. Click on the Questionnaire Tab
+3. Click on the Actions button under a supplier's name
+4. Click the chat icon in the Invited Supplier panel to send messages directly to the supplier
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to an event with multiple supplier responses
+2. Click on the Questionnaire Tab
+3. Click on the Actions button under a supplier's name
+4. Click the chat icon in the Invited Supplier panel to send messages directly to the supplier"
+2. wait for search results
+3. click search result containing "1. Navigate to an event with multiple supplier responses
+2. Click on the Questionnaire Tab
+3. Click on the Actions button under a supplier's name
+4. Click the chat icon in the Invited Supplier panel to send messages directly to the supplier"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0330_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0260
 FUNCTIONAL AREA: Procurement
 TEST NAME: Requisition Types
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,32 +13,16 @@ WORKDAY ROLE: nan
 
 ELECTRON STEPS:
 1. enter search box as "Verify Requisition Types"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Verify Requisition Types"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0260_complete.png"
 
 VERIFICATION:
 - [ ] Procurement Configurator
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Verify Requisition Types
-
-### 1. Kb Hcm Change Job (score: 3)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Hum...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

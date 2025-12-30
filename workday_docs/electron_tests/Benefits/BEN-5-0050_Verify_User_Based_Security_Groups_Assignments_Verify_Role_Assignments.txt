@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: BEN-5-0050
+FUNCTIONAL AREA: Benefits
+TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+
+### 1. Te
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+2. wait for search results
+3. click search result containing "Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-5-0050_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

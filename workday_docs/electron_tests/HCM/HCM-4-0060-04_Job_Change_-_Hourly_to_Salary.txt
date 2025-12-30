@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-4-0060-04
+FUNCTIONAL AREA: HCM
+TEST NAME: Job Change - Hourly to Salary
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Complete any remaining Business Process steps triggered by the Change Job process.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "4. Complete Change Job"
+2. wait for search results
+3. click search result containing "4. Complete Change Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-4-0060-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 4. Complete Change Job
+
+### 1. Kb Benefits Enrollment (score: 4)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Admi...
+================================================================================

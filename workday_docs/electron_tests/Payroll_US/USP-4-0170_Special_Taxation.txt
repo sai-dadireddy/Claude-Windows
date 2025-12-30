@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-4-0170
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Special Taxation
+DESCRIPTION: Review a worker who may have met the OASDI wage base and ensure that OASDI taxable wages resolve as 0.  Similarly, review a worker who may be subject to additional medicare tax. Make someone exempt and give someone a large bonus and then check the results.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

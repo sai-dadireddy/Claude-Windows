@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0600
 FUNCTIONAL AREA: Procurement
 TEST NAME: Verify starting balance of Consigned Item
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -18,14 +18,14 @@ Verify item balance
 
 Note Stocking Location
 Only move a partial balance - not entire balance"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Find Consigned Goods On Hand
 Enter Company / Inventory Site and Item ID
 Verify item balance
 
 Note Stocking Location
 Only move a partial balance - not entire balance"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0600_complete.png"
 
 VERIFICATION:
@@ -33,23 +33,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Find Consigned Goods On Hand
-Enter Company / Inventory Site and Item ID
-Verify item balance
-
-Note Stocking Location
-Only move a partial balance - not entire balance
-
-### 1. WSDL: Resource_Management (score: 22)
-Source: Resource_Management.wsdl
-```
-WSDL: Resource_Management
-Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Managem...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

@@ -2,8 +2,8 @@
 TEST ID: PRO-3-0380
 FUNCTIONAL AREA: Procurement
 TEST NAME: Requisition
-CONFIDENCE: [MEDIUM] Score: 6.5/10
-SOURCE: [RAG]
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [INFERRED]
 ================================================================================
 
 DESCRIPTION:
@@ -14,31 +14,17 @@ WORKDAY ROLE: nan
 ELECTRON STEPS:
 1. enter search box as "Depending on Sourcing - requisition will be created / approved.
 Requisition Type = Consignment Bill and replace"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Depending on Sourcing - requisition will be created / approved.
 Requisition Type = Consignment Bill and replace"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0380_complete.png"
 
 VERIFICATION:
 - [ ] Buyer
 
 API ALTERNATIVE:
-- SOAP: Submit_Supplier_Invoice
+- SOAP: Query RAG for details
 
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Depending on Sourcing - requisition will be created / approved.
-Requisition Type = Consignment Bill and replace
-
-### 1. Kb Procurement Requisition (score: 14)
-Source: kb_procurement_requisition.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
-====================================================...
-
-RAG QUERY STATUS: SUCCESS
+RAG QUERY STATUS: TIMEOUT
 ================================================================================

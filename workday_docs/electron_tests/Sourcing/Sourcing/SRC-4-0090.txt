@@ -1,0 +1,62 @@
+================================================================================
+TEST ID: SRC-4-0090
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create and Share a Filter in Pipeline
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 33.0)
+================================================================================
+
+DESCRIPTION:
+Create and share a filter for projects
+
+TASK / STEP:
+1. Navigate to Pipeline
+2. Click on the' Filters' icon 
+3. Under the 'Project Filters' tab, choose filters (fields) to be included and configure the field conditions (ex: Project Type is MSA)
+4. Click on the 'Apply' button
+5. Click on the 'Save As' button (to share the filter)
+6. Assign a filter name and add people (to share the filter)
+7. Click 'Save' (to share the filter)
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Pipeline
+2. Click on the' Filters' icon 
+3. Under the 'Project Filters' tab, choose filters (fields) to be included and configure the field conditions (ex: Project Type is MSA)
+4. Click on the 'Apply' button
+5. Click on the 'Save As' button (to share the filter)
+6. Assign a filter name and add people (to share the filter)
+7. Click 'Save' (to share the filter)"
+2. wait for search results
+3. click search result containing "1. Navigate to Pipeline
+2. Click on the' Filters' icon 
+3. Under the 'Project Filters' tab, choose filters (fields) to be included and configure the field conditions (ex: Project Type is MSA)
+4. Click on the 'Apply' button
+5. Click on the 'Save As' button (to share the filter)
+6. Assign a filter name and add people (to share the filter)
+7. Click 'Save' (to share the filter)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0090_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0210
 FUNCTIONAL AREA: Procurement
 TEST NAME: Stocking Locations
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,33 +13,16 @@ WORKDAY ROLE: nan
 
 ELECTRON STEPS:
 1. enter search box as "Verify Stocking Locations"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Verify Stocking Locations"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0210_complete.png"
 
 VERIFICATION:
 - [ ] Inventory Configurator
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Verify Stocking Locations
-
-### 1. Electron Test Samples (score: 2)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 samp...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

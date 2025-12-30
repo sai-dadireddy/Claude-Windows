@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: END-5-0080
+FUNCTIONAL AREA: Endowments
+TEST NAME: Approval Level
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Maintain Approval Level
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Approval Level"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-5-0080_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Approval Level
+
+### 1. Kb Finance Journal Entry (score: 3)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financ...
+================================================================================

@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: BEN-4-0360
+FUNCTIONAL AREA: Benefits
+TEST NAME: Open Enrollment - Coordination of Events
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Enrollment - Coordination of Events
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enrollment - Coordination of Events
+
+### 1. Electron Test Samples (score: 4)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file conta
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Enrollment - Coordination of Events"
+2. wait for search results
+3. click search result containing "Enrollment - Coordination of Events"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0360_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

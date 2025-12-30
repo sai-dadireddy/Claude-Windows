@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: END-4-0600
+FUNCTIONAL AREA: Endowments
+TEST NAME: View Investment Pool Valuation
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: View Investment Pool> Select investment Pool
+ 
+ Navigate to Valuations
+
+ELECTRON STEPS:
+1. enter search box as "View Investment Pool> Select investment Pool
+ 
+ Navigate to Valuations"
+2. wait for page load
+3. click appropriate action button
+4. screenshot as "END-4-0600_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Investment Pool> Select investment Pool
+ 
+ Navigate to Valuations
+
+### 1. Admin Guide Education And Government (score: 6)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.....
+================================================================================

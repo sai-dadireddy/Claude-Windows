@@ -1,0 +1,175 @@
+# Electron Test: TLO-5-0310 - Review Goal Template configuration
+
+## Test Metadata
+- **Scenario ID**: TLO-5-0310
+- **Module**: Talent Optimization
+- **Test Type**: 3 | GOLD / Pre-Prod Tenant Build Validation
+- **Workday Role**: Talent Administrator
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Verify that all expected Goal Templates are present in the tenant
+
+## Test Steps
+
+### Task/Step: View Goal Template
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Review Goal Template configuration View Goal Template
+
+### 1. Admin Guide Glossary (score: 5)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 2. User Guide Sourcing Managers (score: 5)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers......................................................... 5
+Strategi...
+```
+
+### 3. Workday Feature Descriptions Ditamap (score: 5)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Talent Administrator
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-5-0310: Review Goal Template configuration', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Talent Administrator
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('View Goal Template', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: View Goal Template
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Review Goal Template configuration View Goal Template
+
+### 1. Admin Guide Glossary (score: 5)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 2. User Guide Sourcing Managers (score: 5)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers......................................................... 5
+Strategi...
+```
+
+### 3. Workday Feature Descrip
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 5 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: nan
+- Business Process Level 3: nan
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:35:33.822364
+Confidence: 80.00%

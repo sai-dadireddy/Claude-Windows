@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-4-0020-01
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: New Hire to Off-Cycle to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Hire a new salaried employee in the middle of the current pay period. Complete all BP steps until new hire is complete. Add a payment election for the employee to receive all pay via Direct Deposit.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "1. Hire Employee"
+2. wait for search results
+3. click search result containing "1. Hire Employee"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0020-01_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Hire Employee
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administra
+
+================================================================================

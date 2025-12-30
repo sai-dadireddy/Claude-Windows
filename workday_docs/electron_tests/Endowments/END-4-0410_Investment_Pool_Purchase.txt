@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: END-4-0410
+FUNCTIONAL AREA: Endowments
+TEST NAME: Investment Pool Purchase
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Purchase Investment Pool Units
+
+ELECTRON STEPS:
+1. enter search box as "Purchase Investment Pool Units"
+2. submit form
+3. screenshot as "END-4-0410_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Purchase Investment Pool Units
+
+### 1. Admin Guide Education And Government (score: 9)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.............................................
+================================================================================

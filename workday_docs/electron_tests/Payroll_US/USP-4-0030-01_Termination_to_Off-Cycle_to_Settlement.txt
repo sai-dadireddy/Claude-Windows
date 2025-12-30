@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-4-0030-01
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Termination to Off-Cycle to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Terminate a salaried employee with a positive time off balance in the middle of the current pay period. Complete all BP steps until termination is complete.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "1. Terminate Employee"
+2. wait for search results
+3. click search result containing "1. Terminate Employee"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0030-01_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Terminate Employee
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Mana
+
+================================================================================

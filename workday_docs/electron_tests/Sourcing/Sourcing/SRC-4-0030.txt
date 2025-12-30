@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: SRC-4-0030
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review an Intake request
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+Review an Intake request
+
+TASK / STEP:
+1. Confirm the request is assigned to a sourcing owner
+2. (Optional) Update additional fields
+3. Change the project status from Requested to Planned or Active
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Confirm the request is assigned to a sourcing owner
+2. (Optional) Update additional fields
+3. Change the project status from Requested to Planned or Active"
+2. wait for search results
+3. click search result containing "1. Confirm the request is assigned to a sourcing owner
+2. (Optional) Update additional fields
+3. Change the project status from Requested to Planned or Active"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0030_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,97 @@
+================================================================================
+TEST ID: SRC-4-0260
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create an Event Template
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 30 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 93.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Events
+2. Click Start Sourcing Event (top right)
+3. Add an event template name and description
+4. Attach any documents that will need to be provided to suppliers on the event
+5. Populate the Internal Data
+6. Expand the Event Options section.
+6a. Update the request type from the drop down
+6b. Update the event settings, including late bids, revised bids, sealed bids, and public bid options.
+6c. Tick to require suppliers to agree to terms
+6d. Select the appropriate terms template and (optional) add additional notes.
+7. Set the notifications frequency: daily digest or team time
+8. Check This is a template and set the visibility options
+9. Scroll down to the Build Your Response Sheet section.
+9a. Click Build a questionnaire to add a standard question set to the event. Once the questionnaire builder is open, click Add Templates to add the question template built previously. Delete the blank section. Click Return.
+9b.Click Add Worksheet. Select a worksheet template or click Add a Blank Standard Worksheet to add and build one from scratch.
+10. Add document title names and descriptions if you will require an upload from the supplier. 
+11. (Optional) Build an evaluation.
+12. Save
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Events
+2. Click Start Sourcing Event (top right)
+3. Add an event template name and description
+4. Attach any documents that will need to be provided to suppliers on the event
+5. Populate the Internal Data
+6. Expand the Event Options section.
+6a. Update the request type from the drop down
+6b. Update the event settings, including late bids, revised bids, sealed bids, and public bid options.
+6c. Tick to require suppliers to agree to terms
+6d. Select the appropriate terms template and (optional) add additional notes.
+7. Set the notifications frequency: daily digest or team time
+8. Check This is a template and set the visibility options
+9. Scroll down to the Build Your Response Sheet section.
+9a. Click Build a questionnaire to add a standard question set to the event. Once the questionnaire builder is open, click Add Templates to add the question template built previously. Delete the blank section. Click Return.
+9b.Click Add Worksheet. Select a worksheet template or click Add a Blank Standard Worksheet to add and build one from scratch.
+10. Add document title names and descriptions if you will require an upload from the supplier. 
+11. (Optional) Build an evaluation.
+12. Save"
+2. wait for search results
+3. click search result containing "1. Navigate to Events
+2. Click Start Sourcing Event (top right)
+3. Add an event template name and description
+4. Attach any documents that will need to be provided to suppliers on the event
+5. Populate the Internal Data
+6. Expand the Event Options section.
+6a. Update the request type from the drop down
+6b. Update the event settings, including late bids, revised bids, sealed bids, and public bid options.
+6c. Tick to require suppliers to agree to terms
+6d. Select the appropriate terms template and (optional) add additional notes.
+7. Set the notifications frequency: daily digest or team time
+8. Check This is a template and set the visibility options
+9. Scroll down to the Build Your Response Sheet section.
+9a. Click Build a questionnaire to add a standard question set to the event. Once the questionnaire builder is open, click Add Templates to add the question template built previously. Delete the blank section. Click Return.
+9b.Click Add Worksheet. Select a worksheet template or click Add a Blank Standard Worksheet to add and build one from scratch.
+10. Add document title names and descriptions if you will require an upload from the supplier. 
+11. (Optional) Build an evaluation.
+12. Save"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0260_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

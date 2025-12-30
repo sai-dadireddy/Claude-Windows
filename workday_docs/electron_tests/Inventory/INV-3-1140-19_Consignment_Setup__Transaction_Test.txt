@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: INV-3-1140-19
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Depending on Sourcing - requisition will be created / approved.
+Requisition Type = Consignment Bill and replace
+
+ELECTRON STEPS:
+1. enter search box as "Depending on Sourcing - requisition will be created / approved.
+Requisition Type = Consignment Bill and replace"
+2. submit form
+3. screenshot as "INV-3-1140-19_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Depending on Sourcing - requisition will be created / approved.
+Requisition Type = Consignment Bill and replace
+
+### 1. Kb Procurement Requisition (score: 14)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+====================================================...
+================================================================================

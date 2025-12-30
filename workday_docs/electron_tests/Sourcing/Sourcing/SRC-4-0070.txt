@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: SRC-4-0070
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Message a Stakeholder
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 13.0)
+================================================================================
+
+DESCRIPTION:
+Message a Stakeholder
+
+TASK / STEP:
+1. While in a project, click Team Chat
+2. Type "@" to tag a another user
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. While in a project, click Team Chat
+2. Type "@" to tag a another user"
+2. wait for search results
+3. click search result containing "1. While in a project, click Team Chat
+2. Type "@" to tag a another user"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0070_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRC-4-0180
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Route Project for Approval
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 16.0)
+================================================================================
+
+DESCRIPTION:
+Route Project for Approval
+
+TASK / STEP:
+1. Open an in progress project
+2. Change the status of the contract to Send for Approval
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an in progress project
+2. Change the status of the contract to Send for Approval"
+2. wait for search results
+3. click search result containing "1. Open an in progress project
+2. Change the status of the contract to Send for Approval"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: After confirmation, the system will check if there are missing required fields. If there is no error, and the project meets the approval conditions, it will be routed to the first approver as defined by the approval flow configurations.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0180_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: After confirmation, the system will check if there are missing required fields. If there is no error, and the project meets the approval conditions, it will be routed to the first approver as defined by the approval flow configurations.
+
+================================================================================

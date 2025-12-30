@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0560
 FUNCTIONAL AREA: Procurement
 TEST NAME: Verify Inventory Balance
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,35 +14,17 @@ WORKDAY ROLE: nan
 ELECTRON STEPS:
 1. enter search box as "Find Consigned Goods On Hand
 Verify balances are in the proper consigned Stocking Locations"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Find Consigned Goods On Hand
 Verify balances are in the proper consigned Stocking Locations"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0560_complete.png"
 
 VERIFICATION:
 - [ ] Inventory Specialist
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Find Consigned Goods On Hand
-Verify balances are in the proper consigned Stocking Locations
-
-### 1. Workday Feature Descriptions Ditamap (score: 10)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. ...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

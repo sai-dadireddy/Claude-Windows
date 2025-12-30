@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRC-2-0010
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review Global Settings
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 12.0)
+================================================================================
+
+DESCRIPTION:
+Review the Global Settings options
+
+TASK / STEP:
+1. Click Settings
+2. Navigate to the Global Settings on the left hand panel
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Click Settings
+2. Navigate to the Global Settings on the left hand panel"
+2. wait for search results
+3. click search result containing "1. Click Settings
+2. Navigate to the Global Settings on the left hand panel"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: Confirm event options and whether Public, Sealed Bids, and/or Construction Request should be enabled.
+Confirm the date and time formats. This will be the default users, but users can override their personal settings.
+Confirm the number formats. This will be the default users, but users can override their personal settings.
+Confirm the attachment checkout duration.
+Validate the list of selectable currencies.  Please note that the SLA report is not editable.
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-2-0010_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Confirm event options and whether Public, Sealed Bids, and/or Construction Request should be enabled.
+Confirm the date and time formats. This will be the default users, but users can override their personal settings.
+Confirm the number formats. This will be the default users, but users can override their personal settings.
+Confirm the attachment checkout duration.
+Validate the list of selectable currencies.  Please note that the SLA report is not editable.
+
+================================================================================

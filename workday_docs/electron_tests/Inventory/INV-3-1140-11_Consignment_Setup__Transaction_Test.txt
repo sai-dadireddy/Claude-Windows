@@ -1,0 +1,31 @@
+================================================================================
+TEST ID: INV-3-1140-11
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Issue Consignment (No Charge PO)
+
+ELECTRON STEPS:
+1. enter search box as "Issue Consignment (No Charge PO)"
+2. submit form
+3. screenshot as "INV-3-1140-11_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Consignment (No Charge PO)
+
+### 1. WSDL: Resource_Management (score: 4)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
+Operations:
+  - Submit_S...
+================================================================================

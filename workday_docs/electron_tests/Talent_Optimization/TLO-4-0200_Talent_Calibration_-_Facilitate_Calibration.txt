@@ -1,0 +1,161 @@
+# Electron Test: TLO-4-0200 - Talent Calibration - Facilitate Calibration
+
+## Test Metadata
+- **Scenario ID**: TLO-4-0200
+- **Module**: Talent Optimization
+- **Test Type**: 2 | End to End Test Scenarios
+- **Workday Role**: HR Partner (or designated role)
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+If you have roles defined to be able to facilitate Calibration, verify that they can access the task "Facilitate Calibration" and can execute respective functionality.
+
+## Test Steps
+
+### Task/Step: Facilitate Calibration
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Talent Calibration - Facilitate Calibration Facilitate Calibration
+
+### 1. Workday Feature Descriptions Ditamap (score: 4)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+### 2. WSDL: Talent (score: 3)
+Source: Talent.wsdl
+```
+WSDL: Talent
+Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
+Operations:
+  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
+  - Get_Assess_Talent: Retrieves the Potential Assess...
+```
+
+### 3. talentManagement (score: 2)
+Source: talentManagement_v2.json
+```
+API: talentManagement
+GET /values/successionPlan/members/ - 
+POST /successionPlanEvents/{ID}/submit - Submits a succession plan event.
+GET /successionPlans/{ID} - Get succession plans
+GET /successionPlanEvents/{ID}/candidates - Retrieves a collection of information for succession plan candidates for...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: HR Partner (or designated role)
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-4-0200: Talent Calibration - Facilitate Calibration', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as HR Partner (or designated role)
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Facilitate Calibration', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Facilitate Calibration
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Talent Calibration - Facilitate Calibration Facilitate Calibration
+
+### 1. Workday Feature Descriptions Ditamap (score: 4)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+### 2. WSDL: Talent (score: 3)
+Source: Talent.wsdl
+```
+WSDL: Talent
+Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
+Operations:
+  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
+  - Get_Assess_Talent: Retrieves the Potential Assess...
+```
+
+### 3. talentManagemen
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 10 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5.4 Manage employee performance system
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:26:59.519141
+Confidence: 80.00%

@@ -1,0 +1,157 @@
+# Electron Test: TLO-4-0290 - Manage Mentorship - Manager
+
+## Test Metadata
+- **Scenario ID**: TLO-4-0290
+- **Module**: Talent Optimization
+- **Test Type**: 2 | End to End Test Scenarios
+- **Workday Role**: Talent Administrator
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Proxy as a Manager and Add a Mentor for Worker. Proxy as other roles as needed to complete the business process.
+
+## Test Steps
+
+### Task/Step: Add a Mentor for Worker
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Manage Mentorship - Manager Add a Mentor for Worker
+
+### 1. WSDL: Talent (score: 9)
+Source: Talent.wsdl
+```
+WSDL: Talent
+Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
+Operations:
+  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
+  - Get_Assess_Talent: Retrieves the Potential Assess...
+```
+
+### 2. talentManagement (score: 8)
+Source: talentManagement_v2.json
+```
+API: talentManagement
+GET /values/successionPlan/members/ - 
+POST /successionPlanEvents/{ID}/submit - Submits a succession plan event.
+GET /successionPlans/{ID} - Get succession plans
+GET /successionPlanEvents/{ID}/candidates - Retrieves a collection of information for succession plan candidates for...
+```
+
+### 3. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Talent Administrator
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-4-0290: Manage Mentorship - Manager', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Talent Administrator
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Add a Mentor for Worker', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Add a Mentor for Worker
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Manage Mentorship - Manager Add a Mentor for Worker
+
+### 1. WSDL: Talent (score: 9)
+Source: Talent.wsdl
+```
+WSDL: Talent
+Description: This web service consists of operations for interfacing with the Workday Talent Management web service operations.
+Operations:
+  - Assess_Talent: Creates an event for the Potential Assessment information for an Employee.
+  - Get_Assess_Talent: Retrieves the Potential Assess...
+```
+
+### 2. talentManagement (score: 8)
+Source: talentManagement_v2.json
+```
+API: talentManagement
+GET /values/successionPlan/members/ - 
+POST /successionPlanEvents/{ID}/submit - Submits a succession plan event.
+GET /successionPlans/{ID} - Get succession plans
+GET /successionPlanEvents/{ID}/candidates - Retrieves a collection of information for succession plan candidates for...
+```
+
+### 3. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+===
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 5 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5.3 Employee Career Development
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:28:20.964552
+Confidence: 80.00%

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: HLP-3-0100-02
+FUNCTIONAL AREA: Case Management
+TEST NAME: Role Assignments
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Domains - Manage: Create Case About; Manage: Case Create on Behalf Of
+
+ELECTRON STEPS:
+1. enter search box as "Domains - Manage: Create Case About; Manage: Case Create on Behalf Of"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "HLP-3-0100-02_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Domains - Manage: Create Case About; Manage: Case Create on Behalf Of
+
+### 1. Admin Guide Release Notes (score: 8)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+About Workday Documentation...........................................................................5
+October 31, 2025.......................
+================================================================================

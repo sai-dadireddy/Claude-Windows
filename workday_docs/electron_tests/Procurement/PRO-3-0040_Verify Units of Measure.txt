@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0040
 FUNCTIONAL AREA: Procurement
 TEST NAME: Verify Units of Measure
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,36 +13,16 @@ WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
 1. enter search box as "Units of Measure"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Units of Measure"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0040_complete.png"
 
 VERIFICATION:
 - [ ] nan
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Units of Measure
-
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Superviso...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

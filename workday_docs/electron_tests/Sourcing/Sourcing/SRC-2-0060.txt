@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: SRC-2-0060
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review Field Settings
+WORKDAY ROLE: Company Admin
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Settings > Field Settings
+2. Review any custom hint text for delivered fields. 
+3. Confirm Custom Field Groups
+4. Review Custom Fields (hint text, appropriate field type, selection options, conditions, required/not)
+
+Note: Event Custom Field should not be used.
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Settings > Field Settings
+2. Review any custom hint text for delivered fields. 
+3. Confirm Custom Field Groups
+4. Review Custom Fields (hint text, appropriate field type, selection options, conditions, required/not)
+
+Note: Event Custom Field should not be used."
+2. wait for search results
+3. click search result containing "1. Navigate to Settings > Field Settings
+2. Review any custom hint text for delivered fields. 
+3. Confirm Custom Field Groups
+4. Review Custom Fields (hint text, appropriate field type, selection options, conditions, required/not)
+
+Note: Event Custom Field should not be used."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-2-0060_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

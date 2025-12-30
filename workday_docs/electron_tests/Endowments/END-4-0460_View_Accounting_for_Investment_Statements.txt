@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: END-4-0460
+FUNCTIONAL AREA: Endowments
+TEST NAME: View Accounting for Investment Statements
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: View Investment Statement> Select Investment Statement
+ 
+ Related Action off Investment Statement>Accounting>View Accounting
+
+ELECTRON STEPS:
+1. enter search box as "View Investment Statement> Select Investment Statement
+ 
+ Related Action off Investment Statement>Accounting>View Accounting"
+2. click appropriate action button
+3. screenshot as "END-4-0460_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Investment Statement> Select Investment Statement
+ 
+ Related Action off Investment Statement>Accounting>View Accounting
+
+### 1. Admin Guide Education And Government (score: 8)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government...................................................
+================================================================================

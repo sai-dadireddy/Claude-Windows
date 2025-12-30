@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: INV-3-1140-06
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Maintain Purchase Order Types:
+Consignment (No Charge) - Consignment Flag = Y
+Consignment - Bill and Replace
+Bill Only and Consignment Flags = Y
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Purchase Order Types:
+Consignment (No Charge) - Consignment Flag = Y
+Consignment - Bill and Replace
+Bill Only and Consignment Flags = Y"
+2. submit form
+3. screenshot as "INV-3-1140-06_complete.png"
+
+VERIFICATION: Procurement Configurator
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Purchase Order Types:
+Consignment (No Charge) - Consignment Flag = Y
+Consignment - Bill and Replace
+Bill Only and Consignment Flags = Y
+
+### 1. WSDL: Resource_Management (score: 13)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It include...
+================================================================================

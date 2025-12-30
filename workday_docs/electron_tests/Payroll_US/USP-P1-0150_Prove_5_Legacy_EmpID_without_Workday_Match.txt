@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: USP-P1-0150
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Prove 5) Legacy EmpID without Workday Match
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Determine if the workers processed in the Workday pay calculation are also on the Legacy Pay Data template
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: N/A minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "PROVE 5 Report"
+2. wait for search results
+3. click search result containing "PROVE 5 Report"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-P1-0150_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: PROVE 5 Report
+
+### 1. Kb Expense Report (score: 3)
+Source: kb_expense_report.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE EXPENSE REPORT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Spend Management
+Catego...
+`
+
+================================================================================

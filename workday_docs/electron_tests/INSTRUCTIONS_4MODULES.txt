@@ -1,0 +1,277 @@
+================================================================================
+ELECTRON TEST GENERATORS - 4 MODULES DOCUMENTATION
+================================================================================
+
+OVERVIEW
+--------
+This package contains Electron test generators for 4 Workday modules:
+
+Module                    | Scenarios | Generator Script              | Output Directory
+--------------------------|-----------|-------------------------------|------------------
+Expenses                  | 142       | generate_expenses_tests.py    | Expenses/
+Tax                       | 120       | generate_tax_tests.py         | Tax/
+Revenue Management        | 126       | generate_revenue_tests.py     | Revenue_Management/
+Advanced Compensation     | 127       | generate_advcomp_tests.py     | Advanced_Compensation/
+TOTAL                     | 515       | -                             | -
+
+================================================================================
+QUICK START
+================================================================================
+
+OPTION 1: Generate All 4 Modules (Recommended)
+-----------------------------------------------
+cd "C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\electron_tests"
+python generate_all_4modules.py
+
+Expected runtime: 15-30 minutes (with RAG queries)
+
+OPTION 2: Generate Individual Modules
+--------------------------------------
+python generate_expenses_tests.py
+python generate_tax_tests.py
+python generate_revenue_tests.py
+python generate_advcomp_tests.py
+
+================================================================================
+PREREQUISITES
+================================================================================
+
+1. Verify Sheet Names
+   python verify_sheets.py
+
+   Expected output:
+   ✓ Expenses: 142 scenarios
+   ✓ Tax: 120 scenarios
+   ✓ Revenue_Management: 126 scenarios
+   ✓ Advanced_Compensation: 127 scenarios
+
+2. Required Python Packages
+   pip install pandas openpyxl
+
+3. Files Required
+   - WD_Test_Scenarios_Master.xlsx (Excel with test scenarios)
+   - ../workday_rag.py (RAG query tool in parent directory)
+
+================================================================================
+WHAT EACH GENERATOR DOES
+================================================================================
+
+STEP 1: Read Excel Sheet
+   - Loads scenarios from specific sheet (e.g., Expenses)
+   - Validates required columns: Scenario ID, Scenario Name, Task/Step, Expected Result
+
+STEP 2: Query RAG for Each Scenario
+   - Searches Workday knowledge base using "Task / Step" field
+   - Queries 117 documents (PDFs, WSDLs, KB articles)
+   - Extracts relevant automation steps
+
+STEP 3: Calculate Confidence Score
+   - 7.0-10.0 (HIGH): Complete automation possible
+   - 4.0-6.9 (MEDIUM): Partial automation, needs review
+   - < 4.0 (LOW): Manual test required
+
+STEP 4: Generate Electron Steps
+   Creates Electron-compatible commands:
+   1. enter search box as "Create Expense Report"
+   2. wait for search results
+   3. click search result
+   4. wait for page load
+   5. enter expense details
+   6. click "Submit" button
+   7. screenshot as "EXP-001_complete.png"
+
+STEP 5: Write Test File
+   - Individual .txt file per scenario
+   - Includes: metadata, Electron steps, verification, RAG insights
+
+================================================================================
+OUTPUT STRUCTURE
+================================================================================
+
+electron_tests/
+├── Expenses/
+│   ├── EXP-001_Create_Expense_Report.txt
+│   ├── EXP-002_Submit_Travel_Expenses.txt
+│   └── ... (142 files)
+├── Tax/
+│   ├── TAX-001_Configure_Tax_Rules.txt
+│   ├── TAX-002_File_W2_Forms.txt
+│   └── ... (120 files)
+├── Revenue_Management/
+│   ├── REV-001_Create_Revenue_Contract.txt
+│   ├── REV-002_Recognize_Revenue.txt
+│   └── ... (126 files)
+└── Advanced_Compensation/
+    ├── COMP-001_Create_Bonus_Plan.txt
+    ├── COMP-002_Award_Stock_Grant.txt
+    └── ... (127 files)
+
+================================================================================
+TEST FILE FORMAT EXAMPLE
+================================================================================
+
+================================================================================
+TEST ID: EXP-001
+FUNCTIONAL AREA: Expenses
+TEST NAME: Create Expense Report for Travel
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Create Expense Report"
+2. wait for search results
+3. click search result
+4. wait for page load
+5. enter expense details
+6. attach receipt (if required)
+7. click "Submit" button
+8. screenshot as "EXP-001_complete.png"
+
+VERIFICATION:
+- [ ] Expense report created successfully
+- [ ] Receipt attached
+- [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+WSDL: Resource_Management
+Description: Submit_Expense_Report operation creates a new expense report...
+(truncated to 500 chars)
+================================================================================
+
+================================================================================
+MODULE-SPECIFIC FEATURES
+================================================================================
+
+EXPENSES
+--------
+Keywords: expense, report, reimbursement, travel, receipt
+Common Actions: create report, attach receipt, submit for approval
+Electron Focus: Form filling, file upload, workflow approval
+
+TAX
+---
+Keywords: tax, withholding, filing, form, w-2, 1099, reporting
+Common Actions: configure tax rules, calculate withholding, file forms
+Electron Focus: Configuration pages, calculation verification
+
+REVENUE MANAGEMENT
+------------------
+Keywords: revenue, recognition, contract, allocation, schedule
+Common Actions: create contracts, recognize revenue, configure schedules
+Electron Focus: Multi-step wizards, calculation verification
+
+ADVANCED COMPENSATION
+---------------------
+Keywords: compensation, bonus, plan, award, grant, incentive, equity
+Common Actions: create plans, award bonuses, calculate incentives
+Electron Focus: Approval workflows, calculation verification
+
+================================================================================
+CONFIDENCE SCORING LOGIC
+================================================================================
+
+Factor                          | Points | Notes
+--------------------------------|--------|--------------------------------
+Has Task/Step                   | 3.0    | Primary search term
+Has Expected Result             | 2.0    | Verification criteria
+RAG found results (>100 chars)  | 3.0    | Strong RAG match
+RAG found results (<100 chars)  | 1.5    | Weak RAG match
+Has action verbs                | 1.0    | create, submit, approve, etc.
+Has business objects            | 1.0    | Module-specific keywords
+MAX SCORE                       | 10.0   | -
+
+ACCEPTANCE CRITERIA:
+>= 7.0 (HIGH): Valid Electron steps generated ✅
+5.0-6.9 (MEDIUM): Needs SME review ⚠️
+< 5.0 (LOW): Manual test required ❌
+
+================================================================================
+STATISTICS TRACKING
+================================================================================
+
+Each generator outputs:
+
+================================================================================
+GENERATION COMPLETE
+================================================================================
+Total scenarios processed: 142
+Files generated: 142
+Manual scenarios: 23
+High confidence: 89
+Medium confidence: 30
+Low confidence: 23
+
+Output directory: C:\...\electron_tests\Expenses
+================================================================================
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ISSUE: "Sheet not found"
+SOLUTION: Run verify_sheets.py to check exact sheet names.
+          Update sheet_name= parameter in generator.
+
+ISSUE: "RAG query timeout"
+SOLUTION: Increase timeout in query_rag() function (default: 30 seconds)
+
+ISSUE: "openpyxl not found"
+SOLUTION: pip install openpyxl
+
+ISSUE: "Low confidence scores"
+CAUSE: Missing Task/Step or weak RAG matches
+SOLUTION: These scenarios are correctly marked as MANUAL - review Excel data
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Review Generated Tests
+   Count files in each directory
+
+2. Filter by Confidence
+   Find HIGH confidence tests: grep -l "CONFIDENCE: \[HIGH\]" Expenses/*.txt
+   Find MANUAL tests: grep -l "STATUS: \[MANUAL REQUIRED\]" Tax/*.txt
+
+3. Review Sample Tests
+   View files to verify quality
+
+4. Import to ActiveGenie
+   Upload individual .txt files or create batch import via CSV
+
+================================================================================
+KEY FEATURES
+================================================================================
+
+✅ RAG-Powered: Queries 117 Workday documents for automation guidance
+✅ Confidence Scoring: 3-tier classification (HIGH/MEDIUM/LOW)
+✅ Module-Specific: Tailored keywords and actions per functional area
+✅ Individual Files: One test file per scenario
+✅ Screenshot Naming: Uses Scenario ID for traceability
+✅ Verification Built-In: Uses Customer Expected Result from Excel
+✅ Error Handling: Continues on RAG failures, logs warnings
+✅ Batch Processing: Run all 515 tests in one command
+
+================================================================================
+FILE INVENTORY
+================================================================================
+
+File                            | Purpose
+--------------------------------|--------------------------------------------
+generate_expenses_tests.py      | Expenses generator (142)
+generate_tax_tests.py           | Tax generator (120)
+generate_revenue_tests.py       | Revenue Management generator (126)
+generate_advcomp_tests.py       | Advanced Compensation generator (127)
+generate_all_4modules.py        | Batch runner for all 4 modules
+verify_sheets.py                | Verify Excel sheet names
+INSTRUCTIONS_4MODULES.txt       | This file
+WD_Test_Scenarios_Master.xlsx   | Source Excel (required)
+
+================================================================================
+
+Generated: 2025-12-30
+Total Scenarios: 515
+Total Modules: 4
+
+================================================================================

@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-1140
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Note - Lot and Serial were not used for this test.
+
+ELECTRON STEPS:
+1. enter search box as "Note - Lot and Serial were not used for this test."
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1140_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Note - Lot and Serial were not used for this test.
+
+### 1. User Guide Suppliers (score: 8)
+Source: User-Guide-Suppliers.pdf
+```
+Suppliers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Supplier Account Setup................................................................................
+================================================================================

@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0090-01
+FUNCTIONAL AREA: HCM
+TEST NAME: End Additional Job for Employee
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Identify a worker who currently holds more than one position. Use End Jobs process to end one or more additional positions, proxying as other users as needed.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "1. End Jobs"
+2. wait for search results
+3. click search result containing "1. End Jobs"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0090-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. End Jobs
+
+### 1. Kb Hcm Terminate Employee (score: 3)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resour...
+================================================================================

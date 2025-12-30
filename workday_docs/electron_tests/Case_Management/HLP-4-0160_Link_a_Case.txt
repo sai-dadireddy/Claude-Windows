@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: HLP-4-0160
+FUNCTIONAL AREA: Case Management
+TEST NAME: Link a Case
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Link Case
+
+ELECTRON STEPS:
+1. enter search box as "Link Case"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "HLP-4-0160_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Link Case
+
+### 1. Soap Tutorial Apideck (score: 2)
+Source: soap_tutorial_apideck.txt
+```
+# Workday SOAP API Tutorial (apideck.com)
+
+Source: https://www.apideck.com/blog/a-comprehensive-tutorial-on-setting-up-and-using-the-workday-api
+
+## Setup Steps
+
+### 1. Create Integration System Security Group (ISSG)
+Search "Create Security Group" in Workday portal.
+
+### 2. Configure Domain Permissi.....
+================================================================================

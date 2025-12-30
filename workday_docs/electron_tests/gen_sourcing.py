@@ -167,7 +167,18 @@ def main():
     print("="*80)
 
     print(f"\nReading Excel: {EXCEL_PATH}")
-    df = pd.read_excel(EXCEL_PATH, sheet_name='Master')
+    xl = pd.ExcelFile(EXCEL_PATH)
+    print(f"Sheets: {xl.sheet_names}")
+
+    # Auto-detect sheet
+    sheet = xl.sheet_names[0] if xl.sheet_names else 'Master'
+    for candidate in ['Master', 'Scenarios', 'Test Scenarios', 'Sheet1']:
+        if candidate in xl.sheet_names:
+            sheet = candidate
+            break
+
+    print(f"Using sheet: {sheet}")
+    df = pd.read_excel(EXCEL_PATH, sheet_name=sheet)
 
     areas = ['Sourcing', 'Sourcing - Contracts', 'Sourcing - Suppliers']
     sourcing_df = df[df['Functional Area'].isin(areas)]

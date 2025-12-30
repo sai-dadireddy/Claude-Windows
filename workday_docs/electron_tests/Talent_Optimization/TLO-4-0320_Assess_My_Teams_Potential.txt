@@ -1,0 +1,171 @@
+# Electron Test: TLO-4-0320 - Assess My Team's Potential
+
+## Test Metadata
+- **Scenario ID**: TLO-4-0320
+- **Module**: Talent Optimization
+- **Test Type**: 2 | End to End Test Scenarios
+- **Workday Role**: Manager
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Enter potential ratings, along with any other data for the manager's team, including retention, loss impact, level of readiness, nominees, etc. Proxy as other roles as needed to complete the business process.
+
+## Test Steps
+
+### Task/Step: Assess My Team's Potential
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Assess My Team's Potential Assess My Team's Potential
+
+### 1. Admin Guide Student (score: 3)
+Source: Admin-Guide-Student.pdf
+```
+Student
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Student.......................................................... 15
+Academic Foundation........................................................................................19
+Steps: Set Up Academic ...
+```
+
+### 2. User Guide Workday People Analytics (1) (score: 3)
+Source: User-Guide-Workday-People-Analytics (1).pdf
+```
+Workday People
+Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+People Analytics.................................................................................................. 4
+Set ...
+```
+
+### 3. User Guide Workday People Analytics (score: 3)
+Source: User-Guide-Workday-People-Analytics.pdf
+```
+Workday People
+Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+People Analytics.................................................................................................. 4
+Set ...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Manager
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-4-0320: Assess My Team's Potential', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Manager
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Assess My Team's Potential', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Assess My Team's Potential
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Assess My Team's Potential Assess My Team's Potential
+
+### 1. Admin Guide Student (score: 3)
+Source: Admin-Guide-Student.pdf
+```
+Student
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Student.......................................................... 15
+Academic Foundation........................................................................................19
+Steps: Set Up Academic ...
+```
+
+### 2. User Guide Workday People Analytics (1) (score: 3)
+Source: User-Guide-Workday-People-Analytics (1).pdf
+```
+Workday People
+Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+People Analytics.................................................................................................. 4
+Set ...
+```
+
+### 3. Use
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 10 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5.3 Employee Career Development
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:28:46.959866
+Confidence: 80.00%

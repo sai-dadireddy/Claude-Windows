@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-4-0020-07
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire - Convert Contingent Worker to Employee
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Finalize the Benefit Election step. Enroll the employee in all available plans as per configuration rules.
+
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "7. Onboarding - Benefits Enrollment"
+2. wait for search results
+3. click search result containing "7. Onboarding - Benefits Enrollment"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-4-0020-07_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 7. Onboarding - Benefits Enrollment
+
+### 1. Kb Benefits Enrollment (score: 5)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday ...
+================================================================================

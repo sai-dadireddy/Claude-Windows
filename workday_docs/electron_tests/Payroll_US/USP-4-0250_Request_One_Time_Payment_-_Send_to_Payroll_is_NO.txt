@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-4-0250
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Request One Time Payment - Send to Payroll is NO
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate the Request One Time Payment for employee. When entering, ensure the Send to Payroll automatic checkbox is Unchecked (this is intended for payments for HCM record keeping only and already paid to employee via payroll input or expenses). Take note of approval routings as applicable and confirm process. Verify that One Time Payment did not apply to payroll.
+
+WORKDAY ROLE: Compensation Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner / Manager permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "1. Request One-Time Payment"
+2. wait for search results
+3. click search result containing "1. Request One-Time Payment"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0250_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Request One-Time Payment
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - 
+
+================================================================================

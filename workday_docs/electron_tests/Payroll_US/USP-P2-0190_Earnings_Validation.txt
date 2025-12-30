@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-P2-0190
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Earnings Validation
+DESCRIPTION: Review variances in Earnings using PROVE reports 6-8 and parallel variance log, updating data and re-calculating as necessary. Refer to "Troubleshooting Variances" document for tips on troubleshooting common variances. Note any explainable differences in parallel variance log.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

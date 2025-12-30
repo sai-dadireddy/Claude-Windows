@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-0980
+FUNCTIONAL AREA: Procurement
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Issue Purchase Order
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Issue Purchase Order"
+2. wait for search results (2 seconds)
+3. click search result containing "Issue Purchase Order"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-0980_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

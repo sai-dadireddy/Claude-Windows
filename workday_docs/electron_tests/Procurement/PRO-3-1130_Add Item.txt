@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1130
+FUNCTIONAL AREA: Procurement
+TEST NAME: Add Item
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Add Item
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Add Item"
+2. wait for search results (2 seconds)
+3. click search result containing "Add Item"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1130_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

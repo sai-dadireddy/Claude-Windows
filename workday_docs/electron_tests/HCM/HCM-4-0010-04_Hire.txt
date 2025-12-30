@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0010-04
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Only required if scenario not triggered from Recruiting*** Hire an employee (choose pre-hire previously created). Complete multiple hires for: current date, future date, and past date. Use each of the recommended security groups listed to initiate the hire process. Take note of the approval routings (especially when using different initiators) and sub-processes that are a part of the hire process.  If using the consolidated hire template the change organization assignments and propose compensation should appear as tabs at this time.  If not using the consolidate hire process these will appear individual after you submit this step.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "3. Hire Employee"
+2. wait for search results
+3. click search result containing "3. Hire Employee"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0010-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 3. Hire Employee
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administra...
+================================================================================

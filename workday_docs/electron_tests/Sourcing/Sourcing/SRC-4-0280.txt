@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRC-4-0280
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Respond to an Event
+WORKDAY ROLE: Supplier User (Sourcing Manager alternate account)
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 32.0)
+================================================================================
+
+DESCRIPTION:
+Respond to an Event as Supplier(s)
+
+TASK / STEP:
+1. Toggle to the supplier profile view (OR sign out and back in with another email as the supplier)
+2. Review the responses section and sort by due date. Click the event name created in the previous test.
+3. Agree to the terms and submit.
+4. Review the event and choose the RSVP option.
+
+PREREQUISITES:
+- User logged in with Supplier User (Sourcing Manager alternate account) permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Toggle to the supplier profile view (OR sign out and back in with another email as the supplier)
+2. Review the responses section and sort by due date. Click the event name created in the previous test.
+3. Agree to the terms and submit.
+4. Review the event and choose the RSVP option."
+2. wait for search results
+3. click search result containing "1. Toggle to the supplier profile view (OR sign out and back in with another email as the supplier)
+2. Review the responses section and sort by due date. Click the event name created in the previous test.
+3. Agree to the terms and submit.
+4. Review the event and choose the RSVP option."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0280_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

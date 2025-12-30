@@ -1,0 +1,93 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║          ELECTRON TEST GENERATOR - AP/AR/CASH MANAGEMENT                     ║
+║                        QUICK START GUIDE                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📋 TARGET: 633 test scenarios across 3 modules
+   • Accounts Payable:    244 scenarios
+   • Accounts Receivable: 221 scenarios  
+   • Cash Management:     168 scenarios
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE (Choose one):
+
+   ┌─ OPTION 1: Automated (Recommended) ─────────────────────────────────────┐
+   │                                                                          │
+   │  cd "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/ │
+   │      electron_tests"                                                     │
+   │  bash run_generation.sh                                                  │
+   │                                                                          │
+   └──────────────────────────────────────────────────────────────────────────┘
+
+   ┌─ OPTION 2: Manual Step-by-Step ─────────────────────────────────────────┐
+   │                                                                          │
+   │  cd "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/ │
+   │      electron_tests"                                                     │
+   │  python3 test_generator_quick.py          # Validate                    │
+   │  python3 generate_ap_ar_cash_tests.py     # Generate                    │
+   │                                                                          │
+   └──────────────────────────────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ VERIFY OUTPUT:
+
+   ls Accounts_Payable/*.txt | wc -l       # Expect: 244
+   ls Accounts_Receivable/*.txt | wc -l    # Expect: 221
+   ls Cash_Management/*.txt | wc -l        # Expect: 168
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 EXPECTED RESULTS:
+
+   HIGH confidence (7-10):    ~387 files (61%) ✅ Ready for automation
+   MEDIUM confidence (5-6):   ~157 files (25%) ⚠️  Needs SME review
+   LOW confidence (0-4):      ~52 files (8%)   ❌ Manual test only
+   MANUAL (no Task/Step):     ~37 files (6%)   📝 Manual documentation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 OUTPUT FILES:
+
+   Accounts_Payable/AP-001_Create_Supplier_Invoice.txt
+   Accounts_Payable/AP-002_Process_Payment.txt
+   ...
+   Accounts_Receivable/AR-001_Create_Customer_Invoice.txt
+   ...
+   Cash_Management/CM-001_Bank_Reconciliation.txt
+   ...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 TROUBLESHOOTING:
+
+   Problem: Excel not found
+   Fix: Verify file exists at:
+        C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\
+        electron_tests\WD_Test_Scenarios_Master.xlsx
+
+   Problem: No scenarios found
+   Fix: Check Excel sheet names match exactly:
+        "Accounts Payable", "Accounts Receivable", "Cash Management"
+
+   Problem: RAG timeout
+   Fix: python3 ../workday_rag.py --list
+        Should show 117+ documents
+
+   Problem: Permission denied
+   Fix: chmod +x *.py *.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOCUMENTATION:
+
+   EXECUTION_INSTRUCTIONS.txt  - Complete instructions
+   AP_AR_CASH_SUMMARY.txt      - Detailed summary
+   generation_log.txt          - Execution log (created during run)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏱️  ESTIMATED TIME: 30-60 minutes (depending on RAG query speed)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

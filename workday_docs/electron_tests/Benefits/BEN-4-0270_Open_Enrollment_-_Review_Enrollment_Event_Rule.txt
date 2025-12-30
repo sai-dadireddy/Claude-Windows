@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: BEN-4-0270
+FUNCTIONAL AREA: Benefits
+TEST NAME: Open Enrollment - Review Enrollment Event Rule
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Enrollment Event Rule
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enrollment Event Rule
+
+### 1. Admin Guide Glossary (score: 8)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Te
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Enrollment Event Rule"
+2. wait for search results
+3. click search result containing "Enrollment Event Rule"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0270_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0550
 FUNCTIONAL AREA: Procurement
 TEST NAME: Receive Purchase Order
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,10 +14,10 @@ WORKDAY ROLE: nan
 ELECTRON STEPS:
 1. enter search box as "Create Receipt - Receive Consignment Bill and Replace Purchase Order
 Generally, Auto Putaway will occur."
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Create Receipt - Receive Consignment Bill and Replace Purchase Order
 Generally, Auto Putaway will occur."
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0550_complete.png"
 
 VERIFICATION:
@@ -25,19 +25,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Receipt - Receive Consignment Bill and Replace Purchase Order
-Generally, Auto Putaway will occur.
-
-### 1. WSDL: Financial_Management (score: 11)
-Source: Financial_Management.wsdl
-```
-WSDL: Financial_Management
-Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, ...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

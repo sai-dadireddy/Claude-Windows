@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRC-4-0170
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Preview Approval Flow
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 20.0)
+================================================================================
+
+DESCRIPTION:
+Preview Approval Flow
+
+TASK / STEP:
+1. Open an active project that has not yet been sent for approvals
+2. Click the Project Approvals Tab
+3. Click Preview Approval Flow
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an active project that has not yet been sent for approvals
+2. Click the Project Approvals Tab
+3. Click Preview Approval Flow"
+2. wait for search results
+3. click search result containing "1. Open an active project that has not yet been sent for approvals
+2. Click the Project Approvals Tab
+3. Click Preview Approval Flow"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0170_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0010-08
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the new hire profile and notice inability for other employees to view future dated hire as of current date.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "7. Hire Complete"
+2. wait for search results
+3. click search result containing "7. Hire Complete"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0010-08_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 7. Hire Complete
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administra...
+================================================================================

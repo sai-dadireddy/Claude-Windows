@@ -198,6 +198,7 @@ def main():
         print(f"\n{functional_area} ({len(scenarios)} scenarios)")
         print(f"Output: {output_dir}")
 
+        area_count = 0
         for scenario in scenarios:
             scenario_id = scenario['Scenario_ID']
             test_scenario = scenario['Test Scenario']
@@ -205,6 +206,7 @@ def main():
             step = scenario['Step']
 
             if not scenario_id:
+                print(f"  [SKIP] No Scenario_ID")
                 continue
 
             # Generate filename
@@ -222,7 +224,10 @@ def main():
                 f.write(content)
 
             total_generated += 1
+            area_count += 1
             print(f"  [OK] {filename}")
+
+        print(f"  Generated {area_count} files for {functional_area}")
 
     print(f"\n[SUCCESS] Total tests generated: {total_generated}")
     print(f"\nGenerated folders:")

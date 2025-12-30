@@ -1,0 +1,21 @@
+================================================================================
+TEST ID: USP-4-0210
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Tax Filing Reports
+DESCRIPTION: Run and review the following reports independently:
+1. Tax Filing Periodic Data by Company
+2. Tax Filing Quarterly Data by Company
+Note that other tax filing reports exist for dimensions other than company.  Run and review these reports as time permits.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

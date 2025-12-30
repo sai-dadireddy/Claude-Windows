@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: BEN-4-0340
+FUNCTIONAL AREA: Benefits
+TEST NAME: Open Enrollment - Close
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Open Enrollment - Close
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Open Enrollment - Close
+
+### 1. Admin Guide Student (score: 4)
+Source: Admin-Guide-Student.pdf
+```
+Student
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Student.......................................................... 15
+Academic Foundation........................................................................................19
+Steps: Set Up A
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Open Enrollment - Close"
+2. wait for search results
+3. click search result containing "Open Enrollment - Close"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0340_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

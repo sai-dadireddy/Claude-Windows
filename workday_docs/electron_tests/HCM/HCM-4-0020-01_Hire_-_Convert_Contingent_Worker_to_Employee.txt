@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0020-01
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire - Convert Contingent Worker to Employee
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Using an existing contingent worker and open position, initiate convert to employee process. Navigate to related actions -> Job -> Convert to Employee. Choose the supervisory organization for the position being filled. Complete applicable data and note the contract end date and reason section. Once submitted, this will initiate the Hire process. Take note of the approval routings (especially when using different initiators) and sub-processes that are a part of the hire process.  If you are using the consolidated hire process the Organziation Assignments and Propose Compensation should appear in this screen.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "1. Convert Contingent Worker"
+2. wait for search results
+3. click search result containing "1. Convert Contingent Worker"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0020-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Convert Contingent Worker
+
+### 1. Kb Procurement Purchase Order (score: 4)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL...
+================================================================================

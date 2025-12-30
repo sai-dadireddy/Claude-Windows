@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: PRO-3-1110
+FUNCTIONAL AREA: Procurement
+TEST NAME: Automatically Close Partially Received Lines
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [INFERRED]
+================================================================================
+
+DESCRIPTION:
+Automatically Close Partially Received Lines
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Create a Requisition -> Purchase Order -> Partially Receive.
+Run: Automatically Close Partially Received Lines with
+"Restrict to PO lines with Partially Received Quantities""
+2. wait for search results (2 seconds)
+3. click search result containing "Create a Requisition -> Purchase Order -> Partially Receive.
+Run: Automatically Close Partially Received Lines with
+"Restrict to PO lines with Partially Received Quantities""
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1110_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Query RAG for details
+
+RAG QUERY STATUS: TIMEOUT
+================================================================================

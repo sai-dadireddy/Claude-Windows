@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0010-16
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Confirm hire is sent to necessary downstream systems via in scope integrations. Verify applicable parties are notified as necessary.
+
+WORKDAY ROLE: Integrations Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Integrations Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "14.  Interfaces and Notifications"
+2. wait for search results
+3. click search result containing "14.  Interfaces and Notifications"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0010-16_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 14.  Interfaces and Notifications
+
+### 1. Admin Guide Adaptive Planning And Consolidation (score: 3)
+Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
+```
+Adaptive Planning
+and Consolidation
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Adaptive Planning and Consolidation (AP&C).................................................... 7
+Financial Accounting in AP&C........
+================================================================================

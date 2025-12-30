@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HLP-4-0090-02
+FUNCTIONAL AREA: Case Management
+TEST NAME: Create a Case on Behalf of a Terminated Worker
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: nan
+
+ELECTRON STEPS:
+1. enter search box as "nan"
+2. [MANUAL] No RAG guidance available - manual test required
+3. screenshot as "HLP-4-0090-02_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-2-0420
 FUNCTIONAL AREA: Procurement
 TEST NAME: Mass Change Requisition Requesters
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,9 +13,9 @@ WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
 1. enter search box as "Mass Change Requisition Requester"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Mass Change Requisition Requester"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-2-0420_complete.png"
 
 VERIFICATION:
@@ -23,20 +23,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Mass Change Requisition Requester
-
-### 1. WSDL: Resource_Management (score: 4)
-Source: Resource_Management.wsdl
-```
-WSDL: Resource_Management
-Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
-Operations:
-  - Submit_...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

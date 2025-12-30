@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: INV-3-1140-15
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Quick Issue
+Add Consigned Items to Quick Issue
+Submit
+
+ELECTRON STEPS:
+1. enter search box as "Quick Issue
+Add Consigned Items to Quick Issue
+Submit"
+2. submit form
+3. screenshot as "INV-3-1140-15_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Quick Issue
+Add Consigned Items to Quick Issue
+Submit
+
+### 1. Admin Guide Spend Management (score: 7)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing..........................................
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-2-0390
 FUNCTIONAL AREA: Procurement
 TEST NAME: Maintain Item Pricing for Multiple Suppliers
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,34 +14,17 @@ WORKDAY ROLE: Procurement Configurator
 ELECTRON STEPS:
 1. enter search box as "Edit Purchase Item
 View Purchase Item"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Edit Purchase Item
 View Purchase Item"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-2-0390_complete.png"
 
 VERIFICATION:
 - [ ] nan
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Edit Purchase Item
-View Purchase Item
-
-### 1. Kb Procurement Requisition (score: 4)
-Source: kb_procurement_requisition.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

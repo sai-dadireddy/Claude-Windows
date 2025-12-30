@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: SRC-4-0130
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Add a New Supplier to a Project
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 29.0)
+================================================================================
+
+DESCRIPTION:
+Add a New Supplier to a Project (supplier account not yet in Supplier Directory)
+
+TASK / STEP:
+1. Open an active project.
+2. Click the Suppliers tab
+3. Click Open Supplier Directory
+4. Click Add New Supplier
+5. Provide a supplier name, unique email address, and contact name
+6. Click Save & Add to Project
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an active project.
+2. Click the Suppliers tab
+3. Click Open Supplier Directory
+4. Click Add New Supplier
+5. Provide a supplier name, unique email address, and contact name
+6. Click Save & Add to Project"
+2. wait for search results
+3. click search result containing "1. Open an active project.
+2. Click the Suppliers tab
+3. Click Open Supplier Directory
+4. Click Add New Supplier
+5. Provide a supplier name, unique email address, and contact name
+6. Click Save & Add to Project"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0130_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

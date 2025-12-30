@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: END-4-0650
+FUNCTIONAL AREA: Endowments
+TEST NAME: Integration from Donor Management System
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: nan
+
+ELECTRON STEPS:
+1. enter search box as "nan"
+2. [MANUAL] No RAG guidance available - manual test required
+3. screenshot as "END-4-0650_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+================================================================================

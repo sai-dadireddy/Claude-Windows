@@ -1,0 +1,29 @@
+================================================================================
+TEST ID: PRO-3-0950
+FUNCTIONAL AREA: Procurement
+TEST NAME: Automate Changes from Purchase Order Acknowledgement
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Automate Changes from Purchase Order Acknowledgement
+Purchase Order Amount
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Purchase Order Acknowledgement setup - Create and Issue Purchase Order - Acknowledge Amount change to produce Auto Generated Change Order"
+2. wait for search results (2 seconds)
+3. click search result containing "Verify Purchase Order Acknowledgement setup - Create and Issue Purchase Order - Acknowledge Amount change to produce Auto Generated Change Order"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-0950_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

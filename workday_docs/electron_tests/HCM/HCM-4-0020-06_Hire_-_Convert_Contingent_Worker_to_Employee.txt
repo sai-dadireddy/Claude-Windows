@@ -1,0 +1,67 @@
+================================================================================
+TEST ID: HCM-4-0020-06
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire - Convert Contingent Worker to Employee
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Complete inbox tasks for Onboarding. These should include (if applicable): 
+1. Contact Information 
+2. Name Information & Personal Information 
+3. Government IDs 
+4. Complete Form I-9 (US only)
+5. Payment Elections 
+6. Federal Withholdings & State/Province Withholdings 
+7. Benefit Elections
+8. Emergency Contacts 
+9. Review Document(s)
+10. Change Photo
+
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "6. Onboarding - Various Tasks"
+2. wait for search results
+3. click search result containing "6. Onboarding - Various Tasks"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-4-0020-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 6. Onboarding - Various Tasks
+
+### 1. Kb Hcm Hire Employee (score: 5)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Re...
+================================================================================

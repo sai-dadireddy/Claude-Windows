@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0100-02
+FUNCTIONAL AREA: HCM
+TEST NAME: Terminate Employee with End Jobs
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+After the process has been initiated, complete applicable approval or sub-process steps. Take note of the approval routings (especially when using different initiators) and sub-processes that are a part of the process. Verify that all positions for the employee are ended, and the termination is processed.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "2. Complete End Jobs"
+2. wait for search results
+3. click search result containing "2. Complete End Jobs"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0100-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Complete End Jobs
+
+### 1. Kb Hcm Terminate Employee (score: 4)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Hum...
+================================================================================

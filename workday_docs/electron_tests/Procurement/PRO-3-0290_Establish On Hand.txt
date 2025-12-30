@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0290
 FUNCTIONAL AREA: Procurement
 TEST NAME: Establish On Hand
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -18,35 +18,19 @@ ELECTRON STEPS:
 Purchase Order Type = Consignment (No charge)
 Add Consigned Items 
 Save Purchase Order - Note PO ID"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Create Purchase Order:
 Purchase Order Type = Consignment (No charge)
 Add Consigned Items 
 Save Purchase Order - Note PO ID"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0290_complete.png"
 
 VERIFICATION:
 - [ ] Buyer
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Purchase Order:
-Purchase Order Type = Consignment (No charge)
-Add Consigned Items 
-Save Purchase Order - Note PO ID
-
-### 1. Kb Procurement Requisition (score: 14)
-Source: kb_procurement_requisition.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
-=========================================...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRC-4-0150
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Add a related project
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 26.0)
+================================================================================
+
+DESCRIPTION:
+Add a related project
+
+TASK / STEP:
+1. Open an active project
+2. Click the Related Projects tab
+3. Click Link to a project
+4. Start to type the name of the project and select it from the drop down.
+5. Click Link to a Project
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an active project
+2. Click the Related Projects tab
+3. Click Link to a project
+4. Start to type the name of the project and select it from the drop down.
+5. Click Link to a Project"
+2. wait for search results
+3. click search result containing "1. Open an active project
+2. Click the Related Projects tab
+3. Click Link to a project
+4. Start to type the name of the project and select it from the drop down.
+5. Click Link to a Project"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0150_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

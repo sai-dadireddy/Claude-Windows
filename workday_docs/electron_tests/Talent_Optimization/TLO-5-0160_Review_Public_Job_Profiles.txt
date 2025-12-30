@@ -1,0 +1,169 @@
+# Electron Test: TLO-5-0160 - Review Public Job Profiles
+
+## Test Metadata
+- **Scenario ID**: TLO-5-0160
+- **Module**: Talent Optimization
+- **Test Type**: 3 | GOLD / Pre-Prod Tenant Build Validation
+- **Workday Role**: Employee As Self / Manager
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Run the Data Validation: Job Profiles report and verify all Job Profiles that are expected to be public are configured. (Is Job Public = Yes)
+
+## Test Steps
+
+### Task/Step: Extract Job Profiles Report
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Review Public Job Profiles Extract Job Profiles Report
+
+### 1. Kb Hcm Change Job (score: 6)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Test Scenarios Index (score: 6)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory ...
+```
+
+### 3. Workday Feature Descriptions Ditamap (score: 6)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Employee As Self / Manager
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-5-0160: Review Public Job Profiles', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Employee As Self / Manager
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Extract Job Profiles Report', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Extract Job Profiles Report
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Review Public Job Profiles Extract Job Profiles Report
+
+### 1. Kb Hcm Change Job (score: 6)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Test Scenarios Index (score: 6)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory ...
+```
+
+### 3. Workday Feature Descriptions Ditamap (score:
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 5 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: nan
+- Business Process Level 3: nan
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:33:21.679309
+Confidence: 80.00%

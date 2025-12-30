@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: HLP-3-0150
+FUNCTIONAL AREA: Case Management
+TEST NAME: Tenant Setup - Notifications
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Tenant Setup
+
+ELECTRON STEPS:
+1. enter search box as "Tenant Setup"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "HLP-3-0150_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Tenant Setup
+
+### 1. Electron Test Samples (score: 7)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron t...
+================================================================================

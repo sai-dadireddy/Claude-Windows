@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0020-02
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire - Convert Contingent Worker to Employee
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+After the hire has been initiated, complete the propose compensation inbox task. Verify that the compensation package, grade and/or grade profile, and appropriate base pay plan default into the compensation sub-process. Enter the new hire's base pay plus any applicable allowance plans, bonus plans, etc. according to scope.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "2. Hire Compensation"
+2. wait for search results
+3. click search result containing "2. Hire Compensation"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0020-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Hire Compensation
+
+### 1. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human R...
+================================================================================

@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: SRC-2-0150
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Validate Email Templates
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 28.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Settings > Sourcing & Auctions 
+2. Click Award Email Template
+3. Validate whether Include Awarded Spend is toggled on or not
+4. Review the message and inserted variables
+5. Scroll down to the Rejection Email Template
+6. Review the message and inserted variables
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Settings > Sourcing & Auctions 
+2. Click Award Email Template
+3. Validate whether Include Awarded Spend is toggled on or not
+4. Review the message and inserted variables
+5. Scroll down to the Rejection Email Template
+6. Review the message and inserted variables"
+2. wait for search results
+3. click search result containing "1. Navigate to Settings > Sourcing & Auctions 
+2. Click Award Email Template
+3. Validate whether Include Awarded Spend is toggled on or not
+4. Review the message and inserted variables
+5. Scroll down to the Rejection Email Template
+6. Review the message and inserted variables"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-2-0150_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

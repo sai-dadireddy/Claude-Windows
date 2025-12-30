@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRC-2-0100
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review Approval Groups
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+Review project approval groups
+
+TASK / STEP:
+1. Navigate to Settings > Approvals section
+2. Select Approval Groups
+3. Review Approval Groups, including the list of approvers, order of approval, and one/all approval requirements
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Settings > Approvals section
+2. Select Approval Groups
+3. Review Approval Groups, including the list of approvers, order of approval, and one/all approval requirements"
+2. wait for search results
+3. click search result containing "1. Navigate to Settings > Approvals section
+2. Select Approval Groups
+3. Review Approval Groups, including the list of approvers, order of approval, and one/all approval requirements"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-2-0100_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

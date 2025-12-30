@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: HLP-1-0090
+FUNCTIONAL AREA: Case Management
+TEST NAME: Questionnaires
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: View Questionnaire
+
+ELECTRON STEPS:
+1. enter search box as "View Questionnaire"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "HLP-1-0090_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Questionnaire
+
+### 1. Admin Guide Manage Workday (score: 7)
+Source: Admin-Guide-Manage-Workday.pdf
+```
+Manage Workday
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Manage Workday...............................................................................................12
+Tenant Configuration...............................................................................
+================================================================================

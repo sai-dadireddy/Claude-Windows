@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRC-2-0020
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Teams
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 13.0)
+================================================================================
+
+DESCRIPTION:
+Teams should be leveraged if sourcing managers should have access to projects belonging to other sourcing managers.
+
+TASK / STEP:
+1. Click Settings
+2. Navigate to the Teams section on the left hand panel.
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Click Settings
+2. Navigate to the Teams section on the left hand panel."
+2. wait for search results
+3. click search result containing "1. Click Settings
+2. Navigate to the Teams section on the left hand panel."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: Review Full Access Teams
+Review Read Only Teams
+
+Review the list of teams. Confirm that all teams are present and that they have access to the appropriate project and contract types.
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-2-0020_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Review Full Access Teams
+Review Read Only Teams
+
+Review the list of teams. Confirm that all teams are present and that they have access to the appropriate project and contract types.
+
+================================================================================

@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: HLP-1-0120
+FUNCTIONAL AREA: Case Management
+TEST NAME: Role Assignments
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Extract Organization Role Assignments
+
+ELECTRON STEPS:
+1. enter search box as "Extract Organization Role Assignments"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "HLP-1-0120_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Organization Role Assignments
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Work...
+================================================================================

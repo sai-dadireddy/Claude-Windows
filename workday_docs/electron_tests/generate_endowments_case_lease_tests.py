@@ -105,48 +105,77 @@ def calculate_confidence(task_step, rag_response):
     else:
         return "LOW", score
 
-def generate_electron_steps(task_step, rag_response, scenario_id):
-    """Generate Electron test steps from RAG response."""
+def generate_electron_steps(task_step, rag_response, scenario_id, confidence_score):
+    """Generate Electron test steps from RAG response.
+
+    Only generates actual Electron commands for HIGH confidence (>= 7.0).
+    For MEDIUM/LOW, marks as needing review or manual creation.
+    """
     steps = []
 
-    # Always start with search
-    steps.append(f'1. enter search box as "{task_step}"')
-
-    if not rag_response or "No results found" in rag_response:
-        steps.append("2. [MANUAL] No RAG guidance available - manual test required")
-        steps.append(f'3. screenshot as "{scenario_id}_complete.png"')
+    # For LOW confidence (< 5.0), mark as MANUAL
+    if confidence_score < 5.0:
+        steps.append("[MANUAL TEST REQUIRED]")
+        steps.append(f"Reason: Insufficient RAG data (confidence: {confidence_score:.1f}/10)")
+        steps.append(f"Task: {task_step}")
+        steps.append("")
+        steps.append("SME Action: Create test steps manually based on Workday knowledge.")
         return steps
 
-    # Parse RAG response for actionable steps
-    step_num = 2
+    # For MEDIUM confidence (5.0-6.9), mark for SME review
+    if confidence_score < 7.0:
+        steps.append("[NEEDS SME REVIEW]")
+        steps.append(f"Confidence: {confidence_score:.1f}/10 - Below acceptance threshold")
+        steps.append("")
+        steps.append("Preliminary steps (MUST be reviewed and enhanced):")
+        steps.append(f'1. enter search box as "{task_step}"')
+        steps.append("2. wait for search results")
+        steps.append(f'3. screenshot as "{scenario_id}_initial.png"')
+        steps.append("")
+        steps.append("SME Action: Validate task name and add remaining steps.")
+        return steps
 
-    # Look for common patterns
-    if "navigate" in rag_response.lower() or "go to" in rag_response.lower():
-        steps.append(f"{step_num}. wait for page load")
+    # HIGH confidence (>= 7.0) - Generate actual steps
+    step_num = 1
+
+    # Always start with search
+    steps.append(f'{step_num}. enter search box as "{task_step}"')
+    step_num += 1
+
+    steps.append(f"{step_num}. wait for search results")
+    step_num += 1
+
+    # Parse RAG response for specific fields/actions
+    response_lower = rag_response.lower()
+
+    # Look for specific field names (extract from RAG)
+    field_patterns = re.findall(r'(?:enter|input|fill|type)\s+(?:the\s+)?(["\']?[\w\s]+["\']?)\s+(?:field|box|into)', rag_response, re.IGNORECASE)
+    for field in field_patterns[:3]:  # Limit to 3 specific fields
+        clean_field = field.strip().strip('"\'')
+        steps.append(f'{step_num}. enter field "{clean_field}" with [VALUE]')
         step_num += 1
 
-    # Look for field entries
-    field_patterns = re.findall(r'enter\s+([^,\.]+)', rag_response, re.IGNORECASE)
-    for field in field_patterns[:3]:  # Limit to 3 fields
-        steps.append(f'{step_num}. enter field "{field.strip()}" with appropriate value')
+    # Look for specific buttons/links
+    button_patterns = re.findall(r'(?:click|select|choose)\s+(?:the\s+)?(["\']?[\w\s]+["\']?)\s+(?:button|link)', rag_response, re.IGNORECASE)
+    for button in button_patterns[:2]:  # Limit to 2 buttons
+        clean_button = button.strip().strip('"\'')
+        steps.append(f'{step_num}. click button "{clean_button}"')
         step_num += 1
 
-    # Look for clicks/actions
-    if "click" in rag_response.lower() or "select" in rag_response.lower():
-        steps.append(f"{step_num}. click appropriate action button")
+    # Look for dropdown selections
+    dropdown_patterns = re.findall(r'(?:select|choose)\s+(?:the\s+)?(["\']?[\w\s]+["\']?)\s+(?:from|in)\s+(?:the\s+)?dropdown', rag_response, re.IGNORECASE)
+    for dropdown in dropdown_patterns[:2]:
+        clean_dropdown = dropdown.strip().strip('"\'')
+        steps.append(f'{step_num}. select dropdown "{clean_dropdown}" as [VALUE]')
         step_num += 1
 
-    # Look for submit/save
-    if "submit" in rag_response.lower() or "save" in rag_response.lower():
-        steps.append(f"{step_num}. submit form")
-        step_num += 1
-
-    # If no specific steps found, add generic navigation
-    if len(steps) == 1:
-        steps.append(f"{step_num}. navigate to appropriate page")
-        step_num += 1
-        steps.append(f"{step_num}. complete required fields")
-        step_num += 1
+    # Only add generic steps if we found NO specific fields/buttons/dropdowns
+    if len(steps) == 2:  # Only search + wait
+        # Check if RAG mentions any specific UI elements
+        if any(term in response_lower for term in ['field', 'button', 'form', 'page']):
+            steps.append(f"{step_num}. [VERIFY] RAG mentions UI elements but no specific names found")
+            steps.append(f"{step_num+1}. [SME] Add specific field/button interactions")
+            step_num += 2
 
     # Always end with screenshot
     steps.append(f'{step_num}. screenshot as "{scenario_id}_complete.png"')
@@ -165,7 +194,7 @@ def create_test_file(row, area_folder, rag_response=None):
     confidence_level, confidence_score = calculate_confidence(task_step, rag_response)
 
     # Generate steps
-    electron_steps = generate_electron_steps(task_step, rag_response, scenario_id)
+    electron_steps = generate_electron_steps(task_step, rag_response, scenario_id, confidence_score)
 
     # Create filename
     safe_name = re.sub(r'[^\w\s-]', '', scenario_name).strip().replace(' ', '_')[:50]
@@ -220,10 +249,12 @@ def process_functional_area(df, area_name, area_folder):
 
     stats = {
         'total': len(area_df),
+        'accepted': 0,      # >= 7.0
+        'needs_review': 0,  # 5.0-6.9
+        'manual': 0,        # < 5.0 or no task
         'high': 0,
         'medium': 0,
-        'low': 0,
-        'manual': 0
+        'low': 0
     }
 
     for idx, row in area_df.iterrows():
@@ -234,9 +265,15 @@ def process_functional_area(df, area_name, area_folder):
 
         # Query RAG if task/step exists
         rag_response = None
+        confidence_score = 0.0
+
         if task_step and task_step not in ['nan', '', 'None']:
             print(f"Querying RAG...", end=' ')
             rag_response = query_rag(task_step)
+
+            # Calculate confidence to categorize
+            from subprocess import run
+            _, confidence_score = calculate_confidence(task_step, rag_response)
 
         # Create test file
         filepath, confidence = create_test_file(row, area_folder, rag_response)
@@ -246,8 +283,19 @@ def process_functional_area(df, area_name, area_folder):
             stats['manual'] += 1
             print("MANUAL (no task/step)")
         else:
+            # Legacy stats
             stats[confidence.lower()] += 1
-            print(f"{confidence}")
+
+            # New categorization
+            if confidence_score >= 7.0:
+                stats['accepted'] += 1
+                print(f"✅ ACCEPTED ({confidence_score:.1f})")
+            elif confidence_score >= 5.0:
+                stats['needs_review'] += 1
+                print(f"⚠️ NEEDS REVIEW ({confidence_score:.1f})")
+            else:
+                stats['manual'] += 1
+                print(f"❌ MANUAL ({confidence_score:.1f})")
 
     return stats
 
@@ -277,16 +325,31 @@ def main():
     print("GENERATION COMPLETE - SUMMARY")
     print("="*80)
 
+    total_accepted = 0
+    total_needs_review = 0
+    total_manual = 0
+    grand_total = 0
+
     for area_name, stats in all_stats.items():
         print(f"\n{area_name}:")
         print(f"  Total Scenarios: {stats['total']}")
         if stats['total'] > 0:
-            print(f"  High Confidence: {stats['high']} ({stats['high']/stats['total']*100:.1f}%)")
-            print(f"  Medium Confidence: {stats['medium']} ({stats['medium']/stats['total']*100:.1f}%)")
-            print(f"  Low Confidence: {stats['low']} ({stats['low']/stats['total']*100:.1f}%)")
-            print(f"  Manual Required: {stats['manual']} ({stats['manual']/stats['total']*100:.1f}%)")
+            print(f"  ✅ ACCEPTED (>= 7.0):     {stats['accepted']:3d} ({stats['accepted']/stats['total']*100:5.1f}%)")
+            print(f"  ⚠️  NEEDS REVIEW (5-6.9): {stats['needs_review']:3d} ({stats['needs_review']/stats['total']*100:5.1f}%)")
+            print(f"  ❌ MANUAL (< 5.0):        {stats['manual']:3d} ({stats['manual']/stats['total']*100:5.1f}%)")
+
+            total_accepted += stats['accepted']
+            total_needs_review += stats['needs_review']
+            total_manual += stats['manual']
+            grand_total += stats['total']
 
     print("\n" + "="*80)
+    print("OVERALL TOTALS:")
+    print(f"  Grand Total:        {grand_total}")
+    print(f"  ✅ ACCEPTED:        {total_accepted:3d} ({total_accepted/grand_total*100:5.1f}%)")
+    print(f"  ⚠️  NEEDS REVIEW:   {total_needs_review:3d} ({total_needs_review/grand_total*100:5.1f}%)")
+    print(f"  ❌ MANUAL:          {total_manual:3d} ({total_manual/grand_total*100:5.1f}%)")
+    print("="*80)
 
 if __name__ == "__main__":
     main()

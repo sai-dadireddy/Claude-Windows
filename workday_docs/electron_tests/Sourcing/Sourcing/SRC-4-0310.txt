@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRC-4-0310
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Answer an Event Question
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 35.0)
+================================================================================
+
+DESCRIPTION:
+Answer a Supplier's Question in Message Center
+
+TASK / STEP:
+1. Navigate to events and open the event with a pending question
+2. Click Message Center on the left hand panel
+3. Expand the Unanswered Questions section
+4. (Optional) Assign the question to a stakeholder on the event
+5. Enter a response and select to answer just the asker or respond to all suppliers.
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to events and open the event with a pending question
+2. Click Message Center on the left hand panel
+3. Expand the Unanswered Questions section
+4. (Optional) Assign the question to a stakeholder on the event
+5. Enter a response and select to answer just the asker or respond to all suppliers."
+2. wait for search results
+3. click search result containing "1. Navigate to events and open the event with a pending question
+2. Click Message Center on the left hand panel
+3. Expand the Unanswered Questions section
+4. (Optional) Assign the question to a stakeholder on the event
+5. Enter a response and select to answer just the asker or respond to all suppliers."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0310_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

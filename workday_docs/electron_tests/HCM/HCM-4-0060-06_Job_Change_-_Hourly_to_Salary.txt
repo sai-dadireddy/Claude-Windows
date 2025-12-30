@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-4-0060-06
+FUNCTIONAL AREA: HCM
+TEST NAME: Job Change - Hourly to Salary
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all eligible time off plans that track balances are shown as expected after the job change.
+
+WORKDAY ROLE: Absence Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Absence Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "6. Time Off Eligibility"
+2. wait for search results
+3. click search result containing "6. Time Off Eligibility"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0060-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 6. Time Off Eligibility
+
+### 1. Electron Test Samples (score: 4)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample...
+================================================================================

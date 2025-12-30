@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-4-0240
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Termination
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Confirm termination is sent to necessary downstream systems via in scope integrations or worker is no longer active on integrations. Verify applicable parties are notified of termination as necessary.
+
+WORKDAY ROLE: Integration Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Integration Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "6. Integrations and Notifications"
+2. wait for search results
+3. click search result containing "6. Integrations and Notifications"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0240_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 6. Integrations and Notifications
+
+### 1. Admin Guide Manage Workday (score: 4)
+Source: Admin-Guide-Manage-Workday.pdf
+```
+Manage Workday
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Manage Workday...............................................................................................12
+Tenant Configuration.............................................................
+
+================================================================================

@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-P1-0220
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Post Complete Audits
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run Audit Reports Outlined on "Payroll Processing Steps" document in the Post Complete section
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: N/A minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Pay Command Center"
+2. wait for search results
+3. click search result containing "Pay Command Center"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-P1-0220_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Command Center
+
+### 1. Admin Guide Payroll (score: 3)
+Source: Admin-Guide-Payroll.pdf
+```
+Payroll
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Payroll................................................................................................................ 20
+Payroll Considerations....................................................................................
+
+================================================================================

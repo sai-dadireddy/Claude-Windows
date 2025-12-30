@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0360
 FUNCTIONAL AREA: Procurement
 TEST NAME: Consigned Transaction
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,10 +14,10 @@ WORKDAY ROLE: nan
 ELECTRON STEPS:
 1. enter search box as "Find Consigned Inventory Transactions
 Verify depletion - Accounting created"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Find Consigned Inventory Transactions
 Verify depletion - Accounting created"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0360_complete.png"
 
 VERIFICATION:
@@ -25,24 +25,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Find Consigned Inventory Transactions
-Verify depletion - Accounting created
-
-### 1. Admin Guide Spend Management (score: 7)
-Source: Admin-Guide-Spend-Management.pdf
-```
-Spend Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Spend Management.......................................................................................... 10
-Strategic Sourcing....................
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

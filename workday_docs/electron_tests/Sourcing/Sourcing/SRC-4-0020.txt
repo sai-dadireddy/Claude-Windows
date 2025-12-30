@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: SRC-4-0020
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create an Intake Request (Pipeline or direct link)
+WORKDAY ROLE: Stakeholder
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+From Pipeline or from Intake Link:
+1. Click Create Request
+2. Select the Project Type
+3. Complete the Required Fields
+4. Add a suggested Supplier
+5. Submit the Request
+
+PREREQUISITES:
+- User logged in with Stakeholder permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "From Pipeline or from Intake Link:
+1. Click Create Request
+2. Select the Project Type
+3. Complete the Required Fields
+4. Add a suggested Supplier
+5. Submit the Request"
+2. wait for search results
+3. click search result containing "From Pipeline or from Intake Link:
+1. Click Create Request
+2. Select the Project Type
+3. Complete the Required Fields
+4. Add a suggested Supplier
+5. Submit the Request"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: Confirm automated routing to assigned owner OR confirm automated routing to unassigned
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0020_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Confirm automated routing to assigned owner OR confirm automated routing to unassigned
+
+================================================================================

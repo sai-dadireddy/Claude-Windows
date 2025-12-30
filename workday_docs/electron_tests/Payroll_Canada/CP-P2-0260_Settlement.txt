@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: CP-P2-0260
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Settlement
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create settlement run and process settlement
+
+WORKDAY ROLE: Settlement Specialist
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Settlement Specialist permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Create Settlement Run"
+2. wait for search results
+3. click search result containing "Create Settlement Run"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-P2-0260_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Settlement Run
+
+### 1. Kb Hcm Terminate Employee (score: 3)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Hu...
+================================================================================

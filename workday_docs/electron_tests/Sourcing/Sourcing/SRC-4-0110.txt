@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: SRC-4-0110
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create a Project
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 30.0)
+================================================================================
+
+DESCRIPTION:
+Create a Project
+
+TASK / STEP:
+1. Navigate to Pipeline
+2. Click Create Project
+3. Select the project type (the fields will update accordingly)
+4. Fill out the Project name, start date, and any additional fields configured for the project type.
+5. Update the project status from Planned to Active.
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Pipeline
+2. Click Create Project
+3. Select the project type (the fields will update accordingly)
+4. Fill out the Project name, start date, and any additional fields configured for the project type.
+5. Update the project status from Planned to Active."
+2. wait for search results
+3. click search result containing "1. Navigate to Pipeline
+2. Click Create Project
+3. Select the project type (the fields will update accordingly)
+4. Fill out the Project name, start date, and any additional fields configured for the project type.
+5. Update the project status from Planned to Active."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0110_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

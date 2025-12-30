@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: INV-3-1140-10
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID
+
+ELECTRON STEPS:
+1. enter search box as "Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID"
+2. submit form
+3. screenshot as "INV-3-1140-10_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID
+
+### 1. Kb Procurement Requisition (score: 14)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+=========================================...
+================================================================================

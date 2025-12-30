@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-4-0070-01
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Benefits Inbound Integration to Gross
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Only applicable if an inbound integration or manual EIB that loads benefit information as payroll input is in scope (i.e. Inbound 401k Loans) *** Process the integration or load the EIB for the current open pay period.
+
+WORKDAY ROLE: Payroll Partner / Benefits Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner / Benefits Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "1. Load EIB or Launch Integration"
+2. wait for search results
+3. click search result containing "1. Load EIB or Launch Integration"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0070-01_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Load EIB or Launch Integration
+
+### 1. Admin Guide Workday Studio (score: 6)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals..........................................................................
+
+================================================================================

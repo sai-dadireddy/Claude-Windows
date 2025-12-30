@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: END-4-0610
+FUNCTIONAL AREA: Endowments
+TEST NAME: View Investment Profile
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: View Investment Profile
+
+ELECTRON STEPS:
+1. enter search box as "View Investment Profile"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-4-0610_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Investment Profile
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Adm...
+================================================================================

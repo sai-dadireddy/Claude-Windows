@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0510
 FUNCTIONAL AREA: Procurement
 TEST NAME: Replenish Consigned Items
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -20,7 +20,7 @@ Inventory Item - Select Consigned Item that was consumed
 Auto Submit - Optional
 Preview = Y
 Grid will display the consumed consigned item"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Create Consignment Usage Requisitions
 Request Name - Enter Name
 Inventory Site - Select Inventory Site that consumed consignment item
@@ -29,7 +29,7 @@ Inventory Item - Select Consigned Item that was consumed
 Auto Submit - Optional
 Preview = Y
 Grid will display the consumed consigned item"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0510_complete.png"
 
 VERIFICATION:
@@ -37,22 +37,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Consignment Usage Requisitions
-Request Name - Enter Name
-Inventory Site - Select Inventory Site that consumed consignment item
-Requisition Type = Consignment Bill and Replace
-Inventory Item - Select Consigned Item that was consumed
-Auto Submit - Optional
-Preview = Y
-Grid will display the consumed consigned item
-
-### 1. WSDL: Resource_Management (score: 25)
-Source: Resource_Manageme...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

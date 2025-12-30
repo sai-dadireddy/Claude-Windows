@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-4-0010-05
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Only required if scenario not triggered from Recruiting and not using the consolidated hire process*** After the hire has been initiated, complete the organization assignment inbox task. If Organization Defaults are in scope, confirm defaulted company and/or cost center and modify as needed. Of no defaulting organizations, enter company, cost center, and any applicable additional organizations as applicable.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "4. Hire Organization Assignment"
+2. wait for search results
+3. click search result containing "4. Hire Organization Assignment"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-4-0010-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 4. Hire Organization Assignment
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HC...
+================================================================================

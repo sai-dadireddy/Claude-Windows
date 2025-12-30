@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: SRC-2-0160
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Validate Event Publication Confirmation Settings
+WORKDAY ROLE: Company Admin
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 28.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Settings > Sourcing & Auctions
+2. Validate whether Require Confirmation message is selected or not
+3. Review the confirmation message. 
+
+Note: this is an internal message that displays prior to publishing an event to suppliers
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Settings > Sourcing & Auctions
+2. Validate whether Require Confirmation message is selected or not
+3. Review the confirmation message. 
+
+Note: this is an internal message that displays prior to publishing an event to suppliers"
+2. wait for search results
+3. click search result containing "1. Navigate to Settings > Sourcing & Auctions
+2. Validate whether Require Confirmation message is selected or not
+3. Review the confirmation message. 
+
+Note: this is an internal message that displays prior to publishing an event to suppliers"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-2-0160_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

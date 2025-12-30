@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: INV-3-1140-21
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Issue Consignment Bill and Replace Purchase Order
+
+ELECTRON STEPS:
+1. enter search box as "Issue Consignment Bill and Replace Purchase Order"
+2. submit form
+3. screenshot as "INV-3-1140-21_complete.png"
+
+VERIFICATION: Buyer
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Consignment Bill and Replace Purchase Order
+
+### 1. Kb Procurement Purchase Order (score: 6)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Communit...
+================================================================================

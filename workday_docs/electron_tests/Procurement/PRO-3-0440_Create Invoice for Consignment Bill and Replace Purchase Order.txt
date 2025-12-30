@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0440
 FUNCTIONAL AREA: Procurement
 TEST NAME: Create Invoice for Consignment Bill and Replace Purchase Order
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,10 +14,10 @@ WORKDAY ROLE: nan
 ELECTRON STEPS:
 1. enter search box as "Create Supplier Invoice - Select Bill and Replace Purchase Order
 Accounting will be generated."
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Create Supplier Invoice - Select Bill and Replace Purchase Order
 Accounting will be generated."
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0440_complete.png"
 
 VERIFICATION:
@@ -25,19 +25,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Supplier Invoice - Select Bill and Replace Purchase Order
-Accounting will be generated.
-
-### 1. WSDL: Financial_Management (score: 13)
-Source: Financial_Management.wsdl
-```
-WSDL: Financial_Management
-Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial ...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

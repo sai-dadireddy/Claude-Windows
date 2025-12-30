@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRC-4-0270
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review Events
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 21.0)
+================================================================================
+
+DESCRIPTION:
+Review RFx Events dashboard
+
+TASK / STEP:
+1. Navigate to the Events module
+2. Use the Filters to search for all published events
+3. Click through the event status options in the left hand panel
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to the Events module
+2. Use the Filters to search for all published events
+3. Click through the event status options in the left hand panel"
+2. wait for search results
+3. click search result containing "1. Navigate to the Events module
+2. Use the Filters to search for all published events
+3. Click through the event status options in the left hand panel"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0270_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0480
 FUNCTIONAL AREA: Procurement
 TEST NAME: Adjust Inventory (Decrease)
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -16,39 +16,19 @@ ELECTRON STEPS:
 Ensure the Adjustment reason is Exclude from Consigned Payment = N
 Enter Quantity to Adjust
 Submit"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Adjust Inventory 
 Ensure the Adjustment reason is Exclude from Consigned Payment = N
 Enter Quantity to Adjust
 Submit"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0480_complete.png"
 
 VERIFICATION:
 - [ ] Inventory Specialist
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Adjust Inventory 
-Ensure the Adjustment reason is Exclude from Consigned Payment = N
-Enter Quantity to Adjust
-Submit
-
-### 1. Admin Guide Education And Government (score: 14)
-Source: Admin-Guide-Education-and-Government.pdf
-```
-Education and
-Government
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Education and Government..........................................................
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

@@ -17,7 +17,7 @@ RAG_SCRIPT = "../workday_rag.py"
 # Functional areas to process with their output directories
 PAYROLL_AREAS = {
     'Payroll for Canada': 'Payroll_Canada',
-    'Payroll for UK': 'Payroll_UK',
+    'Payroll for the United Kingdom': 'Payroll_UK',
     'Payroll for France': 'Payroll_France',
     'Payroll Interface': 'Payroll_Interface'
 }

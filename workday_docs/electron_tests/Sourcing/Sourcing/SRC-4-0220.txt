@@ -1,0 +1,62 @@
+================================================================================
+TEST ID: SRC-4-0220
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create a report to show Project by Sourcing Owner
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 45.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to "Reports" module
+2. Click on the "data set" and make sure it is set to "Projects"
+3. Click on the "Report" icon (not under Navigation) > select "Filters & Columns" > Select "Choose Filters & Columns"
+4. Search for and select "Sourcing Owner" > click "Save"
+5. In the "Sourcing Owner" filter and select one or two sourcing managers
+6. Click on the blue "Save As..." button on the bottom of the menu and save your report 
+7. View the report and use the "Filters" and "Editor" icons to customize as you want
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to "Reports" module
+2. Click on the "data set" and make sure it is set to "Projects"
+3. Click on the "Report" icon (not under Navigation) > select "Filters & Columns" > Select "Choose Filters & Columns"
+4. Search for and select "Sourcing Owner" > click "Save"
+5. In the "Sourcing Owner" filter and select one or two sourcing managers
+6. Click on the blue "Save As..." button on the bottom of the menu and save your report 
+7. View the report and use the "Filters" and "Editor" icons to customize as you want"
+2. wait for search results
+3. click search result containing "1. Navigate to "Reports" module
+2. Click on the "data set" and make sure it is set to "Projects"
+3. Click on the "Report" icon (not under Navigation) > select "Filters & Columns" > Select "Choose Filters & Columns"
+4. Search for and select "Sourcing Owner" > click "Save"
+5. In the "Sourcing Owner" filter and select one or two sourcing managers
+6. Click on the blue "Save As..." button on the bottom of the menu and save your report 
+7. View the report and use the "Filters" and "Editor" icons to customize as you want"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0220_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

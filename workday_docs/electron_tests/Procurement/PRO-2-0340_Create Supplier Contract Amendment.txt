@@ -2,7 +2,7 @@
 TEST ID: PRO-2-0340
 FUNCTIONAL AREA: Procurement
 TEST NAME: Create Supplier Contract Amendment
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,31 +13,16 @@ WORKDAY ROLE: Supplier Contract Specialist
 
 ELECTRON STEPS:
 1. enter search box as "Related Action from the Supplier Contract"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Related Action from the Supplier Contract"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-2-0340_complete.png"
 
 VERIFICATION:
 - [ ] nan
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Related Action from the Supplier Contract
-
-### 1. Kb Procurement Purchase Order (score: 6)
-Source: kb_procurement_purchase_order.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

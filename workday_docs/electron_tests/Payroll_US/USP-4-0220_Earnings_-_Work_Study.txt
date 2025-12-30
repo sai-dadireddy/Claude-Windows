@@ -1,0 +1,21 @@
+================================================================================
+TEST ID: USP-4-0220
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Earnings - Work Study
+DESCRIPTION: Is Work Study configured per the requirements and confirmed and validated along with the questions below?
+1) Is there both a federal and a state program?
+2) If Payroll manages the limits, have you ensured that the limit on the award is not exceeded?
+3) If there is a rollover code to pay the student regular earnings when the award limit is exceeded, does this function properly?
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

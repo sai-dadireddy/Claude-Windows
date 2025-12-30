@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: HLP-1-0080
+FUNCTIONAL AREA: Case Management
+TEST NAME: Case Satisfaction Surveys
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: View Case Satisfaction Survey Configuration
+
+ELECTRON STEPS:
+1. enter search box as "View Case Satisfaction Survey Configuration"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "HLP-1-0080_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Case Satisfaction Survey Configuration
+
+### 1. User Guide Sourcing Managers (score: 4)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers.........................
+================================================================================

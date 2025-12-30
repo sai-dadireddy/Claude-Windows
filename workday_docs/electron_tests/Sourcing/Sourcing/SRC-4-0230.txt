@@ -1,0 +1,85 @@
+================================================================================
+TEST ID: SRC-4-0230
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create a Sourcing Event
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 75.0)
+================================================================================
+
+DESCRIPTION:
+Draft, Edit & Publish an RFx Event with Suppliers & Stakeholders tagged
+
+TASK / STEP:
+1. Navigate to an in progress sourcing Project
+2. Click the Sourcing tab
+3. Click Create New RFX. Select the template created in the previous test case. The event will add to the project in Draft status.
+4. Edit the event. Modify the Title and add any relevant details that weren't in the template.
+Note: you can change defaults from a template on the event.
+5. Set the event deadlines: RSVP, question, and submission
+6. The event will inherit the suppliers from the project. Add an additional supplier to the event
+Note: Introductory emails use your email client and DO sent to supplier emails. Be sure to only use test records.
+7. Review the response sheet and evaluation options from the template.
+8. Invite stakeholders
+9. Preview the event
+10. Publish the RFP
+11. (Optional) review the confirmation text and click Confirm and Publish RFP to Suppliers
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to an in progress sourcing Project
+2. Click the Sourcing tab
+3. Click Create New RFX. Select the template created in the previous test case. The event will add to the project in Draft status.
+4. Edit the event. Modify the Title and add any relevant details that weren't in the template.
+Note: you can change defaults from a template on the event.
+5. Set the event deadlines: RSVP, question, and submission
+6. The event will inherit the suppliers from the project. Add an additional supplier to the event
+Note: Introductory emails use your email client and DO sent to supplier emails. Be sure to only use test records.
+7. Review the response sheet and evaluation options from the template.
+8. Invite stakeholders
+9. Preview the event
+10. Publish the RFP
+11. (Optional) review the confirmation text and click Confirm and Publish RFP to Suppliers"
+2. wait for search results
+3. click search result containing "1. Navigate to an in progress sourcing Project
+2. Click the Sourcing tab
+3. Click Create New RFX. Select the template created in the previous test case. The event will add to the project in Draft status.
+4. Edit the event. Modify the Title and add any relevant details that weren't in the template.
+Note: you can change defaults from a template on the event.
+5. Set the event deadlines: RSVP, question, and submission
+6. The event will inherit the suppliers from the project. Add an additional supplier to the event
+Note: Introductory emails use your email client and DO sent to supplier emails. Be sure to only use test records.
+7. Review the response sheet and evaluation options from the template.
+8. Invite stakeholders
+9. Preview the event
+10. Publish the RFP
+11. (Optional) review the confirmation text and click Confirm and Publish RFP to Suppliers"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: Note: Introductory emails use your email client and DO sent to supplier emails. Be sure to ONLY use test records.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0230_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: Introductory emails use your email client and DO sent to supplier emails. Be sure to ONLY use test records.
+
+================================================================================

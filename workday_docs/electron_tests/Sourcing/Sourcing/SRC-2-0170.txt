@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: SRC-2-0170
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Review Event Templates
+WORKDAY ROLE: Company Admin
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Events > Templates
+2. Click the template to open it
+3. Confirm the description, attachments, internal data, event options, questionnaires, worksheets, documents, and evaluation all appear as expected.
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Events > Templates
+2. Click the template to open it
+3. Confirm the description, attachments, internal data, event options, questionnaires, worksheets, documents, and evaluation all appear as expected."
+2. wait for search results
+3. click search result containing "1. Navigate to Events > Templates
+2. Click the template to open it
+3. Confirm the description, attachments, internal data, event options, questionnaires, worksheets, documents, and evaluation all appear as expected."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-2-0170_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

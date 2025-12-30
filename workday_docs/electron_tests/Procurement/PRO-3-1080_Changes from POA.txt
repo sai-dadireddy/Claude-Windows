@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1080
+FUNCTIONAL AREA: Procurement
+TEST NAME: Changes from POA
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Changes from POA
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Changes from POA"
+2. wait for search results (2 seconds)
+3. click search result containing "Verify Changes from POA"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1080_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-4-0470
+FUNCTIONAL AREA: Endowments
+TEST NAME: Record Investment Statement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Record Investment Statement
+
+ELECTRON STEPS:
+1. enter search box as "Record Investment Statement"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-4-0470_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Record Investment Statement
+
+### 1. Workday Feature Descriptions Ditamap (score: 8)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning.........................................
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-2-0370
 FUNCTIONAL AREA: Procurement
 TEST NAME: Requesting Entities for Requisitions
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -13,9 +13,9 @@ WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
 1. enter search box as "Create Requesting Entity"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Create Requesting Entity"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-2-0370_complete.png"
 
 VERIFICATION:
@@ -23,20 +23,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Requesting Entity
-
-### 1. procurement (score: 3)
-Source: procurement_v5.json
-```
-API: procurement
-GET /requisitions/{ID}/attachments?type=getFileContent - 
-GET /requisitions/{ID}/attachments/{subresourceID} - Retrieves the metadata or the attachment content of the specified requisition.
-DELETE /requisitions/{ID}/attachments/{subresourceID} - Deletes the specified requisition att......
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

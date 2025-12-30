@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: SRC-2-0050
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create Project Approval Flow
+WORKDAY ROLE: Company Admin
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 30.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Settings > Approvals > Project Approval Flows
+2. Create one or many "IF" rules based on project fields
+3. Assign one or many approval groups in the "Then Send To" column
+4. Create an order of approval, based on the added groups
+
+PREREQUISITES:
+- User logged in with Company Admin permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Settings > Approvals > Project Approval Flows
+2. Create one or many "IF" rules based on project fields
+3. Assign one or many approval groups in the "Then Send To" column
+4. Create an order of approval, based on the added groups"
+2. wait for search results
+3. click search result containing "1. Navigate to Settings > Approvals > Project Approval Flows
+2. Create one or many "IF" rules based on project fields
+3. Assign one or many approval groups in the "Then Send To" column
+4. Create an order of approval, based on the added groups"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-2-0050_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-4-0010-13
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Confirm that an employee who hasn't met a waiting period requirement after being hired cannot yet request the time off. Validate by looking at an employee in the Absence Eligibility Audit Report and/or by trying to request the time off and confirming that it isn't an available option or is blocked from being requested.
+
+WORKDAY ROLE: Absence Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Absence Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "12. Verify Time Off Eligibility"
+2. wait for search results
+3. click search result containing "12. Verify Time Off Eligibility"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0010-13_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 12. Verify Time Off Eligibility
+
+### 1. Electron Test Samples (score: 5)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains ...
+================================================================================

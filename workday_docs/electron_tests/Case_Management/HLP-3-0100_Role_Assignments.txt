@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HLP-3-0100
+FUNCTIONAL AREA: Case Management
+TEST NAME: Role Assignments
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: nan
+
+ELECTRON STEPS:
+1. enter search box as "nan"
+2. [MANUAL] No RAG guidance available - manual test required
+3. screenshot as "HLP-3-0100_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+================================================================================

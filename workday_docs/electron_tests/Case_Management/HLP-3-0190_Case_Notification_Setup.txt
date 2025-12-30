@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: HLP-3-0190
+FUNCTIONAL AREA: Case Management
+TEST NAME: Case Notification Setup
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Manage Case Notification Recipients
+
+ELECTRON STEPS:
+1. enter search box as "Manage Case Notification Recipients"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "HLP-3-0190_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Manage Case Notification Recipients
+
+### 1. Admin Guide Vndly Documentation (score: 4)
+Source: Admin-Guide-VNDLY-Documentation.pdf
+```
+Workday VNDLY
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Workday VNDLY................................................................................................10
+.........................................................................
+================================================================================

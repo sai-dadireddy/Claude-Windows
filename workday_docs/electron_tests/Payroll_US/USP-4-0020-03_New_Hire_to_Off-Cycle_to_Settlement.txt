@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-4-0020-03
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: New Hire to Off-Cycle to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review pay calculation results. Ensure that all salary is prorated as expected and that all other expected pay components (earnings, deductions and taxes) are calculating as expected.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "3. Payroll Review"
+2. wait for search results
+3. click search result containing "3. Payroll Review"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0020-03_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 3. Payroll Review
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Elect
+
+================================================================================

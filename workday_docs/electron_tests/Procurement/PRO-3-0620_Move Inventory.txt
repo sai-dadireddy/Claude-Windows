@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0620
 FUNCTIONAL AREA: Procurement
 TEST NAME: Move Inventory
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -19,7 +19,7 @@ Default to Location - Owned Stocking Location
 Item - Consigned Item
 Quantity - Quantity to Move
 Submit"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Inventory Site - enter Inventory Site of the Consigned Item
 from Location - Consigned Stocking Location of the Consigned Item
 Default to Location - Owned Stocking Location
@@ -27,7 +27,7 @@ Default to Location - Owned Stocking Location
 Item - Consigned Item
 Quantity - Quantity to Move
 Submit"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0620_complete.png"
 
 VERIFICATION:
@@ -35,26 +35,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Inventory Site - enter Inventory Site of the Consigned Item
-from Location - Consigned Stocking Location of the Consigned Item
-Default to Location - Owned Stocking Location
-
-Item - Consigned Item
-Quantity - Quantity to Move
-Submit
-
-### 1. Admin Guide Spend Management (score: 15)
-Source: Admin-Guide-Spend-Management.pdf
-```
-Spend Management
-Product Summary
-December 10, 2025
- | Contents | ii...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

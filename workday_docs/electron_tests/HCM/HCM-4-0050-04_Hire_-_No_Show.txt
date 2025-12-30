@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-4-0050-04
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire - No Show
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run the Payroll Interface (PI). Verify that the rescinded hire is no longer on the payroll interface, or if Workday payroll, no longer active. Depending on PI configuration, this may require manual review/intervention/notification.
+
+WORKDAY ROLE: Payroll Interface Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Interface Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "3. Validate Payroll Interface"
+2. wait for search results
+3. click search result containing "3. Validate Payroll Interface"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Structure: XML-based with strict WSDL contracts
+   - Auth: Integration System User (ISU) with username/password
+   - Best for: Payroll, financial transac...
+6. screenshot as "HCM-4-0050-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 3. Validate Payroll Interface
+
+### 1. Admin Guide Workday Studio (score: 4)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals.................................................................................
+================================================================================

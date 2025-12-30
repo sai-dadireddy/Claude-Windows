@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRC-4-0050
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Update Suppliers on a Request
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 24.0)
+================================================================================
+
+DESCRIPTION:
+Update Suppliers on a Request
+
+TASK / STEP:
+1. In the project, click the Suppliers tab
+2. Open Supplier Directory > Search for a supplier > Add to Project
+3. Review the suggested supplier
+4. Reject or Approve the suggestion
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. In the project, click the Suppliers tab
+2. Open Supplier Directory > Search for a supplier > Add to Project
+3. Review the suggested supplier
+4. Reject or Approve the suggestion"
+2. wait for search results
+3. click search result containing "1. In the project, click the Suppliers tab
+2. Open Supplier Directory > Search for a supplier > Add to Project
+3. Review the suggested supplier
+4. Reject or Approve the suggestion"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0050_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

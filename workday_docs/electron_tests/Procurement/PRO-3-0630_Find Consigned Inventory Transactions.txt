@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0630
 FUNCTIONAL AREA: Procurement
 TEST NAME: Find Consigned Inventory Transactions
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -21,7 +21,7 @@ There will be 2 rows displayed - the Consigned Location and the Owned Location
 
 The Consigned Location will show the Accounting
 The owned row ill not display any accounting"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Company
 Inventory Site - Inventory Site of Consigned Item
 Item - Consigned Item
@@ -31,7 +31,7 @@ There will be 2 rows displayed - the Consigned Location and the Owned Location
 
 The Consigned Location will show the Accounting
 The owned row ill not display any accounting"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0630_complete.png"
 
 VERIFICATION:
@@ -39,26 +39,6 @@ VERIFICATION:
 
 API ALTERNATIVE:
 - SOAP: Submit_Supplier_Invoice
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Company
-Inventory Site - Inventory Site of Consigned Item
-Item - Consigned Item
-Transaction Type - Move
-
-There will be 2 rows displayed - the Consigned Location and the Owned Location
-
-The Consigned Location will show the Accounting
-The owned row ill not display any accounting
-
-### 1. WSDL: Resource_Management (score: 24)
-Source: Resource_Management.wsdl
-```
-WSDL: Resource_Management
-Desc...
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

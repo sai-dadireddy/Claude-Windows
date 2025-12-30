@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: USP-4-0010-09
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Payroll Input to Gross to Settlement
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all in scope payroll settlement integrations (ACH and Check Print) completed successfully (incl. confirming delivery with the third party and receiving confirmation that the third parties were able to process the files received).
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "9. Payroll Settlement Integrations"
+2. wait for search results
+3. click search result containing "9. Payroll Settlement Integrations"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0010-09_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 2. WSDL: Financial_Management (score: 4)
+  WSDL: Financial_Management
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 9. Payroll Settlement Integrations
+
+### 1. Admin Guide Education And Government (score: 4)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management......................................
+
+================================================================================

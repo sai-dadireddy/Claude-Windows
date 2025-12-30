@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: INV-3-1140-13
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Consigned Goods On Hand
+Verify balances are in the proper consigned Stocking Locations
+
+ELECTRON STEPS:
+1. enter search box as "Find Consigned Goods On Hand
+Verify balances are in the proper consigned Stocking Locations"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1140-13_complete.png"
+
+VERIFICATION: Inventory Specialist
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Consigned Goods On Hand
+Verify balances are in the proper consigned Stocking Locations
+
+### 1. Workday Feature Descriptions Ditamap (score: 10)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. ...
+================================================================================

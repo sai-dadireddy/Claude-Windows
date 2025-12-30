@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-4-0010-12
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Payroll Input to Gross to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run any outbound integrations that pick up payroll data (GL, benefits contributions, etc.) and ensure they are working as expected.
+
+WORKDAY ROLE: Integrations Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Integrations Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "12. Other Outbound Integrations"
+2. wait for search results
+3. click search result containing "12. Other Outbound Integrations"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0010-12_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 12. Other Outbound Integrations
+
+### 1. Admin Guide Workday Studio (score: 4)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals............................................................................
+
+================================================================================

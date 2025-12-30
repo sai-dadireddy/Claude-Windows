@@ -1,0 +1,31 @@
+================================================================================
+TEST ID: HLP-3-0070
+FUNCTIONAL AREA: Case Management
+TEST NAME: Maintain Case Management Flags
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Maintain Case Management Flags
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Case Management Flags"
+2. submit form
+3. screenshot as "HLP-3-0070_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Case Management Flags
+
+### 1. WSDL: Resource_Management (score: 4)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
+Operations:
+  - Submit_Sup...
+================================================================================

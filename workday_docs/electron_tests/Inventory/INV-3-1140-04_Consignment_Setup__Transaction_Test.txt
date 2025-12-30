@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: INV-3-1140-04
+FUNCTIONAL AREA: Inventory
+TEST NAME: Consignment Setup / Transaction Test
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Maintain Putaway Rules
+Set criteria for auto putaway
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Putaway Rules
+Set criteria for auto putaway"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1140-04_complete.png"
+
+VERIFICATION: Procurement Configurator
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Putaway Rules
+Set criteria for auto putaway
+
+### 1. Kb Hcm Change Job (score: 6)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Ana...
+================================================================================

@@ -1,0 +1,67 @@
+================================================================================
+TEST ID: USP-P1-0030
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Payroll History
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Load Payroll History EIB for each quarter, run "Run History Pay Calculation" task, reconcile Payroll History tax results to Legacy 941's. If needed you can run "Run History Pay Cancel" to undo Pay History results in order to reload new Payroll History.  Run "Run History Pay Complete" was all data has been reconciled.  To add or correct a worker's Payroll History run "Run History Payment for Worker". Special Note:  Once Pay History has been Completed, you can NOT uncomplete or delete. History would have to be corrected manually by Worker or a new Payroll History load to offset any adjustments.
+
+WORKDAY ROLE: Payroll Lead
+EST. DURATION: N/A minutes
+
+PREREQUISITES:
+- User logged in with Payroll Lead permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Run History Pay Calculation
+Run History Pay Cancel
+Run History Pay Complete 
+Run History Payment for Worker"
+2. wait for search results
+3. click search result containing "Run History Pay Calculation
+Run History Pay Cancel
+Run History Pay Complete 
+Run History Payment for Worker"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-P1-0030_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run History Pay Calculation
+Run History Pay Cancel
+Run History Pay Complete 
+Run History Payment for Worker
+
+### 1. Admin Guide Payroll (score: 9)
+Source: Admin-Guide-Payroll.pdf
+```
+Payroll
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Payroll................................................................................................................ 20
+Payroll Considera
+
+================================================================================

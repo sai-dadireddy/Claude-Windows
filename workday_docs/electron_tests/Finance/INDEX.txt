@@ -1,0 +1,410 @@
+================================================================================
+ACCOUNTING & FINANCE - ELECTRON TEST INDEX
+================================================================================
+
+Total Tests: 389
+
+================================================================================
+HIGH CONFIDENCE TESTS (66 tests) - READY TO DEPLOY
+================================================================================
+  1. FACC-1-0150_Confirm Account Posting Rules.txt
+  2. FACC-2-0010_Create Accounting Journal.txt
+  3. FACC-2-0020_Approve Journal.txt
+  4. FACC-2-0030_View Business Process for Accounting Journal.txt
+  5. FACC-2-0040_Unpost Accounting Journal.txt
+  6. FACC-2-0050_Approve Journal Unpost.txt
+  7. FACC-2-0060_View Business Process for Unpost Journal.txt
+  8. FACC-2-0080_Approve Accounting Adjustment.txt
+  9. FACC-2-0090_View Accounting Adjustment.txt
+ 10. FACC-2-0100_View Business Process for Accounting Adjustment.txt
+ 11. FACC-2-0110_Schedule Allocation Run.txt
+ 12. FACC-2-0130_Run Revaluation.txt
+ 13. FACC-3-0030_Confirm Companies & Company Hierarchies.txt
+ 14. FACC-3-0120_Confirm Custom Worktags.txt
+ 15. FACC-3-0140_Confirm Account Posting Rules.txt
+ 16. FACC-3-0150_Confirm Account Control Rules.txt
+ 17. FACC-3-0190_Confirm Ledger Accounts & Ledger Account Summaries.txt
+ 18. FACC-3-0280_Confirm Worktag Usage.txt
+ 19. FACC-3-0290_Confirm Related Worktag Usage.txt
+ 20. FACC-4-0050_Approve Consolidation Journal.txt
+ 21. FACC-4-0060_View Business Process for Consolidation Journal.txt
+ 22. FACC-4-0080-01_Payroll Accounting Security.txt
+ 23. FACC-4-0080-02_Payroll Accounting Security.txt
+ 24. FACC-4-0080-03_Payroll Accounting Security.txt
+ 25. FACC-4-0090-01_Payroll Accounting Configuration.txt
+ 26. FACC-4-0090-02_Payroll Accounting Configuration.txt
+ 27. FACC-4-0090-03_Payroll Accounting Configuration.txt
+ 28. FACC-4-0090-04_Payroll Accounting Configuration.txt
+ 29. FACC-4-0090-05_Payroll Accounting Configuration.txt
+ 30. FACC-4-0090-06_Payroll Accounting Configuration.txt
+ 31. FACC-4-0090-07_Payroll Accounting Configuration.txt
+ 32. FACC-4-0100-09_Approve Consolidation Journal.txt
+ 33. FACC-4-0110-01_Create Accounting Journal.txt
+ 34. FACC-4-0110-02_Create Accounting Journal.txt
+ 35. FACC-4-0110-03_Create Accounting Journal.txt
+ 36. FACC-4-0120-01_Create Intercompany Accounting Journal.txt
+ 37. FACC-4-0120-02_Create Intercompany Accounting Journal.txt
+ 38. FACC-4-0120-03_Create Intercompany Accounting Journal.txt
+ 39. FACC-4-0140-01_Create Multi Currency Accounting Journal.txt
+ 40. FACC-4-0140-02_Create Multi Currency Accounting Journal.txt
+ 41. FACC-4-0150-02_Accounting Adjustment.txt
+ 42. FACC-4-0150-03_Accounting Adjustment.txt
+ 43. FACC-4-0160-01_Create Journal Unpost.txt
+ 44. FACC-4-0160-02_Create Journal Unpost.txt
+ 45. FACC-4-0160-03_Create Journal Unpost.txt
+ 46. FACC-4-0180-01_Recurring Journals.txt
+ 47. FACC-4-0180-04_Recurring Journals.txt
+ 48. FACC-4-0180-05_Recurring Journals.txt
+ 49. FACC-4-0220-01_Revaluation Process.txt
+ 50. FACC-4-0250-02_Review Transaction Tax Liability Report.txt
+ 51. FACC-4-0260-24_Month End Close.txt
+ 52. FACC-4-0260-27_Month End Close.txt
+ 53. FACC-4-0260-29_Month End Close.txt
+ 54. FACC-4-0260-34_Month End Close.txt
+ 55. FACC-4-0260-40_Month End Close.txt
+ 56. FACC-4-0270-05_Year End Close.txt
+ 57. FACC-4-0280-01_Test Segregation of Duties by Workday Account - Banking Settlement Exception report.txt
+ 58. FACC-4-0280-02_Test Segregation of Duties by Workday Account - Customer Accounts Exception report.txt
+ 59. FACC-4-0280-03_Test Segregation of Duties by Workday Account - Expense Report Exception report.txt
+ 60. FACC-4-0280-04_Test Segregation of Duties by Workday Account - Supplier Accounts Exception report.txt
+ 61. FACC-5-0140_Confirm Account Posting Rules.txt
+ 62. FACC-5-0150_Confirm Account Posting Rules (Payroll Accounting).txt
+ 63. FACC-5-0340_Test Segregation of Duties by Workday Account - Banking Settlement Exception report.txt
+ 64. FACC-5-0350_Test Segregation of Duties by Workday Account - Customer Accounts Exception report.txt
+ 65. FACC-5-0360_Test Segregation of Duties by Workday Account - Expense Report Exception report.txt
+ 66. FACC-5-0370_Test Segregation of Duties by Workday Account - Supplier Accounts Exception report.txt
+
+================================================================================
+MEDIUM CONFIDENCE TESTS (246 tests) - NEEDS REVIEW
+================================================================================
+  1. FACC-1-0010_Audit Supervisory Organizations.txt
+  2. FACC-1-0020_Confirm Organization Subtypes.txt
+  3. FACC-1-0030_Confirm Companies & Company Hierarchies.txt
+  4. FACC-1-0040_Confirm Intercompany Profile Setup.txt
+  5. FACC-1-0050_Audit Worker Data Conversion (Job Data).txt
+  6. FACC-1-0060_Audit Worker Data Conversion (Employment Dates).txt
+  7. FACC-1-0070_Audit Security Group Assignments.txt
+  8. FACC-1-0080_Audit Role Assignments.txt
+  9. FACC-1-0090_Confirm Custom Organizations, Hierarchies and Worker Assignments.txt
+ 10. FACC-1-0100_Confirm Revenue Categories & Revenue Categories Hierarchies.txt
+ 11. FACC-1-0110_Confirm Spend Categories & Spend Categories Hierarchies.txt
+ 12. FACC-1-0120_Confirm Custom Worktags.txt
+ 13. FACC-1-0130_Edit Tenant Setup Financials.txt
+ 14. FACC-1-0160_Confirm Account Control Rules.txt
+ 15. FACC-1-0170_Confirm Fiscal Summary Schedule.txt
+ 16. FACC-1-0200_Confirm Ledger Accounts & Ledger Account Summaries.txt
+ 17. FACC-1-0210_Confirm Translation Rules Sets.txt
+ 18. FACC-1-0240_Confirm Revaluation Rules.txt
+ 19. FACC-1-0250_Confirm Revaluation Groups.txt
+ 20. FACC-1-0260_Confirm Allocation Definitions.txt
+ 21. FACC-1-0270_Confirm Allocation Group Sets.txt
+ 22. FACC-1-0280_Confirm Statistical Definitions.txt
+ 23. FACC-1-0290_Confirm Worktag Usage.txt
+ 24. FACC-1-0300_Confirm Related Worktag Usage.txt
+ 25. FACC-1-0310_Custom Validations.txt
+ 26. FACC-1-0320_User Based Financial Accounting Roles.txt
+ 27. FACC-1-0330_Role Based Financial Accounting Roles.txt
+ 28. FACC-1-0340_Verify Tax Applicabilities.txt
+ 29. FACC-1-0350_Verify Tax Recoverabilities.txt
+ 30. FACC-1-0370_Verify Transaction Tax Categories.txt
+ 31. FACC-1-0380_Verify Transaction Tax Rates.txt
+ 32. FACC-1-0390_Verify Transaction Tax Codes.txt
+ 33. FACC-1-0400_Verify Tax Declaration Component Categories.txt
+ 34. FACC-1-0410_Verify Tax Declaration Components.txt
+ 35. FACC-1-0420_Verify Tax Declaration Definition Categories.txt
+ 36. FACC-1-0430_Verify Tax Declaration Definitions.txt
+ 37. FACC-2-0010_Create a New Position.txt
+ 38. FACC-2-0040_Contract a Contingent Worker.txt
+ 39. FACC-2-0050_Auto Generated IDs_Edit Integration IDs.txt
+ 40. FACC-2-0070_Create Accounting Adjustment.txt
+ 41. FACC-2-0070_End Contingent Worker Contract.txt
+ 42. FACC-2-0080_Transfer Employee to New Position in Different Organization.txt
+ 43. FACC-2-0090_Change Job to Promote_Change Job Details with Existing Position.txt
+ 44. FACC-2-0100_Change Job with 'Make New Manager' Reason.txt
+ 45. FACC-2-0110_Non HCM Security Access.txt
+ 46. FACC-2-0120_View Allocation Accounting.txt
+ 47. FACC-2-0140_View Revaluation Results.txt
+ 48. FACC-2-0150_Run Consolidated Trial Balance.txt
+ 49. FACC-2-0160_Review Elimination Rules.txt
+ 50. FACC-3-0010_Audit Supervisory Organizations.txt
+ 51. FACC-3-0010_Confirm Organization Types.txt
+ 52. FACC-3-0020_Confirm Organization Subtypes.txt
+ 53. FACC-3-0040_Confirm Intercompany Profile Setup.txt
+ 54. FACC-3-0050_Audit Worker Data Conversion (Job Data).txt
+ 55. FACC-3-0050_Confirm Location Types.txt
+ 56. FACC-3-0060_Audit Worker Data Conversion (Employment Dates).txt
+ 57. FACC-3-0060_Confirm Locations & Location Hierarchies.txt
+ 58. FACC-3-0070_Audit Security Group Assignments.txt
+ 59. FACC-3-0070_Confirm Cost Centers, Cost Center Hierarchies and Security.txt
+ 60. FACC-3-0080_Audit Role Assignments.txt
+ 61. FACC-3-0080_Confirm Regions, Region Hierarchies and Security.txt
+ 62. FACC-3-0090-01_Translations - Confirm Security Assignments.txt
+ 63. FACC-3-0090-02_Translations - Confirm Languages setup.txt
+ 64. FACC-3-0090_Confirm Custom Organizations, Hierarchies and Worker Assignments.txt
+ 65. FACC-3-0100_Confirm Revenue Categories & Revenue Categories Hierarchies.txt
+ 66. FACC-3-0110_Confirm Spend Categories & Spend Categories Hierarchies.txt
+ 67. FACC-3-0130_Confirm Fiscal Schedules.txt
+ 68. FACC-3-0160_Confirm Fiscal Summary Schedule.txt
+ 69. FACC-3-0170_Confirm Fiscal Years.txt
+ 70. FACC-3-0180_Confirm Currency Rate Types.txt
+ 71. FACC-3-0200_Confirm Translation Rules Sets.txt
+ 72. FACC-3-0210_Confirm Books.txt
+ 73. FACC-3-0220_Confirm Book Codes.txt
+ 74. FACC-3-0230_Confirm Revaluation Rules.txt
+ 75. FACC-3-0240_Confirm Revaluation Groups.txt
+ 76. FACC-3-0250_Confirm Allocation Definitions.txt
+ 77. FACC-3-0260_Confirm Allocation Group Sets.txt
+ 78. FACC-3-0270_Confirm Statistical Definitions.txt
+ 79. FACC-3-0300_Custom Validations.txt
+ 80. FACC-3-0310_User Based Financial Accounting Roles.txt
+ 81. FACC-3-0320_Role Based Financial Accounting Roles.txt
+ 82. FACC-3-0330_Edit Tenant Setup Financials.txt
+ 83. FACC-4-0010-01_Hire.txt
+ 84. FACC-4-0010-03_Hire.txt
+ 85. FACC-4-0010-05_Hire.txt
+ 86. FACC-4-0010-06_Hire.txt
+ 87. FACC-4-0010_Review Consolidation Data Mapping Definitions.txt
+ 88. FACC-4-0020-01_Hire - Convert Contingent Worker to Employee.txt
+ 89. FACC-4-0020-02_Hire - Convert Contingent Worker to Employee.txt
+ 90. FACC-4-0020-04_Hire - Convert Contingent Worker to Employee.txt
+ 91. FACC-4-0020_Review Consolidation Data Mapping Tables.txt
+ 92. FACC-4-0030-02_Hire - Correction.txt
+ 93. FACC-4-0030_Edit Consolidation Data Mapping Table.txt
+ 94. FACC-4-0040_Auto Generated IDs_Edit Integration IDs.txt
+ 95. FACC-4-0040_Create Consolidation Journal.txt
+ 96. FACC-4-0060_End Contingent Worker Contract.txt
+ 97. FACC-4-0070_Replace Consolidation Journal.txt
+ 98. FACC-4-0070_Transfer Employee to New Position in Different Organization.txt
+ 99. FACC-4-0080_Change Job to Promote_Change Job Details with Existing Position.txt
+100. FACC-4-0090-08_Payroll Accounting Configuration.txt
+101. FACC-4-0090-09_Payroll Accounting Configuration.txt
+102. FACC-4-0090_Change Job with 'Make New Manager' Reason.txt
+103. FACC-4-0100-01_Payroll Accounting Results.txt
+104. FACC-4-0100-03_Translations - Translate Base Values.txt
+105. FACC-4-0100-04_Payroll Accounting Results.txt
+106. FACC-4-0100-04_Translations - Launch Business Processes.txt
+107. FACC-4-0100-05_Review Consolidation Data Mapping Definitions.txt
+108. FACC-4-0100-06_Review Consolidation Data Mapping Tables.txt
+109. FACC-4-0100-07_Edit Consolidation Data Mapping Table.txt
+110. FACC-4-0100-10_View Business Process for Consolidation Journal.txt
+111. FACC-4-0110-04_Create Accounting Journal.txt
+112. FACC-4-0120-04_Create Intercompany Accounting Journal.txt
+113. FACC-4-0130_Update Currency Conversion Rate.txt
+114. FACC-4-0140-03_Create Multi Currency Accounting Journal.txt
+115. FACC-4-0150-01_Accounting Adjustment.txt
+116. FACC-4-0160-04_Create Statistic.txt
+117. FACC-4-0170_Create Statistic.txt
+118. FACC-4-0180-02_Recurring Journals.txt
+119. FACC-4-0180-03_Recurring Journals.txt
+120. FACC-4-0190-01_Allocation Process.txt
+121. FACC-4-0190-02_Allocation Process.txt
+122. FACC-4-0190-03_Allocation Process.txt
+123. FACC-4-0190-04_Allocation Process.txt
+124. FACC-4-0200-01_Noncontrolling Interest Process.txt
+125. FACC-4-0200-02_Noncontrolling Interest Process.txt
+126. FACC-4-0210-01_Equity Pickup Process.txt
+127. FACC-4-0210-02_Equity Pickup Process.txt
+128. FACC-4-0220-02_Revaluation Process.txt
+129. FACC-4-0220-03_Revaluation Process.txt
+130. FACC-4-0240-01_Intercompany Supplier Settlement.txt
+131. FACC-4-0240-02_Intercompany Supplier Settlement.txt
+132. FACC-4-0240-03_Intercompany Supplier Settlement.txt
+133. FACC-4-0240-04_Intercompany Supplier Settlement.txt
+134. FACC-4-0240-05_Intercompany Supplier Settlement.txt
+135. FACC-4-0240-06_Intercompany Supplier Settlement.txt
+136. FACC-4-0240-07_Intercompany Payment Settlement.txt
+137. FACC-4-0240-08_Intercompany Payment Settlement.txt
+138. FACC-4-0240-09_Intercompany Payment Settlement.txt
+139. FACC-4-0240-10_Intercompany Payment Settlement.txt
+140. FACC-4-0240-11_Intercompany Payment Settlement.txt
+141. FACC-4-0240-12_Intercompany Payment Settlement.txt
+142. FACC-4-0240-13_Intercompany Customer Payment Settlement.txt
+143. FACC-4-0240-14_Intercompany Customer Payment Settlement.txt
+144. FACC-4-0240-15_Intercompany Customer Payment Settlement.txt
+145. FACC-4-0240-16_Intercompany Customer Payment Settlement.txt
+146. FACC-4-0240-17_Intercompany Customer Payment Settlement.txt
+147. FACC-4-0240-18_Intercompany Customer Payment Settlement.txt
+148. FACC-4-0240-19_Direct Intercompany Settlement.txt
+149. FACC-4-0240-20_Direct Intercompany Settlement.txt
+150. FACC-4-0240-21_Direct Intercompany Settlement.txt
+151. FACC-4-0240-22_Direct Intercompany Settlement.txt
+152. FACC-4-0240-23_Direct Intercompany Settlement.txt
+153. FACC-4-0240-24_Direct Intercompany Settlement.txt
+154. FACC-4-0240-25_Intercompany Work Area.txt
+155. FACC-4-0240-26_Intercompany Elimination Out of Balance Report.txt
+156. FACC-4-0240-27_Intercompany Payables and Receivables Reconciliation.txt
+157. FACC-4-0250-01_Create tax declaration run..txt
+158. FACC-4-0260-02_Month End Close.txt
+159. FACC-4-0260-03_Month End Close.txt
+160. FACC-4-0260-04_Month End Close.txt
+161. FACC-4-0260-05_Month End Close.txt
+162. FACC-4-0260-06_Month End Close.txt
+163. FACC-4-0260-07_Month End Close.txt
+164. FACC-4-0260-08_Month End Close.txt
+165. FACC-4-0260-09_Month End Close.txt
+166. FACC-4-0260-12_Month End Close.txt
+167. FACC-4-0260-13_Month End Close.txt
+168. FACC-4-0260-14_Month End Close.txt
+169. FACC-4-0260-15_Month End Close.txt
+170. FACC-4-0260-17_Month End Close.txt
+171. FACC-4-0260-18_Month End Close.txt
+172. FACC-4-0260-19_Month End Close.txt
+173. FACC-4-0260-20_Month End Close.txt
+174. FACC-4-0260-21_Month End Close.txt
+175. FACC-4-0260-22_Month End Close.txt
+176. FACC-4-0260-23_Month End Close.txt
+177. FACC-4-0260-25_Month End Close.txt
+178. FACC-4-0260-26_Month End Close.txt
+179. FACC-4-0260-28_Month End Close.txt
+180. FACC-4-0260-30_Month End Close.txt
+181. FACC-4-0260-31_Month End Close.txt
+182. FACC-4-0260-32_Month End Close.txt
+183. FACC-4-0260-33_Month End Close.txt
+184. FACC-4-0260-35_Month End Close.txt
+185. FACC-4-0260-36_Month End Close.txt
+186. FACC-4-0260-37_Month End Close.txt
+187. FACC-4-0260-38_Month End Close.txt
+188. FACC-4-0260-39_Month End Close.txt
+189. FACC-4-0260-41_Month End Close.txt
+190. FACC-4-0260-43_Month End Close.txt
+191. FACC-4-0260-44_Month End Close.txt
+192. FACC-4-0260-45_Month End Close.txt
+193. FACC-4-0260-46_Month End Close.txt
+194. FACC-4-0260-47_Month End Close.txt
+195. FACC-4-0260-48_Month End Close.txt
+196. FACC-4-0260-49_Month End Close.txt
+197. FACC-4-0260-50_Month End Close.txt
+198. FACC-4-0260-51_Month End Close.txt
+199. FACC-4-0260-52_Month End Close.txt
+200. FACC-4-0260-53_Month End Close.txt
+201. FACC-4-0260-54_Month End Close.txt
+202. FACC-4-0260-55_Month End Close.txt
+203. FACC-4-0260-56_Month End Close.txt
+204. FACC-4-0270-01_Year End Close.txt
+205. FACC-4-0270-02_Year End Close.txt
+206. FACC-4-0270-03_Year End Close.txt
+207. FACC-4-0270-04_Year End Close.txt
+208. FACC-4-0270-06_Year End Close.txt
+209. FACC-4-0270-07_Year End Close.txt
+210. FACC-4-0270-08_Year End Close.txt
+211. FACC-4-0270-09_Year End Close.txt
+212. FACC-4-0270-10_Month End Close.txt
+213. FACC-4-0270-11_Month End Close.txt
+214. FACC-4-0270-12_Month End Close.txt
+215. FACC-4-0270-13_Month End Close.txt
+216. FACC-4-0270-14_Month End Close.txt
+217. FACC-4-0270-15_Month End Close.txt
+218. FACC-4-0270-16_Month End Close.txt
+219. FACC-4-0270-17_Month End Close.txt
+220. FACC-4-0270-18_Month End Close.txt
+221. FACC-5-0010_Audit Supervisory Organizations.txt
+222. FACC-5-0020_Confirm Organization Subtypes.txt
+223. FACC-5-0030_Confirm Companies & Company Hierarchies.txt
+224. FACC-5-0050_Audit Worker Data Conversion (Job Data).txt
+225. FACC-5-0060_Audit Worker Data Conversion (Employment Dates).txt
+226. FACC-5-0070_Audit Security Group Assignments.txt
+227. FACC-5-0080_Audit Role Assignments.txt
+228. FACC-5-0080_Confirm Custom Organizations, Hierarchies and Worker Assignments.txt
+229. FACC-5-0090_Confirm Revenue Categories & Revenue Categories Hierarchies.txt
+230. FACC-5-0100_Confirm Spend Categories & Spend Categories Hierarchies.txt
+231. FACC-5-0110_Confirm Intercompany Profile Setup.txt
+232. FACC-5-0120_Confirm Custom Worktags.txt
+233. FACC-5-0160_Confirm Account Control Rules.txt
+234. FACC-5-0170_Confirm Fiscal Summary Schedule.txt
+235. FACC-5-0200_Confirm Ledger Accounts & Ledger Account Summaries.txt
+236. FACC-5-0210_Confirm Translation Rules Sets.txt
+237. FACC-5-0240_Confirm Revaluation Rules.txt
+238. FACC-5-0250_Confirm Revaluation Groups.txt
+239. FACC-5-0260_Confirm Allocation Definitions.txt
+240. FACC-5-0270_Confirm Allocation Group Sets.txt
+241. FACC-5-0280_Confirm Statistical Definitions.txt
+242. FACC-5-0290_Confirm Worktag Usage.txt
+243. FACC-5-0300_Confirm Related Worktag Usage.txt
+244. FACC-5-0310_Custom Validations.txt
+245. FACC-5-0320_User Based Financial Accounting Roles.txt
+246. FACC-5-0330_Role Based Financial Accounting Roles.txt
+
+================================================================================
+LOW CONFIDENCE TESTS (53 tests) - MANUAL ENHANCEMENT REQUIRED
+================================================================================
+  1. FACC-1-0010_Confirm Organization Types.txt
+  2. FACC-1-0020_Audit Supervisory Hierarchy Structure.txt
+  3. FACC-1-0030_Audit Job Profile Setup.txt
+  4. FACC-1-0040_Audit Worker Data Conversion (Names).txt
+  5. FACC-1-0050_Confirm Location Types.txt
+  6. FACC-1-0060_Confirm Locations & Location Hierarchies.txt
+  7. FACC-1-0070_Confirm Cost Centers, Cost Center Hierarchies and Security.txt
+  8. FACC-1-0080_Confirm Regions, Region Hierarchies and Security.txt
+  9. FACC-1-0140_Confirm Fiscal Schedules.txt
+ 10. FACC-1-0180_Confirm Fiscal Years.txt
+ 11. FACC-1-0190_Confirm Currency Rate Types.txt
+ 12. FACC-1-0220_Confirm Books.txt
+ 13. FACC-1-0230_Confirm Book Codes.txt
+ 14. FACC-1-0360_Verify Tax Authorities.txt
+ 15. FACC-2-0020_Hire Using Position Management.txt
+ 16. FACC-2-0030_Rehire a Terminated Worker.txt
+ 17. FACC-2-0060_Terminate an Employee Current Date.txt
+ 18. FACC-3-0020_Audit Supervisory Hierarchy Structure.txt
+ 19. FACC-3-0030_Audit Job Profile Setup.txt
+ 20. FACC-3-0040_Audit Worker Data Conversion (Names).txt
+ 21. FACC-4-0010-02_Hire Using Position Management.txt
+ 22. FACC-4-0010-04_Hire.txt
+ 23. FACC-4-0020-03_Hire - Convert Contingent Worker to Employee.txt
+ 24. FACC-4-0030-01_Hire - Correction.txt
+ 25. FACC-4-0050_Termination.txt
+ 26. FACC-4-0100-01_Translations - Request Translation.txt
+ 27. FACC-4-0100-02_Payroll Accounting Results.txt
+ 28. FACC-4-0100-02_Translations - Translate Single Instance.txt
+ 29. FACC-4-0100-03_Payroll Accounting Results.txt
+ 30. FACC-4-0100-08_Create Consolidation Journal.txt
+ 31. FACC-4-0100-11_Replace Consolidation Journal.txt
+ 32. FACC-4-0230-01_Accounting Journal EIB.txt
+ 33. FACC-4-0230-02_Accounting Journal EIB.txt
+ 34. FACC-4-0230-03_Statistics EIB.txt
+ 35. FACC-4-0230-04_Statistics EIB.txt
+ 36. FACC-4-0260-01_Month End Close.txt
+ 37. FACC-4-0260-10_Month End Close.txt
+ 38. FACC-4-0260-11_Month End Close.txt
+ 39. FACC-4-0260-16_Month End Close.txt
+ 40. FACC-4-0260-42_Month End Close.txt
+ 41. FACC-5-0010_Confirm Organization Types.txt
+ 42. FACC-5-0020_Audit Supervisory Hierarchy Structure.txt
+ 43. FACC-5-0030_Audit Job Profile.txt
+ 44. FACC-5-0040_Audit Worker Data Conversion (Names).txt
+ 45. FACC-5-0040_Confirm Location Types.txt
+ 46. FACC-5-0050_Confirm Locations & Location Hierarchies.txt
+ 47. FACC-5-0060_Confirm Cost Centers, Cost Center Hierarchies and Security.txt
+ 48. FACC-5-0070_Confirm Regions, Region Hierarchies and Security.txt
+ 49. FACC-5-0130_Confirm Fiscal Schedules.txt
+ 50. FACC-5-0180_Confirm Fiscal Years.txt
+ 51. FACC-5-0190_Confirm Currency Rate Types.txt
+ 52. FACC-5-0220_Confirm Books.txt
+ 53. FACC-5-0230_Confirm Book Codes.txt
+
+================================================================================
+MANUAL REQUIRED (24 tests) - CANNOT AUTOMATE
+================================================================================
+  1. FACC-3-0090_Translations.txt
+  2. FACC-4-0010_Hire.txt
+  3. FACC-4-0020_Hire - Convert Contingent Worker to Employee.txt
+  4. FACC-4-0030_Hire - Correction.txt
+  5. FACC-4-0080_Payroll Accounting Security.txt
+  6. FACC-4-0090_Payroll Accounting Configuration.txt
+  7. FACC-4-0100_Payroll Accounting Results.txt
+  8. FACC-4-0100_Translations.txt
+  9. FACC-4-0110_Create Accounting Journal.txt
+ 10. FACC-4-0120_Create Intercompany Accounting Journal.txt
+ 11. FACC-4-0140_Create Multi Currency Accounting Journal.txt
+ 12. FACC-4-0150_Accounting Adjustment.txt
+ 13. FACC-4-0160_Create Journal Unpost.txt
+ 14. FACC-4-0180_Recurring Journals.txt
+ 15. FACC-4-0190_Allocation Process.txt
+ 16. FACC-4-0200_Noncontrolling Interest Process.txt
+ 17. FACC-4-0210_Equity Pickup Process.txt
+ 18. FACC-4-0220_Revaluation Process.txt
+ 19. FACC-4-0230_Accounting Journal EIB.txt
+ 20. FACC-4-0240_Intercompany Supplier Settlement.txt
+ 21. FACC-4-0250_Create tax declaration run..txt
+ 22. FACC-4-0260_Month End Close.txt
+ 23. FACC-4-0270_Year End Close.txt
+ 24. FACC-4-0280_Test Segregation of Duties custom reports.txt

@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: CP-P2-0290
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Tax Filing
+CONFIDENCE: [LOW] Score: 1.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run tax filing integration and validate results
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Launch/Schedule Integration"
+2. wait for search results
+3. click search result containing "Launch/Schedule Integration"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-P2-0290_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Launch/Schedule Integration
+
+### 1. Electron Test Samples (score: 1)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sa...
+================================================================================

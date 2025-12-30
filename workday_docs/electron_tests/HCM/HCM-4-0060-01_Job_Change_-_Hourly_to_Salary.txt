@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0060-01
+FUNCTIONAL AREA: HCM
+TEST NAME: Job Change - Hourly to Salary
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Identify a worker who is currently paid hourly. Process a job change moving them to a salaried position.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "1. Change Job"
+2. wait for search results
+3. click search result containing "1. Change Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0060-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Change Job
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management.....
+================================================================================

@@ -2,7 +2,7 @@
 TEST ID: PRO-3-0460
 FUNCTIONAL AREA: Procurement
 TEST NAME: Inventory Adjustment Reason
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 7.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -14,35 +14,16 @@ WORKDAY ROLE: nan
 
 ELECTRON STEPS:
 1. enter search box as "View / Maintain Inventory Adjustment Reason"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "View / Maintain Inventory Adjustment Reason"
-4. wait for page to load
+4. wait for page to load (3 seconds)
 5. screenshot as "PRO-3-0460_complete.png"
 
 VERIFICATION:
 - [ ] Inventory Configurator
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
-
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View / Maintain Inventory Adjustment Reason
-
-### 1. Admin Guide Glossary (score: 6)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
-...
+- SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
 ================================================================================

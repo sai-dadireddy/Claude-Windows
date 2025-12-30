@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-4-0010-09
+FUNCTIONAL AREA: HCM
+TEST NAME: Hire
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login or proxy as new hire. If hire date has passed, new hire will have Employee As Self access with visibility to tasks/reports as an active employee. If hire date is in the future, new hire will have Pre-Employee As Self access, limited to entering only personal information and onboarding tasks. Confirm access as expected.
+
+WORKDAY ROLE: Employee As Self / Pre-Employee As Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self / Pre-Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "8. Verify Workday Access"
+2. wait for search results
+3. click search result containing "8. Verify Workday Access"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0010-09_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 8. Verify Workday Access
+
+### 1. Electron Test Samples (score: 4)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sampl...
+================================================================================

@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-4-0030-05
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Termination to Off-Cycle to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Settle the just completed payroll. Make sure to settle all applicable companies (use the Company Hierarchy, if applicable) and use the 'All Available Pay Group Exceptions' filter. Ensure that the just created and completed On Demand - Replacement is getting picked up by the settlement.
+
+WORKDAY ROLE: Payroll Settlement Specialist
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Settlement Specialist permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "5. Settlement"
+2. wait for search results
+3. click search result containing "5. Settlement"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0030-05_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 5. Settlement
+
+### 1. Kb Finance Journal Entry (score: 2)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financial Manage
+
+================================================================================
