@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0110
 FUNCTIONAL AREA: Procurement
 TEST NAME: Supplier Links/Punchout
-CONFIDENCE: [MEDIUM] Score: 6.5/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -13,36 +13,22 @@ WORKDAY ROLE: Procurement Configurator
 
 ELECTRON STEPS:
 1. enter search box as "Maintain Supplier Links"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "Maintain Supplier Links"
-4. wait for page to load
-5. screenshot as "PRO-1-0110_complete.png"
+4. wait for page to load (3 seconds)
+5. verify supplier list displayed
+6. click link "Actions"
+7. screenshot as "PRO-1-0110_list.png"
+8. click button "View All"
+9. wait for data to load (2 seconds)
+10. screenshot as "PRO-1-0110_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Supplier data displayed
+- [ ] No error messages shown
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
+- Query RAG for details
 
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Supplier Links
-
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Su...
-
-RAG QUERY STATUS: SUCCESS
+RAG QUERY STATUS: SUCCESS (Score: 8)
 ================================================================================

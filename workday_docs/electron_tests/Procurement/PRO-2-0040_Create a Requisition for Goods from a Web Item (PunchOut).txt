@@ -2,8 +2,8 @@
 TEST ID: PRO-2-0040
 FUNCTIONAL AREA: Procurement
 TEST NAME: Create a Requisition for Goods from a Web Item (PunchOut)
-CONFIDENCE: [HIGH] Score: 8.5/10
-SOURCE: [RAG]
+CONFIDENCE: [LOW] Score: 4.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -12,35 +12,23 @@ Create a requisition for goods from a web item (PunchOut).
 WORKDAY ROLE: Employee As Self
 
 ELECTRON STEPS:
-1. enter search box as "Create Requisition. Click on "Connect to Supplier Website""
-2. wait for search results
-3. click search result containing "Create Requisition. Click on "Connect to Supplier Website""
-4. wait for page to load
-5. screenshot as "PRO-2-0040_complete.png"
+1. enter search box as "Create Requisition. Click on"
+2. wait for search results (2 seconds)
+3. click search result containing "Create Requisition. Click on"
+4. wait for page to load (3 seconds)
+5. click button "OK"
+6. wait for form to load (3 seconds)
+7. verify page contains "Requisition"
+8. screenshot as "PRO-2-0040_form.png"
+9. click button "Cancel"
+10. screenshot as "PRO-2-0040_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Requisition form accessible
+- [ ] All required fields visible
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
+- Query RAG for details
 
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Requisition. Click on "Connect to Supplier Website"
-
-### 1. Admin Guide Glossary (score: 6)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Conf...
-
-RAG QUERY STATUS: SUCCESS
+RAG QUERY STATUS: SUCCESS (Score: 4)
 ================================================================================

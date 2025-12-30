@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0160
 FUNCTIONAL AREA: Procurement
 TEST NAME: Confirm User Based Procurement Assignments
-CONFIDENCE: [MEDIUM] Score: 6.5/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
@@ -13,36 +13,19 @@ WORKDAY ROLE: Security Administrator
 
 ELECTRON STEPS:
 1. enter search box as "User-Based Security Group Assignments"
-2. wait for search results
+2. wait for search results (2 seconds)
 3. click search result containing "User-Based Security Group Assignments"
-4. wait for page to load
-5. screenshot as "PRO-1-0160_complete.png"
+4. wait for page to load (3 seconds)
+5. wait for page content to load (3 seconds)
+6. verify page loaded successfully
+7. screenshot as "PRO-1-0160_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Task executed successfully
+- [ ] No errors displayed
 
 API ALTERNATIVE:
-- SOAP: Not found in RAG
+- Query RAG for details
 
-RAG INSIGHTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: User-Based Security Group Assignments
-
-### 1. Test Scenarios Index (score: 9)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizatio...
-
-RAG QUERY STATUS: SUCCESS
+RAG QUERY STATUS: SUCCESS (Score: 9)
 ================================================================================
