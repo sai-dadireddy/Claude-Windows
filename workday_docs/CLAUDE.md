@@ -274,9 +274,51 @@ python generate_electron_tests.py --scenario "HCM-1-0010" --output tests/
 
 | RAG Score | Confidence | Action | Output Flag |
 |-----------|------------|--------|-------------|
-| >= 8.0 | HIGH | Generate directly | ✅ READY |
-| 5.0-7.9 | MEDIUM | Check KB articles | ⚠️ REVIEW |
-| < 5.0 | LOW | Scrape Workday KB or manual | ❌ NEEDS KB |
+| >= 8.0 | HIGH | Generate directly | `[CONFIDENCE: HIGH]` ✅ |
+| 5.0-7.9 | MEDIUM | Check KB articles | `[CONFIDENCE: MEDIUM]` ⚠️ |
+| < 5.0 | LOW | Scrape Workday KB or manual | `[CONFIDENCE: LOW]` ❌ |
+
+**ALWAYS display confidence score in output header.**
+
+---
+
+## CRITICAL RULES
+
+### 1. NO HALLUCINATIONS
+- NEVER invent Workday task names or UI elements
+- ONLY use task names from Excel "Task / Step" column
+- ONLY use field names found in RAG/KB results
+- If unsure, mark as `[NEEDS VERIFICATION]`
+- Say "I don't know" rather than guess
+
+### 2. ANTI-BOT PATTERNS (KB Scraping)
+```python
+# Human-like behavior for Workday KB scraping:
+wait(3)              # 2-5 second delays
+scroll_down()        # Scroll before clicking
+wait(2)              # Pause between actions
+# Max 10 pages per session
+# Use YOUR logged-in session
+```
+
+### 3. DATA VALIDATION
+- Scenario ID prefix must match area (HCM-, USP-, PRO-)
+- Flag Est. Effort > 120 mins as unusual
+- Validate Functional Area (48 known areas)
+
+### 4. OUTPUT QUALITY
+- Include confidence score in EVERY output
+- Cite source: `[Source: RAG]`, `[Source: KB]`, `[INFERRED]`
+- Flag incomplete: `[INCOMPLETE: missing Task/Step]`
+
+### 5. VERIFICATION CHECKLIST
+```
+Before claiming "done":
+- [ ] Confidence score displayed
+- [ ] No invented task names
+- [ ] Screenshots use Scenario ID
+- [ ] Verification matches Excel
+```
 
 ---
 
