@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: INV-3-0290
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Inventory Pick List
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory
+Select Quick Pick or Enter Pick Qty
+If AutoShip
+Expand Details and Processes
+Click on the SHIP Business Document
+Click on the Inventory Shipment number
+
+ELECTRON STEPS:
+1. enter search box as "Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory
+Select Quick Pick or Enter Pick Qty
+If AutoShip
+Expand Details and Processes
+Click on the SHIP Business Document
+Click on the Inventory Shipment number"
+2. enter field "Pick Qty
+If AutoShip
+Expand Details and Processes
+Click on the SHIP Business Document
+Click on the Inventory Shipment number
+
+### 1" with appropriate value
+3. click appropriate action button
+4. screenshot as "INV-3-0290_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory
+Select Quick Pick or Enter Pick Qty
+If AutoShip
+Expand Details and Processes
+Click on the SHIP Business Document
+Click on the Inventory Shipment number
+
+### 1. Admin Guide Glossary (score: 23)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glo...
+================================================================================

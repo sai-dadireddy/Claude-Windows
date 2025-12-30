@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: CP-4-0020-06
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: New Hire to Off-Cycle to Settlement
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all in scope payroll settlement integrations (ACH and Check Print, if applicable) completed successfully (incl. confirming delivery with the third party and receiving confirmation that the third parties were able to process the files received).
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "6. Payroll Settlement Integrations"
+2. wait for search results
+3. click search result containing "6. Payroll Settlement Integrations"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0020-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 6. Payroll Settlement Integrations
+
+### 1. Admin Guide Education And Government (score: 4)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.........................................
+================================================================================

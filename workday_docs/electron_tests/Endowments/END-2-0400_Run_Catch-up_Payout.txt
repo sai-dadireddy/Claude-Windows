@@ -1,0 +1,31 @@
+================================================================================
+TEST ID: END-2-0400
+FUNCTIONAL AREA: Endowments
+TEST NAME: Run Catch-up Payout
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Run Catch-up Payout
+
+ELECTRON STEPS:
+1. enter search box as "Run Catch-up Payout"
+2. submit form
+3. screenshot as "END-2-0400_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run Catch-up Payout
+
+### 1. WSDL: Cash_Management (score: 8)
+Source: Cash_Management.wsdl
+```
+WSDL: Cash_Management
+Description: The Cash Management  Web Service contains operations that expose Workday Financials Cash Management data. It includes data relative to Banking.
+Operations:
+  - Submit_Ad_Hoc_Bank_Transaction: This service operation will add or update Ad hoc Bank Transactions and...
+================================================================================

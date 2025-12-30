@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: HCM-2-0270
+FUNCTIONAL AREA: HCM
+TEST NAME: Add Domestic Assignment for Employee
+CONFIDENCE: [HIGH] Score: 10.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Based on your tenant configuration for Domestic and International Assignments, using open positions created in the same country location as the "home" position, initiate the Domestic Assignments process for an existing employee who currently holds only one "home" position. Select the supervisory organization for the Domestic Assignment and the employee. After selecting the supervisory organization, employees currently in that organization will display in the employee drop down, but it is possible to select an employee from another organization. Specify the effective date and reason, validating reason setup and visibility, and complete additional required details. 
+After successfully completing the process, go to the worker profile and select Job and then the Jobs tab, and verify the employee is in both the home position (position prior to the start date of the assignment) and host position (position of the employee during the assignment). If the additional position reports to a different Manager and/or HR Partner, verify that position access is restricted as expected.
+
+WORKDAY ROLE: Manager/ HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Manager/ HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Business Process configured for Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)"
+2. wait for search results
+3. click search result containing "Business Process configured for Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0270_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Business Process configured for Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)
+
+### 1. Admin Guide Glossary (score: 10)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 ...
+================================================================================

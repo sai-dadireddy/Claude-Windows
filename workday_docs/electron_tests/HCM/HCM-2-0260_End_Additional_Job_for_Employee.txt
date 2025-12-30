@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0260
+FUNCTIONAL AREA: HCM
+TEST NAME: End Additional Job for Employee
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate an end job process for an employee with multiple positions. Select the employee and the job. Complete the end job details, validating reason setup and visibility. If you didn’t close the position, Workday sets its status to open. If you use job requisitions, the position is available as soon as you have an open requisition. If you don’t use job requisitions, the position is available the next day. Take note of approval routings and notifications as applicable, and confirm process. After successfully completing the process, verify the employee is no longer in the additional position. If the additional position reported to a different Manager and/or HR Partner, verify that position access to the remaining position(s) is restricted as expected.
+
+WORKDAY ROLE: Manager/ HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Manager/ HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "End Job"
+2. wait for search results
+3. click search result containing "End Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0260_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: End Job
+
+### 1. Admin Guide Human Capital Management (score: 7)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information......................................................................
+================================================================================

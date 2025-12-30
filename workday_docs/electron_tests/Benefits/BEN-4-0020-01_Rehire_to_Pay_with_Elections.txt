@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: BEN-4-0020-01
+FUNCTIONAL AREA: Benefits
+TEST NAME: Rehire to Pay with Elections
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 1. Rehire an Employee
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Rehire an Employee
+
+### 1. Kb Hcm Terminate Employee (score: 4)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Hu
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "1. Rehire an Employee"
+2. wait for search results
+3. click search result containing "1. Rehire an Employee"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0020-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

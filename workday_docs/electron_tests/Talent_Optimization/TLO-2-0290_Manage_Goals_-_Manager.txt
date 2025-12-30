@@ -1,0 +1,170 @@
+# Electron Test: TLO-2-0290 - Manage Goals - Manager
+
+## Test Metadata
+- **Scenario ID**: TLO-2-0290
+- **Module**: Talent Optimization
+- **Test Type**: 1 | Unit Test Scenarios
+- **Workday Role**: Talent Administrator
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Proxy as a Manager and add Individual Goal from Direct Report's Worker Profile (Performance Tab). Ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process.
+
+## Test Steps
+
+### Task/Step: Add Individual Goal
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Manage Goals - Manager Add Individual Goal
+
+### 1. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Admin Guide Glossary (score: 7)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 3. User Guide Sourcing Managers (score: 7)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers......................................................... 5
+Strategi...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Talent Administrator
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-2-0290: Manage Goals - Manager', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Talent Administrator
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Add Individual Goal', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Add Individual Goal
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Manage Goals - Manager Add Individual Goal
+
+### 1. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Admin Guide Glossary (score: 7)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 3. User Guide Sourcing Managers (score: 7)
+Source: User-Gui
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 5 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5 Develop to Perform
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:12:01.895044
+Confidence: 80.00%

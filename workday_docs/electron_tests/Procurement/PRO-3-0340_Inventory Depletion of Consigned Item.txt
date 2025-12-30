@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: PRO-3-0340
+FUNCTIONAL AREA: Procurement
+TEST NAME: Inventory Depletion of Consigned Item
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Inventory Depletion of Consigned Item:
+Can be accomplished through an interface, creating a requisition to Stock Request. For this test, a Quick Issue will be used.
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Quick Issue
+Add Consigned Items to Quick Issue
+Submit"
+2. wait for search results
+3. click search result containing "Quick Issue
+Add Consigned Items to Quick Issue
+Submit"
+4. wait for page to load
+5. screenshot as "PRO-3-0340_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Quick Issue
+Add Consigned Items to Quick Issue
+Submit
+
+### 1. Admin Guide Spend Management (score: 7)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing..........................................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

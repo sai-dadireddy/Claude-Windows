@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: HCM-2-0550
+FUNCTIONAL AREA: HCM
+TEST NAME: Cancel / Rescind Vaccination
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login or proxy as HR Administrator and Cancel the initiated Add Vaccination Event by navigating to the Worker History tab via the Worker Profile. Click the Related Actions on the business process event to Cancel. Repeat steps to above to Rescind the business process.
+
+WORKDAY ROLE: HR Administrator / Employee as Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator / Employee as Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Cancel / Rescind Vaccination"
+2. wait for search results
+3. click search result containing "Cancel / Rescind Vaccination"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0550_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Integration_Systems
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Cancel / Rescind Vaccination
+
+### 1. businessProcess (score: 3)
+Source: businessProcess_v1.json
+```
+API: businessProcess
+POST /eventSteps/{ID}/toDo - Post an action for a To Do step in a business process.
+GET /eventSteps - Retrieves business process event steps.
+GET /events - Retrieves business process events.
+GET /events/{ID}/completedSteps - Retrieves completed steps for a business proc...
+================================================================================

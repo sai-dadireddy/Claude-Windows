@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-4-0060
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Time Integration to Gross
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: No description provided
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Administrator
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

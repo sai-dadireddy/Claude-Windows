@@ -1,0 +1,169 @@
+# Electron Test: TLO-2-0390 - Check-ins
+
+## Test Metadata
+- **Scenario ID**: TLO-2-0390
+- **Module**: Talent Optimization
+- **Test Type**: 1 | Unit Test Scenarios
+- **Workday Role**: Configured security groups
+- **Confidence Score**: 0.80
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+- Workday role specified
+
+
+## Scenario Description
+Confirm accurate security groups have access to view and/or create check-ins.
+
+## Test Steps
+
+### Task/Step: My Check-Ins > Create Check-In
+View Check-Ins Report (by worker)
+Check-Ins Report (by organization)
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Check-ins My Check-Ins > Create Check-In
+View Check-Ins Report (by worker)
+Check-Ins Report (by organization)
+
+### 1. Kb Procurement Requisition (score: 8)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Management WSDL
+C...
+```
+
+### 2. Kb Hcm Change Job (score: 7)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 3. Kb Hcm Terminate Employee (score: 6)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: Configured security groups
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-2-0390: Check-ins', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as Configured security groups
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('My Check-Ins > Create Check-In
+View Check-Ins Report (by worker)
+Check-Ins Report (by organization)', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: My Check-Ins > Create Check-In
+View Check-Ins Report (by worker)
+Check-Ins Report (by organization)
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Check-ins My Check-Ins > Create Check-In
+View Check-Ins Report (by worker)
+Check-Ins Report (by organization)
+
+### 1. Kb Procurement Requisition (score: 8)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Management WSDL
+C...
+```
+
+### 2. Kb Hcm Change Job (score: 7)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - H
+```
+
+
+### Data Requirements
+- Scenario Type: Base Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 10 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.1 Manage HCM Organization
+1.5 Develop to Perform
+- Business Process Level 3: 1.1.3 Establish human resource information systems HRIS
+1.5.1 Workforce Planning - Framework
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:13:50.758203
+Confidence: 80.00%

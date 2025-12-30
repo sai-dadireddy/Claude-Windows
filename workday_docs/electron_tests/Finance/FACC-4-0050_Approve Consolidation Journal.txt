@@ -11,10 +11,29 @@ ELECTRON STEPS:
 3. click search result
 4. wait for inbox page
 5. click transaction to review
-6. click "Approve" button
+6. click "Approve" or "Submit" button
 7. screenshot as "FACC-4-0050_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Approve Consolidation Journal (via Inbox)
+
+### 1. Admin Guide  Financial Management (score: 3)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components............................
+...
 ================================================================================

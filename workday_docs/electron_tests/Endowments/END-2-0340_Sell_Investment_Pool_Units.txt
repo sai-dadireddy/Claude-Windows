@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: END-2-0340
+FUNCTIONAL AREA: Endowments
+TEST NAME: Sell Investment Pool Units.
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Sell Investment Pool Units
+
+ELECTRON STEPS:
+1. enter search box as "Sell Investment Pool Units"
+2. submit form
+3. screenshot as "END-2-0340_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Sell Investment Pool Units
+
+### 1. Admin Guide Education And Government (score: 9)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.................................................
+================================================================================

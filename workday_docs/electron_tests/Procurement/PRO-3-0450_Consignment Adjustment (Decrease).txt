@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: PRO-3-0450
+FUNCTIONAL AREA: Procurement
+TEST NAME: Consignment Adjustment (Decrease)
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Consignment Adjustment (Decrease)
+Exclude from Consigned Payment = N
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Decrease adjustment when the Adjustment reason is NOT Exclude from Consigned Payment"
+2. wait for search results
+3. click search result containing "Decrease adjustment when the Adjustment reason is NOT Exclude from Consigned Payment"
+4. wait for page to load
+5. screenshot as "PRO-3-0450_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Decrease adjustment when the Adjustment reason is NOT Exclude from Consigned Payment
+
+### 1. Admin Guide Spend Management (score: 10)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing..........
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,19 @@
+================================================================================
+TEST ID: USP-1-0200
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Earnings - Activity Pay (Mid Academic Period Implementations)
+DESCRIPTION: –     Has the period scheduled been defined  back to the beginning of the Period Activity Assignment dates?
+–      Have you Validated your conversion data that the amount paid in the legacy system is equal to the amount included on the payment schedule before the Override first payroll period?
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

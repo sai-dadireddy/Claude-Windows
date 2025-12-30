@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-2-0290
+FUNCTIONAL AREA: HCM
+TEST NAME: End Domestic or International Assignment for Employee
+CONFIDENCE: [HIGH] Score: 11.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Based on your tenant configuration for Domestic and International Assignments, initiate an end assignment process for an employee with a domestic or international assignment. Select the employee and the job. Complete the details, validating reason setup and visibility. If you didn’t close the position, Workday sets its status to open. Take note of approval routings and notifications as applicable, and confirm process. After successfully completing the process, verify the employee is no longer in the additional assignment. If the additional position reported to a different Manager and/or HR Partner, verify that position access to the remaining position(s) is restricted as expected.
+
+WORKDAY ROLE: Manager/ HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Manager/ HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Business Process configured to end Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)"
+2. wait for search results
+3. click search result containing "Business Process configured to end Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0290_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Business Process configured to end Domestic and International Assignments 
+(confirm with Functional Consultant if unclear)
+
+### 1. Admin Guide Glossary (score: 11)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©20...
+================================================================================

@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: HCM-2-0590
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Define Eligible Period Activities for Acacdmeic Faculty worker
+CONFIDENCE: [HIGH] Score: 11.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+From the Academic Faculty worker's profile, define at least 1 Eligible Period Activity.
+
+WORKDAY ROLE: Compensation Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Assign Eligible Period Activities for Employee"
+2. wait for search results
+3. click search result containing "Assign Eligible Period Activities for Employee"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0590_complete.png"
+
+VERIFICATION:
+- [ ] Eligible Period Activity is define for the worker. 
+Activity goes through the required steps/approvals as appropriate.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Assign Eligible Period Activities for Employee
+
+### 1. WSDL: Compensation (score: 11)
+Source: Compensation.wsdl
+```
+WSDL: Compensation
+Description: The Compensation Web Service contains operations that expose Workday Human Capital Management Business Services compensation-related data.
+Operations:
+  - Put_Previous_System_Compensation_History: This operation will load previous system compe...
+================================================================================

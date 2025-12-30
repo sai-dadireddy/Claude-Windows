@@ -2,7 +2,7 @@
 TEST ID: FACC-3-0180
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Currency Rate Types
-CONFIDENCE: [LOW] Score: 3.0/10
+CONFIDENCE: [MEDIUM] Score: 6.0/10
 ================================================================================
 
 ELECTRON STEPS:
@@ -11,10 +11,32 @@ ELECTRON STEPS:
 3. click search result
 4. wait for page load
 5. complete required actions
-6. click "Done" or "Submit"
+6. click "Done" or "Submit" button
 7. screenshot as "FACC-3-0180_complete.png"
 
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Currency Rate Types
+
+### 1. Test Scenarios Index (score: 8)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Superv
+...
 ================================================================================

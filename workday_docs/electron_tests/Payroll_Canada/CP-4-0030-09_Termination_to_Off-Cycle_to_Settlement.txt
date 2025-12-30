@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: CP-4-0030-09
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Termination to Off-Cycle to Settlement
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review ROE results and correct any errors.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "9. Review ROE Results"
+2. wait for search results
+3. click search result containing "9. Review ROE Results"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0030-09_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 9. Review ROE Results
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample E...
+================================================================================

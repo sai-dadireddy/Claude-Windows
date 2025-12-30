@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-3-0540
+FUNCTIONAL AREA: Procurement
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Issue Purchase Order
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Issue Consignment Bill and Replace Purchase Order"
+2. wait for search results
+3. click search result containing "Issue Consignment Bill and Replace Purchase Order"
+4. wait for page to load
+5. screenshot as "PRO-3-0540_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Consignment Bill and Replace Purchase Order
+
+### 1. Kb Procurement Purchase Order (score: 6)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Communit...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

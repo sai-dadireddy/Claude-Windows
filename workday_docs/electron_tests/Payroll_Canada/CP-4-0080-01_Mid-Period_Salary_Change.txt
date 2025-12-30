@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: CP-4-0080-01
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Mid-Period Salary Change
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate the Request Compensation Change process for an employee, with an effective date in the middle of the current pay period.
+
+WORKDAY ROLE: Compensation Partner
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Compensation Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "1. Compensation Change"
+2. wait for search results
+3. click search result containing "1. Compensation Change"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0080-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Compensation Change
+
+### 1. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human...
+================================================================================

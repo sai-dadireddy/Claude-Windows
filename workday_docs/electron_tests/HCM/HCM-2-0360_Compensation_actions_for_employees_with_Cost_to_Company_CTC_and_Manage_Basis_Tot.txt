@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: HCM-2-0360
+FUNCTIONAL AREA: HCM
+TEST NAME: Compensation actions for employees with Cost to Company (CTC) and Manage Basis Total (MBT)
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Complete Hire, Change Job, and Request Compensation Change test scenarios for employees with Cost to Company (CTC) and Manage Basis Total (MBT) requirements. Take note of relevant differences in eligibility and compensation calculations.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Hire, Change Job, and Request Compensation Change"
+2. wait for search results
+3. click search result containing "Hire, Change Job, and Request Compensation Change"
+4. wait for page to load
+5. RAG-extracted steps:
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-2-0360_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Hire, Change Job, and Request Compensation Change
+
+### 1. WSDL: Human_Resources (score: 5)
+Source: Human_Resources.wsdl
+```
+WSDL: Human_Resources
+Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integratio...
+================================================================================

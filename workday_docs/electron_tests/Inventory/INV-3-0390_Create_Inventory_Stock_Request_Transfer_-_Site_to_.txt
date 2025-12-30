@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: INV-3-0390
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Inventory Stock Request Transfer - Site to Site
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Create Inventory Stock Request
+Enter Origin Inventory Site / Requester 
+Stock Request Type = Transfer
+Transfer to Site - Destination Inventory Site
+Order Type = Transfer Request
+
+ELECTRON STEPS:
+1. enter search box as "Create Inventory Stock Request
+Enter Origin Inventory Site / Requester 
+Stock Request Type = Transfer
+Transfer to Site - Destination Inventory Site
+Order Type = Transfer Request"
+2. enter field "Origin Inventory Site / Requester 
+Stock Request Type = Transfer
+Transfer to Site - Destination Inventory Site
+Order Type = Transfer Request
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-3-0390_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Inventory Stock Request
+Enter Origin Inventory Site / Requester 
+Stock Request Type = Transfer
+Transfer to Site - Destination Inventory Site
+Order Type = Transfer Request
+
+### 1. WSDL: Resource_Management (score: 14)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Res...
+================================================================================

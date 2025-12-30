@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-2-0050
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Review Flat Sum Bonus Configuration
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+If the customer pays bonuses that are subject to Flat Sum rules, enter a one time payment/payroll input (with coverage dates) and time/payroll input so an employee receives overtime, for a worker in a state configured for Flat Sum Rules. Review the pay calculation result and ensure that FSB calculation is being applied by confirming that the FSB tab is displayed on the pay result. Repeat the same test for a worker in a different state, to ensure that the FSB calculation is not applied.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Worker"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0050_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Worker
+
+### 1. Kb Hcm Terminate Employee (score: 5)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wor
+
+================================================================================

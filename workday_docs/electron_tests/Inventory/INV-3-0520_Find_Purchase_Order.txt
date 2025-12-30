@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-0520
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Purchase Order
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Scroll to the right to note PO ID that was created
+
+ELECTRON STEPS:
+1. enter search box as "Scroll to the right to note PO ID that was created"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-0520_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Scroll to the right to note PO ID that was created
+
+### 1. Admin Guide Use Case Library (score: 9)
+Source: Admin-Guide-Use-Case-Library.pdf
+```
+Use Case Library
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Use Case Library.................................................................................................4
+Use Case: Award Cost Reimbursable Spend to Billing........
+================================================================================

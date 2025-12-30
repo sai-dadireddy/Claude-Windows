@@ -1,0 +1,66 @@
+================================================================================
+TEST ID: USP-2-0080
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Verify Accounting Configuration and Results
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Calculate a full payroll (for all pay groups); ensure that there are no pay calculation results in error due to accounting configuration issues. Before completing the payroll, review the postings to verify that postings are going to the expected accounts (no postings to suspense accounts). Complete the payroll and run 'Fix Operational Journals With Errors'. If there are any errors, update accounting configuration as needed.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 30 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Payroll Accounting by Company/Period
+Pay Calculation Results for Worker
+Fix Operational Journals with Errors
+Edit Account Set 
+View Account Posting Rule Set"
+2. wait for search results
+3. click search result containing "Payroll Accounting by Company/Period
+Pay Calculation Results for Worker
+Fix Operational Journals with Errors
+Edit Account Set 
+View Account Posting Rule Set"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0080_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 1. WSDL: Financial_Management (score: 19)
+  WSDL: Financial_Management
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Payroll Accounting by Company/Period
+Pay Calculation Results for Worker
+Fix Operational Journals with Errors
+Edit Account Set 
+View Account Posting Rule Set
+
+### 1. WSDL: Financial_Management (score: 19)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes dat
+
+================================================================================

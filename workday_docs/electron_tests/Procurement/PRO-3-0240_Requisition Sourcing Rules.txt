@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: PRO-3-0240
+FUNCTIONAL AREA: Procurement
+TEST NAME: Requisition Sourcing Rules
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Requisition Sourcing Rules
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Requisition Sourcing Rules"
+2. wait for search results
+3. click search result containing "Verify Requisition Sourcing Rules"
+4. wait for page to load
+5. screenshot as "PRO-3-0240_complete.png"
+
+VERIFICATION:
+- [ ] Procurement Configurator
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Verify Requisition Sourcing Rules
+
+### 1. Kb Procurement Requisition (score: 4)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wo...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

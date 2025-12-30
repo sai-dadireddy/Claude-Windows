@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-0510
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Requisition
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Requisition 
+Select Company and Requisition Type = Par Replenishment
+
+ELECTRON STEPS:
+1. enter search box as "Find Requisition 
+Select Company and Requisition Type = Par Replenishment"
+2. click appropriate action button
+3. screenshot as "INV-3-0510_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Requisition 
+Select Company and Requisition Type = Par Replenishment
+
+### 1. Kb Procurement Requisition (score: 8)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: W...
+================================================================================

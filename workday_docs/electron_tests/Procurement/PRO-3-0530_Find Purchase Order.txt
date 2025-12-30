@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-3-0530
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Purchase Order
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Purchase Order
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace
+Since this is a Usage Purchase Order - an Invoice will be created for this Purchase Order."
+2. wait for search results
+3. click search result containing "Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace
+Since this is a Usage Purchase Order - an Invoice will be created for this Purchase Order."
+4. wait for page to load
+5. screenshot as "PRO-3-0530_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace
+Since this is a Usage Purchase Order - an Invoice will be created for this Purchase Order.
+
+### 1. WSDL: Financial_Management (score: 21)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Finan...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

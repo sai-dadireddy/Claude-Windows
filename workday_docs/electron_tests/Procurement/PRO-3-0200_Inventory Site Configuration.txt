@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: PRO-3-0200
+FUNCTIONAL AREA: Procurement
+TEST NAME: Inventory Site Configuration
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Inventory Site Configuration
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Inventory Site Configuration"
+2. wait for search results
+3. click search result containing "Verify Inventory Site Configuration"
+4. wait for page to load
+5. screenshot as "PRO-3-0200_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Configurator
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Verify Inventory Site Configuration
+
+### 1. WSDL: Resource_Management (score: 4)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
+Operations:
+  - Submi...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

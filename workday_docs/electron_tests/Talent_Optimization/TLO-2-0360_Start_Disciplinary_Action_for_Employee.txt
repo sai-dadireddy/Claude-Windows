@@ -1,0 +1,172 @@
+# Electron Test: TLO-2-0360 - Start Disciplinary Action for Employee
+
+## Test Metadata
+- **Scenario ID**: TLO-2-0360
+- **Module**: Talent Optimization
+- **Test Type**: 1 | Unit Test Scenarios
+- **Workday Role**: nan
+- **Confidence Score**: 0.70
+
+### Confidence Factors
+- Detailed scenario description
+- Clear task/step definition
+- API/WSDL information found
+
+
+## Scenario Description
+1. Start disciplinary action for employee
+> Ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process.
+2. Set Review Content for Disciplinary Action
+> Verify the employee review template sections are correct. Ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process
+3. Complete Self Evaluation for Disciplinary Action
+4. Complete Manager Evaluation for Disciplinary Action
+5. Retest as necessary with any additional review templates
+
+## Test Steps
+
+### Task/Step: Start Disciplinary Action for Employee
+
+**Expected Result**: nan
+
+## Workday API Information
+
+### RAG Query Results
+```
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Start Disciplinary Action for Employee Start Disciplinary Action for Employee
+
+### 1. Admin Guide Human Capital Management (score: 5)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information............................................................................................ ...
+```
+
+### 2. User Guide Workday Docs For Layouts (score: 5)
+Source: User-Guide-Workday-Docs-for-Layouts.pdf
+```
+Workday Docs
+for Layouts
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+Workday Docs for Layouts | Contents | ii
+Contents
+Summary of User Guide Changes - Docs for Layouts........................................3
+Concept...
+```
+
+### 3. Workday Feature Descriptions Ditamap (score: 5)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+
+```
+
+## Electron Test Implementation
+
+### Prerequisites
+- User must have role: nan
+- Test environment configured
+- Authentication credentials available
+
+### Test Code Structure
+
+```javascript
+const { test, expect } = require('@playwright/test');
+
+test.describe('TLO-2-0360: Start Disciplinary Action for Employee', () => {
+  test.beforeEach(async ({ page }) => {
+    // Login as nan
+    await page.goto('https://{{tenant}}.myworkday.com');
+    // TODO: Implement authentication
+  });
+
+  test('Start Disciplinary Action for Employee', async ({ page }) => {
+    // TODO: Implement test steps based on scenario
+
+    // Navigate to appropriate module
+    // Perform actions based on: Start Disciplinary Action for Employee
+
+    // Verify expected result: nan
+  });
+});
+```
+
+### API Integration Points
+
+```
+API endpoints identified in RAG response:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Talent Optimization Start Disciplinary Action for Employee Start Disciplinary Action for Employee
+
+### 1. Admin Guide Human Capital Management (score: 5)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information............................................................................................ ...
+```
+
+### 2. User Guide Workday Docs For Layouts (score: 5)
+Source: User-Guide-Workday-Docs-for-Layouts.pdf
+```
+Workday Docs
+for Layouts
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+Workday Docs for Layouts | Contents | ii
+Contents
+Summary of User Guide Changes - Docs for Layouts..................
+```
+
+
+### Data Requirements
+- Scenario Type: Additional Scope
+- Country Code: GLOBAL
+- Industry: nan
+
+### Estimated Effort
+- Workday Estimate: 30 minutes
+- Test Implementation: TBD
+
+## Notes
+- Cross-functional: nan
+- Business Process Level 2: 1.5 Develop to Perform
+- Business Process Level 3: 1.5 Develop to Perform
+
+## Test Status
+- [ ] Test implemented
+- [ ] Test executed
+- [ ] Results verified
+- [ ] Edge cases covered
+
+---
+Generated: 2025-12-30 16:13:14.313698
+Confidence: 70.00%

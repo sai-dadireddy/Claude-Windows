@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: INV-3-0580
+FUNCTIONAL AREA: Inventory
+TEST NAME: Pick Inventory
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Pick Inventory
+Related Action off of Stock Request
+Stock Request -> Inventory stock Request ->
+Pick Inventory
+
+ELECTRON STEPS:
+1. enter search box as "Pick Inventory
+Related Action off of Stock Request
+Stock Request -> Inventory stock Request ->
+Pick Inventory"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-0580_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pick Inventory
+Related Action off of Stock Request
+Stock Request -> Inventory stock Request ->
+Pick Inventory
+
+### 1. Admin Guide Glossary (score: 8)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, In...
+================================================================================

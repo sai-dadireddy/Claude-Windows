@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-2-0060
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Review Payslip Configuration
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run a pay calculation for an employee and go to the employee's pay results. Review the payslip (Related Action > Payroll Result > View Payslip) to ensure that payslip is displaying as per requirements. Enter additional payroll input and re-calculate pay result as needed to make sure all Pay Component Groups linked on the Payslip Configuration can be confirmed to be working as expected. Note: Payslip is the online view and may differ from the check print layout. The check print layout can be viewed online as a PDF. Use the "Maintain Payroll Payslip Configuration" task to make any necessary modifications.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Worker, Maintain Payroll Payslip Configuration"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker, Maintain Payroll Payslip Configuration"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 1. WSDL: Payroll (score: 9)
+  WSDL: Payroll
+  ### 3. WSDL: Revenue_Management (score: 8)
+  WSDL: Revenue_Management
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Worker, Maintain Payroll Payslip Configuration
+
+### 1. WSDL: Payroll (score: 9)
+Source: Payroll.wsdl
+```
+WSDL: Payroll
+Description: The Workday Payroll Web Service contains operations that expose Workday Payroll data for integration with third parties (such as time and attendance).
+Operations:
+  - Get_Payroll_Results: Return Payroll Results for selected Workers
+
+================================================================================

@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-2-0250
+FUNCTIONAL AREA: HCM
+TEST NAME: Switch Primary Job for Employee
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate a switch primary job process for an employee with multiple positions. Specify the effective date and reason, validating reason setup and visibility, and the proposed primary job. Take note of approval routings and notifications as applicable, and confirm process. After successfully completing the process, verify the employee's primary job has changed on their profile and in reporting.
+
+WORKDAY ROLE: Manager/ HR Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Manager/ HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Switch Primary Job"
+2. wait for search results
+3. click search result containing "Switch Primary Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0250_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Switch Primary Job
+
+### 1. WSDL: Staffing (score: 8)
+Source: Staffing.wsdl
+```
+WSDL: Staffing
+Description: The Staffing Web Service operations expose Workday Human Capital Management Business Services and data. These services pertain to staffing transactions for both employees and contingent workers, such as bringing employees and contingent workers on board.
+Operations:
+  - A...
+```
+
+###...
+================================================================================

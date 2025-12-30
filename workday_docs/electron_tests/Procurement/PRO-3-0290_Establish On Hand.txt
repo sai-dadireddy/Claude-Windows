@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: PRO-3-0290
+FUNCTIONAL AREA: Procurement
+TEST NAME: Establish On Hand
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Establish On Hand 
+This can occur via and Ad Hoc Putaway at Go Live or Create Requisition or Create Purchase Order. Ad Hoc Putaway will be used to convert in balances for Go-Live -  customer to determine if the starting point will be a Requisition or Purchase Order.
+Purchase Order will be the starting point for this test.
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID"
+2. wait for search results
+3. click search result containing "Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID"
+4. wait for page to load
+5. screenshot as "PRO-3-0290_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Purchase Order:
+Purchase Order Type = Consignment (No charge)
+Add Consigned Items 
+Save Purchase Order - Note PO ID
+
+### 1. Kb Procurement Requisition (score: 14)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+=========================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,13 @@
+================================================================================
+TEST ID: BEN-4-0070
+FUNCTIONAL AREA: Benefits
+TEST NAME: Compensation Change - Calculated Coverage Plan - Changed
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON: Missing Task/Step field - cannot generate automated steps
+EXPECTED RESULT: nan
+
+MANUAL ACTIONS REQUIRED:
+Please manually define test steps for this scenario.
+================================================================================

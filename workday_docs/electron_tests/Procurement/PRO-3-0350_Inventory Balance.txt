@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: PRO-3-0350
+FUNCTIONAL AREA: Procurement
+TEST NAME: Inventory Balance
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Inventory Balance
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Consigned Goods On Hand
+Verify balances"
+2. wait for search results
+3. click search result containing "Find Consigned Goods On Hand
+Verify balances"
+4. wait for page to load
+5. screenshot as "PRO-3-0350_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Specialist
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Consigned Goods On Hand
+Verify balances
+
+### 1. WSDL: Resource_Management (score: 6)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
+Operations:
+...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0490
+FUNCTIONAL AREA: HCM
+TEST NAME: Manage Education
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Proxy as an Employee As Self and add Education from Worker Summary Profile or Career profile group depending on configuration. Ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process.
+
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Education"
+2. wait for search results
+3. click search result containing "Add Education"
+4. wait for page to load
+5. RAG-extracted steps:
+   Steps: Set Up Academic ...
+6. screenshot as "HCM-2-0490_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Education
+
+### 1. Admin Guide Student (score: 7)
+Source: Admin-Guide-Student.pdf
+```
+Student
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Student.......................................................... 15
+Academic Foundation........................................................................................19
+Steps: Set Up Academic .....
+================================================================================

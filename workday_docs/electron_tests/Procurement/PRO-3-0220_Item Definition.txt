@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: PRO-3-0220
+FUNCTIONAL AREA: Procurement
+TEST NAME: Item Definition
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Item Definition
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Verify Item Definition"
+2. wait for search results
+3. click search result containing "Verify Item Definition"
+4. wait for page to load
+5. screenshot as "PRO-3-0220_complete.png"
+
+VERIFICATION:
+- [ ] Procurement Configurator
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Verify Item Definition
+
+### 1. Kb Finance Journal Entry (score: 3)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financi...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

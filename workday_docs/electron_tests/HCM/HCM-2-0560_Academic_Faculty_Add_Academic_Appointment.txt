@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-2-0560
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Add Academic Appointment
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+From the Academic Faculty worker's profile, add an Academic Appointment. Submit and verify assignment following completion of full business process.
+
+WORKDAY ROLE: Academic Faculty Administrator/Academic Partner
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Academic Faculty Administrator/Academic Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Academic Appointment"
+2. wait for search results
+3. click search result containing "Add Academic Appointment"
+4. wait for page to load
+5. RAG-extracted steps:
+   Steps: Set Up Academic ...
+6. screenshot as "HCM-2-0560_complete.png"
+
+VERIFICATION:
+- [ ] Academic Appointment Added
+Appointment goes through the required steps/approvals. Documents are generated if applicable.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Academic Appointment
+
+### 1. Admin Guide Education And Government (score: 8)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management...................................................
+================================================================================

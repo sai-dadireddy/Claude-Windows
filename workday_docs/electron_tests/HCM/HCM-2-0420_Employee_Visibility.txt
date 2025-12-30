@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0420
+FUNCTIONAL AREA: HCM
+TEST NAME: Employee Visibility
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login or proxy as an Employee As Self. Review visibility to their data and visibility to data on another worker. Validate that visibility and available tasks (both self-service and on another worker) are appropriate. If Workday Assistant is enabled, verify availability of various actions, including looking up other workers, requesting time off, and updating personal information. *** Note: Workday Assistant cannot be tested via proxy access
+
+WORKDAY ROLE: Employee
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Employee permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Start Proxy"
+2. wait for search results
+3. click search result containing "Start Proxy"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0420_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Start Proxy
+
+### 1. User Guide Sourcing Managers (score: 2)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers.........................................................
+================================================================================

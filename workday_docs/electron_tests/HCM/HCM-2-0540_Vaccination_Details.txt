@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0540
+FUNCTIONAL AREA: HCM
+TEST NAME: Vaccination Details
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Login or proxy as relevant users and navigate to the worker's profile to confirm visibility of vaccination details and attachments by security group - HR Administrator, Employee as Self, Manager etc
+
+WORKDAY ROLE: Determine relevant security groups
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Determine relevant security groups permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View Vaccination Details"
+2. wait for search results
+3. click search result containing "View Vaccination Details"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0540_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Vaccination Details
+
+### 1. Admin Guide Human Capital Management (score: 3)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information.....................................................
+================================================================================

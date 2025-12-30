@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: INV-3-0560
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Par Count for Par Location
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Create Par Count
+
+Note Stock Item / Non Stock Item and JIT item that will be counted
+Verify no open order exist and that oh had balance is sufficient to fulfill stock item from Inventory
+
+Expand Details and Process - verify orders were created
+Note Requisition ID and Inventory Stock Request
+
+ELECTRON STEPS:
+1. enter search box as "Create Par Count
+
+Note Stock Item / Non Stock Item and JIT item that will be counted
+Verify no open order exist and that oh had balance is sufficient to fulfill stock item from Inventory
+
+Expand Details and Process - verify orders were created
+Note Requisition ID and Inventory Stock Request"
+2. submit form
+3. screenshot as "INV-3-0560_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Par Count
+
+Note Stock Item / Non Stock Item and JIT item that will be counted
+Verify no open order exist and that oh had balance is sufficient to fulfill stock item from Inventory
+
+Expand Details and Process - verify orders were created
+Note Requisition ID and Inventory Stock Request
+
+### 1. WSDL: Resource_Management (score: 33)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_M...
+================================================================================

@@ -1,0 +1,29 @@
+================================================================================
+TEST ID: INV-3-0700
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Verify JIT UOM and pricing has been captured - This should be the LUM UOM and price from the Item Master - not the default ordering UOM from the supplier
+
+ELECTRON STEPS:
+1. enter search box as "Verify JIT UOM and pricing has been captured - This should be the LUM UOM and price from the Item Master - not the default ordering UOM from the supplier"
+2. submit form
+3. screenshot as "INV-3-0700_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Verify JIT UOM and pricing has been captured - This should be the LUM UOM and price from the Item Master - not the default ordering UOM from the supplier
+
+### 1. WSDL: Resource_Management (score: 19)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. I...
+================================================================================

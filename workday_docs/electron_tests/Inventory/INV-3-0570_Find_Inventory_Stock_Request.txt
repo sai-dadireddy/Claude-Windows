@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: INV-3-0570
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Inventory Stock Request
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Enter Inventory Site and 
+Stock Request Type = Par replenishment
+OK
+
+ELECTRON STEPS:
+1. enter search box as "Enter Inventory Site and 
+Stock Request Type = Par replenishment
+OK"
+2. enter field "Inventory Site and 
+Stock Request Type = Par replenishment
+OK
+
+### 1" with appropriate value
+3. screenshot as "INV-3-0570_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter Inventory Site and 
+Stock Request Type = Par replenishment
+OK
+
+### 1. Kb Hcm Change Job (score: 9)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Commu...
+================================================================================

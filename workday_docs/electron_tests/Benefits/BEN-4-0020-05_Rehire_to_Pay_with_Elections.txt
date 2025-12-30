@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: BEN-4-0020-05
+FUNCTIONAL AREA: Benefits
+TEST NAME: Rehire to Pay with Elections
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 4. Validate Payroll Interface
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 4. Validate Payroll Interface
+
+### 1. Admin Guide Workday Studio (score: 4)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals..............................................................................
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "4. Validate Payroll Interface"
+2. wait for search results
+3. click search result containing "4. Validate Payroll Interface"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0020-05_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

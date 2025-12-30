@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: INV-3-0400
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Stock Request to Pick Inventory
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory
+
+ELECTRON STEPS:
+1. enter search box as "Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-0400_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Inventory Pick List
+Pick List Related Action -> Picking List -> Pick Inventory
+
+### 1. Admin Guide Glossary (score: 7)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Wor...
+================================================================================

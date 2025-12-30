@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-0660
+FUNCTIONAL AREA: Inventory
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Issue Purchase Order
+
+ELECTRON STEPS:
+1. enter search box as "Issue Purchase Order"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "INV-3-0660_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Purchase Order
+
+### 1. Kb Procurement Purchase Order (score: 8)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workda...
+================================================================================

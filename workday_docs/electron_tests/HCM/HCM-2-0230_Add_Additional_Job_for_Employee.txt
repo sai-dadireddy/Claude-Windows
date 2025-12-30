@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-2-0230
+FUNCTIONAL AREA: HCM
+TEST NAME: Add Additional Job for Employee
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Using open positions created above, initiate an add job process for an existing employee who currently holds only one position. Select the supervisory organization for the additional job and the employee. After selecting the supervisory organization, employees currently in that organization will display in the employee drop down, but it is possible to select an employee from another organization. Specify the effective date and reason, validating reason setup and visibility, and complete additional required details. Note: Workday automatically populates many of these fields with values defined on the position or job requisition; if you use job requisitions, you can't change those values and must update the job requisition itself. Verify that the compensation package, grade and/or grade profile, and appropriate base pay plan default into the compensation sub-process. Take note of approval routings and notifications as applicable, and confirm process. After successfully completing the process, verify the employee is in both positions. If the additional position reports to a different Manager and/or HR Partner, verify that position access is restricted as expected.
+
+WORKDAY ROLE: Manager/ HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Manager/ HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Job"
+2. wait for search results
+3. click search result containing "Add Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0230_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Job
+
+### 1. Admin Guide Vndly Documentation (score: 7)
+Source: Admin-Guide-VNDLY-Documentation.pdf
+```
+Workday VNDLY
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Workday VNDLY................................................................................................10
+.....................................................................................................
+================================================================================

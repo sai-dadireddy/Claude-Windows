@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-3-0570
+FUNCTIONAL AREA: Procurement
+TEST NAME: Verify Consigned Transaction
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Consigned Transaction
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Consigned Inventory Transactions
+Verify Putaway - No accounting created"
+2. wait for search results
+3. click search result containing "Find Consigned Inventory Transactions
+Verify Putaway - No accounting created"
+4. wait for page to load
+5. screenshot as "PRO-3-0570_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Accountant
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Consigned Inventory Transactions
+Verify Putaway - No accounting created
+
+### 1. Admin Guide Spend Management (score: 8)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing...................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

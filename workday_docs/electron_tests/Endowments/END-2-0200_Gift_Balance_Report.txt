@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: END-2-0200
+FUNCTIONAL AREA: Endowments
+TEST NAME: Gift Balance Report
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Gift Balance Report
+
+ELECTRON STEPS:
+1. enter search box as "Gift Balance Report"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-2-0200_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Gift Balance Report
+
+### 1. Kb Procurement Requisition (score: 3)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource...
+================================================================================

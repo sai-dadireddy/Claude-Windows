@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: END-2-0310
+FUNCTIONAL AREA: Endowments
+TEST NAME: Navigate Gift
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Navigate Gift
+
+ELECTRON STEPS:
+1. enter search box as "Navigate Gift"
+2. wait for page load
+3. screenshot as "END-2-0310_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Navigate Gift
+
+### 1. Kb Procurement Requisition (score: 2)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Manag...
+================================================================================

@@ -55,11 +55,11 @@ def extract_confidence_score(rag_output):
 def determine_confidence_level(score):
     """Determine confidence level based on score"""
     if score >= 8.0:
-        return "HIGH", "✅"
+        return "HIGH", "[OK]"
     elif score >= 5.0:
-        return "MEDIUM", "⚠️"
+        return "MEDIUM", "[!]"
     else:
-        return "LOW", "❌"
+        return "LOW", "[X]"
 
 def extract_api_operations(rag_output):
     """Extract relevant API operations from RAG output"""

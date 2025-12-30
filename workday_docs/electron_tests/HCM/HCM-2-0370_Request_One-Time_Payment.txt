@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: HCM-2-0370
+FUNCTIONAL AREA: HCM
+TEST NAME: Request One-Time Payment
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate the Request One-Time Payment for employee. Confirm available One-Time Payment plans are correct based on eligibility rules.  If data entry check is turned on in Tenant Setup and the amount requested is outside of historical amounts given for that one time payment you will receive a validation warning  After completing the process, navigate to the related actions of the worker and view the compensation history. Repeat as necessary to verify that any other compensation eligibility rules behave as expected. Take note of approval routings as applicable and confirm process.
+
+WORKDAY ROLE: Compensation Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Request One-Time Payment"
+2. wait for search results
+3. click search result containing "Request One-Time Payment"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0370_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Request One-Time Payment
+
+### 1. WSDL: Compensation (score: 8)
+Source: Compensation.wsdl
+```
+WSDL: Compensation
+Description: The Compensation Web Service contains operations that expose Workday Human Capital Management Business Services compensation-related data.
+Operations:
+  - Put_Previous_System_Compensation_History: This operation will load previous system compensation history for a g...
+================================================================================

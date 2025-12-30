@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-1-0260
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Effort Eligibility Rule
+DESCRIPTION: Has the Effort Eligibility Rule and function been configured to meet the requirements?
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

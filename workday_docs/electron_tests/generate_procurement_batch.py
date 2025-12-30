@@ -206,7 +206,7 @@ RAG QUERY STATUS: {rag_status}
 
     processed_count += 1
     count += 1
-    print(f"      ✓ Generated [{confidence}] {scenario_id}")
+    print(f"      [OK] Generated [{confidence}] {scenario_id}")
 
 print("\n" + "="*80)
 print(f"Batch {start_idx}-{end_idx} COMPLETE")

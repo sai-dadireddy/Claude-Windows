@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: USP-2-0020
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Multi-State Taxation
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review tax calculation results for any employees where home state <> work state (and local lived <> local worked). If updates to tax elections are needed, make sure to keep track of all required changes to be used for the End-to-End tenant build.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 30 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Worker, Audit - Workers with Primary Work Address Not Equal to Location State"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker, Audit - Workers with Primary Work Address Not Equal to Location State"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 1. WSDL: Financial_Management (score: 15)
+  WSDL: Financial_Management
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Worker, Audit - Workers with Primary Work Address Not Equal to Location State
+
+### 1. WSDL: Financial_Management (score: 15)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans,
+
+================================================================================

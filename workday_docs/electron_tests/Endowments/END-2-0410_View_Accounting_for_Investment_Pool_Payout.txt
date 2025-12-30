@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: END-2-0410
+FUNCTIONAL AREA: Endowments
+TEST NAME: View Accounting for Investment Pool Payout
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: View Investment Pool> Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab
+ Select Investment Pool Payout with Approved Status
+ Related Action> View Accounting - Select Operating journal
+
+ELECTRON STEPS:
+1. enter search box as "View Investment Pool> Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab
+ Select Investment Pool Payout with Approved Status
+ Related Action> View Accounting - Select Operating journal"
+2. wait for page load
+3. click appropriate action button
+4. screenshot as "END-2-0410_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Investment Pool> Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab
+ Select Investment Pool Payout with Approved Status
+ Related Action> View Accounting - Select Operating journal
+
+### 1. Workday Feature Descriptions Ditamap (score: 15)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+C...
+================================================================================

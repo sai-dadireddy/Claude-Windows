@@ -6,9 +6,9 @@ CONFIDENCE: [LOW] Score: 0.0/10
 ================================================================================
 
 STATUS: [MANUAL REQUIRED]
-REASON: Missing Task/Step
+REASON: Missing Task/Step or insufficient information
 
 SCENARIO DETAILS:
-Task/Step: NOT PROVIDED
-Expected Result: NOT PROVIDED
+Task/Step: nan
+Expected Result: nan
 ================================================================================

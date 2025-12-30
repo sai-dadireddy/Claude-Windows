@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: PRO-3-0490
+FUNCTIONAL AREA: Procurement
+TEST NAME: Verify Accounting Transaction Created
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Accounting Transaction Created
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Consigned Inventory Transaction
+
+Select Company / Inventory Site and Item 
+Transaction Type = Adjustment
+
+From the related Action off Consigned Inventory Transaction -> Accounting -> View Accounting
+
+Verify Journal Lines"
+2. wait for search results
+3. click search result containing "Find Consigned Inventory Transaction
+
+Select Company / Inventory Site and Item 
+Transaction Type = Adjustment
+
+From the related Action off Consigned Inventory Transaction -> Accounting -> View Accounting
+
+Verify Journal Lines"
+4. wait for page to load
+5. screenshot as "PRO-3-0490_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Accountant
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Consigned Inventory Transaction
+
+Select Company / Inventory Site and Item 
+Transaction Type = Adjustment
+
+From the related Action off Consigned Inventory Transaction -> Accounting -> View Accounting
+
+Verify Journal Lines
+
+### 1. Kb Finance Journal Entry (score: 20)
+Source: kb_finance_journal_entry.txt
+```
+===============================================================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

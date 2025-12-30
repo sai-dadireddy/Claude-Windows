@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-2-0090
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: BP: Settlement Run Event
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a settlement run. Ensure a company hierarchy is in place (if there is more than one company) for all US companies and select all applicable filters ('All Available Pay Groups' and 'All Available Pay Group Exceptions'). Ensure that complete pay results get picked up, bank accounts are being assigned as per bank routing rule configuration and that the settlement can be processed without errors to completion. Any integration related errors can be ignored (integrations are not expected to be fully in place until End-to-End testing).
+
+WORKDAY ROLE: Payroll Settlement Specialist
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Settlement Specialist permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Create Settlement Run"
+2. wait for search results
+3. click search result containing "Create Settlement Run"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0090_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Settlement Run
+
+### 1. Kb Hcm Terminate Employee (score: 3)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Hu
+
+================================================================================

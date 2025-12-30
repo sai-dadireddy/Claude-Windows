@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: INV-3-0590
+FUNCTIONAL AREA: Inventory
+TEST NAME: Inventory Shipment
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Note the Business Document Line for Shipment ID
+
+ELECTRON STEPS:
+1. enter search box as "Note the Business Document Line for Shipment ID"
+2. submit form
+3. screenshot as "INV-3-0590_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Note the Business Document Line for Shipment ID
+
+### 1. WSDL: Resource_Management (score: 8)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Business Assets and Projects.
+Operation...
+================================================================================

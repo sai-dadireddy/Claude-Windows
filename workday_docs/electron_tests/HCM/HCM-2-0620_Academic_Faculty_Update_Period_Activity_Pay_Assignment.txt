@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0620
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Update Period Activity Pay Assignment
+CONFIDENCE: [HIGH] Score: 10.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Update a Period Activity pay assignment for an Academc Faulty worker using Reason = Update
+
+WORKDAY ROLE: Compensation Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Manage Period Activity Pay Assignment"
+2. wait for search results
+3. click search result containing "Manage Period Activity Pay Assignment"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0620_complete.png"
+
+VERIFICATION:
+- [ ] Period Activity Pay assignment is updated.  Activity assignment goes through the required steps/approvals as appropriate.  Documents are generated if applicalbe.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Manage Period Activity Pay Assignment
+
+### 1. Admin Guide Education And Government (score: 10)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.....................................
+================================================================================

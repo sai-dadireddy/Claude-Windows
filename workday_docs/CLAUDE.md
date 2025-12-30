@@ -270,15 +270,38 @@ python generate_electron_tests.py --scenario "HCM-1-0010" --output tests/
 
 ---
 
-## Confidence Scoring
+## Confidence Scoring & Acceptance Criteria
 
-| RAG Score | Confidence | Action | Output Flag |
-|-----------|------------|--------|-------------|
-| >= 8.0 | HIGH | Generate directly | `[CONFIDENCE: HIGH]` ✅ |
-| 5.0-7.9 | MEDIUM | Check KB articles | `[CONFIDENCE: MEDIUM]` ⚠️ |
-| < 5.0 | LOW | Scrape Workday KB or manual | `[CONFIDENCE: LOW]` ❌ |
+| RAG Score | Confidence | Status | Action |
+|-----------|------------|--------|--------|
+| **>= 7.0** | HIGH | ✅ ACCEPTED | Valid Electron steps generated |
+| **5.0-6.9** | MEDIUM | ⚠️ NEEDS REVIEW | SME must enhance before use |
+| **< 5.0** | LOW | ❌ MANUAL REQUIRED | Cannot generate - mark as MANUAL |
 
-**ALWAYS display confidence score in output header.**
+**CRITICAL RULES:**
+1. **ACCEPTED (>= 7.0)**: All steps must be valid Electron commands
+2. **NEEDS REVIEW (5.0-6.9)**: Mark with `[NEEDS SME REVIEW]` - steps may be incomplete
+3. **MANUAL (< 5.0)**: Do NOT generate placeholder steps - only generate MANUAL file
+
+**INVALID - Never generate these:**
+```
+❌ [RAG data available but no specific steps found]
+❌ [MANUAL] No RAG guidance available
+❌ follow standard task flow
+❌ complete required fields
+❌ fill appropriate values
+```
+
+**VALID - Only use actual Electron commands:**
+```
+✅ enter search box as "Hire Employee"
+✅ click button "Submit"
+✅ select dropdown "Reason" as "Resignation"
+✅ verify message contains "Success"
+✅ screenshot as "HCM-1-0010_complete.png"
+```
+
+**If RAG doesn't provide specific field names → Mark as MANUAL, don't guess.**
 
 ---
 

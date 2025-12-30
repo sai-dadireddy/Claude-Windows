@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-2-0500
+FUNCTIONAL AREA: HCM
+TEST NAME: Manage Job History
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Proxy as an Employee As Self and add Job History from Worker Summary Profile or Career profile group depending on configuration. Ensure that the business process steps (i.e. approvals) are triggered as expected. Proxy as other roles as needed to complete the business process.
+
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Job History"
+2. wait for search results
+3. click search result containing "Add Job History"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0500_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Job History
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management...
+================================================================================

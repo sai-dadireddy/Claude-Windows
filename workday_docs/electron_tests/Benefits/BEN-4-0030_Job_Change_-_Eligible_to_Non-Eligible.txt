@@ -1,0 +1,13 @@
+================================================================================
+TEST ID: BEN-4-0030
+FUNCTIONAL AREA: Benefits
+TEST NAME: Job Change - Eligible to Non-Eligible
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON: Missing Task/Step field - cannot generate automated steps
+EXPECTED RESULT: nan
+
+MANUAL ACTIONS REQUIRED:
+Please manually define test steps for this scenario.
+================================================================================

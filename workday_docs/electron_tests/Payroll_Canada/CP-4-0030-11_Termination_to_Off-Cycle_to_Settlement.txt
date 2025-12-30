@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: CP-4-0030-11
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Termination to Off-Cycle to Settlement
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Launch the ROE integration to generate the ROE file. Review the file to make sure it meets requirements.  NOTE: Services Canada does have a test facility on their website and the files out of and into WD can be tested with minor manual adjustments to the file (to use dummy data rather than real personal info). It is strongly encouraged that a customer test both the inbound and outbound integration in E2E testing and NOT wait until in Production.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "11. ROE Outbound Integration"
+2. wait for search results
+3. click search result containing "11. ROE Outbound Integration"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0030-11_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Put_Provinc, Get_Province_Annual_Elections
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 11. ROE Outbound Integration
+
+### 1. Admin Guide Workday Studio (score: 3)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals..................................................................................
+================================================================================

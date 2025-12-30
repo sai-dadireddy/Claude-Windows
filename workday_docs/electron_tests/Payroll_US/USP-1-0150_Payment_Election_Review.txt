@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: USP-1-0150
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Payment Election Review
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the Payment Elections loaded for all employees and verify that all payment election details are accurate.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 20 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "QA - Worker Pay Group and Payment Elections"
+2. wait for search results
+3. click search result containing "QA - Worker Pay Group and Payment Elections"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-1-0150_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: QA - Worker Pay Group and Payment Elections
+
+### 1. Test Scenarios Index (score: 13)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Orga
+
+================================================================================

@@ -1,0 +1,69 @@
+================================================================================
+TEST ID: USP-1-0300
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Commitment Accounting - Public Sector
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+If you are using position management and commitment accounting has this been configured, validate that it meets requirements?
+NOTE: Compensation elements that will be included in commitments and obligations cannot be repeated.
+
+WORKDAY ROLE: Cost Center Manager
+EST. DURATION: N/A minutes
+
+PREREQUISITES:
+- User logged in with Cost Center Manager permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "1. Is first period of fiscal year open?
+2. Has a fiscal year schedule been created
+3. Has Commitment Rules - Payroll Gross been established?
+4. Has Commitment Rules - Fringe Benefit been established?
+5. Has budget data been loaded (or deferred)?"
+2. wait for search results
+3. click search result containing "1. Is first period of fiscal year open?
+2. Has a fiscal year schedule been created
+3. Has Commitment Rules - Payroll Gross been established?
+4. Has Commitment Rules - Fringe Benefit been established?
+5. Has budget data been loaded (or deferred)?"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-1-0300_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Is first period of fiscal year open?
+2. Has a fiscal year schedule been created
+3. Has Commitment Rules - Payroll Gross been established?
+4. Has Commitment Rules - Fringe Benefit been established?
+5. Has budget data been loaded (or deferred)?
+
+### 1. Test Scenarios Index (score: 35)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 
+
+================================================================================

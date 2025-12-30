@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: BEN-4-0070-01
+FUNCTIONAL AREA: Benefits
+TEST NAME: Compensation Change - Calculated Coverage Plan - Changed
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 1. Request Compensation Change
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Request Compensation Change
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "1. Request Compensation Change"
+2. wait for search results
+3. click search result containing "1. Request Compensation Change"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0070-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

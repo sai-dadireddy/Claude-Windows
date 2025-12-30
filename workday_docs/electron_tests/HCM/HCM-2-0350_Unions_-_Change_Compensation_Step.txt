@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-2-0350
+FUNCTIONAL AREA: HCM
+TEST NAME: Unions - Change Compensation Step
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate the Request Compensation Change process for an employee. As needed, change the employee's compensation grade to one which uses compensation steps, and ensure the first step is assigned automatically (if configured to do so), or otherwise select a step. Ensure the salary or hourly amount is updated based on the step assigned or selected and review the Progression Start Date. Take note of approval routings as applicable and confirm process.
+
+WORKDAY ROLE: Compensation Partner / HR Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner / HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Request Compensation Change"
+2. wait for search results
+3. click search result containing "Request Compensation Change"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0350_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Request Compensation Change
+
+### 1. Kb Hcm Change Job (score: 8)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - ...
+================================================================================

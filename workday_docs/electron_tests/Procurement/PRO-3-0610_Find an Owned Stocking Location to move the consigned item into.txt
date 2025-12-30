@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: PRO-3-0610
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find an Owned Stocking Location to move the consigned item into
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find an Owned Stocking Location to move the consigned item into
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Extract Stocking Locations"
+2. wait for search results
+3. click search result containing "Extract Stocking Locations"
+4. wait for page to load
+5. screenshot as "PRO-3-0610_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Specialist
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Stocking Locations
+
+### 1. Admin Guide Spend Management (score: 3)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing.....................................................................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

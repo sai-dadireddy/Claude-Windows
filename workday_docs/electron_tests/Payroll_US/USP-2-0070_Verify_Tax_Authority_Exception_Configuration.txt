@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: USP-2-0070
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Verify Tax Authority Exception Configuration
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the payroll results of an employee that is in a state for which tax authority exceptions are needed. Ensure taxable wages are correct based on the exception configuration. (Note: Testing 1-2 states is fine at this point. A full test will be performed as part of parallel testing).
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 20 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Worker"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Worker"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0070_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Worker
+
+### 1. Kb Hcm Terminate Employee (score: 5)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wor
+
+================================================================================

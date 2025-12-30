@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: PRO-3-0500
+FUNCTIONAL AREA: Procurement
+TEST NAME: Verify New Inventory Balance
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify New Inventory Balance
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Consigned Goods On Hand
+Enter Company / Inventory Site and Item ID
+Verify new item balance"
+2. wait for search results
+3. click search result containing "Find Consigned Goods On Hand
+Enter Company / Inventory Site and Item ID
+Verify new item balance"
+4. wait for page to load
+5. screenshot as "PRO-3-0500_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Specialist
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Consigned Goods On Hand
+Enter Company / Inventory Site and Item ID
+Verify new item balance
+
+### 1. Kb Procurement Requisition (score: 15)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+====================================================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

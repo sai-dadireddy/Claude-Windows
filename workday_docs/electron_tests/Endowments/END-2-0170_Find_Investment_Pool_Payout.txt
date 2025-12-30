@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: END-2-0170
+FUNCTIONAL AREA: Endowments
+TEST NAME: Find Investment Pool Payout
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Find Investment Pool > Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab
+
+ELECTRON STEPS:
+1. enter search box as "Find Investment Pool > Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab"
+2. wait for page load
+3. click appropriate action button
+4. screenshot as "END-2-0170_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Investment Pool > Select investment Pool
+ 
+ Navigate to Investment Pool Payouts tab
+
+### 1. Admin Guide Education And Government (score: 8)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+G...
+================================================================================

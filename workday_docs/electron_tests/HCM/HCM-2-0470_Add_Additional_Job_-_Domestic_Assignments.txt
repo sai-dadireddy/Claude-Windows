@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HCM-2-0470
+FUNCTIONAL AREA: HCM
+TEST NAME: Add Additional Job - Domestic Assignments
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Verify that employee can be put on Domestic Assignment.
+- Expected Result: Task completed successfully
+- Workday Role: HR Partner
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================

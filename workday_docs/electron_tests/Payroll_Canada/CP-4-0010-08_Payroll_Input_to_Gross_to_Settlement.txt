@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: CP-4-0010-08
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Payroll Input to Gross to Settlement
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Settle the just completed payroll. Make sure to settle all applicable companies (use the Company Hierarchy, if applicable) and use the 'All Available Pay Groups' filter.
+
+WORKDAY ROLE: Payroll Settlement Specialist
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Settlement Specialist permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "8. Settlement"
+2. wait for search results
+3. click search result containing "8. Settlement"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0010-08_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 8. Settlement
+
+### 1. Kb Finance Journal Entry (score: 2)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financial Manage...
+================================================================================

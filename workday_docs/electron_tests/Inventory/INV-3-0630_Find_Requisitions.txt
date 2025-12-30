@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: INV-3-0630
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Requisitions
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: *****There will be 2 requisitions created from this Par Count.
+#1 Requisition will be for the Non Stock Item - with a Replenishment Type of Par Replenishment
+#2 Requisition will be for the JIT Item - with a Replenishment Type of JIT Replenishment
+Follow the same steps to create a Purchase Order to Receipt and Delivery
+Follow these steps for both requisitions
+
+ELECTRON STEPS:
+1. enter search box as "*****There will be 2 requisitions created from this Par Count.
+#1 Requisition will be for the Non Stock Item - with a Replenishment Type of Par Replenishment
+#2 Requisition will be for the JIT Item - with a Replenishment Type of JIT Replenishment
+Follow the same steps to create a Purchase Order to Receipt and Delivery
+Follow these steps for both requisitions"
+2. submit form
+3. screenshot as "INV-3-0630_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: *****There will be 2 requisitions created from this Par Count.
+#1 Requisition will be for the Non Stock Item - with a Replenishment Type of Par Replenishment
+#2 Requisition will be for the JIT Item - with a Replenishment Type of JIT Replenishment
+Follow the same steps to create a Purchase Order to Receipt and Delivery
+Follow these steps for both requisitions
+
+### 1. WSDL: Resource_Managem...
+================================================================================

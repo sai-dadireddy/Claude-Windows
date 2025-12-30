@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-0410
+FUNCTIONAL AREA: Inventory
+TEST NAME: Inventory Putaway
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Putaway Inventory
+
+ELECTRON STEPS:
+1. enter search box as "Putaway Inventory"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-0410_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Putaway Inventory
+
+### 1. procurement (score: 1)
+Source: procurement_v5.json
+```
+API: procurement
+GET /requisitions/{ID}/attachments?type=getFileContent - 
+GET /requisitions/{ID}/attachments/{subresourceID} - Retrieves the metadata or the attachment content of the specified requisition.
+DELETE /requisitions/{ID}/attachments/{subresourceID} - Deletes the specified requisition att...
+```
+
+#...
+================================================================================

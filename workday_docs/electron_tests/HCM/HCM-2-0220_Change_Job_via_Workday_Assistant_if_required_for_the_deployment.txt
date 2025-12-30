@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0220
+FUNCTIONAL AREA: HCM
+TEST NAME: Change Job via Workday Assistant (if required for the deployment)
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Note: Workday Assistant cannot be tested via proxy access, and Workday Assistant cannot complete a change job transaction if there is already an in progress change job event or a future dated position change that has not taken effect.*** Access Workday Assistant and enter the text ‘Transfer worker to another manager’ into Workday Assistant for a worker. Follow the prompts to complete the additional information required to change the worker's job.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Change Job"
+2. wait for search results
+3. click search result containing "Change Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0220_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Change Job
+
+### 1. staffing (score: 7)
+Source: staffing_v7.json
+```
+API: staffing
+GET /values/organizationAssignmentChangesGroup/regions/ - 
+GET /jobChanges/{ID}/location - Returns the location information for the specified job change ID.
+POST /workers/{ID}/organizationAssignmentChanges - Initiates an organization assignment change for a specific worker.
+GET /worker...
+```
+
+### 2. Kb Bene...
+================================================================================

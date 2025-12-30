@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: CP-4-0010-11
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Payroll Input to Gross to Settlement
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Complete the Print Checks task in the Inbox. Verify that the PDF with the checks gets created, verify the formatting, print the checks and verify that the formatting is as expected.
+
+WORKDAY ROLE: Payroll Settlement Specialist
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Settlement Specialist permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "11. Check Printing"
+2. wait for search results
+3. click search result containing "11. Check Printing"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-4-0010-11_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 11. Check Printing
+
+### 1. Electron Test Samples (score: 2)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Elec...
+================================================================================
