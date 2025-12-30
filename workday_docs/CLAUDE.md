@@ -102,32 +102,181 @@ When creating new KB articles, use this structure:
 
 ---
 
-## Electron Test Scenario Format
+## Excel-to-Electron Mapping Template
 
-For generating Electron automation steps, use this format:
+### Excel Column to Electron Step Mapping
+
+| Excel Column | Electron Usage | Example |
+|--------------|----------------|---------|
+| `Scenario ID` | Test ID prefix | `HCM-1-0010` → `HCM-1-0010_step1.png` |
+| `Functional Area` | Test category | `HCM`, `Payroll`, `Procurement` |
+| `Scenario Name` | Test title | `Audit Company Setup` |
+| `Scenario Description` | What to validate | Verify configuration... |
+| `Task / Step` | **Primary Workday task** | `Extract Companies` → search for this |
+| `Sub Task` | Additional steps | Secondary actions |
+| `Customer Expected Result` | **Verification criteria** | What to verify |
+| `Est. Effort (mins)` | Timeout/wait hints | 5 mins → short wait, 120 → long process |
+| `Workday Role` | Permission context | `HR Administrator` |
+
+### Electron Test Output Template
 
 ```
-SCENARIO: {Scenario Name}
-FUNCTIONAL AREA: {HCM/Payroll/Finance/etc.}
-TASK: {Original task from Excel}
+================================================================================
+TEST ID: {Scenario ID}
+FUNCTIONAL AREA: {Functional Area}
+TEST NAME: {Scenario Name}
+WORKDAY ROLE: {Workday Role}
+EST. DURATION: {Est. Effort (mins)} minutes
+================================================================================
+
+DESCRIPTION:
+{Scenario Description}
+
+PREREQUISITES:
+- User logged in with {Workday Role} permissions
+- Required data: {inferred from description}
 
 ELECTRON STEPS:
-1. enter search box as "{task name}"
-2. click search result "{exact result text}"
-3. wait for page to load
-4. select dropdown "{field}" as "{value}"
-5. enter text field "{field}" as "{value}"
-6. click button "{button text}"
-7. verify message contains "{expected text}"
-8. screenshot as "{scenario_name}_step{N}.png"
+1. enter search box as "{Task / Step}"
+2. wait for search results
+3. click search result containing "{Task / Step}"
+4. wait for page to load
+5. {generated steps from RAG/KB lookup}
+6. screenshot as "{Scenario ID}_complete.png"
+
+VERIFICATION:
+- [ ] {Customer Expected Result}
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+SUB-TASKS (if any):
+{Sub Task - converted to additional steps}
 
 API ALTERNATIVE:
-{REST/SOAP endpoint if available}
+- REST: {matched endpoint from RAG}
+- SOAP: {matched operation from WSDL index}
 
-VALIDATION:
-- [ ] {Validation check 1}
-- [ ] {Validation check 2}
+================================================================================
 ```
+
+---
+
+## SOP: Excel-to-Electron Test Generation
+
+### Standard Operating Procedure v1.0
+
+#### Purpose
+Convert Workday test scenarios from Excel into detailed Electron automation steps for the ActiveGenie platform.
+
+#### Scope
+Applies to all 6,858 test scenarios across 20+ functional areas.
+
+#### Procedure
+
+**PHASE 1: INPUT PARSING**
+```
+1. Read Excel row
+2. Extract key fields:
+   - Scenario ID (unique identifier)
+   - Functional Area (test category)
+   - Task / Step (PRIMARY - what to search in Workday)
+   - Scenario Description (what to validate)
+   - Customer Expected Result (verification criteria)
+```
+
+**PHASE 2: KNOWLEDGE LOOKUP**
+```
+1. Query RAG: python workday_rag.py "{Task / Step}"
+2. Check confidence score:
+   - >= 8.0: Use RAG results directly
+   - 5.0-7.9: Also check KB articles (kb_*.txt)
+   - < 5.0: Use browser MCP to scrape Workday KB
+3. Match REST/SOAP endpoints for API alternative
+```
+
+**PHASE 3: STEP GENERATION**
+```
+1. Start with: enter search box as "{Task / Step}"
+2. Add navigation steps from RAG/KB
+3. Add field interactions (enter, select, click)
+4. Add verification: verify {Customer Expected Result}
+5. Add screenshot: screenshot as "{Scenario ID}_complete.png"
+```
+
+**PHASE 4: OUTPUT FORMATTING**
+```
+1. Use Electron Test Output Template
+2. Include all metadata from Excel
+3. Add API alternatives if available
+4. Flag low-confidence scenarios for review
+```
+
+#### Decision Tree
+
+```
+Excel Row
+    │
+    ├── Has "Task / Step"?
+    │   ├── YES → Query RAG → Generate steps
+    │   └── NO → Mark as INCOMPLETE, skip
+    │
+    ├── RAG Score >= 8.0?
+    │   ├── YES → High confidence, generate directly
+    │   └── NO → Check KB articles
+    │
+    ├── KB Article exists?
+    │   ├── YES → Merge with RAG results
+    │   └── NO → Score < 5.0? → Scrape Workday KB
+    │
+    └── Output formatted Electron test
+```
+
+#### Quality Checklist
+
+- [ ] Scenario ID included in all screenshots
+- [ ] Task / Step used as primary search term
+- [ ] Verification matches Customer Expected Result
+- [ ] API alternative provided when available
+- [ ] Est. Effort considered for wait times
+- [ ] Workday Role noted for permission context
+
+#### Batch Processing Command
+
+```bash
+# Generate Electron tests for a functional area
+python generate_electron_tests.py --area "HCM" --output tests/hcm/
+
+# Generate single test
+python generate_electron_tests.py --scenario "HCM-1-0010" --output tests/
+```
+
+---
+
+## Electron Command Reference
+
+| Command | Syntax | Example |
+|---------|--------|---------|
+| Search | `enter search box as "{text}"` | `enter search box as "Hire Employee"` |
+| Click Result | `click search result "{text}"` | `click search result "Hire Employee"` |
+| Wait | `wait for page to load` | `wait 3 seconds` |
+| Enter Text | `enter {field} as "{value}"` | `enter worker as "21001"` |
+| Select | `select {dropdown} as "{value}"` | `select reason as "Resignation"` |
+| Click Button | `click button "{text}"` | `click button "Submit"` |
+| Click Link | `click link "{text}"` | `click link "View Details"` |
+| Verify | `verify {condition}` | `verify message contains "Success"` |
+| Screenshot | `screenshot as "{filename}"` | `screenshot as "HCM-1-0010_done.png"` |
+| Navigate | `navigate to "{task}"` | `navigate to "Related Actions"` |
+| Scroll | `scroll to "{element}"` | `scroll to "Submit button"` |
+
+---
+
+## Confidence Scoring
+
+| RAG Score | Confidence | Action | Output Flag |
+|-----------|------------|--------|-------------|
+| >= 8.0 | HIGH | Generate directly | ✅ READY |
+| 5.0-7.9 | MEDIUM | Check KB articles | ⚠️ REVIEW |
+| < 5.0 | LOW | Scrape Workday KB or manual | ❌ NEEDS KB |
 
 ---
 
