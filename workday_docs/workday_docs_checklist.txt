@@ -1,0 +1,81 @@
+# Workday Documentation Checklist
+
+Base URL: https://doc.workday.com
+
+## Human Capital Management
+[ ] Human Capital Management - /admin-guide/en-us/human-capital-management.html
+[ ] Workday VNDLY - /admin-guide/en-us/vndly-documentation/vndly.html
+[x] Workday Paradox - EXTERNAL: https://paradox.helpjuice.com/
+[x] Workday Sana Learn - EXTERNAL: https://help.sana.ai/en/
+
+## Platform
+[ ] Manage Workday - /admin-guide/en-us/manage-workday/manage-workday.html
+[ ] Authentication and Security - /admin-guide/en-us/authentication-and-security/authentication-and-security.html
+[ ] Drive User Guide - /user-guide/en-us/workday-drive.html
+[ ] Slides User Guide - /user-guide/en-us/workday-slides.html
+[ ] Worksheets User Guide - /user-guide/en-us/workday-worksheets.html
+[ ] Notification Designer User Guide - /user-guide/en-us/workday-notification-designer.html
+[ ] Docs for Layouts User Guide - /user-guide/en-us/workday-docs-for-layouts.html
+[ ] Workday Central Login User Guide - /user-guide/en-us/workday-central-login-wcl-/wev1666724954446.html
+
+## Financials and Spend
+[ ] Financial Management - /admin-guide/en-us/financial-management/financial-management.html
+[ ] Spend Management - /admin-guide/en-us/spend-management/spend-management.html
+[ ] Strategic Sourcing: Sourcing Managers - /user-guide/en-us/strategic-sourcing-sourcing-managers/strategic-sourcing-for-sourcing-managers.html
+[ ] Strategic Sourcing: Suppliers - /user-guide/en-us/strategic-sourcing.html
+
+## Product Extensions
+[ ] Integrations (EIB) - /admin-guide/en-us/integrations.html
+[ ] Prism Analytics (Admin) - /admin-guide/en-us/reporting-and-analytics/prism-analytics/qgq1497977466556.html
+[ ] Workday Studio - /admin-guide/en-us/workday-studio.html
+[x] Developer Site - EXTERNAL: https://developer.workday.com/documentation
+[x] REST Services Directory - EXTERNAL: https://community.workday.com/sites/default/files/file-hosting/restapi/index.html
+[x] SOAP Web Services Directory - EXTERNAL: https://community.workday.com/sites/default/files/file-hosting/productionapi/index.html
+[x] FlowiseAI - EXTERNAL: https://docs.flowiseai.com/
+[x] Workday Sana Agent Builder - EXTERNAL: https://support.sana.ai/en/
+
+## Payroll
+[ ] Payroll - /admin-guide/en-us/payroll/payroll.html
+[ ] Global Payroll Connect - /admin-guide/en-us/integrations/global-payroll-connect/concept--global-payroll-connect.html
+
+## Education and Government
+[ ] Education and Government - /admin-guide/en-us/education-and-government/education-and-government.html
+[ ] Student - /admin-guide/en-us/student/setup-considerations--workday-student.html
+
+## Analytics and Planning
+[ ] Reporting and Analytics - /admin-guide/en-us/reporting-and-analytics/reporting-and-analytics.html
+[ ] Adaptive Planning and Consolidation - /admin-guide/en-us/adaptive-planning-and-consolidation.html
+[ ] Planning for HCM and Financials - /admin-guide/en-us/adaptive-planning.html
+[ ] People Analytics User Guide - /user-guide/en-us/workday-people-analytics/people-analytics.html
+[ ] Prism Analytics User Guide - /user-guide/en-us/workday-prism-analytics.html
+[ ] Discovery Boards User Guide - /user-guide/en-us/workday-discovery-boards/luj1584405722594.html
+
+## Reference and Basics
+[ ] See What's Changed in Guides - /admin-guide/en-us/administrator-guide-release-notes/about-workday-documentation-relnotes.html
+[ ] Glossary - /admin-guide/en-us/glossary/full-glossary-of-terms.html
+[ ] Workday Feature Descriptions - /admin-guide/en-us/workday-feature-descriptions/future--workday-feature-descriptions.html
+[ ] Use Case Library - /admin-guide/en-us/use-case-library/use-case-library.html
+[ ] QuickTips Sample Library - /admin-guide/en-us/manage-workday/user-experience/guidance-workspace/quicktips-sample-library/concept--quicktips-sample-library.html
+[ ] Guidance Workspace - /admin-guide/en-us/manage-workday/user-experience/guidance-workspace/future--concept--guidance-workspace.html
+[ ] Video: Workday Documentation Overview - /user-guide/en-us/workday-documentation-basics/video--workday-documentation-overview.html
+[ ] How To Use Workday Documentation - /user-guide/en-us/workday-documentation-basics/odf1522803575479.html
+[ ] Search Tips - /user-guide/en-us/workday-documentation-basics/qay1522803981038.html
+
+## Help Centers (Separate Portals)
+[ ] Adaptive Planning Help Center - /en-us/adaptive-planning.html
+[ ] Contract Management Help Center - /en-us/contract-management-document-intelligence.html
+[ ] HiredScore Help Center - /en-us/hiredscore.html
+[ ] Peakon Help Center - /en-us/peakon.html
+
+---
+SUMMARY:
+- Total Internal Guides: 35
+- External Links: 8 (marked with [x])
+- Admin Guides: 20
+- User Guides: 15
+
+PDF URL PATTERN:
+/content/dam/fmdita-outputs/pdfs/{guide-type}/en-us/{Guide-Name}.pdf
+
+Example HCM PDF:
+/content/dam/fmdita-outputs/pdfs/admin-guide/en-us/Admin-Guide-Human-Capital-Management.pdf
