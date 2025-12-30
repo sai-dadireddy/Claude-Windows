@@ -1,0 +1,425 @@
+AI-generated content may be incorrect
+
+Sainathreddy Dadireddy started transcription
+
+Speaker 1
+0 minutes 4 seconds0:04
+@1 0 minutes 4 seconds
+Whenever you are ready, yeah, we can. I just want to know, like, I mean, it's not like much of the thing. The thing is like, I don't know your workflow, like where you do, what do you do, how you do. That's one. I just, yeah.
+0:06
+0 minutes 6 seconds
+Yeah.
+0:07
+0 minutes 7 seconds
+Yeah.
+
+Speaker 1
+0 minutes 20 seconds0:20
+@1 0 minutes 20 seconds
+Yeah.
+KN
+
+Karthikeyan Narasimhamoorthy
+0 minutes 20 seconds0:20
+Karthikeyan Narasimhamoorthy 0 minutes 20 seconds
+Sure. So Sai, what we are trying to show you here is like what are all the products that we are currently working on and Nagaraj and Karthik can show you like what are all the.
+
+Speaker 1
+0 minutes 27 seconds0:27
+@1 0 minutes 27 seconds
+Mhm.
+@1 0 minutes 30 seconds
+Is it?
+KN
+
+Karthikeyan Narasimhamoorthy
+0 minutes 39 seconds0:39
+Karthikeyan Narasimhamoorthy 0 minutes 39 seconds
+Things application from the application side of that we can share you how we are doing that probably once you understand what what is that application is doing and then.
+
+Speaker 1
+0 minutes 47 seconds0:47
+@1 0 minutes 47 seconds
+Mhm.
+KN
+
+Karthikeyan Narasimhamoorthy
+0 minutes 55 seconds0:55
+Karthikeyan Narasimhamoorthy 0 minutes 55 seconds
+How good you can support us from creating agents. Those things we can see from the flow that we show you.
+
+Speaker 1
+55 minutes 44 seconds55:44
+@1 55 minutes 44 seconds
+Yeah.
+KN
+Karthikeyan Narasimhamoorthy
+55 minutes 55 seconds55:55
+Karthikeyan Narasimhamoorthy 55 minutes 55 seconds
+Agentic approach need or from your experience of current AI approach that you are following right? You can also come through or go through that application and see where you can help us on providing an agentic approach.
+
+Speaker 1
+55 minutes 55 seconds55:55
+@1 55 minutes 55 seconds
+Mhm.
+@1 56 minutes 12 seconds
+OK.
+KN
+Karthikeyan Narasimhamoorthy
+56 minutes 12 seconds56:12
+Karthikeyan Narasimhamoorthy 56 minutes 12 seconds
+So anyway, so you will. So once you have got this information right, you will have time to understand the application and see where you can just give your agentic approach view of.
+
+Speaker 1
+56 minutes 19 seconds56:19
+@1 56 minutes 19 seconds
+Uh ha.
+KN
+Karthikeyan Narasimhamoorthy
+56 minutes 29 seconds56:29
+Karthikeyan Narasimhamoorthy 56 minutes 29 seconds
+As as particular scenario and we can have an additional call next week Monday so that wherever is required we can see like implementing or introducing a new agentic approach.
+
+Speaker 1
+56 minutes 35 seconds56:35
+@1 56 minutes 35 seconds
+Yeah.
+@1 56 minutes 45 seconds
+Oh.
+KN
+Karthikeyan Narasimhamoorthy
+56 minutes 46 seconds56:46
+Karthikeyan Narasimhamoorthy 56 minutes 46 seconds
+So again, so this is going to be one or two more sessions that is required from your end to understand what is that.
+
+Speaker 1
+56 minutes 52 seconds56:52
+@1 56 minutes 52 seconds
+OK.
+@1 56 minutes 55 seconds
+Yeah.
+KN
+Karthikeyan Narasimhamoorthy
+56 minutes 58 seconds56:58
+Karthikeyan Narasimhamoorthy 56 minutes 58 seconds
+So probably we will have one more call to show you what we have already. Then you can just come up with your suggestions.
+
+Speaker 1
+56 minutes 58 seconds56:58
+@1 56 minutes 58 seconds
+And.
+@1 57 minutes 3 seconds
+Mhm.
+@1 57 minutes 7 seconds
+My findings provide. I'll provide a document based on that. If you if you think wherever it's helpful, you can just chip in there. I mean, so yeah, I'll go through that. Yeah. OK. I think, yeah, this is pretty much I got basic understanding for now. Yeah.
+KN
+Karthikeyan Narasimhamoorthy
+57 minutes 24 seconds57:24
+Karthikeyan Narasimhamoorthy 57 minutes 24 seconds
+Yeah.
+Karthikeyan Narasimhamoorthy 57 minutes 25 seconds
+OK.
+
+Speaker 1
+57 minutes 26 seconds57:26
+@1 57 minutes 26 seconds
+OK. Thank you.
+KN
+Karthikeyan Narasimhamoorthy
+57 minutes 28 seconds57:28
+Karthikeyan Narasimhamoorthy 57 minutes 28 seconds
+Thank you. Thank you all. Bye.
+
+Speaker 1
+57 minutes 29 seconds57:29
+@1 57 minutes 29 seconds
+Thanks all.
+ND
+Nagaraj Duraisamy
+57 minutes 30 seconds57:30
+Nagaraj Duraisamy 57 minutes 30 seconds
+Thank you, everyone. Yeah.
+
+Speaker 1
+57 minutes 32 seconds57:32
+@1 57 minutes 32 seconds
+Thanks. Thanks.
+KN
+Karthikeyan Narasimhamoorthy
+57 minutes 32 seconds57:32
+Karthikeyan Narasimhamoorthy 57 minutes 32 seconds
+No.
+MB
+
+Mohammed Burhan
+57 minutes 33 seconds57:33
+Mohammed Burhan 57 minutes 33 seconds
+Thank you. Thank you.
+JA
+
+Jancy Mary A
+57 minutes 33 seconds57:33
+Jancy Mary A 57 minutes 33 seconds
+Thank you.
+PA
+
+Parthasarathi A
+57 minutes 35 seconds57:35
+Parthasarathi A 57 minutes 35 seconds
+I'm steam.
+
+Sainathreddy Dadireddy stopped transcription
+Is
+
+
+
+Sainathreddy Dadireddy started transcription
+KN
+
+Karthikeyan Natarajan
+0 minutes 3 seconds0:03
+Karthikeyan Natarajan 0 minutes 3 seconds
+So here at high level we'll have a package. This is a package that will have a set of scenarios so that we will have it as a scenario. Under a scenario we'll have a list of steps to execute, which means that.
+Karthikeyan Natarajan 0 minutes 22 seconds
+What to be entered or what to be clicked or what to be verified? That will be a steps. So if you see that.
+Karthikeyan Natarajan 0 minutes 34 seconds
+So excellent.
+Karthikeyan Natarajan 0 minutes 49 seconds
+So so here we will have a list of steps and list like a command based execution. It whatever user enter it is and if a user want to enter some value in the respective text box it will enter like this if you want a user want to click the button.
+Karthikeyan Natarajan 1 minute 8 seconds
+So it will click it so it it will support some basics command but user can type it in any way, right? It is not a fixer. Enter the username as something so user can type as enter username as something or log in with username and password with this then this.
+Karthikeyan Natarajan 1 minute 27 seconds
+So that can be many ways, but currently it support this types of command in this. So if I if I say it enter the username as this one if I execute it.
+Karthikeyan Natarajan 1 minute 43 seconds
+So it will execute it parallelly in the right side of it. You can see it.
+1:45
+1 minute 45 seconds
+Mm.
+
+Speaker 1
+1 minute 48 seconds1:48
+@1 1 minute 48 seconds
+So what is the software behind this we are using?
+KN
+Karthikeyan Natarajan
+1 minute 51 seconds1:51
+Karthikeyan Natarajan 1 minute 51 seconds
+So this is Angular plus Electron in the US and it is a Windows application actually.
+
+Speaker 1
+51 minutes 9 seconds51:09
+@1 51 minutes 9 seconds
+Those needs plugins of your existing data means I donate UI but but I may need the back end services only.
+KN
+Karthikeyan Narasimhamoorthy
+51 minutes 13 seconds51:13
+Karthikeyan Narasimhamoorthy 51 minutes 13 seconds
+Mm.
+
+Speaker 1
+51 minutes 18 seconds51:18
+@1 51 minutes 18 seconds
+That's the only thing. And can you send me like a list of all agents and their requirements and priority basis? Only that help I need it from you, yeah.
+KN
+Karthikeyan Narasimhamoorthy
+51 minutes 18 seconds51:18
+Karthikeyan Narasimhamoorthy 51 minutes 18 seconds
+OK.
+Karthikeyan Narasimhamoorthy 51 minutes 21 seconds
+Hmm.
+Karthikeyan Narasimhamoorthy 51 minutes 30 seconds
+Yeah, yeah, sure, sure. I will discuss with the team and I will just share you that list so that you can also like understand what can be done from the agentic approach point of view.
+
+Speaker 1
+51 minutes 38 seconds51:38
+@1 51 minutes 38 seconds
+And mm-hmm.
+@1 51 minutes 43 seconds
+Yeah.
+@1 51 minutes 45 seconds
+Uh huh.
+@1 51 minutes 47 seconds
+Yep, not in you have anything or.
+NT
+Narendrakumar Thami
+51 minutes 57 seconds51:57
+Narendrakumar Thami 51 minutes 57 seconds
+No, nothing from my end. Saina and the team. Nothing here. I'm all good. Hey, how do you the the two Karthikeyan? So how do you how do and both are KN also meaning last, you know.
+
+Speaker 1
+51 minutes 57 seconds51:57
+@1 51 minutes 57 seconds
+Uh.
+@1 52 minutes 2 seconds
+Yeah.
+KN
+Karthikeyan Narasimhamoorthy
+52 minutes 5 seconds52:05
+Karthikeyan Narasimhamoorthy 52 minutes 5 seconds
+Yeah.
+Karthikeyan Narasimhamoorthy 52 minutes 6 seconds
+Yes, yes, yeah. Actually, yeah, we have a repo from the previous organization. So, so we understand when they call by name itself again see if.
+
+Speaker 1
+52 minutes 7 seconds52:07
+@1 52 minutes 7 seconds
+Yeah, that's.
+@1 52 minutes 11 seconds
+Yeah.
+NT
+Narendrakumar Thami
+52 minutes 12 seconds52:12
+Narendrakumar Thami 52 minutes 12 seconds
+So how do you do it, huh?
+Narendrakumar Thami 52 minutes 18 seconds
+Ha ha ha.
+Narendrakumar Thami 52 minutes 23 seconds
+What?
+KN
+Karthikeyan Narasimhamoorthy
+52 minutes 26 seconds52:26
+Karthikeyan Narasimhamoorthy 52 minutes 26 seconds
+Yeah, it depends. Like the tone itself, we understand who is being pointed.
+NT
+Narendrakumar Thami
+52 minutes 28 seconds52:28
+Narendrakumar Thami 52 minutes 28 seconds
+Mm.
+52:31
+52 minutes 31 seconds
+Yes.
+NT
+Narendrakumar Thami
+52 minutes 31 seconds52:31
+Narendrakumar Thami 52 minutes 31 seconds
+Who's the? OK, you mean the context of the question determines who will answer it, right? OK, uh, good.
+KN
+Karthikeyan Narasimhamoorthy
+52 minutes 35 seconds52:35
+Karthikeyan Narasimhamoorthy 52 minutes 35 seconds
+Yes, yes, yes. Because we have almost more than almost 10 years of collaboration with me, myself, Karthi and Nagaraj. So yeah.
+NT
+Narendrakumar Thami
+52 minutes 43 seconds52:43
+Narendrakumar Thami 52 minutes 43 seconds
+Alright, got it, got it, got.
+
+Speaker 1
+52 minutes 43 seconds52:43
+@1 52 minutes 43 seconds
+OK.
+NT
+Narendrakumar Thami
+52 minutes 46 seconds52:46
+Narendrakumar Thami 52 minutes 46 seconds
+Yeah.
+Narendrakumar Thami 52 minutes 48 seconds
+Got it. Got it.
+KN
+Karthikeyan Narasimhamoorthy
+52 minutes 49 seconds52:49
+Karthikeyan Narasimhamoorthy 52 minutes 49 seconds
+Again, there are others. Nitish is also there too.
+
+Speaker 1
+52 minutes 52 seconds52:52
+@1 52 minutes 52 seconds
+Mhm.
+NT
+Narendrakumar Thami
+52 minutes 52 seconds52:52
+Narendrakumar Thami 52 minutes 52 seconds
+No worries, no worries. Yes, there are no other questions yet from my end. I'll go.
+KN
+Karthikeyan Narasimhamoorthy
+52 minutes 54 seconds52:54
+Karthikeyan Narasimhamoorthy 52 minutes 54 seconds
+Yeah.
+Karthikeyan Narasimhamoorthy 52 minutes 58 seconds
+Yeah, at least we are at a point where we have something, uh, to think of.
+
+Speaker 1
+52 minutes 59 seconds52:59
+@1 52 minutes 59 seconds
+Yeah.
+@1 53 minutes 2 seconds
+At least I know what exactly. Previously it's like a black box to me. Now I I can visualize like, OK, where exactly what's happening. OK, thanks. Yeah, it'll be easy for me now. Yeah.
+NT
+Narendrakumar Thami
+53 minutes 3 seconds53:03
+Narendrakumar Thami 53 minutes 3 seconds
+Yeah.
+KN
+Karthikeyan Narasimhamoorthy
+53 minutes 7 seconds53:07
+Karthikeyan Narasimhamoorthy 53 minutes 7 seconds
+Mm.
+Karthikeyan Narasimhamoorthy 53 minutes 10 seconds
+Yeah.
+Karthikeyan Narasimhamoorthy 53 minutes 15 seconds
+Thank you. Thank you, Sai, for it. Thank you.
+
+Speaker 1
+53 minutes 17 seconds53:17
+@1 53 minutes 17 seconds
+Yeah thanks. The only two things Karthik and once The thing is like back end access, read only access for AWS account itself and you are five agents and their priority basis like this is first priority, this is first priority and based on that I will.
+KN
+Karthikeyan Narasimhamoorthy
+53 minutes 25 seconds53:25
+Karthikeyan Narasimhamoorthy 53 minutes 25 seconds
+Um.
+
+Speaker 1
+53 minutes 35 seconds53:35
+@1 53 minutes 35 seconds
+Scan the back end. Based on that I can see like where I can chip in or add my thing. See my thing, yeah.
+KN
+Karthikeyan Narasimhamoorthy
+53 minutes 39 seconds53:39
+Karthikeyan Narasimhamoorthy 53 minutes 39 seconds
+Sure, sure, sure. Thank you.
+
+Speaker 1
+53 minutes 44 seconds53:44
+@1 53 minutes 44 seconds
+Yeah. Oh, OK. Thanks. Thanks all. Thank you very much.
+KN
+Karthikeyan Narasimhamoorthy
+53 minutes 48 seconds53:48
+Karthikeyan Narasimhamoorthy 53 minutes 48 seconds
+Thank you all.
+
+Speaker 1
+53 minutes 51 seconds53:51
+@1 53 minutes 51 seconds
+OK.
+KN
+Karthikeyan Narasimhamoorthy
+53 minutes 51 seconds53:51
+Karthikeyan Narasimhamoorthy 53 minutes 51 seconds
+Bye.
+NS
+
+Nitish Sharma
+53 minutes 52 seconds53:52
+Nitish Sharma 53 minutes 52 seconds
+Thank you.
+JA
+
+Jancy Mary A
+53 minutes 53 seconds53:53
+Jancy Mary A 53 minutes 53 seconds
+Thank you. Thanks, Tim.
+MB
+
+Mohammed Burhan
+53 minutes 53 seconds53:53
+Mohammed Burhan 53 minutes 53 seconds
+Thank you. Thanks everyone.
+
+Speaker 1
+53 minutes 53 seconds53:53
+@1 53 minutes 53 seconds
+Thank you.
+
+Sainathreddy Dadireddy stopped transcription
