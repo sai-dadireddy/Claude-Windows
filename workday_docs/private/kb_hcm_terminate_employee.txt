@@ -1,0 +1,583 @@
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL
+Category: Human Capital Management - Employee Lifecycle
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Terminate Employee business process handles the offboarding of workers from
+the organization. This process manages the worker's final employment date,
+termination reason, severance eligibility, and associated administrative tasks
+such as benefits termination, final payroll, and equipment return.
+
+Business Process: Terminate Employee
+Functional Area: Human Capital Management
+Initiator: HR Partner, Manager (with delegation)
+Typical Duration: 1-3 days (depending on approvals)
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. TERMINATION DETAILS
+   - Termination Date (Last Day Worked)
+   - Termination Reason (Voluntary/Involuntary)
+   - Termination Category (Resignation, Retirement, Termination for Cause, etc.)
+   - Eligible for Rehire checkbox
+   - Severance eligibility
+
+2. WORKER INFORMATION
+   - Worker ID
+   - Position
+   - Organization/Department
+   - Manager
+   - Job Profile
+
+3. EXIT DETAILS
+   - Exit Interview completion
+   - Resignation letter attachment
+   - Equipment return checklist
+   - Final expenses submission
+   - Knowledge transfer status
+
+4. COMPENSATION & BENEFITS
+   - Final payroll run date
+   - Unused PTO payout calculation
+   - Benefits termination date
+   - COBRA eligibility notification
+   - Final compensation settlement
+
+5. ACCESS & SECURITY
+   - System access termination date
+   - Badge/key return
+   - Email account deactivation
+   - VPN access removal
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE TERMINATION
+-----------------------------
+Navigation: Search "Terminate Employee" in global search
+
+Required Fields:
+- Worker Name (search and select)
+- Termination Date
+- Last Day of Work
+- Termination Reason
+- Reason Category
+
+Actions:
+1. Search for worker using employee ID or name
+2. Select termination date (cannot be in past for most scenarios)
+3. Choose primary reason from dropdown
+4. Select specific reason category
+5. Mark "Eligible for Rehire" if applicable
+
+STEP 2: COMPLETE TERMINATION DETAILS
+-------------------------------------
+Sub-Process: Termination Details
+
+Required Information:
+- Primary Termination Reason
+- Termination Sub-category
+- Voluntary/Involuntary indicator
+- Regrettable/Non-regrettable (for analytics)
+- Eligible for Rehire
+
+Optional Information:
+- Additional Comments
+- Attachments (resignation letter, termination notice)
+- Exit interview date/completion
+
+STEP 3: REVIEW COMPENSATION & BENEFITS
+---------------------------------------
+Sub-Process: Final Compensation
+
+System Auto-Calculations:
+- Unused PTO balance
+- Prorated bonus (if applicable)
+- Final paycheck amount
+- Benefits end date (typically last day of month)
+
+Required Actions:
+1. Verify final compensation calculations
+2. Confirm severance eligibility
+3. Review benefits termination date
+4. Approve final expense reports
+
+STEP 4: PROCESS CHECKLIST TASKS
+--------------------------------
+Sub-Process: Offboarding Tasks
+
+Typical Tasks:
+□ Exit interview scheduled/completed
+□ Equipment returned (laptop, phone, badge, keys)
+□ Company credit card returned
+□ Final expense report submitted
+□ Knowledge transfer completed
+□ Team notification sent
+□ Email forwarding set up
+□ Access to systems reviewed
+
+STEP 5: SECURITY & ACCESS TERMINATION
+--------------------------------------
+Sub-Process: Terminate System Access
+
+Automated Actions:
+- Workday access termination (effective termination date)
+- Email account conversion to forwarding
+- VPN access removal
+- Badge deactivation
+
+Manual Verification:
+- Shared drive access removal
+- Application-specific access termination
+- Physical security access removal
+
+STEP 6: ROUTING & APPROVALS
+----------------------------
+Approval Chain (typical):
+1. Initiator (HR Partner/Manager)
+2. Department Manager (if not initiator)
+3. HR Business Partner
+4. Payroll (for final comp review)
+5. IT (for access termination)
+
+Each approver can:
+- Approve
+- Deny (send back with comments)
+- Reassign
+- Add additional approvers
+
+STEP 7: COMPLETION & VERIFICATION
+----------------------------------
+Post-Termination Actions:
+
+Immediate (Termination Date):
+- Worker status changes to "Terminated"
+- Active assignments end
+- Benefits eligibility ends (or continues through month-end)
+- System access removed
+
+Within 30 Days:
+- Final paycheck processed
+- COBRA notification sent
+- Unused PTO paid out
+- Final tax documents prepared
+
+STEP 8: REPORTING & COMPLIANCE
+-------------------------------
+Required Reports:
+- Termination Summary Report
+- Exit Interview Analytics
+- Turnover Analysis by Reason
+- Regrettable Loss Tracking
+- Final Compensation Reconciliation
+
+Compliance:
+- COBRA notification timing (within 30 days)
+- Final paycheck timing (per state law)
+- PTO payout rules (per state law)
+- Benefits termination notice
+- Unemployment claim processing
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Human_Resources
+
+Key Operations:
+1. Get_Workers
+   - Retrieve worker details before termination
+   - Parameters: Worker_Reference
+   - Returns: Full worker profile including employment data
+
+2. Get_Employment_Information
+   - Retrieve employment details for termination validation
+   - Returns: Position, organization, hire date
+
+3. Terminate_Employee (Business Process via API)
+   - Initiate termination through API
+   - Required: Worker_Reference, Termination_Date, Termination_Reason
+   - Returns: Business Process ID for tracking
+
+4. Get_Former_Worker_Data
+   - Retrieve data after termination completion
+   - Use for historical reporting
+   - Returns: Termination details, final comp, exit data
+
+5. Import_Terminate_Employee (EIB)
+   - Bulk termination processing
+   - CSV/Excel upload for mass terminations
+   - Useful for RIF (Reduction in Force) scenarios
+
+================================================================================
+AUTOMATION CONSIDERATIONS FOR ELECTRON
+================================================================================
+
+1. UI AUTOMATION ANCHORS
+   ----------------------
+   Key Selectors:
+   - Search box: input[data-automation-id="searchBox"]
+   - Terminate Employee link: button:contains("Terminate Employee")
+   - Worker search: input[data-automation-id="workerSearchBox"]
+   - Termination date: input[data-automation-id="datePicker"]
+   - Reason dropdown: select[data-automation-id="terminationReason"]
+   - Submit button: button[data-automation-id="submitButton"]
+
+   Navigation Path:
+   1. Click search → type "Terminate Employee"
+   2. Select business process from results
+   3. Search worker by ID or name
+   4. Fill termination details form
+   5. Complete sub-processes
+   6. Submit for routing
+
+2. VALIDATION REQUIREMENTS
+   ------------------------
+   Pre-Submission Checks:
+   - Termination date not in past (unless backdated termination)
+   - Worker has active employment record
+   - No pending business processes for worker
+   - Required fields completed (reason, date)
+   - Final paycheck date calculated
+
+   Error Handling:
+   - "Worker has pending transactions" → wait and retry
+   - "Invalid termination date" → adjust to valid date
+   - "Missing required field" → identify and populate field
+   - "Insufficient security" → verify user has HR Partner access
+
+3. BULK PROCESSING APPROACH
+   -------------------------
+   For Multiple Terminations:
+
+   Option A: EIB (Recommended for 10+)
+   - Use Import_Terminate_Employee spreadsheet
+   - Batch upload via Workday Integration
+   - Monitor import status
+   - Review errors and resubmit
+
+   Option B: API Loop (Recommended for < 10)
+   - Call Terminate_Employee SOAP operation
+   - Loop through worker list
+   - Track business process IDs
+   - Monitor approval status
+   - Generate completion report
+
+   Option C: UI Automation (Last Resort)
+   - Login via Electron browser
+   - Loop through worker list
+   - Fill form for each worker
+   - Screenshot confirmation
+   - Export results
+
+4. DATA EXTRACTION NEEDS
+   ----------------------
+   Input Requirements:
+   - Worker ID or Employee ID
+   - Termination Date (YYYY-MM-DD)
+   - Termination Reason Code
+   - Eligible for Rehire (true/false)
+   - Additional Comments (optional)
+
+   Output Data to Capture:
+   - Business Process ID
+   - Termination confirmation status
+   - Final paycheck amount
+   - PTO payout amount
+   - Benefits end date
+   - System access termination date
+
+5. SCREENSHOT STRATEGY
+   --------------------
+   Critical Screenshots:
+   1. Worker search result (verify correct worker)
+   2. Termination details form (audit trail)
+   3. Compensation summary (final pay verification)
+   4. Submission confirmation (BP ID visible)
+   5. Approval chain (routing visualization)
+
+   Screenshot Timing:
+   - Before each major step
+   - After successful submission
+   - On any error/warning
+   - Final confirmation page
+
+6. ERROR RECOVERY
+   ---------------
+   Common Issues:
+
+   Issue: "Worker not found"
+   Solution: Verify employee ID format, try name search
+
+   Issue: "Termination date in past"
+   Solution: Check if backdated termination feature enabled
+
+   Issue: "Business process already exists"
+   Solution: Check for pending terminations, cancel if needed
+
+   Issue: "Insufficient security"
+   Solution: Verify HR Partner or Administrator role assignment
+
+7. PERFORMANCE OPTIMIZATION
+   -------------------------
+   Best Practices:
+   - Use SOAP API for bulk (faster than UI)
+   - Implement exponential backoff for retries
+   - Batch API calls in groups of 50
+   - Use parallel processing for independent terminations
+   - Cache worker lookups to reduce API calls
+   - Schedule bulk runs during off-peak hours
+
+8. COMPLIANCE & AUDIT
+   -------------------
+   Logging Requirements:
+   - Timestamp of each action
+   - User/Service account used
+   - Worker ID being terminated
+   - Termination date and reason
+   - Business Process ID generated
+   - Approval chain completion
+   - Any errors encountered
+
+   Audit Trail:
+   - Save screenshots to structured folder
+   - Generate CSV log of all terminations
+   - Export PDF of termination confirmation
+   - Store for 7 years (per retention policy)
+
+================================================================================
+RELATED BUSINESS PROCESSES
+================================================================================
+
+Connected Workflows:
+- End Additional Job: For workers with multiple jobs
+- Change Job: For lateral moves vs termination
+- Request Compensation Change: For final compensation adjustments
+- Create Benefit Event: For benefits termination
+- End Contingent Worker: For contractor terminations
+- End International Assignment: For expat terminations
+
+Pre-Requisites:
+- Worker must have active employment record
+- No pending business processes (ideally)
+- User has HR Partner or Administrator security
+
+Post-Termination Processes:
+- Final Payroll Processing
+- COBRA Notification
+- Unemployment Claim Processing
+- Exit Interview Analysis
+- Replacement Requisition (if needed)
+
+================================================================================
+INTEGRATION POINTS
+================================================================================
+
+Systems Impacted:
+1. Workday HCM: Worker status, employment record
+2. Workday Payroll: Final paycheck, tax withholdings
+3. Workday Benefits: COBRA, FSA termination
+4. Workday Time Tracking: Timesheet closure
+5. Active Directory: Account deactivation
+6. Email System: Forwarding setup
+7. Physical Security: Badge deactivation
+8. IT Asset Management: Equipment tracking
+
+Notification Triggers:
+- Manager: Termination initiated
+- HR: Approval required
+- Payroll: Final compensation processing
+- IT: Access termination
+- Benefits: COBRA notification
+- Worker: Offboarding instructions
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. PLANNING
+   - Schedule termination meetings carefully
+   - Coordinate with IT for simultaneous access removal
+   - Prepare manager talking points
+   - Have HR present for involuntary terminations
+
+2. TIMING
+   - Process termination on actual last day (not before)
+   - Coordinate benefits end date (typically month-end)
+   - Schedule final paycheck per state law
+   - Send COBRA notice within 30 days
+
+3. COMMUNICATION
+   - Notify team appropriately (respect privacy)
+   - Set up email forwarding rules
+   - Update org charts
+   - Communicate knowledge transfer plan
+
+4. COMPLIANCE
+   - Follow final paycheck timing laws by state
+   - Provide required termination notices
+   - Calculate PTO payout per policy
+   - Send COBRA notification timely
+   - Process unemployment claims correctly
+
+5. SECURITY
+   - Terminate access simultaneously with notification
+   - Collect all company property
+   - Disable remote access immediately
+   - Review and revoke application access
+   - Change shared passwords if applicable
+
+================================================================================
+ELECTRON AUTOMATION PSEUDOCODE
+================================================================================
+
+```python
+async def terminate_employee(worker_id, termination_date, reason_code, eligible_rehire=False):
+    """
+    Automate Terminate Employee business process
+
+    Args:
+        worker_id: Employee ID or Worker ID
+        termination_date: Last day of work (YYYY-MM-DD)
+        reason_code: Termination reason from lookup
+        eligible_rehire: Boolean for rehire eligibility
+
+    Returns:
+        dict: Business process ID and confirmation details
+    """
+
+    # Step 1: Login to Workday
+    page = await browser.new_page()
+    await page.goto(WORKDAY_URL)
+    await login(page, username, password)
+
+    # Step 2: Navigate to Terminate Employee
+    await page.fill('input[data-automation-id="searchBox"]', 'Terminate Employee')
+    await page.click('button:has-text("Terminate Employee")')
+
+    # Step 3: Search for worker
+    await page.fill('input[data-automation-id="workerSearchBox"]', worker_id)
+    await page.press('input[data-automation-id="workerSearchBox"]', 'Enter')
+    await page.wait_for_selector('.worker-result')
+
+    # Screenshot: Worker search result
+    await page.screenshot(path=f'termination_{worker_id}_01_worker.png')
+
+    # Step 4: Verify correct worker and select
+    worker_name = await page.text_content('.worker-result .worker-name')
+    log.info(f"Found worker: {worker_name}")
+    await page.click('.worker-result')
+
+    # Step 5: Fill termination details
+    await page.fill('input[data-automation-id="terminationDate"]', termination_date)
+    await page.select_option('select[data-automation-id="terminationReason"]', reason_code)
+
+    if eligible_rehire:
+        await page.check('input[data-automation-id="eligibleForRehire"]')
+
+    # Screenshot: Termination form
+    await page.screenshot(path=f'termination_{worker_id}_02_details.png')
+
+    # Step 6: Complete sub-processes
+    # (Benefits, compensation, equipment return, etc.)
+    await complete_subprocesses(page)
+
+    # Step 7: Submit for approval
+    await page.click('button[data-automation-id="submitButton"]')
+    await page.wait_for_selector('.confirmation-message')
+
+    # Screenshot: Confirmation
+    await page.screenshot(path=f'termination_{worker_id}_03_confirmation.png')
+
+    # Step 8: Extract business process ID
+    bp_id = await page.text_content('.business-process-id')
+
+    # Step 9: Return confirmation
+    return {
+        'status': 'success',
+        'worker_id': worker_id,
+        'business_process_id': bp_id,
+        'termination_date': termination_date,
+        'timestamp': datetime.now().isoformat()
+    }
+
+async def complete_subprocesses(page):
+    """Handle sub-process steps like equipment return, exit interview"""
+
+    # Equipment return checklist
+    equipment_items = await page.query_selector_all('.equipment-item input[type="checkbox"]')
+    for item in equipment_items:
+        await item.check()
+
+    # Exit interview (if required)
+    if await page.is_visible('input[data-automation-id="exitInterviewDate"]'):
+        await page.fill('input[data-automation-id="exitInterviewDate"]', get_exit_interview_date())
+
+    # Benefits termination confirmation
+    await page.click('button:has-text("Confirm Benefits Termination")')
+
+    # Final compensation review
+    await page.click('button:has-text("Approve Final Compensation")')
+```
+
+================================================================================
+SAMPLE SOAP API REQUEST
+================================================================================
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:bsvc="urn:com.workday/bsvc">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>ISU_USERNAME@TENANT</wsse:Username>
+            <wsse:Password>ISU_PASSWORD</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bsvc:Terminate_Employee_Request bsvc:version="v42.2">
+         <bsvc:Business_Process_Parameters>
+            <bsvc:Auto_Complete>false</bsvc:Auto_Complete>
+            <bsvc:Run_Now>true</bsvc:Run_Now>
+         </bsvc:Business_Process_Parameters>
+         <bsvc:Terminate_Employee_Data>
+            <bsvc:Employee_Reference>
+               <bsvc:ID bsvc:type="Employee_ID">12345</bsvc:ID>
+            </bsvc:Employee_Reference>
+            <bsvc:Termination_Date>2025-12-31</bsvc:Termination_Date>
+            <bsvc:Primary_Reason_Reference>
+               <bsvc:ID bsvc:type="Termination_Reason_ID">RESIGN</bsvc:ID>
+            </bsvc:Primary_Reason_Reference>
+            <bsvc:Eligible_for_Rehire>true</bsvc:Eligible_for_Rehire>
+         </bsvc:Terminate_Employee_Data>
+      </bsvc:Terminate_Employee_Request>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
+================================================================================
+NOTES
+================================================================================
+
+- Termination is IRREVERSIBLE once approved - cannot undo
+- For accidental terminations, must use Rehire business process
+- Consider using "End Additional Job" for workers with multiple positions
+- Backdated terminations require special security access
+- Final paycheck timing varies by state (immediate vs next pay cycle)
+- COBRA notification is legally required within 30 days
+- Worker record moves to "Former Worker" status after termination
+- Historical data remains accessible through Get_Former_Worker_Data API
+
+================================================================================

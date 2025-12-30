@@ -98,18 +98,37 @@ Oracle recently migrated MOS to new portal (Dec 2025). IDs changed:
 | Integration Broker Manual | https://ib.books.cedarhillsgroup.com/ |
 | PeopleTools API Repository | https://docs.oracle.com/cd/E92519_02/pt856pbr3/eng/pt/tpcr/ |
 
-## Usage
+## RAG Usage
 
 ```bash
-# Query RAG (when implemented)
+# Query all docs
 python oracle_rag.py "PeopleSoft backup procedures"
 
-# List available docs
+# List all indexed docs
 python oracle_rag.py --list
 
-# Search MOS articles
-python oracle_rag.py --search-mos "database upgrade"
+# List MOS KB articles
+python oracle_rag.py --list-kb
+
+# Get specific KB article
+python oracle_rag.py --kb KB593233
+
+# Filter by category
+python oracle_rag.py --category peopletools "upgrade"
+
+# Interactive mode
+python oracle_rag.py --interactive
 ```
+
+## Categories
+
+| Category | Directory | Content |
+|----------|-----------|---------|
+| public | `public/` | Public API specs, docs |
+| private | `private/` | MOS KB articles (auth-scraped) |
+| peopletools | `peopletools/` | PeopleTools documentation |
+| integration | `integration/` | Integration Broker guides |
+| patches | `patches/` | Patch info and notes |
 
 ## Security Notes
 
