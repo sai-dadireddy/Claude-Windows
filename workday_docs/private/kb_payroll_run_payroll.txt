@@ -1,0 +1,453 @@
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Payroll WSDL
+Category: Payroll - Payroll Processing
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Run Payroll process calculates employee earnings, deductions, and taxes for
+a specific pay period. This is the core payroll calculation that determines net
+pay for each employee. Payroll runs can be regular (scheduled) or off-cycle
+(special/ad-hoc payments).
+
+Business Process: Run Pay Calculation / Process Payroll
+Functional Area: Payroll
+Initiator: Payroll Specialist or automated schedule
+Typical Duration: 15 minutes - 2 hours (depending on employee count)
+
+Types of Payroll Runs:
+- Regular Payroll: Scheduled pay period (weekly, bi-weekly, monthly)
+- Off-Cycle Payroll: Bonus, termination final pay, corrections
+- Simulation: Test run without committing results
+- Retro Payroll: Retroactive adjustments for prior periods
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PAYROLL INPUT
+   - Pay Group (defines which employees)
+   - Pay Period (start and end dates)
+   - Check Date (payment date)
+   - Timesheet data (hours worked)
+   - Earnings (salary, hourly, overtime)
+   - One-time payments (bonus, commission, reimbursement)
+
+2. CALCULATIONS
+   - Gross pay (base + overtime + bonuses)
+   - Pre-tax deductions (401k, HSA, FSA)
+   - Tax withholding (Federal, State, Local, FICA)
+   - Post-tax deductions (garnishments, loans)
+   - Employer taxes (FICA match, FUTA, SUTA)
+   - Net pay (take-home amount)
+
+3. PAYROLL RESULTS
+   - Employee payslips
+   - Payroll register
+   - Tax liability report
+   - Deduction summary
+   - Employer cost summary
+   - Garnishment payments
+
+4. APPROVAL & SETTLEMENT
+   - Payroll review
+   - Approval workflow
+   - Settlement run (process payments)
+   - Bank file generation (ACH/wire)
+   - Check printing
+   - Payslip distribution
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: PREPARE FOR PAYROLL
+----------------------------
+Pre-Payroll Checklist:
+□ All timesheets submitted and approved
+□ One-time payments entered (bonuses, reimbursements)
+□ Benefits elections updated
+□ Tax withholding changes processed
+□ New hires added to payroll
+□ Terminations processed
+□ Job changes effective date aligned
+□ Garnishment orders current
+
+Validation:
+- Run "Payroll Pre-Check" report
+- Verify employee count in pay group
+- Check for pending time off approvals
+- Review pending compensation changes
+
+STEP 2: INITIATE PAYROLL RUN
+-----------------------------
+Navigation: Payroll → Run Pay Calculation
+
+Required Inputs:
+- Pay Group (e.g., "US Biweekly Salaried")
+- Pay Period Start Date
+- Pay Period End Date
+- Payment Date (check date)
+
+Actions:
+1. Navigate to Payroll Workbench
+2. Click "Run Pay Calculation"
+3. Select Pay Group
+4. Confirm pay period dates
+5. Set payment date
+6. Choose run type (Regular/Simulation)
+7. Click "Submit"
+
+STEP 3: MONITOR CALCULATION PROCESS
+------------------------------------
+Background Process:
+- Payroll calculation runs as background job
+- Duration: 15 min to 2 hours (based on employee count)
+- System calculates in batches
+- Progress visible in Process Monitor
+
+Monitoring:
+1. Go to "View Background Processes"
+2. Find "Run Pay Calculation" job
+3. Monitor status: Queued → Running → Complete
+4. Check for errors or warnings
+
+STEP 4: REVIEW PAYROLL RESULTS
+-------------------------------
+Payroll Results Review:
+
+Key Reports to Check:
+1. Payroll Results Summary
+   - Total gross pay
+   - Total deductions
+   - Total taxes
+   - Total net pay
+   - Employee count
+
+2. Variance Report
+   - Compare to prior period
+   - Identify unusual changes
+   - Validate high/low outliers
+
+3. Exception Report
+   - Employees with errors
+   - Missing timesheet data
+   - Failed tax calculations
+   - Deduction failures
+
+4. Tax Register
+   - Federal income tax
+   - FICA (SS + Medicare)
+   - State income tax
+   - Local taxes
+   - SDI/SUI (state-specific)
+
+Validation Checks:
+✓ Total headcount matches expected
+✓ No employees with $0 pay (unless on leave)
+✓ Overtime calculations accurate
+✓ Tax withholding rates correct
+✓ Deductions balanced (employee + employer)
+✓ Net pay reasonable (not negative)
+
+STEP 5: HANDLE EXCEPTIONS
+--------------------------
+Common Exceptions:
+
+Error: "Missing Timesheet"
+Solution: Contact manager, enter time, recalculate
+
+Error: "Invalid Tax Setup"
+Solution: Update employee tax withholding, recalculate
+
+Error: "Deduction Over Max"
+Solution: Adjust deduction or allow override
+
+Error: "Negative Net Pay"
+Solution: Review deductions, may need to split over periods
+
+Actions:
+1. Export exception report
+2. Resolve each exception
+3. Click "Recalculate" for affected employees
+4. Re-review results
+
+STEP 6: APPROVE PAYROLL
+------------------------
+Approval Workflow:
+
+Level 1: Payroll Specialist
+- Reviews results
+- Validates calculations
+- Confirms exception resolution
+- Approves or sends back
+
+Level 2: Payroll Manager
+- Final review
+- Spot-checks high-value payments
+- Approves for settlement
+
+Level 3: Finance (for large payrolls)
+- Validates GL impact
+- Confirms funding availability
+- Final authorization
+
+STEP 7: SETTLEMENT RUN
+-----------------------
+Settlement Process:
+
+What Happens:
+- Payroll results locked (no more changes)
+- Payment instructions generated
+- Bank file created (ACH/wire)
+- Checks printed (if applicable)
+- Payslips distributed
+- GL journal entries created
+
+Actions:
+1. Click "Settle Payroll"
+2. Confirm payment date
+3. Select payment methods (ACH, check, etc.)
+4. Generate bank file
+5. Submit to bank
+6. Print checks if needed
+7. Release payslips to employees
+
+STEP 8: POST-PAYROLL TASKS
+---------------------------
+After Settlement:
+
+Immediate:
+□ Submit bank file to bank
+□ Distribute/mail checks
+□ Release payslips (email/portal)
+□ Post GL journal entries
+□ Update payroll register
+
+Within 3 Days:
+□ Reconcile bank account
+□ Verify all payments processed
+□ Archive payroll results
+□ Generate required reports
+□ File state returns (if due)
+
+Monthly:
+□ 941 preparation (federal taxes)
+□ State tax return filing
+□ Third-party liability payments
+□ Payroll accrual reconciliation
+
+Quarterly:
+□ 941 filing
+□ State quarterly filings
+□ FUTA deposit (if threshold met)
+
+Annually:
+□ W-2 generation
+□ W-2 distribution
+□ ACA reporting (1095-C)
+□ Year-end tax reconciliation
+
+STEP 9: OFF-CYCLE PAYROLL
+--------------------------
+For Special Payments:
+
+Use Cases:
+- Termination final pay
+- Missed payment correction
+- Bonus payments
+- Commission payments
+- Expense reimbursements
+
+Process:
+1. Create "One-Time Payment" event
+2. Enter payment details
+3. Run off-cycle payroll for specific employees
+4. Review and approve
+5. Settle separately or with next regular run
+
+STEP 10: RETROACTIVE ADJUSTMENTS
+---------------------------------
+For Prior Period Corrections:
+
+Retro Process:
+1. Make correction to employee record
+2. Set effective date to past date
+3. Run "Retro Pay Calculation"
+4. System calculates difference
+5. Pay difference in current period
+6. Tax adjustments processed
+
+Examples:
+- Retroactive raise (pay increase backdated)
+- Missed overtime payment
+- Incorrect deduction amount
+- Tax withholding correction
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Payroll
+
+Key Operations:
+
+1. Put_Run_Pay_Calculation
+   - Initiate payroll calculation
+   - Parameters: Pay_Group, Period_Start, Period_End, Payment_Date
+   - Returns: Background_Process_Reference (job ID)
+
+2. Get_Run_Pay_Calculation
+   - Retrieve payroll calculation status
+   - Monitor background job progress
+   - Returns: Status, employee count, completion percentage
+
+3. Get_Payroll_Payslips
+   - Retrieve employee payslips
+   - Returns: Earnings, deductions, taxes, net pay
+
+4. Import_Payroll_Off-Cycle_Payment
+   - Create off-cycle payments via API
+   - Bulk upload special payments
+   - Returns: Import process ID
+
+5. Get_Payroll_Results
+   - Retrieve payroll results summary
+   - Returns: Totals, variance, GL impact
+
+API Request Example:
+```xml
+<bsvc:Put_Run_Pay_Calculation_Request bsvc:version="v42.2">
+  <bsvc:Run_Pay_Calculation_Data>
+    <bsvc:Pay_Group_Reference>
+      <bsvc:ID bsvc:type="Pay_Group_ID">US_Biweekly</bsvc:ID>
+    </bsvc:Pay_Group_Reference>
+    <bsvc:Period_Start_Date>2026-01-01</bsvc:Period_Start_Date>
+    <bsvc:Period_End_Date>2026-01-15</bsvc:Period_End_Date>
+    <bsvc:Payment_Date>2026-01-17</bsvc:Payment_Date>
+    <bsvc:Simulation_Only>false</bsvc:Simulation_Only>
+  </bsvc:Run_Pay_Calculation_Data>
+</bsvc:Put_Run_Pay_Calculation_Request>
+```
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- Payroll workbench: Search "Payroll Workbench"
+- Run calculation: button:contains("Run Pay Calculation")
+- Pay group: select[data-automation-id="payGroup"]
+- Period dates: input[data-automation-id="datePicker"]
+- Submit: button[data-automation-id="SUBMIT"]
+
+Validation:
+- All timesheets approved
+- Pay period dates valid
+- Payment date not in past
+- No pending employee changes blocking payroll
+- Tax tables current
+
+Error Handling:
+- "Timesheet missing" → contact managers
+- "Calculation failed" → review error log
+- "Tax setup invalid" → fix employee tax records
+- "Background process failed" → retry or contact support
+
+Screenshot Strategy:
+1. Payroll initiation screen
+2. Calculation progress monitor
+3. Results summary
+4. Exception report (if any)
+5. Approval confirmation
+6. Settlement confirmation
+
+Performance:
+- Use API for initiating scheduled runs
+- Monitor via Get_Run_Pay_Calculation
+- Use background process for large payrolls
+- Schedule during off-peak hours
+- Parallel process multiple pay groups
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+Pre-Payroll:
+- Enter Time (employees)
+- Approve Time (managers)
+- Submit One-Time Payments
+- Process Job Changes
+- Update Tax Withholding
+
+Post-Payroll:
+- Submit Bank File
+- Distribute Payslips
+- Post GL Journals
+- Reconcile Bank Account
+- File Tax Returns
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. SCHEDULING
+   - Run payroll same day/time each period
+   - Allow 2-3 days before payment date
+   - Never run on payment date
+   - Use simulation mode first for high-risk changes
+
+2. REVIEW PROCESS
+   - Always review variance report
+   - Spot-check 5-10 employee payslips
+   - Validate tax totals
+   - Compare to budget/forecast
+   - Check for duplicate payments
+
+3. EXCEPTION HANDLING
+   - Document all exceptions
+   - Create standard resolution procedures
+   - Track recurring issues
+   - Address root causes
+
+4. COMMUNICATION
+   - Notify employees of payroll cut-off dates
+   - Send payment date reminders
+   - Communicate any delays promptly
+   - Provide payslip access instructions
+
+5. COMPLIANCE
+   - Maintain payroll records for 7 years
+   - File tax returns on time
+   - Respond to garnishment orders promptly
+   - Keep tax tables updated
+   - Document all manual adjustments
+
+6. DISASTER RECOVERY
+   - Maintain backup of payroll results
+   - Document emergency procedures
+   - Have manual calculation backup
+   - Test recovery procedures annually
+
+================================================================================
+NOTES
+================================================================================
+
+- Payroll must be settled by payment date
+- Once settled, payroll cannot be reversed (only adjusted in future)
+- Simulation runs do not create financial entries
+- Retro calculations can span multiple prior periods
+- Tax rates update quarterly (verify before each run)
+- Year-end has special processing (W-2 preparation)
+- Multi-state employees require extra tax validation
+- Garnishments have legal priority over other deductions
+- Payroll results create GL journal entries automatically
+- Bank file must be submitted 1-2 days before payment date
+
+================================================================================
