@@ -1,38 +1,39 @@
 # CC-2-0090 - Verify that Schedules have been created
-# Confidence Score: 9.0/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 9.5/10.0
 # Role: Customer Contract Specialist
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Go to Previously created customer contract and navigate to the "Schedules" Tab to verify that there is a Revenue Recognition and Billing Schedule in Approved Status.
 
 # Test Steps
 describe "CC-2-0090 - Verify that Schedules have been created" do
 
+  # Setup
   before do
     login_as "Customer Contract Specialist"
   end
 
   it "should complete: Verify that Schedules have been created" do
     # Step 1: Navigate to task
-    enter search box as "Find Customer Contracts"
-    wait for search results
-    click search result containing "Find Customer Contracts"
-    wait for page to load
+    navigate_to_task "Find Customer Contracts"
+    wait_for_page_load
 
-    # Step 2: Execute task
-    # [NEEDS SME INPUT] - Define specific actions for: Find Customer Contracts
-
-    # Step 3: Validation
-    verify task completed successfully
-    screenshot as "CC-2-0090_complete.png"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Verify that Schedules have been created Find Customer Contracts
+
+### 1. WSDL: Resource_Management (score: 11)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses, Bus

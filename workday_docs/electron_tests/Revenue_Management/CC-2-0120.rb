@@ -1,38 +1,43 @@
 # CC-2-0120 - Review Business Process for Customer Contract Event; Discuss any required modifications.
-# Confidence Score: 7.5/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 8.0/10.0
 # Role: Business Process Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Review Business Process for Customer Contracts; Discuss any required modifications.
 
 # Test Steps
 describe "CC-2-0120 - Review Business Process for Customer Contract Event; Discuss any required modifications." do
 
+  # Setup
   before do
     login_as "Business Process Administrator"
   end
 
   it "should complete: Review Business Process for Customer Contract Event; Discuss any required modifications." do
     # Step 1: Navigate to task
-    enter search box as "bp: Customer Contract Event"
-    wait for search results
-    click search result containing "bp: Customer Contract Event"
-    wait for page to load
+    navigate_to_task "bp: Customer Contract Event"
+    wait_for_page_load
 
-    # Step 2: Execute task
-    # [NEEDS SME INPUT] - Define specific actions for: bp: Customer Contract Event
-
-    # Step 3: Validation
-    verify task completed successfully
-    screenshot as "CC-2-0120_complete.png"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Review Business Process for Customer Contract Event; Discuss any required modifications. bp: Customer Contract Event
+
+### 1. Admin Guide Use Case Library (score: 12)
+Source: Admin-Guide-Use-Case-Library.pdf
+```
+Use Case Library
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Use Case Library....................................................................

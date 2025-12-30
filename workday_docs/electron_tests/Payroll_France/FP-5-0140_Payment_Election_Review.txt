@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: FP-5-0140
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Payment Election Review
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the Payment Elections loaded for all France employees and verify that all payment election details are accurate.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 20 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "No delivered report exists - needs to be added to dapzulu"
+2. wait for search results
+3. click search result containing "No delivered report exists - needs to be added to dapzulu"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "FP-5-0140_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: No delivered report exists - needs to be added to dapzulu
+
+### 1. User Guide Workday Prism Analytics (score: 9)
+Source: User-Guide-Workday-Prism-Analytics.pdf
+```
+Workday Prism Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Set Up Languages in Prism Analytics..................
+================================================================================

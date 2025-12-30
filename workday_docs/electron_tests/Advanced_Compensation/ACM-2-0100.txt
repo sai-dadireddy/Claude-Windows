@@ -1,0 +1,87 @@
+================================================================================
+TEST ID: ACM-2-0100
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Launch process
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 4.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Launch the Compensation Review Process.
+
+TASK/STEP:
+Select the Launch button.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 4.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Select the Launch button.
+
+### 1. User Guide Sourcing Managers (score: 4)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers........................................
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Select the Launch button.
+
+### 1. User Guide Sourcing Managers (score: 4)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers......................................................... 5
+Strategi...
+```
+
+### 2. Admin Guide Glossary (score: 3)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 3. Admin Guide Integrations (1) (score: 3)
+Source: Admin-Guide-Integration
+--------------------------------------------------------------------------------
+
+================================================================================

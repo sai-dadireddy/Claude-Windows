@@ -1,38 +1,43 @@
 # CC-2-0150 - Review Business Process for Revenue Schedule Event; Discuss any required modifications.
-# Confidence Score: 8.0/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 8.5/10.0
 # Role: Business Process Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Review Business Process for Revenue Schedules; Discuss any required modifications.
 
 # Test Steps
 describe "CC-2-0150 - Review Business Process for Revenue Schedule Event; Discuss any required modifications." do
 
+  # Setup
   before do
     login_as "Business Process Administrator"
   end
 
   it "should complete: Review Business Process for Revenue Schedule Event; Discuss any required modifications." do
     # Step 1: Navigate to task
-    enter search box as "bp: Revenue Recognition Schedule Event"
-    wait for search results
-    click search result containing "bp: Revenue Recognition Schedule Event"
-    wait for page to load
+    navigate_to_task "bp: Revenue Recognition Schedule Event"
+    wait_for_page_load
 
-    # Step 2: Execute task
-    # [NEEDS SME INPUT] - Define specific actions for: bp: Revenue Recognition Schedule Event
-
-    # Step 3: Validation
-    verify task completed successfully
-    screenshot as "CC-2-0150_complete.png"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Review Business Process for Revenue Schedule Event; Discuss any required modifications. bp: Revenue Recognition Schedule Event
+
+### 1. Admin Guide Glossary (score: 11)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms............................................................................

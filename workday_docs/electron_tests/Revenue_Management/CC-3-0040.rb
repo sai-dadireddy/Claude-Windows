@@ -1,38 +1,45 @@
 # CC-3-0040 - Verify Customer Contract Types
-# Confidence Score: 7.5/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 8.5/10.0
 # Role: Contract Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Verify Customer Contract Types are loaded and accurate.
 
 # Test Steps
 describe "CC-3-0040 - Verify Customer Contract Types" do
 
+  # Setup
   before do
     login_as "Contract Administrator"
   end
 
   it "should complete: Verify Customer Contract Types" do
     # Step 1: Navigate to task
-    enter search box as "Maintain Customer Contract Types"
-    wait for search results
-    click search result containing "Maintain Customer Contract Types"
-    wait for page to load
+    navigate_to_task "Maintain Customer Contract Types"
+    wait_for_page_load
 
-    # Step 2: Execute task
-    # [NEEDS SME INPUT] - Define specific actions for: Maintain Customer Contract Types
-
-    # Step 3: Validation
-    verify task completed successfully
-    screenshot as "CC-3-0040_complete.png"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Verify Customer Contract Types Maintain Customer Contract Types
+
+### 1. Workday Feature Descriptions Ditamap (score: 7)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday 

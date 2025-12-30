@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-2-0030
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Defaulting for Change Job
+WORKDAY ROLE: HR Partner / Manager / HR Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 9.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Initiate the Change Job process for an employee. Make sure Merit, Bonus, and Stock Plans with appropriate targets are defaulting correctly. After completing the process, repeat as necessary to verify that any other compensation eligibility rules behave as expected. Discuss this test scenario with HCM stream as the process will include additional steps that are not relevant to Advanced Compensation.
+
+TASK/STEP:
+Employee Profile Select: Action Button > Job Change > Transfer, Promote or Change Job
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager / HR Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Employee Profile Select: Action Button > Job Change > Transfer, Promote or Change Job"
+2. wait for search results
+3. click search result containing "Employee Profile Select: Action Button > Job Change > Transfer, Promote or Change Job"
+4. wait for page to load
+5. screenshot as "ACM-2-0030_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

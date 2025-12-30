@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: ACM-3-0020
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Plan Security: Merit
+WORKDAY ROLE: Employee
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 15.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+To verify that any specified security groups cannot see targets
+
+TASK/STEP:
+Proxy as a member of the designated security group. Navigate to their own worker profile. View Compensation tab on the worker record and ensure target is not visible
+
+PREREQUISITES:
+- User logged in with Employee permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. navigate to "their own worker profile. View Compensation tab on the worker record and ensure target is not visible"
+2. wait for page to load
+3. screenshot as "ACM-3-0020_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

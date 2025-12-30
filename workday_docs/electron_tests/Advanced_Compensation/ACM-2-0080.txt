@@ -1,0 +1,76 @@
+================================================================================
+TEST ID: ACM-2-0080
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Configure Pools
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 5.0/10
+STATUS: [!!] NEEDS REVIEW
+================================================================================
+
+DESCRIPTION:
+Complete fields on page or accept default values. If promotions, additional adjustments, or lump sum payments are included, either select to deduct from merit pool or create separate pools.
+
+TASK/STEP:
+Configure Pools. Submit when done.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [NEEDS SME REVIEW - Confidence: 5.0/10]
+2. 
+3. # Task: Configure Pools. Submit when done.
+4. 
+5. enter search box as "Configure Pools. Submit when done."
+6. wait for search results
+7. # [SME: Verify exact search result text]
+8. 
+9. # SME ACTION REQUIRED:
+10. # 1. Verify field names and interactions
+11. # 2. Add missing validation steps
+12. # 3. Update confidence score when complete
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Configure Pools. Submit when done.
+
+### 1. Admin Guide Education And Government (score: 5)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management..............................................................................................
+```
+
+### 2. Workday Feature Descriptions Ditamap (score: 4)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+### 3. WSDL: Cash_Man
+--------------------------------------------------------------------------------
+
+================================================================================

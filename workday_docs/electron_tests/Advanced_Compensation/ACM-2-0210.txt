@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-2-0210
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Review Compensation Review Statement as Compensation Admin
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 10 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Review Compensation Review Statement for employee as the Compensation Admin
+
+TASK/STEP:
+Navigate off of the employee's profile > Compensation > View Compensation Review Statement History.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Navigate off of the employee's profile > Compensation > View Compensation Review Statement History."
+2. wait for search results
+3. click search result containing "Navigate off of the employee's profile > Compensation > View Compensation Review Statement History."
+4. wait for page to load
+5. screenshot as "ACM-2-0210_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

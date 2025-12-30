@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-2-0150
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Promotions in Compensation Review
+WORKDAY ROLE: Planner
+EST. DURATION: 30 minutes
+CONFIDENCE SCORE: 10.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Verify that the Promotions tab is available in the configurable grid, including all relevant editable fields
+
+TASK/STEP:
+Task in Planner's inbox. Click the "Propose" pencil icon to go into the Configurable grid.
+
+PREREQUISITES:
+- User logged in with Planner permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Task in Planner's inbox. Click the "Propose" pencil icon to go into the Configurable grid."
+2. wait for search results
+3. click search result containing "Task in Planner's inbox. Click the "Propose" pencil icon to go into the Configurable grid."
+4. wait for page to load
+5. screenshot as "ACM-2-0150_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================
