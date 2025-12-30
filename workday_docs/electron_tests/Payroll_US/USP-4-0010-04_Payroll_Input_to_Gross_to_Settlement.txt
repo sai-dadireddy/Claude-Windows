@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-4-0010-04
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Payroll Input to Gross to Settlement
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run a report that shows journal line details to ensure that all pay components (earnings, deductions and taxes) are posting to the correct ledger accounts, that there are no posting errors or no pay components posted to suspense accounts. If there are errors or incorrect posting, address those errors and execute the Run Pay Accounting task. Run the "Payroll Accounting by Company/Period" report to identify Pay Components that are posting to the Suspense Accounts.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "4. Review GL Postings"
+2. wait for search results
+3. click search result containing "4. Review GL Postings"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-4-0010-04_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 4. Review GL Postings
+
+### 1. Admin Guide Integrations (1) (score: 4)
+Source: Admin-Guide-Integrations (1).pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations....................................................................
+
+================================================================================

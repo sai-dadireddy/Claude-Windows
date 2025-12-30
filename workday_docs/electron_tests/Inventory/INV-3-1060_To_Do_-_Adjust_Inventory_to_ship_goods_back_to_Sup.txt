@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: INV-3-1060
+FUNCTIONAL AREA: Inventory
+TEST NAME: To Do - Adjust Inventory to ship goods back to Supplier
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Adjust Inventory from return to deplete inventory
+
+ELECTRON STEPS:
+1. enter search box as "Adjust Inventory from return to deplete inventory"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1060_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Adjust Inventory from return to deplete inventory
+
+### 1. Admin Guide Education And Government (score: 5)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management..........................
+================================================================================

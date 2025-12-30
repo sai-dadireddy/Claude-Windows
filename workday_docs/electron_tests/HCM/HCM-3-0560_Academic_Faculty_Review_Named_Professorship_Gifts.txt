@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-3-0560
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Named Professorship Gifts
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify set up of Gifts with purposed of Named Professorship
+
+WORKDAY ROLE: Academic Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Academic Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Data Audit - Gifts"
+2. wait for search results
+3. click search result containing "Data Audit - Gifts"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0560_complete.png"
+
+VERIFICATION:
+- [ ] Gifts defined with Named Professorship purpose
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Data Audit - Gifts
+
+### 1. Workday Feature Descriptions Ditamap (score: 4)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning..................................................
+================================================================================

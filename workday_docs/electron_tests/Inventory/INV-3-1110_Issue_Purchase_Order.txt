@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-1110
+FUNCTIONAL AREA: Inventory
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Issue Method = Print
+
+ELECTRON STEPS:
+1. enter search box as "Issue Method = Print"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1110_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Method = Print
+
+### 1. Kb Payroll Run Payroll (score: 4)
+Source: kb_payroll_run_payroll.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Payroll WSDL
+Category:...
+================================================================================

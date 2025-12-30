@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: USP-3-0490
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Students with Tax Treaty Exemptions
+DESCRIPTION: 1. Ensure student treaty is set up on Maintain Worker Tax Treaties for the current year.
+2. Validate that appropriate taxes are/are not being withheld (If not, check Pay Component to ensure Income Code is added)
+3. Validate taxes are being withheld after treaty has expired
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

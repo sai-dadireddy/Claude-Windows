@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: INV-3-1100
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Purchase Order
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Find Purchase Order
+Enter New Quantity
+
+ELECTRON STEPS:
+1. enter search box as "Find Purchase Order
+Enter New Quantity"
+2. enter field "New Quantity
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-3-1100_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Purchase Order
+Enter New Quantity
+
+### 1. Kb Procurement Requisition (score: 6)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+UR...
+================================================================================

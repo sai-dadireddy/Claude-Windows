@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: USP-3-0470
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Validate Work Study Pay
+DESCRIPTION: 1. Validate  Workers with each type of Work Study are paid through the designated Work Study Earnings and that Actuals are correct.
+2. Validate a Worker whose award limit is reached mid period has pay that either changes to the rollover earning or that Actuals are correct if using the same earning (Student in scope)
+3. Validate a worker who reached their limit and award is increased.
+4. Validate a worker whose award is decreased.
+5. Validate that Work Study is not paid outside of award period.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================
