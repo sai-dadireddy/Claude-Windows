@@ -1,0 +1,835 @@
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL
+Category: Human Capital Management - Employee Lifecycle
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Change Job business process manages employee transfers, promotions,
+demotions, and lateral moves within the organization. This process handles
+changes to position, job profile, location, manager, compensation, and other
+employment details while maintaining continuous employment history.
+
+Business Process: Change Job
+Functional Area: Human Capital Management
+Initiator: HR Partner, Manager (with delegation)
+Typical Duration: 1-5 days (depending on approval complexity)
+
+Types of Job Changes:
+- Promotion: Move to higher-level position
+- Demotion: Move to lower-level position
+- Lateral Move: Same level, different role/department
+- Transfer: Location or organizational change
+- Manager Change: Supervisory change only
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. JOB CHANGE DETAILS
+   - Effective Date
+   - Change Reason (Promotion, Transfer, Reorganization, etc.)
+   - New Position
+   - New Job Profile
+   - New Location
+   - New Organization (Department/Cost Center)
+   - New Manager
+
+2. CURRENT EMPLOYMENT DATA
+   - Current Position
+   - Current Job Profile
+   - Current Compensation Grade
+   - Current Manager
+   - Current Location
+   - Current Work Schedule
+
+3. COMPENSATION CHANGES
+   - New Base Pay
+   - Pay Change Reason
+   - Pay Grade/Range
+   - Bonus Plan changes
+   - Stock/Equity adjustments
+   - Allowances (if applicable)
+
+4. TIME OFF PLAN CHANGES
+   - PTO plan assignment
+   - Accrual rate changes
+   - Time off balance transfer
+   - Holiday calendar changes
+
+5. ADDITIONAL CHANGES
+   - Work Space assignment
+   - Phone/Equipment updates
+   - Email address (if domain change)
+   - Security role changes
+   - Union membership changes
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: INITIATE JOB CHANGE
+---------------------------
+Navigation: Search "Change Job" or "Transfer" in global search
+
+Required Fields:
+- Worker Name (search and select)
+- Effective Date
+- Change Reason
+- New Position (or Create New Position)
+
+Actions:
+1. Search for worker using employee ID or name
+2. Select effective date (can be future-dated)
+3. Choose change reason from dropdown
+4. Either select existing position or create new position
+
+Position Options:
+A. Fill Existing Position
+   - Search for open requisition
+   - Select vacant position
+   - System pre-fills job profile, location, manager
+
+B. Create New Position
+   - Define job profile
+   - Select organization
+   - Assign manager
+   - Set location
+   - Define reporting relationships
+
+STEP 2: UPDATE JOB DETAILS
+---------------------------
+Sub-Process: Job Details
+
+Required Information:
+- Job Profile
+- Position Title (if different from profile)
+- Business Title (what appears on business cards)
+- Worker Type (Employee, Contingent Worker)
+- Time Type (Full Time, Part Time)
+- Work Shift (if applicable)
+
+Location Details:
+- Primary Work Location
+- Work Space (if assigned seating)
+- Remote work status
+- Work from Home eligibility
+
+Organization Assignment:
+- Supervisory Organization
+- Cost Center
+- Company
+- Business Unit
+- Department
+
+STEP 3: UPDATE MANAGER & REPORTING
+-----------------------------------
+Sub-Process: Reporting Relationships
+
+Manager Changes:
+- New Direct Manager (required)
+- Matrix Manager (if applicable)
+- Dotted Line Reporting
+- Indirect Reports notification
+
+Responsibilities:
+- Cost Center Manager checkbox
+- Time Approver checkbox
+- Expense Approver checkbox
+- Hiring Manager checkbox
+
+STEP 4: COMPENSATION CHANGES
+-----------------------------
+Sub-Process: Compensation (if applicable)
+
+Pay Change Details:
+- New Base Salary/Hourly Rate
+- Pay Change Reason
+- Compensation Grade
+- Pay Rate Type (Salary/Hourly)
+- Currency (for international transfers)
+
+Additional Compensation:
+- Bonus Plan eligibility changes
+- Commission Plan changes
+- Allowances (car, phone, housing)
+- One-time payments (sign-on bonus, retention)
+
+Pay Change Rules:
+- Promotions typically include pay increase
+- Lateral moves may have no pay change
+- Demotions may require pay reduction
+- Location changes may trigger market adjustments
+
+STEP 5: BENEFITS & TIME OFF
+----------------------------
+Sub-Process: Benefits Changes (if applicable)
+
+Benefits Eligibility:
+- Check if new position/location affects eligibility
+- Update benefit group if needed
+- Process mid-year benefit event if required
+
+Time Off Plans:
+- Verify correct PTO plan for new role
+- Check accrual rate changes
+- Transfer time off balances
+- Update holiday calendar
+
+STEP 6: ADDITIONAL ASSIGNMENTS
+-------------------------------
+Sub-Process: Other Changes
+
+Work Schedule:
+- Standard Hours per Week
+- Work Schedule Pattern
+- Shift Differential eligibility
+- Overtime eligibility
+
+Security & Access:
+- Update security groups for new role
+- Remove old role-based access
+- Add new role-based access
+- Update delegation assignments
+
+Equipment & Assets:
+- Update phone extension
+- Assign new work space
+- Update email signature
+- Reassign equipment if needed
+
+STEP 7: EFFECTIVE DATE HANDLING
+--------------------------------
+Job Change Timing:
+
+Immediate (Today):
+- Change effective immediately upon approval
+- Worker sees new org chart immediately
+- Compensation changes with next payroll
+
+Future-Dated:
+- Change scheduled for specific date
+- Worker notified of pending change
+- System applies changes automatically on effective date
+
+Backdated:
+- Requires special security access
+- Use for administrative corrections
+- May trigger retroactive pay adjustments
+- Creates audit trail
+
+STEP 8: ROUTING & APPROVALS
+----------------------------
+Approval Chain (typical):
+1. Current Manager (if not initiator)
+2. New Manager (to confirm acceptance)
+3. HR Business Partner
+4. Compensation (if pay change)
+5. Finance (if cost center change)
+6. Senior Leadership (if executive-level)
+
+Approval Considerations:
+- Pay increases may require additional approvals
+- Cross-company transfers need legal review
+- International transfers require immigration check
+- Union positions may require union notification
+
+STEP 9: COMPLETION & NOTIFICATION
+----------------------------------
+Post-Approval Actions:
+
+Automatic System Updates:
+- Position change effective
+- Organization chart updated
+- Manager relationships changed
+- Compensation updated in payroll
+- Security roles adjusted
+
+Notifications Sent To:
+- Worker (job change confirmation)
+- Current Manager (transition notification)
+- New Manager (new team member alert)
+- HR (for records)
+- Payroll (if compensation change)
+- IT (if location/equipment change)
+
+STEP 10: TRANSITIONAL TASKS
+----------------------------
+Checklist Items:
+
+Offboarding from Old Role:
+□ Knowledge transfer to backfill
+□ Handoff active projects
+□ Update email signature
+□ Notify external contacts
+□ Archive role-specific documents
+□ Return department-specific equipment
+
+Onboarding to New Role:
+□ Introduction to new team
+□ Access to new systems/applications
+□ Workspace setup
+□ New business cards ordered
+□ Updated email distribution lists
+□ Training for new role
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Human_Resources
+
+Key Operations:
+1. Get_Workers
+   - Retrieve current worker employment data
+   - Verify position/org before change
+   - Parameters: Worker_Reference
+   - Returns: Current job data, compensation, location
+
+2. Get_Positions
+   - Search for available positions to fill
+   - Parameters: Position_ID, Job_Profile, Organization
+   - Returns: Position details, supervisor, location
+
+3. Change_Job (Business Process via API)
+   - Initiate job change through API
+   - Required: Worker_Reference, Effective_Date, Position_Reference, Reason_Reference
+   - Returns: Business Process ID for tracking
+
+4. Get_Job_Profile_Data
+   - Retrieve job profile requirements
+   - Used for validating position selection
+   - Returns: Job family, management level, required competencies
+
+5. Get_Organization_Data
+   - Retrieve organizational hierarchy
+   - Validate new organization assignment
+   - Returns: Manager, cost center, company details
+
+6. Request_Compensation_Change
+   - Separate API for pay changes
+   - Can be bundled with Change_Job
+   - Returns: Compensation change BP ID
+
+7. Import_Change_Job (EIB)
+   - Bulk job changes via spreadsheet
+   - Useful for reorganizations
+   - CSV/Excel upload for mass transfers
+
+================================================================================
+AUTOMATION CONSIDERATIONS FOR ELECTRON
+================================================================================
+
+1. UI AUTOMATION ANCHORS
+   ----------------------
+   Key Selectors:
+   - Search box: input[data-automation-id="searchBox"]
+   - Change Job link: button:contains("Change Job")
+   - Worker search: input[data-automation-id="workerSearchBox"]
+   - Effective date: input[data-automation-id="dateWidget"]
+   - Reason dropdown: select[data-automation-id="promptOption"]
+   - Position search: input[data-automation-id="positionSearchWidget"]
+   - Manager search: input[data-automation-id="managerSearchWidget"]
+   - Submit button: button[data-automation-id="SUBMIT"]
+
+   Navigation Path:
+   1. Click search → type "Change Job"
+   2. Select business process from results
+   3. Search worker by ID or name
+   4. Select effective date
+   5. Choose change reason
+   6. Select or create position
+   7. Update job details
+   8. Review compensation (if applicable)
+   9. Submit for routing
+
+2. VALIDATION REQUIREMENTS
+   ------------------------
+   Pre-Submission Checks:
+   - Effective date not before hire date
+   - Position is either vacant or being created
+   - New manager is active employee
+   - Compensation within grade range (if applicable)
+   - Organization is active
+   - Required fields completed
+
+   Business Rule Validations:
+   - Cannot transfer to same position
+   - Pay cannot decrease on promotion (policy-dependent)
+   - Location change may require tax updates
+   - Cross-company transfer requires legal entity change
+   - Union positions may have transfer restrictions
+
+   Error Handling:
+   - "Worker has pending job change" → cancel or wait
+   - "Position already filled" → select different position
+   - "Invalid effective date" → adjust to future date
+   - "Compensation out of range" → adjust pay or override
+   - "Missing required approver" → add to approval chain
+
+3. BULK PROCESSING APPROACH
+   -------------------------
+   For Reorganizations/Mass Transfers:
+
+   Option A: EIB (Recommended for 20+)
+   - Use Import_Change_Job spreadsheet
+   - Columns: Employee_ID, Effective_Date, New_Position, Reason, New_Manager, etc.
+   - Upload via Workday Integration
+   - Monitor import status
+   - Review errors and resubmit
+
+   Option B: API Loop (Recommended for <20)
+   - Call Change_Job SOAP operation
+   - Loop through employee list
+   - Track business process IDs
+   - Monitor approval status
+   - Handle errors individually
+
+   Option C: UI Automation (For complex scenarios)
+   - Use when creating new positions
+   - When compensation changes need review
+   - For exceptions requiring manual decisions
+
+4. DATA EXTRACTION NEEDS
+   ----------------------
+   Input Requirements:
+   - Worker ID or Employee ID
+   - Effective Date (YYYY-MM-DD)
+   - Change Reason Code
+   - New Position ID (or position creation data)
+   - New Manager Employee ID
+   - New Location Code
+   - New Organization ID
+   - Compensation Change Amount (if applicable)
+   - Compensation Change Reason (if applicable)
+
+   Position Creation Data (if new position):
+   - Job Profile Code
+   - Position Title
+   - Organization Code
+   - Manager Employee ID
+   - Location Code
+   - Worker Type
+   - Time Type
+
+   Output Data to Capture:
+   - Business Process ID
+   - Job change confirmation status
+   - New position ID (if created)
+   - Effective date confirmation
+   - Approval chain members
+   - Compensation change amount (if applicable)
+
+5. SCREENSHOT STRATEGY
+   --------------------
+   Critical Screenshots:
+   1. Worker current job details (before change)
+   2. New position selection/creation
+   3. Job details form (organization, location, manager)
+   4. Compensation changes (if applicable)
+   5. Submission confirmation with BP ID
+   6. Approval routing visualization
+
+   Screenshot Timing:
+   - Before initiating change (baseline)
+   - After position selection
+   - Before submitting each sub-process
+   - Final confirmation page
+   - On any warnings or errors
+
+6. ERROR RECOVERY
+   ---------------
+   Common Issues:
+
+   Issue: "Position already filled"
+   Solution: Check position status, select different position, or create new
+
+   Issue: "Worker has pending job change"
+   Solution: Check inbox for pending BP, cancel if duplicate, wait if legitimate
+
+   Issue: "Compensation out of range"
+   Solution: Adjust pay to within range, or request override approval
+
+   Issue: "Invalid manager assignment"
+   Solution: Verify manager is active, has proper role, not in subordinate chain
+
+   Issue: "Effective date in past"
+   Solution: Use current or future date, or request backdated permission
+
+   Issue: "Missing position attribute"
+   Solution: Complete all required fields (location, job profile, organization)
+
+7. COMPLEX SCENARIOS
+   ------------------
+   Scenario: Promotion with Compensation Change
+   Steps:
+   1. Initiate Change Job
+   2. Select higher-level position
+   3. System triggers Request Compensation Change sub-process
+   4. Enter new salary within grade range
+   5. Add compensation approvers to chain
+   6. Submit unified business process
+
+   Scenario: Cross-Company Transfer
+   Steps:
+   1. Initiate Change Job
+   2. Select position in different legal entity
+   3. System triggers End Employment + Hire sequence
+   4. Tax/benefits may reset
+   5. Requires additional approvals (legal, finance)
+   6. May break service continuity for some benefits
+
+   Scenario: Location Transfer with Relocation
+   Steps:
+   1. Initiate Change Job with new location
+   2. System may trigger "Initiate Relocation" sub-process
+   3. Enter relocation details (allowances, temporary housing)
+   4. Update tax withholding for new state/country
+   5. Change benefits if different location plans
+
+   Scenario: Reorganization (Multiple Employees)
+   Steps:
+   1. Use EIB for bulk upload
+   2. Same effective date for all
+   3. Reason: "Organizational Restructure"
+   4. Map old org to new org
+   5. Assign new managers
+   6. Process as batch with single approval chain
+
+8. PERFORMANCE OPTIMIZATION
+   -------------------------
+   Best Practices:
+   - Use SOAP API for bulk transfers (10x faster than UI)
+   - Cache organization/position lookups
+   - Pre-validate all data before initiating BP
+   - Use future effective dates to spread processing
+   - Schedule bulk changes during off-peak hours
+   - Implement exponential backoff for retries
+   - Parallel process independent job changes
+   - Sequential process when same manager/org
+
+9. COMPLIANCE & AUDIT
+   -------------------
+   Logging Requirements:
+   - Timestamp of each action
+   - User initiating change
+   - Worker being transferred
+   - Effective date
+   - Reason for change
+   - Old vs new position/org/manager
+   - Compensation changes
+   - Business Process ID
+   - Approval chain completion
+
+   Audit Trail:
+   - Screenshot folder: JobChanges/{YYYY-MM-DD}/{EmployeeID}/
+   - CSV log: job_changes_log_{YYYY-MM-DD}.csv
+   - Export PDF confirmation for each change
+   - Retain for 7 years per policy
+
+   Compliance Checks:
+   - No discriminatory patterns in transfers
+   - Pay equity maintained
+   - Promotion criteria met
+   - Union notification if required
+   - Tax withholding updated
+
+================================================================================
+RELATED BUSINESS PROCESSES
+================================================================================
+
+Connected Workflows:
+- Request Compensation Change: For pay adjustments without job change
+- Add Additional Job: For workers taking on secondary roles
+- Assign Roles: For security/delegation changes
+- Edit Position: For modifying position attributes
+- Create Position: For new positions being created
+- Change Location: For simple address changes
+- Change Manager: For supervisory changes only
+
+Pre-Requisites:
+- Worker has active employment
+- Target position exists or can be created
+- Initiator has HR Partner security
+- No pending job change business processes
+
+Post-Job Change Processes:
+- Update Email Signature
+- Request New Business Cards
+- Initiate Relocation (if location change)
+- Knowledge Transfer to Backfill
+- Onboarding to New Team
+
+================================================================================
+INTEGRATION POINTS
+================================================================================
+
+Systems Impacted:
+1. Workday HCM: Position, organization, reporting
+2. Workday Payroll: Tax withholding, pay group
+3. Workday Compensation: Grade, salary, bonus plans
+4. Workday Benefits: Eligibility, plan assignments
+5. Workday Time Tracking: Manager approvals, work schedule
+6. Active Directory: Email, security groups
+7. Email System: Distribution lists, signature
+8. Physical Security: Badge access, building entry
+9. Phone System: Extension, department
+10. Org Chart Tools: Hierarchy visualization
+
+Notification Triggers:
+- Current Manager: Worker transferring out
+- New Manager: New team member arriving
+- HR: Job change for processing
+- Payroll: Compensation/org changes
+- IT: Equipment/access updates
+- Worker: Job change confirmation
+- Finance: Cost center changes
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. PLANNING
+   - Discuss move with both current and new managers
+   - Align on effective date
+   - Plan knowledge transfer timeline
+   - Prepare new workspace in advance
+   - Communicate to team before effective date
+
+2. TIMING
+   - Use first or middle of month for cleaner payroll
+   - Allow 2+ weeks for approvals
+   - Avoid month-end/year-end processing
+   - Future-date to allow preparation time
+
+3. COMMUNICATION
+   - Announce to current team professionally
+   - Introduce to new team in advance
+   - Update all email signatures
+   - Notify key external contacts
+   - Update LinkedIn/professional profiles
+
+4. COMPENSATION
+   - Research market rates for new role
+   - Stay within compensation grade
+   - Document rationale for pay changes
+   - Consider total rewards (not just base)
+   - Plan annual review timing
+
+5. DOCUMENTATION
+   - Update job description
+   - Document transition plan
+   - Record knowledge transfer
+   - Save approval confirmations
+   - Maintain personnel file
+
+6. MANAGER RESPONSIBILITIES
+   - Provide clear expectations
+   - Set up 1:1 meetings
+   - Share team dynamics
+   - Discuss success metrics
+   - Plan 30/60/90 day goals
+
+================================================================================
+ELECTRON AUTOMATION PSEUDOCODE
+================================================================================
+
+```python
+async def change_job(worker_id, effective_date, new_position_id, reason_code,
+                     new_manager_id=None, compensation_change=None):
+    """
+    Automate Change Job business process
+
+    Args:
+        worker_id: Employee ID
+        effective_date: Job change date (YYYY-MM-DD)
+        new_position_id: Target position ID (or None to create)
+        reason_code: Reason from lookup (PROMOTION, TRANSFER, etc.)
+        new_manager_id: Manager employee ID (if changing)
+        compensation_change: Dict with pay details if applicable
+
+    Returns:
+        dict: Business process ID and confirmation details
+    """
+
+    # Step 1: Login to Workday
+    page = await browser.new_page()
+    await page.goto(WORKDAY_URL)
+    await login(page, username, password)
+
+    # Step 2: Get current job details (for audit)
+    current_job = await get_worker_job_details(page, worker_id)
+    log.info(f"Current: {current_job['position']} - {current_job['organization']}")
+
+    # Screenshot: Before state
+    await page.screenshot(path=f'jobchange_{worker_id}_00_before.png')
+
+    # Step 3: Navigate to Change Job
+    await page.fill('input[data-automation-id="searchBox"]', 'Change Job')
+    await page.click('button:has-text("Change Job")')
+
+    # Step 4: Search for worker
+    await page.fill('input[data-automation-id="workerSearchBox"]', worker_id)
+    await page.press('input[data-automation-id="workerSearchBox"]', 'Enter')
+    await page.wait_for_selector('.worker-result')
+
+    # Verify correct worker
+    worker_name = await page.text_content('.worker-result .worker-name')
+    log.info(f"Selected worker: {worker_name}")
+    await page.click('.worker-result')
+
+    # Step 5: Set effective date and reason
+    await page.fill('input[data-automation-id="dateWidget"]', effective_date)
+    await page.select_option('select[data-automation-id="promptOption"]', reason_code)
+
+    # Screenshot: Initial details
+    await page.screenshot(path=f'jobchange_{worker_id}_01_initial.png')
+
+    # Step 6: Select or create position
+    if new_position_id:
+        # Fill existing position
+        await page.click('button:has-text("Select Position")')
+        await page.fill('input[data-automation-id="positionSearchWidget"]', new_position_id)
+        await page.press('input[data-automation-id="positionSearchWidget"]', 'Enter')
+        await page.wait_for_selector('.position-result')
+        await page.click('.position-result')
+    else:
+        # Create new position
+        await page.click('button:has-text("Create Position")')
+        await create_position(page, job_profile, organization, location)
+
+    # Screenshot: Position selected
+    await page.screenshot(path=f'jobchange_{worker_id}_02_position.png')
+
+    # Step 7: Update job details
+    await update_job_details(page, new_manager_id)
+
+    # Step 8: Handle compensation change if provided
+    if compensation_change:
+        await page.click('button:has-text("Edit Compensation")')
+        await page.fill('input[data-automation-id="basePay"]',
+                       str(compensation_change['new_salary']))
+        await page.select_option('select[data-automation-id="compensationReason"]',
+                                compensation_change['reason'])
+
+        # Screenshot: Compensation change
+        await page.screenshot(path=f'jobchange_{worker_id}_03_compensation.png')
+
+    # Step 9: Review and submit
+    await page.click('button:has-text("Review")')
+    await page.wait_for_selector('.review-summary')
+
+    # Screenshot: Review summary
+    await page.screenshot(path=f'jobchange_{worker_id}_04_review.png')
+
+    # Submit
+    await page.click('button[data-automation-id="SUBMIT"]')
+    await page.wait_for_selector('.confirmation-message')
+
+    # Screenshot: Confirmation
+    await page.screenshot(path=f'jobchange_{worker_id}_05_confirmation.png')
+
+    # Step 10: Extract business process ID
+    bp_id = await page.text_content('.business-process-id')
+
+    # Return comprehensive result
+    return {
+        'status': 'success',
+        'worker_id': worker_id,
+        'worker_name': worker_name,
+        'business_process_id': bp_id,
+        'effective_date': effective_date,
+        'change_reason': reason_code,
+        'old_position': current_job['position'],
+        'new_position': new_position_id,
+        'compensation_change': compensation_change,
+        'timestamp': datetime.now().isoformat()
+    }
+
+async def update_job_details(page, new_manager_id):
+    """Update job-specific details like manager, location"""
+
+    # Update manager if provided
+    if new_manager_id:
+        await page.fill('input[data-automation-id="managerSearchWidget"]', new_manager_id)
+        await page.press('input[data-automation-id="managerSearchWidget"]', 'Enter')
+        await page.wait_for_selector('.manager-result')
+        await page.click('.manager-result')
+
+    # Other job details are typically auto-filled from position
+    # Can be overridden if needed
+
+async def create_position(page, job_profile, organization, location):
+    """Create new position within Change Job process"""
+
+    await page.select_option('select[data-automation-id="jobProfile"]', job_profile)
+    await page.fill('input[data-automation-id="organizationSearch"]', organization)
+    await page.click('.organization-result')
+    await page.fill('input[data-automation-id="locationSearch"]', location)
+    await page.click('.location-result')
+    await page.click('button:has-text("Create Position")')
+```
+
+================================================================================
+SAMPLE SOAP API REQUEST
+================================================================================
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:bsvc="urn:com.workday/bsvc">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>ISU_USERNAME@TENANT</wsse:Username>
+            <wsse:Password>ISU_PASSWORD</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bsvc:Change_Job_Request bsvc:version="v42.2">
+         <bsvc:Business_Process_Parameters>
+            <bsvc:Auto_Complete>false</bsvc:Auto_Complete>
+            <bsvc:Run_Now>true</bsvc:Run_Now>
+         </bsvc:Business_Process_Parameters>
+         <bsvc:Change_Job_Data>
+            <bsvc:Employee_Reference>
+               <bsvc:ID bsvc:type="Employee_ID">12345</bsvc:ID>
+            </bsvc:Employee_Reference>
+            <bsvc:Effective_Date>2026-01-15</bsvc:Effective_Date>
+            <bsvc:Position_Reference>
+               <bsvc:ID bsvc:type="Position_ID">P-0054321</bsvc:ID>
+            </bsvc:Position_Reference>
+            <bsvc:Reason_Reference>
+               <bsvc:ID bsvc:type="Job_Change_Reason_ID">PROMOTION</bsvc:ID>
+            </bsvc:Reason_Reference>
+            <bsvc:Manager_Reference>
+               <bsvc:ID bsvc:type="Employee_ID">67890</bsvc:ID>
+            </bsvc:Manager_Reference>
+         </bsvc:Change_Job_Data>
+      </bsvc:Change_Job_Request>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
+================================================================================
+NOTES
+================================================================================
+
+- Job changes can be future-dated up to 1 year in advance
+- Promotion typically triggers compensation review
+- Cross-company transfers may create new hire event (breaks service continuity)
+- Location changes may trigger tax withholding updates
+- Manager changes update approval delegation automatically
+- Historical job data preserved in "Job History" report
+- Position can remain vacant after transfer (backfill needed)
+- Consider using "Add Additional Job" instead for secondary roles
+- Job change is reversible (unlike termination) via another job change
+- Effective date cannot be changed after approval (need new BP)
+
+================================================================================
