@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: UKP-3-0130
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: UK Tax Elections Review
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+Ensure that all employees in UK companies have the applicable Federal and Province tax elections loaded.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "TD1 Worker UK Tax Election Report"
+2. wait for search results
+3. click search result containing "TD1 Worker UK Tax Election Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+6. screenshot as "UKP-3-0130_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Put_Provinc, Get_Province_Annual_Elections, Get_Payroll_Results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: TD1 Worker UK Tax Election Report
+
+### 1. Workday Feature Descriptions Ditamap (score: 5)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning...................................
+================================================================================

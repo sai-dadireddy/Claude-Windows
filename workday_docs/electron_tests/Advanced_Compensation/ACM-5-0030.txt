@@ -1,0 +1,87 @@
+================================================================================
+TEST ID: ACM-5-0030
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Plan configuration: Stock
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 2.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+To verify that the Stock plans are configured correctly: 
+- Targets hidden/overridden 
+- Applicable profiles 
+- Eligibility Rules 
+- Rounding Rule 
+- Defaults
+
+TASK/STEP:
+Search bar: "comp plans". Click on the Stock tab. From the Stock tab, select the applicable Stock Plan(s) to review.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 2.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: comp plans
+
+### 1. Electron Test Samples (score: 2)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron te.
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: comp plans
+
+### 1. Electron Test Samples (score: 2)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron te...
+```
+
+### 2. Kb Absence Time Off (score: 2)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management...
+```
+
+### 3. Kb Benefits Enrollment (score: 2)
+Source: kb_benefits_enrollment.txt
+```
+=============================
+--------------------------------------------------------------------------------
+
+================================================================================

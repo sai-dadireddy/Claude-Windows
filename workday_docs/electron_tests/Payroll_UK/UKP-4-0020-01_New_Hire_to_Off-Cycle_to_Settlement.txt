@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-4-0020-01
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: New Hire to Off-Cycle to Settlement
+CONFIDENCE: [MANUAL REQUIRED] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Hire a new salaried employee in the middle of the current pay period. Complete all BP steps until new hire is complete. Add a payment election for the employee to receive all pay via Direct Deposit.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

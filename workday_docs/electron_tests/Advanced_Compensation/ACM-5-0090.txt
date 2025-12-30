@@ -1,0 +1,82 @@
+================================================================================
+TEST ID: ACM-5-0090
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Matrices
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 2.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Verify the compensation matrix (matrices) are configured correctly.
+
+TASK/STEP:
+Search bar: "comp mat"   Click on Compensation Matrix.  Review your Compensation Matrix (Matrices)
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 2.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: comp mat
+
+### 1. compensation (score: 2)
+Source: compensation_v2.json
+```
+API: compensation
+GET /scorecardResults - Provides the ability to set up and retrieve Scores on Scorecard Results.
+POST /scorecardResults - Creates a new Scorecard Result.
+GET /scorecardResults/{ID} - Provides the ability to set up and retrieve Scores on Scorecard Results.
+DELETE /scorecardResults/{...
+```
+
+### 2. p
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: comp mat
+
+### 1. compensation (score: 2)
+Source: compensation_v2.json
+```
+API: compensation
+GET /scorecardResults - Provides the ability to set up and retrieve Scores on Scorecard Results.
+POST /scorecardResults - Creates a new Scorecard Result.
+GET /scorecardResults/{ID} - Provides the ability to set up and retrieve Scores on Scorecard Results.
+DELETE /scorecardResults/{...
+```
+
+### 2. person (score: 2)
+Source: person_v4.json
+```
+API: person
+POST /phoneValidation - Validates phone number data to ensure it is valid for Workday.
+GET /people/{ID}/personalInformation - Retrieves a collection of personal information.
+GET /countries/{ID} - Retrieves information about a country.
+GET /people/{ID}/homeAddresses/{subresourceID} - Retr...
+```
+
+### 3. staffing (score: 2)
+Source: staffing_v7.json
+```
+API: staffing
+GET /values/organizationAssignmentChangesGroup/regions/ - 
+GET /jobChanges/{I
+--------------------------------------------------------------------------------
+
+================================================================================

@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-5-0080
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Scorecards
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 13.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Verify the correct scorecard goal(s) and profile(s) are configured.
+
+TASK/STEP:
+While in each Bonus plan, right click on the scorecard(s) (i.e. Company Funding Scorecard, Plan Modifier Scorecard, and/or Performance Factors). Select "open in new tab".
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "While in each Bonus plan, right click on the scorecard(s) (i.e. Company Funding Scorecard, Plan Modi"
+2. wait for search results
+3. click search result containing "While in each Bonus plan, right click on the scorecard(s) (i.e. Company Funding Scorecard, Plan Modi"
+4. wait for page to load
+5. screenshot as "ACM-5-0080_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

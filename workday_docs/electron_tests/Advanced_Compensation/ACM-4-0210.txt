@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0210
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Promotions in Merit - Promotion with Review
+WORKDAY ROLE: Manager / Compensation or HR Partner
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Promote an employee in the compensation review process. Set the Promote flag to Yes, and complete staffing and compensation details. Flag the promotion for review prior to finalizing. Once the compensation review process is completed, verify the Change Job process is routed for review and approval. Ensure that appropriate compensation plans default correctly, and that you can add/remove plans and adjust targets as needed. Verify the updated promotion details on the employee's profile.
+
+TASK/STEP:
+Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search"
+
+PREREQUISITES:
+- User logged in with Manager / Compensation or HR Partner permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search""
+2. wait for search results
+3. click search result containing "Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search""
+4. wait for page to load
+5. screenshot as "ACM-4-0210_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: UKP-3-0110
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Verify Open Ledger Periods
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+Verify that there are open ledger periods in place and if not, update ledger period statuses as needed.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Mass Update Ledger Period Status"
+2. wait for search results
+3. click search result containing "Mass Update Ledger Period Status"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "UKP-3-0110_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Mass Update Ledger Period Status
+
+### 1. Admin Guide  Financial Management (score: 5)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components........................................
+================================================================================

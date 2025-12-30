@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: UKP-3-0070
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Benefits and Pay Hub
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+As an Employee as Self worker. Ensure Benefits and Pay Hub is available to employee and contains the appropriate tasks/reports
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Benefits and Pay Hub"
+2. wait for search results
+3. click search result containing "Benefits and Pay Hub"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "UKP-3-0070_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Benefits and Pay Hub
+
+### 1. Admin Guide Human Capital Management (score: 9)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information.........................................................
+================================================================================

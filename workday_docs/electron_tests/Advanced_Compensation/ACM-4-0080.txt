@@ -1,0 +1,78 @@
+================================================================================
+TEST ID: ACM-4-0080
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Control Page: Access
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 3.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+On control page, click on buttons and tabs and confirm access to various actions and reports:  "Search Employees" button "Finalize" button (do not click this) "Actions" button "Process" tab "Details" tab "Employee Participation" tab
+
+TASK/STEP:
+Task in Controller's Inbox
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 3.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Task in Controller's Inbox
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Task in Controller's Inbox
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management...
+```
+
+### 2. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 3. Admin Guide Authentication And Security (score: 3)
+Source: Admin-Guide-Authentication-and-Secu
+--------------------------------------------------------------------------------
+
+================================================================================

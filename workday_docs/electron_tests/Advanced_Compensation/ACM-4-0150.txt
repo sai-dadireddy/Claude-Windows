@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: ACM-4-0150
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Complete Award (Management Chain)
+WORKDAY ROLE: Manager's Manager's Manager
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 13.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Click on "Propose" pencil icon: 
+- Review fields on grid
+- Review Actions
+- Change awards  
+- Test validation rules
+- Test "Complete on Behalf of" task
+
+TASK/STEP:
+Login as the next level manager. Review fields and links on Organization Summary page.
+
+PREREQUISITES:
+- User logged in with Manager's Manager's Manager permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Login as the next level manager. Review fields and links on Organization Summary page."
+2. wait for search results
+3. click search result containing "Login as the next level manager. Review fields and links on Organization Summary page."
+4. wait for page to load
+5. screenshot as "ACM-4-0150_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

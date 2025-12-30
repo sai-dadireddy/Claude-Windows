@@ -1,0 +1,83 @@
+================================================================================
+TEST ID: ACM-4-0200
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Promotions in Merit - Promotion without Review
+WORKDAY ROLE: Manager / Compensation or HR Partner
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 3.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Promote an employee in the compensation review process. Set the Promote flag to "Yes", and complete staffing and compensation details. Do not flag the promotion for review. Once the compensation review process is completed, verify the Change Job process is automatically completed. Verify the updated promotion details on the employee's profile, including correct assignment of appropriate compensation plans.
+
+TASK/STEP:
+Login as the Reviewer of the process to review the process.   Search bar: "Comp Rev Org"
+
+PREREQUISITES:
+- User logged in with Manager / Compensation or HR Partner permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 3.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Comp Rev Org
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron t
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Comp Rev Org
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Electron te...
+```
+
+### 2. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration
+Ca...
+```
+
+### 3. Kb Expense Report (score: 3)
+Source: kb_expense_report.txt
+```
+===============================
+--------------------------------------------------------------------------------
+
+================================================================================

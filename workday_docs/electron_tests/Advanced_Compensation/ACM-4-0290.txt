@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0290
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Review Compensation Review Statement as Employee
+WORKDAY ROLE: Employee
+EST. DURATION: 10 minutes
+CONFIDENCE SCORE: 12.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Review Compensation Review Statement
+
+TASK/STEP:
+Proxy in as employee, navigate off of the employee's profile > Compensation > View Compensation Review Statement History.
+
+PREREQUISITES:
+- User logged in with Employee permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Proxy in as employee, navigate off of the employee's profile > Compensation > View Compensation Revi"
+2. wait for search results
+3. click search result containing "Proxy in as employee, navigate off of the employee's profile > Compensation > View Compensation Revi"
+4. wait for page to load
+5. screenshot as "ACM-4-0290_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-5-0070
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Waiting Periods
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 15.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Verify the plan is configured properly: employees will be subject to the correct waiting period.
+
+TASK/STEP:
+While in each Bonus and Merit plan, right click on the waiting period. Select "open in new tab".
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "While in each Bonus and Merit plan, right click on the waiting period. Select "open in new tab"."
+2. wait for search results
+3. click search result containing "While in each Bonus and Merit plan, right click on the waiting period. Select "open in new tab"."
+4. wait for page to load
+5. screenshot as "ACM-5-0070_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

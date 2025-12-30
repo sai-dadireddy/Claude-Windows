@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACM-4-0030
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Initiate Compensation Review Process - Bonus
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 13.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+If using a template, verify that information defaults correctly from the Compensation Review Process Template. Review all available fields and options that can be edited.
+
+TASK/STEP:
+Enter "initiate comp" in the search at top left and select Initiate Compensation Review Process. Complete the relevant fields.
+
+Effective Date - Enter date that the increases should take effect. 
+Process Period End Date: If process/review period is 5/1 to 4/30, enter 4/30/20xx 
+Organization Snapshot Date: Enter the date that the system should evaluate the reporting structure. This date is usually the same as the Effective Date. 
+Template: Choose the applicable template. Grid configuration and plans should default.
+Click "OK". On page 2 entered an identifiable process name in Name. Verify the defaulted information, change if needed, click "Submit".
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Enter "initiate comp" in the search at top left and select Initiate Compensation Review Process. Com"
+2. wait for search results
+3. click search result containing "Enter "initiate comp" in the search at top left and select Initiate Compensation Review Process. Com"
+4. wait for page to load
+5. screenshot as "ACM-4-0030_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

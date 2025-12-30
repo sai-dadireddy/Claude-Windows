@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0010
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Add/Request Stock Grant
+WORKDAY ROLE: Compensation Administrator / Manager
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 9.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Initiate the Request/Add Stock Grant process for an employee.
+
+TASK/STEP:
+Comp Admin: Employee Profile Select: Action Button > Compensation > Add Stock Grant
+
+PREREQUISITES:
+- User logged in with Compensation Administrator / Manager permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Comp Admin: Employee Profile Select: Action Button > Compensation > Add Stock Grant"
+2. wait for search results
+3. click search result containing "Comp Admin: Employee Profile Select: Action Button > Compensation > Add Stock Grant"
+4. wait for page to load
+5. screenshot as "ACM-4-0010_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

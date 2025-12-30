@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-2-0040
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Verify Accounting Configuration and Results
+CONFIDENCE: [MANUAL REQUIRED] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Calculate a full payroll (for all pay groups); ensure that there are no pay calculation results in error due to accounting configuration issues. Before completing the payroll, review the postings to verify that postings are going to the expected accounts (no postings to suspense accounts). Complete the payroll and run 'Fix Operational Journals With Errors'. If there are any errors, update accounting configuration as needed.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 30 minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

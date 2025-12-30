@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-3-0270
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Rollout Compensation Plans to Employees
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Log into Workday as a Compensation Administrator and start a rollout process for Merit, Bonus, and Stock Plans (separately or in any combination, it's important to run several processes). This process allows you to assign Compensation Plans to multiple employees without approval steps. Make sure the Effective Date is aligned with the Compensation Review Process you are going to initiate. Note: if an employee was not eligible (e.g. not yet hired) for the plan on the effective date of the rollout, they will not receive the plan assignment. Compensation rollouts should only be used if every worker should receive the plan as of the same effective date.  If unique effective dates are necessary, then opt for assigning plans via EIB.
+
+TASK/STEP:
+Search "Rollout Comp". Enter the required fields including the effective date and the compensation plans to rollout. Include any eligibility rules or employees to specify rollout to a specific population, if applicable. Click OK. Refresh to complete.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Search "Rollout Comp". Enter the required fields including the effective date and the compensation p"
+2. wait for search results
+3. click search result containing "Search "Rollout Comp". Enter the required fields including the effective date and the compensation p"
+4. wait for page to load
+5. screenshot as "ACM-3-0270_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

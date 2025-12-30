@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: ACM-4-0140
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Complete Award (Manager's Manager)
+WORKDAY ROLE: Manager's Manager
+EST. DURATION: 30 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Click on "Propose" pencil icon: 
+- Review fields on grid
+- Review Actions
+- Change awards  
+- Test validation rules
+- Test "Complete on Behalf of" task
+
+TASK/STEP:
+Login as Manager's Manager. Review fields and links on Organization Summary page.
+
+PREREQUISITES:
+- User logged in with Manager's Manager permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Login as Manager's Manager. Review fields and links on Organization Summary page."
+2. wait for search results
+3. click search result containing "Login as Manager's Manager. Review fields and links on Organization Summary page."
+4. wait for page to load
+5. screenshot as "ACM-4-0140_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

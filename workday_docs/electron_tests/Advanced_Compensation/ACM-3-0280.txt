@@ -1,0 +1,84 @@
+================================================================================
+TEST ID: ACM-3-0280
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Employee Plan Assignments
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 30 minutes
+CONFIDENCE SCORE: 3.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Log into Workday as a Compensation Administrator and navigate to the Employee Compensation Audit report to review employee audiences for plans. This report evaluates plan eligibility rules and lists employees incorrectly assigned to plans or missing plan assignments.
+
+Navigate to the Extract Employee Compensation Details report to review employee merit, bonus, and stock plan assignments.
+
+TASK/STEP:
+Employee Compensation Audit
+
+Extract Employee Compensation Details
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 3.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Employee Compensation Audit
+
+### 1. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - 
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Employee Compensation Audit
+
+### 1. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Kb Hcm Terminate Employee (score: 3)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL...
+```
+
+### 3. Test Scenarios Index (score: 3)
+Source: test_scenarios_index.txt
+```
+# Workday Te
+--------------------------------------------------------------------------------
+
+================================================================================

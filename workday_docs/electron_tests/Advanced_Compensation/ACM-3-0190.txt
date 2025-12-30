@@ -1,0 +1,75 @@
+================================================================================
+TEST ID: ACM-3-0190
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Review Participation Rule Sets`
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 10 minutes
+CONFIDENCE SCORE: 5.0/10
+STATUS: [!!] NEEDS REVIEW
+================================================================================
+
+DESCRIPTION:
+Review configuration of compensation participation rule for the Compensation Parallel Event parameters, there should be one for each award type, as applicable. Confirm it's working as expected once process is launched.
+
+TASK/STEP:
+Search bar: "Comp Rev Partic Rule Set". Click on Maintain Compensation Review Participation Rule Sets
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [NEEDS SME REVIEW - Confidence: 5.0/10]
+2. 
+3. # Task: Comp Rev Partic Rule Set
+4. 
+5. enter search box as "Comp Rev Partic Rule Set"
+6. wait for search results
+7. # [SME: Verify exact element to click]
+8. 
+9. # SME ACTION REQUIRED:
+10. # 1. Verify field names and interactions
+11. # 2. Add missing validation steps
+12. # 3. Update confidence score when complete
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Comp Rev Partic Rule Set
+
+### 1. Kb Benefits Enrollment (score: 5)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration
+Ca...
+```
+
+### 2. Admin Guide Authentication And Security (score: 5)
+Source: Admin-Guide-Authentication-and-Security.pdf
+```
+Authentication
+and Security
+Product Summary
+December 11, 2025
+ | Contents | ii
+Contents
+Authentication and Security.................................................................................7
+Authentication...........................................................................................
+```
+
+### 3. Admin Guide Glossary (score: 5)
+Source: Admin-
+--------------------------------------------------------------------------------
+
+================================================================================

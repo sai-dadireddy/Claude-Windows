@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0260
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Release Compensation Review Statement
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 9.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Release Compensation Review Statement
+
+TASK/STEP:
+Enter fields on Release Compensation Review Statement page. Choose rule. Choose delivery date/time.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Enter fields on Release Compensation Review Statement page. Choose rule. Choose delivery date/time."
+2. wait for search results
+3. click search result containing "Enter fields on Release Compensation Review Statement page. Choose rule. Choose delivery date/time."
+4. wait for page to load
+5. screenshot as "ACM-4-0260_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

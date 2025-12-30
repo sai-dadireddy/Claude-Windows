@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0170
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Auditing Proposals: Compensation Review Process Search Employees
+WORKDAY ROLE: Compensation Administrator / Reviewer
+EST. DURATION: 10 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+A Reviewer of the process can use this task to select employees using filters and view/modify their awards in a grid.
+
+TASK/STEP:
+Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search"
+
+PREREQUISITES:
+- User logged in with Compensation Administrator / Reviewer permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search""
+2. wait for search results
+3. click search result containing "Login as the Reviewer/Controller of the process to review the process.   Search: "Comp Rev Search""
+4. wait for page to load
+5. screenshot as "ACM-4-0170_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

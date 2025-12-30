@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACM-4-0130
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Complete Award (Manager or Compensation Planner)
+WORKDAY ROLE: Manager / Compensation Planning Manager
+EST. DURATION: 60 minutes
+CONFIDENCE SCORE: 11.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Review fields on grid:
+- Review Actions 
+- Confirm target calculations (proration, performances factors, scorecards) 
+- Confirm Full-time, Part-time, Salary, Hourly employee analytics 
+- Change awards 
+- Test validation rules 
+- Test comments
+
+TASK/STEP:
+Login as "first line" Manager (manager with direct reports but no indirect reports) or compensation planner.
+
+PREREQUISITES:
+- User logged in with Manager / Compensation Planning Manager permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Login as "first line" Manager (manager with direct reports but no indirect reports) or compensation "
+2. wait for search results
+3. click search result containing "Login as "first line" Manager (manager with direct reports but no indirect reports) or compensation "
+4. wait for page to load
+5. screenshot as "ACM-4-0130_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

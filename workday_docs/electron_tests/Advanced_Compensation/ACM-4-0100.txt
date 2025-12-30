@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-4-0100
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Configurable Grid
+WORKDAY ROLE: Manager
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 10.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Log into Workday as the Participant who proposes awards (Manager) and go to the Inbox to view the launched process task.
+
+TASK/STEP:
+Task in Manager's inbox. Click the "Propose" pencil icon to go into the Configurable grid.
+
+PREREQUISITES:
+- User logged in with Manager permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Task in Manager's inbox. Click the "Propose" pencil icon to go into the Configurable grid."
+2. wait for search results
+3. click search result containing "Task in Manager's inbox. Click the "Propose" pencil icon to go into the Configurable grid."
+4. wait for page to load
+5. screenshot as "ACM-4-0100_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================
