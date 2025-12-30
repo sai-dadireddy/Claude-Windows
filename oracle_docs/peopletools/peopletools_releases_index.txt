@@ -1,0 +1,77 @@
+# PeopleTools Documentation Index
+# Scraped from: https://docs.oracle.com/en/applications/peoplesoft/peopletools/index.html
+# Date: 2025-12-30
+
+## Available PeopleTools Releases
+
+| Release | Latest Patch | Status |
+|---------|--------------|--------|
+| 8.62 | 8.62.06 | Current/Latest |
+| 8.61 | 8.61.06 | Supported |
+| 8.60 | 8.60.15 | Supported |
+| 8.59 | 8.59.21 | Supported |
+| 8.58 | 8.58.13 | Legacy |
+| 8.57 | 8.57.13 | Legacy |
+| 8.56 | 8.56.12 | Legacy |
+
+**NOTE: PeopleTools 8.63 does NOT exist yet as of Dec 2025. 8.62 is the latest.**
+
+## PeopleTools 8.62 (Current)
+
+### Online Help and PeopleBooks
+- Online Help (HTML): https://docs.oracle.com/en/applications/peoplesoft/peopletools/
+- PeopleBooks (PDF): Available for download
+- Latest patch: 8.62.06
+- Documentation updated: December 3, 2025
+
+### Installation Documentation
+- PeopleSoft Deployment Packages Installation
+- PeopleSoft Deployment Packages Installation for Search Components (8.62)
+- PeopleSoft Deployment Packages for Db2 z/OS Batch Setup (8.62)
+- PT-INFRA Deployment Package Installation (8.62)
+
+### Upgrade Documentation
+- PeopleTools 8.62 Upgrade
+- Getting Started on Your PeopleTools Upgrade
+
+### Application Management Plug-in
+- PeopleSoft Application Management Plug-in 13.5.1.1.0 for Oracle Enterprise Manager 13.5
+
+### Other Resources
+- Licensing Information: PeopleTools 8.62
+- Application Services Framework Tutorials
+- PeopleSoft Information Portal: https://docs.oracle.com/cd/E52319_01/infoportal/
+
+## Certification Matrix Location
+
+For certification information (supported platforms, databases, browsers):
+- My Oracle Support Certifications: https://support.oracle.com/CSP/ui/flash.html#tab=CertifyHomePageV2
+- Search for "PeopleTools 8.62" in certifications
+
+## MOS KB Articles for Upgrades
+
+Key upgrade-related KB articles:
+- KB677652: Understanding the Upgrade Certification Path section of an Upgrade Home Page
+- KB593233: PeopleSoft PeopleTools 8.62 Upgrade Home Page
+- KB565551: Oracle's PeopleTools 8.52 Hardware and Software Requirements
+- KB269818: Oracle's PeopleTools Installation Guides
+
+## Upgrade Path (8.62)
+
+From PeopleTools version:
+- 8.54 or higher → 8.62 (direct upgrade supported)
+- 8.5x versions → 8.62 (requires Change Assistant)
+- Below 8.54 → Must upgrade to 8.54+ first
+
+Databases supported:
+- Oracle Database
+- Microsoft SQL Server (certified for 8.62.03+)
+- IBM DB2 for z/OS (certified for cloud customers)
+
+## Key Links
+
+- PeopleSoft Documentation Home: https://docs.oracle.com/en/applications/peoplesoft/
+- PeopleSoft PeopleTools: https://docs.oracle.com/en/applications/peoplesoft/peopletools/
+- PeopleSoft Information Portal: https://docs.oracle.com/cd/E52319_01/infoportal/
+- My Oracle Support: https://support.oracle.com/support/
+- Integration Broker Manual: https://ib.books.cedarhillsgroup.com/
