@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: USP-5-0270
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Earnings - Academic Pay
+DESCRIPTION: - Have you determined and verified the details below have been configured?
+1) Have you determined  the Annual Work Period?
+2) Have you determined how many Disbursement Plan Years?
+3) Have you determined and verified configuration of the 9/12, 9/9, 10/12 periods?  
+4) Have you determined how the benefits will be handled within this pay frequency?
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

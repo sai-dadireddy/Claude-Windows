@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: SRCCNT-4-0190
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Move Draft Contract to Finalized
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 19.0)
+================================================================================
+
+DESCRIPTION:
+Finalize a Draft
+
+TASK / STEP:
+1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Finalize' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Finalize' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Finalize' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: Only for a contract that is not associated with a supplier
+
+Note: If Office 365 collaboration is used, the Finalize button will only appear after the contract document is finalized in Office 365. Refer to Office 365 manual for instructions to use the collaboration feature.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0190_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: Only for a contract that is not associated with a supplier
+
+Note: If Office 365 collaboration is used, the Finalize button will only appear after the contract document is finalized in Office 365. Refer to Office 365 manual for instructions to use the collaboration feature.
+
+================================================================================

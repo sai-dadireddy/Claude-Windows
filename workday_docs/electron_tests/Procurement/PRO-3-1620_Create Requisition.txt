@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: PRO-3-1620
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create Requisition
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create Requisition
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Enter Requisition - input all data 
+Deliver to - enter specific deliver to that was configured in the Substitute Item setup
+OK
+
+Search Catalog - Search for "Primary" item
+Check the checkbox next to the item
+Add to Cart
+
+Click on "View Cart" - Shopping Cart
+Checkout
+Verify information 
+Submit
+
+**Note Requisition ID
+
+Process requisition through any approvals."
+2. wait for search results (2 seconds)
+3. click search result containing "Enter Requisition - input all data 
+Deliver to - enter specific deliver to that was configured in the Substitute Item setup
+OK
+
+Search Catalog - Search for "Primary" item
+Check the checkbox next to the item
+Add to Cart
+
+Click on "View Cart" - Shopping Cart
+Checkout
+Verify information 
+Submit
+
+**Note Requisition ID
+
+Process requisition through any approvals."
+4. wait for page to load (3 seconds)
+5. ## Results for: Enter Requisition - input all data
+6. Deliver to - enter specific deliver to that was configured in the Substitute Item setup
+7. Click on "View Cart" - Shopping Cart
+8. screenshot as "PRO-3-1620_complete.png"
+
+VERIFICATION:
+- [ ] Buyer or Employee as self
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

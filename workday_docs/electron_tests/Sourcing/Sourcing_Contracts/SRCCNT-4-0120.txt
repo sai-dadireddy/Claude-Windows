@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: SRCCNT-4-0120
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Assign/Create a Contract Milestone
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+Create a contract milestone
+
+TASK / STEP:
+1. Open an In Progress contract 
+2. In the Milestones section, add a new milestone and assign a due date and assignee (or assign a due date an assignee to a preset milestone as defined by the Contract Type configurations)
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract 
+2. In the Milestones section, add a new milestone and assign a due date and assignee (or assign a due date an assignee to a preset milestone as defined by the Contract Type configurations)"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract 
+2. In the Milestones section, add a new milestone and assign a due date and assignee (or assign a due date an assignee to a preset milestone as defined by the Contract Type configurations)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0120_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations:
+  - - Submit_Supplier_Invoice
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

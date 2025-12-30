@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: SRCCNT-4-0200
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Negotiate a Contract with Supplier
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 20.0)
+================================================================================
+
+DESCRIPTION:
+Collaborate with a supplier to finalize the negotiated terms and conditions in the contract document
+
+TASK / STEP:
+1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Send to Supplier' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Send to Supplier' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Send to Supplier' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0200_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

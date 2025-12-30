@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: LA-3-0080
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: View Company Asset Book
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: View Company Asset Book
+
+ELECTRON STEPS:
+1. enter search box as "View Company Asset Book"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-3-0080_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Company Asset Book
+
+### 1. Kb Finance Journal Entry (score: 4)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financ...
+================================================================================

@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: SRCCNT-4-0060
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Contract Search
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 17.0)
+================================================================================
+
+DESCRIPTION:
+Review using the contract Search bar
+
+TASK / STEP:
+1. Navigate to Contracts
+2. Using the Search bar, search for a contract that exists
+3. Confirm that the related contract appears within sidebar menu
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Contracts
+2. Using the Search bar, search for a contract that exists
+3. Confirm that the related contract appears within sidebar menu"
+2. wait for search results
+3. click search result containing "1. Navigate to Contracts
+2. Using the Search bar, search for a contract that exists
+3. Confirm that the related contract appears within sidebar menu"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0060_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

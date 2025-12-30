@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1590
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Purchase Item
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Purchase Item
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Identify a "primary item" that you will associate a Substitute Item for."
+2. wait for search results (2 seconds)
+3. click search result containing "Identify a "primary item" that you will associate a Substitute Item for."
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1590_complete.png"
+
+VERIFICATION:
+- [ ] Procurement Configurator
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

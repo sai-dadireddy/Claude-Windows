@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: SRC-4-0360
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Award a Bid
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 39.0)
+================================================================================
+
+DESCRIPTION:
+Award a Supplier's bid
+
+TASK / STEP:
+1. Either within the Compare Bids or Analyzer tool or on the Event Dashboard > Click Supplier's name, click to award the bid
+2. Review the template email
+3. (optional) Edit the award email
+4. Confirm the award
+
+Note: if the supplier as not previously been onboarded, there will be an alert in the Award Options Recommendations to onboard the supplier.
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Either within the Compare Bids or Analyzer tool or on the Event Dashboard > Click Supplier's name, click to award the bid
+2. Review the template email
+3. (optional) Edit the award email
+4. Confirm the award
+
+Note: if the supplier as not previously been onboarded, there will be an alert in the Award Options Recommendations to onboard the supplier."
+2. wait for search results
+3. click search result containing "1. Either within the Compare Bids or Analyzer tool or on the Event Dashboard > Click Supplier's name, click to award the bid
+2. Review the template email
+3. (optional) Edit the award email
+4. Confirm the award
+
+Note: if the supplier as not previously been onboarded, there will be an alert in the Award Options Recommendations to onboard the supplier."
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: Note: if the supplier as not previously been onboarded, there will be an alert in the Award Options Recommendations to onboard the supplier.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0360_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: if the supplier as not previously been onboarded, there will be an alert in the Award Options Recommendations to onboard the supplier.
+
+================================================================================

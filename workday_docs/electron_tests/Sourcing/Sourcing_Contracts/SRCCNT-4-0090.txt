@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: SRCCNT-4-0090
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Mass Update Contracts
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+Use the bulk update functionality to update multiple contracts
+
+TASK / STEP:
+1. Navigate to Contracts
+2. Click on the 'Bulk Update' button
+3. Select the contracts to be updated
+4. Click on the 'Find Common Fields' button
+5. Select the field(s) to be updated and click on the 'Next' button
+6. Assign the new field value(s) and click 'Next'
+7. Confirm the bulk update and click 'Apply Changes'
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Contracts
+2. Click on the 'Bulk Update' button
+3. Select the contracts to be updated
+4. Click on the 'Find Common Fields' button
+5. Select the field(s) to be updated and click on the 'Next' button
+6. Assign the new field value(s) and click 'Next'
+7. Confirm the bulk update and click 'Apply Changes'"
+2. wait for search results
+3. click search result containing "1. Navigate to Contracts
+2. Click on the 'Bulk Update' button
+3. Select the contracts to be updated
+4. Click on the 'Find Common Fields' button
+5. Select the field(s) to be updated and click on the 'Next' button
+6. Assign the new field value(s) and click 'Next'
+7. Confirm the bulk update and click 'Apply Changes'"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0090_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

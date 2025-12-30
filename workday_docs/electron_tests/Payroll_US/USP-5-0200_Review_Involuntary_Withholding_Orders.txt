@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: USP-5-0200
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Review Involuntary Withholding Orders
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure that all active withholding orders were loaded / manually added in the tenant.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "No delivered report exists"
+2. wait for search results
+3. click search result containing "No delivered report exists"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-5-0200_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 2. WSDL: Financial_Management (score: 4)
+  WSDL: Financial_Management
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: No delivered report exists
+
+### 1. User Guide Workday Prism Analytics (score: 4)
+Source: User-Guide-Workday-Prism-Analytics.pdf
+```
+Workday Prism Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Set Up Languages in Prism Analytics..............................................
+
+================================================================================

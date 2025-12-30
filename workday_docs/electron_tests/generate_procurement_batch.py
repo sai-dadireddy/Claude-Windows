@@ -15,7 +15,12 @@ def sanitize_filename(name):
     """Sanitize filename by removing invalid characters"""
     if pd.isna(name):
         return "Unknown"
-    name = re.sub(r'[<>:"/\\|?*]', '_', str(name))
+    # Convert to string and remove newlines/carriage returns
+    name = str(name).replace('\n', ' ').replace('\r', ' ')
+    # Remove or replace invalid characters
+    name = re.sub(r'[<>:"/\\|?*]', '_', name)
+    # Remove extra spaces
+    name = ' '.join(name.split())
     return name[:100]
 
 def query_rag(task_step):

@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: PRO-3-1600
+FUNCTIONAL AREA: Procurement
+TEST NAME: Edit Purchase Item
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Edit Purchase Item
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Item Substitutes tab
+
+Ordering Start Date - "correct date"
+Ordering End Date - "end of substitute use or leave blank"
+
+Deliver to Location - enter a specific Deliver to location that this substitute will be used for. 
+
+Substitute Priority = 1
+Item Substitute = Enter a substitute item for your "Primary Item"
+Usage = Procurement
+
+Submit
+
+**Note the Deliver to Location - this will be used on the Requisition."
+2. wait for search results (2 seconds)
+3. click search result containing "Item Substitutes tab
+
+Ordering Start Date - "correct date"
+Ordering End Date - "end of substitute use or leave blank"
+
+Deliver to Location - enter a specific Deliver to location that this substitute will be used for. 
+
+Substitute Priority = 1
+Item Substitute = Enter a substitute item for your "Primary Item"
+Usage = Procurement
+
+Submit
+
+**Note the Deliver to Location - this will be used on the Requisition."
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1600_complete.png"
+
+VERIFICATION:
+- [ ] Procurement Configurator
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

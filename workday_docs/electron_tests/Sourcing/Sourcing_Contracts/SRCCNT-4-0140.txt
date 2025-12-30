@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: SRCCNT-4-0140
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Link Contracts
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+Create a parent-child relationship for multiple contracts
+
+TASK / STEP:
+1. Open an In Progress contract 
+2. In the Related Contracts section, click on the 'Link Related Contracts' button
+3. Link a new or existing contract
+4. Choose the relationship type (parent or child)
+5. Click on the 'Create Link' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract 
+2. In the Related Contracts section, click on the 'Link Related Contracts' button
+3. Link a new or existing contract
+4. Choose the relationship type (parent or child)
+5. Click on the 'Create Link' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract 
+2. In the Related Contracts section, click on the 'Link Related Contracts' button
+3. Link a new or existing contract
+4. Choose the relationship type (parent or child)
+5. Click on the 'Create Link' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: Contracts can only be linked for the same supplier
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0140_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: Contracts can only be linked for the same supplier
+
+================================================================================

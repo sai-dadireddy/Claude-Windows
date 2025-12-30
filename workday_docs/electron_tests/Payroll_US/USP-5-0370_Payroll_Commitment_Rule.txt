@@ -1,0 +1,19 @@
+================================================================================
+TEST ID: USP-5-0370
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Payroll Commitment Rule
+DESCRIPTION: Is there a rule per company per fiscal year?
+Verify that on the Frequencies setup in Compensation for Hourly Frequency Tye that Use Weekly Hours has been checked.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

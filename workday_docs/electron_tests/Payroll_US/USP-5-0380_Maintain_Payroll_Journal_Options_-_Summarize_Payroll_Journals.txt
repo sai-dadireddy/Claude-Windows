@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-5-0380
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Maintain Payroll Journal Options - Summarize Payroll Journals
+DESCRIPTION: If Grants are being implemented, validate that Object Class has been mapped to the summarized journal.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

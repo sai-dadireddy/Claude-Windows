@@ -1,0 +1,69 @@
+================================================================================
+TEST ID: SRCCNT-4-0100
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Create a New Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 20 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 58.0)
+================================================================================
+
+DESCRIPTION:
+Draft a new contract transaction and populate custom fields as required by the Contract Type configurations
+
+TASK / STEP:
+1. Navigate to Contracts
+2. Click on the 'New Contract' button
+3. In the Supplier section, assign a supplier (by selecting from the supplier directory or adding a new one)
+4. In the Contract Summary section, assign a Contract Type
+5. Enter the Contract Header information (Title, Description, Start Date, End Date, Spend Amount, Auto Renewal, and other delivered fields as required or made optional by the system configurations)
+6. Enter the Renewal Terms information, if applicable (Renewal Terms and Reminder)
+7. Populate custom fields as defined by the Contract Type configurations (Required and optional fields). The custom fields might be listed under separate sections.
+8. Change the contract status to a custom In Progress status (as defined by the Contract Type configurations)
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Contracts
+2. Click on the 'New Contract' button
+3. In the Supplier section, assign a supplier (by selecting from the supplier directory or adding a new one)
+4. In the Contract Summary section, assign a Contract Type
+5. Enter the Contract Header information (Title, Description, Start Date, End Date, Spend Amount, Auto Renewal, and other delivered fields as required or made optional by the system configurations)
+6. Enter the Renewal Terms information, if applicable (Renewal Terms and Reminder)
+7. Populate custom fields as defined by the Contract Type configurations (Required and optional fields). The custom fields might be listed under separate sections.
+8. Change the contract status to a custom In Progress status (as defined by the Contract Type configurations)"
+2. wait for search results
+3. click search result containing "1. Navigate to Contracts
+2. Click on the 'New Contract' button
+3. In the Supplier section, assign a supplier (by selecting from the supplier directory or adding a new one)
+4. In the Contract Summary section, assign a Contract Type
+5. Enter the Contract Header information (Title, Description, Start Date, End Date, Spend Amount, Auto Renewal, and other delivered fields as required or made optional by the system configurations)
+6. Enter the Renewal Terms information, if applicable (Renewal Terms and Reminder)
+7. Populate custom fields as defined by the Contract Type configurations (Required and optional fields). The custom fields might be listed under separate sections.
+8. Change the contract status to a custom In Progress status (as defined by the Contract Type configurations)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0100_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

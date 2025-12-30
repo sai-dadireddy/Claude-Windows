@@ -1,0 +1,31 @@
+================================================================================
+TEST ID: PRO-3-1570
+FUNCTIONAL AREA: Procurement
+TEST NAME: Inventory Transaction
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Inventory Transaction
+(Optional based on Requisition type / Purchase order Type)
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Inventory Transaction
+(Optional based on Requisition type / Purchase order Type)"
+2. wait for search results (2 seconds)
+3. click search result containing "Find Inventory Transaction
+(Optional based on Requisition type / Purchase order Type)"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1570_complete.png"
+
+VERIFICATION:
+- [ ] Inventory Accountant
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1250
+FUNCTIONAL AREA: Procurement
+TEST NAME: Submit
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Submit
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Process requisition through Approvals to Purchase Order"
+2. wait for search results (2 seconds)
+3. click search result containing "Process requisition through Approvals to Purchase Order"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1250_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

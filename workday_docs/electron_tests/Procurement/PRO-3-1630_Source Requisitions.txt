@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: PRO-3-1630
+FUNCTIONAL AREA: Procurement
+TEST NAME: Source Requisitions
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Source Requisitions
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Company - Select Company from Requisition
+Requisition - Enter Requisition ID
+Search
+
+Check the Checkbox next to the Requisition ID
+OK
+Submit
+
+You will now see an Alert - The item selected has substitution ordering dates at this time. For more information, review the Item Substitute tab on the View Purchase Item report for the selected item.
+
+You can "Submit" the requisition again, but the Substitute will not occur.
+
+To select the Substitute Item - In the Item field Substitutes for Requested Items -> Select the Substitute Item 
+Submit"
+2. wait for search results (2 seconds)
+3. click search result containing "Company - Select Company from Requisition
+Requisition - Enter Requisition ID
+Search
+
+Check the Checkbox next to the Requisition ID
+OK
+Submit
+
+You will now see an Alert - The item selected has substitution ordering dates at this time. For more information, review the Item Substitute tab on the View Purchase Item report for the selected item.
+
+You can "Submit" the requisition again, but the Substitute will not occur.
+
+To select the Substitute Item - In the Item field Substitutes for Requested Items -> Select the Substitute Item 
+Submit"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1630_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: USP-5-0260
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Earnings - Activity Pay (Mid Academic Period Implementations)
+DESCRIPTION: - Have Activity assignments been loaded for the full academic period?
+–     Has Academic Periods been defined  back to the beginning of the Period Activity Assignment dates?
+ Have you determined use between Position and Period Activity Pay?
+–      one-to-one ratio (one position, one activity pay)
+–      one-to-many ratio (one position, several activity pay)
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

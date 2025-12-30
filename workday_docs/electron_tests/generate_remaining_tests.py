@@ -181,10 +181,10 @@ def main():
 
         if functional_area in AREA_FOLDERS:
             scenarios_by_area[functional_area].append({
-                'Scenario_ID': row_dict.get('Scenario_ID'),
-                'Test Scenario': row_dict.get('Test Scenario'),
-                'Task': row_dict.get('Task'),
-                'Step': row_dict.get('Step')
+                'Scenario_ID': row_dict.get('Scenario ID'),
+                'Scenario_Name': row_dict.get('Scenario Name'),
+                'Task_Step': row_dict.get('Task / Step'),
+                'Sub_Task': row_dict.get('Sub Task')
             })
 
     # Generate tests for each area
@@ -201,9 +201,9 @@ def main():
         area_count = 0
         for scenario in scenarios:
             scenario_id = scenario['Scenario_ID']
-            test_scenario = scenario['Test Scenario']
-            task = scenario['Task']
-            step = scenario['Step']
+            test_scenario = scenario['Scenario_Name']
+            task = scenario['Task_Step']
+            step = scenario['Sub_Task']
 
             if not scenario_id:
                 print(f"  [SKIP] No Scenario_ID")

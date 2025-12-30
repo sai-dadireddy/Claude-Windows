@@ -1,0 +1,3172 @@
+[
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0010",
+    "scenario_name": "Verify User Based Security Groups Assignments & Verify Role Assignments",
+    "task_step": "Extract User-Based Security Assignments\n\nRole-Based Security Group Assignments",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Security Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0020",
+    "scenario_name": "Tenant Setup - HCM",
+    "task_step": "View ID Definition / Sequence Generator\n \nEdit Tenant Setup - HCM",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0030",
+    "scenario_name": "Tenant Setup - Recruiting",
+    "task_step": "Edit Tenant Setup - Recruiting",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0040",
+    "scenario_name": "Tenant Setup - Notifications",
+    "task_step": "Edit Tenant Setup - Notifications",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0050",
+    "scenario_name": "Recruiting Sources",
+    "task_step": "Recruiting Sources",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0060",
+    "scenario_name": "Recruiting Dispositions",
+    "task_step": "View Recruiting Dispositions",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0070",
+    "scenario_name": "Unified Duplicate Management Framework - Verify Security",
+    "task_step": "Security Domains:\nManage: Duplicate Records for the Tenant\nManage: Duplicate Records for a Person\nSet Up: Duplicate Management",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0080",
+    "scenario_name": "Unified Duplicate Management Framework - Validate Match Rules",
+    "task_step": "Manage Match Rules",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0090",
+    "scenario_name": "Unified Duplicate Management Framework - Validate Validate Scheduled Jobs exist",
+    "task_step": "View Scheduled Runs for Duplicate Management",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0100",
+    "scenario_name": "Skills setup on Maintain Skills and Experience Setup - Candidates (confirm scope)",
+    "task_step": "Maintain Skills and Experience Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / HR Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0110",
+    "scenario_name": "Skills setup on Maintain Skills and Experience Setup - Job Requisitions (confirm scope)",
+    "task_step": "Maintain Skills and Experience Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / HR Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0120",
+    "scenario_name": "Skills based candidate matching on Job Application Template (confirm scope)",
+    "task_step": "View Job Application Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / HR Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0130",
+    "scenario_name": "Job Description Generation on Job Requisition",
+    "task_step": "Maintain Innovation Services Data Selection Opt In tab > HCM:HCM Machine Learning GA Features\nOpt In check box > Job Requisition Data, Job Posting Data, Opt In to Additional Data check box (requires 24 hours after opt in to enable the Generate with AI button to display)",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / HR Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0140",
+    "scenario_name": "Validate Workday Doc Configuration",
+    "task_step": "1. Click on your profile icon and select Drive\n2. Review files in the Shared with Me section\n3. Review applicable Recruiting documents, click the Share option to view document access\n4. Click into the recruiting document to review the content",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0150",
+    "scenario_name": "Validate Dynamic Document Configuration",
+    "task_step": "View Documents",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-1-0160",
+    "scenario_name": "Review and Update Job Posting Template",
+    "task_step": "View Job Posting Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0010",
+    "scenario_name": "Recruiting Security Group Assignments",
+    "task_step": "Start Proxy/ login (as Manager, Recruiter, Recruiting Analyst, etc based on requirements/ configuration)\n \n Recruiting Related Tasks/ Report Examples:\n - Create, Edit, Freeze, Close Job Requisition and Evergreen\n - Recruiting Hub\n - Move Candidates\n - Invite to Apply\n - Disposition Candidates",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0020",
+    "scenario_name": "Create Prospect",
+    "task_step": "Create Prospect",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0030",
+    "scenario_name": "Prospect Consent",
+    "task_step": "Create Prospect",
+    "sub_task": "Prospect Consent Collection",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Prospect",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0040",
+    "scenario_name": "Employee Submits a Referral",
+    "task_step": "Refer a Candidate",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0050",
+    "scenario_name": "Refer a Duplicate Candidate",
+    "task_step": "Refer a Candidate",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0060",
+    "scenario_name": "Internal Candidate Submits Job Application",
+    "task_step": "Submit Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0070",
+    "scenario_name": "Create and Post Job Requisition for New Position",
+    "task_step": "Create Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0080",
+    "scenario_name": "Create and Post a Remote Job Requisition",
+    "task_step": "Create Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0090",
+    "scenario_name": "Create and Post Job Requisition for Existing Position",
+    "task_step": "Create Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0100",
+    "scenario_name": "Select Skills on Job Requisition",
+    "task_step": "Create Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0110",
+    "scenario_name": "Edit Existing Job Requisition and Unpost/Repost Job Requisition",
+    "task_step": "Edit Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0120",
+    "scenario_name": "Edit Supervisory Organization on Job Requisition",
+    "task_step": "Edit Job Requisition",
+    "sub_task": "Change Supervisory Organization for Job Requisition",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0130",
+    "scenario_name": "Copy and Close Job Requisition",
+    "task_step": "Create Job Requisition\nClose Job Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0140",
+    "scenario_name": "Freeze and Unfreeze Job Requisition",
+    "task_step": "Manage Job Requisition Freeze",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0150",
+    "scenario_name": "Create and Post Evergreen Job Requisition",
+    "task_step": "Create Evergreen Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0160",
+    "scenario_name": "Edit Evergreen Requisition",
+    "task_step": "Edit Evergreen Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0170",
+    "scenario_name": "Close Evergreen Requisition",
+    "task_step": "Close Evergreen Requisition",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0180",
+    "scenario_name": "External Candidate Creates Account and Submits Job Application",
+    "task_step": "Apply/Submit Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0190",
+    "scenario_name": "Review Candidate",
+    "task_step": "Review Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter (or step owner)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0200",
+    "scenario_name": "Screen Candidate",
+    "task_step": "Review Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter (or step owner)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0210",
+    "scenario_name": "Assess Candidate",
+    "task_step": "Review Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter (or step owner)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0220",
+    "scenario_name": "Interview Candidate",
+    "task_step": "Review Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter (or step owner)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0230",
+    "scenario_name": "Recruiting Notes",
+    "task_step": "Start Proxy/ login (as Manager, Recruiter, etc based on requirements/ configuration)\n\nVerify correct security groups can add/view Job Requisition Notes\nVerify correct security groups can add/view Job Application Notes\nVerify correct security groups can add/view Candidate Notes",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0240",
+    "scenario_name": "External Candidate Applies for Evergreen Job Requisition",
+    "task_step": "Apply/Submit Job Application",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0250",
+    "scenario_name": "Employee Endorsement",
+    "task_step": "Submit Endorsement",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0260",
+    "scenario_name": "Job Application Customer Specific Scenarios",
+    "task_step": "Move Forward/Decline and Other Tasks of the Job Application Process",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager / Step Owners",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0270",
+    "scenario_name": "Job Application - Evergreen",
+    "task_step": "Move Candidate from Evergreen to Standard Job Req",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0280",
+    "scenario_name": "Submit Offer",
+    "task_step": "Submit Offer / Access Candidate Tasks",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Candidate",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0290",
+    "scenario_name": "Process Background Check",
+    "task_step": "Move Forward to Ready To Hire",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0300",
+    "scenario_name": "Ready To Hire - External Candidate",
+    "task_step": "Move Forward to Ready To Hire",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0310",
+    "scenario_name": "Ready To Hire - Internal Candidate",
+    "task_step": "Move Forward to Ready To Hire",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0320",
+    "scenario_name": "Ready To Hire - Contingent Worker Position",
+    "task_step": "Move Forward to Ready To Hire",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0330",
+    "scenario_name": "External Career Site(s)",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0340",
+    "scenario_name": "Internal Career Site",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0350",
+    "scenario_name": "Internal Career Site for Non-Workers (if applicable)",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-2-0360",
+    "scenario_name": "Job Application Templates",
+    "task_step": "Maintain Job Application Templates",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Admin",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0010",
+    "scenario_name": "Verify User Based Security Groups Assignments & Verify Role Assignments",
+    "task_step": "Extract User-Based Security Assignments\n\nRole-Based Security Group Assignments",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Security Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0020",
+    "scenario_name": "Questionnaire Confirmation",
+    "task_step": "Maintain Questionnaires",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Questionnaire Configurator / HR Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0030",
+    "scenario_name": "Tenant Setup - HCM",
+    "task_step": "Tenant Setup - HCM",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0040",
+    "scenario_name": "Tenant Setup - Recruiting",
+    "task_step": "Edit Tenant Setup - Recruiting",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0050",
+    "scenario_name": "Tenant Setup - Notifications",
+    "task_step": "Edit Tenant Setup - Notifications",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "System Configurator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0060",
+    "scenario_name": "Job Posting Locations",
+    "task_step": "Extract Locations report - Location usage filters \"Business Site\" and \"Job Posting\"",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0070",
+    "scenario_name": "Data Validation: Job Requisitions",
+    "task_step": "Manage Job Requisitions",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0080",
+    "scenario_name": "Validate Workday Doc Configuration",
+    "task_step": "1. Click on your profile icon and select Drive\n2. Review files in the Shared with Me section\n3. Review applicable Recruiting documents, click the Share option to view document access\n4. Click into the recruiting document to review the content",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-3-0090",
+    "scenario_name": "Validate Dynamic Document Configuration",
+    "task_step": "View Documents",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0010",
+    "scenario_name": "Recruiting Hub",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0010-01",
+    "scenario_name": "Recruiting Hub",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0010-02",
+    "scenario_name": "Mass Action on Job Requisitions",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0020",
+    "scenario_name": "Recruit an External Candidate",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0020-01",
+    "scenario_name": "Recruit an External Candidate",
+    "task_step": "1. Create and Post Job Req",
+    "sub_task": "Create Job Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0020-02",
+    "scenario_name": "Recruit an External Candidate",
+    "task_step": "2. Apply for Job",
+    "sub_task": "Apply - Submit",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0020-03",
+    "scenario_name": "Recruit an External Candidate",
+    "task_step": "3. Job Application Business Process through to Ready For Hire",
+    "sub_task": "Forward and Decline Buttons",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0020-04",
+    "scenario_name": "Recruit an External Candidate",
+    "task_step": "4. Hire Candidate and conduct Onboarding",
+    "sub_task": "Hire Inbox item",
+    "expected_result": "nan",
+    "workday_role": "HR Partner / Pre-Employee as Self / Employee as Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0030",
+    "scenario_name": "External Candidate - Create Job Alert",
+    "task_step": "Create Job Alert for External Candidate",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0040",
+    "scenario_name": "Recruit an Internal Candidate",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0040-01",
+    "scenario_name": "Recruit an Internal Candidate",
+    "task_step": "1. Create and Post Job Req",
+    "sub_task": "Create Job Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0040-02",
+    "scenario_name": "Recruit an Internal Candidate",
+    "task_step": "2. Apply for Job",
+    "sub_task": "Apply - Submit",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0040-03",
+    "scenario_name": "Recruit an Internal Candidate",
+    "task_step": "3. Job Application Business Process through to Ready For Hire",
+    "sub_task": "Forward and Decline Buttons",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager / Step Owners",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0040-04",
+    "scenario_name": "Recruit an Internal Candidate",
+    "task_step": "4. Complete Change Job",
+    "sub_task": "Inbox Change Job",
+    "expected_result": "nan",
+    "workday_role": "HR Partner",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0050",
+    "scenario_name": "Recruit an Internal Candidate to an Additional Job",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0050-01",
+    "scenario_name": "Recruit an Internal Candidate to an Additional Job",
+    "task_step": "1. Create and Post Job Req",
+    "sub_task": "Create Job Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0050-02",
+    "scenario_name": "Recruit an Internal Candidate to an Additional Job",
+    "task_step": "2. Apply for Job",
+    "sub_task": "Apply - Submit",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0050-03",
+    "scenario_name": "Recruit an Internal Candidate to an Additional Job",
+    "task_step": "3. Job Application Business Process through to Ready For Hire",
+    "sub_task": "Forward and Decline Buttons",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0050-04",
+    "scenario_name": "Recruit an Internal Candidate to an Additional Job",
+    "task_step": "4. Complete Add Job",
+    "sub_task": "Inbox Add Job",
+    "expected_result": "nan",
+    "workday_role": "HR Partner",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0060",
+    "scenario_name": "Internal Candidate - Create Job Alert",
+    "task_step": "Create Job Alert for Internal Candidate",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Internal Candidate",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0070",
+    "scenario_name": "Post Job - Internal/ External Job Alert",
+    "task_step": "Create and Post Job Req",
+    "sub_task": "Create Job Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0080",
+    "scenario_name": "Notifications and Message Templates",
+    "task_step": "Review Notifications and Message Templates",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Employee as Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0090",
+    "scenario_name": "Delivered Email Templates",
+    "task_step": "Review redirect email inbox as per your deployment",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0100",
+    "scenario_name": "Recruiting Notes",
+    "task_step": "Verify correct security groups can add/view Job Requisition Notes\nVerify correct security groups can add/view Job Application Notes\nVerify correct security groups can add/view Candidate Notes",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0110",
+    "scenario_name": "Recruiting Notes",
+    "task_step": "Verify Administrator security group can delete Job Requisition Notes\nVerify Administrator security group can delete Job Application Notes\nVerify Administrator security group can delete Candidate Notes",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0120",
+    "scenario_name": "Configured Email Templates",
+    "task_step": "Review redirect email inbox as per your deployment",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130-01",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "1. Create and Post Evergreen Requisition",
+    "sub_task": "Create Evergreen Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130-02",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "2. Apply for Job on Evergreen",
+    "sub_task": "Apply - Submit",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130-03",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "3. Move Candidate from Evergreen to standard (hiring) Job Requisition",
+    "sub_task": "Related action on Candidate Move Candidate from Evergreen to Standard Job Req",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130-04",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "4. Job Application Business Process through to Ready For Hire",
+    "sub_task": "Move Forward Button / Decline Button",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0130-05",
+    "scenario_name": "Evergreen - Recruit from an Evergreen Requisition",
+    "task_step": "5. Complete Hire",
+    "sub_task": "Hire inbox item",
+    "expected_result": "nan",
+    "workday_role": "HR Partner",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140",
+    "scenario_name": "Source on Referral",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140-01",
+    "scenario_name": "Source on Referral",
+    "task_step": "1. Create and Post Requisition",
+    "sub_task": "Create Job Requisition / Inbox Post Job",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140-02",
+    "scenario_name": "Source on Referral",
+    "task_step": "2. Refer Candidate",
+    "sub_task": "Refer Button",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140-03",
+    "scenario_name": "Source on Referral",
+    "task_step": "3. Apply for Job",
+    "sub_task": "Apply and Submit",
+    "expected_result": "nan",
+    "workday_role": "External Candidate",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140-04",
+    "scenario_name": "Job Description Generation on Job Requisition",
+    "task_step": "Create/ Edit Job Requisition",
+    "sub_task": "Job description field",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0140-05",
+    "scenario_name": "Skills based candidate matching",
+    "task_step": "Candidate grid",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0150",
+    "scenario_name": "Duplicate Management - Auto Merge",
+    "task_step": "Apply For Job / Check for Duplicates",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0160",
+    "scenario_name": "UDMF - Create duplicate candidate records",
+    "task_step": "Based on scenario - \nCreate Prospect\nSubmit Job Application\nStaffing actions - Create Pre-Hire, Hire, Contract Contingent Worker,Terminate Worker",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Varied security groups",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0170",
+    "scenario_name": "UDMF - Auto merging",
+    "task_step": "Duplicate Management > Find Duplicates related action on a person",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0180",
+    "scenario_name": "UDMF - Unmerging",
+    "task_step": "Duplicate Management > Find Duplicates related action on a person",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0190",
+    "scenario_name": "Candidate submitted by Agency",
+    "task_step": "Submit Agency Candidate",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0200",
+    "scenario_name": "Generate Offer Document",
+    "task_step": "1. Move Candidate to Offer\n2. Navigate to Generate Document step",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiter / HR Partner",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-4-0210",
+    "scenario_name": "Review Offer Document",
+    "task_step": "3. Proxy as Candidate or log into Candidate Home\n4. Access Candidate tasks",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee as Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0010",
+    "scenario_name": "Verify User Based Security Groups Assignments & Verify Role Assignments",
+    "task_step": "Run the report \"View Security Group\" and select the respective security group:\nFor User Based Security Groups (i.e. Administrators), select \"Members\" to view the list of assigned users.\nFor Role Based Security Groups (i.e. Recruiter, Recruiting Coordinator), select \"Assignable Role\" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \nSecurity Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0020",
+    "scenario_name": "Questionnaire Confirmation",
+    "task_step": "Maintain Questionnaires",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Admin / System Admin",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0030",
+    "scenario_name": "Data Validation: Job Requisitions",
+    "task_step": "Manage Job Requisitions",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Admin / System Admin",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0040",
+    "scenario_name": "UDMF - Verify Security",
+    "task_step": "Security Domains:\nManage: Duplicate Records for the Tenant\nManage: Duplicate Records for a Person\nSet Up: Duplicate Management",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0050",
+    "scenario_name": "UDMF - Validate Match Rules",
+    "task_step": "Manage Match Rules",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0060",
+    "scenario_name": "UDMF - Validate Validate Scheduled Jobs exist",
+    "task_step": "Schedule Find Duplicates Job, View Scheduled Run for Find Duplicates",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator / \n Security Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0070",
+    "scenario_name": "Validate Workday Doc Configuration",
+    "task_step": "1. Access Workday Drive",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Acquisition",
+    "scenario_id": "REC-5-0080",
+    "scenario_name": "Validate Dynamic Document Configuration",
+    "task_step": "View Documents",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Recruiting Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0010",
+    "scenario_name": "Performance Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0020",
+    "scenario_name": "Performance Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0030",
+    "scenario_name": "Performance Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0040",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Reporting access security group for Talent",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0050",
+    "scenario_name": "Calibration Dashboard",
+    "task_step": "View Applications",
+    "sub_task": "Maintain Dashboards",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0060",
+    "scenario_name": "Performance Calibration - Launch Performance Review with Calibration",
+    "task_step": "Start Performance Review for Organization",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0070",
+    "scenario_name": "Talent Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0080",
+    "scenario_name": "Talent Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0090",
+    "scenario_name": "Talent Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0100",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0110",
+    "scenario_name": "Calibration Dashboard",
+    "task_step": "View Applications",
+    "sub_task": "Maintain Dashboards",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0120",
+    "scenario_name": "Review Skills and Experience Setup (Talent Phase X)",
+    "task_step": "Maintain Skills and Experience Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-1-0130",
+    "scenario_name": "Review Skills and Experience Setup (Talent Phase X)",
+    "task_step": "Configure Profile Group > Career for Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0010",
+    "scenario_name": "Performance Calibration - Start Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager/Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0020",
+    "scenario_name": "Performance Calibration - Launch Calibration Event",
+    "task_step": "Launch Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0030",
+    "scenario_name": "Performance Calibration - Calibration nBox Report",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0040",
+    "scenario_name": "Performance Calibration - Calibrate your Team (Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0050",
+    "scenario_name": "Performance Calibration - Calibrate your Team (Manager's Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0060",
+    "scenario_name": "Performance Calibration - Calibrate Team - Session Functionality (Manager's Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0070",
+    "scenario_name": "Performance Calibration - Facilitate Calibration",
+    "task_step": "Facilitate Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "HR Partner (or designated role)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0080",
+    "scenario_name": "Performance Calibration - Manage Calibration - Worker changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0090",
+    "scenario_name": "Performance Calibration - Manage Calibration - Organization changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0100",
+    "scenario_name": "Performance Calibration - Complete Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0110",
+    "scenario_name": "Performance Calibration - Change Review Rating",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0120",
+    "scenario_name": "Worker Profile- Update to Potential Ratings",
+    "task_step": "Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0130",
+    "scenario_name": "Talent Calibration - Launch Performance Review with Calibration",
+    "task_step": "Start Performance Review for Organization",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0140",
+    "scenario_name": "Talent Calibration - Start Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0150",
+    "scenario_name": "Talent Calibration - Launch Calibration Event",
+    "task_step": "Launch Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0160",
+    "scenario_name": "Talent Calibration - Calibration nBox Report",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0170",
+    "scenario_name": "Talent Calibration - Calibrate your Team (Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0180",
+    "scenario_name": "Talent Calibration - Calibrate your Team (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0190",
+    "scenario_name": "Talent Calibration - Calibrate Team - Session Functionality (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0200",
+    "scenario_name": "Talent Calibration - Facilitate Calibration",
+    "task_step": "Facilitate Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "HR Partner (or designated role)",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0210",
+    "scenario_name": "Talent Calibration - Manage Calibration - Worker changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0220",
+    "scenario_name": "Talent Calibration - Manage Calibration - organization changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0230",
+    "scenario_name": "Talent Calibration - Complete Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0240",
+    "scenario_name": "Talent Calibration - Change Review Rating",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0250",
+    "scenario_name": "Worker Profile- Update to Potential Ratings",
+    "task_step": "Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0260",
+    "scenario_name": "Professional Profile",
+    "task_step": "Upload My Experience",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0270",
+    "scenario_name": "Manage Goals - Employee",
+    "task_step": "Add Individual Goal",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0280",
+    "scenario_name": "Anytime Feedback",
+    "task_step": "Give Feedback",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0290",
+    "scenario_name": "Manage Goals - Manager",
+    "task_step": "Add Individual Goal",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0300",
+    "scenario_name": "Manage Competencies",
+    "task_step": "Add Competency",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0310",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "1. Start Performance Review for Employee",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0320",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "Set Review Content for Performance Review",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0330",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "Complete Self Evaluation for Performance Review",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0340",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "Complete Manager Evaluation for Performance Review",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0350",
+    "scenario_name": "Start Development Plan for Employee/Organization",
+    "task_step": "Start Development Plan for Employee & \"Start Development Plan for Organization\"",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0360",
+    "scenario_name": "Start Disciplinary Action for Employee",
+    "task_step": "Start Disciplinary Action for Employee",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0370",
+    "scenario_name": "Start Performance Improvement Plan for Employee",
+    "task_step": "Start performance improvement plan for employee",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0380",
+    "scenario_name": "Team Performance Reporting",
+    "task_step": "Performance Review Status",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0390",
+    "scenario_name": "Check-ins",
+    "task_step": "My Check-Ins > Create Check-In\nView Check-Ins Report (by worker)\nCheck-Ins Report (by organization)",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Configured security groups",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0400",
+    "scenario_name": "Succession - Confirm Succession Profile",
+    "task_step": "Succession Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0410",
+    "scenario_name": "Succession - Confirm Succession Plan Setup",
+    "task_step": "Maintain Succession Plan Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0420",
+    "scenario_name": "Succession and Nominations - Confirm Readiness Levels",
+    "task_step": "Maintain Readiness",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0430",
+    "scenario_name": "Confirm Potentials",
+    "task_step": "Maintain Potential",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0440",
+    "scenario_name": "Confirm Achievable Levels",
+    "task_step": "Maintain Achievable Levels",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0450",
+    "scenario_name": "Confirm Retention",
+    "task_step": "Maintain Retention",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0460",
+    "scenario_name": "Confirm Loss Impact",
+    "task_step": "Maintain Loss Impact",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0470",
+    "scenario_name": "Succession - Create Succession Plan",
+    "task_step": "Create Succession Plan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0480",
+    "scenario_name": "Succession - Manage Succession Plan Business Process",
+    "task_step": "Manage Succession Plan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner / Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-2-0490",
+    "scenario_name": "Assess Potential Business Process",
+    "task_step": "Assess Potential",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "1 | Unit Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0010",
+    "scenario_name": "Performance Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0020",
+    "scenario_name": "Performance Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0030",
+    "scenario_name": "Performance Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0040",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Reporting access security group for Talent",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0050",
+    "scenario_name": "Calibration Dashboard",
+    "task_step": "View Applications",
+    "sub_task": "Maintain Dashboards",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0060",
+    "scenario_name": "Talent Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0070",
+    "scenario_name": "Talent Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0080",
+    "scenario_name": "Talent Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0090",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0100",
+    "scenario_name": "Calibration Dashboard",
+    "task_step": "Maintain Dashboards",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0110",
+    "scenario_name": "Verify Talent/Performance Role Assignments",
+    "task_step": "View Security Group",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0120",
+    "scenario_name": "Performance Worklet",
+    "task_step": "Performance Worklet",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0130",
+    "scenario_name": "Talent and Performance Dashboard",
+    "task_step": "Talent and Performance Dashboard",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0140",
+    "scenario_name": "Team Performance Dashboard",
+    "task_step": "Team Performance Dashboard",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0150",
+    "scenario_name": "Review Worker Profile",
+    "task_step": "View Profile Groups",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0160",
+    "scenario_name": "Review Tenant Setup for System - Activity Stream",
+    "task_step": "Edit Tenant Setup - System",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0170",
+    "scenario_name": "Review Career Preferences configuration",
+    "task_step": "View Career Preferences",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0180",
+    "scenario_name": "Review Public Job Profiles",
+    "task_step": "Extract Job Profiles Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0190",
+    "scenario_name": "Review Development Item Categories configuration",
+    "task_step": "Maintain Development Item Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0200",
+    "scenario_name": "Review Competency Category configuration",
+    "task_step": "Maintain Competency Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0210",
+    "scenario_name": "Review Competency Classes configuration",
+    "task_step": "Maintain Competency Classes",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0220",
+    "scenario_name": "Review Competency Precedence configuration",
+    "task_step": "Maintain Competency Precedence",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0230",
+    "scenario_name": "Review Proficiency Scale configuration",
+    "task_step": "View Proficiency Rating Scale",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0240",
+    "scenario_name": "Review Competencies configuration",
+    "task_step": "Competencies",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0250",
+    "scenario_name": "Review Connection Types configuration",
+    "task_step": "Maintain Connection Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0260",
+    "scenario_name": "Review Relocation Areas configuration",
+    "task_step": "View Relocation Areas",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0270",
+    "scenario_name": "Review Travel Amounts configuration",
+    "task_step": "View Travel Amounts",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0280",
+    "scenario_name": "Review Goal Setup configuration",
+    "task_step": "Maintain Goal Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0290",
+    "scenario_name": "Review Goal Completion Statuses configuration",
+    "task_step": "Goal Completion Statuses",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0300",
+    "scenario_name": "Review Goal Categories configuration",
+    "task_step": "View Goal Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0310",
+    "scenario_name": "Review Goal Unit configuration",
+    "task_step": "View Goal Units",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0320",
+    "scenario_name": "Review Goal Template Rule configuration",
+    "task_step": "View Goal Template Rule",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0330",
+    "scenario_name": "Review Goal Template configuration",
+    "task_step": "View Goal Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0340",
+    "scenario_name": "Review 'Review Types' configuration",
+    "task_step": "Maintain Review Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0350",
+    "scenario_name": "Review Rating Scale configuration",
+    "task_step": "View Rating Scale",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0360",
+    "scenario_name": "Review Employee Review Section Types configuration",
+    "task_step": "View Employee Review Section Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0370",
+    "scenario_name": "Review Feedback and Review Question Categories configuration",
+    "task_step": "Feedback and Review Question Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0380",
+    "scenario_name": "Review Feedback and Review Questions configuration",
+    "task_step": "Feedback and Review Questions",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0390",
+    "scenario_name": "Review Employee Review Rule configuration",
+    "task_step": "View Employee Review Rule",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0400",
+    "scenario_name": "Review Employee Review Template configuration",
+    "task_step": "View Employee Review Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0410",
+    "scenario_name": "Review Evaluation Feedback Statuses configuration",
+    "task_step": "Maintain Employee Review Acknowledgement Statuses",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0420",
+    "scenario_name": "Review Employee Review Setup configuration",
+    "task_step": "View Employee Review Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0430",
+    "scenario_name": "Succession - Verify Succession/Potential Role Assignments",
+    "task_step": "View Security Group",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0440",
+    "scenario_name": "Review Worker Profile",
+    "task_step": "Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0450",
+    "scenario_name": "Confirm My Team Worklet Setup",
+    "task_step": "My Team Worklet",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0460",
+    "scenario_name": "Succession - Confirm My Team Worklet Setup",
+    "task_step": "My Team Worklet",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0470",
+    "scenario_name": "Succession - Confirm Succession Plan Positions",
+    "task_step": "Find Succession Plans",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-3-0480",
+    "scenario_name": "Review Public Job Profiles",
+    "task_step": "Extract Job Profiles",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0010",
+    "scenario_name": "Performance Calibration - Launch Performance Review with Calibration",
+    "task_step": "Start Performance Review for Organization",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0020",
+    "scenario_name": "Performance Calibration - Start Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager/Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0030",
+    "scenario_name": "Performance Calibration - Launch Calibration Event",
+    "task_step": "Launch Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0040",
+    "scenario_name": "Performance Calibration - Calibration nBox Report",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0050",
+    "scenario_name": "Performance Calibration - Calibrate your Team (Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0060",
+    "scenario_name": "Performance Calibration - Calibrate your Team (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0070",
+    "scenario_name": "Performance Calibration - Calibrate Team - Session Functionality (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0080",
+    "scenario_name": "Performance Calibration - Facilitate Calibration",
+    "task_step": "Facilitate Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "HR Partner (or designated role)",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0090",
+    "scenario_name": "Performance Calibration - Manage Calibration - Worker changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0100",
+    "scenario_name": "Performance Calibration - Manage Calibration - organization changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0110",
+    "scenario_name": "Performance Calibration - Complete Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0120",
+    "scenario_name": "Performance Calibration - Change Review Rating",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0130",
+    "scenario_name": "Talent Calibration - Launch Performance Review with Calibration",
+    "task_step": "Start Performance Review for Organization",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0140",
+    "scenario_name": "Talent Calibration - Start Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0150",
+    "scenario_name": "Talent Calibration - Launch Calibration Event",
+    "task_step": "Launch Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0160",
+    "scenario_name": "Talent Calibration - Calibration nBox Report",
+    "task_step": "Inbox",
+    "sub_task": "Find Succession Plans",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0170",
+    "scenario_name": "Talent Calibration - Calibrate your Team (Manager)",
+    "task_step": "Inbox",
+    "sub_task": "Employee Potential",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0180",
+    "scenario_name": "Talent Calibration - Calibrate your Team (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0190",
+    "scenario_name": "Talent Calibration - Calibrate Team - Session Functionality (Managers Manager)",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Managers Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0200",
+    "scenario_name": "Talent Calibration - Facilitate Calibration",
+    "task_step": "Facilitate Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "HR Partner (or designated role)",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0210",
+    "scenario_name": "Talent Calibration - Manage Calibration - Worker changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0220",
+    "scenario_name": "Talent Calibration - Manage Calibration - organization changes",
+    "task_step": "Inbox - Manage Calibration",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0230",
+    "scenario_name": "Talent Calibration - Complete Calibration",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0240",
+    "scenario_name": "Talent Calibration - Change Review Rating",
+    "task_step": "Inbox",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0250",
+    "scenario_name": "Manage Career Interests",
+    "task_step": "Add Career Interest on Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0260",
+    "scenario_name": "Manage Job Interests",
+    "task_step": "Add Job Interest on Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0270",
+    "scenario_name": "Add skills to development item",
+    "task_step": "Add Development Item - Skills to develop",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0280",
+    "scenario_name": "Add Development Item",
+    "task_step": "Add Development Item",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0290",
+    "scenario_name": "Manage Mentorship - Manager",
+    "task_step": "Add a Mentor for Worker",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0300",
+    "scenario_name": "Manage Relocation Preferences",
+    "task_step": "Add Relocation Preferences on Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0310",
+    "scenario_name": "Manage Travel Preferences",
+    "task_step": "Add Travel Preferences on Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0320",
+    "scenario_name": "Assess My Team's Potential",
+    "task_step": "Assess My Team's Potential",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0330",
+    "scenario_name": "Check-Ins",
+    "task_step": "My Check-Ins",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0340",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0340-01",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "1. Start Performance Review for Organization",
+    "sub_task": "Start Performance Review for Organization",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0340-02",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "2. Set Review Content for Performance Review",
+    "sub_task": "Set Review Content",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0340-03",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "3. Complete Self Evaluation for Performance Review",
+    "sub_task": "Complete Self Evaluation",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0340-04",
+    "scenario_name": "Complete Employee Performance Review",
+    "task_step": "4. Complete Manager Evaluation for Performance Review",
+    "sub_task": "Complete Manager Evaluation",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0350",
+    "scenario_name": "Succession - Manage Succession Plan",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0350-01",
+    "scenario_name": "Succession - Manage Succession Plan",
+    "task_step": "1. Initiate Business Process",
+    "sub_task": "Manage Succession Plan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0350-02",
+    "scenario_name": "Succession - Manage Succession Plan",
+    "task_step": "2. Add Workers to Succession Plan",
+    "sub_task": "Manage Succession Plan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0350-03",
+    "scenario_name": "Succession - Manage Succession Plan",
+    "task_step": "3. Complete Business Process",
+    "sub_task": "Manage Succession Plan",
+    "expected_result": "nan",
+    "workday_role": "Succession Partner / Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0360",
+    "scenario_name": "Assess Potential",
+    "task_step": "nan",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0360-01",
+    "scenario_name": "Assess Potential",
+    "task_step": "1. Initiate Business Process",
+    "sub_task": "Assess Potential",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0360-02",
+    "scenario_name": "Assess Potential",
+    "task_step": "2. Assess Potential",
+    "sub_task": "Assess Potential",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0360-03",
+    "scenario_name": "Assess Potential",
+    "task_step": "3. Complete Business Process",
+    "sub_task": "Assess Potential",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0370",
+    "scenario_name": "Succession - Succession Reports",
+    "task_step": "1. Find Succession Plans",
+    "sub_task": "Find Succession Plans",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-4-0380",
+    "scenario_name": "Potential Reports",
+    "task_step": "1. Employee Potential",
+    "sub_task": "Employee Potential",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "2 | End to End Test Scenarios"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0010",
+    "scenario_name": "Performance Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0020",
+    "scenario_name": "Performance Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0030",
+    "scenario_name": "Performance Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0040",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Reporting access security group for Talent",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0050",
+    "scenario_name": "Talent Calibration Flags",
+    "task_step": "View Calibration Flags",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0060",
+    "scenario_name": "Talent Calibration Box Names/ Targets",
+    "task_step": "View nBox Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0070",
+    "scenario_name": "Talent Calibration Programs",
+    "task_step": "View Calibration Program",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0080",
+    "scenario_name": "Calibration nBox Report",
+    "task_step": "View Custom Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0090",
+    "scenario_name": "Verify Talent/Performance Role Assignments",
+    "task_step": "View Security Group",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "nan",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0100",
+    "scenario_name": "Performance Worklet",
+    "task_step": "Performance Worklet",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0110",
+    "scenario_name": "Talent and Performance Dashboard",
+    "task_step": "Talent and Performance Dashboard",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0120",
+    "scenario_name": "Team Performance Dashboard",
+    "task_step": "Talent and Performance Dashboard",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0130",
+    "scenario_name": "Review Worker Profile",
+    "task_step": "View Profile Groups",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0140",
+    "scenario_name": "Review Tenant Setup for System - Activity Stream",
+    "task_step": "Edit Tenant Setup - System",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0150",
+    "scenario_name": "Review Career Preferences configuration",
+    "task_step": "View Career Preferences",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0160",
+    "scenario_name": "Review Public Job Profiles",
+    "task_step": "Extract Job Profiles Report",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self / Manager",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0170",
+    "scenario_name": "Review Development Item Categories configuration",
+    "task_step": "Maintain Development Item Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Employee As Self",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0180",
+    "scenario_name": "Review Competency Category configuration",
+    "task_step": "Maintain Competency Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0190",
+    "scenario_name": "Review Competency Classes configuration",
+    "task_step": "Maintain Competency Classes",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Manager",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0200",
+    "scenario_name": "Review Competency Precedence configuration",
+    "task_step": "Maintain Competency Precedence",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0210",
+    "scenario_name": "Review Proficiency Scale configuration",
+    "task_step": "View Proficiency Rating Scale",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0220",
+    "scenario_name": "Review Competencies configuration",
+    "task_step": "Competencies",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0230",
+    "scenario_name": "Review Connection Types configuration",
+    "task_step": "Maintain Connection Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0240",
+    "scenario_name": "Review Relocation Areas configuration",
+    "task_step": "View Relocation Areas",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0250",
+    "scenario_name": "Review Travel Amounts configuration",
+    "task_step": "View Travel Amounts",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0260",
+    "scenario_name": "Review Goal Setup configuration",
+    "task_step": "Maintain Goal Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0270",
+    "scenario_name": "Review Goal Completion Statuses configuration",
+    "task_step": "Goal Completion Statuses",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0280",
+    "scenario_name": "Review Goal Categories configuration",
+    "task_step": "View Goal Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0290",
+    "scenario_name": "Review Goal Unit configuration",
+    "task_step": "View Goal Units",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0300",
+    "scenario_name": "Review Goal Template Rule configuration",
+    "task_step": "View Goal Template Rule",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0310",
+    "scenario_name": "Review Goal Template configuration",
+    "task_step": "View Goal Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0320",
+    "scenario_name": "Review 'Review Types' configuration",
+    "task_step": "Maintain Review Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0330",
+    "scenario_name": "Review Rating Scale configuration",
+    "task_step": "View Rating Scale",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0340",
+    "scenario_name": "Review Employee Review Section Types configuration",
+    "task_step": "View Employee Review Section Types",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0350",
+    "scenario_name": "Review Feedback and Review Question Categories configuration",
+    "task_step": "Feedback and Review Question Categories",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0360",
+    "scenario_name": "Review Feedback and Review Questions configuration",
+    "task_step": "Feedback and Review Questions",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0370",
+    "scenario_name": "Review Employee Review Rule configuration",
+    "task_step": "View Employee Review Rule",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0380",
+    "scenario_name": "Review Employee Review Template configuration",
+    "task_step": "View Employee Review Template",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0390",
+    "scenario_name": "Review Evaluation Feedback Statuses configuration",
+    "task_step": "Maintain Employee Review Acknowledgement Statuses",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0400",
+    "scenario_name": "Review Employee Review Setup configuration",
+    "task_step": "View Employee Review Setup",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0410",
+    "scenario_name": "Succession - Verify Succession/Potential Role Assignments",
+    "task_step": "View Security Group",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0420",
+    "scenario_name": "Review Worker Profile",
+    "task_step": "Worker Profile",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0430",
+    "scenario_name": "Succession - Confirm My Team Worklet Setup",
+    "task_step": "My Team Worklet",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0440",
+    "scenario_name": "Succession - Confirm Succession Plan Positions",
+    "task_step": "Find Succession Plans",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  },
+  {
+    "functional_area": "Talent Optimization",
+    "scenario_id": "TLO-5-0450",
+    "scenario_name": "Review Public Job Profiles",
+    "task_step": "Data Validation: Job Profiles",
+    "sub_task": "nan",
+    "expected_result": "nan",
+    "workday_role": "Talent Administrator",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation"
+  }
+]

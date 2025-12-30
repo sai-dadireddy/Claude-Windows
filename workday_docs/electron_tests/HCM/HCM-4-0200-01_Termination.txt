@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-4-0200-01
+FUNCTIONAL AREA: HCM
+TEST NAME: Termination
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Process an employee termination, entering the termination date and reason. Notice additional termination date defaults and adjust as necessary. 
+
+Ensure the employee used for testing meets the following conditions: (1) has a time off balance eligible for payout or reduction at time of termination (if Time Off is in scope), (2) is enrolled in benefits (if Benefits is in scope), and (3) has an active flexible work arrangement (if in use).
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "1. Initiate Termination"
+2. wait for search results
+3. click search result containing "1. Initiate Termination"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0200-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Initiate Termination
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Adm...
+================================================================================

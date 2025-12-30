@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: LA-1-0070
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Maintain lease contract book code configuration
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Maintain lease contract book code configuration
+
+ELECTRON STEPS:
+1. enter search box as "Maintain lease contract book code configuration"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-1-0070_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain lease contract book code configuration
+
+### 1. Admin Guide Release Notes (score: 6)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+About Workday Documentation...........................................................................5
+October 31, 2025.............................................
+================================================================================

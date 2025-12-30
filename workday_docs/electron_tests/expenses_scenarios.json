@@ -1,0 +1,1744 @@
+{
+  "EXP-1-0010": {
+    "scenario_name": "Worktag Usages",
+    "scenario_description": "Verify all required Worktag Usages have been configured for:  Expense Reports, Corporate Credit Card Account, and Spend Authorization",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Worktag Usage",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator\nExpense Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0020": {
+    "scenario_name": "Account Posting Rules related to Expenses",
+    "scenario_description": "Verify that the correct default accounts have been defined where applicable for Expenses: Credit Card Payable, Expense Advance, Expenses Payable, Expense Payable to Supplier, Expense Payee Receivable and Spend Categories in the Spend rule. Note that the Spend rule is shared with Supplier spend.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Account Posting Rule Set",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator\nExpense Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0030": {
+    "scenario_name": "User Based Expenses Roles",
+    "scenario_description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Expenses have been properly assigned: Credit Card Administrator, Credit Card Transaction Administrator, Expense Configurator, Travel Administrator (if in scope)",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Extract User-Based Security Group Assignments",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-1-0040": {
+    "scenario_name": "Business Purposes",
+    "scenario_description": "Verify list of Business Purposes.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Business Purposes",
+        "sub_task": "Verify list of Business Purposes.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0050": {
+    "scenario_name": "Payment Election Rules",
+    "scenario_description": "Verify Payment Election Rule setup.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Payment Election Rules for \"Election Rule Name\" Expense Payment",
+        "sub_task": "Verify Payment Election Rule setup.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0060": {
+    "scenario_name": "Expense Item Groups",
+    "scenario_description": "Verify list of Expense Item Groups.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Expense Item Group",
+        "sub_task": "Verify list of Expense Item Groups.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0070": {
+    "scenario_name": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item, if applicable verify rate table attached and itemization configured .",
+    "scenario_description": "Extract Expense Items",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0080": {
+    "scenario_name": "Spend Data - Travel Cities",
+    "scenario_description": "Verify list of Travel Cities.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Find Travel Cities",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0090": {
+    "scenario_name": "Spend Data - Airlines",
+    "scenario_description": "Verify list of Airlines, Alternate Names",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Airlines",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0100": {
+    "scenario_name": "Spend Data - Hotels",
+    "scenario_description": "Verify list of Hotels, Alternate Names",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Hotels",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0110": {
+    "scenario_name": "Spend Data - Rental Car Agencies",
+    "scenario_description": "Verify list of Rental Car Agencies, Alternate Names",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Rental Car Agencies",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0120": {
+    "scenario_name": "Corporate Credit Card Account(s)",
+    "scenario_description": "Verify Corporate Credit Card Account Set Up",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Corporate Credit Card Billing Account",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Credit Card Administrator"
+      }
+    ]
+  },
+  "EXP-1-0130": {
+    "scenario_name": "Tax Code Review",
+    "scenario_description": "Review tax codes to verify required codes configured",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Review Tax Codes",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0140": {
+    "scenario_name": "Verify Custom Validations",
+    "scenario_description": "Verify all required Custom Validations have been configured for:  Expense Reports, Payment Election Enrollment, Spend Authorization",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Custom Validations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0150": {
+    "scenario_name": "Verify in scope Expense Business Processes",
+    "scenario_description": "Review BPs for correct approval routing for Expense Reports. If in scope, verify the BP Spend Authorization",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Business Process : Expense Report Event, Business Process : Spend Authorization",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0160": {
+    "scenario_name": "Expense Rate Tables",
+    "scenario_description": "Verify each Expense Rate Table Rule and what it's Used By.",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Expense Rate Table",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-1-0170": {
+    "scenario_name": "Assignable Roles",
+    "scenario_description": "Confirm that the Assignable Roles for Expenses have been properly assigned or are defaulting to each Company:  Expense Advance Repayment Specialist, Expense Analyst, Expense Data Entry Specialist, Expense Operations Lead, Expense Partner, Expense Settlement Specialist",
+    "test_type": "1 | Unit Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Roles for Organization and Subordinates",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-2-0010": {
+    "scenario_name": "Add Payment Elections",
+    "scenario_description": "Create and/or update self-service Expense Payment elections.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Add Payment Elections for a worker Pay Type Expense Payments - include one worker for a direct deposit election for each country in scope. If check payments are available in the country set up a second worker payment election for check payments so both of direct deposit and check payments can be tested during Expense Settlement testing",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0020": {
+    "scenario_name": "Maintain Payment Elections for Worker",
+    "scenario_description": "Create and/or update Expense Payment elections for worker.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Maintain Payment Elections > Select \"Person\" > \"Payment Elections\" Pay Type Expense Payments",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Partner"
+      }
+    ]
+  },
+  "EXP-2-0030": {
+    "scenario_name": "Create Expense Report",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0040": {
+    "scenario_name": "Create Expense Report with mobile receipts from phone",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0050": {
+    "scenario_name": "Create Expense Report with hotel itemization",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios. Verify itemization is working as required",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0060": {
+    "scenario_name": "Create Expense Report with mileage",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios. Verify rate table calculation is correct for expense line",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0070": {
+    "scenario_name": "Create Expense Report for Worker",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist / Expense Partner"
+      }
+    ]
+  },
+  "EXP-2-0080": {
+    "scenario_name": "Create Expense Report for Pre-Hire",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-2-0090": {
+    "scenario_name": "Approve Expense Report",
+    "scenario_description": "Approve Expense Report. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Approve Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-2-0100": {
+    "scenario_name": "View Business Process for Expense Report Event",
+    "scenario_description": "Show default Business Process for Expense Reports. Discuss required modifications",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Business Process : Expense Report Event",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Business Process Administrator"
+      }
+    ]
+  },
+  "EXP-2-0110": {
+    "scenario_name": "Create Expense Report for Worker - Select Enable tax option. Populate tax code desired.",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report > Select \"Enable Tax\"",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0120": {
+    "scenario_name": "Review Expense Report and populate additional tax data.",
+    "scenario_description": "Review Expense Report. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Review Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0130": {
+    "scenario_name": "Approve Expense Report",
+    "scenario_description": "Approve Expense Report. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Approve Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0140": {
+    "scenario_name": "Tax Default - Create Expense Report for Worker. Change destination.",
+    "scenario_description": "Create Expense Report. Test Custom Validations based on related scenarios. Verify tax code populates.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0150": {
+    "scenario_name": "Tax Default - Review Expense Report and verify applicability and recoverability were defaulted correctly.",
+    "scenario_description": "Review Expense Report. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Review Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0160": {
+    "scenario_name": "Tax Default - Approve Expense Report",
+    "scenario_description": "Approve Expense Report. Test Business Process routing based on the configured conditions for each Business Process step.Review accounting.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Approve Expense Report",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": ""
+      }
+    ]
+  },
+  "EXP-2-0170": {
+    "scenario_name": "My Delegations",
+    "scenario_description": "Manage Delegations and verify delegated tasks and/or inbox items are being delegated as expected",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "My Delegations",
+        "sub_task": "My Delegations  > Manage Delegations",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-2-0180": {
+    "scenario_name": "Expense Report Work Area",
+    "scenario_description": "Quickly and efficiently manage expense reports awaiting your review.",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Expense Report Work Area",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Partner\nManager"
+      }
+    ]
+  },
+  "EXP-2-0190": {
+    "scenario_name": "Expense Reporting for Students",
+    "scenario_description": "Create and submit expense reports on behalf of students",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report for Non-Worker",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-2-0200": {
+    "scenario_name": "Nonrecoverable Tax Accounting on Expenses",
+    "scenario_description": "Allocate nonrecoverable tax amounts to transaction tax accounts for expense reports, instead of to spend accounts",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "Create Expense Report > Select \"Enable Tax\"",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Partner\nManager"
+      }
+    ]
+  },
+  "EXP-2-0210": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": []
+  },
+  "EXP-2-0210-01": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Create Spend Authorization",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Spend Authorization for Worker",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee as Self, Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-2-0210-02": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Approve Spend Authorization. Test Business Process routing and Custom Validation warning messages are triggering appropriately",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Spend Authorization",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-2-0210-03": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Upon approval, find spend authorization",
+    "test_type": "1 | Unit Test Scenarios",
+    "steps": [
+      {
+        "task": "3. Find Spend Authorizations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-3-0010": {
+    "scenario_name": "User Based Expenses Roles",
+    "scenario_description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Expenses have been properly assigned: Credit Card Administrator, Credit Card Transaction Administrator, Expense Configurator, Travel Administrator (if in scope)",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Extract User-Based Security Group Assignments",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-3-0020": {
+    "scenario_name": "Payment Election Rules",
+    "scenario_description": "Verify Payment Election Rule setup.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Payment Election Rules for \"Election Rule Name\" Expense Payment",
+        "sub_task": "Verify Payment Election Rule setup.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0030": {
+    "scenario_name": "Spend Transaction Instructions",
+    "scenario_description": "Verify Spend Transaction Instructions for Expense and Spend Authorization (if applicable).",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Spend Transaction Instruction",
+        "sub_task": "Verify Spend Transaction Instructions for Expense and Spend Authorization (if applicable).",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0040": {
+    "scenario_name": "Expense Item Groups",
+    "scenario_description": "Verify list of Expense Item Groups.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Expense Item Groups",
+        "sub_task": "Verify list of Expense Item Groups.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0050": {
+    "scenario_name": "Business Purposes",
+    "scenario_description": "Verify list of Business Purposes.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Business Purposes",
+        "sub_task": "Verify list of Business Purposes.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0060": {
+    "scenario_name": "Expense Rate Table Rules",
+    "scenario_description": "If in Scope Verify each Expense Rate Table's Expense Rate Table Type, Default Currency, related Expense Item, Effective Date and Expense Rate Table Details.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Expense Rate Table Rule",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0070": {
+    "scenario_name": "Expense Rate Tables",
+    "scenario_description": "Verify each Expense Rate Table Rule and what it's Used By.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Expense Rate Table",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0080": {
+    "scenario_name": "Expense Items",
+    "scenario_description": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item, if applicable verify rate table attached and itemization configured .",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Extract Expense Items",
+        "sub_task": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0090": {
+    "scenario_name": "Spend Data - Travel Cities",
+    "scenario_description": "Verify list of Travel Cities.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Find Travel Cities",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0100": {
+    "scenario_name": "Spend Data - Airlines",
+    "scenario_description": "Verify list of Airlines, Alternate Names",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Airlines",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0110": {
+    "scenario_name": "Spend Data - Hotels",
+    "scenario_description": "Verify list of Hotels, Alternate Names",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Hotels",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0120": {
+    "scenario_name": "Spend Data - Rental Car Agencies",
+    "scenario_description": "Verify list of Rental Car Agencies, Alternate Names",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Rental Car Agencies",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0130": {
+    "scenario_name": "Account Posting Rule for Spend",
+    "scenario_description": "Verify that the correct default accounts have been defined where applicable for Expenses: Credit Card Payable, Expense Advance, Expenses Payable, Expense Payable to Supplier, Expense Payee Receivable and Spend Categories in the Spend rule. Note that the Spend rule is shared with Supplier spend.",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Account Posting Rule Set",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator\nExpense Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0140": {
+    "scenario_name": "Custom Validations",
+    "scenario_description": "Verify all required Custom Validations have been configured for:  Expense Reports, Payment Election Enrollment, Spend Authorization",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Custom Validations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator\nExpense Operations Lead"
+      }
+    ]
+  },
+  "EXP-3-0150": {
+    "scenario_name": "Worktag Usages",
+    "scenario_description": "Verify all required Worktag Usages have been configured for:  Expense Reports, Corporate Credit Card Account, and Spend Authorization",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Worktag Usages",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator"
+      }
+    ]
+  },
+  "EXP-3-0160": {
+    "scenario_name": "Assignable Roles",
+    "scenario_description": "Confirm that the Assignable Roles for Expenses have been properly assigned or are defaulting to each Company:  Expense Advance Repayment Specialist, Expense Analyst, Expense Data Entry Specialist, Expense Operations Lead, Expense Partner, Expense Settlement Specialist",
+    "test_type": "2 | End to End Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Roles for Organization and Subordinates",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-4-0010": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0010-01": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Create Expense Report where the Header company differs from at least one line company. Test Custom Validations (if in scope) based on related scenarios, expense item instructional text, available expense item attributes, etc.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Create Expense Report > add a line and change the company to one different than the Expense Report header company",
+        "expected_result": "",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0010-02": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report",
+        "sub_task": "Approvers - My Tasks",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0010-03": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Review Accounting for approved Intercompany Expense Report",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. View Expense Report Accounting",
+        "sub_task": "Find Expense report > Select the Approved Intercompany Expense Report > Related Action > Accounting> View Accounting",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0010-04": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Verify that you are able to select Expense Report created above.  Verify that Settlement Run has been submitted for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "4. Create Settlement Run",
+        "sub_task": "Create Settlement Run > Add > Expense Reports",
+        "expected_result": "",
+        "workday_role": "Settlement Specialist"
+      }
+    ]
+  },
+  "EXP-4-0010-05": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Verify that Settlement Run is routing as expected for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "5. Approve Settlement Run",
+        "sub_task": "Approve Settlement Run",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0010-06": {
+    "scenario_name": "Intercompany Expense Report to Settlement to GL",
+    "scenario_description": "Upon approval, verify that Cash accounting entries have been created as expected via related action off the Expense Report Payment.   Verify Spend or Revenue Category used on Expense Report triggered the expected accounting entries per the Posting Rules.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. View Expense Report Payment Accounting",
+        "sub_task": "Related action > View Accounting off Approved Payment",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist\nExpense Partner"
+      }
+    ]
+  },
+  "EXP-4-0020": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0020-01": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Create Expense Report with an expense line checked as a personal expense credit card transaction",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Add at least one credit card transaction and mark it as personal",
+        "expected_result": "",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0020-02": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0020-03": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Upon approval, verify that accounting entries have been created as expected via related action off the approved Expense Report. Verify Expense Report triggered the expected accounting entries per the Posting Rules Expense Payee Receivable.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. View Expense Report",
+        "sub_task": "Find Expense Reports > Find above approved Expense Report > Related action off of Expense Report > Accounting > View Accounting",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0020-04": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Run report to see all \"Negative Reimbursable Expense Reports with Outstanding Balances",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "4. Find Negative Reimbursable Expense Reports with Outstanding Balance",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0020-05": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "View Employee Receivable in Expenses Hub",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "5. View Personal amount showing as due to",
+        "sub_task": "Expenses Hub",
+        "expected_result": "",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0020-06": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Create an expense report for the same worker that was used above for Personal charge.  Expense report should be for out of pocket expense to be reimbursed to Expense payee and total must be for an amount greater than  the personal charge in previous report",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. Create Expense Report",
+        "sub_task": "Ensure that the total of this expense reports exceeds the amount of personal charges from the previous report",
+        "expected_result": "The amount to reimburse to worker is the net of any amount due for personal charges",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0020-07": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Approve Expense Report",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "7. Approve Expense Report",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0020-08": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Upon approval, verify that accounting entries have been created as expected via related action off the approved Expense Report. Verify Expense Report triggered the expected accounting entries per the Posting Rules Expense Payee Receivable.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "8. View Expense Report",
+        "sub_task": "Find Expense Reports > Find above approved Expense Report > Related action off of Expense Report > Accounting > View Accounting",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0020-09": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Recoupment (Recoup from a subsequent Expense Report)",
+    "scenario_description": "Verify Expense Report is no longer on \"Negative Reimbursable Expense Reports with Outstanding Balances",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "9. Find Negative Reimbursable Expense Reports with Outstanding Balance",
+        "sub_task": "Verify Expense Report is no longer on \"Negative Reimbursable Expense Reports with Outstanding Balances or that the amount was reduced correctly",
+        "expected_result": "The reimbursable portion of the second expense report will reduce the amount on the \"Negative Reimbursable Expense Report with Outstanding Balance.\" If the outstanding balance is paid in full the worker will no longer appear on the report \"Negative Reimbursable Expense Reports with Outstanding Balance\".",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0030": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0030-01": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Create Expense Report with an expense line checked as a personal expense credit card transaction",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Add at least one credit card transaction and mark it as personal",
+        "expected_result": "",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0030-02": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0030-03": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Upon approval, verify that accounting entries have been created as expected via related action off the approved Expense Report. Verify Expense Report triggered the expected accounting entries per the Posting Rules Expense Payee Receivable.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. Find Expense Report",
+        "sub_task": "Find Expense Reports > Find above approved Expense Report > Related action off of Expense Report > Accounting > View Accounting",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0030-04": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Run report to see all \"Negative Reimbursable Expense Reports with Outstanding Balances",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "4. Find Negative Reimbursable Expense Reports with Outstanding Balance",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0030-05": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Worker view Employee Receivable in Expenses Hub",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "5. View Personal amount showing as due to on Expenses Hub",
+        "sub_task": "Expenses Hub",
+        "expected_result": "",
+        "workday_role": "Employee as Self"
+      }
+    ]
+  },
+  "EXP-4-0030-06": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Record that a the worker has paid the amount due",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. Create Expense Receivable Repayment",
+        "sub_task": "",
+        "expected_result": "This action does not create accounting transactions.",
+        "workday_role": "Settlement Specialist"
+      }
+    ]
+  },
+  "EXP-4-0030-07": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Record funds remitted from worker for receivable amount",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "7. Create Ad Hoc Bank Transaction",
+        "sub_task": "Mirror worktags on Employee Receivable Transaction",
+        "expected_result": "",
+        "workday_role": "Bank Reconciliation Specialist"
+      }
+    ]
+  },
+  "EXP-4-0030-08": {
+    "scenario_name": "Expense Report - Personal Credit Card Transaction to Repayment",
+    "scenario_description": "Run report to see all \"Negative Reimbursable Expense Reports with Outstanding Balances",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "8. Find Negative Reimbursable Expense Reports with Outstanding Balance",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0040": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0040-01": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Create Spend Authorization",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Spend Authorization for Worker",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee as Self, Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0040-02": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Approve Spend Authorization. Test Business Process routing and Custom Validation warning messages are triggering appropriately",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Spend Authorization",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0040-03": {
+    "scenario_name": "Create Spend Authorization",
+    "scenario_description": "Upon approval, find spend authorization",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. Find Spend Authorizations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      }
+    ]
+  },
+  "EXP-4-0050": {
+    "scenario_name": "Create Expense report from Spend Authorization",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0050-01": {
+    "scenario_name": "Create Expense report from Spend Authorization",
+    "scenario_description": "Create Expense Report from the previously created and approved Spend Authorization. Test Custom Validations based on related scenarios, expense item instructional text, available expense item attributes, etc.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Create Expense Report > Be sure to check the radial dial to Create New Expense Report from Spend Authorization",
+        "expected_result": "",
+        "workday_role": "Employee as Self, Expense Data Entry Specialist"
+      },
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Create Expense Report",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0050-02": {
+    "scenario_name": "Create Expense Report from Spend Authorization",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report",
+        "sub_task": "Approvers - Find Expense Report in My Tasks",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      },
+      {
+        "task": "2. Change Expense Report Expense Report",
+        "sub_task": "Expense Report > Related Actions > Expense Report > Change",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0050-03": {
+    "scenario_name": "Create Expense Report from Spend Authorization",
+    "scenario_description": "View Reduction in Spend Authorizations Remaining Balance",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. Find Spend Authorizations",
+        "sub_task": "Review Spend Authorization Remaining Balance to validate it was reduced appropriately",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist"
+      },
+      {
+        "task": "3. Approve Expense Report",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0050-04": {
+    "scenario_name": "Mass Close Spend Authorization",
+    "scenario_description": "Close unused spend authorizations when you no longer need to process expense reports against them.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Task: Mass Close Spend Authorizations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Operations Lead"
+      },
+      {
+        "task": "4. Create Settlement Run",
+        "sub_task": "Create Settlement Run > Add > Expense Reports",
+        "expected_result": "",
+        "workday_role": "Settlement Specialist"
+      }
+    ]
+  },
+  "EXP-4-0050-05": {
+    "scenario_name": "Review Mass Close Spend Authorization Requests",
+    "scenario_description": "Review and access mass close requests",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Task: Find Spend Authorizations Mass Close Requests",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Operations Lead"
+      },
+      {
+        "task": "5. Approve Settlement Run",
+        "sub_task": "Approve Settlement Run",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0050-06": {
+    "scenario_name": "Expense Report to Settlement to GL",
+    "scenario_description": "Upon approval, verify that Cash accounting entries have been created as expected via related action off the Expense Report Payment.   Verify Spend or Revenue Category used on Expense Report triggered the expected accounting entries per the Posting Rules.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. View Expense Report Payment Accounting",
+        "sub_task": "Related action > View Accounting off Approved Payment",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist\nExpense Partner"
+      }
+    ]
+  },
+  "EXP-4-0060": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0060-01": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "Create Expense Report via Workday's mobile application. Add photo receipts and test Custom Validations based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report via mobile",
+        "sub_task": "Workday App > Expenses > Create Expense Report",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-4-0060-02": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report via mobile",
+        "sub_task": "Workday App > Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0060-03": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "Verify that you are able to select Expense Report created above.  Verify that Settlement Run has been submitted for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. Create Settlement Run",
+        "sub_task": "Create Settlement Run > Add > Expense Reports (Desktop Browser)",
+        "expected_result": "",
+        "workday_role": "Settlement Specialist"
+      }
+    ]
+  },
+  "EXP-4-0060-04": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "Verify that Settlement Run is routing as expected for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "4. Approve Settlement Run",
+        "sub_task": "Approve Settlement Run (Desktop Browser)",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0060-05": {
+    "scenario_name": "Expense Report to Settlement to GL (Mobile)",
+    "scenario_description": "Upon approval, verify that Cash accounting entries have been created as expected via related action off the Expense Report Payment.   Verify Spend or Revenue Category used on Expense Report triggered the expected accounting entries per the Posting Rules.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. View Expense Report",
+        "sub_task": "Find Payments > \"Payment Categories\" Expense Payment > Related action off of Payment submitted in scenario EXP-3-002-004> View Accounting off Approved Payment (Desktop Browser)",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist\nExpense Partner"
+      }
+    ]
+  },
+  "EXP-4-0070": {
+    "scenario_name": "Expense Report to Settlement to GL",
+    "scenario_description": "",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": []
+  },
+  "EXP-4-0070-01": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Create Expense Report with Credit Card Transactions. Test Custom Validations based on related scenarios, expense item instructional text, available expense item attributes, etc.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "1. Create Expense Report",
+        "sub_task": "Create Expense Report with Credit Card Transaction(s) loaded in at the bottom of the task.",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0070-02": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Approve Expense Report. Test Business Process routing and Custom Validation warning messages based on related scenarios.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "2. Approve Expense Report",
+        "sub_task": "Inbox",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0070-03": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Change an Expense Report that has already been submitted.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "3. View Expense Report Accounting",
+        "sub_task": "Submitted Expense Report in scenario > Related Actions > Accounting. Verify expense and credit card payable account.",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0070-04": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Verify that you are able to select Expense Report created above. Verify that Settlement Run has been submitted for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "4. Create Settlement Run",
+        "sub_task": "Create Settlement Run > Add > Expense Credit Card Transactions (Transactions can be filtered for you billing statement dates)",
+        "expected_result": "",
+        "workday_role": "Settlement Specialist Or Expense Settlement Specialist"
+      }
+    ]
+  },
+  "EXP-4-0070-05": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Verify that Settlement Run is routing as expected for approval",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "5. Approve Settlement Run",
+        "sub_task": "Approve Settlement Run",
+        "expected_result": "",
+        "workday_role": "Various (depending on approval process)"
+      }
+    ]
+  },
+  "EXP-4-0070-06": {
+    "scenario_name": "Expense Report to Settlement to GL (Credit Card Transaction)",
+    "scenario_description": "Upon approval and completion of Settlement. verify that Cash accounting entries have been created as expected via related action off the Expense Report Payment. Verify Spend or Revenue Category used on Expense Report triggered the expected accounting entries per the Posting Rules.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "6. View Expense Credit Card Payment Accounting",
+        "sub_task": "Related action > View Accounting off Approved Payment",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist\nExpense Partner"
+      }
+    ]
+  },
+  "EXP-4-0080": {
+    "scenario_name": "Find Unassigned Central Travel Card Transactions",
+    "scenario_description": "View all unassigned central travel card transactions for your organization and assign them to the correct expense payee to include on an expense report.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Unassigned Central Travel Card Transactions",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Credit Card Transaction Administrator"
+      }
+    ]
+  },
+  "EXP-4-0090": {
+    "scenario_name": "Assign Central Travel Card Transactions",
+    "scenario_description": "Use this task to assign or reassign central travel card transactions for your organization to the correct expense payee to include on an expense report.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Task: Assign Central Travel Card Transactions",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Credit Card Transaction Administrator"
+      }
+    ]
+  },
+  "EXP-4-0100": {
+    "scenario_name": "Reassign Expense Credit Card Transactions",
+    "scenario_description": "Reassign expense credit card transactions to another cardholder to reconcile (confirm credit card allows reassignment in task Find Credit Card ----> Credit Card ---> Edit : Reassignment Enabled Box selected )",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Task \"Reassign Expense Credit Card Transactions\"",
+        "sub_task": "Reassign charges from one cardholder to another expense payee to complete the reconciliation",
+        "expected_result": "",
+        "workday_role": "Credit Card Transaction Administrator"
+      }
+    ]
+  },
+  "EXP-4-0110": {
+    "scenario_name": "Credit Card Transactions Not Expensed",
+    "scenario_description": "Run this report to return a list of credit card transactions with a status of new that have been loaded, but not added to an expense report.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Credit Card Transactions Not Expensed",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Credit Card Transaction Administrator"
+      }
+    ]
+  },
+  "EXP-4-0120": {
+    "scenario_name": "Find Credit Card Transactions",
+    "scenario_description": "Run this report to find credit card transactions for all statuses",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Credit Card Transactions",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Credit Card Transaction Administrator"
+      }
+    ]
+  },
+  "EXP-4-0130": {
+    "scenario_name": "Find Expense Reports",
+    "scenario_description": "Run this report to find expense reports matching the criteria you specify",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find Expense Reports",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Data Entry Specialist\nExpense Partner"
+      }
+    ]
+  },
+  "EXP-4-0140": {
+    "scenario_name": "Find My Team's Expense Reports",
+    "scenario_description": "Run this report to find expense reports for members of your team",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Find My Team's Expense Reports",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Manager Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0150": {
+    "scenario_name": "My Expense Reports",
+    "scenario_description": "Run this report to view your expense reports with the date, status, amount, and other details.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "My Expense Reports",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0160": {
+    "scenario_name": "My Expense Transactions",
+    "scenario_description": "Run this report to view your credit card transactions.",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "My Expense Transactions",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Self-Service"
+      }
+    ]
+  },
+  "EXP-4-0170": {
+    "scenario_name": "Month End Close",
+    "scenario_description": "Reconcile Expense Payables to Worker Expense Balances",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Expense Payables to Worker Expense Balances Reconciliation",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Accountant"
+      }
+    ]
+  },
+  "EXP-4-0180": {
+    "scenario_name": "Add Payment Elections",
+    "scenario_description": "Add Payment Elections for a worker Pay Type Expense Payments - include one worker for a direct deposit election for each country in scope. If check payments are available in the country set up a second worker payment election for check payments so both of direct deposit and check payments can be tested during Expense Settlement testing",
+    "test_type": "2 | End to End Test Scenarios",
+    "steps": [
+      {
+        "task": "Add Payment Elections for a worker Pay Type Expense Payments - include one worker for a direct deposit election for each country in scope. If check payments are available in the country set up a second worker payment election for check payments so both of direct deposit and check payments can be tested during Expense Settlement testing",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Employee As Self"
+      }
+    ]
+  },
+  "EXP-5-0010": {
+    "scenario_name": "User Based Expenses Roles",
+    "scenario_description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Expenses have been properly assigned: Credit Card Administrator, Credit Card Transaction Administrator, Expense Configurator, Travel Administrator (if in scope)",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Extract User-Based Security Group Assignments",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-5-0020": {
+    "scenario_name": "Payment Election Rules",
+    "scenario_description": "Verify Payment Election Rule setup.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Payment Election Rules for \"Election Rule Name\" Expense Payment",
+        "sub_task": "Verify Payment Election Rule setup.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0030": {
+    "scenario_name": "Spend Transaction Instructions",
+    "scenario_description": "Verify Spend Transaction Instructions for Expense and Spend Authorization (if applicable).",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Spend Transaction Instruction",
+        "sub_task": "Verify Spend Transaction Instructions for Expense and Spend Authorization (if applicable).",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0040": {
+    "scenario_name": "Expense Item Groups",
+    "scenario_description": "Verify list of Expense Item Groups.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Expense Item Groups",
+        "sub_task": "Verify list of Expense Item Groups.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0050": {
+    "scenario_name": "Business Purposes",
+    "scenario_description": "Verify list of Business Purposes.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Business Purposes",
+        "sub_task": "Verify list of Business Purposes.",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0060": {
+    "scenario_name": "Expense Rate Table",
+    "scenario_description": "Verify each Expense Rate Table's Expense Rate Table Type, Default Currency, related Expense Item, Effective Date and Expense Rate Table Details.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Expense Rate Table Rule",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0070": {
+    "scenario_name": "Expense Rate Table Rules",
+    "scenario_description": "Verify each Expense Rate Table Rule and what it's Used By.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Expense Rate Table",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0080": {
+    "scenario_name": "Expense Items",
+    "scenario_description": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item, if applicable verify rate table attached and itemization configured .",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Extract Expense Items",
+        "sub_task": "Verify list of Expense Items for completeness. Verify that correct Spend Category has been loaded for each Expense Item. Verify that correct Expense Item Group(s) has been loaded for each Expense Item. Verify Expense Processing (Maximum Expense, Allow Overage, Fixed Expense, Quantity and Per Unit Amount Not Enterable). Verify Instructional Text Verify Expense Item Attribute setup for each Expense Item",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0090": {
+    "scenario_name": "Spend Data - Travel Cities",
+    "scenario_description": "Verify list of Travel Cities.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Find Travel Cities",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0100": {
+    "scenario_name": "Spend Data - Airlines",
+    "scenario_description": "Verify list of Airlines, Alternate Names",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Airlines",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0110": {
+    "scenario_name": "Spend Data - Hotels",
+    "scenario_description": "Verify list of Hotels, Alternate Names",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Hotels",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0120": {
+    "scenario_name": "Spend Data - Rental Car Agencies",
+    "scenario_description": "Verify list of Rental Car Agencies, Alternate Names",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Rental Car Agencies",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0130": {
+    "scenario_name": "Account Posting Rule for Spend",
+    "scenario_description": "Verify that the correct default accounts have been defined where applicable for Expenses: Credit Card Payable, Expense Advance, Expenses Payable, Expense Payable to Supplier, Expense Payee Receivable and Spend Categories in the Spend rule. Note that the Spend rule is shared with Supplier spend.",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "View Account Posting Rule Set",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0140": {
+    "scenario_name": "Custom Validations",
+    "scenario_description": "Verify all required Custom Validations have been configured for:  Expense Reports, Payment Election Enrollment, Spend Authorization",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Custom Validations",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  },
+  "EXP-5-0150": {
+    "scenario_name": "Worktag Usages",
+    "scenario_description": "Verify all required Worktag Usages have been configured for:  Expense Reports, Corporate Credit Card Account, and Spend Authorization",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Maintain Worktag Usages",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator"
+      }
+    ]
+  },
+  "EXP-5-0160": {
+    "scenario_name": "Assignable Roles",
+    "scenario_description": "Confirm that the Assignable Roles for Expenses have been properly assigned or are defaulting to each Company:  Expense Advance Repayment Specialist, Expense Analyst, Expense Data Entry Specialist, Expense Operations Lead, Expense Partner, Expense Settlement Specialist",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Roles for Organization and Subordinates",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Security Administrator"
+      }
+    ]
+  },
+  "EXP-5-0170": {
+    "scenario_name": "Tax Code Review",
+    "scenario_description": "Review tax codes to verify required codes configured",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Review Tax Codes",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Common Finance Configurator"
+      }
+    ]
+  },
+  "EXP-5-0180": {
+    "scenario_name": "Verify in scope Expense BPs",
+    "scenario_description": "Review BP for correct approval routing for Expense Reports. If in scope verify the BP Spend Authorization",
+    "test_type": "3 | GOLD / Pre-Prod Tenant Build Validation",
+    "steps": [
+      {
+        "task": "Business Process : Expense Report Event, Business Process : Spend Authorization",
+        "sub_task": "",
+        "expected_result": "",
+        "workday_role": "Expense Configurator\nExpenses Operations Lead"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SRCCNT-4-0160
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Attach a Document
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 14.0)
+================================================================================
+
+DESCRIPTION:
+Attach a document to the contract
+
+TASK / STEP:
+1. Open an In Progress contract 
+2. In the Attachments section, attach a document (ex: signed pdf contract)
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract 
+2. In the Attachments section, attach a document (ex: signed pdf contract)"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract 
+2. In the Attachments section, attach a document (ex: signed pdf contract)"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0160_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

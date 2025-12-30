@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: LA-3-0050
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract Lease Amendment Types
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Maintain Supplier Contract Lease Amendment Types
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Supplier Contract Lease Amendment Types"
+2. submit form
+3. screenshot as "LA-3-0050_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Supplier Contract Lease Amendment Types
+
+### 1. Workday Feature Descriptions Ditamap (score: 6)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning....................
+================================================================================

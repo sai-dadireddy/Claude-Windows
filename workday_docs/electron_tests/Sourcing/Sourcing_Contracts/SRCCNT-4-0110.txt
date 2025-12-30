@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: SRCCNT-4-0110
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Change Supplier on Contract
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 21.0)
+================================================================================
+
+DESCRIPTION:
+Updating the Supplier on a Contract by Deleting original supplier, and adding a new supplier.
+ 
+**Note: Supplier can only be changed when documents have not been sent to the supplier.
+
+TASK / STEP:
+1. Navigate to Contracts
+2. Find a contract using the search functionality
+3. From the Supplier section, click the 'Delete from Contract' button
+4. Add a new supplier to the contract using the supplier directory
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Contracts
+2. Find a contract using the search functionality
+3. From the Supplier section, click the 'Delete from Contract' button
+4. Add a new supplier to the contract using the supplier directory"
+2. wait for search results
+3. click search result containing "1. Navigate to Contracts
+2. Find a contract using the search functionality
+3. From the Supplier section, click the 'Delete from Contract' button
+4. Add a new supplier to the contract using the supplier directory"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0110_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

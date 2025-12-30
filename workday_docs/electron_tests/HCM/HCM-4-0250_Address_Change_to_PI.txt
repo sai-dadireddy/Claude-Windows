@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HCM-4-0250
+FUNCTIONAL AREA: HCM
+TEST NAME: Address Change to PI
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: No description provided
+- Expected Result: Task completed successfully
+- Workday Role: System Administrator
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================

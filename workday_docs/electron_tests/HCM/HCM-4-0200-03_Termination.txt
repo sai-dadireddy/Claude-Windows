@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0200-03
+FUNCTIONAL AREA: HCM
+TEST NAME: Termination
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure that all time off plans are reduced to a zero balance as of the termination date. Use Maintain Accrual and Time Off Adjustments/Override > Termination Tab to confirm the correct amount at termination. For future dated terminations, confirm that the Business Process waits until the day after the termination date to calculate the Termination Payout. (Per requirements, in California this might be set to occur on the termination date.)
+
+WORKDAY ROLE: Absence Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Absence Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "3. Verify Time Off Balances"
+2. wait for search results
+3. click search result containing "3. Verify Time Off Balances"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0200-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 3. Verify Time Off Balances
+
+### 1. Kb Absence Time Off (score: 5)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absenc...
+================================================================================

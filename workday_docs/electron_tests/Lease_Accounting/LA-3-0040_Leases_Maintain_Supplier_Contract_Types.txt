@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: LA-3-0040
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Maintain Supplier Contract Types
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Maintain Supplier Contract Types
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Supplier Contract Types"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "LA-3-0040_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Supplier Contract Types
+
+### 1. Kb Procurement Requisition (score: 4)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wor...
+================================================================================

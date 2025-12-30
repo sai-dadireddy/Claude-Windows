@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: SRCCNT-4-0210
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Move Negotiated Contract to Final
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 28.0)
+================================================================================
+
+DESCRIPTION:
+Finalize contract document that has been negotiated and accepted by the supplier
+
+TASK / STEP:
+1. Open an In Progress contract
+2. In the Contract Documents > Negotiation section, select a document that has been accepted by the supplier (Note: a message of "Supplier Accepted" is displayed)
+3. Click on the 'Finalize' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract
+2. In the Contract Documents > Negotiation section, select a document that has been accepted by the supplier (Note: a message of "Supplier Accepted" is displayed)
+3. Click on the 'Finalize' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract
+2. In the Contract Documents > Negotiation section, select a document that has been accepted by the supplier (Note: a message of "Supplier Accepted" is displayed)
+3. Click on the 'Finalize' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. enter contract number as "{contract_id}"
+9. select contract type
+10. 
+# Sub-task: Note: The Finalize button will only appear after the supplier accepts the contract terms in the supplier portal
+12. 
+# Verification
+14. verify no error messages displayed
+15. screenshot as "SRCCNT-4-0210_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: The Finalize button will only appear after the supplier accepts the contract terms in the supplier portal
+
+================================================================================

@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: PRO-3-1480
+FUNCTIONAL AREA: Procurement
+TEST NAME: Inventory Substitutes by Location
+(Requisition -> Purchase Order)
+
+Auto Sourcing Configured
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Inventory Substitutes by Location
+(Requisition -> Purchase Order)
+
+Auto Sourcing Configured
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Configure a substitute item and define a specific Deliver to Location."
+2. wait for search results (2 seconds)
+3. click search result containing "Configure a substitute item and define a specific Deliver to Location."
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1480_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

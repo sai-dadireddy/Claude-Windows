@@ -1,0 +1,65 @@
+================================================================================
+TEST ID: SRC-4-0370
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Create a report to show the number of events by type
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 45.0)
+================================================================================
+
+DESCRIPTION:
+nan
+
+TASK / STEP:
+1. Navigate to Reports module
+2. Click on the data set and select Events
+3. Click on the Chart Icon and select Pivot
+4. Select Event Type for the Rows
+5. Select Event ID for the Values
+5a. Be sure to set the ID to distinct count
+
+Note: If you don't see a field name you're expecting, click cancel on the Editor. Select Filters > Choose Filters & Columns  > check the box for the missing field
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to Reports module
+2. Click on the data set and select Events
+3. Click on the Chart Icon and select Pivot
+4. Select Event Type for the Rows
+5. Select Event ID for the Values
+5a. Be sure to set the ID to distinct count
+
+Note: If you don't see a field name you're expecting, click cancel on the Editor. Select Filters > Choose Filters & Columns  > check the box for the missing field"
+2. wait for search results
+3. click search result containing "1. Navigate to Reports module
+2. Click on the data set and select Events
+3. Click on the Chart Icon and select Pivot
+4. Select Event Type for the Rows
+5. Select Event ID for the Values
+5a. Be sure to set the ID to distinct count
+
+Note: If you don't see a field name you're expecting, click cancel on the Editor. Select Filters > Choose Filters & Columns  > check the box for the missing field"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Verification
+8. verify no error messages displayed
+9. screenshot as "SRC-4-0370_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

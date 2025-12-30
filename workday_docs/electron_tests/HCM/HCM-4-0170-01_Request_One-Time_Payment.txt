@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-4-0170-01
+FUNCTIONAL AREA: HCM
+TEST NAME: Request One-Time Payment
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate a one-time payment process.  If data entry check is turned on in Tenant Setup and the amount requested is outside of historical amounts given for that one time payment you will receive a validation warning.  Take note of approval routings as applicable and confirm process.
+
+WORKDAY ROLE: Compensation Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "1. Request One-Time Payment"
+2. wait for search results
+3. click search result containing "1. Request One-Time Payment"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-4-0170-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Request One-Time Payment
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - ...
+================================================================================

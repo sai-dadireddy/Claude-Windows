@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: LA-3-0020
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Account Posting Rules
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: View Account Posting Rule Set
+
+ELECTRON STEPS:
+1. enter search box as "View Account Posting Rule Set"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "LA-3-0020_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Account Posting Rule Set
+
+### 1. Test Scenarios Index (score: 10)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Ext...
+================================================================================

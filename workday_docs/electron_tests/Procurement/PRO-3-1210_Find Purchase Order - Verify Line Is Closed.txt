@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-3-1210
+FUNCTIONAL AREA: Procurement
+TEST NAME: Find Purchase Order - Verify Line Is Closed
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Find Purchase Order - Verify Line Is Closed
+
+WORKDAY ROLE: nan
+
+ELECTRON STEPS:
+1. enter search box as "Find Purchase Order - Verify Line Is Closed"
+2. wait for search results (2 seconds)
+3. click search result containing "Find Purchase Order - Verify Line Is Closed"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-3-1210_complete.png"
+
+VERIFICATION:
+- [ ] Buyer
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: SRCCNT-4-0180
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Send Document to Office 365
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 19.0)
+================================================================================
+
+DESCRIPTION:
+Send a contract MS WORD document to Office 365 (requires Office 365 license)
+
+TASK / STEP:
+1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Edit in Word' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Edit in Word' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract
+2. In the Contract Documents > Draft section, select a document
+3. Click on the 'Edit in Word' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: The collaboration process in Office 365 is not a scope of the WSS functionality. Refer to Office 365 manual for instructions to use the collaboration feature.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0180_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: The collaboration process in Office 365 is not a scope of the WSS functionality. Refer to Office 365 manual for instructions to use the collaboration feature.
+
+================================================================================

@@ -1,0 +1,117 @@
+================================================================================
+TEST ID: SRC-4-0440
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Supplier onboarded in Workday
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 42.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Award to Requisition Connector enabled
+Workday SSO Enabled and working
+Supplier Onboarded 
+Requisition is being created for 1 Service Line
+General Project is created
+Financial Company, Currency Selected (USD) 
+
+WD Preconditions: 
+Integration attribute configured to Submit
+BP has no Routing configured.
+
+TASK / STEP:
+WSS Test Steps 
+1. Create Req Event with Service WS with 1 line item
+2. Create Req Event with Service WS template which has just 1 line item
+3. Publish the event
+4. Bids received, event is closed
+5. Award individual Supplier OR scenarios
+6. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "WSS Test Steps 
+1. Create Req Event with Service WS with 1 line item
+2. Create Req Event with Service WS template which has just 1 line item
+3. Publish the event
+4. Bids received, event is closed
+5. Award individual Supplier OR scenarios
+6. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+2. wait for search results
+3. click search result containing "WSS Test Steps 
+1. Create Req Event with Service WS with 1 line item
+2. Create Req Event with Service WS template which has just 1 line item
+3. Publish the event
+4. Bids received, event is closed
+5. Award individual Supplier OR scenarios
+6. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: * integration successfully completed with no errors
+* Log File confirms requisitions created
+
+From Find Requisition Task find created requisition
+VIEW Requisition on UI
+1. Requisition in status of approved
+2. Confirm details passed correctly 
+3. Verify two new fields External_id, Sourceable_id
+4. Check disabled field on Requisition UI
+5. For Requisition header verify information defaulted  
+6. Check Requisition Service Lines Mapping
+7. Check Requisition Goods Line Mapping
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0440_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: * integration successfully completed with no errors
+* Log File confirms requisitions created
+
+From Find Requisition Task find created requisition
+VIEW Requisition on UI
+1. Requisition in status of approved
+2. Confirm details passed correctly 
+3. Verify two new fields External_id, Sourceable_id
+4. Check disabled field on Requisition UI
+5. For Requisition header verify information defaulted  
+6. Check Requisition Service Lines Mapping
+7. Check Requisition Goods Line Mapping
+
+================================================================================

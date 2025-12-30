@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: LA-1-0060
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Asset Book Rules
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: View Asset Book Rules
+
+ELECTRON STEPS:
+1. enter search box as "View Asset Book Rules"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-1-0060_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Asset Book Rules
+
+### 1. Admin Guide Adaptive Planning And Consolidation (score: 4)
+Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
+```
+Adaptive Planning
+and Consolidation
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Adaptive Planning and Consolidation (AP&C).................................................... 7
+Financial Accounting in AP&C....................
+================================================================================

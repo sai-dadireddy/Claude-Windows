@@ -1,0 +1,85 @@
+================================================================================
+TEST ID: SRC-4-0420
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Requester without SSO
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Award to Requisition Connector enabled
+Assuming SSO not in place for requester (user who creates the project)
+Requisition is being created for Goods/Service lines
+Supplier Onboarded 
+General Project type is created
+Valid Financial Company, Currency Selected (USD) 
+
+WD Preconditions: 
+Integration attribute configured to Draft
+BP has no Routing configured.
+
+TASK / STEP:
+WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create (click on button) a requisition as user with SSO
+
+WD test steps 
+Pre Condition: Integration attribute configured to Draft
+Pre Condition: BP has no Routing configured.
+ 
+Run integration
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create (click on button) a requisition as user with SSO
+
+WD test steps 
+Pre Condition: Integration attribute configured to Draft
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+2. wait for search results
+3. click search result containing "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create (click on button) a requisition as user with SSO
+
+WD test steps 
+Pre Condition: Integration attribute configured to Draft
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: * integration successfully completed with errors for non SSO Award
+* Log File confirms SSO requisitions created
+* only REQ with SSO are created
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0420_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: * integration successfully completed with errors for non SSO Award
+* Log File confirms SSO requisitions created
+* only REQ with SSO are created
+
+================================================================================

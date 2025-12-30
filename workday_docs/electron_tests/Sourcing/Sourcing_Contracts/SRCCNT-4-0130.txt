@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: SRCCNT-4-0130
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Assign a Stakeholder
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 18.0)
+================================================================================
+
+DESCRIPTION:
+Assign stakeholder to a contract
+
+TASK / STEP:
+1. Open an In Progress contract
+2. In the Stakeholders section, add a new stakeholder and assign the proper access to the contract document
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract
+2. In the Stakeholders section, add a new stakeholder and assign the proper access to the contract document"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract
+2. In the Stakeholders section, add a new stakeholder and assign the proper access to the contract document"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRCCNT-4-0130_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+
+================================================================================

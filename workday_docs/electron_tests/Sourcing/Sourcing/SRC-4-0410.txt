@@ -1,0 +1,82 @@
+================================================================================
+TEST ID: SRC-4-0410
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Different currency (NOT enabled) is used for line items
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Award to Requisition Connector enabled
+Workday SSO Enabled and working
+Supplier Onboarded 
+Requisition is being created for Goods/Service lines
+General Project is created
+Financial Company, Currency Selected (EUR) 
+
+WD Preconditions: 
+Integration attribute configured to Submit
+BP has no Routing configured. 
+EUR is not enabled in financial company
+
+TASK / STEP:
+WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+2. wait for search results
+3. click search result containing "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: *integration completed with errors, Log File confirms requisitions created
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0410_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: *integration completed with errors, Log File confirms requisitions created
+
+================================================================================

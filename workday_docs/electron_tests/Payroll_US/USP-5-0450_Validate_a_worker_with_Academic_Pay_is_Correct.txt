@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: USP-5-0450
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Validate a worker with Academic Pay is Correct
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify workers with Academic Pay are receiving the correct amount based on the Compensation set up for the worker. Be sure to test workers in all Academic Periods (i.e. 9/12, 10/12, etc). It is recommended that you test all periods that the worker should be paid plus the following period in which the pay should have stopped. This is best tested in a separate Pay Group(s).
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Tenant Analyzer
+Calculation Exception Audit"
+2. wait for search results
+3. click search result containing "Tenant Analyzer
+Calculation Exception Audit"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-5-0450_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Tenant Analyzer
+Calculation Exception Audit
+
+### 1. Admin Guide Manage Workday (score: 4)
+Source: Admin-Guide-Manage-Workday.pdf
+```
+Manage Workday
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Manage Workday...............................................................................................12
+Tenant Configuration...................................................
+
+================================================================================

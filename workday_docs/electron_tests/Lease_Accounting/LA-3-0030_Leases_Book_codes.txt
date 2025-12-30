@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: LA-3-0030
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Book codes
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Book codes
+
+ELECTRON STEPS:
+1. enter search box as "Book codes"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-3-0030_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Book codes
+
+### 1. Admin Guide  Financial Management (score: 7)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components..............................................................
+================================================================================

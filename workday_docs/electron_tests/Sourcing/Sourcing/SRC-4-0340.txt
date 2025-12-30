@@ -1,0 +1,79 @@
+================================================================================
+TEST ID: SRC-4-0340
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Compare Bids
+WORKDAY ROLE: nan
+EST. DURATION: nan minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 51.0)
+================================================================================
+
+DESCRIPTION:
+Compare Supplier Bids
+
+TASK / STEP:
+1. Navigate to an event with multiple supplier responses
+2. On the Dashboard tab, scroll down to the Suppliers section
+3. Click Compare Bids
+4. Click through the tabs to review questionnaire, worksheets, and attachment detail collected in the event
+4a. Highlight differences on the questionnaire review tab
+4b. Open evaluations to score supplier responses
+4c. Show/Hide different columns on the Worksheets tab. Add an analytics to view lowest cost
+5. Click Actions under a supplier name and request a bid update
+5a. Add feedback, a due date, and populate a supplier message. Click Request Update
+
+PREREQUISITES:
+- User logged in with nan permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Navigate to an event with multiple supplier responses
+2. On the Dashboard tab, scroll down to the Suppliers section
+3. Click Compare Bids
+4. Click through the tabs to review questionnaire, worksheets, and attachment detail collected in the event
+4a. Highlight differences on the questionnaire review tab
+4b. Open evaluations to score supplier responses
+4c. Show/Hide different columns on the Worksheets tab. Add an analytics to view lowest cost
+5. Click Actions under a supplier name and request a bid update
+5a. Add feedback, a due date, and populate a supplier message. Click Request Update"
+2. wait for search results
+3. click search result containing "1. Navigate to an event with multiple supplier responses
+2. On the Dashboard tab, scroll down to the Suppliers section
+3. Click Compare Bids
+4. Click through the tabs to review questionnaire, worksheets, and attachment detail collected in the event
+4a. Highlight differences on the questionnaire review tab
+4b. Open evaluations to score supplier responses
+4c. Show/Hide different columns on the Worksheets tab. Add an analytics to view lowest cost
+5. Click Actions under a supplier name and request a bid update
+5a. Add feedback, a due date, and populate a supplier message. Click Request Update"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter supplier name as "{supplier_name}"
+7. select supplier category
+8. 
+# Sub-task: 4a. Highlight differences on the questionnaire review tab 
+4b. Open evaluations to score supplier responses 
+4c. Show/Hide different columns on the Worksheets tab. Add an analytics to view lowest cost
+5a. Add feedback, a due date, and populate a supplier message. Click Request Update
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRC-4-0340_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: 4a. Highlight differences on the questionnaire review tab 
+4b. Open evaluations to score supplier responses 
+4c. Show/Hide different columns on the Worksheets tab. Add an analytics to view lowest cost
+5a. Add feedback, a due date, and populate a supplier message. Click Request Update
+
+================================================================================

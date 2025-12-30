@@ -1,0 +1,83 @@
+================================================================================
+TEST ID: SRC-4-0390
+FUNCTIONAL AREA: Sourcing
+TEST NAME: Line items are created in custom project type WITH NOT ONBOARDED SUPPLIER
+WORKDAY ROLE: Sourcing Manager / Buyer
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+WSS Preconditions: 
+Award to Requisition Connector enabled
+Workday SSO Enabled and working
+Supplier not Onboarded 
+Requisition is being created for Goods/Service lines
+Custom Project type is created
+Valid Financial Company, Currency Selected (USD) 
+
+WD Preconditions: 
+Integration attribute configured to Submit
+BP has no Routing configured
+
+TASK / STEP:
+WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration
+
+PREREQUISITES:
+- User logged in with Sourcing Manager / Buyer permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+2. wait for search results
+3. click search result containing "WSS Test Steps 
+1. Create Requisition with goods/services lines
+2. Create a requisition for awarded option
+
+WD test steps 
+Pre Condition: Integration attribute configured to Submit
+Pre Condition: BP has no Routing configured.
+ 
+Run integration"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. 
+# Sub-task: Integration fails as supplier is not onboarded 
+this was agreed on very start of the epic 'WSS will prevent marking an award as WD ready until the supplier has been onboarded.
+8. 
+# Verification
+10. verify no error messages displayed
+11. screenshot as "SRC-4-0390_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Integration fails as supplier is not onboarded 
+this was agreed on very start of the epic 'WSS will prevent marking an award as WD ready until the supplier has been onboarded.
+
+================================================================================

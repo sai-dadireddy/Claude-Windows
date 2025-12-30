@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: SRCCNT-4-0220
+FUNCTIONAL AREA: Sourcing - Contracts
+TEST NAME: Retract a Finalized Contract Document
+WORKDAY ROLE: Sourcing Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH [OK] (RAG Score: 21.0)
+================================================================================
+
+DESCRIPTION:
+Retract a finalized contract document
+
+TASK / STEP:
+1. Open an In Progress contract containing a contract document that has been finalized
+2. In the Contract Documents > Finalized section, click on the 'Retract' button
+
+PREREQUISITES:
+- User logged in with Sourcing Manager permissions
+- Required data available in Workday system
+
+ELECTRON AUTOMATION STEPS:
+1. enter search box as "1. Open an In Progress contract containing a contract document that has been finalized
+2. In the Contract Documents > Finalized section, click on the 'Retract' button"
+2. wait for search results
+3. click search result containing "1. Open an In Progress contract containing a contract document that has been finalized
+2. In the Contract Documents > Finalized section, click on the 'Retract' button"
+4. wait for page to load
+[INFERRED FROM RAG]
+6. enter contract number as "{contract_id}"
+7. select contract type
+8. 
+# Sub-task: Note: For a contract that is associated with a supplier, the contract will be moved back to the Negotiation section. For a non-supplier contract, it will be pushed all the way back to the Draft section.
+10. 
+# Verification
+12. verify no error messages displayed
+13. screenshot as "SRCCNT-4-0220_complete.png"
+
+VERIFICATION CRITERIA:
+- [ ] nan
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+API ALTERNATIVES:
+SOAP Operations: [Search Resource_Management WSDL]
+
+RAG SOURCE:
+[Source: RAG - High Confidence]
+
+NOTES:
+[i] Sub-task requires additional steps: Note: For a contract that is associated with a supplier, the contract will be moved back to the Negotiation section. For a non-supplier contract, it will be pushed all the way back to the Draft section.
+
+================================================================================
