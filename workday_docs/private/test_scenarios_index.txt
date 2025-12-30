@@ -1,0 +1,120 @@
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory Organizations
+- Audit Organization Structures: Organization Summary
+- Audit Supervisory Hierarchy Structure: Org Chart
+- Audit Compensation Package Setup: Compensation Package
+- Audit Compensation Basis Setup - Cost to Company (CTC): Maintain Compensation Basis
+Compensation Plans
+- Audit Compensation Plan Setup: Compensation Plans
+- Audit Compensation Plan Setup - Superannuation: Compensation Plans
+- Audit Compensation Grade Setup: Extract Compensation Grades and Grade Profiles
+- Audit Job Profile Setup: Extract Job Profiles
+- Audit Job Profile Setup - Job Classification Group: Extract Job Profiles
+- Audit Job Profile Setup - Workers' Compensation Codes: Extract Job Profiles
+- Audit Employee Types - Casual: Employee Types
+- Audit Personal Information Setup - EEO Mapping: Ethnicities
+- Audit Worker Data Conversion (Names): Extract Worker Names
+- Audit Worker Data Conversion (Organization Assignments): Extract Worker Organization Assignments
+- Audit Establishment Data: Establishment Setup
+
+## Payroll for the United States (312 scenarios)
+- Review Period Schedule Configuration: View Period Schedule
+- Review Run Category Configuration: All Run Categories
+- Review Pay Group Configuration: All Pay Groups
+- Review Payment Election Rule Configuration: Payment Election Rules
+- Verify User Based Security Groups Assignments & Verify Role Assignments: Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Base Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s).
+- Review Earnings Configuration: All Earnings
+- Review Deductions Configuration: All Deductions
+- Review FLSA Calendar Configuration: View FLSA Work Period Calendar
+- Review FLSA Calendar Rules Configuration: View FLSA Work Period Calendar Rules
+- Review Company Federal, State and Local Tax Reporting Configuration: Company US Tax Reporting
+- Missing US Tax Elections Review: View Workers with Missing US Tax Elections
+- US Tax Elections Review: USA QA Pay Worker Tax Elections
+- Review Employees where Home and Work State are not the same: Audit - Workers with Primary Work Address Not Equal to Location State
+- Missing Payment Elections Review: Audit Missing Payment Elections
+- Payment Election Review: QA - Worker Pay Group and Payment Elections
+- Pay Group Assignments Review: Pay Group Report w Position ID - With No Pay Group
+- Review Tenant Analyzer: Tenant Analyzer
+- Salary Over the Cap: Edit Tenant Setup - Payroll
+- Pay Component Group - Institutional Based Salary: Add to applicable earnings
+- Commitment Accounting - Public Sector: 1. Is first period of fiscal year open?
+2. Has a fiscal year schedule been created
+3. Has Commitment Rules - Payroll Gross been established?
+4. Has Commitment Rules - Fringe Benefit been established?
+5. Has budget data been loaded (or deferred)?
+
+## Accounting & Finance (389 scenarios)
+- Confirm Organization Types: Organization Types
+- Confirm Organization Subtypes: Organization Subtypes
+- Confirm Companies & Company Hierarchies: Extract Companies, Extract Company Accounting Details, Extract Company Transaction Tax Details, Extract Company Hierarchies
+- Confirm Intercompany Profile Setup: Extract Company Intercompany Profiles
+- Confirm Location Types: Location Types
+- Confirm Locations & Location Hierarchies: Extract Locations
+- Confirm Cost Centers, Cost Center Hierarchies and Security: Extract Cost Centers
+- Confirm Regions, Region Hierarchies and Security: Extract Regions
+- Confirm Custom Organizations, Hierarchies and Worker Assignments: Extract Custom Organizations
+- Confirm Revenue Categories & Revenue Categories Hierarchies: Extract Revenue Categories
+- Confirm Spend Categories & Spend Categories Hierarchies: Extract Spend Categories
+- Confirm Custom Worktags: Foundation - Custom Worktags
+- Edit Tenant Setup Financials: Edit Tenant Setup - Financials
+- Confirm Fiscal Schedules: View Fiscal Schedule
+- Confirm Account Posting Rules: View Account Posting Rule Set
+- Confirm Account Control Rules: View Account Control Rule Set
+- Confirm Fiscal Summary Schedule: View Fiscal Summary Schedule
+- Confirm Fiscal Years: View Fiscal Year
+- Confirm Currency Rate Types: Currency Rate Types
+- Confirm Ledger Accounts & Ledger Account Summaries: Extract Ledger Accounts
+
+## Procurement (336 scenarios)
+- Suppliers: Find Suppliers or Extract Suppliers
+- Edit Company Accounting Options related to Procurement: Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default
+- Edit Company Procurement Options: Related Action From Company > Edit Company Procurement Options
+- Verify Units of Measure: Maintain Units of Measure
+- Workcart Link Overrides: Create Requisition or View Cart (Options listed are the Cart Links)
+- Spend Transaction Instructions for Requisitions: View Spend Transaction Instruction>Requisition
+- Supplier Contract Types: View Supplier Contract Types
+- Purchase Order Print Layouts: View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print
+- Return Reasons: Maintain Return Reasons
+- Requisition Types: Maintain Requisition Types
+- Supplier Links/Punchout: Maintain Supplier Links
+- Match Rules: View Supplier Accounts Match Rule Set
+- Confirm Procurement Posting Rules: View Account Posting Rule Set
+- Confirm Procurement Custom Validations: Maintain Custom Validations
+- Confirm Role Based Procurement Assignments: Roles for Organization and Subordinates
+- Confirm User Based Procurement Assignments: User-Based Security Group Assignments
+- Maintain Worktag Usages: Accounts Payable Configurator
+- Confirm Related Worktag Usage: Accounts Payable Configurator
+- Create a Requisition: Create Requisition
+- Approve Requisition: Approve Requisition
+
+## Benefits (254 scenarios)
+- Verify Benefit Plans: Benefit Plans
+- Verify Benefit Groups: Benefit Group
+- Benefit Group Audit: Benefit Group Audit
+- Benefits Eligibility by Benefits Group: Benefits Eligibility by Benefits Group
+- Report: Active Employees Not Eligible for Benefits: Active Employees Not Eligible for Benefits
+- Verify User Based Security Groups Assignments & Verify Role Assignments: View Security Group
+- Verify Worker Benefit Elections Details: Extract Worker Benefit Elections Details
+- Verify Benefit Census: Benefit Census
+- Verify Benefit Eligibility Rules Audit: Benefit Eligibility Rules Audit
+- Verify Enrollment Count: Enrollment Count
+- Verify Waives: Enrollment Count report
+
+Extract Worker Benefit Elections Details
+- Verify ACA Measurement Period: View ACA Measurement Period
+- Verify Affordable Care Reporting Configuration: Affordable Care Reporting Configuration
+- Verify Benefit Coverage Types: Benefit Coverage Types
+- Verify Related Person Relationships: Related Person Relationships
+- Verify Health Care Coverage Targets: Health Care Coverage Targets
+- Verify Health Care Rates: Health Care Rate
+- Verify Insurance Coverage Targets: Insurance Coverage Targets
+- Verify Insurance Coverages: Insurance Coverage
+- Health Care Plans: View Benefit Plan > Health Care Plans
