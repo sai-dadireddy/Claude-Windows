@@ -1,0 +1,21 @@
+================================================================================
+TEST ID: USP-3-0330
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Fringe Benefit Commitment Rule
+DESCRIPTION: Has the Fringe Benefit Commitment Rule been configured?
+Have you validated there are no overlapping categories (if not using actual ER cost?)
+If using Fringe the business plan, do your pay components include the Workday-delivered fringe deduction?
+Are your earnings the same codes used in Payroll Commitment Rules?
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

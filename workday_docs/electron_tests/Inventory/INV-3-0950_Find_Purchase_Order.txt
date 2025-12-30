@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: INV-3-0950
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Purchase Order
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Enter criteria to find the Non Catalog Purchase Order
+
+ELECTRON STEPS:
+1. enter search box as "Enter criteria to find the Non Catalog Purchase Order"
+2. enter field "criteria to find the Non Catalog Purchase Order
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-3-0950_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter criteria to find the Non Catalog Purchase Order
+
+### 1. Admin Guide Release Notes (score: 9)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+About Workday Documentation...........................................................................5
+October 31, 2025.......................................
+================================================================================

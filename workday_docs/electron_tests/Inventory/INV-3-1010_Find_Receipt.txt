@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: INV-3-1010
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Receipt
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Enter Search criteria
+Enter Company
+Enter Advance Ship Notice: Enter ASN ID that was just created
+
+ELECTRON STEPS:
+1. enter search box as "Enter Search criteria
+Enter Company
+Enter Advance Ship Notice: Enter ASN ID that was just created"
+2. enter field "Search criteria
+Enter Company
+Enter Advance Ship Notice: Enter ASN ID that was just created
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-3-1010_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter Search criteria
+Enter Company
+Enter Advance Ship Notice: Enter ASN ID that was just created
+
+### 1. WSDL: Resource_Management (score: 12)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts...
+================================================================================

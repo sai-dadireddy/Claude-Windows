@@ -163,52 +163,146 @@ API ALTERNATIVE:
 
 ## SOP: Excel-to-Electron Test Generation
 
-### Standard Operating Procedure v1.0
+### Standard Operating Procedure v2.0
 
 #### Purpose
 Convert Workday test scenarios from Excel into detailed Electron automation steps for the ActiveGenie platform.
 
 #### Scope
-Applies to all 6,858 test scenarios across 20+ functional areas.
+Applies to all 6,858 test scenarios across 48 functional areas.
 
-#### Procedure
+#### Enhanced Workflow: SEARCH BEFORE CREATE
 
-**PHASE 1: INPUT PARSING**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  PHASE 1: Parse Excel Row                                    │
+│  Extract: Scenario ID, Task/Step, Expected Result           │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────┐
+│  PHASE 2: Query RAG                                          │
+│  python workday_rag.py "{Task / Step}"                      │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+    Score >= 7.0?                  Score < 7.0?
+         ↓                                ↓
+┌─────────────────┐         ┌─────────────────────────────────┐
+│ PHASE 3a:       │         │ PHASE 3b: ENHANCE KNOWLEDGE     │
+│ Generate Test   │         │ 1. Search KB articles (kb_*.txt)│
+│ (Valid Electron)│         │ 2. If still < 7.0:              │
+└─────────────────┘         │    → Scrape Workday KB (browser)│
+                            │    → Download missing docs       │
+                            │ 3. Re-calculate confidence       │
+                            └─────────────────────────────────┘
+                                          ↓
+                            ┌─────────────┴─────────────┐
+                            ↓                           ↓
+                      Now >= 7.0?              Still < 7.0?
+                            ↓                           ↓
+                  ┌─────────────────┐     ┌─────────────────────┐
+                  │ Generate Test   │     │ Generate MANUAL file│
+                  │ (Valid Electron)│     │ (No placeholder     │
+                  └─────────────────┘     │  steps - just flag) │
+                                          └─────────────────────┘
+```
+
+#### PHASE 1: INPUT PARSING
 ```
 1. Read Excel row
 2. Extract key fields:
    - Scenario ID (unique identifier)
-   - Functional Area (test category)
-   - Task / Step (PRIMARY - what to search in Workday)
+   - Task / Step (PRIMARY - what to search)
    - Scenario Description (what to validate)
-   - Customer Expected Result (verification criteria)
+   - Customer Expected Result (verification)
+3. Skip rows with empty Task/Step → Flag as INCOMPLETE
 ```
 
-**PHASE 2: KNOWLEDGE LOOKUP**
+#### PHASE 2: INITIAL RAG QUERY
+```bash
+python workday_rag.py "{Task / Step}"
 ```
-1. Query RAG: python workday_rag.py "{Task / Step}"
-2. Check confidence score:
-   - >= 8.0: Use RAG results directly
-   - 5.0-7.9: Also check KB articles (kb_*.txt)
-   - < 5.0: Use browser MCP to scrape Workday KB
-3. Match REST/SOAP endpoints for API alternative
+- Extract confidence score from response
+- If >= 7.0 → Proceed to generate
+- If < 7.0 → Go to PHASE 3b (enhance knowledge)
+
+#### PHASE 3a: GENERATE TEST (Score >= 7.0)
+```
+Only generate VALID Electron commands:
+1. enter search box as "{Task / Step}"
+2. click search result "{exact text from RAG}"
+3. wait for page to load
+4. {specific field interactions from RAG}
+5. verify {Customer Expected Result}
+6. screenshot as "{Scenario ID}_complete.png"
 ```
 
-**PHASE 3: STEP GENERATION**
+#### PHASE 3b: ENHANCE KNOWLEDGE (Score < 7.0)
 ```
-1. Start with: enter search box as "{Task / Step}"
-2. Add navigation steps from RAG/KB
-3. Add field interactions (enter, select, click)
-4. Add verification: verify {Customer Expected Result}
-5. Add screenshot: screenshot as "{Scenario ID}_complete.png"
+STEP 1: Search local KB articles
+  - Check kb_hcm_*.txt for HCM tasks
+  - Check kb_payroll_*.txt for Payroll tasks
+  - Match functional area to KB
+
+STEP 2: If still < 7.0, use browser MCP to scrape Workday KB
+  mcp__claude-in-chrome__navigate(url="https://resourcecenter.workday.com")
+  mcp__claude-in-chrome__form_input(ref="search", value="{Task / Step}")
+  mcp__claude-in-chrome__get_page_text(tabId=...)
+
+  Human-like delays:
+  - wait 2-5 seconds between actions
+  - scroll before clicking
+  - max 10 pages per session
+
+STEP 3: Save new knowledge to KB
+  - Create kb_{area}_{task}.txt
+  - Add to RAG index
+
+STEP 4: Re-query RAG with enhanced knowledge
 ```
 
-**PHASE 4: OUTPUT FORMATTING**
+#### PHASE 4: OUTPUT DECISION
 ```
-1. Use Electron Test Output Template
-2. Include all metadata from Excel
-3. Add API alternatives if available
-4. Flag low-confidence scenarios for review
+IF confidence >= 7.0:
+  → Generate test file with valid Electron commands
+  → Status: ✅ ACCEPTED
+
+ELSE IF confidence 5.0-6.9:
+  → Generate test with [NEEDS SME REVIEW] flag
+  → Include what RAG found
+  → List specific fields that need SME input
+  → Status: ⚠️ REVIEW REQUIRED
+
+ELSE (confidence < 5.0):
+  → Generate MANUAL file only
+  → NO placeholder steps
+  → Include reason: "Insufficient KB coverage"
+  → Status: ❌ MANUAL REQUIRED
+```
+
+#### KB Enhancement Commands
+```bash
+# Search existing KB
+ls workday_docs/private/kb_*.txt
+
+# Create new KB article after scraping
+cat > workday_docs/private/kb_{area}_{task}.txt << 'EOF'
+# {Task Name} - Knowledge Base
+Source: Workday Community KB
+Date: {today}
+
+## Steps
+1. Navigate to {task}
+2. {field interactions}
+3. Submit
+
+## Field Names
+- {actual field names from UI}
+EOF
+
+# Re-index RAG
+python workday_rag.py --rebuild
 ```
 
 #### Decision Tree

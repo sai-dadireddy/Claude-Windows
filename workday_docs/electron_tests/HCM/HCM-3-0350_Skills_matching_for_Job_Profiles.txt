@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-3-0350
+FUNCTIONAL AREA: HCM
+TEST NAME: Skills matching for Job Profiles
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run the Suggested Skills for Job Profile report and validate the matched Skills to Job Profiles in the tenant. 
+*minimum job profile values required  - job title and description
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Suggested Skills for Job Profile report"
+2. wait for search results
+3. click search result containing "Suggested Skills for Job Profile report"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0350_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Suggested Skills for Job Profile report
+
+### 1. Admin Guide Glossary (score: 5)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | F...
+================================================================================

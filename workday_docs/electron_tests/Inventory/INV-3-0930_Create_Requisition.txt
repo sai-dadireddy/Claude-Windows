@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: INV-3-0930
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Requisition
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create a requisition that contains a description only - not an item id.
+Process will depend on your Requisition Event BP
+
+ELECTRON STEPS:
+1. enter search box as "Create a requisition that contains a description only - not an item id.
+Process will depend on your Requisition Event BP"
+2. submit form
+3. screenshot as "INV-3-0930_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create a requisition that contains a description only - not an item id.
+Process will depend on your Requisition Event BP
+
+### 1. WSDL: Resource_Management (score: 18)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppl...
+================================================================================

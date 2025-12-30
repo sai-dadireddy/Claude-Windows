@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: USP-2-0200
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Students with Visas
+DESCRIPTION: 1. Validate student tax withholding is set up as NRA for Federal and applicable tax entities
+2. Validate student FICA is marked as exempt if applicable
+3. Validate student taxes are withheld correctly
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

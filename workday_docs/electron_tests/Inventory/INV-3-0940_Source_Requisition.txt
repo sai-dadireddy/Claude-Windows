@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: INV-3-0940
+FUNCTIONAL AREA: Inventory
+TEST NAME: Source Requisition
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Enter Company
+Fulfillment Source = Purchase Order
+Requisition ID = req ID of newly created order
+
+ELECTRON STEPS:
+1. enter search box as "Enter Company
+Fulfillment Source = Purchase Order
+Requisition ID = req ID of newly created order"
+2. enter field "Company
+Fulfillment Source = Purchase Order
+Requisition ID = req ID of newly created order
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-3-0940_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter Company
+Fulfillment Source = Purchase Order
+Requisition ID = req ID of newly created order
+
+### 1. Kb Procurement Purchase Order (score: 11)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+==========================================================...
+================================================================================

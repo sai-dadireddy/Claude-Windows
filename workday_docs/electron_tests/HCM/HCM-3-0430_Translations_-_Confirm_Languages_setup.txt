@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-3-0430
+FUNCTIONAL AREA: HCM
+TEST NAME: Translations - Confirm Languages setup
+CONFIDENCE: [HIGH] Score: 10.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Use the Edit Tenant Setup - Global task to reach languages setup. Confirm list of active languages is configured as expected and confirm the "Hide Translations after Base Value Change" checkbox is configured as expected.
+
+WORKDAY ROLE: Setup Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Setup Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Edit Tenant Setup - Global"
+2. wait for search results
+3. click search result containing "Edit Tenant Setup - Global"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0430_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Edit Tenant Setup - Global
+
+### 1. Admin Guide Manage Workday (score: 10)
+Source: Admin-Guide-Manage-Workday.pdf
+```
+Manage Workday
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Manage Workday...............................................................................................12
+Tenant Configuration......................................................................
+================================================================================

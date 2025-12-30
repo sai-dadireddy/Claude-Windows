@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: INV-3-0820
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Requisition
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Enter: Company
+Requester
+Currency = USD
+Requisition Type = Par Replenishment
+Par Location =Par Location that items are ordered for
+
+ELECTRON STEPS:
+1. enter search box as "Enter: Company
+Requester
+Currency = USD
+Requisition Type = Par Replenishment
+Par Location =Par Location that items are ordered for"
+2. submit form
+3. screenshot as "INV-3-0820_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter: Company
+Requester
+Currency = USD
+Requisition Type = Par Replenishment
+Par Location =Par Location that items are ordered for
+
+### 1. WSDL: Resource_Management (score: 13)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relativ...
+================================================================================

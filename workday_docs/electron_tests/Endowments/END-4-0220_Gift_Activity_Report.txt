@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-4-0220
+FUNCTIONAL AREA: Endowments
+TEST NAME: Gift Activity Report
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Gift Activity Report
+
+ELECTRON STEPS:
+1. enter search box as "Gift Activity Report"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-4-0220_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Gift Activity Report
+
+### 1. Admin Guide Education And Government (score: 3)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.......................................................
+================================================================================

@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-1010-01
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Receipt
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Verify Receipt Information
+
+ELECTRON STEPS:
+1. enter search box as "Verify Receipt Information"
+2. submit form
+3. screenshot as "INV-3-1010-01_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Verify Receipt Information
+
+### 1. Workday Feature Descriptions Ditamap (score: 3)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning..........................................
+================================================================================

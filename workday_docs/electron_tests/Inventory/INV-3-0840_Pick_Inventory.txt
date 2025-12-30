@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-3-0840
+FUNCTIONAL AREA: Inventory
+TEST NAME: Pick Inventory
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Pick Inventory
+
+ELECTRON STEPS:
+1. enter search box as "Pick Inventory"
+2. submit form
+3. screenshot as "INV-3-0840_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pick Inventory
+
+### 1. WSDL: Inventory (score: 7)
+Source: Inventory.wsdl
+```
+WSDL: Inventory
+Description: The Inventory Web Service contains operations that expose Workday Financials Inventory data.
+Operations:
+  - Submit_Inventory_Quick_Issue: This service operation will issue out inventory and submit it to the Quick Issue Inventory business process.
+  - Submit_Inventory_Mo...
+```
+
+### 2...
+================================================================================

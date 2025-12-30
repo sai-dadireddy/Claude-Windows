@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-3-0450
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Validate Period Activity Pay is Correct
+DESCRIPTION: Verify that a worker with Period Activity Pay is receiving the correct amount based on the Compensation set up for the Worker. It is recommended that you test all periods that a worker should be paid plus one more to ensure that PAP has stopped. Often this is tested in a separate Pay Group.
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

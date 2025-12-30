@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: HCM-3-0410
+FUNCTIONAL AREA: HCM
+TEST NAME: Unions - Audit Compensation Step Setup on Grades or Grade Profiles
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify the compensation steps associated with relevant grades or grade profiles. Ensure that no compensation steps need to be added, and that the interval, period, and progression rules are correct.
+
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Compensation Steps"
+2. wait for search results
+3. click search result containing "Compensation Steps"
+4. wait for page to load
+5. RAG-extracted steps:
+   ## Results for: Compensation Steps
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-3-0410_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Compensation Steps
+
+### 1. Admin Guide Human Capital Management (score: 7)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information...........................................................
+================================================================================

@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: INV-3-0810
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Requisition
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Create a Requisition for items that are stocked in a par location
+Select a Stock and Non Stock item
+This would be outside of creating a Par Count.
+
+This requisition will create a Purchase Order and a Stock Request
+
+ELECTRON STEPS:
+1. enter search box as "Create a Requisition for items that are stocked in a par location
+Select a Stock and Non Stock item
+This would be outside of creating a Par Count.
+
+This requisition will create a Purchase Order and a Stock Request"
+2. click appropriate action button
+3. submit form
+4. screenshot as "INV-3-0810_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create a Requisition for items that are stocked in a par location
+Select a Stock and Non Stock item
+This would be outside of creating a Par Count.
+
+This requisition will create a Purchase Order and a Stock Request
+
+### 1. WSDL: Resource_Management (score: 24)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operation...
+================================================================================

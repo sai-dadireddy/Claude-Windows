@@ -1,0 +1,61 @@
+================================================================================
+TEST ID: CP-4-0100-01
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Retro Benefit Change Payroll Impact
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Only applicable if the deductions for benefits are configured to be recalculated during retro *** Initiate Change benefits process for an employee, with an effective date in the past (that covers a pay period processed and completed in Workday). Complete all business process steps as needed.
+
+WORKDAY ROLE: Benefits Partner
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Benefits Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "1. Change Benefit Elections"
+2. wait for search results
+3. click search result containing "1. Change Benefit Elections"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "CP-4-0100-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Change Benefit Elections
+
+### 1. Electron Test Samples (score: 4)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sa...
+================================================================================

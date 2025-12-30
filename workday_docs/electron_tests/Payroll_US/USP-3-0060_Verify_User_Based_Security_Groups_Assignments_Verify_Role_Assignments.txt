@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: USP-3-0060
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify the correct workers are assigned to Payroll Security Groups (i.e. Payroll Administrator, Payroll Administrator FRA, Payroll Calculations Administrator, Payroll Integrations Administrator, Payroll Partner, Organization Partner (on Pay Groups), Payroll Settlement Specialist and Payroll Auditor)
+
+WORKDAY ROLE: Payroll Administrator /
+Security Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator /
+Security Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s)."
+2. wait for search results
+3. click search result containing "Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s)."
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-3-0060_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  ### 2. WSDL: Human_Resources (score: 23)
+  WSDL: Human_Resources
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run the report "View Security Group" and select the respective security group: For User Based Security Groups (i.e Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups (I.e. Partners), select 'Assignable Role' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organizations(s).
+
+### 1. Te
+
+================================================================================

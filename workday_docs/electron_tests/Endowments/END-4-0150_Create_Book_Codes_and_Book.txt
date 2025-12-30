@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-4-0150
+FUNCTIONAL AREA: Endowments
+TEST NAME: Create Book Codes and Book
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Edit Tenant Setup – Financials
+
+ELECTRON STEPS:
+1. enter search box as "Edit Tenant Setup – Financials"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "END-4-0150_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Edit Tenant Setup – Financials
+
+### 1. Kb Hcm Hire Employee (score: 4)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- R...
+================================================================================

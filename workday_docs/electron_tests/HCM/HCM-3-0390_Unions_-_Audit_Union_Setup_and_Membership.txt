@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-3-0390
+FUNCTIONAL AREA: HCM
+TEST NAME: Unions - Audit Union Setup and Membership
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review union membership of Current, Previous, and Terminated Workers. Ensure that the Union Details are correct, including Union ID, Status, and Allowed Membership Types.
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View Union"
+2. wait for search results
+3. click search result containing "View Union"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0390_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Union
+
+### 1. Kb Hcm Change Job (score: 2)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+...
+================================================================================

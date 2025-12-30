@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: USP-2-0130
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Configure Profile Group
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Validate period schedules and Academic Periods have been defined back to the beginning of the Period Activity Assignment dates.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Configure Profile Group (Select "Pay for Worker Profile")"
+2. wait for search results
+3. click search result containing "Configure Profile Group (Select "Pay for Worker Profile")"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-2-0130_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Configure Profile Group (Select "Pay for Worker Profile")
+
+### 1. Soap Tutorial Apideck (score: 5)
+Source: soap_tutorial_apideck.txt
+```
+# Workday SOAP API Tutorial (apideck.com)
+
+Source: https://www.apideck.com/blog/a-comprehensive-tutorial-on-setting-up-and-using-the-workday-api
+
+## Setup Steps
+
+### 1. Create Integration System Security Group (ISSG)
+Search "Create Security Group" in Wor
+
+================================================================================

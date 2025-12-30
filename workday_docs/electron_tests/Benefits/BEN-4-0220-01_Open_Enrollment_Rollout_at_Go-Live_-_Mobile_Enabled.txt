@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: BEN-4-0220-01
+FUNCTIONAL AREA: Benefits
+TEST NAME: Open Enrollment (Rollout at Go-Live) - Mobile Enabled
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Edit Tenant Setup - HCM
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Edit Tenant Setup - HCM
+
+### 1. Admin Guide Manage Workday (score: 10)
+Source: Admin-Guide-Manage-Workday.pdf
+```
+Manage Workday
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Manage Workday...............................................................................................12
+Tenant Configuration......................................................................
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Edit Tenant Setup - HCM"
+2. wait for search results
+3. click search result containing "Edit Tenant Setup - HCM"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0220-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

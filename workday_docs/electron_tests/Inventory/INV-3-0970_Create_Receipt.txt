@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-3-0970
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Receipt
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Enter Receipt from Purchase Order
+
+ELECTRON STEPS:
+1. enter search box as "Enter Receipt from Purchase Order"
+2. enter field "Receipt from Purchase Order
+
+### 1" with appropriate value
+3. screenshot as "INV-3-0970_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Enter Receipt from Purchase Order
+
+### 1. Kb Procurement Purchase Order (score: 5)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysi...
+================================================================================

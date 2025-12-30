@@ -1,0 +1,276 @@
+================================================================================
+WORKDAY ELECTRON TESTS - PLANNING & BUDGETS
+Quick Reference Index
+================================================================================
+
+GENERATED: 2025-12-30
+TOTAL TESTS: 257 across 4 functional areas
+
+================================================================================
+QUICK ACCESS BY FUNCTIONAL AREA
+================================================================================
+
+[1] FINANCIAL PLANNING (89 tests)
+    Directory: Financial_Planning/
+    Files: PLNF-1-0010.txt through PLNF-5-0010-06.txt
+    Confidence: 78.7% HIGH (70/89)
+
+[2] WORKFORCE PLANNING (52 tests)
+    Directory: Workforce_Planning/
+    Files: PLNW-1-0010.txt through PLNW-3-0030-06.txt
+    Confidence: 82.7% HIGH (43/52)
+
+[3] BUDGETS (56 tests)
+    Directory: Budgets/
+    Files: BUD-1-0010.txt through BUD-5-0060.txt
+    Confidence: 62.5% HIGH (35/56), 33.9% MEDIUM (19/56)
+
+[4] ACCOUNTING CENTER (60 tests)
+    Directory: Accounting_Center/
+    Files: ACC-1-0010.txt through ACC-5-0140.txt
+    Confidence: 90.0% HIGH (54/60)
+
+================================================================================
+FILES IN THIS DIRECTORY
+================================================================================
+
+GENERATION_SUMMARY_Planning_Budgets.txt
+    Complete generation report with statistics, quality assessment,
+    recommendations, and technical details
+
+INDEX.txt (this file)
+    Quick reference for navigating generated tests
+
+generate_planning_budgets_tests.py
+    Python script used to generate all tests from Excel + RAG
+
+WD_Test_Scenarios_Master.xlsx
+    Source Excel file with all 6,858 test scenarios
+
+Financial_Planning/ (directory)
+    89 Electron test files for Financial Planning
+
+Workforce_Planning/ (directory)
+    52 Electron test files for Workforce Planning
+
+Budgets/ (directory)
+    56 Electron test files for Budgets
+
+Accounting_Center/ (directory)
+    60 Electron test files for Accounting Center
+
+================================================================================
+USAGE EXAMPLES
+================================================================================
+
+1. FIND A SPECIFIC TEST BY ID
+   Example: Looking for test PLNF-2-0010-01
+
+   Location: Financial_Planning/PLNF-2-0010-01.txt
+
+   Command:
+   cat Financial_Planning/PLNF-2-0010-01.txt
+
+2. LIST ALL TESTS IN AN AREA
+   Example: See all Budget tests
+
+   Command (Windows):
+   dir Budgets\*.txt
+
+   Command (Git Bash):
+   ls Budgets/*.txt
+
+3. SEARCH FOR TESTS BY NAME/CONTENT
+   Example: Find all tests related to "Template"
+
+   Command:
+   grep -r "Template" Budgets/
+
+4. VIEW ONLY HIGH CONFIDENCE TESTS
+   Example: Show all HIGH confidence Budget tests
+
+   Command:
+   grep -l "CONFIDENCE: HIGH" Budgets/*.txt
+
+5. FIND TESTS NEEDING REVIEW
+   Example: Show MEDIUM confidence tests
+
+   Command:
+   grep -l "CONFIDENCE: MEDIUM" Budgets/*.txt
+
+================================================================================
+CONFIDENCE LEVELS EXPLAINED
+================================================================================
+
+HIGH (Score >= 8.0) - ACCEPTED
+    Ready for immediate use in Electron automation
+    Contains specific Electron commands derived from RAG
+    202 tests (78.6%) fall into this category
+
+MEDIUM (Score 5.0-7.9) - NEEDS REVIEW
+    Requires SME review before use
+    May lack field-level details
+    19 tests (7.4%) fall into this category
+
+LOW (Score < 5.0) - MANUAL
+    Requires manual documentation or KB scraping
+    Marked as [NO TASK] if source data incomplete
+    36 tests (14.0%) fall into this category
+
+================================================================================
+COMMON TEST PATTERNS
+================================================================================
+
+PATTERN 1: Navigation to Task
+    1. enter search box as "Task Name"
+    2. wait for search results
+    3. click search result containing "Task Name"
+    4. wait for page to load
+
+PATTERN 2: Form Completion
+    1. enter {field} as "{value}"
+    2. select {dropdown} as "{option}"
+    3. click button "Submit"
+
+PATTERN 3: Verification
+    1. verify {condition}
+    2. verify message contains "Success"
+
+PATTERN 4: Screenshot Capture
+    X. screenshot as "{SCENARIO_ID}_complete.png"
+
+All patterns are derived from RAG knowledge base, NOT fabricated.
+
+================================================================================
+SCENARIO ID PREFIXES
+================================================================================
+
+PLNF-*    PLN - Financial Planning (89 tests)
+PLNW-*    PLN - Workforce Planning (52 tests)
+BUD-*     Budgets (56 tests)
+ACC-*     Accounting Center (60 tests)
+
+Example IDs:
+    PLNF-1-0010       (Parent scenario)
+    PLNF-1-0010-01    (Sub-scenario)
+    PLNF-1-0010-02    (Sub-scenario)
+
+================================================================================
+RECOMMENDED WORKFLOW
+================================================================================
+
+STEP 1: Review Summary
+    Read GENERATION_SUMMARY_Planning_Budgets.txt for overview
+
+STEP 2: Identify High-Value Tests
+    Start with Accounting Center (90% high confidence)
+    Then Workforce Planning (82.7% high confidence)
+
+STEP 3: Validate in Electron
+    Test a sample of HIGH confidence tests first
+    Verify Electron commands execute correctly
+
+STEP 4: SME Review
+    Focus on 19 MEDIUM confidence Budget tests
+    Add field-level details from SME knowledge
+
+STEP 5: Handle LOW Confidence
+    36 tests need manual documentation
+    Consider Workday KB scraping for missing data
+
+================================================================================
+REGENERATION INSTRUCTIONS
+================================================================================
+
+To regenerate all tests from Excel:
+
+1. Navigate to directory:
+   cd "C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\electron_tests"
+
+2. Ensure dependencies installed:
+   pip install pandas openpyxl
+
+3. Run generator:
+   python generate_planning_budgets_tests.py
+
+4. Review output:
+   - Progress displayed during generation
+   - Summary statistics at completion
+   - All 257 tests regenerated in ~2 minutes
+
+================================================================================
+RELATED DOCUMENTATION
+================================================================================
+
+Parent Directory: ../
+    workday_rag.py           RAG query tool
+    CLAUDE.md                Workday documentation system guide
+    wsdl_index.json          Index of 3,169 SOAP operations
+
+Public Docs: ../public/
+    14 REST API OpenAPI schemas
+
+Private Docs: ../private/
+    30 PDF guides
+    10 KB articles
+    Integration guides
+
+WSDL Library: ../wsdl/
+    55 WSDL files covering all Workday modules
+
+================================================================================
+SUPPORT & TROUBLESHOOTING
+================================================================================
+
+ISSUE: Cannot find a specific test
+SOLUTION: Use scenario ID to locate file
+    Example: PLNF-2-0010-01 -> Financial_Planning/PLNF-2-0010-01.txt
+
+ISSUE: Test shows LOW confidence
+SOLUTION: Check if Excel had Task/Step data
+    - If [NO TASK]: Source data incomplete, needs manual input
+    - If task exists: RAG couldn't find match, try KB scraping
+
+ISSUE: Need to understand Electron commands
+SOLUTION: Consult ../CLAUDE.md section "Electron Command Reference"
+
+ISSUE: Want to query RAG for more info
+SOLUTION: cd .. && python workday_rag.py "your query here"
+
+ISSUE: Need to add/update documentation
+SOLUTION: Add files to ../public/ or ../private/, then rerun generator
+
+================================================================================
+METRICS DASHBOARD
+================================================================================
+
+Total Tests Generated:        257 / 257 (100%)
+Ready for Automation:         202 tests (78.6%)
+Needs SME Review:              19 tests (7.4%)
+Requires Manual Work:          36 tests (14.0%)
+
+Best Performing Area:         Accounting Center (90% HIGH)
+Most Review Needed:           Budgets (33.9% MEDIUM)
+
+Average RAG Score:            High
+Generation Success Rate:      100%
+Unique RAG Sources Used:      42 documents
+
+================================================================================
+CONTACT
+================================================================================
+
+Generated by: Claude Code (Workday API Expert Agent)
+System: Workday Documentation RAG System
+Knowledge Base: 118 documents (55 WSDLs + 30 PDFs + 14 REST + 19 other)
+Version: 1.0
+Date: 2025-12-30
+
+For questions, updates, or issues:
+    1. Review GENERATION_SUMMARY_Planning_Budgets.txt
+    2. Consult ../CLAUDE.md
+    3. Query RAG: python ../workday_rag.py "{query}"
+
+================================================================================
+END OF INDEX
+================================================================================

@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-4-0120-06
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Record Involuntary Withholding Order for Worker
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Use the "Record Withholding Order for Worker" task to add an IWO to a worker of your choosing.
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

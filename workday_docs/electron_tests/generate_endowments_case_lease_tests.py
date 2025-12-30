@@ -38,36 +38,58 @@ def query_rag(query_text):
         return None
 
 def calculate_confidence(task_step, rag_response):
-    """Calculate confidence score based on RAG response quality."""
+    """Calculate confidence score based on RAG response quality.
+
+    Returns:
+        tuple: (confidence_level, confidence_score)
+        - HIGH (>= 7.0): Valid Electron steps can be generated
+        - MEDIUM (5.0-6.9): Needs SME review
+        - LOW (< 5.0): Manual creation required
+    """
     if not rag_response or "No results found" in rag_response:
         return "LOW", 2.0
 
-    # Check for indicators of high quality response
+    # Check for specific Electron-actionable indicators
     high_indicators = [
         "Get_", "Submit_", "Put_", "Request",  # SOAP operations
         "endpoint", "API", "service",  # REST/SOAP terms
-        "step", "navigate", "click", "enter"  # Procedural steps
     ]
 
-    medium_indicators = [
-        "page", "field", "button", "form",
-        "record", "document", "transaction"
+    # Specific field/UI element indicators (needed for actual steps)
+    specific_indicators = [
+        "field", "button", "dropdown", "checkbox", "radio",
+        "tab", "link", "menu", "panel", "section"
     ]
 
-    score = 5.0  # Base score
+    # Procedural indicators
+    procedural_indicators = [
+        "step", "navigate", "click", "enter", "select",
+        "choose", "fill", "type", "search"
+    ]
+
+    score = 3.0  # Base score (starts lower - must earn points)
     response_lower = rag_response.lower()
 
-    # Check high indicators
+    # Check for SOAP/REST operations (strong signal)
     high_count = sum(1 for ind in high_indicators if ind.lower() in response_lower)
-    if high_count >= 3:
+    if high_count >= 2:
         score += 3.0
     elif high_count >= 1:
         score += 1.5
 
-    # Check medium indicators
-    medium_count = sum(1 for ind in medium_indicators if ind.lower() in response_lower)
-    if medium_count >= 2:
+    # Check for specific UI elements (critical for Electron steps)
+    specific_count = sum(1 for ind in specific_indicators if ind.lower() in response_lower)
+    if specific_count >= 3:
+        score += 2.5
+    elif specific_count >= 1:
         score += 1.0
+
+    # Check for procedural language
+    proc_count = sum(1 for ind in procedural_indicators if ind.lower() in response_lower)
+    if proc_count >= 3:
+        score += 2.0
+    elif proc_count >= 1:
+        score += 0.5
 
     # Length check (longer responses often more detailed)
     if len(rag_response) > 500:
@@ -75,10 +97,10 @@ def calculate_confidence(task_step, rag_response):
     elif len(rag_response) > 200:
         score += 0.5
 
-    # Determine confidence level
-    if score >= 8.0:
+    # Determine confidence level (stricter thresholds)
+    if score >= 7.0:
         return "HIGH", min(score, 10.0)
-    elif score >= 5.5:
+    elif score >= 5.0:
         return "MEDIUM", score
     else:
         return "LOW", score

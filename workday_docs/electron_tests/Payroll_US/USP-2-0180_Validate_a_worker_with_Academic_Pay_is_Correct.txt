@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-2-0180
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Validate a worker with Academic Pay is Correct
+DESCRIPTION: Verify workers with Academic Pay are receiving the correct amount based on the Compensation set up for the worker. Be sure to test workers in all Academic Periods (i.e. 9/12, 10/12, etc). It is recommended that you test all periods that the worker should be paid plus the following period in which the pay should have stopped. This is best tested in a separate Pay Group(s).
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

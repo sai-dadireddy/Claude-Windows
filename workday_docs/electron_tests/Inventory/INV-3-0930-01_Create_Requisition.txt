@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: INV-3-0930-01
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Requisition
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: Request Non Catalog Item
+Approvals and Sourcing will be dependent on your BP: Requisition Event
+
+ELECTRON STEPS:
+1. enter search box as "Request Non Catalog Item
+Approvals and Sourcing will be dependent on your BP: Requisition Event"
+2. submit form
+3. screenshot as "INV-3-0930-01_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Request Non Catalog Item
+Approvals and Sourcing will be dependent on your BP: Requisition Event
+
+### 1. Admin Guide Use Case Library (score: 13)
+Source: Admin-Guide-Use-Case-Library.pdf
+```
+Use Case Library
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Use Case Library.................................................................................................4
+Use Case:...
+================================================================================

@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-4-0120-05
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Employer Paid Taxes
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Select a worker's pay result and ensure that Employer Paid Taxes are resolving.
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

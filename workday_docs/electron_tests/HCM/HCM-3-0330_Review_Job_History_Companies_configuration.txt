@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-3-0330
+FUNCTIONAL AREA: HCM
+TEST NAME: Review Job History Companies configuration
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected job history companies are present in the tenant
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Job History Companies"
+2. wait for search results
+3. click search result containing "Maintain Job History Companies"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0330_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Job History Companies
+
+### 1. Admin Guide Human Capital Management (score: 4)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information...............................................
+================================================================================

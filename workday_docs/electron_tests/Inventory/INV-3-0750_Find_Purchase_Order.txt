@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: INV-3-0750
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Find Purchase Order
+
+ELECTRON STEPS:
+1. enter search box as "Find Purchase Order"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "INV-3-0750_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Purchase Order
+
+### 1. User Guide Suppliers (score: 8)
+Source: User-Guide-Suppliers.pdf
+```
+Suppliers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Supplier Account Setup.......................................................................................3
+Sign up for Strateg...
+================================================================================

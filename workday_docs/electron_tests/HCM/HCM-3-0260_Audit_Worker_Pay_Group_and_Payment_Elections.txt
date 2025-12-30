@@ -1,0 +1,65 @@
+================================================================================
+TEST ID: HCM-3-0260
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Worker Pay Group and Payment Elections
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Where payment election data load for workers is in scope, verify the Worker Pay Group and Payment Elections.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "QA - Worker Pay Group and Payment Elections Report"
+2. wait for search results
+3. click search result containing "QA - Worker Pay Group and Payment Elections Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-3-0260_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: QA - Worker Pay Group and Payment Elections Report
+
+### 1. Test Scenarios Index (score: 9)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisor...
+================================================================================

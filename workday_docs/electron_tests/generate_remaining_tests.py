@@ -83,7 +83,7 @@ test.describe('{functional_area} - {scenario_id}', () => {{
   }});
 
   test('{test_scenario}', async () => {{
-    test.skip({confidence === 'MANUAL'}, 'Manual testing required - no task/step defined');
+    test.skip({str(confidence == 'MANUAL').lower()}, 'Manual testing required - no task/step defined');
 
     // TEST SETUP
     const testData = {{
@@ -222,9 +222,9 @@ def main():
                 f.write(content)
 
             total_generated += 1
-            print(f"  ✓ {filename}")
+            print(f"  [OK] {filename}")
 
-    print(f"\n✅ Total tests generated: {total_generated}")
+    print(f"\n[SUCCESS] Total tests generated: {total_generated}")
     print(f"\nGenerated folders:")
     for area, folder in AREA_FOLDERS.items():
         count = len(scenarios_by_area.get(area, []))

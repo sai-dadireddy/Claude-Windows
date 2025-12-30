@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: AM-042
+FUNCTIONAL AREA: Asset Management
+TEST NAME: Verify Depreciation Calculation Accuracy
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: [NO TASK SPECIFIED - MANUAL TEST REQUIRED]
+
+ELECTRON STEPS:
+1. [MANUAL] No task specified - determine appropriate entry point
+2. [MANUAL] No RAG guidance available
+3. [MANUAL] Review expected result: Depreciation calculation matches expected values for straight-line method
+4. screenshot as "AM-042_complete.png"
+
+VERIFICATION: Depreciation calculation matches expected values for straight-line method
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+REASON: No Task/Step provided in source data
+================================================================================
+
+MANUAL TEST CREATION NOTES:
+----------------------------
+Since no specific task/step was provided in the Excel file, this test requires
+manual creation. Based on the scenario name and expected result, consider:
+
+1. Determine which Workday page to access for depreciation verification
+2. Identify the asset record to test
+3. Verify depreciation method is set to straight-line
+4. Calculate expected depreciation manually
+5. Compare Workday's calculated depreciation to expected values
+6. Document any discrepancies
+
+Possible Workday Navigation:
+- Search for specific asset ID
+- Navigate to Asset Details > Depreciation tab
+- Review depreciation schedule
+- Verify calculation parameters (useful life, salvage value, etc.)
+
+RAG Query Suggestions:
+- "Get asset depreciation details"
+- "Asset depreciation calculation Workday"
+- "Verify straight-line depreciation"
+================================================================================

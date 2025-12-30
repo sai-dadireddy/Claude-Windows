@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-4-0090
+FUNCTIONAL AREA: Endowments
+TEST NAME: Edit Donor Contribution
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Donor Contribution - Related Action off Donor Contribution>Change
+
+ELECTRON STEPS:
+1. enter search box as "Find Donor Contribution - Related Action off Donor Contribution>Change"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-4-0090_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Donor Contribution - Related Action off Donor Contribution>Change
+
+### 1. Workday Feature Descriptions Ditamap (score: 7)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Pla...
+================================================================================

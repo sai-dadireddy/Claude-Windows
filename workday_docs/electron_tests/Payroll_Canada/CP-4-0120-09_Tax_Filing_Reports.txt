@@ -1,0 +1,23 @@
+================================================================================
+TEST ID: CP-4-0120-09
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Tax Filing Reports
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Run and review the report: Tax Filing Periodic Data by Company
+Note that other tax filing reports exist for dimensions other than company.  Run and review these reports as time permits.
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

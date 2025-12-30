@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-3-0510
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Academic Periods
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Academic Periods are define with correct start/end dates.
+
+WORKDAY ROLE: Academic Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Academic Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View Academic Periods"
+2. wait for search results
+3. click search result containing "View Academic Periods"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0510_complete.png"
+
+VERIFICATION:
+- [ ] Academic Periods are defined with correct start/end date.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Academic Periods
+
+### 1. Admin Guide Education And Government (score: 3)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management......................................................
+================================================================================

@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: END-4-0190
+FUNCTIONAL AREA: Endowments
+TEST NAME: Find Investment Pool Payout
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Find Investment Pool Payout
+
+ELECTRON STEPS:
+1. enter search box as "Find Investment Pool Payout"
+2. submit form
+3. screenshot as "END-4-0190_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Investment Pool Payout
+
+### 1. Admin Guide Education And Government (score: 4)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management................................................
+================================================================================

@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-3-0280
+FUNCTIONAL AREA: HCM
+TEST NAME: Review School Types configuration
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected school types are present in the tenant
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "School Types"
+2. wait for search results
+3. click search result containing "School Types"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-3-0280_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Operating_, Put_Scheduling_Settings, Get_Scheduling_Settings
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: School Types
+
+### 1. WSDL: Scheduling (score: 7)
+Source: Scheduling.wsdl
+```
+WSDL: Scheduling
+Description: Operations for importing and exporting scheduling data.
+Operations:
+  - Put_Scheduling_Settings: Adds or updates settings for a High-Level Scheduling Organization.
+  - Get_Scheduling_Settings: Returns settings for a High-Level Scheduling Organization.
+  - Get_Operating_...
+```
+
+### 2...
+================================================================================

@@ -1,0 +1,49 @@
+================================================================================
+TEST ID: INV-3-1000-02
+FUNCTIONAL AREA: Inventory
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Find Purchase Order
+
+Related Action off PO ID -> Advance Ship Notice -> Create
+
+Check the Auto-Submit Receipt for Approval
+SAVE
+
+ELECTRON STEPS:
+1. enter search box as "Find Purchase Order
+
+Related Action off PO ID -> Advance Ship Notice -> Create
+
+Check the Auto-Submit Receipt for Approval
+SAVE"
+2. submit form
+3. screenshot as "INV-3-1000-02_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Purchase Order
+
+Related Action off PO ID -> Advance Ship Notice -> Create
+
+Check the Auto-Submit Receipt for Approval
+SAVE
+
+### 1. Workday Feature Descriptions Ditamap (score: 18)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide.................................
+================================================================================

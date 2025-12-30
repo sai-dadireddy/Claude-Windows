@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-3-0120
+FUNCTIONAL AREA: Endowments
+TEST NAME: Donors
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: View Donor
+
+ELECTRON STEPS:
+1. enter search box as "View Donor"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-3-0120_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Donor
+
+### 1. Workday Feature Descriptions Ditamap (score: 2)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning..........................................................
+================================================================================

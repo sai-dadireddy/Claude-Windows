@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: BEN-4-0110-01
+FUNCTIONAL AREA: Benefits
+TEST NAME: Termination
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 1. Terminate Employee
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Terminate Employee
+
+### 1. Kb Absence Time Off (score: 3)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Mana
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "1. Terminate Employee"
+2. wait for search results
+3. click search result containing "1. Terminate Employee"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0110-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

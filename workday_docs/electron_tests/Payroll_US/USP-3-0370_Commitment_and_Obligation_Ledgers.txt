@@ -1,0 +1,18 @@
+================================================================================
+TEST ID: USP-3-0370
+STATUS: [MANUAL REQUIRED]
+REASON: Missing "Task / Step" - SME must provide Workday task name
+================================================================================
+
+SCENARIO NAME: Commitment and Obligation Ledgers
+DESCRIPTION: Confirm these have been configured if you are using commitment accounting
+
+ACTION REQUIRED:
+Subject Matter Expert must provide:
+1. Specific Workday task name or menu path
+2. Step-by-step navigation instructions
+3. Expected system behavior
+
+Once SME input is received, this test can be automated using Electron.
+
+================================================================================

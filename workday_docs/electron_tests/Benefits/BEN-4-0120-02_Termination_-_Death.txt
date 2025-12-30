@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: BEN-4-0120-02
+FUNCTIONAL AREA: Benefits
+TEST NAME: Termination - Death
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 2. Review Benefit Coverage History upon termination
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Review Benefit Coverage History upon termination
+
+### 1. Kb Hcm Change Job (score: 6)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Anal
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "2. Review Benefit Coverage History upon termination"
+2. wait for search results
+3. click search result containing "2. Review Benefit Coverage History upon termination"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0120-02_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

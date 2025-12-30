@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: INV-3-0850
+FUNCTIONAL AREA: Inventory
+TEST NAME: Ship Inventory
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Inventory Shipment
+
+ELECTRON STEPS:
+1. enter search box as "Create Inventory Shipment"
+2. submit form
+3. screenshot as "INV-3-0850_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Inventory Shipment
+
+### 1. WSDL: Inventory (score: 8)
+Source: Inventory.wsdl
+```
+WSDL: Inventory
+Description: The Inventory Web Service contains operations that expose Workday Financials Inventory data.
+Operations:
+  - Submit_Inventory_Quick_Issue: This service operation will issue out inventory and submit it to the Quick Issue Inventory business process.
+  - Submit_Inventory_Mo......
+================================================================================

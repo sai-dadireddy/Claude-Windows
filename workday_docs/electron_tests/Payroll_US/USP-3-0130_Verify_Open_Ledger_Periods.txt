@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: USP-3-0130
+FUNCTIONAL AREA: Payroll for the United States
+TEST NAME: Verify Open Ledger Periods
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that there are open ledger periods in place and if not, update ledger period statuses as needed.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- System is in proper state for payroll operations
+
+ELECTRON STEPS:
+1. enter search box as "Mass Update Ledger Period Status"
+2. wait for search results
+3. click search result containing "Mass Update Ledger Period Status"
+4. wait for page to load
+5. verify page title contains expected content
+6. review configuration/data as described in test description
+7. screenshot as "USP-3-0130_complete.png"
+
+VERIFICATION:
+- [ ] Page loads successfully
+- [ ] Configuration/data matches expected values
+- [ ] No error messages displayed
+- [ ] All required fields/sections are visible
+
+API ALTERNATIVE:
+SOAP:
+  No SOAP operation found
+
+REST:
+  N/A
+
+RAG QUERY RESULTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Mass Update Ledger Period Status
+
+### 1. Admin Guide  Financial Management (score: 5)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components.....................................
+
+================================================================================

@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-P1-0180
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Tax Validation
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Review variances in Taxes using PROVE reports 6-8 and parallel variance log, updating data and re-calculating as necessary. Refer to "Troubleshooting Variances" document for tips on troubleshooting common variances. Note any explainable differences in parallel variance log.
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

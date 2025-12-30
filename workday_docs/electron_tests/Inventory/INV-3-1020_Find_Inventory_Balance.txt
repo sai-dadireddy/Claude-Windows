@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-3-1020
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Inventory Balance
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Inventory Balance
+
+ELECTRON STEPS:
+1. enter search box as "Find Inventory Balance"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-3-1020_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Inventory Balance
+
+### 1. Kb Procurement Requisition (score: 3)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resou...
+================================================================================

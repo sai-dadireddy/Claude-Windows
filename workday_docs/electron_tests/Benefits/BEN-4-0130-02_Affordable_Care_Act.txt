@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: BEN-4-0130-02
+FUNCTIONAL AREA: Benefits
+TEST NAME: Affordable Care Act
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 2. Run ACA Passive Event
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Run ACA Passive Event
+
+### 1. WSDL: Human_Resources (score: 5)
+Source: Human_Resources.wsdl
+```
+WSDL: Human_Resources
+Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "2. Run ACA Passive Event"
+2. wait for search results
+3. click search result containing "2. Run ACA Passive Event"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0130-02_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

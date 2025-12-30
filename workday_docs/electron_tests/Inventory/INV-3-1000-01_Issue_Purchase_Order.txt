@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: INV-3-1000-01
+FUNCTIONAL AREA: Inventory
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Related Action off of PO -> Purchase Order -> Acknowledge
+
+Choose Acknowledgment Option = Fully Accept
+Enter Supplier Acknowledgment Number
+
+Acknowledgment Status = Accepted 
+
+Expand Details and Process - Note POA ID
+
+ELECTRON STEPS:
+1. enter search box as "Related Action off of PO -> Purchase Order -> Acknowledge
+
+Choose Acknowledgment Option = Fully Accept
+Enter Supplier Acknowledgment Number
+
+Acknowledgment Status = Accepted 
+
+Expand Details and Process - Note POA ID"
+2. enter field "Supplier Acknowledgment Number
+
+Acknowledgment Status = Accepted 
+
+Expand Details and Process - Note POA ID
+
+### 1" with appropriate value
+3. screenshot as "INV-3-1000-01_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Related Action off of PO -> Purchase Order -> Acknowledge
+
+Choose Acknowledgment Option = Fully Accept
+Enter Supplier Acknowledgment Number
+
+Acknowledgment Status = Accepted 
+
+Expand Details and Process - Note POA ID
+
+### 1. Admin Guide Release Notes (score: 21)
+Source: Admin-Guide-Release-Notes.pdf
+```
+Administrator Guide
+Release Notes
+Product Summary
+December 18, 2025
+ | Contents | ii
+C...
+================================================================================

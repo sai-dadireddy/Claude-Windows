@@ -1,0 +1,190 @@
+================================================================================
+ELECTRON TEST GENERATION - AP/AR/CASH MANAGEMENT
+EXECUTION INSTRUCTIONS
+================================================================================
+
+TARGET MODULES:
+1. Accounts Payable (244 scenarios)
+2. Accounts Receivable (221 scenarios)
+3. Cash Management (168 scenarios)
+TOTAL: 633 test scenarios
+
+================================================================================
+STEP 1: VALIDATE SETUP
+================================================================================
+
+cd "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests"
+python3 test_generator_quick.py
+
+Expected output:
+  ✓ Excel file loaded
+  ✓ Accounts Payable: 244 rows
+  ✓ Accounts Receivable: 221 rows
+  ✓ Cash Management: 168 rows
+  ✓ RAG script works
+
+================================================================================
+STEP 2: GENERATE ALL TESTS
+================================================================================
+
+python3 generate_ap_ar_cash_tests.py 2>&1 | tee generation_log.txt
+
+This will:
+- Process all 633 scenarios
+- Query RAG for each Task/Step
+- Calculate confidence scores
+- Generate individual test files
+- Save to Accounts_Payable/, Accounts_Receivable/, Cash_Management/
+
+Expected runtime: 30-60 minutes (depending on RAG query speed)
+
+================================================================================
+STEP 3: VERIFY OUTPUT
+================================================================================
+
+# Count files generated
+ls Accounts_Payable/*.txt | wc -l    # Should be 244
+ls Accounts_Receivable/*.txt | wc -l # Should be 221
+ls Cash_Management/*.txt | wc -l      # Should be 168
+
+# Check confidence distribution
+grep "CONFIDENCE: HIGH" Accounts_Payable/*.txt | wc -l
+grep "CONFIDENCE: MEDIUM" Accounts_Payable/*.txt | wc -l
+grep "CONFIDENCE: LOW" Accounts_Payable/*.txt | wc -l
+grep "MANUAL REQUIRED" Accounts_Payable/*.txt | wc -l
+
+================================================================================
+OUTPUT FILE FORMAT
+================================================================================
+
+Each file: {Scenario_ID}_{Name}.txt
+
+Example: AP-001_Create_Supplier_Invoice.txt
+--------------------------------------------------------------------------------
+TEST ID: AP-001 | CONFIDENCE: HIGH Score: 8/10
+================================================================================
+
+MODULE: Accounts Payable
+TEST NAME: Create Supplier Invoice
+TASK/STEP: Create Supplier Invoice
+
+================================================================================
+ELECTRON STEPS:
+================================================================================
+1. enter search box as "Create Supplier Invoice"
+2. wait for search results
+3. click search result
+4. wait for page load
+5. fill required fields
+   - Enter all mandatory data
+   - Validate field formats
+6. click "Submit" button
+7. screenshot as "AP-001_complete.png"
+
+   API ALTERNATIVE: Use SOAP operation: Submit_Supplier_Invoice
+
+================================================================================
+VERIFICATION:
+================================================================================
+- [ ] Invoice created successfully
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+- [ ] All required fields populated
+- [ ] Confirmation message received
+
+================================================================================
+RAG RESULTS:
+================================================================================
+{RAG query results showing WSDL operations, endpoints, field descriptions}
+--------------------------------------------------------------------------------
+
+================================================================================
+CONFIDENCE SCORING
+================================================================================
+
+Score Range | Level  | Meaning                     | Action
+------------|--------|----------------------------|---------------------------
+7-10        | HIGH   | Full RAG guidance          | ✅ Ready for automation
+5-6         | MEDIUM | Partial RAG guidance       | ⚠️ Needs SME review
+0-4         | LOW    | No/minimal RAG guidance    | ❌ Manual test required
+
+Calculation:
+  +3 if has Task/Step
+  +2 if has Expected Result
+  +3 if RAG found detailed results (>200 chars)
+  +1 if contains action verb (create, submit, approve, etc.)
+  +1 if contains business object (invoice, payment, customer, etc.)
+  = MAX 10 points
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+After generation, verify:
+[ ] All 633 files created (244 + 221 + 168)
+[ ] Every file has confidence score in header
+[ ] HIGH confidence files have specific Electron commands
+[ ] LOW confidence files marked as "MANUAL REQUIRED"
+[ ] No placeholder text like "complete required fields" in HIGH files
+[ ] Screenshot commands use correct Scenario ID
+
+Files needing review:
+  grep -l "CONFIDENCE: MEDIUM" */*.txt > medium_confidence_list.txt
+  grep -l "MANUAL REQUIRED" */*.txt > manual_required_list.txt
+
+================================================================================
+EXPECTED STATISTICS (ESTIMATES)
+================================================================================
+
+Module              | Total | HIGH (61%) | MEDIUM (25%) | LOW (8%) | Manual (6%)
+--------------------|-------|------------|--------------|----------|-------------
+Accounts Payable    | 244   | ~150       | ~60          | ~20      | ~14
+Accounts Receivable | 221   | ~135       | ~55          | ~18      | ~13
+Cash Management     | 168   | ~102       | ~42          | ~14      | ~10
+--------------------|-------|------------|--------------|----------|-------------
+TOTAL               | 633   | ~387       | ~157         | ~52      | ~37
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ERROR: Excel not found
+  Fix: Verify EXCEL_PATH in generate_ap_ar_cash_tests.py line 14
+
+ERROR: No scenarios found for {module}
+  Fix: Check if sheet name in Excel matches module name exactly
+
+ERROR: RAG timeout
+  Fix: Increase timeout in query_rag() function (default 30s)
+
+ERROR: Permission denied
+  Fix: chmod +x generate_ap_ar_cash_tests.py
+
+ERROR: Missing Python packages
+  Fix: pip3 install pandas openpyxl
+
+================================================================================
+FILES CREATED
+================================================================================
+
+1. generate_ap_ar_cash_tests.py - Main generator script
+2. test_generator_quick.py      - Validation/diagnostic script
+3. EXECUTION_INSTRUCTIONS.txt   - This file
+
+Output directories (will be created):
+  - Accounts_Payable/
+  - Accounts_Receivable/
+  - Cash_Management/
+
+================================================================================
+NEXT STEPS AFTER GENERATION
+================================================================================
+
+1. Review generation_log.txt for errors
+2. Validate file counts match expected
+3. Send MEDIUM confidence files to SME for enhancement
+4. Convert MANUAL files to manual test documentation
+5. Load HIGH confidence files into ActiveGenie platform
+6. Execute automated tests
+
+================================================================================

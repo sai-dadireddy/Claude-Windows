@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: BEN-4-0140-02
+FUNCTIONAL AREA: Benefits
+TEST NAME: Retro Benefit Change to PI
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: 2. Payroll Interface
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 2. Payroll Interface
+
+### 1. Kb Hcm Hire Employee (score: 3)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: 20
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "2. Payroll Interface"
+2. wait for search results
+3. click search result containing "2. Payroll Interface"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-4-0140-02_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

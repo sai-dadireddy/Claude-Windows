@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: CP-P1-0210
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Post Complete Audits
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run Audit Reports Outlined on "Payroll Processing Steps" document in the Post Complete section
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Pay Command Center"
+2. wait for search results
+3. click search result containing "Pay Command Center"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-P1-0210_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Command Center
+
+### 1. Admin Guide Payroll (score: 3)
+Source: Admin-Guide-Payroll.pdf
+```
+Payroll
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Payroll................................................................................................................ 20
+Payroll Considerations.......................................................................................
+================================================================================

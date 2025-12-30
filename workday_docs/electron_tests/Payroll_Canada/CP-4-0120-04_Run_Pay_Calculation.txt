@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-4-0120-04
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Run Pay Calculation
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Use the "Run Pay Calculation" task to generate initial payroll and accounting results for all pay groups in scope. (Completed test initially for hourly pay group)
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================

@@ -1,0 +1,22 @@
+================================================================================
+TEST ID: CP-P1-0080
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Review Payroll Process
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Review current payroll checklist and confirm if any gaps in delivered Workday reports
+- Expected Result: Task completed successfully
+- Workday Role: Payroll Partner
+- Country Code: CA
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name to search in Workday.
+================================================================================
