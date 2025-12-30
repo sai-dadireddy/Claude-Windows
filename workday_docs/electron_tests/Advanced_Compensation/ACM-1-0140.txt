@@ -1,0 +1,91 @@
+================================================================================
+TEST ID: ACM-1-0140
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Stock Grant Types
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 3.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Review the stock grant types and confirm they are configured as per requirements.
+
+TASK/STEP:
+Search bar: "Stock Grant Type"
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 3.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Stock Grant Type
+
+### 1. Admin Guide Glossary (score: 3)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms |
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Stock Grant Type
+
+### 1. Admin Guide Glossary (score: 3)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary of Terms | 3
+...
+```
+
+### 2. Workday Feature Descriptions Ditamap (score: 3)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+### 3. staffing (score: 2)
+Source: staffing_v7.json
+```
+API: staffing
+G
+--------------------------------------------------------------------------------
+
+================================================================================

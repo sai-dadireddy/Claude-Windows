@@ -1,40 +1,50 @@
 # CC-1-0110 - Deferred Cost - Cost Types
-# Confidence Score: 7.5/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 9.0/10.0
 # Role: Contract Administrator
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Verify cost types configuration is loaded and accurate
 
 # Test Steps
 describe "CC-1-0110 - Deferred Cost - Cost Types" do
 
+  # Setup
   before do
     login_as "Contract Administrator"
   end
 
   it "should complete: Deferred Cost - Cost Types" do
     # Step 1: Navigate to task
-    enter search box as "View Cost Types"
-    wait for search results
-    click search result containing "View Cost Types"
-    wait for page to load
+    navigate_to_task "View Cost Types"
+    wait_for_page_load
 
     # Step 2: Verify page loaded
-    verify page title contains "Deferred"
+    expect(page).to have_content "Deferred"
 
-    # Step 3: Validate key elements present
-    verify page contains "View Cost Types"
+    # Step 3: Validate data elements
+    validate_page_elements
 
-    # Step 5: Take screenshot evidence
-    screenshot as "CC-1-0110_complete.png"
+    # Step 4: Take screenshot for evidence
+    screenshot "#CC-1-0110_verification"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Deferred Cost - Cost Types View Cost Types
+
+### 1. Kb Finance Journal Entry (score: 7)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Communi

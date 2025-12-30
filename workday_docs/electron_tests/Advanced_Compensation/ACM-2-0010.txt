@@ -1,0 +1,75 @@
+================================================================================
+TEST ID: ACM-2-0010
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Defaulting for Hire
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 5.0/10
+STATUS: [!!] NEEDS REVIEW
+================================================================================
+
+DESCRIPTION:
+Initiate the Hire process for a new employee. Make sure Merit, Bonus, and Stock Plans with appropriate targets are defaulting correctly. After completing the process, repeat as necessary to verify that any other compensation eligibility rules behave as expected. Discuss this test scenario with HCM stream as the process will include additional steps that are not relevant to Advanced Compensation.
+
+TASK/STEP:
+Navigate to the Employee Profile   
+Select: Action Button > Compensation > Request Compensation Change
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [NEEDS SME REVIEW - Confidence: 5.0/10]
+2. 
+3. # Task: Navigate to the Employee Profile
+4. 
+5. enter search box as "Navigate to the Employee Profile"
+6. wait for search results
+7. # [SME: Verify exact search result text]
+8. 
+9. # SME ACTION REQUIRED:
+10. # 1. Verify field names and interactions
+11. # 2. Add missing validation steps
+12. # 3. Update confidence score when complete
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Navigate to the Employee Profile
+
+### 1. Kb Hcm Change Job (score: 5)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Kb Hcm Terminate Employee (score: 5)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL...
+```
+
+### 3. Soap Tutorial Apideck (score: 5)
+Source: soap_tutorial_apideck.txt
+```
+# Wor
+--------------------------------------------------------------------------------
+
+================================================================================

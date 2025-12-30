@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: FP-P2-0030
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Re-calculate Payroll
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run pay calculation for results that are in "Requires Re-calculation" status
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: nan minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Run Pay Calculation"
+2. wait for search results
+3. click search result containing "Run Pay Calculation"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+6. screenshot as "FP-P2-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run Pay Calculation
+
+### 1. Kb Payroll Run Payroll (score: 8)
+Source: kb_payroll_run_payroll.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Payroll WSDL
+Category: ...
+================================================================================

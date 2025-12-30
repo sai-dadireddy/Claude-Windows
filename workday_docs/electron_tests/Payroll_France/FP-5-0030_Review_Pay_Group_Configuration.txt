@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: FP-5-0030
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Review Pay Group Configuration
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected pay groups are present in the tenant. Ensure that the Run Category, Period Schedule and Auto Assignment Rules attached to each pay group are as expected.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "All Pay Groups"
+2. wait for search results
+3. click search result containing "All Pay Groups"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "FP-5-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: All Pay Groups
+
+### 1. Test Scenarios Index (score: 8)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory...
+================================================================================

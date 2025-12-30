@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: FP-P2-0010
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Legacy Pay Data
+CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
+SOURCE: [NO_TASK]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Complete PROVE Legacy Pay Data Template
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: nan minutes
+COUNTRY SCOPE: FR
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

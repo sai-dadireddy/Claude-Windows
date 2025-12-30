@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-2-0020
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Request Compensation Change
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 8.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Initiate the Request Compensation Change process for an employee. Ensure you can add/edit/delete various Merit, Bonus, and Stock plans or targets as appropriate. After completing the process, repeat as necessary to verify that any other compensation eligibility rules behave as expected. Take note of approval routings as applicable and confirm process.
+
+TASK/STEP:
+Employee Profile   Select: Action Button > Compensation > Request Compensation Change
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Employee Profile   Select: Action Button > Compensation > Request Compensation Change"
+2. wait for search results
+3. click search result containing "Employee Profile   Select: Action Button > Compensation > Request Compensation Change"
+4. wait for page to load
+5. screenshot as "ACM-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

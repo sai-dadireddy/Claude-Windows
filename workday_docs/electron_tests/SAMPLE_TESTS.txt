@@ -1,0 +1,162 @@
+================================================================================
+SAMPLE ELECTRON TEST FILES - TALENT ACQUISITION & OPTIMIZATION
+================================================================================
+
+SAMPLE 1: TALENT ACQUISITION - Job Requisition
+File: REC-2-0070_Create_and_Post_Job_Requisition_for_New_Position.txt
+================================================================================
+# REC-2-0070: Create and Post Job Requisition for New Position
+# Functional Area: Talent Acquisition
+# Test Type: 1 | Unit Test Scenarios
+# Role: Recruiter / Manager
+
+# Step 1: Login
+login|Recruiter / Manager
+
+# Step 2: Navigate to Job Requisitions
+search|Create Job Requisition
+click|Create Job Requisition
+wait|2
+
+# Step 3: Create/Review Job Requisition
+input|Job Title|Test Position
+verify|Job requisition form displays
+
+# Final Step: Logout
+logout
+
+================================================================================
+SAMPLE 2: TALENT ACQUISITION - Security Review
+File: REC-1-0010_Verify_User_Based_Security_Groups_Assignments_Veri.txt
+================================================================================
+# REC-1-0010: Verify User Based Security Groups Assignments & Verify Role Assignments
+# Functional Area: Talent Acquisition
+# Test Type: 1 | Unit Tenant Build Validation
+# Role: Security Administrator
+
+# Step 1: Login
+login|Security Administrator
+
+# Step 2: Navigate to Security Administration
+search|View Domain
+click|View Domain
+wait|2
+
+# Step 3: Review Security Group Assignments
+filter|User-Based Security Groups
+verify|Security groups display correctly
+
+# Step 4: Export Security Assignments
+click|Export to Excel
+verify|Export completes successfully
+
+# Final Step: Logout
+logout
+
+================================================================================
+SAMPLE 3: TALENT OPTIMIZATION - Goal Management
+File: TLO-2-0270_Manage_Goals_-_Employee.txt
+================================================================================
+# TLO-2-0270: Manage Goals - Employee
+# Functional Area: Talent Optimization
+# Test Type: 1 | Unit Test Scenarios
+# Role: Talent Administrator
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Talent Administrator
+
+# Step 2: Navigate to Goals
+search|Goals
+click|My Goals
+wait|2
+
+# Step 3: Review Goals
+verify|Goal list displays
+
+# Step 4: Manage Goals
+click|Add Goal
+verify|Goal creation form displays
+
+# Final Step: Logout
+logout
+
+================================================================================
+SAMPLE 4: TALENT OPTIMIZATION - Competency Management
+File: TLO-2-0300_Manage_Competencies.txt
+================================================================================
+# TLO-2-0300: Manage Competencies
+# Functional Area: Talent Optimization
+# Test Type: 1 | Unit Test Scenarios
+# Role: Talent Administrator
+
+# [NEEDS SME REVIEW - Insufficient task details]
+
+# Step 1: Login
+login|Talent Administrator
+
+# Step 2: Navigate to Competencies
+search|Competencies
+click|View Competencies
+wait|2
+
+# Step 3: Review Competency Profile
+verify|Competency data displays
+
+# Final Step: Logout
+logout
+
+================================================================================
+ELECTRON COMMAND REFERENCE
+================================================================================
+
+Login/Logout:
+  login|{role_name}
+  logout
+
+Navigation:
+  search|{task_or_menu_name}
+  click|{element_text}
+  wait|{seconds}
+
+Data Entry:
+  input|{field_name}|{value}
+  select|{dropdown_name}|{option}
+
+Validation:
+  verify|{condition_description}
+  report|{report_name}
+
+Filtering:
+  filter|{filter_criteria}
+
+================================================================================
+TEST EXECUTION WORKFLOW
+================================================================================
+
+1. Import test file into ActiveGenie platform
+2. Configure Workday tenant connection
+3. Set up test user credentials for specified role
+4. Execute test and capture screenshots
+5. Review results against expected outcomes
+6. Update test file based on execution feedback
+
+================================================================================
+NOTES ON SME REVIEW FLAGS
+================================================================================
+
+Tests marked with [NEEDS SME REVIEW] require additional details:
+- Specific field names from Workday UI
+- Exact navigation paths
+- Business process validation steps
+- Expected data values
+
+To enhance these tests:
+1. Consult Excel "Task / Step" column for original requirement
+2. Reference Workday documentation for business process
+3. Use RAG tool: python workday_rag.py "{task description}"
+4. Update test with specific Electron commands
+5. Remove [NEEDS SME REVIEW] flag
+
+================================================================================

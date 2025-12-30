@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: ACM-1-0170
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Security Assignments
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 30 minutes
+CONFIDENCE SCORE: 16.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Log on as various users you would expect to be able to Propose/View the Compensation Review Process. While logged on as these users, search for Process tasks/reports and verify that security groups and permissions have been assigned to the right users.
+Controller: Compensation Administrator
+Participant: Manager
+Reviewer: HR Partner
+A compensation review process must be open for these reports to return any results.
+
+TASK/STEP:
+Proxy as an employee who is assigned one of the roles you want to check in the scenario description.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Proxy as an employee who is assigned one of the roles you want to check in the scenario description."
+2. wait for search results
+3. click search result containing "Proxy as an employee who is assigned one of the roles you want to check in the scenario description."
+4. wait for page to load
+5. screenshot as "ACM-1-0170_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

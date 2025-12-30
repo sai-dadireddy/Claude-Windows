@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: ACM-1-0160
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Compensation Planner Assignments
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 8.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+Review Compensation Planner Assignments (if not using managers as planners)
+
+TASK/STEP:
+Search bar: "View Security Group", enter security group that is the Planner group in the review process
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "View Security Group"
+2. wait for search results
+3. click search result containing "View Security Group"
+4. wait for page to load
+5. screenshot as "ACM-1-0160_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

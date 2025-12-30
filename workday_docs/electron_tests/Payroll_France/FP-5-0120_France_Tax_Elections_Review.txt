@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: FP-5-0120
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: France Tax Elections Review
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+Ensure that all employees in France companies have the applicable Federal and Province tax elections loaded.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Worker FRA Tax Election Report"
+2. wait for search results
+3. click search result containing "Worker FRA Tax Election Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "FP-5-0120_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Put_Payee_URSSAF, Get_Payee_URSSAFs
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Worker FRA Tax Election Report
+
+### 1. Kb Benefits Enrollment (score: 5)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benef...
+================================================================================

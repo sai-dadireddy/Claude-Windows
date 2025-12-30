@@ -1,48 +1,57 @@
 # CC-2-0060 - Create Customer Invoice from Customer Contract
-# Confidence Score: 7.5/10.0
-# Functional Area: Revenue Management
+# Confidence Score: 8.5/10.0
 # Role: Customer Billing Specialist
 
-## AUTOMATED TEST - HIGH CONFIDENCE
+## AUTOMATED TEST
 ## Description: Create Customer invoice tied to a line on the previously created customer contract. Ensure accounting is accurate, debiting Accounts Receivable and crediting Revenue.
 
 # Test Steps
 describe "CC-2-0060 - Create Customer Invoice from Customer Contract" do
 
+  # Setup
   before do
     login_as "Customer Billing Specialist"
   end
 
   it "should complete: Create Customer Invoice from Customer Contract" do
     # Step 1: Navigate to task
-    enter search box as "Create Customer Invoice for Billing Installments"
-    wait for search results
-    click search result containing "Create Customer Invoice for Billing Installments"
-    wait for page to load
+    navigate_to_task "Create Customer Invoice for Billing Installments"
+    wait_for_page_load
 
-    # Step 2: Initiate creation
-    click button "Create" or click link "New"
-    wait for form to load
+    # Step 2: Click Create/New
+    click_button "Create" || click_link "New"
 
     # Step 3: Fill required fields
-    # [NEEDS SME INPUT] - Specify exact field names and values
-    enter field "field_name_1" as "value_1"
-    enter field "field_name_2" as "value_2"
+    # [NEEDS SME REVIEW] - Specify exact field names
+    fill_in "field_name_1", with: "test_value"
 
     # Step 4: Submit
-    click button "Submit"
-    wait for confirmation
+    click_button "Submit"
+    wait_for_success_message
 
-    # Step 5: Verify success
-    verify message contains "Success" or verify message contains "Completed"
-    screenshot as "CC-2-0060_created.png"
+    # Step 5: Verify creation
+    expect(page).to have_content "Successfully"
   end
 
+  # Cleanup
   after do
     logout
   end
 end
 
-# Business Context:
-# Expected Result: Per business requirements
-# Sub-Task: None
+# RAG Context:
+# Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Revenue Management Create Customer Invoice from Customer Contract Create Customer Invoice for Billing Installments
+
+### 1. Admin Guide Education And Government (score: 10)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.........................................................
