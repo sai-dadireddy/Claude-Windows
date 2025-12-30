@@ -1,0 +1,260 @@
+================================================================================
+WORKDAY LEARNING ELECTRON TEST GENERATION REPORT
+================================================================================
+Generation Date: 2025-12-30
+Functional Areas: Learning, Learning Extended Enterprise
+Total Scenarios: 205
+Successfully Generated: 176 (85.9%)
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+By Functional Area:
+  Learning:                      128 files generated
+  Learning Extended Enterprise:   48 files generated
+
+By Quality Category:
+  AUTO-GENERATED (>= 7.0):        72 files (40.9%)
+  NEEDS SME REVIEW (5.0-6.9):     47 files (26.7%)
+  MANUAL REQUIRED (< 5.0):        57 files (32.4%)
+
+Processing Issues:
+  Failed to process:              29 scenarios (14.1%)
+  Reason: Excel data format issues (NaN values in Task/Step column)
+
+================================================================================
+OUTPUT LOCATIONS
+================================================================================
+
+Learning Tests:
+  C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/Learning/
+
+Learning Extended Tests:
+  C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/Learning_Extended/
+
+================================================================================
+FILE NAMING CONVENTION
+================================================================================
+
+Pattern: {Scenario_ID}_{sanitized_task_name}{status_suffix}.txt
+
+Status Suffixes:
+  (none)         = AUTO-GENERATED (confidence >= 7.0)
+  _REVIEW.txt    = NEEDS SME REVIEW (confidence 5.0-6.9)
+  _MANUAL.txt    = MANUAL IMPLEMENTATION REQUIRED (confidence < 5.0)
+
+Examples:
+  LRN-2-0010_Run_the_report_View_Security_Group.txt
+  LRN-2-0260_Edit_Audience_REVIEW.txt
+  LRN-2-0060_Report_Manage_Learning_Security_Segments_MANUAL.txt
+
+================================================================================
+AUTOMATED PATTERN RECOGNITION
+================================================================================
+
+The generator successfully automated these Learning task patterns:
+
+1. Report Running (Confidence: 8.0)
+   - Pattern: "Run the report" + quoted report name
+   - Example: Run the report "View Security Group"
+   - Command: enter search box as "View Security Group"
+
+2. Dashboard Access (Confidence: 8.0)
+   - Onboarding Dashboard
+   - Learning Dashboard
+   - Learning Admin Dashboard
+   - Command: enter search box as "{Dashboard Name}"
+
+3. Create/Edit Tasks (Confidence: 7.0-7.5)
+   - Create Course, Create Lesson, Create Learning
+   - Edit Course, Edit Audience, Edit Campaign
+   - Command: enter search box as "Create/Edit {Object}"
+
+4. Learning Worklet (Confidence: 7.5)
+   - Pattern: "Learning Worklet"
+   - Command: click worklet "Learning"
+
+5. Enrollment (Confidence: 7.5)
+   - Enroll Student in Course
+   - Enroll in Learning
+   - Command: enter search box as "Enroll..."
+
+6. Security Groups (Confidence: 7.5-8.0)
+   - View Security Group
+   - Maintain Security Groups
+   - Command: enter search box as "{Security Group Task}"
+
+7. Transcript Views (Confidence: 8.0)
+   - View Learning Transcript
+   - My Team's Learning Transcript
+   - Command: enter search box as "Learning Transcript"
+
+8. Navigation Paths (Confidence: 6.5)
+   - Pattern: "Home > Menu > Submenu"
+   - Command: click link "{each menu item}"
+
+================================================================================
+PATTERNS REQUIRING MANUAL IMPLEMENTATION
+================================================================================
+
+Low confidence patterns (< 5.0):
+  - Browse Learning Content (no specific navigation)
+  - Manage Waitlist (task-specific actions)
+  - View Media (context-dependent)
+  - Outlook notifications (external system)
+  - Launch/Schedule Campaign (multi-step workflow)
+  - Proxy operations (role switching)
+  - Maintain Drop Course Categories (admin task)
+  - Survey-related tasks (complex workflows)
+
+These require:
+  1. Subject Matter Expert review
+  2. Workday KB article lookup
+  3. Detailed field-level documentation
+
+================================================================================
+SAMPLE AUTO-GENERATED TEST (High Confidence)
+================================================================================
+
+File: LRN-2-0160_Create_Course.txt
+Confidence: 7.5/10.0
+Status: AUTO-GENERATED
+
+ELECTRON STEPS:
+1. enter search box as "Create Course"
+2. wait 2
+3. click search result containing "Create Course"
+4. wait for page to load
+5. screenshot as "LRN-2-0160_complete.png"
+
+================================================================================
+SAMPLE REVIEW-REQUIRED TEST (Medium Confidence)
+================================================================================
+
+File: LRN-2-0260_Edit_Audience_REVIEW.txt
+Confidence: 6.5/10.0
+Status: NEEDS SME REVIEW
+
+ELECTRON STEPS:
+1. enter search box as "Edit Audience"
+2. wait 2
+3. click search result containing "Edit Audience"
+4. wait for page to load
+5. screenshot as "LRN-2-0260_complete.png"
+
+NOTES:
+- This test requires SME review and validation
+- Verify field names and navigation paths
+
+================================================================================
+SAMPLE MANUAL TEST (Low Confidence)
+================================================================================
+
+File: LRN-2-0060_Report_Manage_Learning_Security_Segments_MANUAL.txt
+Confidence: 4.0/10.0
+Status: MANUAL IMPLEMENTATION REQUIRED
+
+ELECTRON STEPS:
+# MANUAL IMPLEMENTATION REQUIRED
+# Task: Report: Manage Learning Security Segments
+# No automated pattern match found
+
+NOTES:
+- Manual implementation required
+- No automated pattern match found
+- Consult Workday documentation for detailed steps
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. AUTO-GENERATED Files (72 files - 40.9%)
+   ✓ Ready for immediate use
+   ✓ Review for accuracy
+   ✓ Execute in test environment
+
+2. REVIEW Files (47 files - 26.7%)
+   → Assign to Learning SME for review
+   → Validate navigation paths
+   → Add field-level details
+   → Convert to AUTO-GENERATED after validation
+
+3. MANUAL Files (57 files - 32.4%)
+   → Research in Workday Knowledge Base
+   → Document detailed workflows
+   → Create custom Electron scripts
+   → May require RAG enhancement
+
+4. Failed Scenarios (29 scenarios - 14.1%)
+   → Fix Excel data issues (NaN values)
+   → Re-run generation for those rows
+   → Validate source data quality
+
+================================================================================
+TOOLS USED
+================================================================================
+
+Script: generate_learning_batch.py
+Location: C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/
+
+Excel Source: WD_Test_Scenarios_Master.xlsx
+Total Learning Scenarios in Excel: 205
+
+Pattern Matching:
+  - Regex-based task analysis
+  - Keyword detection (create, edit, enroll, view, etc.)
+  - Navigation path parsing (Home > Menu)
+  - Confidence scoring algorithm
+
+Output Format:
+  - Structured test files
+  - Metadata headers (ID, Area, Confidence)
+  - Valid Electron commands only
+  - No placeholder steps
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Before using these tests:
+
+□ Verify Workday environment is accessible
+□ Confirm Learning module is configured
+□ Check user permissions match test requirements
+□ Validate search terms match your tenant
+□ Review screenshot naming convention
+□ Test sample files manually first
+□ Adjust wait times for system performance
+□ Configure Electron test framework
+
+For REVIEW files:
+□ Consult Learning SME for validation
+□ Add missing field names
+□ Confirm navigation paths
+□ Test in sandbox environment
+□ Update confidence score after validation
+
+For MANUAL files:
+□ Query Workday RAG: python workday_rag.py "{task}"
+□ Search Workday KB articles
+□ Document detailed steps
+□ Create custom Electron scripts
+
+================================================================================
+CONTACT & SUPPORT
+================================================================================
+
+For issues or questions:
+  - Review Excel source data for missing Task/Step values
+  - Consult Workday RAG: workday_docs/workday_rag.py
+  - Check Learning functional area documentation
+  - Validate Electron command syntax
+
+Generation Script: generate_learning_batch.py
+RAG Tool: workday_rag.py
+Knowledge Base: workday_docs/private/
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -225,8 +225,9 @@ test.describe('{scenario_name}', () => {{
             test_content += f'        {action}\n'
 
         if expected and str(expected) != 'nan':
+            expected_short = expected[:100] if len(expected) > 100 else expected
             test_content += f'\n        // Verify expected result\n'
-            test_content += f'        // Expected: {expected[:100]}\n'
+            test_content += f'        // Expected: {expected_short}\n'
             test_content += f'        await page.waitForLoadState("networkidle");\n'
 
     elif confidence >= 5.0:

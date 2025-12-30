@@ -1,0 +1,123 @@
+================================================================================
+ELECTRON TEST GENERATION SUMMARY REPORT
+Generated: electron_tests
+================================================================================
+
+
+================================================================================
+FUNCTIONAL AREA: Scheduling
+================================================================================
+Expected: 221 scenarios
+Generated: 168 tests (76.0%)
+
+Confidence Distribution:
+  HIGH    :  22 ( 13.1%)
+  LOW     : 101 ( 60.1%)
+  MANUAL  :  45 ( 26.8%)
+
+  Sample HIGH Confidence Tests:
+    • SCH-2-0060: Assign Schedule Tags to Worker
+    • SCH-2-0070: Assign Schedule Tags to Worker
+    • SCH-2-0100: Assign Schedule Tags to Worker
+
+  Sample LOW Confidence Tests:
+    • SCH-1-0010: View Scheduling Organizations
+    • SCH-1-0020: View Scheduling Organizations
+    • SCH-1-0030: Time and Scheduling Hub
+
+  ⚠️  45 MANUAL tests require SME review:
+    • SCH-2-0550: None
+    • SCH-2-0560: None
+    • SCH-2-0570: None
+    • SCH-2-0580: None
+    • SCH-2-0590: None
+    ... and 40 more
+
+================================================================================
+FUNCTIONAL AREA: Absence
+================================================================================
+Expected: 178 scenarios
+Generated: 178 tests (100.0%)
+
+Confidence Distribution:
+  HIGH    :   4 (  2.2%)
+  MEDIUM  :   3 (  1.7%)
+  LOW     : 149 ( 83.7%)
+  MANUAL  :  22 ( 12.4%)
+
+  Sample HIGH Confidence Tests:
+    • ABS-4-0080-01: 1. Place Worker on Leave
+    • ABS-4-0160-01: 1. Place Worker on Leave
+    • ABS-4-0160-02: 2. Payroll Interface
+
+  Sample MEDIUM Confidence Tests:
+    • ABS-1-0150: Run the report 'View Security Group' and select the respective security group. For User Based Security Groups, (i.e. Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups, (i.e. Partners), select 'Assignable Roles' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+    • ABS-3-0170: Run the report 'View Security Group' and select the respective security group. For User Based Security Groups, (i.e. Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups, (i.e. Partners), select 'Assignable Roles' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+    • ABS-5-0170: Run the report 'View Security Group' and select the respective security group. For User Based Security Groups, (i.e. Administrators), select 'Members' to view the list of assigned users. For Role Based Security Groups, (i.e. Partners), select 'Assignable Roles' to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+
+  Sample LOW Confidence Tests:
+    • ABS-1-0010: Calculation Exception Audit
+    • ABS-1-0020: Calculated Field Exception Audit
+    • ABS-1-0030: Worker Absence Eligibility Audit
+
+  ⚠️  22 MANUAL tests require SME review:
+    • ABS-4-0010: None
+    • ABS-4-0020: None
+    • ABS-4-0030: None
+    • ABS-4-0040: None
+    • ABS-4-0050: None
+    ... and 17 more
+
+================================================================================
+FUNCTIONAL AREA: Time_Tracking
+================================================================================
+Expected: 152 scenarios
+Generated: 0 tests (0.0%)
+⚠️  No tests generated
+
+
+================================================================================
+OVERALL SUMMARY
+================================================================================
+
+Total Expected: 551 scenarios
+Total Generated: 346 tests (62.8%)
+
+Overall Confidence Distribution:
+  HIGH    :  26 (  7.5%)
+  MEDIUM  :   3 (  0.9%)
+  LOW     : 250 ( 72.3%)
+  MANUAL  :  67 ( 19.4%)
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+⚠️  67 scenarios marked MANUAL:
+   → Review task/step definitions
+   → Enhance RAG knowledge base
+   → Add KB articles for common tasks
+
+⚠️  250 scenarios with LOW confidence:
+   → RAG found limited guidance
+   → May need SME verification
+   → Consider adding detailed KB articles
+
+✅ 26 scenarios with HIGH confidence:
+   → These tests can proceed to implementation
+
+================================================================================
+OUTPUT LOCATIONS
+================================================================================
+
+Scheduling:
+  C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\electron_tests\Scheduling
+  168 test files
+
+Absence:
+  C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\electron_tests\Absence
+  178 test files
+
+Time_Tracking:
+  C:\Users\SainathreddyDadiredd\OneDrive - ERPA\Claude\workday_docs\electron_tests\Time_Tracking
+  0 test files
