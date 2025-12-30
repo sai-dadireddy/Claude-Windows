@@ -1,41 +1,38 @@
 # TX-2-0210 - Assign Items to Withholding Tax Item Group
-# Confidence Score: 8.5/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify purchase and sales item assignment to tax item group
 
 # Test Steps
 describe "TX-2-0210 - Assign Items to Withholding Tax Item Group" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Assign Items to Withholding Tax Item Group" do
     # Step 1: Navigate to task
-    navigate_to_task "Assign Items to Withholding Tax Item Group"
-    wait_for_page_load
+    enter search box as "Assign Items to Withholding Tax Item Group"
+    wait for search results
+    click search result containing "Assign Items to Withholding Tax Item Group"
+    wait for page to load
 
+    # Step 2: Execute task
+    # [NEEDS SME INPUT] - Define specific actions for: Assign Items to Withholding Tax Item Group
+
+    # Step 3: Validation
+    verify task completed successfully
+    screenshot as "TX-2-0210_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Assign Items to Withholding Tax Item Group Assign Items to Withholding Tax Item Group
-
-### 1. Kb Hcm Change Job (score: 7)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

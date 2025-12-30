@@ -1,50 +1,40 @@
 # TX-2-0190 - Withholding Tax Rules for Items
-# Confidence Score: 9.5/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify withholding tax rules for spend and revenue items
 
 # Test Steps
 describe "TX-2-0190 - Withholding Tax Rules for Items" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Withholding Tax Rules for Items" do
     # Step 1: Navigate to task
-    navigate_to_task "View Withholding Tax Rule for Items"
-    wait_for_page_load
+    enter search box as "View Withholding Tax Rule for Items"
+    wait for search results
+    click search result containing "View Withholding Tax Rule for Items"
+    wait for page to load
 
     # Step 2: Verify page loaded
-    expect(page).to have_content "Withholding"
+    verify page title contains "Withholding"
 
-    # Step 3: Validate data elements
-    validate_page_elements
+    # Step 3: Validate key elements present
+    verify page contains "View Withholding Tax Rule for Items"
 
-    # Step 4: Take screenshot for evidence
-    screenshot "#TX-2-0190_verification"
+    # Step 5: Take screenshot evidence
+    screenshot as "TX-2-0190_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Withholding Tax Rules for Items View Withholding Tax Rule for Items
-
-### 1. Kb Hcm Change Job (score: 7)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday C
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

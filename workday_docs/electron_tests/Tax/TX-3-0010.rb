@@ -1,50 +1,40 @@
 # TX-3-0010 - Tax applicability
-# Confidence Score: 9.5/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify the tax applicability configuration
 
 # Test Steps
 describe "TX-3-0010 - Tax applicability" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Tax applicability" do
     # Step 1: Navigate to task
-    navigate_to_task "View Tax Applicability"
-    wait_for_page_load
+    enter search box as "View Tax Applicability"
+    wait for search results
+    click search result containing "View Tax Applicability"
+    wait for page to load
 
     # Step 2: Verify page loaded
-    expect(page).to have_content "Tax"
+    verify page title contains "Tax"
 
-    # Step 3: Validate data elements
-    validate_page_elements
+    # Step 3: Validate key elements present
+    verify page contains "View Tax Applicability"
 
-    # Step 4: Take screenshot for evidence
-    screenshot "#TX-3-0010_verification"
+    # Step 5: Take screenshot evidence
+    screenshot as "TX-3-0010_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Tax applicability View Tax Applicability
-
-### 1. Kb Procurement Purchase Order (score: 3)
-Source: kb_procurement_purchase_order.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & W
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

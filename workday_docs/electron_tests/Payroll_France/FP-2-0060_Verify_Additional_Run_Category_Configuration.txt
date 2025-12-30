@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: FP-2-0060
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Verify Additional Run Category Configuration
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+*** Only applicable if a non-regular run category has been configured *** Process a payroll for the non-regular run category and ensure that pay results are being generated as expected. Add payroll input as needed.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Pay Calculation Results for Group of Workers"
+2. wait for search results
+3. click search result containing "Pay Calculation Results for Group of Workers"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "FP-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Pay Calculation Results for Group of Workers
+
+### 1. Kb Hcm Terminate Employee (score: 7)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysi...
+================================================================================

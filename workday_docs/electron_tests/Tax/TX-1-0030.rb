@@ -1,50 +1,40 @@
 # TX-1-0030 - Verify Tax Authorities
-# Confidence Score: 9.0/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Tax Manager
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: For each tax authority verify: Business Entity Name, Tax Authority ID, Tax Reporting Currency, Currency Rate Type, Website, Contact Information, Contacts, Settlement Bank Account and Default Payment Type
 
 # Test Steps
 describe "TX-1-0030 - Verify Tax Authorities" do
 
-  # Setup
   before do
     login_as "Tax Manager"
   end
 
   it "should complete: Verify Tax Authorities" do
     # Step 1: Navigate to task
-    navigate_to_task "View Tax Authority"
-    wait_for_page_load
+    enter search box as "View Tax Authority"
+    wait for search results
+    click search result containing "View Tax Authority"
+    wait for page to load
 
     # Step 2: Verify page loaded
-    expect(page).to have_content "Verify"
+    verify page title contains "Verify"
 
-    # Step 3: Validate data elements
-    validate_page_elements
+    # Step 3: Validate key elements present
+    verify page contains "View Tax Authority"
 
-    # Step 4: Take screenshot for evidence
-    screenshot "#TX-1-0030_verification"
+    # Step 5: Take screenshot evidence
+    screenshot as "TX-1-0030_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Verify Tax Authorities View Tax Authority
-
-### 1. Kb Procurement Requisition (score: 4)
-Source: kb_procurement_requisition.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Anal
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

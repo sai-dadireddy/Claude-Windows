@@ -1,55 +1,40 @@
 # TX-3-0080 - Transaction Tax codes
-# Confidence Score: 9.0/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify the transaction tax codes configuration
 
 # Test Steps
 describe "TX-3-0080 - Transaction Tax codes" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Transaction Tax codes" do
     # Step 1: Navigate to task
-    navigate_to_task "View Transaction Tax Codes"
-    wait_for_page_load
+    enter search box as "View Transaction Tax Codes"
+    wait for search results
+    click search result containing "View Transaction Tax Codes"
+    wait for page to load
 
     # Step 2: Verify page loaded
-    expect(page).to have_content "Transaction"
+    verify page title contains "Transaction"
 
-    # Step 3: Validate data elements
-    validate_page_elements
+    # Step 3: Validate key elements present
+    verify page contains "View Transaction Tax Codes"
 
-    # Step 4: Take screenshot for evidence
-    screenshot "#TX-3-0080_verification"
+    # Step 5: Take screenshot evidence
+    screenshot as "TX-3-0080_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Transaction Tax codes View Transaction Tax Codes
-
-### 1. Test Scenarios Index (score: 4)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervis
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

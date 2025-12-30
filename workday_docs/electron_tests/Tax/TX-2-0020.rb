@@ -1,61 +1,53 @@
 # TX-2-0020 - 1099 and 1096 print form layouts
 # Confidence Score: 8.5/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify the 1099 and 1096 print form layouts configuration
 
 # Test Steps
 describe "TX-2-0020 - 1099 and 1096 print form layouts" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: 1099 and 1096 print form layouts" do
     # Step 1: Navigate to task
-    navigate_to_task "Edit 1099 and 1096 Print Form Layout"
-    wait_for_page_load
+    enter search box as "Edit 1099 and 1096 Print Form Layout"
+    wait for search results
+    click search result containing "Edit 1099 and 1096 Print Form Layout"
+    wait for page to load
 
     # Step 2: Search for record
-    search_for "record_identifier"
+    enter search field as "search_criteria"
+    click button "Search"
+    wait for results
 
-    # Step 3: Open record
-    click_first_result
+    # Step 3: Select record
+    click first result
 
-    # Step 4: Click Edit
-    click_button "Edit"
+    # Step 4: Edit
+    click button "Edit"
+    wait for form to load
 
     # Step 5: Update fields
-    # [NEEDS SME REVIEW] - Specify exact field changes
-    fill_in "field_name", with: "updated_value"
+    # [NEEDS SME INPUT] - Specify field changes
+    enter field "field_name" as "new_value"
 
-    # Step 6: Save changes
-    click_button "Save"
-    wait_for_success_message
+    # Step 6: Save
+    click button "Save"
+    wait for confirmation
+    verify message contains "Success"
+    screenshot as "TX-2-0020_updated.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax 1099 and 1096 print form layouts Edit 1099 and 1096 Print Form Layout
-
-### 1. Admin Guide Release Notes (score: 8)
-Source: Admin-Guide-Release-Notes.pdf
-```
-Administrator Guide
-Release Notes
-Product Summary
-December 18, 2025
- | Contents | ii
-Contents
-About Workday Documentation...........................................................................5
-October 31, 2025................
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

@@ -1,0 +1,220 @@
+================================================================================
+PAYROLL US TEST SCENARIOS - QUICK INDEX
+================================================================================
+
+Total Scenarios: 312
+- Automated Tests: 192 (61.5%)
+- Manual Required: 120 (38.5%)
+
+Confidence Breakdown:
+- HIGH (>= 8.0): 22 tests
+- MEDIUM (5.0-7.9): 170 tests
+- LOW (< 5.0): 0 tests
+
+================================================================================
+SCENARIO ID RANGES
+================================================================================
+
+USP-1-XXXX: Unit Tenant Build Validation (Base Configuration)
+  Range: USP-1-0010 to USP-1-0140
+  Count: ~14 scenarios
+  Topics: Period schedules, run categories, pay groups, earnings, deductions
+
+USP-2-XXXX: Unit Tenant Build Validation (Security & Additional Config)
+  Range: USP-2-0010 to USP-2-0090
+  Count: ~9 scenarios
+  Topics: Security groups, integrations, notifications
+
+USP-3-XXXX: Integration Testing (E2E Processes)
+  Range: USP-3-0010 to USP-3-0590
+  Count: ~59 scenarios
+  Topics: Payroll setup, time tracking, benefits integration
+
+USP-4-XXXX: System Testing (Payroll Scenarios)
+  Range: USP-4-0010 to USP-4-0250
+  Count: ~60 scenarios
+  Topics: Retro calculations, pay changes, terminations, one-time payments
+
+USP-P1-XXXX: Payroll Parallel (Legacy Migration)
+  Range: USP-P1-0010 to USP-P1-0390
+  Count: ~39 scenarios
+  Topics: Legacy pay data, mapping, PROVE reports, validation
+
+USP-5-XXXX: Additional Validation & Special Cases
+  Range: USP-5-0100 to USP-5-0510
+  Count: ~42 scenarios
+  Topics: FLSA, accounting, effort certification, commitments
+
+================================================================================
+HIGH CONFIDENCE TESTS (22 scenarios)
+================================================================================
+
+These tests have strong RAG backing with SOAP/REST API matches:
+
+1. USP-1-0010  Review Period Schedule Configuration
+2. USP-1-0020  Review Run Category Configuration
+3. USP-1-0030  Review Pay Group Configuration
+4. USP-1-0040  Review Payment Election Rule Configuration
+5. USP-1-0060  Review Earnings Configuration
+6. USP-1-0070  Review Deductions Configuration
+7. USP-1-0080  Review FLSA Calendar Configuration
+8. USP-1-0090  Review FLSA Calendar Rules Configuration
+9. USP-1-0100  Review Company Tax Reporting Configuration
+10. USP-1-0110 Review Payroll Deduction Configuration
+11. USP-1-0120 Review Involuntary Withholding Configuration
+12. USP-1-0130 Review US Tax Mapping Configuration
+13. USP-1-0140 Review Payroll Company Profile
+14. USP-5-0100 Review FLSA Calendar Configuration
+15. USP-5-0110 Review FLSA Calendar Rules Configuration
+16. USP-5-0120 Review Company Accounting Configuration
+17. USP-5-0130 Verify Open Ledger Periods
+18. USP-5-0140 Review Company Tax Reporting
+19. USP-5-0150 Missing US Tax Elections Review
+20. USP-5-0160 US Tax Elections Review
+21. USP-5-0170 Review Employees Home/Work State Mismatch
+22. USP-5-0180 Missing Payment Elections Review
+
+================================================================================
+COMMON AUTOMATED TEST PATTERNS
+================================================================================
+
+Configuration Review:
+- USP-1-0010: View Period Schedule
+- USP-1-0030: All Pay Groups
+- USP-1-0060: All Earnings
+- USP-1-0070: All Deductions
+
+Audit/Validation:
+- USP-5-0150: View Workers with Missing US Tax Elections
+- USP-5-0160: USA QA Pay Worker Tax Elections
+- USP-5-0180: Audit Missing Payment Elections
+- USP-5-0190: Pay Group Report w Position ID
+
+Payroll Processing:
+- USP-4-0090-05: Payroll Processing (step 5)
+- USP-4-0100-05: Payroll Processing (benefit change)
+- USP-4-0110-02: Payroll Processing (PT to FT)
+- USP-P1-0070: Run Pay Calculation
+
+PROVE Reports (Payroll Validation):
+- USP-P1-0110: PROVE 1 Report (Map Validation)
+- USP-P1-0120: PROVE 2 Report (WD Codes Not in Mapping)
+- USP-P1-0130: PROVE 3 Report (Legacy Codes Not in Mapping)
+- USP-P1-0140: PROVE 4 Report (WD EmpID without Legacy Match)
+- USP-P1-0150: PROVE 5 Report (Legacy EmpID without WD Match)
+- USP-P1-0160: PROVE 9 Report (Legacy Amounts Not in WD)
+
+================================================================================
+MANUAL REQUIRED SCENARIOS (120 total)
+================================================================================
+
+Common Patterns for Manual Scenarios:
+
+Parent Scenarios (No Task/Step):
+- USP-4-0100: Retro Benefit Change Payroll Impact (parent)
+  - Sub-scenarios (USP-4-0100-01 to 06) ARE automated
+
+- USP-4-0110: PT to FT Change to Gross (parent)
+  - Sub-scenarios (USP-4-0110-01 to 03) ARE automated
+
+Legacy/Migration Scenarios:
+- USP-P1-0010: Legacy Pay Data
+- USP-P1-0020: Pay Component Mapping
+- USP-P1-0040: Time and Time Off Data
+- USP-P1-0050: Catch Up Transactions
+- USP-P1-0060: Payroll Input
+- USP-P1-0090: Review Payroll Process
+- USP-P1-0100: Setup PROVE
+
+Higher Education/Public Sector:
+- USP-5-0250: Earnings - Activity Pay Mid Academic Period
+- USP-5-0260: Earnings - Activity Pay Mid Academic Period
+- USP-5-0270: Earnings - Academic Pay
+- USP-5-0280: Effort Certification Type
+- USP-5-0290: Effort Certification Text
+- USP-5-0300: Survey
+- USP-5-0310: Effort Eligibility Rule
+- USP-5-0320: Fringe Benefit Commitment Rule
+
+Commitment/Budget Scenarios:
+- USP-5-0360: Commitment and Obligation Ledgers
+- USP-5-0370: Payroll Commitment Rule
+- USP-5-0380: Maintain Payroll Journal Options
+- USP-5-0390: Position/Pooled Budget Templates
+- USP-5-0400: Position/Pooled Budget Details
+- USP-5-0410: BP Create Initial Payroll Commitments
+- USP-5-0420: BP Create Payroll Commitment Adjustments
+- USP-5-0430: BP Run Effort Certification
+
+================================================================================
+FILE NAMING CONVENTION
+================================================================================
+
+Format: {Scenario_ID}_{Scenario_Name_sanitized}.txt
+
+Examples:
+- USP-1-0010_Review_Period_Schedule_Configuration.txt
+- USP-4-0090-05_Retro_Comp_Change_Payroll_Impact.txt
+- USP-P1-0110_Prove_1_Map_Validation.txt
+
+Special Characters Removed:
+- Parentheses: () → removed
+- Slashes: / → removed
+- Colons: : → removed
+- Commas: , → removed
+- Spaces: → replaced with underscores
+
+Length Limit: 100 characters (name truncated if longer)
+
+================================================================================
+SEARCH & FILTER TIPS
+================================================================================
+
+Find Automated Tests:
+  grep -l "CONFIDENCE:" *.txt | wc -l
+
+Find Manual Tests:
+  grep -l "STATUS: \[MANUAL REQUIRED\]" *.txt | wc -l
+
+Find HIGH Confidence Tests:
+  grep -l "CONFIDENCE: \[HIGH\]" *.txt
+
+Find Tests by Scenario ID:
+  ls USP-1-*.txt        # All Unit tests
+  ls USP-4-*.txt        # All System tests
+  ls USP-P1-*.txt       # All Parallel tests
+
+Find Tests by Topic:
+  grep -l "Period Schedule" *.txt
+  grep -l "Pay Group" *.txt
+  grep -l "PROVE" *.txt
+
+================================================================================
+RELATED FILES
+================================================================================
+
+README.txt - Comprehensive final report with statistics
+GENERATION_SUMMARY.txt - Detailed generation process summary
+INDEX.txt - This file (quick reference guide)
+
+Generation Scripts:
+- generate_batch.py - Batch generation script
+- analyze_stats.py - Statistics analyzer
+- run_all_batches.py - Orchestrator for all batches
+
+Source Files:
+- WD_Test_Scenarios_Master.xlsx - Source Excel
+- workday_rag.py - RAG query tool
+- wsdl_index.json - SOAP operation index
+
+================================================================================
+NEXT ACTIONS
+================================================================================
+
+1. Review README.txt for complete details
+2. Validate sample automated tests in Electron
+3. Provide SME input for 120 MANUAL scenarios
+4. Enhance RAG knowledge for MEDIUM confidence tests
+5. Map scenarios to API operations for API testing
+
+================================================================================

@@ -1,53 +1,40 @@
 # TX-2-0140 - Tax Rule Exception for Country
-# Confidence Score: 9.0/10.0
+# Confidence Score: 8.0/10.0
+# Functional Area: Tax
 # Role: Finance Administrator
 
-## AUTOMATED TEST
+## AUTOMATED TEST - HIGH CONFIDENCE
 ## Description: Verify the tax rule exception configuration for country
 
 # Test Steps
 describe "TX-2-0140 - Tax Rule Exception for Country" do
 
-  # Setup
   before do
     login_as "Finance Administrator"
   end
 
   it "should complete: Tax Rule Exception for Country" do
     # Step 1: Navigate to task
-    navigate_to_task "View Transaction Tax Rule Exception for Country"
-    wait_for_page_load
+    enter search box as "View Transaction Tax Rule Exception for Country"
+    wait for search results
+    click search result containing "View Transaction Tax Rule Exception for Country"
+    wait for page to load
 
     # Step 2: Verify page loaded
-    expect(page).to have_content "Tax"
+    verify page title contains "Tax"
 
-    # Step 3: Validate data elements
-    validate_page_elements
+    # Step 3: Validate key elements present
+    verify page contains "View Transaction Tax Rule Exception for Country"
 
-    # Step 4: Take screenshot for evidence
-    screenshot "#TX-2-0140_verification"
+    # Step 5: Take screenshot evidence
+    screenshot as "TX-2-0140_complete.png"
   end
 
-  # Cleanup
   after do
     logout
   end
 end
 
-# RAG Context:
-# Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tax Tax Rule Exception for Country View Transaction Tax Rule Exception for Country
-
-### 1. Workday Feature Descriptions Ditamap (score: 7)
-Source: Workday-Feature-Descriptions-ditamap.pdf
-```
-Workday Feature
-Descriptions
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Workday Feature Descriptions Guide................................................................. 5
-Workday 
+# Business Context:
+# Expected Result: Per business requirements
+# Sub-Task: None

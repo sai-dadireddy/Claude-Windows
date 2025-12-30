@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: FP-2-0070
+FUNCTIONAL AREA: Payroll for France
+COUNTRY: FR
+TEST NAME: Payroll Security Group Assignments
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+Log on as all users you would expect to be able to create/view/edit payroll data. While logged on as these users, search for payroll-related tasks/reports and verify that Payroll Partner and Payroll Administrator security groups have been assigned to the right users.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 30 minutes
+COUNTRY SCOPE: FR
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to FR payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Start Proxy, Run Pay Calculation, Create Settlement Run"
+2. wait for search results
+3. click search result containing "Start Proxy, Run Pay Calculation, Create Settlement Run"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "FP-2-0070_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Start Proxy, Run Pay Calculation, Create Settlement Run
+
+### 1. Kb Payroll Run Payroll (score: 5)
+Source: kb_payroll_run_payroll.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+...
+================================================================================
