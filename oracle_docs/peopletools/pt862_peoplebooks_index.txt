@@ -1,0 +1,73 @@
+# PeopleTools 8.62 PeopleBooks Index
+# Downloaded from: https://docs.oracle.com/cd/G41076_01/psft/index.html
+# Date: 2025-12-30
+# Total: 45 PDFs
+
+## General Information
+| Filename | Title |
+|----------|-------|
+| pt862tacs-b112025.pdf | Accessibility Guide |
+| pt862tupa-b112025.pdf | Applications User's Guide |
+| pt862tgst-b112025.pdf | Getting Started with PeopleTools |
+
+## Development Tools
+| Filename | Title |
+|----------|-------|
+| pt862tapd-b112025.pdf | Application Designer Developer's Guide |
+| pt862tape-b112025.pdf | Application Engine |
+| pt862tmlf-b112025.pdf | Data Distribution Framework |
+| pt862tdoc-b112025.pdf | Documents Technology |
+| pt862tflu-b112025.pdf | Fluid User Interface Developer's Guide |
+| pt862tgbl-b112025.pdf | Global Technology |
+| pt862topt-b112025.pdf | Optimization Framework |
+| pt862tpcr-b112025.pdf | PeopleCode API Reference |
+| pt862tpcd-b112025.pdf | PeopleCode Developer's Guide |
+| pt862tpcl-b112025.pdf | PeopleCode Language Reference |
+| pt862tprt-b112025.pdf | Portal Technology |
+| pt862tpst-b112025.pdf | Search Technology |
+
+## Reporting and Analysis Tools
+| Filename | Title |
+|----------|-------|
+| pt862tace-b112025.pdf | Analytic Calculation Engine |
+| pt862txml-b112025.pdf | BI Publisher for PeopleSoft |
+| pt862tpvg-b112025.pdf | Pivot Grid |
+| pt862tprs-b112025.pdf | Process Scheduler |
+| pt862tnvs-b112025.pdf | PS/nVision |
+| pt862tpsq-b112025.pdf | Query |
+| pt862trws-b112025.pdf | Reporting Web Services |
+| pt862tsqr-b112025.pdf | SQR for PeopleSoft Developers |
+| pt862tsql-b112025.pdf | SQR Language Reference for PeopleSoft |
+| pt862ttrm-b112025.pdf | Tree Manager |
+
+## Integration Tools
+| Filename | Title |
+|----------|-------|
+| pt862tcpi-b112025.pdf | Component Interfaces |
+| pt862tfee-b112025.pdf | Feed Publishing Framework |
+| pt862tibr-b112025.pdf | Integration Broker |
+| pt862tiba-b112025.pdf | Integration Broker Administration |
+| pt862tibm-b112025.pdf | Integration Broker Service Operations Monitor |
+| pt862tibt-b112025.pdf | Integration Broker Testing Utilities and Tools |
+| pt862tmcf-b112025.pdf | MultiChannel Framework |
+| pt862tsis-b112025.pdf | Supported Integration Technologies |
+| pt862twfl-b112025.pdf | Workflow Technology |
+
+## Administration Tools
+| Filename | Title |
+|----------|-------|
+| pt862tacm-b112025.pdf | Automated Configuration Management |
+| pt862tadm-b112025.pdf | Data Management |
+| pt862tpfm-b112025.pdf | Performance Monitor |
+| pt862tsec-b112025.pdf | Security Administration |
+| pt862tsvt-b112025.pdf | System and Server Administration |
+| pt862tusm-b112025.pdf | Usage Monitor |
+
+## Lifecycle Management Tools
+| Filename | Title |
+|----------|-------|
+| pt862tswu-b112025.pdf | Change Assistant and Update Manager |
+| pt862tcia-b112025.pdf | Change Impact Analyzer |
+| pt862tlcm-b112025.pdf | Lifecycle Management Guide |
+| pt862tsum-b112025.pdf | Setup Manager |
+| pt862tptf-b112025.pdf | Test Framework |
