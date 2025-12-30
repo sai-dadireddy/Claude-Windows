@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0080-03
+FUNCTIONAL AREA: Procurement
+TEST NAME: Month End Close
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Close all applicable Issued POs to prevent further action on them. Open all applicable Closed POs to allow future action on them.
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "Find Procurement Mass Close Requests"
+2. wait for search results (2 seconds)
+3. click search result containing "Find Procurement Mass Close Requests"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0080-03_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

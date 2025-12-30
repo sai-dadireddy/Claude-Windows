@@ -1,0 +1,18 @@
+# REC-2-0230: Recruiting Notes
+# Functional Area: Talent Acquisition
+# Confidence: 8.0/10.0
+
+# Step 1: Login
+login|Recruiter
+
+# Step 2: Navigate to Security
+search|View Domain
+click|View Domain
+wait|2
+
+# Step 3: Extract Security Assignments
+report|Security Group Assignments
+verify|Security groups are assigned correctly
+
+# Final Step: Logout
+logout

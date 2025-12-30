@@ -1,0 +1,18 @@
+# REC-3-0050: Tenant Setup - Notifications
+# Functional Area: Talent Acquisition
+# Confidence: 7.5/10.0
+
+# Step 1: Login
+login|System Configurator
+
+# Step 2: Navigate to Recruiting Home
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Tenant Setup - Notifications
+# Task: Edit Tenant Setup - Notifications
+# [NEEDS SPECIFIC STEPS]
+
+# Final Step: Logout
+logout

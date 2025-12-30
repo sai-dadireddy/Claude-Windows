@@ -341,16 +341,16 @@ def main():
 
         print(f"\n{area_name}:")
         print(f"  Total Scenarios: {stats['total']}")
-        print(f"  ✅ Accepted (>= 7.0): {stats['valid']} ({stats['valid']/stats['total']*100:.1f}%)")
-        print(f"  ⚠️ Needs Review (5.0-6.9): {stats['needs_review']} ({stats['needs_review']/stats['total']*100:.1f}%)")
-        print(f"  ❌ Manual Required (< 5.0): {stats['manual']} ({stats['manual']/stats['total']*100:.1f}%)")
+        print(f"  [OK] Accepted (>= 7.0): {stats['valid']} ({stats['valid']/stats['total']*100:.1f}%)")
+        print(f"  [!!] Needs Review (5.0-6.9): {stats['needs_review']} ({stats['needs_review']/stats['total']*100:.1f}%)")
+        print(f"  [XX] Manual Required (< 5.0): {stats['manual']} ({stats['manual']/stats['total']*100:.1f}%)")
 
     print(f"\n{'='*80}")
     print("OVERALL TOTALS:")
     print(f"  Total Scenarios: {total_all}")
-    print(f"  ✅ Accepted: {valid_all} ({valid_all/total_all*100:.1f}%)")
-    print(f"  ⚠️ Needs Review: {review_all} ({review_all/total_all*100:.1f}%)")
-    print(f"  ❌ Manual: {manual_all} ({manual_all/total_all*100:.1f}%)")
+    print(f"  [OK] Accepted: {valid_all} ({valid_all/total_all*100:.1f}%)")
+    print(f"  [!!] Needs Review: {review_all} ({review_all/total_all*100:.1f}%)")
+    print(f"  [XX] Manual: {manual_all} ({manual_all/total_all*100:.1f}%)")
     print("="*80)
 
 if __name__ == "__main__":

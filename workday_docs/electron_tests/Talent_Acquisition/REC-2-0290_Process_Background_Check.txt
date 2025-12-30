@@ -1,0 +1,21 @@
+# REC-2-0290: Process Background Check
+# Functional Area: Talent Acquisition
+# Confidence: 6.5/10.0
+
+# [NEEDS SME REVIEW]
+# This test was generated with medium confidence and requires validation
+
+# Step 1: Login
+login|Recruiter
+
+# Step 2: Navigate to Recruiting Home
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Process Background Check
+# Task: Move Forward to Ready To Hire
+# [NEEDS SPECIFIC STEPS]
+
+# Final Step: Logout
+logout

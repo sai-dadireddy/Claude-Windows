@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0030
+FUNCTIONAL AREA: Procurement
+TEST NAME: Edit Company Procurement Options
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure company procurement options are configured correctly. Take special note of the following:  1) Will customer be implementing Sales Tax on Requisitions? (Enable/Disable Transaction Tax on Requisition Flag)  2) Does customer wish to hide Service lines on Requisitions? (Enable/Disable Disable Service Lines on Requisitions Flag)  3) Does customer wish to hide Project lines on Requisitions? (Enable/Disable Disable Project-Based Service Lines on Requisitions Flag)
+
+WORKDAY ROLE: Finance Organization Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Related Action From Company > Edit Company Procurement Options"
+2. wait for search results (2 seconds)
+3. click search result containing "Related Action From Company > Edit Company Procurement Options"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

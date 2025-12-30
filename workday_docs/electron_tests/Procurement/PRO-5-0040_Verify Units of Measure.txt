@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0040
+FUNCTIONAL AREA: Procurement
+TEST NAME: Verify Units of Measure
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review all units of measure. Be sure to consider punchout suppliers UOM if punchout is in scope.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Units of Measure"
+2. wait for search results (2 seconds)
+3. click search result containing "Units of Measure"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0040_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

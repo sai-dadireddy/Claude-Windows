@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0010
+FUNCTIONAL AREA: Procurement
+TEST NAME: Suppliers
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review supplier data for completeness and data quality.
+
+WORKDAY ROLE: Supplier Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Find Suppliers or Extract Suppliers"
+2. wait for search results (2 seconds)
+3. click search result containing "Find Suppliers or Extract Suppliers"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0010_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

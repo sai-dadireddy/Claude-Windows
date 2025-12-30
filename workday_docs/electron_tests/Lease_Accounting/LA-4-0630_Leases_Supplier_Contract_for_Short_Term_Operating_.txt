@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: LA-4-0630
+FUNCTIONAL AREA: Lease Accounting
+TEST NAME: Leases: Supplier Contract for Short Term Operating Lease
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Create Supplier Invoices for Supplier Contract Installments
+
+ELECTRON STEPS:
+1. enter search box as "Create Supplier Invoices for Supplier Contract Installments"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "LA-4-0630_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Supplier Invoices for Supplier Contract Installments
+
+### 1. Admin Guide Education And Government (score: 6)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management................
+================================================================================

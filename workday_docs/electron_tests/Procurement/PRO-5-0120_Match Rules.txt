@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0120
+FUNCTIONAL AREA: Procurement
+TEST NAME: Match Rules
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the match rule set and each of the condition rules in the rule set. Ensure that there are no gaps in the rules that would enable an invoice to get through without a second set of eyes reviewing the differences between the invoice and its associated PO.
+
+WORKDAY ROLE: Accounts Payable Configurator
+
+ELECTRON STEPS:
+1. enter search box as "View Supplier Accounts Match Rule Set"
+2. wait for search results (2 seconds)
+3. click search result containing "View Supplier Accounts Match Rule Set"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0120_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

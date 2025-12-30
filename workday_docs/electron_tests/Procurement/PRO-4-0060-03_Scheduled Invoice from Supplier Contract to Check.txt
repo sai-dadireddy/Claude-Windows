@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0060-03
+FUNCTIONAL AREA: Procurement
+TEST NAME: Scheduled Invoice from Supplier Contract to Check
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [INFERRED]
+================================================================================
+
+DESCRIPTION:
+Create a schedule for invoices. Generate installments
+
+WORKDAY ROLE: Supplier Contract Specialist
+
+ELECTRON STEPS:
+1. enter search box as "3. Generate Schedule for Invoice Creation from Contract"
+2. wait for search results (2 seconds)
+3. click search result containing "3. Generate Schedule for Invoice Creation from Contract"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0060-03_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Query RAG for details
+
+RAG QUERY STATUS: TIMEOUT
+================================================================================

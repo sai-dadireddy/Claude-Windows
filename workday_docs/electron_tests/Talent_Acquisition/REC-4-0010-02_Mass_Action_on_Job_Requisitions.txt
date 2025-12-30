@@ -1,0 +1,12 @@
+# REC-4-0010-02: Mass Action on Job Requisitions
+# Functional Area: Talent Acquisition
+# Confidence: 3.0/10.0
+
+# [MANUAL TEST - LOW CONFIDENCE]
+# Reason: Insufficient RAG data for automated generation
+# Task: nan
+
+# Please create manual test steps based on:
+# - Scenario: Mass Action on Job Requisitions
+# - Role: Recruiting Administrator
+# - Expected: nan

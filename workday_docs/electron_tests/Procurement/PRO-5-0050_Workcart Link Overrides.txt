@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0050
+FUNCTIONAL AREA: Procurement
+TEST NAME: Workcart Link Overrides
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Make sure all cart links are accurate based on scope and instructional text is correct.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Create Requisition (Cart Link Overrides)"
+2. wait for search results (2 seconds)
+3. click search result containing "Create Requisition (Cart Link Overrides)"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0050_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

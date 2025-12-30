@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: HCM-5-0570
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Period Activity Tasks
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Period Activity Tasks are defined with appropriate attributes.
+
+WORKDAY ROLE: Academic Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Academic Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Period Activity Tasks"
+2. wait for search results
+3. click search result containing "Period Activity Tasks"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-5-0570_complete.png"
+
+VERIFICATION:
+- [ ] Period Activity Tasks are defined with Unit and other attributes as appropriate.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Period Activity Tasks
+
+### 1. WSDL: Compensation (score: 8)
+Source: Compensation.wsdl
+```
+WSDL: Compensation
+Description: The Compensation Web Service contains operations that expose Workday Human Capital Management Business Services compensation-related data.
+Operations:
+  - Put_Previous_System_Compensation_History: This operation will load previous system compensation history for a giv....
+================================================================================

@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0080-06
+FUNCTIONAL AREA: Procurement
+TEST NAME: Year End Close
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Roll Forward Commitments and Obligations. Create procurement document roll forward events to ensure that all procurement documents not closed prior to the year old are rolled forward into the new year.
+
+WORKDAY ROLE: Accountant
+
+ELECTRON STEPS:
+1. enter search box as "Roll Forward Procurement Documents"
+2. wait for search results (2 seconds)
+3. click search result containing "Roll Forward Procurement Documents"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0080-06_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

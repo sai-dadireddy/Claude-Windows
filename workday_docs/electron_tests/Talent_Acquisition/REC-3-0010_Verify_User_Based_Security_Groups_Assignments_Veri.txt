@@ -1,0 +1,18 @@
+# REC-3-0010: Verify User Based Security Groups Assignments & Verify Role Assignments
+# Functional Area: Talent Acquisition
+# Confidence: 7.5/10.0
+
+# Step 1: Login
+login|Security Administrator
+
+# Step 2: Navigate to Security
+search|View Domain
+click|View Domain
+wait|2
+
+# Step 3: Extract Security Assignments
+report|Security Group Assignments
+verify|Security groups are assigned correctly
+
+# Final Step: Logout
+logout

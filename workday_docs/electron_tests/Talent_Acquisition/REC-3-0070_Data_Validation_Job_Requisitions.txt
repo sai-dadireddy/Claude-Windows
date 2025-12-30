@@ -1,0 +1,22 @@
+# REC-3-0070: Data Validation: Job Requisitions
+# Functional Area: Talent Acquisition
+# Confidence: 5.0/10.0
+
+# [NEEDS SME REVIEW]
+# This test was generated with medium confidence and requires validation
+
+# Step 1: Login
+login|Recruiting Administrator
+
+# Step 2: Navigate to Recruiting
+search|Find Candidates
+click|Find Candidates
+wait|2
+
+# Step 3: Process Candidate
+filter|Active Candidates
+select|First candidate
+verify|Candidate details display correctly
+
+# Final Step: Logout
+logout

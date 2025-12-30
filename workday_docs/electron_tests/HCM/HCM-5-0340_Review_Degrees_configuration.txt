@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: HCM-5-0340
+FUNCTIONAL AREA: HCM
+TEST NAME: Review Degrees configuration
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected degrees are present in the tenant
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Degrees"
+2. wait for search results
+3. click search result containing "Degrees"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-5-0340_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Assess_Talent
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Degrees
+
+### 1. WSDL: Performance_Management (score: 6)
+Source: Performance_Management.wsdl
+```
+WSDL: Performance_Management
+Description: The Performance Management Web Service contains operations that expose Workday Employee Performance Management Business Services data. This Web Service can be used for integration with other employee performance management  systems.
+Operations:
+  - Star...
+================================================================================

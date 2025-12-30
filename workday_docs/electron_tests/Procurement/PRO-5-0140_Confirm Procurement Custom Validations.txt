@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0140
+FUNCTIONAL AREA: Procurement
+TEST NAME: Confirm Procurement Custom Validations
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify all required Custom Validations have been configured for (depending on scope): Catalog Load, Change Order, Procurement Card Transaction Verification, Purchase Order Acknowledgement, Request for Quote, Request for Quote Award, Request for Quote Response, Requisition, Return to Supplier, Supplier, Supplier Change, Supplier Contract, Supplier Contract Amendment
+
+WORKDAY ROLE: Accounts Payable Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Custom Validations"
+2. wait for search results (2 seconds)
+3. click search result containing "Maintain Custom Validations"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0140_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

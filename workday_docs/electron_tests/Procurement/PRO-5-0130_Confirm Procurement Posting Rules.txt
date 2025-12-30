@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0130
+FUNCTIONAL AREA: Procurement
+TEST NAME: Confirm Procurement Posting Rules
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify the following rules have the correct ledger account: Spend, Credit Card Payable, Receipt Accrual
+
+WORKDAY ROLE: Accounts Payable Configurator
+
+ELECTRON STEPS:
+1. enter search box as "View Account Posting Rule Set"
+2. wait for search results (2 seconds)
+3. click search result containing "View Account Posting Rule Set"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0130_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

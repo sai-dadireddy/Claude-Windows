@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0110
+FUNCTIONAL AREA: Procurement
+TEST NAME: Supplier Links/Punchout
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+If punchout is in scope, review the punchout links once they are configured. Ensure that only the allowed users can see the link when entering a requisition.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Supplier Links"
+2. wait for search results (2 seconds)
+3. click search result containing "Maintain Supplier Links"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0110_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

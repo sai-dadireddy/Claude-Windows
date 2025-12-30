@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0020
+FUNCTIONAL AREA: Procurement
+TEST NAME: Edit Company Accounting Options related to Procurement
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure company accounting options related to procurement are configured correctly:  Procurement Tax Options:  Calculate Tax Due to Supplier Enter Tax Due to Supplier or Calculate Self Assessed Taxes
+
+WORKDAY ROLE: Finance Organization Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
+2. wait for search results (2 seconds)
+3. click search result containing "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0020_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

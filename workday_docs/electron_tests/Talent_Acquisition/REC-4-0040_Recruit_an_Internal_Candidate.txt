@@ -1,0 +1,12 @@
+# REC-4-0040: Recruit an Internal Candidate
+# Functional Area: Talent Acquisition
+# Confidence: 3.0/10.0
+
+# [MANUAL TEST - LOW CONFIDENCE]
+# Reason: Insufficient RAG data for automated generation
+# Task: nan
+
+# Please create manual test steps based on:
+# - Scenario: Recruit an Internal Candidate
+# - Role: nan
+# - Expected: nan

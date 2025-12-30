@@ -1,0 +1,21 @@
+# REC-3-0020: Questionnaire Confirmation
+# Functional Area: Talent Acquisition
+# Confidence: 5.0/10.0
+
+# [NEEDS SME REVIEW]
+# This test was generated with medium confidence and requires validation
+
+# Step 1: Login
+login|Questionnaire Configurator / HR Administrator
+
+# Step 2: Navigate to Recruiting Home
+search|Recruiting
+click|Recruiting
+wait|2
+
+# Step 3: Questionnaire Confirmation
+# Task: Maintain Questionnaires
+# [NEEDS SPECIFIC STEPS]
+
+# Final Step: Logout
+logout

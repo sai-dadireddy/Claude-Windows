@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: HCM-5-0490
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Rate Matrix
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Period Activity Rate Matrix is defined based on the institution's requirements.
+
+WORKDAY ROLE: Academic Administrator
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Academic Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Period Activity Rate Matrix"
+2. wait for search results
+3. click search result containing "Period Activity Rate Matrix"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-5-0490_complete.png"
+
+VERIFICATION:
+- [ ] Period Activity Rate Matrix (ices) is/are defined.
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Period Activity Rate Matrix
+
+### 1. WSDL: Compensation (score: 9)
+Source: Compensation.wsdl
+```
+WSDL: Compensation
+Description: The Compensation Web Service contains operations that expose Workday Human Capital Management Business Services compensation-related data.
+Operations:
+  - Put_Previous_System_Compensation_History: This operation will load previous system compensation history for ...
+================================================================================

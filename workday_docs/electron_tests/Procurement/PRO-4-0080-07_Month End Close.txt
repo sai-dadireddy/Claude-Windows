@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-4-0080-07
+FUNCTIONAL AREA: Procurement
+TEST NAME: Month End Close
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Mass Close Procurement Documents. Close unused portions of procurement documents (requisitions, purchase orders and supplier contracts) when your organization no longer needs to process procurement activities against them, such as additional receipts or supplier invoices.  If you use commitment accounting for procurement, you recover and liquidate any commitment or obligation journals and also recover obligated budget when you close procurement documents.
+
+WORKDAY ROLE: Accountant
+
+ELECTRON STEPS:
+1. enter search box as "Mass Close Procurement Documents"
+2. wait for search results (2 seconds)
+3. click search result containing "Mass Close Procurement Documents"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-4-0080-07_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

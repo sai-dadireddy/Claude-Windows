@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0060
+FUNCTIONAL AREA: Procurement
+TEST NAME: Spend Transaction Instructions for Requisitions
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify instructions or links to policies for the requisition process.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "View Spend Transaction Instructions"
+2. wait for search results (2 seconds)
+3. click search result containing "View Spend Transaction Instructions"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0060_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

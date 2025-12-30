@@ -1,0 +1,28 @@
+================================================================================
+TEST ID: PRO-5-0160
+FUNCTIONAL AREA: Procurement
+TEST NAME: Confirm User Based Procurement Assignments
+CONFIDENCE: [HIGH] Score: 9.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Procurement have been properly assigned: Procurement Configurator, Accounts Payable Configurator, Credit Card Transaction Administrator
+
+WORKDAY ROLE: Security Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Extract User-Based Security Group Assignments"
+2. wait for search results (2 seconds)
+3. click search result containing "Extract User-Based Security Group Assignments"
+4. wait for page to load (3 seconds)
+5. screenshot as "PRO-5-0160_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Check WSDL index for available operations
+
+RAG QUERY STATUS: SUCCESS
+================================================================================
