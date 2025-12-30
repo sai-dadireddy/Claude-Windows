@@ -1,0 +1,14 @@
+================================================================================
+TEST ID: FACC-4-0200
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Noncontrolling Interest Process
+CONFIDENCE: [LOW] Score: 0.0/10
+================================================================================
+
+STATUS: [MANUAL REQUIRED]
+REASON: Missing Task/Step
+
+SCENARIO DETAILS:
+Task/Step: NOT PROVIDED
+Expected Result: NOT PROVIDED
+================================================================================

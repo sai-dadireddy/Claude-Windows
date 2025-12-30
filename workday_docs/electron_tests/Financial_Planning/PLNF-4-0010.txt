@@ -1,0 +1,21 @@
+================================================================================
+TEST ID: PLNF-4-0010
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Capital Model
+WORKDAY ROLE: N/A
+EST. DURATION: 0 minutes
+CONFIDENCE: LOW ❌ (RAG Score: 0.0)
+================================================================================
+
+PREREQUISITES:
+- User logged in with N/A permissions
+
+ELECTRON STEPS:
+# [INCOMPLETE: No Task/Step provided in source data]
+# This scenario requires manual review
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+================================================================================

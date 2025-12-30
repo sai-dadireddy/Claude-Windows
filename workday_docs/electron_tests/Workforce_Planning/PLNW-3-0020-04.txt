@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: PLNW-3-0020-04
+FUNCTIONAL AREA: PLN - Workforce Planning
+TEST NAME: Data Flow to Income Statement
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 24.0)
+================================================================================
+
+DESCRIPTION:
+Verify data calculation values flow to Income Statement
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify data calculation values flow to Income Statement
+
+ELECTRON STEPS:
+1. # -Go to Sheets > Income Statement.
+2. verify -Verify data is flowing from the Personnel sheet to the various general ledger accounts on the income statement for Salary, Taxes, Benefits and all related expenses.
+3. screenshot as "PLNW-3-0020-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

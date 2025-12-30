@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: PRO-2-0170
+FUNCTIONAL AREA: Procurement
+TEST NAME: Approve Change Order
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Approve Change Order. Test Business Process routing based on the configured conditions for each Business Process step.  Verify only Change Order approval steps are approved
+
+WORKDAY ROLE: Various (depending on approval process)
+
+ELECTRON STEPS:
+1. enter search box as "Approve Change Order"
+2. wait for search results
+3. click search result containing "Approve Change Order"
+4. wait for page to load
+5. screenshot as "PRO-2-0170_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Approve Change Order
+
+### 1. Kb Hcm Change Job (score: 3)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human R...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

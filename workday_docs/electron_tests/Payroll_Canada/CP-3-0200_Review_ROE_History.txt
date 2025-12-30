@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: CP-3-0200
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Review ROE History
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure that all Canadian employees have ROE Prior Period History loaded and that the data is accurate. Note: If there is no plan to load ROE Prior Period History, ensure there is a plan in place to issue ROEs out of legacy system after the last payroll run and to record those ROEs (along with the issue date) as ROE history (Create ROE History task or Put ROE History Data EIB).
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "ROE Prior Period History Results"
+2. wait for search results
+3. click search result containing "ROE Prior Period History Results"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+6. screenshot as "CP-3-0200_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: ROE Prior Period History Results
+
+### 1. WSDL: Payroll (score: 5)
+Source: Payroll.wsdl
+```
+WSDL: Payroll
+Description: The Workday Payroll Web Service contains operations that expose Workday Payroll data for integration with third parties (such as time and attendance).
+Operations:
+  - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+================================================================================

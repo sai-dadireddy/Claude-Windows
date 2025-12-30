@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: PRO-2-0270
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create an Invoice from the Workbench
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create an invoice from the workbench in order to create it directly from receipts (3 way matching) or POs (2 way matching).
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+
+ELECTRON STEPS:
+1. enter search box as "Supplier Invoice Workbench > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click "search." Check the lines of the records that you want to add > Click "Complete Supplier Invoice""
+2. wait for search results
+3. click search result containing "Supplier Invoice Workbench > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click "search." Check the lines of the records that you want to add > Click "Complete Supplier Invoice""
+4. wait for page to load
+5. screenshot as "PRO-2-0270_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Supplier Invoice Workbench > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click "search." Check the lines of the records that you want to add > Click "Complete Supplier Invoice"
+
+### 1. User Guide Suppliers (score: 25)
+Source: User-Guide-Suppliers.pdf
+```
+Suppli...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

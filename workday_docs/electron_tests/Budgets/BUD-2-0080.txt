@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: BUD-2-0080
+FUNCTIONAL AREA: Budgets
+TEST NAME: View Plan
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 10.0)
+================================================================================
+
+DESCRIPTION:
+Verify that the Budget Amounts loaded above show up
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Verify that the Budget Amounts loaded above show up
+
+ELECTRON STEPS:
+1. # View Plan
+2. screenshot as "BUD-2-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Enter Plan Structure and Company Loaded in previous step
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-2-0080
+FUNCTIONAL AREA: HCM
+TEST NAME: Auto Generated IDs
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Take note of previously created positions and completed hires. Verify that auto generated IDs (Worker ID, Position ID, Job Requisition ID, etc.) increment correctly according to desired sequence formats.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View ID Definition/Sequence Generator"
+2. wait for search results
+3. click search result containing "View ID Definition/Sequence Generator"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View ID Definition/Sequence Generator
+
+### 1. Admin Guide  Financial Management (score: 3)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components...................................
+================================================================================

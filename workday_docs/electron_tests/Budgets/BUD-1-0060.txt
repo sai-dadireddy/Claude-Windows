@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: BUD-1-0060
+FUNCTIONAL AREA: Budgets
+TEST NAME: Worktag Usages
+WORKDAY ROLE: Common Finance Configurator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 10.0)
+================================================================================
+
+DESCRIPTION:
+Verify all required Worktag Usages have been configured for: Budgets
+
+PREREQUISITES:
+- User logged in with Common Finance Configurator permissions
+- Required context: Verify all required Worktag Usages have been configured for: Budgets
+
+ELECTRON STEPS:
+1. # Maintain Worktag Usages
+2. screenshot as "BUD-1-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Resource_Management
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Resource_Management
+
+================================================================================

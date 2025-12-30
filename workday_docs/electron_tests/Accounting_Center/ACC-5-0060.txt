@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: ACC-5-0060
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Accounting Center Process Configuration
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 26.0)
+================================================================================
+
+DESCRIPTION:
+Review accounting center process configuration to ensure stage processing is set as needed
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Review accounting center process configuration to ensure stage processing is set as needed
+
+ELECTRON STEPS:
+1. # 1. View Accounting Source
+2. # 2. Select View Accounting Center Process Configuration from related action Accounting Source menu off the Accounting Source (magnifying glass icon)
+3. # 3. Review process for each stage to ensure proper processing
+4. screenshot as "ACC-5-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

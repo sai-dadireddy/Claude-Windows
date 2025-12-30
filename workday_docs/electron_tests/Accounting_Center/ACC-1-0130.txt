@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: ACC-1-0130
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review AC Custom Validations
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 11.0)
+================================================================================
+
+DESCRIPTION:
+Verify that custom validations have been configured for Accounting Center
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Verify that custom validations have been configured for Accounting Center
+
+ELECTRON STEPS:
+1. # Maintain Custom Validations
+2. screenshot as "ACC-1-0130_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Accounting Center Detailed Journals
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Resource_Management
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Resource_Management
+
+================================================================================

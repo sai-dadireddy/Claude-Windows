@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: PRO-2-0200
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create a Receipt
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a receipt for goods or services that have been received. Note: You can only do this once PO is issued.
+
+WORKDAY ROLE: Buyer / Employee As Self / Business Asset Tracking Specialist
+
+ELECTRON STEPS:
+1. enter search box as "Create Receipt or Related Action from the Purchase Order > Receipt > Create"
+2. wait for search results
+3. click search result containing "Create Receipt or Related Action from the Purchase Order > Receipt > Create"
+4. wait for page to load
+5. screenshot as "PRO-2-0200_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Receipt or Related Action from the Purchase Order > Receipt > Create
+
+### 1. Kb Procurement Purchase Order (score: 10)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+===============================================================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

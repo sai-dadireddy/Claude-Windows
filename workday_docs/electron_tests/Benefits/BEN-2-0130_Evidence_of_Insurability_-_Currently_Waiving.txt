@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: BEN-2-0130
+FUNCTIONAL AREA: Benefits
+TEST NAME: Evidence of Insurability - Currently Waiving
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Change Benefits; Manage Evidence of Insurability Status
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Change Benefits; Manage Evidence of Insurability Status
+
+### 1. Kb Benefits Enrollment (score: 6)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL An
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Change Benefits; Manage Evidence of Insurability Status"
+2. wait for search results
+3. click search result containing "Change Benefits; Manage Evidence of Insurability Status"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-2-0130_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

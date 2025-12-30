@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-1-0250
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Worker Data Conversion (Compensation Detail)
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the expected compensation plan assignments have been made and spot check for accuracy. If historical terminated workers were converted, include review of terminated workers.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract Employee Core Compensation Details"
+2. wait for search results
+3. click search result containing "Extract Employee Core Compensation Details"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0250_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Employee Core Compensation Details
+
+### 1. Workday Feature Descriptions Ditamap (score: 5)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning..........................
+================================================================================

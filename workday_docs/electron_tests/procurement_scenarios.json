@@ -1,0 +1,3026 @@
+[
+  {
+    "scenario_id": "PRO-1-0010",
+    "scenario_name": "Suppliers",
+    "description": "Review supplier data for completeness and data quality.",
+    "task_step": "Find Suppliers or Extract Suppliers",
+    "expected_result": NaN,
+    "workday_role": "Supplier Administrator",
+    "effort_mins": 120
+  },
+  {
+    "scenario_id": "PRO-1-0020",
+    "scenario_name": "Edit Company Accounting Options related to Procurement",
+    "description": "Ensure company accounting options related to procurement are configured correctly:  Procurement Tax Options:  Calculate Tax Due to Supplier Enter Tax Due to Supplier or Calculate Self Assessed Taxes",
+    "task_step": "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0030",
+    "scenario_name": "Edit Company Procurement Options",
+    "description": "Ensure company procurement options are configured correctly. Take special note of the following:  \n1) Will customer be implementing Sales Tax on Requisitions? (Enable/Disable Transaction Tax on Requisition Flag) \n2) Does customer wish to hide Service lines on Requisitions? (Enable/Disable Disable Service Lines on Requisitions Flag)  \n3) Does customer wish to hide Project lines on Requisitions? (Enable/Disable Disable Project-Based Service Lines on Requisitions Flag)",
+    "task_step": "Related Action From Company > Edit Company Procurement Options",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0040",
+    "scenario_name": "Verify Units of Measure",
+    "description": "Review all units of measure and identify any that need to be added. Be sure to consider punchout suppliers UOM if punchout is in scope.",
+    "task_step": "Maintain Units of Measure",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-1-0050",
+    "scenario_name": "Workcart Link Overrides",
+    "description": "Cart link overrides allow you to hide requisition selections that do not apply to your organization's deployment of Workday Procurement and/or add instructional text to help guide your end users. Make sure text displayed will help users who will be creating requisitions.",
+    "task_step": "Create Requisition or View Cart (Options listed are the Cart Links)",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0060",
+    "scenario_name": "Spend Transaction Instructions for Requisitions",
+    "description": "Add any instructions or links to policies for the requisition process.",
+    "task_step": "View Spend Transaction Instruction>Requisition",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0070",
+    "scenario_name": "Supplier Contract Types",
+    "description": "Review the contract types and feature configurations and identify any adjustments needed.",
+    "task_step": "View Supplier Contract Types",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0080",
+    "scenario_name": "Purchase Order Print Layouts",
+    "description": "Review the delivered layout and ensure the layout is configured for each company. If custom layout is in scope, review this custom layout once it is built by integrations team. \"View Purchase Order Print Layout\" will show you the functional configuration, but it is easier to view the actual result by creating a PDF and issuing it to Print and then viewing the PDF created.",
+    "task_step": "View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0090",
+    "scenario_name": "Return Reasons",
+    "description": "Review return reasons and identify which ones should auto-generate the invoice adjustment process.",
+    "task_step": "Maintain Return Reasons",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0100",
+    "scenario_name": "Requisition Types",
+    "description": "Review the requisition types. Requisition types are used for sourcing rules or as a dimension in BP logic.",
+    "task_step": "Maintain Requisition Types",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0110",
+    "scenario_name": "Supplier Links/Punchout",
+    "description": "If punchout is in scope, review the punchout links once they are configured. Ensure that only the allowed users can see the link when entering a requisition.",
+    "task_step": "Maintain Supplier Links",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0120",
+    "scenario_name": "Match Rules",
+    "description": "Review the match rule set and each of the condition rules in the rule set. Ensure that there are no gaps in the rules that would enable an invoice to get through without a second set of eyes reviewing the differences between the invoice and its associated PO.",
+    "task_step": "View Supplier Accounts Match Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 30
+  },
+  {
+    "scenario_id": "PRO-1-0130",
+    "scenario_name": "Confirm Procurement Posting Rules",
+    "description": "Verify the following rules have the correct ledger account: Spend, Credit Card Payable, Receipt Accrual",
+    "task_step": "View Account Posting Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Common Finance Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0140",
+    "scenario_name": "Confirm Procurement Custom Validations",
+    "description": "Verify all required Custom Validations have been configured for (depending on scope): Catalog Load, Change Order, Procurement Card Transaction Verification, Purchase Order Acknowledgement, Request for Quote, Request for Quote Award, Request for Quote Response, Requisition, Return to Supplier, Supplier, Supplier Change, Supplier Contract, Supplier Contract Amendment",
+    "task_step": "Maintain Custom Validations",
+    "expected_result": NaN,
+    "workday_role": "Common Finance Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-1-0150",
+    "scenario_name": "Confirm Role Based Procurement Assignments",
+    "description": "Confirm that these Role Based Security Roles for Procurement have been properly assigned or are defaulting to each Company (depending on scope): Buyer, Supplier Contract Specialist, Procurement Data Entry Specialist",
+    "task_step": "Roles for Organization and Subordinates",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0160",
+    "scenario_name": "Confirm User Based Procurement Assignments",
+    "description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Procurement have been properly assigned: Procurement Configurator, Accounts Payable Configurator, Credit Card Transaction Administrator",
+    "task_step": "User-Based Security Group Assignments",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0170",
+    "scenario_name": "Maintain Worktag Usages",
+    "description": "Verify all required Worktag Usages have been configured for: Procurement Card Transaction Verification, Purchase Order, Request for Quote, Requisition",
+    "task_step": "Accounts Payable Configurator",
+    "expected_result": NaN,
+    "workday_role": "Common Finance Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-1-0180",
+    "scenario_name": "Confirm Related Worktag Usage",
+    "description": "Review the Maintain Related Worktag usage for: Purchase Item, Spend Category",
+    "task_step": "Accounts Payable Configurator",
+    "expected_result": NaN,
+    "workday_role": "Common Finance Configurator",
+    "effort_mins": 25
+  },
+  {
+    "scenario_id": "PRO-2-0010",
+    "scenario_name": "Create a Requisition",
+    "description": "Create a requisition and submit for approval. Verify that approval routing works as expected.",
+    "task_step": "Create Requisition",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0020",
+    "scenario_name": "Approve Requisition",
+    "description": "Approve Requisition. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "Approve Requisition",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0030",
+    "scenario_name": "View Business Process for Requisition Event",
+    "description": "Review default Business Process for Requisitions. Ensure any discussed modifications are included.",
+    "task_step": "bp: Requisition Event",
+    "expected_result": NaN,
+    "workday_role": "Business Process Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0040",
+    "scenario_name": "Create a Requisition for Goods from a Web Item (PunchOut)",
+    "description": "Create a requisition for goods from a web item (PunchOut).",
+    "task_step": "Create Requisition. Click on \"Connect to Supplier Website\"",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0050",
+    "scenario_name": "Create a Requisition for a Deliverable Service",
+    "description": "Create a requisition for a deliverable service.",
+    "task_step": "Create Requisition. Click on \"Request Project-Based Services\"",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0060",
+    "scenario_name": "Create a Requisition with Line Splits by Quantity",
+    "description": "Create a requisition with line splits by quantity.",
+    "task_step": "Create Requisition",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0070",
+    "scenario_name": "Create a Requisition with Line Splits by Amount",
+    "description": "Create a requisition with line splits by amount.",
+    "task_step": "Create Requisition",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0080",
+    "scenario_name": "Create a Requisition as an Ad Hoc Request",
+    "description": "Create a requisition as an ad hoc request.",
+    "task_step": "Create Requisition. Click on \"Request Noncatalog Items\"",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0090",
+    "scenario_name": "Create a Purchase Order",
+    "description": "Create a non-requisition PO and submit for approval. Verify that approval routing works as expected.",
+    "task_step": "Create Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-2-0100",
+    "scenario_name": "Approve Purchase Order",
+    "description": "Approve Purchase Order. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "Approve Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0110",
+    "scenario_name": "View Business Process for Purchase Order Event",
+    "description": "Review default Business Process for Purchase Orders. Ensure any discussed modifications are included.",
+    "task_step": "bp: Purchase Order Event",
+    "expected_result": NaN,
+    "workday_role": "Business Process Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0120",
+    "scenario_name": "Create a Purchase Order with Lines Splits by Quantity",
+    "description": "Create a purchase order with lines splits by quantity.",
+    "task_step": "Create Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-2-0130",
+    "scenario_name": "Create a Purchase Order with Line Splits by Amount",
+    "description": "Create a purchase order with line splits by amount.",
+    "task_step": "Create Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-2-0140",
+    "scenario_name": "Issue a Purchase Order and Print",
+    "description": "Issue a purchase order and print.",
+    "task_step": "Issue Purchase Order or Related Action from the Purchase Order > Issue",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0150",
+    "scenario_name": "Issue a Purchase Order and Email",
+    "description": "Issue a purchase order and email.",
+    "task_step": "Issue Purchase Order or Related Action from the Purchase Order > Issue",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0160",
+    "scenario_name": "Create a Change Order",
+    "description": "Create a change order and submit for approval. Verify that approval routing works as expected.",
+    "task_step": "Create Change Order or Related Action from the Purchase Order > Create Change Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0170",
+    "scenario_name": "Approve Change Order",
+    "description": "Approve Change Order. Test Business Process routing based on the configured conditions for each Business Process step.  Verify only Change Order approval steps are approved",
+    "task_step": "Approve Change Order",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0180",
+    "scenario_name": "View Business Process for Change Order Event",
+    "description": "Review default Business Process for Change Orders. Ensure discussed modifications are included",
+    "task_step": "bp: Change Order Event",
+    "expected_result": NaN,
+    "workday_role": "Business Process Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0190",
+    "scenario_name": "Issue Change Order",
+    "description": "Issue purchase orders.",
+    "task_step": "Issue Purchase Order or Related Action from the Purchase Order > Issue",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0200",
+    "scenario_name": "Create a Receipt",
+    "description": "Create a receipt for goods or services that have been received. Note: You can only do this once PO is issued.",
+    "task_step": "Create Receipt or Related Action from the Purchase Order > Receipt > Create",
+    "expected_result": NaN,
+    "workday_role": "Buyer / Employee As Self / Business Asset Tracking Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0210",
+    "scenario_name": "Create a Receipt with Line Splits by Quantity",
+    "description": "Create a receipt with line splits by quantity. Note: You can only do this once PO is issued.  Note that this assumes Assets is being implemented along with Procurement.   Further note that unless asset shares is enabled, the Asset will be Expensed. If assets shares is enabled, Accounting Treatment will be derived by Asset Book Rules.",
+    "task_step": "Create Receipt or Related Action from the Purchase Order > Receipt > Create",
+    "expected_result": NaN,
+    "workday_role": "Buyer / Employee As Self / Business Asset Tracking Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0220",
+    "scenario_name": "Create a Receipt with Line Splits by Amount",
+    "description": "Create a receipt with line splits by amount. Note: You can only do this once PO is issued.  Note that this assumes Assets is being implemented along with Procurement.  Further note that unless asset shares is enabled, the Asset will be Expensed. If assets shares is enabled, Accounting Treatment will be derived by Asset Book Rules.",
+    "task_step": "Create Receipt or Related Action from the Purchase Order > Receipt > Create",
+    "expected_result": NaN,
+    "workday_role": "Buyer / Employee As Self / Business Asset Tracking Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0230",
+    "scenario_name": "Create a Partial Receipt",
+    "description": "Create a partial receipt. Note: You can only do this once PO is issued.",
+    "task_step": "Create Receipt or Related Action from the Purchase Order > Receipt > Create",
+    "expected_result": NaN,
+    "workday_role": "Buyer / Employee As Self / Business Asset Tracking Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0240",
+    "scenario_name": "Create an Over-Receipt",
+    "description": "Create an over-receipt. Note: You can only do this once PO is issued.  Note that this can ONLY be done once per Accounting period",
+    "task_step": "Create Receipt or Related Action from the Purchase Order > Receipt > Create",
+    "expected_result": NaN,
+    "workday_role": "Buyer / Employee As Self / Business Asset Tracking Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0250",
+    "scenario_name": "Create a Return",
+    "description": "Create a return for items that are damaged or if too many were sent by the supplier. Note: You can only do this once PO is issued.",
+    "task_step": "Create Return or Related Action from Purchase Order > Return > Create",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist / Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0260",
+    "scenario_name": "Create an Invoice Adjustment for a Return",
+    "description": "Create an invoice adjustment to increase or decrease liability.",
+    "task_step": "Create Invoice Adjustment or if your return reasons have the \"invoice adjustment\" checkbox checked, then the return will automatically kick of the invoice adjustment creation process",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0270",
+    "scenario_name": "Create an Invoice from the Workbench",
+    "description": "Create an invoice from the workbench in order to create it directly from receipts (3 way matching) or POs (2 way matching).",
+    "task_step": "Supplier Invoice Workbench > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click \"search.\" Check the lines of the records that you want to add > Click \"Complete Supplier Invoice\"",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-2-0280",
+    "scenario_name": "Create a Return to Supplier",
+    "description": "Create a return for items that are damaged or if too many were sent by the supplier. Note: You can only do this once PO is issued.",
+    "task_step": "Create Return or Related Action from Purchase Order > Return > Create",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist / Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0290",
+    "scenario_name": "Create a Partial Return",
+    "description": "Create a partial return. Note: You can only do this once a receipt was created.",
+    "task_step": "Create Return or Related Action from Purchase Order > Return > Create",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist / Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0300",
+    "scenario_name": "Create a Supplier Invoice Adjustment from a Return",
+    "description": "Create a supplier invoice adjustment from a return - using a return reason that is set up to create an invoice adjustment.",
+    "task_step": "Create Invoice Adjustment or if your return reasons have the \"invoice adjustment\" checkbox checked, then the return will automatically kick of the invoice adjustment creation process",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-2-0310",
+    "scenario_name": "Create Receipt Accrual",
+    "description": "Create a receipt accrual at month end to accrue for the liability of items received but not yet paid for via supplier invoice.",
+    "task_step": "Create Receipt Accrual",
+    "expected_result": NaN,
+    "workday_role": "Accounting Operations Lead or Procurement Operations Lead",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0320",
+    "scenario_name": "Create a Supplier Contact",
+    "description": "Create a supplier contact for a supplier",
+    "task_step": "Add contact on the contact tab of the supplier record Or use an EIB",
+    "expected_result": NaN,
+    "workday_role": "Supplier Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0330",
+    "scenario_name": "View Business Process for Supplier Contract Event",
+    "description": "Review default Business Process for Supplier Contracts. Ensure discussed modifications are included.",
+    "task_step": "bp: Supplier Contract Event",
+    "expected_result": NaN,
+    "workday_role": "Business Process Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0340",
+    "scenario_name": "Create Supplier Contract Amendment",
+    "description": "Amend supplier contract and route for approval",
+    "task_step": "Related Action from the Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0350",
+    "scenario_name": "View Business Process for Supplier Contract Amendment Event",
+    "description": "Review Business Process for Supplier Contract Amendments.",
+    "task_step": "bp: Supplier Contract Amendment Event",
+    "expected_result": NaN,
+    "workday_role": "Business Process Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0360",
+    "scenario_name": "Create a Partial Return",
+    "description": "Create a partial return. Note: You can only do this once a receipt was created.",
+    "task_step": "Create Return or Related Action from Purchase Order > Return > Create",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist / Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-2-0370",
+    "scenario_name": "Requesting Entities for Requisitions",
+    "description": "Create requesting entities for requisitions based on company, deliver-to location, ship-to location, and worktags. Automatically populate requesting entity information, instead of worker information, on requisitions.",
+    "task_step": "Create Requesting Entity",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0380",
+    "scenario_name": "Change Purchase Orders without Creating Change Orders",
+    "description": "Ability to make minor changes on purchase orders without creating change orders",
+    "task_step": "Find Purchase Order -> Edit Without Change Order\nFind Purchase Order -> View Purchase Order Changes",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0390",
+    "scenario_name": "Maintain Item Pricing for Multiple Suppliers",
+    "description": "When Default Ordering Price field on the Edit Purchase Item task is updated, Workday now automatically calculates the unit price for all the units of measure in the Units of Measure grid. When you click on Update Price on View Purchase Item, Supplier Item information can also be updated",
+    "task_step": "Edit Purchase Item\nView Purchase Item",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0400",
+    "scenario_name": "Mass Cancel Procurement Documents",
+    "description": "Mass cancel incomplete procurement documents, such as requisitions, purchase orders, and supplier contracts.",
+    "task_step": "Mass Cancel Procurement Documents -> Select Requisition or Purchase Order or Supplier contract\nReview Procurement Mass Close",
+    "expected_result": NaN,
+    "workday_role": "Buyer\nSupplier Contract Specialist\nAccountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0410",
+    "scenario_name": "Mass Close Procurement Documents",
+    "description": "Mass close procurement documents, such as requisitions, purchase orders, and supplier contracts.",
+    "task_step": "Mass Cancel Procurement Documents -> Select Requisition or Purchase Order or Supplier contract\nReview Procurement Mass Cancel",
+    "expected_result": NaN,
+    "workday_role": "Buyer\nSupplier Contract Specialist\nAccountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0420",
+    "scenario_name": "Mass Change Requisition Requesters",
+    "description": "Mass change the requisition requesters for draft and in-progress requisitions",
+    "task_step": "Mass Change Requisition Requester",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-2-0430",
+    "scenario_name": "Receipt Accrual by Company Hierarchy",
+    "description": "Run receipt accrual by company or company hierarchy on the Create Receipt Accrual and Schedule Receipt Accrual Creation Tasks",
+    "task_step": "1. Create Receipt Accrual or\n2. Schedule Receipt Accrual Creation",
+    "expected_result": NaN,
+    "workday_role": "Accountant\nBusiness Asset Accountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0010",
+    "scenario_name": "Suppliers",
+    "description": "Review supplier data for completeness and data quality.",
+    "task_step": "Find Suppliers or Extract Suppliers",
+    "expected_result": NaN,
+    "workday_role": "Supplier Administrator",
+    "effort_mins": 120
+  },
+  {
+    "scenario_id": "PRO-3-0020",
+    "scenario_name": "Edit Company Accounting Options related to Procurement",
+    "description": "Ensure company accounting options related to procurement are configured correctly:  Procurement Tax Options:  Calculate Tax Due to Supplier Enter Tax Due to Supplier or Calculate Self Assessed Taxes",
+    "task_step": "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0030",
+    "scenario_name": "Edit Company Procurement Options",
+    "description": "Ensure company procurement options are configured correctly. Take special note of the following:  1) Will customer be implementing Sales Tax on Requisitions? (Enable/Disable Transaction Tax on Requisition Flag)  2) Does customer wish to hide Service lines on Requisitions? (Enable/Disable Disable Service Lines on Requisitions Flag)  3) Does customer wish to hide Project lines on Requisitions? (Enable/Disable Disable Project-Based Service Lines on Requisitions Flag)",
+    "task_step": "Related Action From Company > Edit Company Procurement Options",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0040",
+    "scenario_name": "Verify Units of Measure",
+    "description": "Review all units of measure and identify any that need to be added. Be sure to consider punchout suppliers UOM if punchout is in scope.",
+    "task_step": "Units of Measure",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-3-0050",
+    "scenario_name": "Workcart Link Overrides",
+    "description": "Cart link overrides allow you to hide requisition selections that do not apply to your organization's deployment of Workday Procurement and/or add instructional text to help guide your end users. Make sure text displayed will help users who will be creating requisitions.",
+    "task_step": "Create Requisition or View Cart (Options listed are the Cart Links)",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0060",
+    "scenario_name": "Spend Transaction Instructions for Requisitions",
+    "description": "Add any instructions or links to policies for the requisition process.",
+    "task_step": "View Spend Transaction Instruction>Requisition",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0070",
+    "scenario_name": "Supplier Contract Types",
+    "description": "Review the contract types and feature configurations and identify any adjustments needed.",
+    "task_step": "View Supplier Contract Types",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0080",
+    "scenario_name": "Purchase Order Print Layouts",
+    "description": "Review the delivered layout and ensure the layout is configured for each company. If custom layout is in scope, review this custom layout once it is built by integrations team. \"View Purchase Order Print Layout\" will show you the functional configuration, but it is easier to view the actual result by creating a PDF and issuing it to Print and then viewing the PDF created.",
+    "task_step": "View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0090",
+    "scenario_name": "Return Reasons",
+    "description": "Review return reasons and identify which ones should auto-generate the invoice adjustment process.",
+    "task_step": "Maintain Return Reasons",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0100",
+    "scenario_name": "Requisition Types",
+    "description": "Review the requisition types. Requisition types are used for sourcing rules or as a dimension in BP logic.",
+    "task_step": "Maintain Requisition Types",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0110",
+    "scenario_name": "Supplier Links/Punchout",
+    "description": "If punchout is in scope, review the punchout links once they are configured. Ensure that only the allowed users can see the link when entering a requisition.",
+    "task_step": "Maintain Supplier Links",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0120",
+    "scenario_name": "Match Rules",
+    "description": "Review the match rule set and each of the condition rules in the rule set. Ensure that there are no gaps in the rules that would enable an invoice to get through without a second set of eyes reviewing the differences between the invoice and its associated PO.",
+    "task_step": "View Supplier Accounts Match Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 30
+  },
+  {
+    "scenario_id": "PRO-3-0130",
+    "scenario_name": "Confirm Procurement Posting Rules",
+    "description": "Verify the following rules have the correct ledger account: Spend, Credit Card Payable, Receipt Accrual",
+    "task_step": "View Account Posting Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0140",
+    "scenario_name": "Confirm Procurement Custom Validations",
+    "description": "Verify all required Custom Validations have been configured for (depending on scope): Catalog Load, Change Order, Procurement Card Transaction Verification, Purchase Order Acknowledgement, Request for Quote, Request for Quote Award, Request for Quote Response, Requisition, Return to Supplier, Supplier, Supplier Change, Supplier Contract, Supplier Contract Amendment",
+    "task_step": "Maintain Custom Validations",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0150",
+    "scenario_name": "Confirm Role Based Procurement Assignments",
+    "description": "Confirm that these Role Based Security Roles for Procurement have been properly assigned or are defaulting to each Company (depending on scope): Buyer, Supplier Contract Specialist, Procurement Data Entry Specialist",
+    "task_step": "Roles for Organization and Subordinates",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0160",
+    "scenario_name": "Confirm User Based Procurement Assignments",
+    "description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Procurement have been properly assigned: Procurement Configurator, Accounts Payable Configurator, Credit Card Transaction Administrator",
+    "task_step": "User-Based Security Group Assignments",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0170",
+    "scenario_name": "Worktag Usages",
+    "description": "Verify all required Worktag Usages have been configured for: Procurement Card Transaction Verification, Purchase Order, Request for Quote, Requisition",
+    "task_step": "Maintain Worktag Usages",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-3-0180",
+    "scenario_name": "Confirm Related Worktag Usage",
+    "description": "Review the Related Worktag usage for: Purchase Item, Spend Category",
+    "task_step": "Maintain Related Worktag Usage",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 25
+  },
+  {
+    "scenario_id": "PRO-3-0190",
+    "scenario_name": "Consignment Setup / Transaction Test",
+    "description": "Consignment Setup / Transaction Test",
+    "task_step": "Verify all Consignment Setup values and Test Consignment Transactions",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0200",
+    "scenario_name": "Inventory Site Configuration",
+    "description": "Verify Inventory Site Configuration",
+    "task_step": "Verify Inventory Site Configuration",
+    "expected_result": "Inventory Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0210",
+    "scenario_name": "Stocking Locations",
+    "description": "Verify Stocking Locations",
+    "task_step": "Verify Stocking Locations",
+    "expected_result": "Inventory Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0220",
+    "scenario_name": "Item Definition",
+    "description": "Verify Item Definition",
+    "task_step": "Verify Item Definition",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0230",
+    "scenario_name": "Putaway Rules",
+    "description": "Verify Putaway Rules",
+    "task_step": "Verify Putaway Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0240",
+    "scenario_name": "Requisition Sourcing Rules",
+    "description": "Verify Requisition Sourcing Rules",
+    "task_step": "Verify Requisition Sourcing Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0250",
+    "scenario_name": "Purchase Order Types",
+    "description": "Verify Purchase Order Types",
+    "task_step": "Verify Purchase Order Types",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0260",
+    "scenario_name": "Requisition Types",
+    "description": "Verify Requisition Types",
+    "task_step": "Verify Requisition Types",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0270",
+    "scenario_name": "Supplier Contract Types (Optional)",
+    "description": "Verify Supplier Contract Types (Optional)",
+    "task_step": "Verify Supplier Contract Types (Optional)",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0280",
+    "scenario_name": "Supplier Contract Types (Optional)",
+    "description": "Verify Supplier Contract Types (Optional)",
+    "task_step": "Verify Supplier Contract Types (Optional)",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-0290",
+    "scenario_name": "Establish On Hand",
+    "description": "Establish On Hand \nThis can occur via and Ad Hoc Putaway at Go Live or Create Requisition or Create Purchase Order. Ad Hoc Putaway will be used to convert in balances for Go-Live -  customer to determine if the starting point will be a Requisition or Purchase Order.\nPurchase Order will be the starting point for this test.",
+    "task_step": "Create Purchase Order:\nPurchase Order Type = Consignment (No charge)\nAdd Consigned Items \nSave Purchase Order - Note PO ID",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0300",
+    "scenario_name": "Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Consignment (No Charge PO)",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0310",
+    "scenario_name": "Receipt",
+    "description": "Create Receipt",
+    "task_step": "Create Receipt - Receive Consignment (No Charge) PO",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0320",
+    "scenario_name": "Inventory Balance",
+    "description": "Verify Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nVerify balances are in the proper consigned Stocking Locations",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0330",
+    "scenario_name": "Consigned Transaction",
+    "description": "Verify Consigned Transaction",
+    "task_step": "Find Consigned Inventory Transactions\nVerify Putaway - No accounting created",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0340",
+    "scenario_name": "Inventory Depletion of Consigned Item",
+    "description": "Inventory Depletion of Consigned Item:\nCan be accomplished through an interface, creating a requisition to Stock Request. For this test, a Quick Issue will be used.",
+    "task_step": "Quick Issue\nAdd Consigned Items to Quick Issue\nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0350",
+    "scenario_name": "Inventory Balance",
+    "description": "Verify Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nVerify balances",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0360",
+    "scenario_name": "Consigned Transaction",
+    "description": "Verify Consigned Transaction",
+    "task_step": "Find Consigned Inventory Transactions\nVerify depletion - Accounting created",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0370",
+    "scenario_name": "Consigned Items",
+    "description": "Replenish Consigned Items",
+    "task_step": "Create Consignment Usage Requisitions\nRequisition Type = Consignment Bill and Replace",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0380",
+    "scenario_name": "Requisition",
+    "description": "Find Requisition",
+    "task_step": "Depending on Sourcing - requisition will be created / approved.\nRequisition Type = Consignment Bill and replace",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0390",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace\nSince this is a Usage Purchase Order - an Invoice will be created for this Purchase Order.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0400",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Consignment Bill and Replace Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0410",
+    "scenario_name": "Receive Purchase Order",
+    "description": "Receive Purchase Order",
+    "task_step": "Create Receipt - Receive Consignment Bill and Replace Purchase Order\nGenerally, Depending on customer setup - Auto Putaway should occur automatically.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0420",
+    "scenario_name": "Verify Inventory Balance",
+    "description": "Verify Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nVerify balances are in the proper consigned Stocking Locations",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0430",
+    "scenario_name": "Verify Consigned Transaction",
+    "description": "Verify Consigned Transaction",
+    "task_step": "Find Consigned Inventory Transactions\nVerify Putaway - No accounting created",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0440",
+    "scenario_name": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "description": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "task_step": "Create Supplier Invoice - Select Bill and Replace Purchase Order\nAccounting will be generated.",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0450",
+    "scenario_name": "Consignment Adjustment (Decrease)",
+    "description": "Consignment Adjustment (Decrease)\nExclude from Consigned Payment = N",
+    "task_step": "Decrease adjustment when the Adjustment reason is NOT Exclude from Consigned Payment",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0460",
+    "scenario_name": "Inventory Adjustment Reason",
+    "description": "Ensure Inventory Adjustment Reason = Decrease \nExclude From Consigned Payment = N",
+    "task_step": "View / Maintain Inventory Adjustment Reason",
+    "expected_result": "Inventory Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0470",
+    "scenario_name": "Verify starting balance of Consigned Item",
+    "description": "Verify starting balance of Consigned Item",
+    "task_step": "Find Consigned Goods On Hand\nEnter Company / Inventory Site and Item ID\nVerify item balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0480",
+    "scenario_name": "Adjust Inventory (Decrease)",
+    "description": "Adjust Inventory (Decrease)",
+    "task_step": "Adjust Inventory \nEnsure the Adjustment reason is Exclude from Consigned Payment = N\nEnter Quantity to Adjust\nSubmit",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0490",
+    "scenario_name": "Verify Accounting Transaction Created",
+    "description": "Verify Accounting Transaction Created",
+    "task_step": "Find Consigned Inventory Transaction\n\nSelect Company / Inventory Site and Item \nTransaction Type = Adjustment\n\nFrom the related Action off Consigned Inventory Transaction -> Accounting -> View Accounting\n\nVerify Journal Lines",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0500",
+    "scenario_name": "Verify New Inventory Balance",
+    "description": "Verify New Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nEnter Company / Inventory Site and Item ID\nVerify new item balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0510",
+    "scenario_name": "Replenish Consigned Items",
+    "description": "Replenish Consigned Items",
+    "task_step": "Create Consignment Usage Requisitions\nRequest Name - Enter Name\nInventory Site - Select Inventory Site that consumed consignment item\nRequisition Type = Consignment Bill and Replace\nInventory Item - Select Consigned Item that was consumed\nAuto Submit - Optional\nPreview = Y\nGrid will display the consumed consigned item",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0520",
+    "scenario_name": "Find Requisition",
+    "description": "Find Requisition",
+    "task_step": "Depending on Sourcing - requisition will be created / approved.\nRequisition Type = Consignment Bill and replace",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0530",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace\nSince this is a Usage Purchase Order - an Invoice will be created for this Purchase Order.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0540",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Consignment Bill and Replace Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0550",
+    "scenario_name": "Receive Purchase Order",
+    "description": "Receive Purchase Order",
+    "task_step": "Create Receipt - Receive Consignment Bill and Replace Purchase Order\nGenerally, Auto Putaway will occur.",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0560",
+    "scenario_name": "Verify Inventory Balance",
+    "description": "Verify Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nVerify balances are in the proper consigned Stocking Locations",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0570",
+    "scenario_name": "Verify Consigned Transaction",
+    "description": "Verify Consigned Transaction",
+    "task_step": "Find Consigned Inventory Transactions\nVerify Putaway - No accounting created",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0580",
+    "scenario_name": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "description": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "task_step": "Create Supplier Invoice - Select Bill and Replace Purchase Order\nAccounting will be generated.",
+    "expected_result": "Accounts Payable Data Entry Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0590",
+    "scenario_name": "Consigned Item",
+    "description": "Move Consigned Item\nWhen you move goods to this stocking location, payment is owed to the supplier",
+    "task_step": "Move consigned Goods from a Consigned Stocking Location to an Owned Location",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0600",
+    "scenario_name": "Verify starting balance of Consigned Item",
+    "description": "Verify starting balance of Consigned Item",
+    "task_step": "Find Consigned Goods On Hand\nEnter Company / Inventory Site and Item ID\nVerify item balance\n\nNote Stocking Location\nOnly move a partial balance - not entire balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0610",
+    "scenario_name": "Find an Owned Stocking Location to move the consigned item into",
+    "description": "Find an Owned Stocking Location to move the consigned item into",
+    "task_step": "Extract Stocking Locations",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0620",
+    "scenario_name": "Move Inventory",
+    "description": "Move Inventory",
+    "task_step": "Inventory Site - enter Inventory Site of the Consigned Item\nfrom Location - Consigned Stocking Location of the Consigned Item\nDefault to Location - Owned Stocking Location\n\nItem - Consigned Item\nQuantity - Quantity to Move\nSubmit",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0630",
+    "scenario_name": "Find Consigned Inventory Transactions",
+    "description": "Find Consigned Inventory Transactions",
+    "task_step": "Company\nInventory Site - Inventory Site of Consigned Item\nItem - Consigned Item\nTransaction Type - Move\n\nThere will be 2 rows displayed - the Consigned Location and the Owned Location\n\nThe Consigned Location will show the Accounting\nThe owned row ill not display any accounting",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0640",
+    "scenario_name": "Verify New Inventory Balance",
+    "description": "Verify New Inventory Balance",
+    "task_step": "Find Consigned Goods On Hand\nEnter Company / Inventory Site and Item ID\nVerify new item balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0650",
+    "scenario_name": "Find Inventory Balance",
+    "description": "Find Inventory Balance",
+    "task_step": "Find Inventory Balance\nThere will be 2 rows displaying the consignment stocking location ad the Owned Location",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0660",
+    "scenario_name": "Replenish Consigned Items\nSince a Move was made from a Consigned Location to an Owned - this would be considered Usage.",
+    "description": "Replenish Consigned Items\nSince a Move was made from a Consigned Location to an Owned - this would be considered Usage.",
+    "task_step": "Create Consignment Usage Requisitions\nRequest Name - Enter Name\nInventory Site - Select Inventory Site that consumed consignment item\nRequisition Type = Consignment Bill and Replace\nInventory Item - Select Consigned Item that was consumed\nAuto Submit - Optional\nPreview = Y\nGrid will display the consumed consigned item",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0670",
+    "scenario_name": "Find Requisition",
+    "description": "Find Requisition",
+    "task_step": "Depending on Sourcing - requisition will be created / approved.\nRequisition Type = Consignment Bill and replace",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0680",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Purchase Order will need to be Approved - Purchase Order Type = Consignment Bill and Replace\nSince this is a Usage Purchase Order - an Invoice will be created for this Purchase Order.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0690",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Consignment Bill and Replace Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0700",
+    "scenario_name": "Receive Purchase Order",
+    "description": "Receive Purchase Order",
+    "task_step": "Create Receipt - Receive Consignment Bill and Replace Purchase Order\nGenerally, Auto Putaway will occur.",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0710",
+    "scenario_name": "Inventory Balance",
+    "description": "Verify Inventory Balance",
+    "task_step": "Verify Inventory Balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0720",
+    "scenario_name": "Consigned Transaction",
+    "description": "Verify Consigned Transaction",
+    "task_step": "Verify Consigned Transaction",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0730",
+    "scenario_name": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "description": "Create Invoice for Consignment Bill and Replace Purchase Order",
+    "task_step": "Create Supplier Invoice - Select Bill and Replace Purchase Order\nAccounting will be generated.",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0740",
+    "scenario_name": "Bill Only Setup and Requisition with Procedure Information",
+    "description": "Bill Only Setup and Requisition with Procedure Information",
+    "task_step": "Verify Bill Only Setup values and Test Bill Only Requisition with Procedure Information",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0750",
+    "scenario_name": "Purchase Order Types",
+    "description": "Verify Purchase Order Types",
+    "task_step": "Verify Purchase Order Types",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0760",
+    "scenario_name": "Requisition Types",
+    "description": "Verify Requisition Types",
+    "task_step": "Verify Requisition Types",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0770",
+    "scenario_name": "Requisition Sourcing Rules",
+    "description": "Verify Requisition Sourcing Rules",
+    "task_step": "Verify Requisition Sourcing Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0780",
+    "scenario_name": "Create Bill Only Requisition with Procedure Information",
+    "description": "Create Bill Only Requisition with Procedure Information",
+    "task_step": "Create Requisition\n\nRequester - User Creating Requisition\nCompany - Company for Requisition\nCurrency - USD \n\nRequisition Type = Bill Only\n\nDeliver To / Ship to / Cost Center - based off users workspace and Deliver to / Ship to Setup\n\nOK\n\nSearch Catalog\n\nInput ID for Bill Only Requisition -> Search\nCheck the Checkbox next to the item and Add to Cart\n\nClick on View Cart\nCheckout",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0790",
+    "scenario_name": "Enter Procedure Information",
+    "description": "Enter Procedure Information",
+    "task_step": "Custom Validations can be added to the Requisition to make these fields Required.\n\nEnter Procedure Information",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0800",
+    "scenario_name": "Submit Requisition",
+    "description": "Submit Requisition",
+    "task_step": "Verify Item Details and Submit\n\nDepending on your Requisition BP - Approvals may have to occur.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0810",
+    "scenario_name": "Find Bill Only  Purchase Order with Procedure Information",
+    "description": "Find Bill Only  Purchase Order with Procedure Information",
+    "task_step": "Find Bill Only  Purchase Order with Procedure Information",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0820",
+    "scenario_name": "Verify Procedure Information",
+    "description": "Verify Procedure Information",
+    "task_step": "Verify Procedure Information",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0830",
+    "scenario_name": "Issue Purchase Order to Supplier",
+    "description": "Issue Purchase Order to Supplier",
+    "task_step": "Issue Purchase Order to Supplier",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0840",
+    "scenario_name": "Find Bill Only  Purchase Order with Procedure Information",
+    "description": "Find Bill Only  Purchase Order with Procedure Information",
+    "task_step": "Find Bill Only  Purchase Order with Procedure Information",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0850",
+    "scenario_name": "Verify Receipt Status",
+    "description": "Verify Receipt Status",
+    "task_step": "Verify Receipt Status",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0860",
+    "scenario_name": "Create Supplier Invoice",
+    "description": "Create Supplier Invoice",
+    "task_step": "Create Supplier Invoice for Bill Only Purchase Order",
+    "expected_result": "Accounts Payable Data Entry Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0870",
+    "scenario_name": "Automate Changes from Purchase Order Acknowledgement\nPurchase Order Quantity Change",
+    "description": "Automate Changes from Purchase Order Acknowledgement\nPurchase Order Quantity Change",
+    "task_step": "Verify Purchase Order Acknowledgement setup - Create and Issue Purchase Order - Acknowledge quantity change to produce Auto Generated Change Order",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0880",
+    "scenario_name": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "description": "Verify Purchase Order Acknowledgement BP has the new service step",
+    "task_step": "Verify Purchase Order Acknowledgement BP has the new service step",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0890",
+    "scenario_name": "Purchase Order",
+    "description": "Create Purchase Order",
+    "task_step": "Create Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0900",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0910",
+    "scenario_name": "Create Purchase Order Acknowledgement",
+    "description": "Create Purchase Order Acknowledgement",
+    "task_step": "Create Purchase Order Acknowledgement",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0920",
+    "scenario_name": "Verify Changes from POA",
+    "description": "Verify Changes from POA",
+    "task_step": "Verify Changes from POA",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0930",
+    "scenario_name": "Update Purchase Order and Create Change Order",
+    "description": "Update Purchase Order and Create Change Order",
+    "task_step": "Update Purchase Order and Create Change Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0940",
+    "scenario_name": "Verify PO Changes",
+    "description": "Verify PO Changes",
+    "task_step": "Verify PO Changes",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0950",
+    "scenario_name": "Automate Changes from Purchase Order Acknowledgement",
+    "description": "Automate Changes from Purchase Order Acknowledgement\nPurchase Order Amount",
+    "task_step": "Verify Purchase Order Acknowledgement setup - Create and Issue Purchase Order - Acknowledge Amount change to produce Auto Generated Change Order",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0960",
+    "scenario_name": "Purchase Order Acknowledgement BP",
+    "description": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "task_step": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0970",
+    "scenario_name": "Create Purchase Order",
+    "description": "Create Purchase Order",
+    "task_step": "Create Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0980",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-0990",
+    "scenario_name": "Create Purchase Order Acknowledgement",
+    "description": "Create Purchase Order Acknowledgement",
+    "task_step": "Create Purchase Order Acknowledgement",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1000",
+    "scenario_name": "Verify Changes from POA",
+    "description": "Verify Changes from POA",
+    "task_step": "Verify Changes from POA",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1010",
+    "scenario_name": "Update Purchase Order and Create Change Order",
+    "description": "Update Purchase Order and Create Change Order",
+    "task_step": "Update Purchase Order and Create Change Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1020",
+    "scenario_name": "Verify PO Changes",
+    "description": "Verify PO Changes",
+    "task_step": "Verify PO Changes",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1030",
+    "scenario_name": "Automate Changes",
+    "description": "Automate Changes from Purchase Order Acknowledgement\nPurchase Order Line Unit of Measure and Cost change",
+    "task_step": "Verify Purchase Order Acknowledgement setup - Create and Issue Purchase Order - Acknowledge UOM and Cost Change to produce Auto Generated Change Order",
+    "expected_result": "Note - There needs to be a quantity change, unit cost or a UOM change in order for these Purchase Orders to be eligible to create the change order.",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1040",
+    "scenario_name": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "description": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "task_step": "Verity Purchase Order Acknowledgement BP has the new service step",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1050",
+    "scenario_name": "Create Purchase Order",
+    "description": "Create Purchase Order",
+    "task_step": "Create Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1060",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue purchase order to supplier",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1070",
+    "scenario_name": "Purchase Order Acknowledgement",
+    "description": "Purchase Order Acknowledgement",
+    "task_step": "Create Purchase Order Acknowledgement",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1080",
+    "scenario_name": "Changes from POA",
+    "description": "Changes from POA",
+    "task_step": "Verify Changes from POA",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1090",
+    "scenario_name": "Purchase Order and Create Change Order",
+    "description": "Purchase Order and Create Change Order",
+    "task_step": "Update Purchase Order and Create Chae Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1100",
+    "scenario_name": "PO Changes",
+    "description": "PO Changes",
+    "task_step": "Verify PO Changes",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1110",
+    "scenario_name": "Automatically Close Partially Received Lines",
+    "description": "Automatically Close Partially Received Lines",
+    "task_step": "Create a Requisition -> Purchase Order -> Partially Receive.\nRun: Automatically Close Partially Received Lines with\n\"Restrict to PO lines with Partially Received Quantities\"",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1120",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Create Requisition",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1130",
+    "scenario_name": "Add Item",
+    "description": "Add Item",
+    "task_step": "Add Item",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1140",
+    "scenario_name": "Submit",
+    "description": "Submit",
+    "task_step": "Submit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1150",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Find Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1160",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1170",
+    "scenario_name": "Create Receipt",
+    "description": "Create Receipt",
+    "task_step": "Create Receipt",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1180",
+    "scenario_name": "Find Inventory Balance",
+    "description": "Find Inventory Balance",
+    "task_step": "Find Inventory Balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1190",
+    "scenario_name": "Find Inventory Transaction",
+    "description": "Find Inventory Transaction",
+    "task_step": "Find Inventory Transaction",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1200",
+    "scenario_name": "Schedule Purchase Order Close Lines for Receiving",
+    "description": "Schedule Purchase Order Close Lines for Receiving",
+    "task_step": "Schedule Purchase Order Close Lines for Receiving",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1210",
+    "scenario_name": "Find Purchase Order - Verify Line Is Closed",
+    "description": "Find Purchase Order - Verify Line Is Closed",
+    "task_step": "Find Purchase Order - Verify Line Is Closed",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1220",
+    "scenario_name": "Automatically Close Partially Received Lines",
+    "description": "Create a Requisition -> Purchase Order -> ASN with 0 Shipped\nRun: Automatically Close Partially Received Lines with\n\"Restrict to PO lines with Zero Shipped Quantities\"",
+    "task_step": "Create a Requisition -> Purchase Order -> ASN with 0 Shipped\nRun: Automatically Close Partially Received Lines with\n\"Restrict to PO lines with Zero Shipped Quantities\"",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1230",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Create Requisition",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1240",
+    "scenario_name": "Add Item",
+    "description": "Add Item",
+    "task_step": "Add Item",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1250",
+    "scenario_name": "Submit",
+    "description": "Submit",
+    "task_step": "Process requisition through Approvals to Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1260",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Find Purchase Order that was created",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1270",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue purchase order to Supplier",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1280",
+    "scenario_name": "Create ASN\n(This can also be tested via EDI 856)",
+    "description": "Create ASN\n(This can also be tested via EDI 856)",
+    "task_step": "From the related action off the Purchase Order -> Advanced Ship Notice -> Create\nQuantity Shipped = 0\nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1290",
+    "scenario_name": "Schedule Purchase Order Close Lines for Receiving",
+    "description": "Schedule Purchase Order Close Lines for Receiving",
+    "task_step": "This task can be scheduled or run Ad Hoc\nRun Now\nRequest Name - Enter name\nCompany - Enter Company from Purchase Order\nSupplier - Enter Supplier from Purchase Order\nMinimum Purchase Order Age in Days = 0\nRequisition Type = Inventory Replenishment\n\nRestrict to PO lines with Zero Shipped Quantities = Y\nRestrict to PO lines with Partially Received Quantities = N\n\nWe only want to process purchase orders that has an associated ASN with a Quantity Shipped = 0 . Partially received purchase will not be processed.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1300",
+    "scenario_name": "Find Purchase Order - Verify Line Is Closed",
+    "description": "Find Purchase Order - Verify Line Is Closed",
+    "task_step": "Line Status = Closed for Receiving",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1310",
+    "scenario_name": "Exclude Purchase Orders from Mass Close",
+    "description": NaN,
+    "task_step": "Using existing Purchase Orders, test the Exclude from Close, the remove the exclusion to enable purchase order to be closed through the Mass Close process. \n\nPurchase orders need to be in the following status to be updated:\nIn Progress\nApproved\nIssued",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1320",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Find an existing Purchase  Order that has a status = \"Issued\"",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1330",
+    "scenario_name": "Manage Exclusions from Mass Close Procurement Documents",
+    "description": "Manage Exclusions from Mass Close Procurement Documents",
+    "task_step": "Manage Exclusions from Mass Close Procurement Documents",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1340",
+    "scenario_name": "Mass Close Procurement Documents",
+    "description": "Mass Close Procurement Documents",
+    "task_step": "Mass Close Procurement Documents",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1350",
+    "scenario_name": "Manage Exclusions from Mass Close Procurement Documents",
+    "description": "Manage Exclusions from Mass Close Procurement Documents",
+    "task_step": "Manage Exclusions from Mass Close Procurement Documents",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1360",
+    "scenario_name": "Mass Close Procurement Documents",
+    "description": "Mass Close Procurement Documents",
+    "task_step": "Mass Close Procurement Documents",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1370",
+    "scenario_name": "Review Close Process (If BP is Configured)",
+    "description": "Review Close Process (If BP is Configured)",
+    "task_step": "Review Close Process (If BP is Configured)",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1380",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Find Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1390",
+    "scenario_name": "Inventory Substitutes by Location\n(Requisition -> Stock Request)",
+    "description": "Configure a substitute item and define a specific Deliver to Location.",
+    "task_step": "Configure a substitute item and define a specific Deliver to Location.",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1400",
+    "scenario_name": "Find Purchase Item",
+    "description": "Find Purchase Item",
+    "task_step": "Find Purchase Item",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1410",
+    "scenario_name": "Edit Purchase Item",
+    "description": "Edit Purchase Item",
+    "task_step": "Edit Purchase Item",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1420",
+    "scenario_name": "Maintain Requisition Sourcing Rules",
+    "description": "Maintain Requisition Sourcing Rules",
+    "task_step": "Maintain Requisition Sourcing Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1430",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Create Requisition",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1440",
+    "scenario_name": "Find Inventory Stock Request",
+    "description": "Find Inventory Stock Request",
+    "task_step": "Find Inventory Stock Request",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1450",
+    "scenario_name": "Pick Inventory",
+    "description": "Pick Inventory",
+    "task_step": "Pick Inventory",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1460",
+    "scenario_name": "Find Inventory Transaction",
+    "description": "Find Inventory Transaction",
+    "task_step": "Find Inventory Transaction",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1470",
+    "scenario_name": "Inventory Balance",
+    "description": "Find Inventory Balance",
+    "task_step": "Find Inventory Balance",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1480",
+    "scenario_name": "Inventory Substitutes by Location\n(Requisition -> Purchase Order)\n\nAuto Sourcing Configured",
+    "description": "Inventory Substitutes by Location\n(Requisition -> Purchase Order)\n\nAuto Sourcing Configured",
+    "task_step": "Configure a substitute item and define a specific Deliver to Location.",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1490",
+    "scenario_name": "Find Purchase Item",
+    "description": "Find Purchase Item",
+    "task_step": "Find Purchase Item",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1500",
+    "scenario_name": "Edit Purchase Item",
+    "description": "Edit Purchase Item",
+    "task_step": "Edit Purchase Item",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1510",
+    "scenario_name": "Maintain Requisition Sourcing Rules",
+    "description": "Maintain Requisition Sourcing Rules",
+    "task_step": "Maintain Requisition Sourcing Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1520",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Create Requisition",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1530",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Find Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1540",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "Issue Purchase Order",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1550",
+    "scenario_name": "Create Receipt",
+    "description": "Create Receipt",
+    "task_step": "Create Receipt",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1560",
+    "scenario_name": "Inventory Balance",
+    "description": "Find Inventory Balance \n(Optional based on Requisition type / Purchase order Type)",
+    "task_step": "Find Inventory Balance \n(Optional based on Requisition type / Purchase order Type)",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1570",
+    "scenario_name": "Inventory Transaction",
+    "description": "Find Inventory Transaction\n(Optional based on Requisition type / Purchase order Type)",
+    "task_step": "Find Inventory Transaction\n(Optional based on Requisition type / Purchase order Type)",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1580",
+    "scenario_name": "Inventory Substitutes by Location\n(Requisition -> Purchase Order)\n\nManual Sourcing",
+    "description": "Inventory Substitutes by Location\n(Requisition -> Purchase Order)\n\nManual Sourcing",
+    "task_step": "Configure a substitute item and define a specific Deliver to Location.",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1590",
+    "scenario_name": "Find Purchase Item",
+    "description": "Find Purchase Item",
+    "task_step": "Identify a \"primary item\" that you will associate a Substitute Item for.",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1600",
+    "scenario_name": "Edit Purchase Item",
+    "description": "Edit Purchase Item",
+    "task_step": "Item Substitutes tab\n\nOrdering Start Date - \"correct date\"\nOrdering End Date - \"end of substitute use or leave blank\"\n\nDeliver to Location - enter a specific Deliver to location that this substitute will be used for. \n\nSubstitute Priority = 1\nItem Substitute = Enter a substitute item for your \"Primary Item\"\nUsage = Procurement\n\nSubmit\n\n**Note the Deliver to Location - this will be used on the Requisition.",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1610",
+    "scenario_name": "Requisition Sourcing Rules",
+    "description": "Requisition Sourcing Rules",
+    "task_step": "Maintain Requisition Sourcing Rules",
+    "expected_result": "Procurement Configurator",
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1620",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Enter Requisition - input all data \nDeliver to - enter specific deliver to that was configured in the Substitute Item setup\nOK\n\nSearch Catalog - Search for \"Primary\" item\nCheck the checkbox next to the item\nAdd to Cart\n\nClick on \"View Cart\" - Shopping Cart\nCheckout\nVerify information \nSubmit\n\n**Note Requisition ID\n\nProcess requisition through any approvals.",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1630",
+    "scenario_name": "Source Requisitions",
+    "description": "Source Requisitions",
+    "task_step": "Company - Select Company from Requisition\nRequisition - Enter Requisition ID\nSearch\n\nCheck the Checkbox next to the Requisition ID\nOK\nSubmit\n\nYou will now see an Alert - The item selected has substitution ordering dates at this time. For more information, review the Item Substitute tab on the View Purchase Item report for the selected item.\n\nYou can \"Submit\" the requisition again, but the Substitute will not occur.\n\nTo select the Substitute Item - In the Item field Substitutes for Requested Items -> Select the Substitute Item \nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1640",
+    "scenario_name": "Find Purchase Order",
+    "description": "Find Purchase Order",
+    "task_step": "Company - Enter company from Requisition\nDocument Date On or After - Date of Test\nRequisition - Enter requisition ID\nOK\n\nClick on Spyglass to view the Purchase Order\nVerify the item is the Substitute Item",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1650",
+    "scenario_name": "Issue Purchase Order",
+    "description": "Issue Purchase Order",
+    "task_step": "From the related action from the PO ID -> Purchase Order -> Issue\nOK\n\nVerify Purchase Order is \"Issued\"",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1660",
+    "scenario_name": "Create Receipt",
+    "description": "Create Receipt",
+    "task_step": "From the Related action from the PO ID -> Receipt -> Create Receipt\nPO should default in \nOK\n\nFully Receive\nSubmit\n\n** If this PO / Receipt was to be putaway into an Inventory Site - Ensure auto putaway ran.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1670",
+    "scenario_name": "Find Inventory Balance \n(Optional based on Requisition type / Purchase order Type)",
+    "description": "Find Inventory Balance \n(Optional based on Requisition type / Purchase order Type)",
+    "task_step": "Verify balance was Incremented",
+    "expected_result": "Inventory Specialist",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1680",
+    "scenario_name": "Find Inventory Transaction\n(Optional based on Requisition type / Purchase order Type)",
+    "description": "Find Inventory Transaction\n(Optional based on Requisition type / Purchase order Type)",
+    "task_step": "Verify Putaway transaction occurred and check Accounting.",
+    "expected_result": "Inventory Accountant",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1690",
+    "scenario_name": "Mass Change Requester on Requisitions\n\"Draft\" Status",
+    "description": "Mass Change Requester on Requisitions\n\"Draft\" Status",
+    "task_step": "Update a Requisition Requester for a Requisition in \"Draft\" status",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1700",
+    "scenario_name": "BP: Mass Change Requisition Requester",
+    "description": "BP: Mass Change Requisition Requester",
+    "task_step": "Verify Business Process is configured",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1710",
+    "scenario_name": "Domain for Functional Area -> Procurement",
+    "description": "Domain for Functional Area -> Procurement",
+    "task_step": "Verify Process Requisition - Mass Action configured",
+    "expected_result": "Business Process Administrator or Security Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1720",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Create Requisition\nAdd using any Requisition Type\nAfter adding item and after you Check Out\n\"Save for Later\" - this will set the Requisition into \"Draft\" Status.\n\nNote Requisition ID\nNote Requester ID (Who entered the requisition)",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1730",
+    "scenario_name": "Mass Change Requisition Requester",
+    "description": "Mass Change Requisition Requester",
+    "task_step": "Request Name = Enter a Request Name\nCompany = Company from Requisition\nFrom Requester = Who entered the requisition\nOK\n\nTo Requester = New requester to replace original requester\n\nIn the grid below - filter on Document Status = Draft\nCheck the Check box next to the requisition ID\nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1740",
+    "scenario_name": "Find Mass Change Requisition Requester Requests",
+    "description": "Find Mass Change Requisition Requester Requests",
+    "task_step": "Company = Company from Requisition\nEnter any additional data\nOK\n\nRequisition will show the From / To change\n\nClick on Requisition ID\nClick on Process tab - you will see the Mass Change - new requester",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1750",
+    "scenario_name": "Mass Change Requester on Requisitions\n\"In Progress\" requisitions",
+    "description": "Mass Change Requester on Requisitions\n\"In Progress\" requisitions",
+    "task_step": "Update a Requisition Requester for a Requisition in \"In Progress\" status",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1760",
+    "scenario_name": "BP: Mass Change Requisition Requester",
+    "description": "BP: Mass Change Requisition Requester",
+    "task_step": "Verify Business Process is configured",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1770",
+    "scenario_name": "Domain for Functional Area -> Procurement",
+    "description": "Domain for Functional Area -> Procurement",
+    "task_step": "Verify Process Requisition - Mass Action configured",
+    "expected_result": "Business Process Administrator or Security Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1780",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Ensure test requisition goes into an Review or Approval Process. Do not process requisition through.\n\nCreate Requisition\nAdd using any Requisition Type\nAfter adding item and after you Check Out\nSubmit\n\"Up Next\" will appear\nNote - Who is the Approver\n\nDo Not Process requisition - leave \"In Process\"\n\nNote Requisition ID\nNote Requester ID (Who entered the requisition)",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1790",
+    "scenario_name": "Mass Change Requisition Requester",
+    "description": "Mass Change Requisition Requester",
+    "task_step": "Request Name = Enter a Request Name\nCompany = Company from Requisition\nFrom Requester = Who entered the requisition\nOK\n\nTo Requester = New requester to replace original requester\n\nIn the grid below - filter on Document Status = In Process\nCheck the Check box next to the requisition ID\nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1800",
+    "scenario_name": "Find Mass Change Requisition Requester Requests",
+    "description": "Find Mass Change Requisition Requester Requests",
+    "task_step": "Company = Company from Requisition\nEnter any additional data\nOK\n\nRequisition will show the From / To change\n\nClick on Requisition ID\nClick on Process tab - you will see the Mass Change along with the new Requester\n\nNote that the Requisition will be awaiting Approval\n\nNotice the Approver might have changed\n\nProcess Requisition though all Approvals (optional)",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1810",
+    "scenario_name": "Mass Change Requester on Requisitions\n\"Successfully Completed\" requisitions",
+    "description": "Mass Change Requester on Requisitions\n\"Successfully Completed\" requisitions",
+    "task_step": "Update a Requisition Requester for a Requisition in \"Successfully Completed\" status",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-3-1820",
+    "scenario_name": "BP: Mass Change Requisition Requester",
+    "description": "BP: Mass Change Requisition Requester",
+    "task_step": "Verify Business Process is configured",
+    "expected_result": "Business Process Administrator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1830",
+    "scenario_name": "Domain for Functional Area -> Procurement",
+    "description": "Domain for Functional Area -> Procurement",
+    "task_step": "Verify Process Requisition - Mass Action configured",
+    "expected_result": "Business Process Administrator or Security Configurator",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1840",
+    "scenario_name": "Create Requisition",
+    "description": "Create Requisition",
+    "task_step": "Ensure test requisition goes through any/all approvals.\n\nCreate Requisition\nAdd using any Requisition Type\nAfter adding item and after you Check Out\nSubmit\n\nProcess through Approvals (if configured)\n\nNote Requisition ID\nNote Requester ID (Who entered the requisition)\nStatus - Successfully Completed",
+    "expected_result": "Buyer or Employee as self",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1850",
+    "scenario_name": "Mass Change Requisition Requester",
+    "description": "Mass Change Requisition Requester",
+    "task_step": "Request Name = Enter a Request Name\nCompany = Company from Requisition\nFrom Requester = Who entered the requisition\nOK\n\nTo Requester = New requester to replace original requester\n\nIn the grid below - filter on Document Status = Successfully Completed\nCheck the Check box next to the requisition ID\nSubmit",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-3-1860",
+    "scenario_name": "Find Mass Change Requisition Requester Requests",
+    "description": "Find Mass Change Requisition Requester Requests",
+    "task_step": "Company = Company from Requisition\nEnter any additional data\nOK\n\nRequisition will show the From / To change\n\nClick on Requisition ID\nClick on Process tab - you will see the Mass Change along with the new Requester\n\nIf a Purchase Order was created - the Requester on the PO will show the new Requester.",
+    "expected_result": "Buyer",
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0010",
+    "scenario_name": "Req to Check",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0010-01",
+    "scenario_name": "Req to Check",
+    "description": "Create a requisition as an ad hoc request.",
+    "task_step": "1. Create a Requisition",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-02",
+    "scenario_name": "Req to Check",
+    "description": "Approve Requisition. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "2. Approve Requisition",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-03",
+    "scenario_name": "Req to Check",
+    "description": "Fulfillment Source = Purchase Order  Put in a Supplier  Click OK",
+    "task_step": "3. Source Requisition to PO",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-04",
+    "scenario_name": "Req to Check",
+    "description": "Open requisition.  On Requisition line, Purchase Order number should be in \"sourced\" column. Click on it to open the Purchase Order  If not in Approved Status, Submit for Approval",
+    "task_step": "4. View Purchase Order created from Requisition",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0010-05",
+    "scenario_name": "Req to Check",
+    "description": "Approve Purchase Order. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "5. Approve Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-06",
+    "scenario_name": "Req to Check",
+    "description": "Issue a purchase order and print.",
+    "task_step": "6. Issue a Purchase Order and Print",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0010-07",
+    "scenario_name": "Req to Check",
+    "description": "Login as user who created Req. Go to Purchases Dashboard (add if not displayed) and find link to Create Receipt  At Create Receipt screen, put in Purchase Order, Select \"Fully Receive\" and then click OK",
+    "task_step": "7. Create a Receipt",
+    "expected_result": NaN,
+    "workday_role": "Employee As Self",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-08",
+    "scenario_name": "Req to Check",
+    "description": "Enter Company and Supplier on PO created above Click OK   > Add lines from receipt (if 3 way matching) / Add lines from purchase order (if 2 way watching) / Add lines from supplier contract > Scroll down to the middle of the page and click \"search.\" Check the lines of the records that you want to add > Click OK, then Click \"Complete Supplier Invoice\"  Create an invoice from the workbench in order to create it directly from receipts (3 way matching) or POs (2 way matching).",
+    "task_step": "8. Create an Invoice from the Workbench",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0010-09",
+    "scenario_name": "Req to Check",
+    "description": "Invoice will run through Matching. After matching, complete any other required Approval Steps if any",
+    "task_step": "9. Approve Supplier Invoice",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0010-10",
+    "scenario_name": "Req to Check",
+    "description": "Verify that you are able to select Supplier Invoice created above.  Verify that Settlement Run has been submitted for approval",
+    "task_step": "10. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0010-11",
+    "scenario_name": "Req to Check",
+    "description": "Verify that Settlement Run is routing as expected for approval",
+    "task_step": "11. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0010-12",
+    "scenario_name": "Req to Check",
+    "description": "Upon approval, verify that Cash and Accounts Payable accounting entries have been created as expected via related action off the Supplier Invoice Payment.",
+    "task_step": "12. View Payment Accounting",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0020",
+    "scenario_name": "Process Match Exception",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0020-01",
+    "scenario_name": "Process Match Exception",
+    "description": "Create Purchase order for a Goods Line.  Choose any Spend Category, Quantity of 1 and Unit Cost of 100.  Submit PO for approval.",
+    "task_step": "1. Create Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0020-02",
+    "scenario_name": "Process Match Exception",
+    "description": "Approve Purchase Order. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "2. Approve Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0020-03",
+    "scenario_name": "Process Match Exception",
+    "description": "Issue a purchase order and print.",
+    "task_step": "3. Issue Purchase Order and Print",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0020-04",
+    "scenario_name": "Process Match Exception",
+    "description": "All the details from the Purchase Order will be copied into the Supplier Invoice  Change the unit cost from 100 to 1000 in order to trigger a Match Exception  Submit",
+    "task_step": "4. Create a Supplier Invoice from the PO",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0020-05",
+    "scenario_name": "Process Match Exception",
+    "description": "The Supplier Invoice will run through matching. Match status should be \"Exceptions\" Verify that Match Exception was routed to the correct role.  In user's Inbox, hit the button that says \"Request Match Exception Override\" Specify Override Reason and then hit OK",
+    "task_step": "5. View Match Exception and request Match Exception Override",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0020-06",
+    "scenario_name": "Process Match Exception",
+    "description": "Verify that Match Exception Override request was routed based on setup of \"Supplier Accounts Match Exception Override Event\" Approve any necessary steps",
+    "task_step": "6. Approve Supplier Accounts Match Exception Override Event Business Process",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-4-0020-07",
+    "scenario_name": "Process Match Exception",
+    "description": "Supplier Invoice Match Status should now be \"Override\"",
+    "task_step": "7. Verify Status of Supplier Invoice",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0030",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0030-01",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Run integration for test File or Load via EIB",
+    "task_step": "1. Procurement Card Load",
+    "expected_result": NaN,
+    "workday_role": "Credit Card Transaction Administrator",
+    "effort_mins": 20
+  },
+  {
+    "scenario_id": "PRO-4-0030-02",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Specify Date Range for the Load you are looking for Choose Usage of Procurement  Open Credit Card Transaction File line Go to \"Corporate Credit Card Accounts Processed\" tab  As related Action, go to Accounting > View Accounting  Note that the Procurement Card Load generates accounting to:  DR Spend based on Credit Card setup CR Account per Credit Card Payable Posting Rule",
+    "task_step": "2. Verify File Loaded Successfully",
+    "expected_result": NaN,
+    "workday_role": "Credit Card Transaction Administrator",
+    "effort_mins": 20
+  },
+  {
+    "scenario_id": "PRO-4-0030-03",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Login as user who has loaded, unverified Procurement Card Transactions Go to Purchases Dashboard (add if not displayed) and find link to Verify Procurement Card Transactions   Select one of the items and click OK Edit Spend Category, Supplier, and Worktags as desired Click Submit",
+    "task_step": "3. Verify Procurement Card Transactions",
+    "expected_result": NaN,
+    "workday_role": "Employee as Self",
+    "effort_mins": 20
+  },
+  {
+    "scenario_id": "PRO-4-0030-04",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Approve Procurement Card Transaction Verification. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "4. Approve Procurement Card Transaction Verification",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0030-05",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Find the transaction you processed above and, as a related action, go to Accounting > View Accounting  Note Accounting will be to DR the new accounting based on the Procurement Card verification values and CR will be to reverse the initial accounting posted upon loading of Card file",
+    "task_step": "5. View Accounting related to Procurement Card Transaction Verification",
+    "expected_result": NaN,
+    "workday_role": "Procurement Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0030-06",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Verify that you are able to select a Procurement Card statement  Verify that Settlement Run has been submitted for approval",
+    "task_step": "6. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0030-07",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Verify that Settlement Run is routing as expected for approval",
+    "task_step": "7. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0030-08",
+    "scenario_name": "Procurement Card Load to Payment",
+    "description": "Upon approval, verify that CR to Cash and DR to Credit Card Payable accounting entries have been created as expected via related action off the Procurement Card payment.",
+    "task_step": "8. View Payment Accounting",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0040",
+    "scenario_name": "Contract Invoices to Check",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0040-01",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Create Supplier contract with a contract type that allows manual invoices",
+    "task_step": "1. Create Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0040-02",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Verify that the Contract is routing as expected for approval",
+    "task_step": "2. Approve Supplier contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0040-03",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Enter Company and Supplier from the contract that was create above and for contracts in the workbench",
+    "task_step": "3. Create Invoice from Workbench",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0040-04",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Approve Supplier Invoice. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "4. Approve Invoice",
+    "expected_result": NaN,
+    "workday_role": "Finance Executive",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0040-05",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Verify that you are able to select the Supplier Invoice created above. Verify that Settlement Run has been submitted for approval.",
+    "task_step": "5. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Procurement Settlement Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0040-06",
+    "scenario_name": "Contract Invoices to Check",
+    "description": "Verify that Settlement Run is routing as expected",
+    "task_step": "6. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0050",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0050-01",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Create Supplier contract using a contract type that allows manual Purchase Orders",
+    "task_step": "1. Create Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0050-02",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Approve Supplier Contract. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "2. Approve Supplier contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0050-03",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Create Purchase Order from the Supplier Contract created above",
+    "task_step": "3. Create Purchase Order from Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0050-04",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Approve Purchase Order and Issue Purchase Order",
+    "task_step": "4. Approve / Issue Purchase Order",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0050-05",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Create Receipt against Purchase Order created above",
+    "task_step": "5. Create Receipt",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0050-06",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Find purchase order created via Workbench",
+    "task_step": "6. Create Invoice from Workbench",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0050-07",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Approve Supplier Invoice. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "7. Approve Invoice",
+    "expected_result": NaN,
+    "workday_role": "Finance Executive",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0050-08",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Verify that you are able to select the Supplier Invoice created above. Verify that Settlement Run has been submitted for approval.",
+    "task_step": "8. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Procurement Settlement Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0050-09",
+    "scenario_name": "Contract Purchase Orders to Check",
+    "description": "Verify that Settlement Run is routing as expected",
+    "task_step": "9. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0060",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0060-01",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Create Supplier Contract using a contract type that allows scheduled invoices",
+    "task_step": "1. Create Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0060-02",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Approve Supplier Contract. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "2. Approve Supplier contract",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0060-03",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Create a schedule for invoices. Generate installments",
+    "task_step": "3. Generate Schedule for Invoice Creation from Contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0060-04",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Approve Supplier Contract Invoice Schedule. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "4. Approve Supplier Contract Invoice Schedule",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0060-05",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Create invoice from schedule. Manually generate invoice or use task \"Schedule Invoice Creation from Contract Installment\"",
+    "task_step": "5. Create Invoice from Schedule",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0060-06",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Approve Supplier Invoice. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "6. Approve Invoice",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0060-07",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Verify that you are able to select the Supplier Invoice created above. Verify that Settlement Run has been submitted for approval.",
+    "task_step": "7. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0060-08",
+    "scenario_name": "Scheduled Invoice from Supplier Contract to Check",
+    "description": "Verify that Settlement Run is routing as expected",
+    "task_step": "8. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0070",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0070-01",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Create Supplier contract with a contract type that allows manual invoices",
+    "task_step": "1. Create Supplier Contract",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0070-02",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Verify that the Contract is routing as expected for approval",
+    "task_step": "2. Approve Supplier contract",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0070-03",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Enter Company and Supplier from the contract that was used for the manual invoice type.  Add Lines to the invoice from the Supplier Contract.",
+    "task_step": "3. Create Invoice from Supplier Invoice Workbench",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Data Entry Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0070-04",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Approve Supplier Invoice. Test Business Process routing based on the configured conditions for each Business Process step.",
+    "task_step": "4. Approve Invoice",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0070-05",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Verify that you are able to select the Supplier Invoice created above. Verify that Settlement Run has been submitted for approval.",
+    "task_step": "5. Create Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Settlement Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-4-0070-06",
+    "scenario_name": "Manual Invoice from Supplier Contract to Check",
+    "description": "Verify that Settlement Run is routing as expected",
+    "task_step": "6. Approve Settlement Run",
+    "expected_result": NaN,
+    "workday_role": "Various (depending on approval process)",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080",
+    "scenario_name": "Month End Close",
+    "description": NaN,
+    "task_step": NaN,
+    "expected_result": NaN,
+    "workday_role": NaN,
+    "effort_mins": NaN
+  },
+  {
+    "scenario_id": "PRO-4-0080-01",
+    "scenario_name": "Month End Close",
+    "description": "Approve and Source Requisitions.  Run the Find Requisitions report.  Filter report by status of \"Successfully Completed\" that have unsource lines. Assess the source as needed.",
+    "task_step": "Find Requisitions",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-02",
+    "scenario_name": "Month End Close",
+    "description": "Approve and Issue Purchase Orders.  Run the Find Purchase Orders report. Filter report by status to review all POs not in issued status. Assess then approve/issue as needed.",
+    "task_step": "Find Purchase Orders",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-03",
+    "scenario_name": "Month End Close",
+    "description": "Close all applicable Issued POs to prevent further action on them. Open all applicable Closed POs to allow future action on them.",
+    "task_step": "Find Procurement Mass Close Requests",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-04",
+    "scenario_name": "Month End Close",
+    "description": "Review Supplier Contracts. If the Supplier Contract is manual, be sure to create Supplier Invoice.  If Supplier Contract is scheduled, make sure it is coming into the AP Data Entry Specialist inbox to edit.",
+    "task_step": "Find Supplier Contracts",
+    "expected_result": NaN,
+    "workday_role": "Buyer",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-05",
+    "scenario_name": "Month End Close",
+    "description": "Create Receipt Accruals. Be sure this is the last thing you do after you review Open POs and Supplier invoices. If you run too soon the reflected accrual may not be accurate.",
+    "task_step": "Create Receipt Accrual",
+    "expected_result": NaN,
+    "workday_role": "Accountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-06",
+    "scenario_name": "Year End Close",
+    "description": "Roll Forward Commitments and Obligations. Create procurement document roll forward events to ensure that all procurement documents not closed prior to the year old are rolled forward into the new year.",
+    "task_step": "Roll Forward Procurement Documents",
+    "expected_result": NaN,
+    "workday_role": "Accountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-4-0080-07",
+    "scenario_name": "Month End Close",
+    "description": "Mass Close Procurement Documents. Close unused portions of procurement documents (requisitions, purchase orders and supplier contracts) when your organization no longer needs to process procurement activities against them, such as additional receipts or supplier invoices.  If you use commitment accounting for procurement, you recover and liquidate any commitment or obligation journals and also recover obligated budget when you close procurement documents.",
+    "task_step": "Mass Close Procurement Documents",
+    "expected_result": NaN,
+    "workday_role": "Accountant",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0010",
+    "scenario_name": "Suppliers",
+    "description": "Review supplier data for completeness and data quality.",
+    "task_step": "Find Suppliers or Extract Suppliers",
+    "expected_result": NaN,
+    "workday_role": "Supplier Administrator",
+    "effort_mins": 120
+  },
+  {
+    "scenario_id": "PRO-5-0020",
+    "scenario_name": "Edit Company Accounting Options related to Procurement",
+    "description": "Ensure company accounting options related to procurement are configured correctly:  Procurement Tax Options:  Calculate Tax Due to Supplier Enter Tax Due to Supplier or Calculate Self Assessed Taxes",
+    "task_step": "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0030",
+    "scenario_name": "Edit Company Procurement Options",
+    "description": "Ensure company procurement options are configured correctly. Take special note of the following:  1) Will customer be implementing Sales Tax on Requisitions? (Enable/Disable Transaction Tax on Requisition Flag)  2) Does customer wish to hide Service lines on Requisitions? (Enable/Disable Disable Service Lines on Requisitions Flag)  3) Does customer wish to hide Project lines on Requisitions? (Enable/Disable Disable Project-Based Service Lines on Requisitions Flag)",
+    "task_step": "Related Action From Company > Edit Company Procurement Options",
+    "expected_result": NaN,
+    "workday_role": "Finance Organization Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0040",
+    "scenario_name": "Verify Units of Measure",
+    "description": "Review all units of measure. Be sure to consider punchout suppliers UOM if punchout is in scope.",
+    "task_step": "Units of Measure",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 15
+  },
+  {
+    "scenario_id": "PRO-5-0050",
+    "scenario_name": "Workcart Link Overrides",
+    "description": "Make sure all cart links are accurate based on scope and instructional text is correct.",
+    "task_step": "Create Requisition (Cart Link Overrides)",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0060",
+    "scenario_name": "Spend Transaction Instructions for Requisitions",
+    "description": "Verify instructions or links to policies for the requisition process.",
+    "task_step": "View Spend Transaction Instructions",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0070",
+    "scenario_name": "Supplier Contract Types",
+    "description": "Review and validate the supplier contract types and options.",
+    "task_step": "Maintain Supplier Contract Types",
+    "expected_result": NaN,
+    "workday_role": "Supplier Contract Specialist",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0080",
+    "scenario_name": "Purchase Order Print Layouts",
+    "description": "Review the delivered layout and ensure the layout is configured for each company. If custom layout is in scope, review this custom layout once it is built by integrations team.",
+    "task_step": "View Purchase Order Print Layout",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0090",
+    "scenario_name": "Return Reasons",
+    "description": "Review return reasons and identify which ones should auto-generate the invoice adjustment process.",
+    "task_step": "Maintain Return Reasons",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0100",
+    "scenario_name": "Requisition Types",
+    "description": "Review the requisition types. Requisition types are used for sourcing rules or as a dimension in BP logic.",
+    "task_step": "Maintain Requisition Types",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0110",
+    "scenario_name": "Supplier Links/Punchout",
+    "description": "If punchout is in scope, review the punchout links once they are configured. Ensure that only the allowed users can see the link when entering a requisition.",
+    "task_step": "Maintain Supplier Links",
+    "expected_result": NaN,
+    "workday_role": "Procurement Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0120",
+    "scenario_name": "Match Rules",
+    "description": "Review the match rule set and each of the condition rules in the rule set. Ensure that there are no gaps in the rules that would enable an invoice to get through without a second set of eyes reviewing the differences between the invoice and its associated PO.",
+    "task_step": "View Supplier Accounts Match Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 30
+  },
+  {
+    "scenario_id": "PRO-5-0130",
+    "scenario_name": "Confirm Procurement Posting Rules",
+    "description": "Verify the following rules have the correct ledger account: Spend, Credit Card Payable, Receipt Accrual",
+    "task_step": "View Account Posting Rule Set",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0140",
+    "scenario_name": "Confirm Procurement Custom Validations",
+    "description": "Verify all required Custom Validations have been configured for (depending on scope): Catalog Load, Change Order, Procurement Card Transaction Verification, Purchase Order Acknowledgement, Request for Quote, Request for Quote Award, Request for Quote Response, Requisition, Return to Supplier, Supplier, Supplier Change, Supplier Contract, Supplier Contract Amendment",
+    "task_step": "Maintain Custom Validations",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 5
+  },
+  {
+    "scenario_id": "PRO-5-0150",
+    "scenario_name": "Confirm Role Based Procurement Assignments",
+    "description": "Confirm that these Role Based Security Roles for Procurement have been properly assigned or are defaulting to each Company (depending on scope): Buyer, Supplier Contract Specialist, Procurement Data Entry Specialist",
+    "task_step": "Roles for Organization and Subordinates",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0160",
+    "scenario_name": "Confirm User Based Procurement Assignments",
+    "description": "Run User-Based Security Group Assignments report and Verify that these user Based Security Roles for Procurement have been properly assigned: Procurement Configurator, Accounts Payable Configurator, Credit Card Transaction Administrator",
+    "task_step": "Extract User-Based Security Group Assignments",
+    "expected_result": NaN,
+    "workday_role": "Security Administrator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0170",
+    "scenario_name": "Worktag Usages",
+    "description": "Verify all required Worktag Usages have been configured for: Procurement Card Transaction Verification, Purchase Order, Request for Quote, Requisition",
+    "task_step": "Maintain Worktag Usages",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 10
+  },
+  {
+    "scenario_id": "PRO-5-0180",
+    "scenario_name": "Confirm Related Worktag Usage",
+    "description": "Review the Related Worktag usage for: Purchase Item, Spend Category",
+    "task_step": "Maintain Related Worktag Usage",
+    "expected_result": NaN,
+    "workday_role": "Accounts Payable Configurator",
+    "effort_mins": 25
+  }
+]

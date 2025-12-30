@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: PLNF-4-0040-02
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: [Revenue/COGS Model 2] Sheet Testing
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 13.0)
+================================================================================
+
+DESCRIPTION:
+Data Entry
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Data Entry
+
+ELECTRON STEPS:
+1. # -Go to Sheets > [Revenue/COGS Model 2] Sheet.
+2. # -Add an expense value to the sheet.
+3. verify -Verify all calculations (if any) are evaluating as expected.
+4. screenshot as "PLNF-4-0040-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Kb Payroll Run Payroll
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

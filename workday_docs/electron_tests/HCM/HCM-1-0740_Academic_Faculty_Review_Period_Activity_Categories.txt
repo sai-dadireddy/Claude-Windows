@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-1-0740
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Period Activity Categories
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Period Activity Categories are defined
+
+WORKDAY ROLE: Academic Faculty Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Academic Faculty Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Period Activity Categories"
+2. wait for search results
+3. click search result containing "Period Activity Categories"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0740_complete.png"
+
+VERIFICATION:
+- [ ] Period Activity Categories are defined for Period Activity Pay
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Period Activity Categories
+
+### 1. Admin Guide  Financial Management (score: 3)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components..............................................
+================================================================================

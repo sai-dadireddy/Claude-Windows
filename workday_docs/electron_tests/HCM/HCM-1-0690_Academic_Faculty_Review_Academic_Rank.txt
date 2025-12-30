@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: HCM-1-0690
+FUNCTIONAL AREA: HCM
+TEST NAME: Academic Faculty: Review Academic Rank
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify Academic Ranks are defined and mapping to Job Profile and/or IPEDs are defined as appropriate.
+
+WORKDAY ROLE: Academic Faculty Administrator
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with Academic Faculty Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View Academic Ranks"
+2. wait for search results
+3. click search result containing "View Academic Ranks"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0690_complete.png"
+
+VERIFICATION:
+- [ ] Academic Ranks are defined with appropriate mappings
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Academic Ranks
+
+### 1. WSDL: Human_Resources (score: 3)
+Source: Human_Resources.wsdl
+```
+WSDL: Human_Resources
+Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems incl...
+================================================================================

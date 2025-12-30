@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-1-0390
+FUNCTIONAL AREA: HCM
+TEST NAME: Skills matching for Job Profiles
+CONFIDENCE: [HIGH] Score: 10.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run the Suggested Skills for Job Profile report and verify the matched Skills to Job Profiles in the tenant. 
+*minimum job profile values required - job title and description
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Suggested Skills for Job Profile report > see Suggested Skills for Job Profile Based on Job Profile Text"
+2. wait for search results
+3. click search result containing "Suggested Skills for Job Profile report > see Suggested Skills for Job Profile Based on Job Profile Text"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0390_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Suggested Skills for Job Profile report > see Suggested Skills for Job Profile Based on Job Profile Text
+
+### 1. User Guide Workday People Analytics (1) (score: 10)
+Source: User-Guide-Workday-People-Analytics (1).pdf
+```
+Workday People
+Analytics
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+...
+================================================================================

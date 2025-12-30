@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: BUD-2-0060
+FUNCTIONAL AREA: Budgets
+TEST NAME: Create Position Budget Amendment
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: MEDIUM ⚠️ (RAG Score: 6.0)
+================================================================================
+
+DESCRIPTION:
+Amend the budget
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Amend the budget
+
+ELECTRON STEPS:
+1. # Create Position Budget Amendment
+2. screenshot as "BUD-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide  Financial Management
+- Type: pdf
+- Excerpt: ...
+
+================================================================================

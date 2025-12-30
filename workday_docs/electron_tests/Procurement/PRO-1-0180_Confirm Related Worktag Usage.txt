@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-1-0180
+FUNCTIONAL AREA: Procurement
+TEST NAME: Confirm Related Worktag Usage
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the Maintain Related Worktag usage for: Purchase Item, Spend Category
+
+WORKDAY ROLE: Common Finance Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Accounts Payable Configurator"
+2. wait for search results
+3. click search result containing "Accounts Payable Configurator"
+4. wait for page to load
+5. screenshot as "PRO-1-0180_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Accounts Payable Configurator
+
+### 1. Test Scenarios Index (score: 8)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extr...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: CP-1-0090
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: CAN Tax Elections Review
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure that all employees in CAN companies have the applicable Federal and Province tax elections loaded.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "TD1 Worker CAN Tax Election Report"
+2. wait for search results
+3. click search result containing "TD1 Worker CAN Tax Election Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
+6. screenshot as "CP-1-0090_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Results, Put_Provinc, Get_Province_Annual_Elections
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: TD1 Worker CAN Tax Election Report
+
+### 1. WSDL: Payroll (score: 6)
+Source: Payroll.wsdl
+```
+WSDL: Payroll
+Description: The Workday Payroll Web Service contains operations that expose Workday Payroll data for integration with third parties (such as time and attendance).
+Operations:
+  - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specif...
+================================================================================

@@ -1,0 +1,60 @@
+================================================================================
+TEST ID: HCM-1-0080
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Compensation Package Setup
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that compensation grades and compensation plans have been attached to the compensation package correctly.
+
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Compensation Package"
+2. wait for search results
+3. click search result containing "Compensation Package"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "HCM-1-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Put_Previous_System_Compensation_History
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Compensation Package
+
+### 1. Test Scenarios Index (score: 7)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Super...
+================================================================================

@@ -1,0 +1,56 @@
+================================================================================
+TEST ID: HCM-2-0060
+FUNCTIONAL AREA: HCM
+TEST NAME: Rehire a Terminated Worker
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Rehire a terminated employee (when selecting a pre-hire, search for the terminated worker's name) and then verify that job and pay information defaults from the new position and that the personal and contact information default in for the worker. Validate the Workday Account is reset and credential notifications are sent as expected. Verify Onboarding tasks for a rehire are launched as expected.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Hire Employee"
+2. wait for search results
+3. click search result containing "Hire Employee"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Hire Employee
+
+### 1. Kb Benefits Enrollment (score: 7)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administratio...
+================================================================================

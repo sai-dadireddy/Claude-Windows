@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-2-0150
+FUNCTIONAL AREA: Inventory
+TEST NAME: Move Inventory
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Move Inventory task
+
+ELECTRON STEPS:
+1. enter search box as "Move Inventory task"
+2. submit form
+3. screenshot as "INV-2-0150_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Move Inventory task
+
+### 1. Admin Guide Spend Management (score: 3)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing............................................................................
+================================================================================

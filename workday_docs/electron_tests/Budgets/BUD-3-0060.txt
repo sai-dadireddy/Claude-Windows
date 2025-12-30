@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: BUD-3-0060
+FUNCTIONAL AREA: Budgets
+TEST NAME: Edit Budget Check Options
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 9.0)
+================================================================================
+
+DESCRIPTION:
+Edit the budget check options to match customer requirement
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Edit the budget check options to match customer requirement
+
+ELECTRON STEPS:
+1. # Edit Budget Check Options
+2. screenshot as "BUD-3-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Education And Government
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

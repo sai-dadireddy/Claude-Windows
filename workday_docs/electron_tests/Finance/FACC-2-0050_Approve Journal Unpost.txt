@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: FACC-2-0050
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Approve Journal Unpost
+CONFIDENCE: [HIGH] Score: 8.0/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Approve Journal Unpost"
+2. wait for search results
+3. click search result
+4. wait for inbox page
+5. click transaction to review
+6. click "Approve" or "Submit" button
+7. screenshot as "FACC-2-0050_complete.png"
+
+VERIFICATION:
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Approve Journal Unpost
+
+### 1. Kb Finance Journal Entry (score: 3)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Financi
+...
+================================================================================

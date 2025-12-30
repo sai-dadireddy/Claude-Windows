@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: PLNF-2-0010-01
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Capital Sheet Security
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 20.0)
+================================================================================
+
+DESCRIPTION:
+Verify if sheet should be set as Level Assigned access or User Assigned access
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify if sheet should be set as Level Assigned access or User Assigned access
+
+ELECTRON STEPS:
+1. # Level assigned access gives all users access to the sheet (based on the User's Level assignment) while User assigned access gives only specific users access to the sheet
+2. screenshot as "PLNF-2-0010-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Financial_Management
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Financial_Management
+
+================================================================================

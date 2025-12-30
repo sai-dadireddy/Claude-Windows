@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0210
+FUNCTIONAL AREA: HCM
+TEST NAME: Change Job with 'Make New Manager' Reason
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Initiate a transfer process for an employee who is not a manager using the reason 'Make New Manager'. Note that by selecting this job change reason, a new subordinate supervisory organization will be created and added to the org structure. After successfully completing the process, note that the employee is now the manager of the new organization. Open the org chart and take note of the change to the org structure. Use the 'Move Workers' task to move some existing employees and their positions to the new organization. Review newly created organization and make any updates necessary (organization name, role assignments, etc). If displaying compa-ratio on Propose Compensation Change ensure that it is showing correctly. Additionally, if dynamic plan display is turned on, ensure that the plans are relevant to the employee per the configuration set up.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Change Job"
+2. wait for search results
+3. click search result containing "Change Job"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0210_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: /workers
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Change Job
+
+### 1. staffing (score: 7)
+Source: staffing_v7.json
+```
+API: staffing
+GET /values/organizationAssignmentChangesGroup/regions/ - 
+GET /jobChanges/{ID}/location - Returns the location information for the specified job change ID.
+POST /workers/{ID}/organizationAssignmentChanges - Initiates an organization assignment change for a specific worker.
+GET /worker...
+```
+
+### 2. Kb Bene...
+================================================================================

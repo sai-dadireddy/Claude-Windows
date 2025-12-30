@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-3-0030
+FUNCTIONAL AREA: Procurement
+TEST NAME: Edit Company Procurement Options
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure company procurement options are configured correctly. Take special note of the following:  1) Will customer be implementing Sales Tax on Requisitions? (Enable/Disable Transaction Tax on Requisition Flag)  2) Does customer wish to hide Service lines on Requisitions? (Enable/Disable Disable Service Lines on Requisitions Flag)  3) Does customer wish to hide Project lines on Requisitions? (Enable/Disable Disable Project-Based Service Lines on Requisitions Flag)
+
+WORKDAY ROLE: Finance Organization Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Related Action From Company > Edit Company Procurement Options"
+2. wait for search results
+3. click search result containing "Related Action From Company > Edit Company Procurement Options"
+4. wait for page to load
+5. screenshot as "PRO-3-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Related Action From Company > Edit Company Procurement Options
+
+### 1. Test Scenarios Index (score: 13)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Aud...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

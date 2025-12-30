@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: ACC-1-0110
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review AC Custom Account Posting Rule Type(s)
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: LOW ❌ (RAG Score: 0.0)
+================================================================================
+
+DESCRIPTION:
+1. Run Custom Account Posting Rule Types report
+2. Review custom account posting rule types created for use in mapping dimension
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: 1. Run Custom Account Posting Rule Types report
+2. Review custom account posting rule types created 
+
+ELECTRON STEPS:
+# [INCOMPLETE: No Task/Step provided in source data]
+# This scenario requires manual review
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+================================================================================

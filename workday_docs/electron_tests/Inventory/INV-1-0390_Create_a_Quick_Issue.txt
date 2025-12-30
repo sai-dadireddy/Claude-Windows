@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: INV-1-0390
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create a Quick Issue
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: 1) Quick Inventory Issue
+2) Add - Inventory Site / Requester / Cost Center
+3) Select Items to order
+4) Enter Quantities
+
+ELECTRON STEPS:
+1. enter search box as "1) Quick Inventory Issue
+2) Add - Inventory Site / Requester / Cost Center
+3) Select Items to order
+4) Enter Quantities"
+2. enter field "3) Select Items to order
+4) Enter Quantities
+
+### 1" with appropriate value
+3. click appropriate action button
+4. submit form
+5. screenshot as "INV-1-0390_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1) Quick Inventory Issue
+2) Add - Inventory Site / Requester / Cost Center
+3) Select Items to order
+4) Enter Quantities
+
+### 1. WSDL: Resource_Management (score: 17)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppli...
+================================================================================

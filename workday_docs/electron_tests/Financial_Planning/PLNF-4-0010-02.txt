@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: PLNF-4-0010-02
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Data Flow
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 12.0)
+================================================================================
+
+DESCRIPTION:
+Verify all depreciation expense flows to GL
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify all depreciation expense flows to GL
+
+ELECTRON STEPS:
+1. verify Validate Depr expenses feeding to related GL
+2. screenshot as "PLNF-4-0010-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

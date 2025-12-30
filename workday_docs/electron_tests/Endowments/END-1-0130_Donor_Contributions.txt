@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-1-0130
+FUNCTIONAL AREA: Endowments
+TEST NAME: Donor Contributions
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Donor Contributions
+
+ELECTRON STEPS:
+1. enter search box as "Find Donor Contributions"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-1-0130_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Donor Contributions
+
+### 1. Workday Feature Descriptions Ditamap (score: 3)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning............................................
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: INV-2-0130
+FUNCTIONAL AREA: Inventory
+TEST NAME: View Business Process for Inventory Pick List Event
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Search "BP: Inventory Pick List Event"
+
+ELECTRON STEPS:
+1. enter search box as "Search "BP: Inventory Pick List Event""
+2. submit form
+3. screenshot as "INV-2-0130_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Search "BP: Inventory Pick List Event"
+
+### 1. Admin Guide Glossary (score: 4)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Fu...
+================================================================================

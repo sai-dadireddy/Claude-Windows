@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: PRO-1-0080
+FUNCTIONAL AREA: Procurement
+TEST NAME: Purchase Order Print Layouts
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the delivered layout and ensure the layout is configured for each company. If custom layout is in scope, review this custom layout once it is built by integrations team. "View Purchase Order Print Layout" will show you the functional configuration, but it is easier to view the actual result by creating a PDF and issuing it to Print and then viewing the PDF created.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print"
+2. wait for search results
+3. click search result containing "View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print"
+4. wait for page to load
+5. screenshot as "PRO-1-0080_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Purchase Order Print Layout or Create Purchase Order>Issue Purchase Order>Print
+
+### 1. Test Scenarios Index (score: 14)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup:...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

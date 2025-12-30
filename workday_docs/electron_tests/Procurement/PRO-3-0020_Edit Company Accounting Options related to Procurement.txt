@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: PRO-3-0020
+FUNCTIONAL AREA: Procurement
+TEST NAME: Edit Company Accounting Options related to Procurement
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ensure company accounting options related to procurement are configured correctly:  Procurement Tax Options:  Calculate Tax Due to Supplier Enter Tax Due to Supplier or Calculate Self Assessed Taxes
+
+WORKDAY ROLE: Finance Organization Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
+2. wait for search results
+3. click search result containing "Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default"
+4. wait for page to load
+5. screenshot as "PRO-3-0020_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Related Action From Company > Edit Company Accounting Details > Update the Tax Option Default
+
+### 1. Test Scenarios Index (score: 18)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Regi...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

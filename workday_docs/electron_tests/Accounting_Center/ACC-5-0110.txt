@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: ACC-5-0110
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review AC Custom Account Posting Rule Dimension(s)
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: LOW ❌ (RAG Score: 0.0)
+================================================================================
+
+DESCRIPTION:
+1. Run View Custom Account Posting Rule Dimension report
+2. Review any custom account posting rule dimensions created for use in posting rule mapping
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: 1. Run View Custom Account Posting Rule Dimension report
+2. Review any custom account posting rule d
+
+ELECTRON STEPS:
+# [INCOMPLETE: No Task/Step provided in source data]
+# This scenario requires manual review
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+================================================================================

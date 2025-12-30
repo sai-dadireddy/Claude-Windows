@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: PRO-2-0310
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create Receipt Accrual
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a receipt accrual at month end to accrue for the liability of items received but not yet paid for via supplier invoice.
+
+WORKDAY ROLE: Accounting Operations Lead or Procurement Operations Lead
+
+ELECTRON STEPS:
+1. enter search box as "Create Receipt Accrual"
+2. wait for search results
+3. click search result containing "Create Receipt Accrual"
+4. wait for page to load
+5. screenshot as "PRO-2-0310_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Receipt Accrual
+
+### 1. Admin Guide Spend Management (score: 8)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing.........................................................................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

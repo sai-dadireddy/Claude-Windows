@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-2-0320
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create a Supplier Contact
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a supplier contact for a supplier
+
+WORKDAY ROLE: Supplier Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Add contact on the contact tab of the supplier record Or use an EIB"
+2. wait for search results
+3. click search result containing "Add contact on the contact tab of the supplier record Or use an EIB"
+4. wait for page to load
+5. screenshot as "PRO-2-0320_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add contact on the contact tab of the supplier record Or use an EIB
+
+### 1. Kb Procurement Requisition (score: 12)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workda...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

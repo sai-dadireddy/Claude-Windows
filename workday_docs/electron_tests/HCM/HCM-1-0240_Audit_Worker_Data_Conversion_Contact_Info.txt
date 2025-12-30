@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-1-0240
+FUNCTIONAL AREA: HCM
+TEST NAME: Audit Worker Data Conversion (Contact Info)
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that the workers' contact information is accurate. Verify that the expected fields have been populated and spot check for accuracy. If historical terminated workers were converted, include review of terminated workers.
+
+WORKDAY ROLE: HR Auditor
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Auditor permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract Worker Contact information"
+2. wait for search results
+3. click search result containing "Extract Worker Contact information"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0240_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Worker Contact information
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday...
+================================================================================

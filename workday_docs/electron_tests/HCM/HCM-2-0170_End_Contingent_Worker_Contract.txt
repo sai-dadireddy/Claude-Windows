@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0170
+FUNCTIONAL AREA: HCM
+TEST NAME: End Contingent Worker Contract
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+End a contingent worker contract. If the worker had any in-process BPs, security group assignments, or delegations, be sure that these are finalized, reassigned, or ended, respectively. Initiate as various security groups and validation termination reason setup and visibility. Take note of approval routings as applicable and confirm process.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "End Contingent Worker Contract"
+2. wait for search results
+3. click search result containing "End Contingent Worker Contract"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0170_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: End Contingent Worker Contract
+
+### 1. Admin Guide Human Capital Management (score: 9)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information...............................................
+================================================================================

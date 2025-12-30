@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: INV-2-0030
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Par Location
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: 1. Create Location w/ Par Usage
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Location w/ Par Usage"
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "INV-2-0030_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Create Location w/ Par Usage
+
+### 1. Electron Test Samples (score: 5)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains ...
+================================================================================

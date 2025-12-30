@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: INV-1-0180
+FUNCTIONAL AREA: Inventory
+TEST NAME: Confirm Custom Validations
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Maintain Custom Validations task
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Custom Validations task"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-1-0180_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Custom Validations task
+
+### 1. Admin Guide Adaptive Planning And Consolidation (score: 4)
+Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
+```
+Adaptive Planning
+and Consolidation
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Adaptive Planning and Consolidation (AP&C).................................................... 7
+Financial Accounting in AP&C.........
+================================================================================

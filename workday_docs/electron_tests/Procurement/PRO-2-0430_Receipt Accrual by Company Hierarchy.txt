@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: PRO-2-0430
+FUNCTIONAL AREA: Procurement
+TEST NAME: Receipt Accrual by Company Hierarchy
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Run receipt accrual by company or company hierarchy on the Create Receipt Accrual and Schedule Receipt Accrual Creation Tasks
+
+WORKDAY ROLE: Accountant
+Business Asset Accountant
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Receipt Accrual or
+2. Schedule Receipt Accrual Creation"
+2. wait for search results
+3. click search result containing "1. Create Receipt Accrual or
+2. Schedule Receipt Accrual Creation"
+4. wait for page to load
+5. screenshot as "PRO-2-0430_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Create Receipt Accrual or
+2. Schedule Receipt Accrual Creation
+
+### 1. WSDL: Financial_Management (score: 8)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial Reporting, Tax, Financial Orga...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

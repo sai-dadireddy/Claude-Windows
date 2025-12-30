@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: ACC-3-0050
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Account Source Configuration
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 38.0)
+================================================================================
+
+DESCRIPTION:
+Journal source configuration applies the rules/fields for populating the journal header and lines of the journal to be created.  Review configuration for accuracy of fields to be used
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Journal source configuration applies the rules/fields for populating the journal header and lines of
+
+ELECTRON STEPS:
+1. # 1. View Accounting Source
+2. # 2. Select Accounting Source from list
+3. # 3. Review Journal Header Rules and eview to ensure proper fields in use for company, ledger type, accounting date and journal source (may have option configuration for book codes, memo and external ref id)
+4. # 4. Click on Journal Line Rules tab and review
+5. screenshot as "ACC-3-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Education And Government
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

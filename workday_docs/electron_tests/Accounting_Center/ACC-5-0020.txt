@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACC-5-0020
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Mapping Table definition
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 26.0)
+================================================================================
+
+DESCRIPTION:
+Review to ensure proper configuration of mapping parameters and proper worktag
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst permissions
+- Required context: Review to ensure proper configuration of mapping parameters and proper worktag
+
+ELECTRON STEPS:
+1. # 1. Search for View Mapping Table Definition report
+2. # 2. Select definition from list
+3. # 3. Review parameters tab for proper Display Name, wildcard usage and ranges
+4. verify 4. Review Worktags tab and verify Worktag Types (Accounting Worktag Types)
+5. screenshot as "ACC-5-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

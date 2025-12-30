@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: BUD-2-0010
+FUNCTIONAL AREA: Budgets
+TEST NAME: Edit Position Plan Structure
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 12.0)
+================================================================================
+
+DESCRIPTION:
+Edit the existing Position Plan Structure to include dimensions that the Customer budgets by.
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Edit the existing Position Plan Structure to include dimensions that the Customer budgets by.
+
+ELECTRON STEPS:
+1. # Edit Plan Structure
+2. screenshot as "BUD-2-0010_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

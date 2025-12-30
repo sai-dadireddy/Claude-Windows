@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-2-0140
+FUNCTIONAL AREA: HCM
+TEST NAME: Terminate an Employee Current Date
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Terminate an employee a with a current date and verify that the position is available and unfilled. If the worker had any in-process BPs, security group assignments, or delegations, be sure that these are finalized, reassigned, or ended, respectively. Verify WD account credentials are enabled/disabled as expected. Initiate as various security groups and validate termination reason setup and visibility.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Terminate Employee"
+2. wait for search results
+3. click search result containing "Terminate Employee"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0140_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Terminate Employee
+
+### 1. Kb Benefits Enrollment (score: 7)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administ...
+================================================================================

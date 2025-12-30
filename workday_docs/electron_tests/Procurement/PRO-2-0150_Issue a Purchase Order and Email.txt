@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-2-0150
+FUNCTIONAL AREA: Procurement
+TEST NAME: Issue a Purchase Order and Email
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Issue a purchase order and email.
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "Issue Purchase Order or Related Action from the Purchase Order > Issue"
+2. wait for search results
+3. click search result containing "Issue Purchase Order or Related Action from the Purchase Order > Issue"
+4. wait for page to load
+5. screenshot as "PRO-2-0150_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Issue Purchase Order or Related Action from the Purchase Order > Issue
+
+### 1. Kb Procurement Purchase Order (score: 9)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Sou...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

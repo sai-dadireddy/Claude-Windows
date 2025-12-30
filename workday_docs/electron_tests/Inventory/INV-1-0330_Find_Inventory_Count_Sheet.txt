@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: INV-1-0330
+FUNCTIONAL AREA: Inventory
+TEST NAME: Find Inventory Count Sheet
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Find Inventory Count Sheet
+
+ELECTRON STEPS:
+1. enter search box as "Find Inventory Count Sheet"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-1-0330_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Inventory Count Sheet
+
+### 1. Admin Guide Glossary (score: 4)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Glossary ...
+================================================================================

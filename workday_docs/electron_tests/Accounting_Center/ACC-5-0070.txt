@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: ACC-5-0070
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Accounting Source Stages
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+Review account source stages and ensure they are in sync
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Review account source stages and ensure they are in sync
+
+ELECTRON STEPS:
+1. # 1. View Accounting Source Stages
+2. # 2. Select accounting source from list
+3. # 3. Review Schema Status and ensure Status is listed as "In Sync" for enrichment stage(s) and Published for the detailed account stage
+4. screenshot as "ACC-5-0070_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Kb Procurement Requisition
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

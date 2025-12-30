@@ -1,0 +1,52 @@
+================================================================================
+TEST ID: HCM-1-0440
+FUNCTIONAL AREA: HCM
+TEST NAME: Unions - Audit Union Membership Assignment
+CONFIDENCE: [MEDIUM] Score: 4.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Enter the top-level supervisory organization name (or use code 'Sup1.0), check 'Include Subordinate Organizations' and verify that all eligible workers have membership in their required unions.
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Extract Worker Union Memberships Report"
+2. wait for search results
+3. click search result containing "Extract Worker Union Memberships Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-1-0440_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Extract Worker Union Memberships Report
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wo...
+================================================================================

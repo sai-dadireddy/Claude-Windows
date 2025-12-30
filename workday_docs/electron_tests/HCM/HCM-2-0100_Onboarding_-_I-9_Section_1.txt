@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: HCM-2-0100
+FUNCTIONAL AREA: HCM
+TEST NAME: Onboarding - I-9 (Section 1)
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+As part of Onboarding, the employee should receive a task within onboarding to complete section 1 of the I-9 form. Verify the new hire can complete section 1 of the I-9 form.
+
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Complete Form I-9"
+2. wait for search results
+3. click search result containing "Complete Form I-9"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0100_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Complete Form I-9
+
+### 1. Admin Guide Workday Studio (score: 8)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals.........................................................................................1...
+================================================================================

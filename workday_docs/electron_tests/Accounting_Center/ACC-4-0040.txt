@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACC-4-0040
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Create a new Mapping Table Definition
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 33.0)
+================================================================================
+
+DESCRIPTION:
+Create new mapping table definition for source data to worktag mapping
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst permissions
+- Required context: Create new mapping table definition for source data to worktag mapping
+
+ELECTRON STEPS:
+1. # 1. Create Mapping Table Definition
+2. # 2. Define Name (source system is optional)
+3. # 3. In parameters tab enter Display Name and check if either to allow wildcards (allow wildcard) or ranges (range field) in mapping tables
+4. # 4. In worktags tab select worktags to be used in mapping table
+5. screenshot as "ACC-4-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Resource_Management
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Resource_Management
+
+================================================================================

@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: INV-1-0380
+FUNCTIONAL AREA: Inventory
+TEST NAME: View Business Process for Quick Issue Event
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Search "BP: Quick Issue Event"
+
+ELECTRON STEPS:
+1. enter search box as "Search "BP: Quick Issue Event""
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-1-0380_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Search "BP: Quick Issue Event"
+
+### 1. Admin Guide Glossary (score: 3)
+Source: Admin-Guide-Glossary.pdf
+```
+Glossary
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Full Glossary of Terms........................................................................................3
+      ©2025 Workday, Inc. All rights reserved
+Workday Proprietary and Confidential      
+ | Full Gloss...
+================================================================================

@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HCM-1-0640
+FUNCTIONAL AREA: HCM
+TEST NAME: BP: Request Compensation Change & Works Council Steps (if applicable)
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Validate the business process steps for Request Compensation Change and confirm the Deny option has been disabled for Works Council
+- Expected Result: Task completed successfully
+- Workday Role: HR Administrator
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================

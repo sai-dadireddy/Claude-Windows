@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: INV-1-0370
+FUNCTIONAL AREA: Inventory
+TEST NAME: Adjust Average Cost of an Inventoried Item
+CONFIDENCE: [HIGH] Score: 9.0/10
+================================================================================
+
+TASK/STEP: 1)Adjust Inventory Cost
+2) Enter Criteria of Item to change
+Company / Inventory Site / Item
+3) Enter new cost
+
+ELECTRON STEPS:
+1. enter search box as "1)Adjust Inventory Cost
+2) Enter Criteria of Item to change
+Company / Inventory Site / Item
+3) Enter new cost"
+2. enter field "Criteria of Item to change
+Company / Inventory Site / Item
+3) Enter new cost
+
+### 1" with appropriate value
+3. submit form
+4. screenshot as "INV-1-0370_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1)Adjust Inventory Cost
+2) Enter Criteria of Item to change
+Company / Inventory Site / Item
+3) Enter new cost
+
+### 1. WSDL: Resource_Management (score: 14)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Suppl...
+================================================================================

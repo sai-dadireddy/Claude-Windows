@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-1-0050
+FUNCTIONAL AREA: Procurement
+TEST NAME: Workcart Link Overrides
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Cart link overrides allow you to hide requisition selections that do not apply to your organization's deployment of Workday Procurement and/or add instructional text to help guide your end users. Make sure text displayed will help users who will be creating requisitions.
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Create Requisition or View Cart (Options listed are the Cart Links)"
+2. wait for search results
+3. click search result containing "Create Requisition or View Cart (Options listed are the Cart Links)"
+4. wait for page to load
+5. screenshot as "PRO-1-0050_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Requisition or View Cart (Options listed are the Cart Links)
+
+### 1. Test Scenarios Index (score: 15)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

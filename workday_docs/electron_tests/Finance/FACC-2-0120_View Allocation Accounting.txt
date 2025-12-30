@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: FACC-2-0120
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: View Allocation Accounting
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Find Allocations"
+2. wait for search results
+3. click search result
+4. wait for page load
+5. complete required actions
+6. click "Done" or "Submit" button
+7. screenshot as "FACC-2-0120_complete.png"
+
+VERIFICATION:
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Allocations
+
+### 1. Kb Procurement Requisition (score: 2)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Resource Ma
+...
+================================================================================

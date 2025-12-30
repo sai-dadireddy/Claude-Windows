@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: FACC-4-0010-02
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Hire Using Position Management
+CONFIDENCE: [LOW] Score: 3.0/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Hire Employee"
+2. wait for search results
+3. click search result
+4. wait for page load
+5. complete required actions
+6. click "Done" or "Submit"
+7. screenshot as "FACC-4-0010-02_complete.png"
+
+VERIFICATION:
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+================================================================================

@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: BEN-2-0060
+FUNCTIONAL AREA: Benefits
+TEST NAME: Passive Event (Overage Dependent Passive Event)
+CONFIDENCE: [MEDIUM] Score: 7.0/10
+================================================================================
+
+TASK/STEP: Schedule Passive Events
+
+RAG QUERY RESULT:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Schedule Passive Events
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Adm
+... (truncated)
+
+ELECTRON STEPS:
+1. enter search box as "Schedule Passive Events"
+2. wait for search results
+3. click search result containing "Schedule Passive Events"
+4. wait for page load
+5. fill required fields based on RAG guidance
+6. screenshot as "BEN-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+NOTES:
+- Confidence score based on RAG result quality and expected result clarity
+- Review and enhance steps as needed based on actual Workday UI
+================================================================================

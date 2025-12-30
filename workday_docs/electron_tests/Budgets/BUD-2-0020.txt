@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: BUD-2-0020
+FUNCTIONAL AREA: Budgets
+TEST NAME: Create Position Plan Template
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 12.0)
+================================================================================
+
+DESCRIPTION:
+As a related action off the Plan Structure, above, "Plan Template > Create Plan Template". Populate all required fields.
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: As a related action off the Plan Structure, above, "Plan Template > Create Plan Template". Populate 
+
+ELECTRON STEPS:
+1. # Create Plan Template
+2. screenshot as "BUD-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

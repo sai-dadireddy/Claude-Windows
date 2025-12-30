@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: INV-1-0210
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Ad Hoc Putaway
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: 1)Putaway Inventory
+2)Select Ah Hoc Putaway
+3)Select Inventory Site
+
+ELECTRON STEPS:
+1. enter search box as "1)Putaway Inventory
+2)Select Ah Hoc Putaway
+3)Select Inventory Site"
+2. click appropriate action button
+3. screenshot as "INV-1-0210_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1)Putaway Inventory
+2)Select Ah Hoc Putaway
+3)Select Inventory Site
+
+### 1. Admin Guide Integrations (1) (score: 4)
+Source: Admin-Guide-Integrations (1).pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations.........................
+================================================================================

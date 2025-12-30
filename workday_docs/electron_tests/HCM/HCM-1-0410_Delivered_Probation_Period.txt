@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: HCM-1-0410
+FUNCTIONAL AREA: HCM
+TEST NAME: Delivered Probation Period
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Access the View Probation Periods for Country to check the probation periods configured.
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "View Probation Periods for Country"
+2. wait for search results
+3. click search result containing "View Probation Periods for Country"
+4. wait for page to load
+5. RAG-extracted steps:
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "HCM-1-0410_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Probation Periods for Country
+
+### 1. WSDL: Human_Resources (score: 5)
+Source: Human_Resources.wsdl
+```
+WSDL: Human_Resources
+Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterpri...
+================================================================================

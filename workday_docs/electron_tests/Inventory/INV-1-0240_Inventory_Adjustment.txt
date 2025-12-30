@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: INV-1-0240
+FUNCTIONAL AREA: Inventory
+TEST NAME: Inventory Adjustment
+CONFIDENCE: [LOW] Score: 2.0/10
+================================================================================
+
+TASK/STEP: nan
+
+ELECTRON STEPS:
+1. enter search box as "nan"
+2. [MANUAL] No RAG guidance available - manual test required
+3. screenshot as "INV-1-0240_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+[NO RAG RESPONSE] - Manual test creation required
+================================================================================

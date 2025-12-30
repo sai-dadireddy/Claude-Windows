@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: FACC-2-0130
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Run Revaluation
+CONFIDENCE: [HIGH] Score: 7.0/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Run Revaluation"
+2. wait for search results
+3. click search result
+4. wait for report page
+5. set report parameters
+6. click "OK" or "Run" button
+7. screenshot as "FACC-2-0130_complete.png"
+
+VERIFICATION:
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run Revaluation
+
+### 1. Admin Guide  Financial Management (score: 7)
+Source: Admin-Guide--Financial-Management.pdf
+```
+Financial Management
+Product Summary
+December 18, 2025
+ | Contents | ii
+Contents
+Financial Management...................................................................................... 26
+Common Financial Components......................................................
+...
+================================================================================

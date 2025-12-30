@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-2-0090
+FUNCTIONAL AREA: HCM
+TEST NAME: Onboarding
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Using one of the hires and contingent worker (if applicable) from previous testing scenarios, proxy in as new hire. Verify Workday account access is as expected and credential notifications are sent as expected. Complete all Onboarding tasks. Notice ordering of tasks in inbox, and any applicable approval processes for any sub-processes. Notice content and messaging on Onboarding dashboard.
+
+WORKDAY ROLE: Employee / Contingent Worker As Self
+EST. DURATION: 30 minutes
+
+PREREQUISITES:
+- User logged in with Employee / Contingent Worker As Self permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Inbox"
+2. wait for search results
+3. click search result containing "Inbox"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0090_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Inbox
+
+### 1. Kb Absence Time Off (score: 6)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management...
+```
+
+#...
+================================================================================

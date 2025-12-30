@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-2-0110
+FUNCTIONAL AREA: HCM
+TEST NAME: Onboarding - I-9 (Section 2) for Local Hire
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+As part of Onboarding, confirm the next recipient (HR Partner) receives and completes Section 2 of the Form I-9 and can complete I-9 verification.
+
+WORKDAY ROLE: HR Partner
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Inbox"
+2. wait for search results
+3. click search result containing "Inbox"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0110_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Inbox
+
+### 1. Kb Absence Time Off (score: 6)
+Source: kb_absence_time_off.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Absence Management...
+```
+
+#...
+================================================================================

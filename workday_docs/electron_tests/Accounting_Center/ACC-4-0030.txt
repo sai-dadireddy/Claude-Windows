@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: ACC-4-0030
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Edit an Accounting Source
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 55.0)
+================================================================================
+
+DESCRIPTION:
+Update Accounting Source with new configuration options
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Update Accounting Source with new configuration options
+
+ELECTRON STEPS:
+1. # 1. Edit Accounting Source
+2. # 2. Select Accounting Source from list
+3. # 3. (optional) Update fields for As of Date (used to define effective configuration date) and Transactions Grouping ID (used to group multiple rows into a single row per instance defined)
+4. # 4. Click Edit Configuration
+5. verify 5. Select Effective Beginning date (verify date is set to before initial transaction dates from source data (same as the As of Date field in step 3).  Initial date is typically 01/01/1900.
+6. # 6. Journal Header Rules (update/change any fields needed)
+7. # 7. Journal Line Rules (update fields as needed)
+8. screenshot as "ACC-4-0030_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Adaptive Planning And Consolidation
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

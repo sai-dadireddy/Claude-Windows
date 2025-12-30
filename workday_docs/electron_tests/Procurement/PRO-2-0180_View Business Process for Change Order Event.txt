@@ -1,0 +1,44 @@
+================================================================================
+TEST ID: PRO-2-0180
+FUNCTIONAL AREA: Procurement
+TEST NAME: View Business Process for Change Order Event
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review default Business Process for Change Orders. Ensure discussed modifications are included
+
+WORKDAY ROLE: Business Process Administrator
+
+ELECTRON STEPS:
+1. enter search box as "bp: Change Order Event"
+2. wait for search results
+3. click search result containing "bp: Change Order Event"
+4. wait for page to load
+5. screenshot as "PRO-2-0180_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: bp: Change Order Event
+
+### 1. Kb Benefits Enrollment (score: 3)
+Source: kb_benefits_enrollment.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Admi...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: END-2-0030
+FUNCTIONAL AREA: Endowments
+TEST NAME: Create Donor Contribution
+CONFIDENCE: [HIGH] Score: 8.5/10
+================================================================================
+
+TASK/STEP: Create Donor Contribution
+
+ELECTRON STEPS:
+1. enter search box as "Create Donor Contribution"
+2. submit form
+3. screenshot as "END-2-0030_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Donor Contribution
+
+### 1. Workday Feature Descriptions Ditamap (score: 3)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning...........................................
+================================================================================

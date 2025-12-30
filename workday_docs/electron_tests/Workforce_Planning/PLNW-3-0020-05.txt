@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: PLNW-3-0020-05
+FUNCTIONAL AREA: PLN - Workforce Planning
+TEST NAME: Review Allocation Summary
+WORKDAY ROLE: Planning Admin (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 18.0)
+================================================================================
+
+DESCRIPTION:
+Verify the entire allocated out amount matches the allocated in amount.
+
+PREREQUISITES:
+- User logged in with Planning Admin (Customer) permissions
+- Required context: Verify the entire allocated out amount matches the allocated in amount.
+
+ELECTRON STEPS:
+1. # -Enter data in each model and save all sheets.
+2. # -Open the [Allocation Summary] report for the current version.
+3. verify -Verify the allocation out amount match the allocation in amount.
+4. screenshot as "PLNW-3-0020-05_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Kb Procurement Requisition
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

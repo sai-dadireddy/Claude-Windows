@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-1-0340
+FUNCTIONAL AREA: Inventory
+TEST NAME: Count Inventory
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Count Inventory
+
+ELECTRON STEPS:
+1. enter search box as "Count Inventory"
+2. submit form
+3. screenshot as "INV-1-0340_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Count Inventory
+
+### 1. Admin Guide Spend Management (score: 7)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing................................................................................
+================================================================================

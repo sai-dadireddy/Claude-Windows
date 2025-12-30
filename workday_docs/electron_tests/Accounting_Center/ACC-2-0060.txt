@@ -1,0 +1,39 @@
+================================================================================
+TEST ID: ACC-2-0060
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Accounting Center Batch(es)
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 32.0)
+================================================================================
+
+DESCRIPTION:
+Review the batches to see stages completed and transaction count
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst permissions
+- Required context: Review the batches to see stages completed and transaction count
+
+ELECTRON STEPS:
+1. # 1. Find Accounting Center Batches
+2. # 2. Select From/To dates for batches processed
+3. # 3. Filter on Batch Status and Accounting Source (optional)
+4. # 4. Click OK
+5. # 5. Select batch(es) to review by clicking on magnifying glass icon in the "batch" column of report
+6. screenshot as "ACC-2-0060_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: User Guide Sourcing Managers
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

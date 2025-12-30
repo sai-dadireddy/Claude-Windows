@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: PLNF-2-0010-04
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Add New "Z" Asset
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 28.0)
+================================================================================
+
+DESCRIPTION:
+Add new Asset with Asset Class "Z"
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Add new Asset with Asset Class "Z"
+
+ELECTRON STEPS:
+1. # -Go to Sheets > Capital.
+2. # -Create a new row and add a new asset with a future start date.
+3. # -Right click and select Row Details:
+4. verify -Verify the depreciation calculations begin the same month as the start date.
+5. verify -Verify the depreciation calculations are correct each month
+6. verify -Verify the depreciation stops after the asset life expires (start month + months of asset life)
+7. screenshot as "PLNF-2-0010-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Glossary
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

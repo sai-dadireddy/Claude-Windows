@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-1-0050
+FUNCTIONAL AREA: Endowments
+TEST NAME: Restricted By Values
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Maintain Restricted By Values
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Restricted By Values"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-1-0050_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Restricted By Values
+
+### 1. Admin Guide Authentication And Security (score: 4)
+Source: Admin-Guide-Authentication-and-Security.pdf
+```
+Authentication
+and Security
+Product Summary
+December 11, 2025
+ | Contents | ii
+Contents
+Authentication and Security.................................................................................7
+Authentication.....................................
+================================================================================

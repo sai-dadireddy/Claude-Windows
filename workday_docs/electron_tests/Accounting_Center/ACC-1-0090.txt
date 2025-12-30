@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: ACC-1-0090
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Ingestion Lineage
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 20 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 24.0)
+================================================================================
+
+DESCRIPTION:
+Review lineage of ingested data to follow steps through enrichment
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Review lineage of ingested data to follow steps through enrichment
+
+ELECTRON STEPS:
+1. # 1. Navigate to View Accounting Source Stages and select the Accounting Source
+2. # 2. Select Dataset/View Lineage from the Input Dataset related action menu
+3. # 3. Review lineage of the dataset to review process flow of ingested data through enrichment
+4. screenshot as "ACC-1-0090_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Kb Procurement Requisition
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

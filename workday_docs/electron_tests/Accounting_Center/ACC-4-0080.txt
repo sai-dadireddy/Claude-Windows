@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACC-4-0080
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Find Journals
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+Accountant
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+Review Accounting Center Summary Journals created from batches
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst
+Accountant permissions
+- Required context: Review Accounting Center Summary Journals created from batches
+
+ELECTRON STEPS:
+1. # 1. From Accounting Center Batch (see scenario FINAC-2-002 for steps to find batch), select View Accounting Center Summary Journals from the related actions off the batch  field
+2. # 2. Review summary journal batch(es) created (click magnifying glass icon under the Journal column)
+3. screenshot as "ACC-4-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Education And Government
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

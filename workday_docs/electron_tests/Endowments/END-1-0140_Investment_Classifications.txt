@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: END-1-0140
+FUNCTIONAL AREA: Endowments
+TEST NAME: Investment Classifications
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Maintain Investment Classifications
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Investment Classifications"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-1-0140_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Investment Classifications
+
+### 1. Kb Finance Journal Entry (score: 2)
+Source: kb_finance_journal_entry.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Wo...
+================================================================================

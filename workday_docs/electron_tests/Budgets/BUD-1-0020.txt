@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: BUD-1-0020
+FUNCTIONAL AREA: Budgets
+TEST NAME: Verify Entry Types for position.
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 9.0)
+================================================================================
+
+DESCRIPTION:
+Verify that the Entry Types exist for position.
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Verify that the Entry Types exist for position.
+
+ELECTRON STEPS:
+1. # View Entry Types
+2. screenshot as "BUD-1-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Human_Resources
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Human_Resources
+
+================================================================================

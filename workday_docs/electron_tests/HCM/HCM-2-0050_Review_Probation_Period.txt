@@ -1,0 +1,51 @@
+================================================================================
+TEST ID: HCM-2-0050
+FUNCTIONAL AREA: HCM
+TEST NAME: Review Probation Period
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Add Probation Period for Worker ad hoc or as part of Hire. Confirm the probation end date defaults in and that the duration reflects configured rules. Review probation type and probation reason prompts, and confirm values are as expected. Next, using the Employee Probation Periods report, search for a worker that has an active probation period and initiate a probation action based on configured outcomes (Edit / Extend / Change Job / Terminate). Review the questionnaire as part of the Review Probation Period event. Ensure questionnaire answer can be seen within the Submit Probation Period Review step and also via reporting.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 30 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Add Probation Period, Employee Probation Periods, Review Probation Period"
+2. wait for search results
+3. click search result containing "Add Probation Period, Employee Probation Periods, Review Probation Period"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Add Probation Period, Employee Probation Periods, Review Probation Period
+
+### 1. Electron Test Samples (score: 5)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+===========================================================...
+================================================================================

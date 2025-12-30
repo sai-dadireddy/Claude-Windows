@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-2-0080-02
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Report 2
+WORKDAY ROLE: Planning Admin & Preparers (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 14.0)
+================================================================================
+
+DESCRIPTION:
+Validate Report 2
+
+PREREQUISITES:
+- User logged in with Planning Admin & Preparers (Customer) permissions
+- Required context: Validate Report 2
+
+ELECTRON STEPS:
+1. enter search box as "Reporting and Run Report."
+2. wait for search results
+3. click search result containing "Reporting and Run Report."
+4. wait for page to load
+5. verify Validate that the report format and Data are correct.
+6. screenshot as "PLNF-2-0080-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Authentication And Security
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

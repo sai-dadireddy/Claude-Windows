@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: CP-1-0070
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Review Deductions Configuration
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected deductions are present in the tenant (only review deductions where owner = customer)
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: 15 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Administrator permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "All Deductions"
+2. wait for search results
+3. click search result containing "All Deductions"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "CP-1-0070_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: All Deductions
+
+### 1. Test Scenarios Index (score: 7)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory...
+================================================================================

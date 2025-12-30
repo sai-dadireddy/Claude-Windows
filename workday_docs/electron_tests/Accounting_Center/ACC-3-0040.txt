@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: ACC-3-0040
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Accounting Source
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 27.0)
+================================================================================
+
+DESCRIPTION:
+Review Account Source to ensure proper configuration for source file processing
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Review Account Source to ensure proper configuration for source file processing
+
+ELECTRON STEPS:
+1. # 1. Search for View Accounting Source report
+2. # 2. Select Accounting Source from list
+3. # 3. Ensure "As of Date" is source field to be used for determining effective date configuration to be used
+4. screenshot as "ACC-3-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

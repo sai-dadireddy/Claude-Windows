@@ -1,0 +1,40 @@
+================================================================================
+TEST ID: PRO-2-0260
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create an Invoice Adjustment for a Return
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create an invoice adjustment to increase or decrease liability.
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist
+
+ELECTRON STEPS:
+1. enter search box as "Create Invoice Adjustment or if your return reasons have the "invoice adjustment" checkbox checked, then the return will automatically kick of the invoice adjustment creation process"
+2. wait for search results
+3. click search result containing "Create Invoice Adjustment or if your return reasons have the "invoice adjustment" checkbox checked, then the return will automatically kick of the invoice adjustment creation process"
+4. wait for page to load
+5. screenshot as "PRO-2-0260_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Invoice Adjustment or if your return reasons have the "invoice adjustment" checkbox checked, then the return will automatically kick of the invoice adjustment creation process
+
+### 1. WSDL: Financial_Management (score: 17)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financ...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

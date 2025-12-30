@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: FACC-1-0430
+FUNCTIONAL AREA: Accounting & Finance
+TEST NAME: Verify Tax Declaration Definitions
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+ELECTRON STEPS:
+1. enter search box as "Find Tax Declaration Definitions"
+2. wait for search results
+3. click search result
+4. wait for page load
+5. complete required actions
+6. click "Done" or "Submit" button
+7. screenshot as "FACC-1-0430_complete.png"
+
+VERIFICATION:
+- [ ] Transaction completed successfully
+- [ ] No error messages displayed
+
+RAG INSIGHTS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Tax Declaration Definitions
+
+### 1. WSDL: Financial_Management (score: 4)
+Source: Financial_Management.wsdl
+```
+WSDL: Financial_Management
+Description: The Financial Management Web Service contains operations that expose Workday Financials data. It includes data relative to Accounts, Accounting, Business Plans, Financial Reporting, Tax, Financial Organizations, Basic Worktags, Relate
+...
+================================================================================

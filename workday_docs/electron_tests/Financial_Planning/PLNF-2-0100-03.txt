@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: PLNF-2-0100-03
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Dashboard 3
+WORKDAY ROLE: Planning Admin & Preparers (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 15.0)
+================================================================================
+
+DESCRIPTION:
+Validate Dashboard 3
+
+PREREQUISITES:
+- User logged in with Planning Admin & Preparers (Customer) permissions
+- Required context: Validate Dashboard 3
+
+ELECTRON STEPS:
+1. enter search box as "Dashboards, Select appropriate Perspective & Version and validate the format and Data are correct"
+2. wait for search results
+3. click search result containing "Dashboards, Select appropriate Perspective & Version and validate the format and Data are correct"
+4. wait for page to load
+5. screenshot as "PLNF-2-0100-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

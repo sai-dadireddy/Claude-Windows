@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-1-0140
+FUNCTIONAL AREA: Inventory
+TEST NAME: User Based Inventory Roles
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Run report "User-Based Security Group Assignments"
+
+ELECTRON STEPS:
+1. enter search box as "Run report "User-Based Security Group Assignments""
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "INV-1-0140_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run report "User-Based Security Group Assignments"
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analy...
+================================================================================

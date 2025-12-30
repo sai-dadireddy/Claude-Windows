@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-1-0150
+FUNCTIONAL AREA: Procurement
+TEST NAME: Confirm Role Based Procurement Assignments
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Confirm that these Role Based Security Roles for Procurement have been properly assigned or are defaulting to each Company (depending on scope): Buyer, Supplier Contract Specialist, Procurement Data Entry Specialist
+
+WORKDAY ROLE: Security Administrator
+
+ELECTRON STEPS:
+1. enter search box as "Roles for Organization and Subordinates"
+2. wait for search results
+3. click search result containing "Roles for Organization and Subordinates"
+4. wait for page to load
+5. screenshot as "PRO-1-0150_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Roles for Organization and Subordinates
+
+### 1. Test Scenarios Index (score: 10)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organiza...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-1-0530
+FUNCTIONAL AREA: HCM
+TEST NAME: Unified Duplicate Management Framework - Validate Match Rules
+CONFIDENCE: [LOW] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review the configured match rules for Unified Duplicate Management Framework if in scope for your deployment
+
+WORKDAY ROLE: Recruiting Administrator / 
+ Security Administrator
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with Recruiting Administrator / 
+ Security Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Manage Match Rules"
+2. wait for search results
+3. click search result containing "Manage Match Rules"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0530_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Manage Match Rules
+
+### 1. Electron Test Samples (score: 3)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample Elec...
+================================================================================

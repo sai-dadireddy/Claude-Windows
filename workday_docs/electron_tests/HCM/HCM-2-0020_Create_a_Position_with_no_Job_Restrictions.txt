@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: HCM-2-0020
+FUNCTIONAL AREA: HCM
+TEST NAME: Create a Position with no Job Restrictions
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a new position without position restrictions (only populate required fields) and verify that the position is available to be filled. Note that when hiring, you may select any job profile, location, time type or other job detail since no restrictions have been made. Be sure to take note of the effective date used when creating the position. In order to be available, the effective date must be current- or past-dated.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Create Position"
+2. wait for search results
+3. click search result containing "Create Position"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+6. screenshot as "HCM-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Position
+
+### 1. Kb Hcm Change Job (score: 7)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+...
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: END-2-0090
+FUNCTIONAL AREA: Endowments
+TEST NAME: Edit Gift
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Find Gifts - Related Action off Gift>Change
+
+ELECTRON STEPS:
+1. enter search box as "Find Gifts - Related Action off Gift>Change"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "END-2-0090_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Gifts - Related Action off Gift>Change
+
+### 1. Admin Guide Education And Government (score: 6)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management................................
+================================================================================

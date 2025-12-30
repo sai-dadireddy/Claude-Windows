@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-4-0060-01
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Cash Flow Validation
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 25.0)
+================================================================================
+
+DESCRIPTION:
+Review Cash Flow Account Attributes for Cash Flow Statement
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Review Cash Flow Account Attributes for Cash Flow Statement
+
+ELECTRON STEPS:
+1. enter search box as "Modeling > General Ledger Accounts"
+2. wait for search results
+3. click search result containing "Modeling > General Ledger Accounts"
+4. wait for page to load
+5. verify Generate Printable View into Excel and Validate that every Balance Sheet account is designated the correct Cash Flow Attribute
+6. screenshot as "PLNF-4-0060-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Glossary
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

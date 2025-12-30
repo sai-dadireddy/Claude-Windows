@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: INV-2-0160
+FUNCTIONAL AREA: Inventory
+TEST NAME: Change Item Spend Category
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Create Change Purchase Item Spend Category Request
+
+Reports
+Inventory Spend Category Change Accounting Impact
+Find Purchase Item Spend Category Requests
+View Change Purchase Item Spend Category Request
+
+ELECTRON STEPS:
+1. enter search box as "Create Change Purchase Item Spend Category Request
+
+Reports
+Inventory Spend Category Change Accounting Impact
+Find Purchase Item Spend Category Requests
+View Change Purchase Item Spend Category Request"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-2-0160_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Change Purchase Item Spend Category Request
+
+Reports
+Inventory Spend Category Change Accounting Impact
+Find Purchase Item Spend Category Requests
+View Change Purchase Item Spend Category Request
+
+### 1. Kb Procurement Requisition (score: 14)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE...
+================================================================================

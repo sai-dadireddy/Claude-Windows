@@ -1,0 +1,50 @@
+================================================================================
+TEST ID: HCM-2-0030
+FUNCTIONAL AREA: HCM
+TEST NAME: Edit Position Restrictions
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Edit an open position's restrictions and verify the changes on the open position.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Edit Position Restrictions"
+2. wait for search results
+3. click search result containing "Edit Position Restrictions"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0030_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Get_Server_Timestamp
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Edit Position Restrictions
+
+### 1. WSDL: Recruiting (score: 8)
+Source: Recruiting.wsdl
+```
+WSDL: Recruiting
+Description: The Recruiting Web Service contains operations that expose Workday Human Capital Management Business Services data for integration with Talent Management and Applicant Tracking systems.
+Operations:
+  - Get_Server_Timestamp: This operation retrieves Workday's current sys...
+================================================================================

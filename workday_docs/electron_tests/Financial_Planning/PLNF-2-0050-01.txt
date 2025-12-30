@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: PLNF-2-0050-01
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Verify Allocation Rules
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 18.0)
+================================================================================
+
+DESCRIPTION:
+Verify allocation configuration.
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify allocation configuration.
+
+ELECTRON STEPS:
+1. # -Go to Modeling > Allocation Rules
+2. verify -Validate that the appropriate levels, accounts and weights are being used.
+3. verify -Validate the versions selected and the rule start and end date
+4. screenshot as "PLNF-2-0050-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

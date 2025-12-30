@@ -1,0 +1,32 @@
+================================================================================
+TEST ID: INV-2-0080
+FUNCTIONAL AREA: Inventory
+TEST NAME: Issue Purchase Order
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Option 1: Issue Purchase Order from related actions
+Option 2: Issue Purchase Order task
+
+ELECTRON STEPS:
+1. enter search box as "Option 1: Issue Purchase Order from related actions
+Option 2: Issue Purchase Order task"
+2. submit form
+3. screenshot as "INV-2-0080_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Option 1: Issue Purchase Order from related actions
+Option 2: Issue Purchase Order task
+
+### 1. WSDL: Resource_Management (score: 10)
+Source: Resource_Management.wsdl
+```
+WSDL: Resource_Management
+Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppliers, Supplier Accounts, Expenses...
+================================================================================

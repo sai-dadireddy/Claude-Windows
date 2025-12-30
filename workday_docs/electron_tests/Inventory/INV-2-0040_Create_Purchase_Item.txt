@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-2-0040
+FUNCTIONAL AREA: Inventory
+TEST NAME: Create Purchase Item
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: 1. Create Purchase Item
+2. Fill in tab details
+
+ELECTRON STEPS:
+1. enter search box as "1. Create Purchase Item
+2. Fill in tab details"
+2. submit form
+3. screenshot as "INV-2-0040_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Create Purchase Item
+2. Fill in tab details
+
+### 1. Kb Procurement Requisition (score: 9)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Ana...
+================================================================================

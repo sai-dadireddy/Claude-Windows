@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNW-1-0020-03
+FUNCTIONAL AREA: PLN - Workforce Planning
+TEST NAME: Add New Salary Employee
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 27.0)
+================================================================================
+
+DESCRIPTION:
+Create new row on the Personnel sheet for Salary Employee
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Create new row on the Personnel sheet for Salary Employee
+
+ELECTRON STEPS:
+1. # -Go to Sheets > Personnel.
+2. # -Create a new row and add an hourly employee with a future start date.
+3. # -Right click and select Row Details.
+4. verify -Verify the calculations begin the same month as the start date.
+5. verify -Verify the calculations evaluate as expected.
+6. screenshot as "PLNW-1-0020-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Glossary
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

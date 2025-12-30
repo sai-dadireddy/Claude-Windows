@@ -1,0 +1,42 @@
+================================================================================
+TEST ID: PRO-2-0110
+FUNCTIONAL AREA: Procurement
+TEST NAME: View Business Process for Purchase Order Event
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review default Business Process for Purchase Orders. Ensure any discussed modifications are included.
+
+WORKDAY ROLE: Business Process Administrator
+
+ELECTRON STEPS:
+1. enter search box as "bp: Purchase Order Event"
+2. wait for search results
+3. click search result containing "bp: Purchase Order Event"
+4. wait for page to load
+5. screenshot as "PRO-2-0110_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: bp: Purchase Order Event
+
+### 1. procurement (score: 3)
+Source: procurement_v5.json
+```
+API: procurement
+GET /requisitions/{ID}/attachments?type=getFileContent - 
+GET /requisitions/{ID}/attachments/{subresourceID} - Retrieves the metadata or the attachment content of the specified requisition.
+DELETE /requisitions/{ID}/attachments/{subresourceID} - Deletes the specified requisition att......
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

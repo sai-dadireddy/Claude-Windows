@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: ACC-2-0020
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: View Business Process for Accounting Center Batch Initiation Event
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 14.0)
+================================================================================
+
+DESCRIPTION:
+Review the business process configuration and verify that all business process steps were triggered as expected and per requirements.  Discuss required modifications
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Review the business process configuration and verify that all business process steps were triggered 
+
+ELECTRON STEPS:
+1. # BP: Accounting Center Batch Initiation Event
+2. screenshot as "ACC-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

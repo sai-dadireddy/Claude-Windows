@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-1-0050
+FUNCTIONAL AREA: Inventory
+TEST NAME: Item Identifier Types
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Run report "Maintain Item Identifier Types"
+
+ELECTRON STEPS:
+1. enter search box as "Run report "Maintain Item Identifier Types""
+2. submit form
+3. screenshot as "INV-1-0050_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run report "Maintain Item Identifier Types"
+
+### 1. Admin Guide Adaptive Planning And Consolidation (score: 4)
+Source: Admin-Guide-Adaptive-Planning-and-Consolidation.pdf
+```
+Adaptive Planning
+and Consolidation
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Adaptive Planning and Consolidation (AP&C).................................................... 7
+Financial Accounting in...
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+TEST ID: PLNF-4-0010-03
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Data Flow
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 17.0)
+================================================================================
+
+DESCRIPTION:
+Verify all accumulated depreciation flows to Balance Sheet
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify all accumulated depreciation flows to Balance Sheet
+
+ELECTRON STEPS:
+1. verify Verify accumulated depr and asset values are properly flowing back to the Balance Sheet (if Balance Sheet Planning is in Scope)
+2. screenshot as "PLNF-4-0010-03_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

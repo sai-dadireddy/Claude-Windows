@@ -1,0 +1,45 @@
+================================================================================
+TEST ID: PRO-2-0100
+FUNCTIONAL AREA: Procurement
+TEST NAME: Approve Purchase Order
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Approve Purchase Order. Test Business Process routing based on the configured conditions for each Business Process step.
+
+WORKDAY ROLE: Various (depending on approval process)
+
+ELECTRON STEPS:
+1. enter search box as "Approve Purchase Order"
+2. wait for search results
+3. click search result containing "Approve Purchase Order"
+4. wait for page to load
+5. screenshot as "PRO-2-0100_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Approve Purchase Order
+
+### 1. Admin Guide Spend Management (score: 8)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing.........................................................................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: BUD-4-0040
+FUNCTIONAL AREA: Budgets
+TEST NAME: Manager Position Budgetary Balance Report
+WORKDAY ROLE: Cost Center Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 10.0)
+================================================================================
+
+DESCRIPTION:
+This is a delivered report.
+
+PREREQUISITES:
+- User logged in with Cost Center Manager permissions
+- Required context: This is a delivered report.
+
+ELECTRON STEPS:
+1. # 1. Run Manager Position Budgetary Balance Report
+2. screenshot as "BUD-4-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Manager Position Budgetary Balance Report
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide  Financial Management
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-4-0050-01
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Balancing of Balance Sheet
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 21.0)
+================================================================================
+
+DESCRIPTION:
+Verifying Assets = Liabilities + Equities
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verifying Assets = Liabilities + Equities
+
+ELECTRON STEPS:
+1. enter search box as "Reporting and Run Balance Sheet Report."
+2. wait for search results
+3. click search result containing "Reporting and Run Balance Sheet Report."
+4. wait for page to load
+5. verify Validate that values for Assets = Liabilities + Equities for every month at the Top Level of the Org Structure
+6. screenshot as "PLNF-4-0050-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

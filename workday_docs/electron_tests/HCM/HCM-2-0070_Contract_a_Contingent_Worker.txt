@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0070
+FUNCTIONAL AREA: HCM
+TEST NAME: Contract a Contingent Worker
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Contract a contingent worker into an open position. Verify that the contract worker was created successfully. (Note that in order to contract a contingent worker, the position restrictions must allow CW as a worker type). Take note of approval routings as applicable and confirm process. Confirm Workday account credentials are created and access is expected as a contingent worker.
+
+WORKDAY ROLE: HR Partner / Manager
+EST. DURATION: 10 minutes
+
+PREREQUISITES:
+- User logged in with HR Partner / Manager permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Contract Contingent Worker"
+2. wait for search results
+3. click search result containing "Contract Contingent Worker"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0070_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Contract Contingent Worker
+
+### 1. Admin Guide Human Capital Management (score: 8)
+Source: Admin-Guide-Human-Capital-Management.pdf
+```
+Human Capital
+Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Human Capital Management.............................................................................27
+Worker Information...................................................
+================================================================================

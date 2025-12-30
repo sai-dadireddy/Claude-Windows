@@ -1,0 +1,20 @@
+================================================================================
+TEST ID: HCM-1-0570
+FUNCTIONAL AREA: HCM
+TEST NAME: Domain Access of Security Group Works Council
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: Validate the domain access setup for Works Council security
+- Expected Result: Task completed successfully
+- Workday Role: HR Administrator
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================

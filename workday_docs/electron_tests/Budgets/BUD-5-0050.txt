@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: BUD-5-0050
+FUNCTIONAL AREA: Budgets
+TEST NAME: Role Based Budget Roles
+WORKDAY ROLE: Finance Organization Admin. or Security Administrator
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 16.0)
+================================================================================
+
+DESCRIPTION:
+Confirm that these Role Based Security Roles for Budgets have been properly assigned or are defaulting to each Company: Budget Manager
+
+PREREQUISITES:
+- User logged in with Finance Organization Admin. or Security Administrator permissions
+- Required context: Confirm that these Role Based Security Roles for Budgets have been properly assigned or are defaulti
+
+ELECTRON STEPS:
+1. # Roles for Organization and Subordinates
+2. screenshot as "BUD-5-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Choose TOP Level of Company Hierarchy and Effective Date = Current Date
+
+KNOWLEDGE SOURCE:
+- Source: WSDL: Financial_Management
+- Type: wsdl
+- Excerpt: ...
+
+API ALTERNATIVE:
+- SOAP: WSDL: Financial_Management
+
+================================================================================

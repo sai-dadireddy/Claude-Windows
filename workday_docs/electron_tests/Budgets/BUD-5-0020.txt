@@ -1,0 +1,30 @@
+================================================================================
+TEST ID: BUD-5-0020
+FUNCTIONAL AREA: Budgets
+TEST NAME: Verify Entry Types
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: MEDIUM ⚠️ (RAG Score: 6.0)
+================================================================================
+
+DESCRIPTION:
+Verify that the Entry Types exist.
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: Verify that the Entry Types exist.
+
+ELECTRON STEPS:
+1. # View Entry Types
+2. screenshot as "BUD-5-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Kb Finance Journal Entry
+- Type: text
+- Excerpt: ...
+
+================================================================================

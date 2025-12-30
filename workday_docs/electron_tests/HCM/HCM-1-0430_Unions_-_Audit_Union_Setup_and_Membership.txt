@@ -1,0 +1,55 @@
+================================================================================
+TEST ID: HCM-1-0430
+FUNCTIONAL AREA: HCM
+TEST NAME: Unions - Audit Union Setup and Membership
+CONFIDENCE: [LOW] Score: 1.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review union membership of Current, Previous, and Terminated Workers. Ensure that the Union Details are correct, including Union ID, Status, and Allowed Membership Types.
+
+WORKDAY ROLE: HR Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with HR Administrator permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Unions Report"
+2. wait for search results
+3. click search result containing "Unions Report"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-1-0430_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Unions Report
+
+### 1. expense (score: 1)
+Source: expense_v1.json
+```
+API: expense
+GET /values/bespokePrompt/expenseGroup/ - 
+GET /reports/{ID} - Retrieves a single instance of an Expense Report.
+GET /expenseItems/{ID} - Retrieves a single instance of an expense item.
+GET /entries/{ID} - Retrieves a single instance of a Quick Expense.
+PUT /entries/{ID} - Updates an ex...
+```
+
+### 2. timeTr...
+================================================================================

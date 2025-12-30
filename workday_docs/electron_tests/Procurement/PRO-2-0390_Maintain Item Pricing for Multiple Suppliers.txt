@@ -1,0 +1,47 @@
+================================================================================
+TEST ID: PRO-2-0390
+FUNCTIONAL AREA: Procurement
+TEST NAME: Maintain Item Pricing for Multiple Suppliers
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+When Default Ordering Price field on the Edit Purchase Item task is updated, Workday now automatically calculates the unit price for all the units of measure in the Units of Measure grid. When you click on Update Price on View Purchase Item, Supplier Item information can also be updated
+
+WORKDAY ROLE: Procurement Configurator
+
+ELECTRON STEPS:
+1. enter search box as "Edit Purchase Item
+View Purchase Item"
+2. wait for search results
+3. click search result containing "Edit Purchase Item
+View Purchase Item"
+4. wait for page to load
+5. screenshot as "PRO-2-0390_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Edit Purchase Item
+View Purchase Item
+
+### 1. Kb Procurement Requisition (score: 4)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

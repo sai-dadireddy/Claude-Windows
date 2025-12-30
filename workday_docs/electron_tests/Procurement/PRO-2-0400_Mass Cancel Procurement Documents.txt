@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: PRO-2-0400
+FUNCTIONAL AREA: Procurement
+TEST NAME: Mass Cancel Procurement Documents
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Mass cancel incomplete procurement documents, such as requisitions, purchase orders, and supplier contracts.
+
+WORKDAY ROLE: Buyer
+Supplier Contract Specialist
+Accountant
+
+ELECTRON STEPS:
+1. enter search box as "Mass Cancel Procurement Documents -> Select Requisition or Purchase Order or Supplier contract
+Review Procurement Mass Close"
+2. wait for search results
+3. click search result containing "Mass Cancel Procurement Documents -> Select Requisition or Purchase Order or Supplier contract
+Review Procurement Mass Close"
+4. wait for page to load
+5. screenshot as "PRO-2-0400_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Mass Cancel Procurement Documents -> Select Requisition or Purchase Order or Supplier contract
+Review Procurement Mass Close
+
+### 1. Kb Procurement Requisition (score: 12)
+Source: kb_procurement_requisition.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE REQUISITION BUSINESS PROCESS
+=======================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

@@ -1,0 +1,64 @@
+================================================================================
+TEST ID: CP-2-0020
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Payment Election Rule Configuration
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Enter payment elections on behalf of an employee. Create accounts as needed and then change the payment elections. Verify that payment elections can be entered as per requirements (allowed payment types, default payment type, maximum number of elections, mix of payment types and distribution options).
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Maintain Payment Elections for Worker"
+2. wait for search results
+3. click search result containing "Maintain Payment Elections for Worker"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "CP-2-0020_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Maintain Payment Elections for Worker
+
+### 1. Test Scenarios Index (score: 5)
+Source: test_scenarios_index.txt
+```
+# Workday Test Scenarios Index
+Total: 6858 scenarios
+
+
+## HCM (439 scenarios)
+- Audit Company Setup: Extract Companies
+- Audit Location Setup: Extract Location
+- Audit Cost Center Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizatio...
+================================================================================

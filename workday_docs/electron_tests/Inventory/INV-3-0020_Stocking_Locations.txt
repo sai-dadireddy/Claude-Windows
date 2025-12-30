@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-3-0020
+FUNCTIONAL AREA: Inventory
+TEST NAME: Stocking Locations
+CONFIDENCE: [HIGH] Score: 10.0/10
+================================================================================
+
+TASK/STEP: Run report "View Stocking Locations" and verify that Stocking Location is Yes and worktags are assigned as necessary.
+
+ELECTRON STEPS:
+1. enter search box as "Run report "View Stocking Locations" and verify that Stocking Location is Yes and worktags are assigned as necessary."
+2. enter field "Setup: Extract Cost Center
+- Audit Region Setup: Extract Regions
+- Audit Supervisory Organizations: Extract Supervisory" with appropriate value
+3. screenshot as "INV-3-0020_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run report "View Stocking Locations" and verify that Stocking Location is Yes and worktags are assigned as necessary.
+
+### 1. Electron Test Samples (score: 12)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+==============...
+================================================================================

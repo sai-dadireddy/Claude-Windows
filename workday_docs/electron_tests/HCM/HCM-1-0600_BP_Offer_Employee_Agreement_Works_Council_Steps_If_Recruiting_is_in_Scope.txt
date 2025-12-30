@@ -1,0 +1,23 @@
+================================================================================
+TEST ID: HCM-1-0600
+FUNCTIONAL AREA: HCM
+TEST NAME: BP: Offer / Employee Agreement & Works Council Steps (If Recruiting is in Scope)
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: BP: Offer / Employee Agreement
+Offer only on request of customer since an Offer is not a legally binding document - review possibility to include an proviso clause in the (non-binding) Offer informing the candidate that the Offer is subject to the approval of the Works Council 
+Business Process Steps
+Removed Deny Option
+- Expected Result: Task completed successfully
+- Workday Role: HR Administrator
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================

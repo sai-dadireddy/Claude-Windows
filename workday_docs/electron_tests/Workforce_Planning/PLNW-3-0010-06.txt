@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNW-3-0010-06
+FUNCTIONAL AREA: PLN - Workforce Planning
+TEST NAME: Version Structure
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 14.0)
+================================================================================
+
+DESCRIPTION:
+Review Actual and Forecast/Budget Versions
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Review Actual and Forecast/Budget Versions
+
+ELECTRON STEPS:
+1. enter search box as "Modeling > Versions"
+2. wait for search results
+3. click search result containing "Modeling > Versions"
+4. wait for page to load
+5. verify Validate the Actual version hierarchy supports the reporting requirements and forecast/budget versions reference the appropriate Actuals version/subversion
+6. screenshot as "PLNW-3-0010-06_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Use Case Library
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-1-0010-04
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Review Dimensions
+WORKDAY ROLE: Planning Admin (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 16.0)
+================================================================================
+
+DESCRIPTION:
+Review Dimensions & Attributes
+
+PREREQUISITES:
+- User logged in with Planning Admin (Customer) permissions
+- Required context: Review Dimensions & Attributes
+
+ELECTRON STEPS:
+1. enter search box as "Modeling > Dimensions"
+2. wait for search results
+3. click search result containing "Modeling > Dimensions"
+4. wait for page to load
+5. verify Generate Printable View into Excel and Validate Dimension Values and associated Dimension Attributes Values are correct
+6. screenshot as "PLNF-1-0010-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

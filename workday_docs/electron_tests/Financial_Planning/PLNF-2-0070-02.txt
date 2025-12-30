@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-2-0070-02
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Cash Flow Statement tie out
+WORKDAY ROLE: Planning Admin (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 15.0)
+================================================================================
+
+DESCRIPTION:
+Validate Cash Flow report
+
+PREREQUISITES:
+- User logged in with Planning Admin (Customer) permissions
+- Required context: Validate Cash Flow report
+
+ELECTRON STEPS:
+1. enter search box as "Reporting and Run Cash Flow Report."
+2. wait for search results
+3. click search result containing "Reporting and Run Cash Flow Report."
+4. wait for page to load
+5. verify Validate that the report format and Data are correct.
+6. screenshot as "PLNF-2-0070-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Glossary
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

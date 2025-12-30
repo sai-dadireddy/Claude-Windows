@@ -1,0 +1,48 @@
+================================================================================
+TEST ID: PRO-2-0380
+FUNCTIONAL AREA: Procurement
+TEST NAME: Change Purchase Orders without Creating Change Orders
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Ability to make minor changes on purchase orders without creating change orders
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "Find Purchase Order -> Edit Without Change Order
+Find Purchase Order -> View Purchase Order Changes"
+2. wait for search results
+3. click search result containing "Find Purchase Order -> Edit Without Change Order
+Find Purchase Order -> View Purchase Order Changes"
+4. wait for page to load
+5. screenshot as "PRO-2-0380_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Find Purchase Order -> Edit Without Change Order
+Find Purchase Order -> View Purchase Order Changes
+
+### 1. Admin Guide Education And Government (score: 8)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government............................................................................
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

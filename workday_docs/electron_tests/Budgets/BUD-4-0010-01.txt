@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: BUD-4-0010-01
+FUNCTIONAL AREA: Budgets
+TEST NAME: Import Budget
+WORKDAY ROLE: Budget Manager
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 9.0)
+================================================================================
+
+DESCRIPTION:
+After populating the Budget EIB template, load the EIB via the Launch/Schedule Integration task.
+
+PREREQUISITES:
+- User logged in with Budget Manager permissions
+- Required context: After populating the Budget EIB template, load the EIB via the Launch/Schedule Integration task.
+
+ELECTRON STEPS:
+1. # 1. Import Budget via EIB
+2. screenshot as "BUD-4-0010-01_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Launch/Schedule Integration
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Release Notes
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

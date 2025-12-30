@@ -1,0 +1,54 @@
+================================================================================
+TEST ID: HCM-2-0120
+FUNCTIONAL AREA: HCM
+TEST NAME: Onboarding - I-9 (Section 2) for Remote Hire
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+As part of Onboarding, confirm the next recipient (External Authorized Recipient) receives and completes Section 2 of the Form I-9 and that the Internal Authorized Representative (HR Partner) can complete I-9 verification.
+
+WORKDAY ROLE: External Authorized Recipient
+EST. DURATION: 15 minutes
+
+PREREQUISITES:
+- User logged in with External Authorized Recipient permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "Link sent to Email Redirect"
+2. wait for search results
+3. click search result containing "Link sent to Email Redirect"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "HCM-2-0120_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Submit_Supplier_Invoice
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Link sent to Email Redirect
+
+### 1. User Guide Sourcing Managers (score: 5)
+Source: User-Guide-Sourcing-Managers.pdf
+```
+Strategic Sourcing:
+Sourcing Managers
+Product Summary
+December 10, 2025
+This content is not part of the Workday Administrator Guide and is subject to further change.
+ | Contents | ii
+Contents
+Strategic Sourcing for Sourcing Managers.........................................
+================================================================================

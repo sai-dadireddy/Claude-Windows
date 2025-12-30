@@ -1,0 +1,38 @@
+================================================================================
+TEST ID: ACC-4-0050
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Create a new Mapping Table
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+EST. DURATION: 15 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 35.0)
+================================================================================
+
+DESCRIPTION:
+Create new mapping table to map source data to tenant worktags
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst permissions
+- Required context: Create new mapping table to map source data to tenant worktags
+
+ELECTRON STEPS:
+1. # 1. Create Mapping Table
+2. # 2. Select Mapping Table Definition to be used
+3. # 3. Under source value column (will be the Display Name from the Mapping Table Definition) enter text for source values to be mapped (each instance will be a new line)
+4. # 4. Add worktag map for each source value in the worktag column(s)
+5. screenshot as "ACC-4-0050_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Admin Guide Release Notes
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+TEST ID: ACC-3-0110
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Role Based Accounting Center Roles
+WORKDAY ROLE: Accounting Center Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 17.0)
+================================================================================
+
+DESCRIPTION:
+Verify assignments are defined for the role based Accounting Center Analyst security group
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator permissions
+- Required context: Verify assignments are defined for the role based Accounting Center Analyst security group
+
+ELECTRON STEPS:
+1. # Run Roles for Organization and Subordinates report
+2. screenshot as "ACC-3-0110_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+SUB-TASKS:
+Choose TOP Level of Company Hierarchy and Effective Date = Current Date
+
+KNOWLEDGE SOURCE:
+- Source: Test Scenarios Index
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

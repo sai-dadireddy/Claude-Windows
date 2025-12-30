@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: PLNF-3-0010-02
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Review Level Security
+WORKDAY ROLE: Planning Admin (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 17.0)
+================================================================================
+
+DESCRIPTION:
+Review Level Hierarchy & Workflow Configuration
+
+PREREQUISITES:
+- User logged in with Planning Admin (Customer) permissions
+- Required context: Review Level Hierarchy & Workflow Configuration
+
+ELECTRON STEPS:
+1. enter search box as "Modeling > Levels"
+2. wait for search results
+3. click search result containing "Modeling > Levels"
+4. wait for page to load
+5. verify Validate the Hierarchy and Level structure support the desired User Access & Workflow Approval Process
+6. screenshot as "PLNF-3-0010-02_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Electron Test Samples
+- Type: text
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

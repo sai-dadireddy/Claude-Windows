@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: INV-1-0090
+FUNCTIONAL AREA: Inventory
+TEST NAME: Inventory ABC Classification
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Run report "View Inventory ABC Classification"
+
+ELECTRON STEPS:
+1. enter search box as "Run report "View Inventory ABC Classification""
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-1-0090_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Run report "View Inventory ABC Classification"
+
+### 1. Admin Guide Spend Management (score: 4)
+Source: Admin-Guide-Spend-Management.pdf
+```
+Spend Management
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Spend Management.......................................................................................... 10
+Strategic Sourcing.................................................
+================================================================================

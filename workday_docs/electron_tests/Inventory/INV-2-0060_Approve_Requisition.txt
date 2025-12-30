@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: INV-2-0060
+FUNCTIONAL AREA: Inventory
+TEST NAME: Approve Requisition
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+================================================================================
+
+TASK/STEP: Approve requisition based on business process configuration
+
+ELECTRON STEPS:
+1. enter search box as "Approve requisition based on business process configuration"
+2. navigate to appropriate page
+3. complete required fields
+4. screenshot as "INV-2-0060_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Approve requisition based on business process configuration
+
+### 1. Kb Hcm Hire Employee (score: 7)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/...
+================================================================================

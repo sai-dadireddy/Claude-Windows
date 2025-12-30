@@ -1,0 +1,35 @@
+================================================================================
+TEST ID: END-1-0100
+FUNCTIONAL AREA: Endowments
+TEST NAME: Gift Hierarchies
+CONFIDENCE: [MEDIUM] Score: 7.5/10
+================================================================================
+
+TASK/STEP: Navigate Gift Hierarchy
+
+ELECTRON STEPS:
+1. enter search box as "Navigate Gift Hierarchy"
+2. wait for page load
+3. screenshot as "END-1-0100_complete.png"
+
+VERIFICATION: nan
+
+================================================================================
+RAG RESPONSE SUMMARY:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Navigate Gift Hierarchy
+
+### 1. Admin Guide Education And Government (score: 3)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management....................................................
+================================================================================

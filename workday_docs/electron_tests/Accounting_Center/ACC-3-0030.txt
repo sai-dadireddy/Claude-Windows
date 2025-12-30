@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: ACC-3-0030
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Mapping Table
+WORKDAY ROLE: Accounting Center Administrator
+Accounting Center Analyst
+EST. DURATION: 10 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 23.0)
+================================================================================
+
+DESCRIPTION:
+Review mapping table(s) to ensure accurate mapping of source to worktag values
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Accounting Center Analyst permissions
+- Required context: Review mapping table(s) to ensure accurate mapping of source to worktag values
+
+ELECTRON STEPS:
+1. # 1. Search for View Mapping Table report
+2. # 2. Select mapping table from list
+3. # 3. Review input text (source value) is properly mapped to worktag value
+4. screenshot as "ACC-3-0030_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: User Guide Workday People Analytics (1)
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

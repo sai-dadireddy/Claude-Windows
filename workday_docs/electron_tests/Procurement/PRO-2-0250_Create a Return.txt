@@ -1,0 +1,43 @@
+================================================================================
+TEST ID: PRO-2-0250
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create a Return
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a return for items that are damaged or if too many were sent by the supplier. Note: You can only do this once PO is issued.
+
+WORKDAY ROLE: Accounts Payable Data Entry Specialist / Buyer
+
+ELECTRON STEPS:
+1. enter search box as "Create Return or Related Action from Purchase Order > Return > Create"
+2. wait for search results
+3. click search result containing "Create Return or Related Action from Purchase Order > Return > Create"
+4. wait for page to load
+5. screenshot as "PRO-2-0250_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Return or Related Action from Purchase Order > Return > Create
+
+### 1. Kb Procurement Purchase Order (score: 9)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+================================================================================
+
+Sour...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

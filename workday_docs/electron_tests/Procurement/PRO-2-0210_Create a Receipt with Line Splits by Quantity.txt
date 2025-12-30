@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: PRO-2-0210
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create a Receipt with Line Splits by Quantity
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a receipt with line splits by quantity. Note: You can only do this once PO is issued.  Note that this assumes Assets is being implemented along with Procurement.   Further note that unless asset shares is enabled, the Asset will be Expensed. If assets shares is enabled, Accounting Treatment will be derived by Asset Book Rules.
+
+WORKDAY ROLE: Buyer / Employee As Self / Business Asset Tracking Specialist
+
+ELECTRON STEPS:
+1. enter search box as "Create Receipt or Related Action from the Purchase Order > Receipt > Create"
+2. wait for search results
+3. click search result containing "Create Receipt or Related Action from the Purchase Order > Receipt > Create"
+4. wait for page to load
+5. screenshot as "PRO-2-0210_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Receipt or Related Action from the Purchase Order > Receipt > Create
+
+### 1. Kb Procurement Purchase Order (score: 10)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+===============================================================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

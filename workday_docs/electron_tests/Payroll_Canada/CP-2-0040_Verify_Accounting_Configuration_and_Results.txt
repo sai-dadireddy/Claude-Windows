@@ -1,0 +1,58 @@
+================================================================================
+TEST ID: CP-2-0040
+FUNCTIONAL AREA: Payroll for Canada
+COUNTRY: CA
+TEST NAME: Verify Accounting Configuration and Results
+CONFIDENCE: [LOW] Score: 2.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Calculate a full payroll (for all pay groups); ensure that there are no pay calculation results in error due to accounting configuration issues. Before completing the payroll, review the postings to verify that postings are going to the expected accounts (no postings to suspense accounts). Complete the payroll and run 'Fix Operational Journals With Errors'. If there are any errors, update accounting configuration as needed.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 30 minutes
+COUNTRY SCOPE: CA
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to CA payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Various Tasks"
+2. wait for search results
+3. click search result containing "Various Tasks"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "CP-2-0040_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Various Tasks
+
+### 1. Kb Hcm Hire Employee (score: 2)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: 2025R1
+- ...
+================================================================================

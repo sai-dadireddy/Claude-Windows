@@ -1,0 +1,41 @@
+================================================================================
+TEST ID: PRO-2-0160
+FUNCTIONAL AREA: Procurement
+TEST NAME: Create a Change Order
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Create a change order and submit for approval. Verify that approval routing works as expected.
+
+WORKDAY ROLE: Buyer
+
+ELECTRON STEPS:
+1. enter search box as "Create Change Order or Related Action from the Purchase Order > Create Change Order"
+2. wait for search results
+3. click search result containing "Create Change Order or Related Action from the Purchase Order > Create Change Order"
+4. wait for page to load
+5. screenshot as "PRO-2-0160_complete.png"
+
+VERIFICATION:
+- [ ] nan
+
+API ALTERNATIVE:
+- SOAP: Not found in RAG
+
+RAG INSIGHTS:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Create Change Order or Related Action from the Purchase Order > Create Change Order
+
+### 1. Kb Procurement Purchase Order (score: 10)
+Source: kb_procurement_purchase_order.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
+=======================================================================...
+
+RAG QUERY STATUS: SUCCESS
+================================================================================

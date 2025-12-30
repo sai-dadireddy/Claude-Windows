@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: PLNF-2-0040-04
+FUNCTIONAL AREA: PLN - Financial Planning
+TEST NAME: Data Flow
+WORKDAY ROLE: Planning Preparer (Customer)
+EST. DURATION: 0 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 22.0)
+================================================================================
+
+DESCRIPTION:
+Verify all OpEx sheet data flows to Income Statement
+
+PREREQUISITES:
+- User logged in with Planning Preparer (Customer) permissions
+- Required context: Verify all OpEx sheet data flows to Income Statement
+
+ELECTRON STEPS:
+1. # -Go to Sheets > Income Statement.
+2. verify -Verify data is flowing from all sheets to the various general ledger accounts on the income statement and changes made in the sheets are reflected on the income statement.
+3. screenshot as "PLNF-2-0040-04_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: Workday Feature Descriptions Ditamap
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

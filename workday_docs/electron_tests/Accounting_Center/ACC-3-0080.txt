@@ -1,0 +1,37 @@
+================================================================================
+TEST ID: ACC-3-0080
+FUNCTIONAL AREA: Accounting Center
+TEST NAME: Review Data Catalog - Table Definition
+WORKDAY ROLE: Accounting Center Administrator
+Prism Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE: HIGH ✅ (RAG Score: 31.0)
+================================================================================
+
+DESCRIPTION:
+Review the table the source data will be loaded into and ensure data fields are lined up with formatting
+
+PREREQUISITES:
+- User logged in with Accounting Center Administrator
+Prism Administrator permissions
+- Required context: Review the table the source data will be loaded into and ensure data fields are lined up with format
+
+ELECTRON STEPS:
+1. # 1. Data Catalog/Tables
+2. # 2. Find table used for ingestion, right click and select View in New Tab
+3. verify 3. Review fields and verify they correspond to the source data
+4. screenshot as "ACC-3-0080_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+
+KNOWLEDGE SOURCE:
+- Source: User Guide Sourcing Managers
+- Type: pdf
+- Excerpt: ...
+
+API ALTERNATIVE:
+- Check RAG for API endpoints
+
+================================================================================

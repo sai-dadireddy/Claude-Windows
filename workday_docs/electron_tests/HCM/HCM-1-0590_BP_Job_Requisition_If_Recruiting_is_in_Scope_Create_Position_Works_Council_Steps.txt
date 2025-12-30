@@ -1,0 +1,21 @@
+================================================================================
+TEST ID: HCM-1-0590
+FUNCTIONAL AREA: HCM
+TEST NAME: BP: Job Requisition (If Recruiting is in Scope) / Create Position Works Council Steps
+Business Process Steps
+STATUS: [MANUAL REQUIRED]
+================================================================================
+
+REASON FOR MANUAL:
+- Missing "Task / Step" column value
+- Cannot determine which Workday task to execute
+- SME input required to identify the specific Workday task
+
+AVAILABLE DATA:
+- Scenario Description: If applicable for scope (Talent Acquisition) validate the Job Requisition and Create Position business process includes the appropriate Works Council process steps
+- Expected Result: Task completed successfully
+- Workday Role: HR Administrator
+
+ACTION NEEDED:
+Workday SME must provide the specific task name to search in Workday.
+================================================================================
