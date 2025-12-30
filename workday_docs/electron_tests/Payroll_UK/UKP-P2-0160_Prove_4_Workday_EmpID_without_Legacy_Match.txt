@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-P2-0160
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Prove 4) Workday EmpID without Legacy Match
+CONFIDENCE: [MANUAL REQUIRED] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Determine if the workers processed in the Workday pay calculation are also on the Legacy Pay Data template
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: nan minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

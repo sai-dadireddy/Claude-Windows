@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-P1-0050
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Catch Up Transactions
+CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
+SOURCE: [NO_TASK]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Enter catch up transactions in tenant
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: nan minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

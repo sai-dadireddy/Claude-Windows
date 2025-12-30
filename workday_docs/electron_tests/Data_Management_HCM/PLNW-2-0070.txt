@@ -1,0 +1,79 @@
+================================================================================
+TEST ID: PLNW-2-0070
+FUNCTIONAL AREA: PLN - Data Management (HCM)
+TEST NAME: Workday Drillback
+WORKDAY ROLE: Technical/Functional Lead (Customer)
+EST. DURATION: nan minutes
+CONFIDENCE SCORE: 5.0/10
+STATUS: [!!] NEEDS REVIEW
+================================================================================
+
+DESCRIPTION:
+Confirm that Drillback functionality works
+
+TASK/STEP:
+-Go to Sheets > [Income Statement or Balance Sheet] Sheet.
+-Navigate to a leaf level and leaf account
+-Right click on a cell with actuals data and then click "Drill into Workday"
+-Verify that the browser brings the end user to the "drillback" report ant that report has correct fields
+
+PREREQUISITES:
+- User logged in with Technical/Functional Lead (Customer) permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [NEEDS SME REVIEW - Confidence: 5.0/10]
+2. 
+3. # Task: Sheets > [Income Statement or Balance Sheet] Sheet.
+4. 
+5. enter search box as "Sheets > [Income Statement or Balance Sheet] Sheet."
+6. wait for search results
+7. # [SME: Verify exact search result text]
+8. 
+9. # SME ACTION REQUIRED:
+10. # 1. Verify field names and interactions
+11. # 2. Add missing validation steps
+12. # 3. Update confidence score when complete
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Sheets > [Income Statement or Balance Sheet] Sheet.
+
+### 1. Admin Guide Integrations (1) (score: 5)
+Source: Admin-Guide-Integrations (1).pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 2. Admin Guide Integrations (score: 5)
+Source: Admin-Guide-Integrations.pdf
+```
+Integrations
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Integrations................................................................... 18
+Launch and Manage Integrations......................................................................24
+Launch an Integrati...
+```
+
+### 3. User Guide Suppliers (score: 5)
+Sourc
+--------------------------------------------------------------------------------
+
+================================================================================

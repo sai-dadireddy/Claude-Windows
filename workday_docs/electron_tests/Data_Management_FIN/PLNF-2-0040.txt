@@ -1,0 +1,82 @@
+================================================================================
+TEST ID: PLNF-2-0040
+FUNCTIONAL AREA: PLN - Data Management (FIN)
+TEST NAME: Run Task - Attributes
+WORKDAY ROLE: Technical/Functional Lead (Customer)
+EST. DURATION: nan minutes
+CONFIDENCE SCORE: 4.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+Confirm that Attributes task(s) successfully run
+
+TASK/STEP:
+-Go to Integration > Run Tasks
+-Run all tasks related to the creation of attributes
+-Confirm that the task successfully completes at %100
+-Confirm the the correct attribute values have been created in the correct hierarchy (if applicable).
+-Confirm that the expected naming conventions are used.
+
+PREREQUISITES:
+- User logged in with Technical/Functional Lead (Customer) permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 4.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Integration > Run Tasks
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Huma
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Integration > Run Tasks
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Kb Hcm Terminate Employee (score: 4)
+Source: kb_hcm_terminate_employee.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Resources WSDL...
+```
+
+### 3. Admin Guide Authentication And Security (score: 4)
+Source: Admin-Guide-Authentication
+--------------------------------------------------------------------------------
+
+================================================================================

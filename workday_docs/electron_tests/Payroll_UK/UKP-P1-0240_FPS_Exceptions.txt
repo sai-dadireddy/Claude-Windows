@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-P1-0240
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: FPS Exceptions
+CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
+SOURCE: [NO_TASK]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Run the FPS Exceptions report to identify any data issues or omissions. Flag any worker data issues to the HCM consultant as early as possible. This is not critical to the success of the parallel but it will remove any such issues from appearing on the production build
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: nan minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

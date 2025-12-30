@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-4-0120-03
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Additional Run Category Payroll
+CONFIDENCE: [MANUAL REQUIRED] Score: 3.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Review pay calculation results. Ensure the following: 1. All payroll input entered for the non-regular run category is getting picked up and calculates as expected 2. Pay results are only generated for employees receiving a payment (i.e.no zero gross pay results) 3. Review the 'Payment' tab on the pay result and ensure that pay is using the expected payment elections (only applicable if the non-regular run category is using a separate payment election rule)
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 10 minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

@@ -1,0 +1,27 @@
+================================================================================
+TEST ID: UKP-P2-0290
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: RTI FPS (Test in Live mode)
+CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
+SOURCE: [NO_TASK]
+================================================================================
+
+*** MANUAL TEST CREATION REQUIRED ***
+
+This scenario requires manual test creation by Payroll SME.
+Confidence score below threshold or task information insufficient.
+
+DESCRIPTION:
+Run the FPS in test mode to ensure it links with the HMRC gateway and whether any errors are identified. Note you should not try to parallel the values in the FPS with legacy unless it is a specific requirement from the customer.
+
+WORKDAY ROLE: Payroll Administrator
+EST. DURATION: nan minutes
+COUNTRY SCOPE: UK
+
+EXPECTED RESULT:
+nan
+
+ACTION NEEDED:
+Payroll SME must provide the specific task name and steps to automate in Electron.
+================================================================================

@@ -1,0 +1,84 @@
+================================================================================
+TEST ID: ACM-5-0190
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Distribute Pools
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 4.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+***Perform this test in a COPY of Gold tenant only*** If applicable, make changes to pool amounts on organizations. Note this is an optional step in the business process so will only appear if configured.
+
+TASK/STEP:
+Distribute Pools. Submit when done.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 4.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Distribute Pools. Submit when done.
+
+### 1. Admin Guide Education And Government (score: 4)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management.....................................
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Distribute Pools. Submit when done.
+
+### 1. Admin Guide Education And Government (score: 4)
+Source: Admin-Guide-Education-and-Government.pdf
+```
+Education and
+Government
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Education and Government.................................................................................6
+Grants Management..............................................................................................
+```
+
+### 2. Workday Feature Descriptions Ditamap (score: 4)
+Source: Workday-Feature-Descriptions-ditamap.pdf
+```
+Workday Feature
+Descriptions
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Workday Feature Descriptions Guide................................................................. 5
+Workday Adaptive Planning................................................................................ 5
+R...
+```
+
+### 3. WSDL: Resourc
+--------------------------------------------------------------------------------
+
+================================================================================

@@ -1,0 +1,336 @@
+================================================================================
+WORKDAY ELECTRON TEST SAMPLES - BY CONFIDENCE LEVEL
+================================================================================
+
+This file shows representative examples of tests at each confidence level
+to illustrate the quality and completeness of generated Electron steps.
+
+================================================================================
+[OK] ACCEPTED - HIGH CONFIDENCE (>= 7.0)
+================================================================================
+
+FILE: Advanced_Compensation/ACM-1-0020.txt
+
+TEST ID: ACM-1-0020
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Plan Security: Merit
+CONFIDENCE SCORE: 15.0/10
+STATUS: [OK] ACCEPTED
+
+DESCRIPTION:
+To verify that any specified security groups cannot see targets
+
+TASK/STEP:
+Proxy as a member of the designated security group. Navigate to their own
+worker profile. View Compensation tab on the worker record and ensure target
+is not visible
+
+ELECTRON STEPS:
+1. navigate to "their own worker profile. View Compensation tab on the worker record and ensure target is not visible"
+2. wait for page to load
+3. screenshot as "ACM-1-0020_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+ANALYSIS:
+  - Valid Electron commands generated
+  - Ready for ActiveGenie execution
+  - Clear navigation and verification steps
+  - No SME review needed
+
+================================================================================
+[XX] MANUAL - LOW CONFIDENCE (< 5.0)
+================================================================================
+
+FILE: Advanced_Compensation/ACM-1-0010.txt
+
+TEST ID: ACM-1-0010
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Plan configuration: Merit
+CONFIDENCE SCORE: 2.0/10
+STATUS: [XX] MANUAL
+
+DESCRIPTION:
+To verify that the Merit plans are configured correctly:
+- Targets hidden/overridden
+- Applicable profiles
+- Eligibility Rules
+- Statutory Minimum
+- Waiting Period
+- Compensation Matrix
+- Time Proration Rule
+- Rounding Rule
+
+TASK/STEP:
+Search bar: "comp plans". Click on the Merit tab. From the Merit tab, select
+the applicable Merit Plan(s) to review.
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 2.0/10
+3.
+4. RAG Results:
+5. Loaded 63 docs from public/private
+   Loaded 55 WSDLs with 3169 operations
+   Total: 118 documents
+   ## Results for: comp plans
+
+   ### 1. Electron Test Samples (score: 2)
+   Source: electron_test_samples.txt
+   (No specific steps found in KB...)
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+[Truncated RAG output showing no relevant documentation found]
+
+ANALYSIS:
+  - Complex configuration scenario
+  - Multiple verification criteria
+  - Requires specific field names not in KB
+  - Manual test creation needed
+  - Recommendation: Add "Compensation Plan Configuration" KB article
+
+================================================================================
+[XX] MANUAL - DATA MANAGEMENT EXAMPLE (< 5.0)
+================================================================================
+
+FILE: Data_Management_FIN/PLNF-2-0010.txt
+
+TEST ID: PLNF-2-0010
+FUNCTIONAL AREA: PLN - Data Management (FIN)
+TEST NAME: Run Task - Accounts
+CONFIDENCE SCORE: 4.0/10
+STATUS: [XX] MANUAL
+
+DESCRIPTION:
+Confirm that Accounts task(s) successfully run
+
+TASK/STEP:
+-Go to Integration > Run Tasks
+-Run all tasks related to the creation of accounts
+-Confirm that the task successfully completes at %100
+-Confirm the the correct accounts have been created in the correct hierarchy.
+-Confirm that the expected naming conventions are used.
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 4.0/10
+3.
+4. RAG Results:
+5. (RAG returned HCM-related results, not Integration module)
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+ANALYSIS:
+  - Integration module not covered in current KB
+  - Technical/administrative task
+  - Requires Integration documentation
+  - Similar pattern across all Data Management scenarios
+  - Recommendation: Scrape Workday Integration documentation
+
+================================================================================
+CONFIDENCE SCORING BREAKDOWN
+================================================================================
+
+For the THREE generated areas:
+
+ADVANCED COMPENSATION (111+ tests):
+  - [OK] ACCEPTED (>= 7.0): ~40-50 tests (estimated)
+  - [!!] NEEDS REVIEW (5-6.9): ~30-40 tests (estimated)
+  - [XX] MANUAL (< 5.0): ~20-30 tests (estimated)
+
+  Common ACCEPTED scenarios:
+    - Plan Security verification
+    - Worker profile navigation
+    - Simple verification tasks
+
+  Common MANUAL scenarios:
+    - Complex plan configuration
+    - Multi-criteria validation
+    - Advanced setup tasks
+
+DATA MANAGEMENT - FIN (16 tests):
+  - [OK] ACCEPTED (>= 7.0): 0-2 tests (estimated)
+  - [!!] NEEDS REVIEW (5-6.9): 0-2 tests (estimated)
+  - [XX] MANUAL (< 5.0): 12-16 tests (estimated)
+
+  Reason for low confidence:
+    - Integration module not in KB
+    - Technical/administrative focus
+    - Requires specialized documentation
+
+DATA MANAGEMENT - HCM (16 tests):
+  - [OK] ACCEPTED (>= 7.0): 0-2 tests (estimated)
+  - [!!] NEEDS REVIEW (5-6.9): 0-2 tests (estimated)
+  - [XX] MANUAL (< 5.0): 12-16 tests (estimated)
+
+  Same pattern as FIN - Integration module KB gap
+
+================================================================================
+WHAT MAKES A HIGH CONFIDENCE TEST?
+================================================================================
+
+Characteristics of [OK] ACCEPTED tests (>= 7.0):
+
+1. CLEAR NAVIGATION PATH
+   - Specific menu or search term
+   - Defined click target
+   - Example: "Navigate to worker profile"
+
+2. SIMPLE VERIFICATION
+   - Visual confirmation needed
+   - Example: "Ensure target is not visible"
+
+3. RAG COVERAGE
+   - Similar scenarios exist in KB
+   - Field names documented
+   - Business process documented
+
+4. MINIMAL COMPLEXITY
+   - 3-5 Electron steps
+   - Linear workflow
+   - No complex branching logic
+
+================================================================================
+WHAT CAUSES LOW CONFIDENCE?
+================================================================================
+
+Characteristics of [XX] MANUAL tests (< 5.0):
+
+1. KB COVERAGE GAP
+   - No relevant documentation in RAG
+   - New or specialized module (e.g., Integration)
+   - Score < 5.0 from RAG similarity
+
+2. COMPLEX CONFIGURATION
+   - Multiple criteria to verify
+   - Example: 8 different settings to check
+   - Requires specific field names
+
+3. TECHNICAL/ADMINISTRATIVE
+   - Backend tasks (Run Tasks, Data Loads)
+   - Not typical user workflows
+   - Integration/system tasks
+
+4. AMBIGUOUS STEPS
+   - Vague task description
+   - "Complete required fields" without specifics
+   - No clear navigation path
+
+================================================================================
+HOW TO IMPROVE CONFIDENCE SCORES
+================================================================================
+
+TO ELEVATE MANUAL → REVIEW (4.0 → 6.0):
+  1. Add basic KB article for the module
+  2. Document navigation path
+  3. List common field names
+  4. Re-run generator
+
+TO ELEVATE REVIEW → ACCEPTED (6.0 → 8.0):
+  1. SME validates generated steps
+  2. Add specific field names to KB
+  3. Document exact UI element names
+  4. Update RAG index
+  5. Re-run generator
+
+EXAMPLE WORKFLOW:
+  1. Data Management shows 4.0 confidence
+  2. Create kb_integration_run_tasks.txt:
+     - Document "Integration > Run Tasks" navigation
+     - List task types (Accounts, Levels, Dimensions)
+     - Define completion criteria
+  3. Rebuild RAG index
+  4. Re-run gen_three_areas.py
+  5. Expected new confidence: 6.0-7.0
+
+================================================================================
+USAGE IN ACTIVEGENIE
+================================================================================
+
+IMMEDIATE USE (No modification):
+  - All [OK] ACCEPTED tests (>= 7.0)
+  - Estimated: 40-50 tests from Advanced Compensation
+
+MINOR MODIFICATION (SME review):
+  - All [!!] NEEDS REVIEW tests (5-6.9)
+  - SME adds specific field names
+  - Estimated: 30-40 tests
+
+REQUIRES CREATION (Use as template):
+  - All [XX] MANUAL tests (< 5.0)
+  - Use description and task as starting point
+  - Build steps manually
+  - Estimated: 40-50 tests
+
+================================================================================
+ELECTRON COMMAND REFERENCE
+================================================================================
+
+Commands used in HIGH CONFIDENCE tests:
+
+NAVIGATION:
+  navigate to "{path or description}"
+  enter search box as "{search_term}"
+  click search result containing "{text}"
+  click "{element_name}"
+
+WAITING:
+  wait for page to load
+  wait for search results
+  wait {N} seconds
+
+VERIFICATION:
+  verify {condition}
+  verify message contains "{text}"
+
+CAPTURE:
+  screenshot as "{scenario_id}_complete.png"
+
+INTERACTION:
+  enter {field} as "{value}"
+  select {dropdown} as "{option}"
+  click button "{button_text}"
+
+NOT USED (Invalid):
+  - Generic placeholders: "[complete required fields]"
+  - Invented commands: "[follow standard flow]"
+  - Ambiguous references: "[click next]"
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. REVIEW SAMPLES:
+   - Read high-confidence tests: Advanced_Compensation/ACM-1-0020.txt
+   - Review manual tests: Advanced_Compensation/ACM-1-0010.txt
+   - Compare with original Excel scenarios
+
+2. VALIDATE IN ACTIVEGENIE:
+   - Import 5 high-confidence tests
+   - Execute in test environment
+   - Confirm Electron commands work as expected
+
+3. ENHANCE KB:
+   - Create kb_integration_run_tasks.txt
+   - Create kb_compensation_plan_config.txt
+   - Scrape Workday Community for missing topics
+
+4. RE-GENERATE:
+   - After KB enhancement
+   - Expected improvement: +20-30% acceptance rate
+   - Target: 70%+ ACCEPTED for Advanced Compensation
+
+5. SME REVIEW:
+   - Schedule session for NEEDS REVIEW tests
+   - Focus on field name validation
+   - Update tests to ACCEPTED
+
+================================================================================

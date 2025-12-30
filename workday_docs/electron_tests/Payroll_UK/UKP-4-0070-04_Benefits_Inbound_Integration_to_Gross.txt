@@ -1,0 +1,57 @@
+================================================================================
+TEST ID: UKP-4-0070-04
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Benefits Inbound Integration to Gross
+CONFIDENCE: [HIGH] Score: 7.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Review pay calculation results. Ensure that all payroll input is getting picked up in payroll (use 'Payroll Input Not Processed' report) and is calculating as expected.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 20 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Payroll Review"
+2. wait for search results
+3. click search result containing "Payroll Review"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "UKP-4-0070-04_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Payroll Review
+
+### 1. Kb Payroll Run Payroll (score: 7)
+Source: kb_payroll_run_payroll.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: RUN PAYROLL BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Payroll WSDL
+Category: Payro...
+================================================================================

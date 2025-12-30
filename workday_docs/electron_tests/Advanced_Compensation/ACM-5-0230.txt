@@ -1,0 +1,34 @@
+================================================================================
+TEST ID: ACM-5-0230
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Finalize Cycle - Work with your functional consultant before actioning this scenario
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 15 minutes
+CONFIDENCE SCORE: 9.0/10
+STATUS: [OK] ACCEPTED
+================================================================================
+
+DESCRIPTION:
+***Perform this test in a COPY of Gold tenant only*** Finalize: wait until all other items have passed prior to finalizing a cycle. 
+
+In order to cancel an existing cycle, use Mass Cancel. Choose "Initiate Compensation Review" as the Business Process Type, click on "Include Subprocesses", click OK. Click "Select All" and click on OK. Click Confirm, then click OK, to cancel. If you don't have access to Mass Cancel, use Related Action > Business Process > Cancel from the process in the Control inbox task.
+
+TASK/STEP:
+Task in Controllers inbox on the Control Page. Click the Finalize Button.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. enter search box as "Task in Controllers inbox on the Control Page. Click the Finalize Button."
+2. wait for search results
+3. click search result containing "Task in Controllers inbox on the Control Page. Click the Finalize Button."
+4. wait for page to load
+5. screenshot as "ACM-5-0230_complete.png"
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+================================================================================

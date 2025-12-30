@@ -1,0 +1,62 @@
+================================================================================
+TEST ID: PI-5-0010
+FUNCTIONAL AREA: Payroll Interface
+COUNTRY: GLOBAL
+TEST NAME: Review Period Schedule Configuration
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify that all expected period schedules are present in the tenant, dates are correct (period start, period end, and payment date), and the correct number of periods are configured for each year. Verify that period schedules are linked to Absence / Time Tracking as applicable.
+
+WORKDAY ROLE: Payroll Interface Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: GLOBAL
+
+PREREQUISITES:
+- User logged in with Payroll Interface Administrator permissions
+- Required data available in tenant
+- Access to GLOBAL payroll data
+
+ELECTRON STEPS:
+1. enter search box as "View Period Schedule"
+2. wait for search results
+3. click search result containing "View Period Schedule"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+   GET /values/enterTimeByType/timeTypeNested/ -
+6. screenshot as "PI-5-0010_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Period Schedule
+
+### 1. Electron Test Samples (score: 8)
+Source: electron_test_samples.txt
+```
+================================================================================
+WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
+Generated: 2025-12-30
+Source: test_scenarios_v2.xlsx
+================================================================================
+
+This file contains 5 sample El...
+================================================================================

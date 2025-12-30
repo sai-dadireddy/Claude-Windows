@@ -1,0 +1,65 @@
+================================================================================
+TEST ID: PI-5-0040
+FUNCTIONAL AREA: Payroll Interface
+COUNTRY: GLOBAL
+TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
+CONFIDENCE: [HIGH] Score: 33.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify the correct workers are assigned to Payroll security groups: Payroll Interface Administrator, Payroll Interface Partner, Integration Access (Payroll Interface)
+
+WORKDAY ROLE: Payroll Interface Administrator / 
+Security Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: GLOBAL
+
+PREREQUISITES:
+- User logged in with Payroll Interface Administrator / 
+Security Administrator permissions
+- Required data available in tenant
+- Access to GLOBAL payroll data
+
+ELECTRON STEPS:
+1. enter search box as "View Security Group
+Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+2. wait for search results
+3. click search result containing "View Security Group
+Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+4. wait for page to load
+5. RAG-extracted steps:
+   Run the report "View Security Group" and select the respective security group:
+   For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+   For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
+6. screenshot as "PI-5-0040_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: View Security Group
+Run the report "View Security Group" and select the respective security group:
+For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
+For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organiz...
+================================================================================

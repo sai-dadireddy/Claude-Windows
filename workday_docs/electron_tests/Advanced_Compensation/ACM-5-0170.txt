@@ -1,0 +1,80 @@
+================================================================================
+TEST ID: ACM-5-0170
+FUNCTIONAL AREA: Advanced Compensation
+TEST NAME: Manage Impacted Employees
+WORKDAY ROLE: Compensation Administrator
+EST. DURATION: 5 minutes
+CONFIDENCE SCORE: 4.0/10
+STATUS: [XX] MANUAL
+================================================================================
+
+DESCRIPTION:
+***Perform this test in a COPY of Gold tenant only*** Choose rules. Click on Manage Employee Participation. Review impacted employees and send notifications if applicable.
+
+TASK/STEP:
+Manage Impacted Employees. Submit when done.
+
+PREREQUISITES:
+- User logged in with Compensation Administrator permissions
+- Required data: [Based on scenario requirements]
+
+ELECTRON STEPS:
+1. [MANUAL REQUIRED - Insufficient KB coverage]
+2. Confidence Score: 4.0/10
+3. 
+4. RAG Results:
+5. Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Manage Impacted Employees. Submit when done.
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+UR
+
+VERIFICATION:
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+RAG ANALYSIS:
+--------------------------------------------------------------------------------
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Manage Impacted Employees. Submit when done.
+
+### 1. Kb Hcm Change Job (score: 4)
+Source: kb_hcm_change_job.txt
+```
+================================================================================
+WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday HCM - Human Re...
+```
+
+### 2. Kb Hcm Hire Employee (score: 4)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: 2025R1
+- ...
+```
+
+### 3. Kb Procurement Requisition (score: 4)
+Source: kb_procurement_requisition.t
+--------------------------------------------------------------------------------
+
+================================================================================

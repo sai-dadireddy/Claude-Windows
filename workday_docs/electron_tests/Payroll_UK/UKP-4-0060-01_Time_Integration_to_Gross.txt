@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: UKP-4-0060-01
+FUNCTIONAL AREA: Payroll for the United Kingdom
+COUNTRY: UK
+TEST NAME: Time Integration to Gross
+CONFIDENCE: [MEDIUM] Score: 6.0/10
+SOURCE: [RAG]
+================================================================================
+
+*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
+
+DESCRIPTION:
+*** Only applicable if Time Tracking is out of scope and an inbound integration or manual EIB that loads time as payroll input is in scope *** Process the integration or load the EIB for the current open pay period.
+
+WORKDAY ROLE: Payroll Partner
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: UK
+
+PREREQUISITES:
+- User logged in with Payroll Partner permissions
+- Required data available in tenant
+- Access to UK payroll data
+
+ELECTRON STEPS:
+1. enter search box as "1. Load EIB or Launch Integration"
+2. wait for search results
+3. click search result containing "1. Load EIB or Launch Integration"
+4. wait for page to load
+5. RAG-extracted steps:
+   [RAG data available but no specific steps found - follow standard task flow]
+6. screenshot as "UKP-4-0060-01_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Not available in RAG results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: 1. Load EIB or Launch Integration
+
+### 1. Admin Guide Workday Studio (score: 6)
+Source: Admin-Guide-Workday-Studio.pdf
+```
+Workday Studio
+Product Summary
+December 10, 2025
+ | Contents | ii
+Contents
+Setup Considerations: Workday Studio.............................................................10
+Studio Fundamentals.............................................................................
+================================================================================

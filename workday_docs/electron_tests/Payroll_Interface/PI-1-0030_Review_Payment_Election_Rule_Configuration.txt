@@ -1,0 +1,66 @@
+================================================================================
+TEST ID: PI-1-0030
+FUNCTIONAL AREA: Payroll Interface
+COUNTRY: GLOBAL
+TEST NAME: Review Payment Election Rule Configuration
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG]
+================================================================================
+
+DESCRIPTION:
+Verify the allowed and default payment types for each payment election rule, where Election Rule Type = Payroll Interface Rule.
+
+WORKDAY ROLE: Payroll Interface Administrator
+EST. DURATION: 5 minutes
+COUNTRY SCOPE: GLOBAL
+
+PREREQUISITES:
+- User logged in with Payroll Interface Administrator permissions
+- Required data available in tenant
+- Access to GLOBAL payroll data
+
+ELECTRON STEPS:
+1. enter search box as "Payment Election Rules"
+2. wait for search results
+3. click search result containing "Payment Election Rules"
+4. wait for page to load
+5. RAG-extracted steps:
+   - Workday Community AI-Generated Answer
+   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+   - Release: 2025R1
+   - ...
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+   - Audit Cost Center Setup: Extract Cost Center
+   - Audit Region Setup: Extract Regions
+   - Audit Supervisory Organizations: Extract Supervisory ...
+6. screenshot as "PI-1-0030_complete.png"
+
+VERIFICATION:
+- [ ] nan
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Country-specific data validates correctly
+
+API ALTERNATIVE:
+- SOAP: Get_Payroll_Results
+- REST: Not available in RAG results
+
+RAG NOTES:
+Loaded 63 docs from public/private
+Loaded 55 WSDLs with 3169 operations
+Total: 118 documents
+## Results for: Payment Election Rules
+
+### 1. Kb Hcm Hire Employee (score: 8)
+Source: kb_hcm_hire_employee.txt
+```
+# Workday Hire Employee Business Process - Knowledge Base
+
+## Source
+- Workday Community AI-Generated Answer
+- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
+- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
+- Release: ...
+================================================================================
