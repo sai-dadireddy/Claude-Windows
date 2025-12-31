@@ -1,13 +1,52 @@
 # Workday KB: Verify Tax Recoverabilities
 # Searched: 2024-12-31
 # Query: "Verify Tax Recoverabilities"
-# Total Results: 500 (estimated ~65 English Admin Guide)
-# Pages: 17 (EN content in pages 1-11)
+# Total Results: 500 (72 English Admin Guide)
+# ALL 17 PAGES CHECKED
 
-## Sampled Pages
-Page 1: 10 EN Admin Guide results
-Page 5: 5 EN Admin Guide results
-Page 10: 6 EN Admin Guide results
-Page 12+: 0 EN Admin Guide results
+## Results by Page
+Page 1: 10 EN Admin Guide docs
+Page 2: 12 EN Admin Guide docs
+Page 3: 8 EN Admin Guide docs
+Page 4: 7 EN Admin Guide docs
+Page 5: 5 EN Admin Guide docs
+Page 6: 7 EN Admin Guide docs
+Page 7: 8 EN Admin Guide docs
+Page 8: 4 EN Admin Guide docs
+Page 9: 5 EN Admin Guide docs
+Page 10: 6 EN Admin Guide docs
+Page 11: 0 EN Admin Guide docs
+Page 12: 0 EN Admin Guide docs
+Page 13: 0 EN Admin Guide docs
+Page 14: 0 EN Admin Guide docs
+Page 15: 0 EN Admin Guide docs
+Page 16: 0 EN Admin Guide docs
+Page 17: 0 EN Admin Guide docs
 
-## Estimated Total: ~65 EN Admin Guide results
+## TOTAL: 72 English Admin Guide documents
+
+## Key Documents (Page 1)
+1. Set Up Tax Recoverabilities for Financial Transactions | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/uuj1500505847873.html
+2. Reference: Ad Hoc Bank Transaction Connector XML Schema | https://doc.workday.com/admin-guide/en-us/integrations/financials-connectors/ad-hoc-bank-transaction-connector/
+3. Create Recurring Supplier Invoices | https://doc.workday.com/admin-guide/en-us/financial-management/supplier-accounts/invoicing-and-payables/recurring-supplier-invoices/
+4. Reference: Verification Reports for Payroll Inputs | https://doc.workday.com/admin-guide/en-us/payroll/payroll-processing/process-payroll/
+5. Create Ad Hoc Bank Transactions | https://doc.workday.com/admin-guide/en-us/financial-management/cash/bank-account-reconciliation-processing/
+6. Verify Procurement Card Transactions | https://doc.workday.com/admin-guide/en-us/spend-management/procurement/procurement-cards/
+7. Edit Accounting Source | https://doc.workday.com/admin-guide/en-us/
+8. Concept: Transaction Tax Account Posting Rules | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/
+9. Assign a Verification Status to Dependents | https://doc.workday.com/admin-guide/en-us/
+10. Reference: Accounting Journal Connector CSV File Format | https://doc.workday.com/admin-guide/en-us/integrations/
+
+## Page 2 Titles
+- Configure Receivables Aging Worklets
+- Configure Transaction Tax ID Exceptions
+- View Procurement Card Transaction Verifications
+- Verify Delivery of Electronic Payments
+- Reclassify Assets
+- Reference: Ad Hoc Bank Transaction Connector CSV File Format
+- Create Receipt Accruals
+- View Transaction Tax Liability for Companies
+- Account Recovery for Suppliers
+- Configure Transaction Tax Rule Exceptions
+- Steps: Set Up Taxes for Expense Reports
+- Configure Withholding Tax Exemptions
