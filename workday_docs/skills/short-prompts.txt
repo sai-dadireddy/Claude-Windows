@@ -1,0 +1,105 @@
+ULTRA-SHORT PROMPTS FOR CLAUDE CHROME SIDEBAR
+==============================================
+(Under 500 tokens each to leave room for page context)
+
+================================================================================
+TAB 1: FINANCE
+================================================================================
+Search "Confirm Books" and "Book Codes".
+
+Extract ONLY from results:
+- Steps (numbered)
+- Required fields
+- Validation rules
+
+Output JSON:
+{"topic":"...","steps":[...],"fields":[...],"confidence":"HIGH/LOW/NOT_FOUND"}
+
+No guessing. Say NOT_FOUND if missing.
+
+================================================================================
+TAB 2: HCM
+================================================================================
+Search "Collective Agreements" and "Fields of Study".
+
+Extract ONLY from results:
+- Steps
+- Required fields
+- Validation
+
+Output JSON. No guessing.
+
+================================================================================
+TAB 3: CASE MANAGEMENT
+================================================================================
+Search "Create Case Employee".
+
+Extract:
+- Steps
+- Fields
+- Roles needed
+
+Output JSON. NOT_FOUND if missing.
+
+================================================================================
+TAB 4: PAYROLL
+================================================================================
+Search "Benefits Pay Hub" and "FLSA Calendar".
+
+Extract:
+- Configuration steps
+- Fields
+
+Output JSON. No guessing.
+
+================================================================================
+TAB 5: PROCUREMENT
+================================================================================
+Search "Requisition Types".
+
+Extract:
+- Setup steps
+- Fields
+
+Output JSON.
+
+================================================================================
+TAB 6: BENEFITS
+================================================================================
+Search "ACA Measurement Period".
+
+Extract:
+- Configuration steps
+- Fields
+
+Output JSON.
+
+================================================================================
+TAB 7: INVENTORY
+================================================================================
+Search "Inventory Site" and "Stocking Locations".
+
+Extract:
+- Setup steps
+- Fields
+
+Output JSON.
+
+================================================================================
+TAB 8: LEASE
+================================================================================
+Search "Operating Lease Supplier Contract".
+
+Extract:
+- Steps
+- Fields
+
+Output JSON.
+
+================================================================================
+SINGLE TOPIC TEMPLATE (shortest)
+================================================================================
+Search "{TOPIC}".
+Extract steps + fields from results.
+Output: {"topic":"...","steps":[...],"fields":[...],"confidence":"..."}
+NOT_FOUND if missing. No guessing.
