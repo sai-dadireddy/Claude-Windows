@@ -1,0 +1,30 @@
+# Workday KB: Confirm Worktag Usage
+# Searched: 2024-12-31
+# Query: "Confirm Worktag Usage"
+# Total Results: 500 (141 English Admin Guide)
+# Pages: 17 (EN content in pages 1-12, 17)
+
+## Summary by Page
+Page 1: 18 EN Admin Guide results
+Page 2: 11 EN Admin Guide results
+Page 3: 7 EN Admin Guide results
+Page 4: 12 EN Admin Guide results
+Page 5: 16 EN Admin Guide results
+Page 6: 13 EN Admin Guide results
+Page 7: 13 EN Admin Guide results
+Page 8: 11 EN Admin Guide results
+Page 9: 14 EN Admin Guide results
+Page 10: 8 EN Admin Guide results
+Page 11: 11 EN Admin Guide results
+Page 12: 5 EN Admin Guide results
+Pages 13-16: 0 EN Admin Guide results
+Page 17: 2 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results spread across pages 1-12 and 17
+- Unusual distribution with content in page 17
+- 141 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Worktag usage configuration and validation
+- Related to financial dimension tagging and reporting

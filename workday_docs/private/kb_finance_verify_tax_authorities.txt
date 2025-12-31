@@ -1,0 +1,27 @@
+# Workday KB: Verify Tax Authorities
+# Searched: 2024-12-31
+# Query: "Verify Tax Authorities"
+# Total Results: 500 (87 English Admin Guide)
+# Pages: 17 (EN content in pages 1-10 only)
+
+## Summary by Page
+Page 1: 18 EN Admin Guide results
+Page 2: 10 EN Admin Guide results
+Page 3: 14 EN Admin Guide results
+Page 4: 8 EN Admin Guide results
+Page 5: 7 EN Admin Guide results
+Page 6: 11 EN Admin Guide results
+Page 7: 9 EN Admin Guide results
+Page 8: 3 EN Admin Guide results
+Page 9: 2 EN Admin Guide results
+Page 10: 5 EN Admin Guide results
+Pages 11-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-10
+- Pages 11-17 contain only non-English translations
+- 87 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Tax authorities configuration and verification
+- Related to tax compliance and regulatory reporting
