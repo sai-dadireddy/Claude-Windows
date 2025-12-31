@@ -1,0 +1,111 @@
+WORKDAY KB RESEARCH - QUICK COPY PROMPTS
+=========================================
+
+## SINGLE TOPIC PROMPT (Replace {TOPIC})
+
+Research "{TOPIC}" on this Workday Community page.
+
+RULES:
+- ONLY use information from THIS page
+- Say "NOT FOUND" if missing
+- NO guessing or inventing
+- Cite exact URLs
+
+EXTRACT:
+1. Business process steps (numbered)
+2. Required fields with types
+3. Validation rules
+4. UI navigation path
+
+DOWNLOADS:
+- Click any PDF/guide links
+- Note: "Downloaded: filename.pdf"
+
+OUTPUT as JSON:
+{
+  "topic": "{TOPIC}",
+  "source_url": "...",
+  "confidence": "HIGH/MEDIUM/LOW",
+  "steps": [...],
+  "fields": [...],
+  "validation": [...],
+  "downloads": [...]
+}
+
+=========================================
+
+## BATCH PROMPTS - COPY ONE PER TAB
+
+### TAB 1: Finance
+Research these Finance topics on Workday Community:
+1. Confirm Books
+2. Book Codes
+3. Translation Rules Sets
+
+For EACH topic: extract steps, fields, validation. Download any PDFs.
+Output as JSON array. Say "NOT FOUND" if missing.
+
+---
+
+### TAB 2: HCM
+Research these HCM topics on Workday Community:
+1. Collective Agreements
+2. Fields of Study
+3. Job History Industries
+4. Duplicate Management Framework
+
+For EACH: extract steps, fields, validation. Download PDFs.
+Output as JSON array. NO hallucinations.
+
+---
+
+### TAB 3: Payroll
+Research these Payroll topics on Workday Community:
+1. Benefits and Pay Hub
+2. Missing Payment Elections
+3. Period Schedule Configuration
+4. FLSA Calendar
+
+Extract steps, fields, validation. Download guides.
+Output JSON. Say "NOT FOUND" if missing.
+
+---
+
+### TAB 4: Procurement
+Research on Workday Community:
+1. Requisition Types
+2. Supplier Contract Types
+
+Extract configuration steps, fields. Download templates.
+Output JSON. NO guessing.
+
+---
+
+### TAB 5: Case Management
+Research on Workday Community:
+1. Create Case for Employee
+2. Create Case for Managers
+3. Create Case on Behalf of Employee
+
+Extract steps, required fields. Download guides.
+Output JSON.
+
+---
+
+### TAB 6: Inventory
+Research on Workday Community:
+1. Inventory Site configuration
+2. Stocking Locations setup
+
+Extract setup steps, fields. Download docs.
+Output JSON.
+
+=========================================
+
+## SAVE OUTPUTS TO:
+workday_docs/private/kb_{area}_{topic}.txt
+
+Examples:
+- kb_finance_confirm_books.txt
+- kb_hcm_collective_agreements.txt
+- kb_payroll_benefits_pay_hub.txt

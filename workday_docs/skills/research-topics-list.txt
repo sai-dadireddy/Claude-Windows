@@ -1,0 +1,168 @@
+WORKDAY KB RESEARCH TOPICS
+===========================
+Generated from tracker: 1,542 pending files
+Priority: LOW confidence first, then MEDIUM
+
+=========================================
+TAB 1: FINANCE (251 topics)
+=========================================
+LOW PRIORITY (research first):
+- Confirm Translation Rules Sets
+- Confirm Book Codes
+- Confirm Revaluation Rules
+- Confirm Revaluation Groups
+- Confirm Allocation Definitions
+- Confirm Allocation Group Sets
+- Confirm Statistical Definitions
+- Confirm Worktag Usage
+- Verify Tax Applicabilities
+- Verify Tax Recoverabilities
+
+=========================================
+TAB 2: HCM (245 topics)
+=========================================
+LOW PRIORITY:
+- Academic Faculty Review Academic Periods
+- Academic Faculty Review Academic Rank
+- Academic Faculty Review Tenure Status
+- Unions - Start Union Membership
+- Unions - End Union Membership
+- Compensation Security Group Assignments
+- Manager Security Visibility
+- Employee Visibility
+- Add Vaccination - Worker
+- Collective Agreements
+
+MEDIUM:
+- Audit Personal Information Setup
+- Audit Worker Data Conversion
+- Review Degrees configuration
+- Review Job History Companies
+- Review Skills and Experience Setup
+
+=========================================
+TAB 3: CASE MANAGEMENT (82 topics)
+=========================================
+LOW PRIORITY:
+- Create a Case on Behalf of an Employee
+- Create a Case on Behalf of a Non-Worker
+- Create a Case for Individual Contributor
+- Create a Case for Managers
+- Create a Case for Help Case Team members
+
+MEDIUM:
+- Role Assignments
+- Link a Case
+- Service Category
+- Case Type
+- Case Routing Rule
+- Case Eligibility Rule
+
+=========================================
+TAB 4: PAYROLL (269 topics combined)
+=========================================
+Payroll_Canada LOW:
+- New Hire to Off-Cycle to Settlement
+- Termination to Off-Cycle to Settlement
+- Payroll Input to Gross to Settlement
+
+Payroll_US MEDIUM:
+- Salary Over the Cap
+- Benefits and Pay Hub
+- Missing Payment Elections Review
+- Review Period Schedule Configuration
+- Review Pay Run Group Configuration
+- FLSA Calendar Configuration
+- FLSA Calendar Rules Configuration
+- Review Company Accounting Configuration
+
+=========================================
+TAB 5: PROCUREMENT (168 topics)
+=========================================
+LOW PRIORITY:
+- View Business Process for Requisition Event
+- Create a Requisition for Goods from PunchOut
+- Create a Requisition for a Deliverable Service
+- Supplier Contract Types
+- Requisition Types
+- Match Rules
+- Spend Transaction Instructions
+
+MEDIUM:
+- Create a Purchase Order
+- Approve Purchase Order
+- Issue a Purchase Order
+- Create a Change Order
+
+=========================================
+TAB 6: BENEFITS (165 topics)
+=========================================
+MEDIUM:
+- Verify Affordable Care Reporting Configuration
+- ACA Measurement Period
+- Benefit Eligibility Rules
+- Enrollment Count
+- Verify Benefit Groups
+- Verify Benefit Coverage Types
+- Health Care Plans
+- HSA Plans
+- Insurance Coverage Targets
+
+=========================================
+TAB 7: INVENTORY (159 topics)
+=========================================
+LOW PRIORITY:
+- Inventory Site
+- Stocking Locations
+- Create Inventory Site
+- Confirm Custom Validations
+- Create Ad Hoc Putaway
+
+MEDIUM:
+- Inventory Adjustment
+- Find Inventory Balance
+- Find Inventory Transaction
+- Inventory Count
+- Shipping Information
+
+=========================================
+TAB 8: LEASE ACCOUNTING (83 topics)
+=========================================
+LOW PRIORITY:
+- Supplier Contract for Short Term Operating Lease
+- Lease Amendment for Finance Lease
+
+MEDIUM:
+- Leases Tenant Setup
+- Leases Account Posting Rules
+- Leases Book codes
+- Supplier Contract Types
+- Asset Book Rules
+
+=========================================
+TAB 9: ENDOWMENTS (125 topics)
+=========================================
+LOW PRIORITY:
+- Add Custom Field to Gift
+- Add Custom Field to Donor
+- Integration from Donor Management System
+
+MEDIUM:
+- Edit Gift
+- Edit Gift Hierarchy
+- Find Donors
+- Find Gifts
+- Gift Activity Report
+
+=========================================
+
+QUICK SUMMARY FOR COPY/PASTE:
+-----------------------------
+Finance: Confirm Books, Book Codes, Translation Rules, Worktag Usage
+HCM: Collective Agreements, Fields of Study, Job History, Duplicate Management
+Payroll: Pay Run Group, Period Schedule, FLSA Calendar, Benefits Pay Hub
+Procurement: Requisition Types, Supplier Contract Types
+Benefits: ACA Measurement, Benefit Eligibility, Enrollment Count
+Inventory: Inventory Site, Stocking Locations
+Case Mgmt: Create Case Employee, Create Case Manager
+Lease: Supplier Contract Operating/Finance Lease
