@@ -1,0 +1,120 @@
+TOPICS NEEDING ONLINE RESEARCH (RAG Score < 7)
+===============================================
+Generated: 2025-12-31
+Criteria: RAG score < 7 = needs Workday KB research
+
+===============================================
+FINANCE (30 topics, scores 2-5)
+===============================================
+Priority 1 (score 2-3):
+- Confirm Statistical Definitions
+- Verify Tax Applicabilities
+- Verify Tax Recoverabilities
+- Confirm Book Codes
+- Confirm Revaluation Rules
+- Confirm Revaluation Groups
+- Confirm Worktag Usage
+- Verify Tax Authorities
+- Verify Tax Declaration Definitions
+- Unpost Accounting Journal
+- Create Accounting Adjustment
+- View Accounting Adjustment
+- View Allocation Accounting
+- View Revaluation Results
+- Review Elimination Rules
+
+Priority 2 (score 4-5):
+- Confirm Translation Rules Sets
+- Confirm Allocation Definitions
+- Confirm Allocation Group Sets
+- Verify Transaction Tax Rates
+- Verify Transaction Tax Codes
+- Verify Tax Declaration Component Categories
+- Verify Tax Declaration Components
+- Verify Tax Declaration Definition Categories
+- Hire Using Position Management
+- Rehire a Terminated Worker
+- Contract a Contingent Worker
+- Auto Generated IDs Edit Integration IDs
+- Non HCM Security Access
+- Run Consolidated Trial Balance
+- Audit Worker Data Conversion (Employment Dates)
+
+===============================================
+CASE MANAGEMENT (4 unique topics, scores 5-6)
+===============================================
+- Create a Case on Behalf of a Non-Worker (score: 6)
+- Create a Case About a Worker (score: 5)
+
+===============================================
+HCM (estimated 50+ topics)
+===============================================
+To check:
+- Academic Faculty Review Academic Periods
+- Academic Faculty Review Academic Rank
+- Academic Faculty Review Tenure Status
+- Unions - Start Union Membership
+- Unions - End Union Membership
+- Compensation Security Group Assignments
+- Manager Security Visibility
+- Employee Visibility
+
+===============================================
+PAYROLL CANADA (estimated 30+ topics)
+===============================================
+To check:
+- New Hire to Off-Cycle to Settlement
+- Termination to Off-Cycle to Settlement
+
+===============================================
+PROCUREMENT (estimated 10+ topics)
+===============================================
+To check:
+- View Business Process for Requisition Event
+- Create a Requisition for Goods from PunchOut
+- Spend Transaction Instructions
+
+===============================================
+INVENTORY (estimated 5+ topics)
+===============================================
+To check:
+- Confirm Custom Validations
+- Confirm Worktag Usages
+- Create Ad Hoc Putaway
+
+===============================================
+RESEARCH PRIORITY ORDER
+===============================================
+1. Finance - Tax topics (critical for compliance)
+2. Finance - Allocation/Revaluation topics
+3. Case Management - Non-Worker cases
+4. HCM - Academic/Union topics
+5. Payroll Canada - Settlement processes
+6. Procurement - Requisition processes
+7. Inventory - Configuration topics
+
+===============================================
+CHROME SIDEBAR SEARCH QUERIES
+===============================================
+Copy these to Chrome sidebar on resourcecenter.workday.com:
+
+FINANCE BATCH 1:
+Search: "Confirm Statistical Definitions"
+Search: "Tax Applicabilities configuration"
+Search: "Tax Recoverabilities setup"
+Search: "Revaluation Rules configuration"
+
+FINANCE BATCH 2:
+Search: "Allocation Definitions workday"
+Search: "Worktag Usage configuration"
+Search: "Transaction Tax Rates"
+Search: "Accounting Adjustment create"
+
+CASE MANAGEMENT:
+Search: "Create Case Non-Worker"
+Search: "Create Case About Worker"
+
+HCM:
+Search: "Academic Faculty configuration"
+Search: "Union Membership workday"
+Search: "Compensation Security Groups"
