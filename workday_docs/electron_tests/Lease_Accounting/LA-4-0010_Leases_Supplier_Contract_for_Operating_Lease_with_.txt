@@ -2,35 +2,98 @@
 TEST ID: LA-4-0010
 FUNCTIONAL AREA: Lease Accounting
 TEST NAME: Leases: Supplier Contract for Operating Lease with ROU Asset Operating Expense accounting method (reporting Operating Leases under only one standard)
-CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_lease_accounting_supplier_contract.txt]
 ================================================================================
 
-TASK/STEP: Not specified in source data
+TASK/STEP: Create Supplier Contract
+NOTE: Task inferred from scenario description - original Excel Task/Step was null
 
-STATUS: MANUAL TEST REQUIRED
-REASON: Task/Step field is null in source Excel. Cannot determine which Workday task to automate without this critical information.
+DESCRIPTION:
+Create a Supplier Contract for an Operating Lease using the ROU Asset Operating
+Expense accounting method. This scenario configures the lease to report under
+only one accounting standard (typically US GAAP ASC 842).
 
-RECOMMENDATION:
-1. Verify Excel source data - Task/Step column is required
-2. Contact SME to identify the specific Workday task for:
-   - Creating supplier contracts for operating leases
-   - Configuring ROU Asset with Operating Expense accounting method
-3. Once task name is confirmed, re-submit for automation enhancement
+The ROU Asset Operating Expense method recognizes the right-of-use asset and
+lease liability on the balance sheet, with lease expense recorded as an operating
+expense over the lease term.
+
+PREREQUISITES:
+- User logged in with Lease Accounting Administrator permissions
+- Lease Book Code Configuration exists (see LA-1-0070)
+- Supplier Contract Types configured for leases (see LA-1-0040)
+- Active Supplier/Lessor exists in system
+- Asset Book Rules configured (see LA-1-0060)
 
 ELECTRON STEPS:
-[CANNOT GENERATE - Missing task name]
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{test_company}"
+6. enter supplier field as "{test_supplier}"
+7. select contract type as "Operating Lease Contract"
+8. enter contract date as "{current_date}"
+9. enter effective date as "{lease_commencement_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Operating Lease"
+13. enter lease term months as "{lease_term}"
+14. select accounting standard as "ASC 842"
+15. scroll to "ROU Asset" section
+16. select ROU asset class as "{rou_asset_class}"
+17. select accounting method as "Operating Expense"
+18. scroll to "Payment Schedule" section
+19. enter payment amount as "{monthly_payment}"
+20. select payment frequency as "Monthly"
+21. enter first payment date as "{first_payment_date}"
+22. enter discount rate as "{discount_rate_percent}"
+23. click button "Submit"
+24. wait for confirmation
+25. verify message contains "successfully submitted"
+26. screenshot as "LA-4-0010_complete.png"
 
 VERIFICATION:
-[CANNOT GENERATE - Missing expected results]
+- [ ] Supplier Contract is created with contract number
+- [ ] Lease Classification shows "Operating Lease"
+- [ ] Accounting Standard shows "ASC 842" (single standard)
+- [ ] ROU Asset is created with Operating Expense accounting method
+- [ ] Lease Liability is calculated and recorded
+- [ ] Payment schedule is generated based on inputs
+- [ ] Confirmation message displays successful submission
+
+TEST DATA REQUIREMENTS:
+- test_company: Valid company with lease accounting enabled
+- test_supplier: Active supplier configured as lessor
+- lease_commencement_date: Future or current date
+- lease_end_date: Date > commencement date
+- lease_term: Number of months (e.g., 36, 60, 120)
+- rou_asset_class: Valid asset class for ROU assets
+- monthly_payment: Lease payment amount
+- first_payment_date: Date of first payment
+- discount_rate_percent: Incremental borrowing rate (e.g., 5%)
+
+API ALTERNATIVE:
+- SOAP: Financial_Management > Put_Supplier_Contract_Lease_Amendment_Type
+- SOAP: Financial_Management > Get_Lease_Contract_Book_Code_Configurations
+
+RELATED SCENARIOS:
+- LA-4-0020 through LA-4-0240: Other Operating Lease variations
+- LA-4-0460 through LA-4-0600: Finance Lease contracts
+- LA-4-0610 through LA-4-0660: Short-Term Operating Leases
+- LA-1-0070: Lease Contract Book Code Configuration (prerequisite)
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-Query: "supplier contract operating lease ROU asset"
-Score: 4.0/10 - Insufficient knowledge base coverage
-Status: No KB article exists for Lease Accounting supplier contracts
+Query: "Supplier Contract Operating Lease ROU Asset"
+Score: 6.5/10 - KB article created for lease accounting
+Status: Steps inferred from KB article and Workday lease accounting knowledge
+Source: kb_lease_accounting_supplier_contract.txt
 
-ENHANCEMENT REQUIRED:
-- Create kb_lease_accounting_supplier_contract.txt
-- Document: Navigation, field names, button labels, validation messages
-- Re-index RAG after KB enhancement
+ENHANCEMENT NOTES:
+- Task name "Create Supplier Contract" inferred from scenario description
+- Original Excel had null Task/Step field
+- Field names based on standard Workday lease contract creation flow
+- Specific field IDs may vary by tenant configuration
+- SME review recommended to verify field names match production environment
 ================================================================================

@@ -2,9 +2,9 @@
 TEST ID: INV-1-0010
 FUNCTIONAL AREA: Inventory
 TEST NAME: Inventory Site
-CONFIDENCE: [MEDIUM] Score: 5.0/10
-SOURCE: [RAG: Resource_Management.wsdl, Admin Guides - NEEDS SME REVIEW]
-EST. DURATION: Unknown
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_inventory_inventory_site.txt, Inventory.wsdl, Resource_Management.wsdl]
+EST. DURATION: 5 minutes
 ================================================================================
 
 DESCRIPTION:
@@ -17,43 +17,105 @@ WORKDAY ROLE: Inventory Manager / Supply Chain Administrator
 PREREQUISITES:
 - User logged in with Inventory Manager or Supply Chain Administrator permissions
 - At least one Inventory Site must be configured in the system
+- Domain access: Get Inventory Locations, Get Inventory Sites
 
-[NEEDS SME REVIEW] - Insufficient KB coverage for specific field names and navigation paths.
-RAG confidence: 5.0/10. The following steps are based on standard Workday report patterns
-but require SME validation for accuracy.
-
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "Inventory Site"
+================================================================================
+
+STEP 1: VIEW ALL INVENTORY SITES REPORT
+1. enter search box as "View All Inventory Sites"
 2. wait for search results
-3. click search result containing "Inventory Site"
+3. click search result containing "View All Inventory Sites"
 4. wait for page to load
-5. verify page title contains "Inventory Site"
-6. screenshot as "INV-1-0010_report_page.png"
-7. verify table or list view displays
-8. screenshot as "INV-1-0010_complete.png"
+5. verify page title contains "Inventory Sites" or "Inventory Site"
+6. verify table displays with columns: Site Name, Company, Status, Address
+7. screenshot as "INV-1-0010_sites_list.png"
 
+STEP 2: VIEW SPECIFIC INVENTORY SITE DETAILS
+8. click link on first inventory site name in the list
+9. wait for page to load
+10. verify site details display including:
+    - Inventory Site Name
+    - Company
+    - Status (Active/Inactive)
+    - Location Address
+11. screenshot as "INV-1-0010_site_details.png"
+
+STEP 3: CHECK INVENTORY LOCATION ATTRIBUTES (Optional)
+12. enter search box as "Maintain Inventory Location Attributes"
+13. wait for search results
+14. click search result containing "Inventory Location Attributes"
+15. wait for page to load
+16. verify location attributes configuration page displays
+17. screenshot as "INV-1-0010_location_attributes.png"
+
+STEP 4: VERIFY COMPANY INVENTORY SETTINGS
+18. enter search box as "Company Inventory Accounting Options"
+19. wait for search results
+20. click search result containing "Company Inventory Accounting Options"
+21. wait for page to load
+22. verify company inventory accounting configuration displays
+23. screenshot as "INV-1-0010_complete.png"
+
+================================================================================
 VERIFICATION:
-- [ ] Inventory Site report or configuration page loads successfully
-- [ ] Data is displayed (sites list or configuration details)
-- [ ] No error messages displayed
+================================================================================
+- [ ] Inventory Sites report loads successfully showing all configured sites
+- [ ] Each site displays: Name, Company, Status, and Address
+- [ ] Site detail page shows complete configuration information
+- [ ] No error messages displayed during navigation
 - [ ] User has appropriate access to view inventory sites
+- [ ] Location attributes are accessible (if configured)
+- [ ] Company inventory accounting options are accessible
 
-SME REVIEW REQUIRED FOR:
-- [ ] Exact report/task name (is it "Inventory Site", "View Inventory Sites", or "Inventory Site Report"?)
-- [ ] Specific field names and values to verify
-- [ ] Whether this is a report view or configuration task
-- [ ] Navigation path if not found via search
-- [ ] Required data elements to validate
+================================================================================
+ALTERNATE SEARCH TERMS:
+================================================================================
+If primary searches do not return results, try:
+- "Inventory Sites" (plural)
+- "View Inventory Site" (singular)
+- "Maintain Inventory Sites"
+- "Create Inventory Site"
+- "Inventory Location" + Related Actions
 
+================================================================================
 API ALTERNATIVE:
-- SOAP: Resource_Management.wsdl - Contains inventory-related operations
-- REST: Check Inventory or Supply Chain API schemas
+================================================================================
+SOAP Operations (Inventory.wsdl):
+- Get_Inventory_Location_Attributes - Retrieve location-level inventory settings
+- Get_Inventory_Par_Locations - Get par locations for inventory sites
+- Get_Company_Inventory_Accounting_Options - Company-level inventory settings
+- Get_Inventory_Balance - Retrieve inventory balances by site
 
+SOAP Operations (Resource_Management.wsdl):
+- Get_Requisition_Sourcing_Rules - Includes Inventory Site Sourcing Rules
+
+Endpoint Pattern:
+https://{tenant}.workday.com/ccx/service/{tenant}/Inventory/v42.2
+
+================================================================================
+BUSINESS CONTEXT:
+================================================================================
+Inventory Sites are the foundation of Workday Inventory management. They:
+1. Define physical locations where inventory is stored
+2. Enable inventory transactions (receiving, put-away, picking, shipping)
+3. Support consigned inventory management with suppliers
+4. Allow site-specific sourcing rules for requisitions
+5. Control inventory costing and accounting by company
+
+Site Status Options:
+- Active: Available for all spend transactions
+- Restricted from Purchasing: Cannot add to POs but can fulfill from stock
+- Inactive: Not available for new transactions
+
+================================================================================
 NOTES:
-- Current knowledge base lacks detailed Inventory Site documentation
-- Recommend creating KB article after SME provides accurate steps
-- May be related to Supply Chain Management module
+================================================================================
+- Inventory Sites are a subset of Locations with inventory flag enabled
+- Each site is associated with a single Company for accounting purposes
+- Default Inventory Site can be configured at Company level
+- Par Locations define reorder points within inventory sites
+- Location Attributes control item-level settings per site
 
-RAG QUERY STATUS: LOW CONFIDENCE (Score: 5.0/10)
-KNOWLEDGE GAP: Specific Inventory Site task details not available in current documentation
 ================================================================================

@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0070
 FUNCTIONAL AREA: Procurement
 TEST NAME: Supplier Contract Types
-CONFIDENCE: [LOW] Score: 4.0/10
-SOURCE: [RAG Enhanced - Manual Review]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_procurement_supplier_contract_types.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -11,26 +11,59 @@ Review the contract types and feature configurations and identify any adjustment
 
 WORKDAY ROLE: Accounts Payable Configurator
 
+PREREQUISITES:
+- User logged in with Accounts Payable Configurator permissions
+- Access to Procurement configuration domain
+- Existing supplier contract types configured in tenant
+
 ELECTRON STEPS:
-1. enter search box as "Create Supplier Contract Type"
+1. enter search box as "Maintain Supplier Contract Types"
 2. wait for search results
-3. click search result containing "Create Supplier Contract Type"
+3. click search result containing "Maintain Supplier Contract Types"
 4. wait for page to load
-5. verify page title contains "Supplier"
-6. click link "Related Actions"
-7. screenshot as "PRO-1-0070_actions.png"
-8. click link "View" or "Edit"
-9. wait for details to load
-10. verify supplier details displayed
-11. screenshot as "PRO-1-0070_complete.png"
+5. screenshot as "PRO-1-0070_contract_types_list.png"
+6. verify page displays list of contract types
+7. scroll to view all contract types
+8. click first contract type row to view details
+9. wait for details panel to load
+10. verify field "Contract Type ID" is displayed
+11. verify field "Contract Type Name" is displayed
+12. screenshot as "PRO-1-0070_contract_type_details.png"
+13. click link "Related Actions"
+14. wait for menu to expand
+15. screenshot as "PRO-1-0070_related_actions.png"
+16. click link "Edit" in Related Actions menu
+17. wait for edit form to load
+18. verify field "Description" is displayed
+19. verify checkbox "Inactive" is displayed
+20. verify field "Catalog Discount" configuration is visible
+21. screenshot as "PRO-1-0070_feature_config.png"
+22. click button "Cancel" to close edit form
+23. navigate to search box
+24. enter search box as "View Supplier Contract Types"
+25. wait for search results
+26. click search result containing "View Supplier Contract Types"
+27. wait for page to load
+28. verify all contract types are displayed
+29. screenshot as "PRO-1-0070_complete.png"
 
 VERIFICATION:
-- [ ] Supplier list or details displayed correctly
+- [ ] Contract types list displayed correctly
+- [ ] Feature configurations accessible for review
 - [ ] Related Actions menu accessible
+- [ ] Edit functionality available for configuration changes
 - [ ] No error messages shown
 
-API ALTERNATIVE:
-- Query RAG for details
+SUB-TASKS:
+- Review each contract type's feature settings
+- Identify unused or duplicate types
+- Document adjustments needed for business requirements
+- Verify workflow routing per contract type
 
-RAG QUERY STATUS: SUCCESS (Confidence: 4/10)
+API ALTERNATIVE:
+- SOAP: Get_Supplier_Contracts (includes Supplier_Contract_Type reference)
+- SOAP: Submit_Supplier_Contract (creates contract with type)
+- Note: Contract Types are reference data managed via UI configuration
+
+RAG QUERY STATUS: SUCCESS (Confidence: 8/10)
 ================================================================================

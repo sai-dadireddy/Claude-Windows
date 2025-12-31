@@ -2,8 +2,8 @@
 TEST ID: USP-5-0010
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Period Schedule Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_payroll_period_schedule.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -14,45 +14,57 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Access to View Period Schedule task
+- Knowledge of expected period schedule names and configurations
 
 ELECTRON STEPS:
 1. enter search box as "View Period Schedule"
 2. wait for search results
 3. click search result containing "View Period Schedule"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0010_complete.png"
+5. select period schedule dropdown as "{schedule_name}"
+6. wait for periods to load
+7. verify period table displays periods
+8. scroll to view all periods
+9. verify period dates are consecutive with no gaps or overlaps
+10. verify payment dates fall on valid business days
+11. click related actions menu
+12. click link "View Details"
+13. verify forward accrual settings are displayed
+14. verify Absence/Time Tracking links are configured
+15. verify correct number of periods per year (Weekly=52, Bi-weekly=26, Semi-monthly=24, Monthly=12)
+16. screenshot as "USP-5-0010_period_schedule.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All expected period schedules are present in the tenant
+- [ ] Period dates are correct (period start, period end, payment date)
+- [ ] Forward accrual settings match expected configuration
+- [ ] Period schedules linked to Absence/Time Tracking as applicable
+- [ ] Correct number of periods exist for each year
+- [ ] No gaps or overlaps in period dates
+- [ ] Payment dates fall on valid business days
+
+PERIOD SCHEDULE COMPONENTS TO VERIFY:
+- Period ID (unique identifier)
+- Period Start Date
+- Period End Date
+- Payment Date (check date)
+- Accounting Date Override (for GL posting)
+- Forward Accrual Indicator
+- Continuous Payroll Calculation settings
+
+RELATED REPORTS:
+- All Period Schedules
+- Period Schedule Details
+- Pay Group by Period Schedule
+- Payroll Calendar Report
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  Service: Payroll
+  Operations: Get_Period_Schedules
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Period Schedule
-
-### 1. Electron Test Samples (score: 8)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample El
-
+  Endpoint: /payroll/v2/periodSchedules
+  Method: GET
 ================================================================================

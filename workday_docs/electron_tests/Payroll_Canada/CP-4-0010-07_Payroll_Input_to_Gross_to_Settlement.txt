@@ -3,8 +3,8 @@ TEST ID: CP-4-0010-07
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payroll Input to Gross to Settlement
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Articles: kb_payroll_run_payroll.txt, kb_payroll_canada_settlement.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,42 +16,127 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Partner permissions
-- Required data available in tenant
-- Access to CA payroll data
+- Payroll run completed and settled
+- Access to CA payroll data and reporting
+- Report parameters ready (pay period, company, pay group)
 
 ELECTRON STEPS:
-1. enter search box as "7. Payroll Reporting"
+1. enter search box as "Payroll Results Summary"
 2. wait for search results
-3. click search result containing "7. Payroll Reporting"
+3. click search result containing "Payroll Results Summary"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-4-0010-07_complete.png"
+5. select pay period as "{pay_period}"
+6. select company as "{company_name}"
+7. click button "Run Report" or "Submit"
+8. wait for report to generate
+9. verify total gross pay displayed
+10. verify total deductions displayed
+11. verify total taxes displayed
+12. verify total net pay displayed
+13. verify employee count matches expected
+14. screenshot as "CP-4-0010-07_results_summary.png"
+15. enter search box as "Payroll Register"
+16. wait for search results
+17. click search result containing "Payroll Register"
+18. wait for page to load
+19. select pay period as "{pay_period}"
+20. click button "Run Report" or "Submit"
+21. wait for report to generate
+22. verify all employees listed with payment details
+23. screenshot as "CP-4-0010-07_payroll_register.png"
+24. enter search box as "Tax Register"
+25. wait for search results
+26. click search result containing "Tax Register" or "Payroll Tax Summary"
+27. wait for page to load
+28. select pay period as "{pay_period}"
+29. click button "Run Report" or "Submit"
+30. wait for report to generate
+31. verify Federal Income Tax totals
+32. verify Provincial Income Tax totals
+33. verify CPP contributions total
+34. verify EI premiums total
+35. screenshot as "CP-4-0010-07_tax_register.png"
+36. enter search box as "Settlement Run Summary"
+37. wait for search results
+38. click search result containing "Settlement Run Summary"
+39. wait for page to load
+40. select settlement run as "{settlement_id}"
+41. click button "Run Report" or "Submit"
+42. wait for report to generate
+43. verify payment file details
+44. verify GL entries summary
+45. screenshot as "CP-4-0010-07_settlement_summary.png"
+46. enter search box as "EFT File Report"
+47. wait for search results
+48. click search result containing "EFT File Report" or "Payment File Report"
+49. wait for page to load
+50. select settlement run as "{settlement_id}"
+51. click button "Run Report" or "Submit"
+52. wait for report to generate
+53. verify bank file generated successfully
+54. verify payment count matches expected
+55. screenshot as "CP-4-0010-07_eft_report.png"
+56. enter search box as "Payroll GL Report"
+57. wait for search results
+58. click search result containing "Payroll GL Report" or "Payroll Journal Entries"
+59. wait for page to load
+60. select pay period as "{pay_period}"
+61. click button "Run Report" or "Submit"
+62. wait for report to generate
+63. verify journal entries created
+64. verify debits equal credits
+65. verify no suspense account postings
+66. screenshot as "CP-4-0010-07_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Payroll Results Summary generated successfully
+- [ ] Total gross pay matches expected
+- [ ] Total net pay matches expected
+- [ ] Employee count is correct
+- [ ] Payroll Register shows all employees
+- [ ] Tax Register shows correct federal/provincial taxes
+- [ ] CPP and EI totals are accurate
+- [ ] Settlement Run Summary shows completed status
+- [ ] EFT File Report confirms bank file generated
+- [ ] Payroll GL Report shows balanced journal entries
+- [ ] No suspense account postings
 - [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+
+KEY REPORTS FOR VERIFICATION:
+1. Payroll Results Summary - Overall totals for pay period
+2. Payroll Register - Detail by employee
+3. Tax Register - Federal/Provincial/CPP/EI breakdown
+4. Settlement Run Summary - Payment processing status
+5. EFT File Report - Bank file generation details
+6. Payroll GL Report - Accounting entries
+7. Deduction Summary Report - Benefits/retirement deductions
+8. Payroll Variance Report - Compare to prior period
+
+CANADA-SPECIFIC REPORTS:
+- CPP Contribution Summary
+- EI Premium Summary
+- Provincial Tax Summary (by province)
+- Quebec Tax Summary (QPIP if applicable)
+- T4 Preparation Report (year-end)
+- ROE Tracking Report (if terminations)
+
+ERROR HANDLING:
+- "Report Failed": Check report parameters and retry
+- "No Data Found": Verify pay period and company selection
+- "Access Denied": Verify Payroll Partner permissions
+
+POST-REPORTING TASKS:
+- Archive reports for compliance
+- Share key reports with stakeholders
+- Prepare for bank file submission
+- Update payroll calendar
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Payroll): Get_Payroll_Results - Retrieve payroll results programmatically
+- SOAP (Payroll): Get_Payroll_Payslips - Get individual employee payslips
+- SOAP (Payroll): Get_Payroll_Balances - Get balance information
+- SOAP (Payroll_CAN): Get_Payroll_Payee_CPPs - CPP contribution details
+- SOAP (Payroll_CAN): Get_Payroll_Payee_EIs - EI premium details
+- SOAP (Payroll_CAN): Get_Payroll_CAN_Year_End_Forms - Year-end forms
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 7. Payroll Reporting
-
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample El...
 ================================================================================

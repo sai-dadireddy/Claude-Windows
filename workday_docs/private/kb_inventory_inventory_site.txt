@@ -1,0 +1,187 @@
+================================================================================
+WORKDAY KB ARTICLE: INVENTORY SITE CONFIGURATION
+================================================================================
+
+Source: Workday Inventory WSDL, Resource_Management WSDL
+URL: Workday Inventory Web Service
+Created: 2025-12-30
+Functional Area: Inventory / Supply Chain Management
+
+================================================================================
+OVERVIEW
+================================================================================
+
+An Inventory Site is a physical location in Workday where inventory is stored
+and managed. Inventory Sites are configured as specialized Locations with
+inventory-specific attributes. They serve as the hub for all inventory
+transactions including receiving, put-away, picking, shipping, and stock
+management.
+
+================================================================================
+KEY CONCEPTS
+================================================================================
+
+INVENTORY SITE ATTRIBUTES:
+- Location Reference (LocationObjectType)
+- Company Association
+- Default Inventory Site for Company (optional)
+- Active/Inactive Status
+- Inventory Site Sourcing Rules
+
+INVENTORY SITE STATUS OPTIONS:
+- Active: Available for spend transactions for this inventory site
+- Restricted from Purchasing: Item can't be added to purchase orders for this
+  inventory site. Site can still fulfill requisitions from available stock.
+- Inactive: Site is not available for new transactions
+
+INVENTORY SITE SOURCING RULES (from Resource_Management WSDL):
+- Company
+- Requisition Type
+- Spend Category
+- Supplier
+- Ship-To Address
+- Active Location or Location Hierarchy
+- Purchase Item
+- Inventory Site Location
+- Resulting Stock Request Type
+
+================================================================================
+RELATED WORKDAY TASKS
+================================================================================
+
+VIEW/MAINTAIN INVENTORY SITES:
+- Task: "Maintain Inventory Sites" or "View All Inventory Sites"
+- Task: "Create Inventory Site"
+- Task: "Edit Inventory Site"
+
+INVENTORY SITE CONFIGURATION TASKS:
+- Task: "Maintain Inventory Location Attributes"
+  SOAP: Get_Inventory_Location_Attributes, Put_Inventory_Location_Attributes
+
+- Task: "Maintain Company Inventory Accounting Options"
+  SOAP: Get_Company_Inventory_Accounting_Options, Put_Company_Inventory_Accounting_Options
+
+- Task: "Maintain Inventory Par Locations"
+  SOAP: Get_Inventory_Par_Locations, Put_Inventory_Par_Location
+
+INVENTORY TRANSACTIONS USING SITES:
+- Quick Issue: Requires Inventory Site Reference
+  SOAP: Submit_Inventory_Quick_Issue
+
+- Inventory Move: Between locations within or across sites
+  SOAP: Submit_Inventory_Move
+
+- Put-Away: Stock incoming goods at site locations
+  SOAP: Submit_Put-Away, Submit_Ad_Hoc_Put-Away
+
+- Inventory Balance: View balances by site
+  SOAP: Get_Inventory_Balance
+
+================================================================================
+NAVIGATION PATHS
+================================================================================
+
+PRIMARY NAVIGATION:
+1. Search: "Inventory Site" or "Maintain Inventory Sites"
+2. Menu Path: Supply Chain Hub > Inventory > Inventory Sites
+3. Related Actions on Location > Inventory Site Setup
+
+COMMON SEARCHES:
+- "View All Inventory Sites" - Report of all configured sites
+- "Create Inventory Site" - Set up new inventory site
+- "Inventory Site [site name]" - View specific site details
+- "Inventory Location Attributes" - Configure location-level settings
+
+================================================================================
+FIELD NAMES (from WSDL)
+================================================================================
+
+INVENTORY SITE REFERENCE:
+- Inventory_Site_Reference (LocationObjectType)
+- Company (derived from site)
+- Inventory_Location_Enabled (for stocking locations)
+
+QUICK ISSUE FIELDS (using inventory site):
+- Inventory_Site_Reference: The site for the transaction
+- Issue_To_Reference: Worker receiving the item
+- Requesting_Company_Reference: Company requesting the issue
+- Quick_Issue_Line_Data: Line items being issued
+
+INVENTORY LOCATION ATTRIBUTES:
+- Location_Reference
+- Inventory_Item_Reference
+- Unit_of_Measure_Reference
+- Supplier_Reference (for consigned inventory)
+
+================================================================================
+VALIDATION RULES
+================================================================================
+
+1. Inventory Site must be an active Location with Inventory Site flag enabled
+2. Stocking Location must belong to the Inventory Site specified in header
+3. Consigned locations require Supplier reference
+4. Intercompany transactions: Requesting Company must be valid affiliate
+5. Item must be valid for the Inventory Site (not restricted)
+
+================================================================================
+ELECTRON TEST AUTOMATION
+================================================================================
+
+SEARCH AND VIEW INVENTORY SITES:
+1. enter search box as "View All Inventory Sites"
+2. wait for search results
+3. click search result containing "View All Inventory Sites"
+4. wait for page to load
+5. verify report displays list of inventory sites
+6. screenshot as "INV_inventory_sites_report.png"
+
+VIEW SPECIFIC INVENTORY SITE:
+1. enter search box as "Inventory Site"
+2. wait for search results
+3. select "View Inventory Site" or click specific site name
+4. wait for page to load
+5. verify site details display (Name, Company, Status, Address)
+6. screenshot as "INV_inventory_site_details.png"
+
+MAINTAIN INVENTORY LOCATION ATTRIBUTES:
+1. enter search box as "Maintain Inventory Location Attributes"
+2. wait for search results
+3. click search result "Maintain Inventory Location Attributes"
+4. wait for page to load
+5. enter inventory site filter as "[site name]"
+6. click button "OK" or "Apply"
+7. verify location attributes grid displays
+8. screenshot as "INV_location_attributes.png"
+
+================================================================================
+SOAP API OPERATIONS
+================================================================================
+
+INVENTORY WSDL:
+- Get_Inventory_Location_Attributes
+- Put_Inventory_Location_Attributes
+- Get_Inventory_Par_Locations
+- Put_Inventory_Par_Location
+- Get_Company_Inventory_Accounting_Options
+- Put_Company_Inventory_Accounting_Options
+- Get_Inventory_Balance (can filter by site)
+- Submit_Inventory_Quick_Issue (requires Inventory_Site_Reference)
+
+RESOURCE MANAGEMENT WSDL:
+- Get_Requisition_Sourcing_Rules (includes Inventory Site Sourcing Rules)
+- Put_Requisition_Sourcing_Rule
+
+================================================================================
+RELATED BUSINESS PROCESSES
+================================================================================
+
+- Inventory Stock Request
+- Quick Issue Inventory
+- Move Inventory
+- Put-Away Inventory
+- Pick Inventory
+- Inventory Adjustment
+- Inventory Shipment
+- Goods Delivery
+
+================================================================================

@@ -2,60 +2,85 @@
 TEST ID: USP-1-0170
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Tenant Analyzer
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [KB Article: kb_payroll_tenant_analyzer.txt]
 ================================================================================
 
 DESCRIPTION:
-Run the tenant analyzer for the US. Review Payroll tabs and pay special attention to both the Validations and the Calculation Exception Audit results. Discuss with your Payroll consultant as needed. Initial focus should be on understanding and resolving Critical errors. Warning and Informational items should be reviewed and understood, but those might not require a resolution.
+Run the tenant analyzer for the US. Review Payroll tabs and pay special attention
+to both the Validations and the Calculation Exception Audit results. Discuss with
+your Payroll consultant as needed. Initial focus should be on understanding and
+resolving Critical errors. Warning and Informational items should be reviewed and
+understood, but those might not require a resolution.
 
 WORKDAY ROLE: Payroll Administrator
 EST. DURATION: 15 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Access to System Administration tools
+- US Payroll configured in tenant
 
 ELECTRON STEPS:
 1. enter search box as "Tenant Analyzer"
 2. wait for search results
 3. click search result containing "Tenant Analyzer"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0170_complete.png"
+5. verify analysis options display
+6. select Country dropdown as "United States"
+7. wait for country selection to resolve
+8. click button "Run"
+9. wait for analysis to complete
+10. wait 10 seconds
+11. verify results summary displays
+12. verify severity columns display: Critical, Warning, Informational
+13. screenshot as "USP-1-0170_tenant_analyzer_summary.png"
+14. click tab "Payroll"
+15. wait for payroll results to load
+16. verify payroll validation list displays
+17. scroll to view Critical errors section
+18. note any Critical errors requiring immediate resolution
+19. screenshot as "USP-1-0170_payroll_validations.png"
+20. scroll to view Warning section
+21. note Warning items for review
+22. screenshot as "USP-1-0170_payroll_warnings.png"
+23. click tab "Calculation Exceptions" or expand Calculation Exception Audit section
+24. wait for exceptions to load
+25. verify exception list displays
+26. scroll to review all calculation exceptions
+27. note any failed calculations from prior runs
+28. screenshot as "USP-1-0170_calculation_exceptions.png"
+29. click tab "Compensation" (if available)
+30. verify compensation-related validations display
+31. screenshot as "USP-1-0170_compensation_tab.png"
+32. verify all Critical errors have been documented for resolution
+33. screenshot as "USP-1-0170_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] Tenant Analyzer runs successfully for United States
+- [ ] Payroll tab displays validation results
+- [ ] Critical errors are identified and documented
+- [ ] Warning items are reviewed and understood
+- [ ] Calculation Exception Audit results are reviewed
+- [ ] No unexpected Critical errors blocking payroll
+- [ ] Results summary shows severity breakdown
+- [ ] No error messages during analysis execution
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  Not available - Tenant Analyzer is a UI-based diagnostic tool
 
 REST:
-  N/A
+  N/A - No REST API equivalent
 
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Tenant Analyzer
-
-### 1. Test Scenarios Index (score: 7)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisor
+ADDITIONAL NOTES:
+- Critical errors must be resolved before running payroll
+- Warning items should be addressed soon but may not block payroll
+- Informational items are for awareness only
+- Common issues include: Missing Period Schedule, Invalid Tax Configuration,
+  Orphaned Pay Component, Missing Payment Election
+- Consider scheduling Tenant Analyzer to run automatically (daily/weekly)
+- Document all Critical errors and create tickets for resolution tracking
+- Re-run Tenant Analyzer after fixes to verify resolution
 
 ================================================================================

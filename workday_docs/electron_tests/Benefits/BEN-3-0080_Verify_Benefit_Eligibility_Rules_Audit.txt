@@ -2,44 +2,88 @@
 TEST ID: BEN-3-0080
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Benefit Eligibility Rules Audit
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG: process_benefits_tests.py + electron_test_samples.txt + kb_benefits_enrollment.txt]
 ================================================================================
 
-TASK/STEP: Benefit Eligibility Rules Audit
+DESCRIPTION:
+Audit benefit eligibility rules to verify correct configuration of employee
+eligibility criteria, waiting periods, and plan assignment rules. This audit
+ensures employees are correctly matched to eligible benefit plans based on
+employment type, hours worked, and other qualifying criteria.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Eligibility Rules Audit
+WORKDAY ROLE: Benefits Administrator
 
-### 1. Test Scenarios Index (score: 9)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Ex
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator permissions
+- Benefit plans configured with eligibility rules
+- Active employees in system for eligibility verification
 
 ELECTRON STEPS:
+# Method 1: Direct Eligibility Rules Audit Report
 1. enter search box as "Benefit Eligibility Rules Audit"
 2. wait for search results
-3. click search result containing "Benefit Eligibility Rules Audit"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0080_complete.png"
+3. click search result containing "Eligibility Rules Audit"
+4. wait for page to load
+5. screenshot as "BEN-3-0080_audit_report.png"
+
+# View Eligibility Rule Details
+6. verify report columns display:
+   - Rule Name
+   - Rule Conditions
+   - Effective Date
+   - Plan Association
+7. scroll to view all eligibility rules
+8. screenshot as "BEN-3-0080_rules_list.png"
+
+# Alternative: Review via Benefit Plans
+9. enter search box as "Benefit Plans"
+10. wait for search results
+11. click search result containing "Benefit Plans"
+12. wait for page to load
+13. click first benefit plan in list
+14. wait for plan details page
+15. click tab "Eligibility Rules"
+16. verify eligibility configuration:
+    - Eligible Employee Types (Full-time, Part-time, Temporary)
+    - Waiting Period (Immediate, 30 days, 60 days, 90 days)
+    - Eligibility Event Rules (Hire, Job Change, Life Event)
+17. screenshot as "BEN-3-0080_plan_eligibility.png"
+
+# Verify Rule Logic
+18. verify eligibility criteria:
+    - Employment Status requirements
+    - Hours worked threshold (30+ for full-time)
+    - Job classification rules
+    - Location-based eligibility
+19. screenshot as "BEN-3-0080_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Eligibility rules audit report displays all configured rules
+- [ ] Rule names and descriptions are documented
+- [ ] Eligibility conditions match company policy
+- [ ] Waiting periods are correctly configured (e.g., 30/60/90 days)
+- [ ] Eligible employee types are properly defined
+- [ ] Effective dates are appropriate for plan year
+- [ ] No conflicting eligibility rules exist
+
+EXPECTED RESULT:
+All benefit eligibility rules are properly documented and configured,
+ensuring employees are correctly assigned to benefit plans based on
+employment criteria, hours worked, and plan-specific requirements.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Eligibility Rules define WHO can enroll in each benefit plan
+- Common eligibility criteria: Employee Type, Hours per Week, Job Classification
+- Waiting Period: Time between hire date and benefit eligibility
+- Rules can be plan-specific or apply to benefit groups
+- Use "View Eligible Workers" related action to verify rule application
+- Cross-reference with HR policies for compliance validation
+
+API ALTERNATIVE:
+- SOAP: Benefits_Administration.wsdl
+  - Get_Benefit_Plans (includes eligibility rule references)
+  - Get_Custom_Validation_Rules (for eligibility validation logic)
+- REST: /benefitPlans endpoint with eligibilityRules expand parameter
+
 ================================================================================

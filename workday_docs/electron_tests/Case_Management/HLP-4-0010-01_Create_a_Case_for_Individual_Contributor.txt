@@ -2,19 +2,63 @@
 TEST ID: HLP-4-0010-01
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Individual Contributor
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Case
+
+DESCRIPTION:
+Verify appropriate case types show up for Individual Contributor
+
+PREREQUISITES:
+- User logged in with Employee As Self role
+- Case Management module enabled
+- Service Categories and Case Types configured
+- Case Eligibility Rules configured for Individual Contributor role
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0010-01_complete.png"
+1. enter search box as "Create Case"
+2. press Enter or click Search
+3. wait for search results to load
+4. click search result containing "Create Case"
+5. wait for page to load
+6. screenshot as "HLP-4-0010-01_service_categories.png"
+7. verify Service Categories are displayed (e.g., HR Services, IT Support, Payroll)
+8. click tile for first Service Category
+9. wait for Case Types to load
+10. screenshot as "HLP-4-0010-01_case_types.png"
+11. verify Case Types displayed are filtered based on Individual Contributor eligibility
+12. verify only case types allowed by Case Eligibility Rules appear
+13. verify non-eligible case types (manager-only, confidential) are not displayed
+14. click Back to return to Service Categories
+15. repeat steps 8-12 for each Service Category to verify eligibility filtering
+16. screenshot as "HLP-4-0010-01_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Service Categories display correctly for Individual Contributor
+- [ ] Case Types are filtered by Case Eligibility Rules
+- [ ] Only authorized case types are visible for Employee As Self role
+- [ ] Manager-specific or confidential case types do NOT appear
+- [ ] No error messages displayed
+
+ALTERNATE NAVIGATION:
+1. click worklet "Help"
+2. click link "Create Case"
+3. continue with step 6 above
+
+API ALTERNATIVE:
+- SOAP: Requests.Submit_Request - Creates a Request/Case
+- Note: Case eligibility is UI-enforced, API does not filter by role
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Score: 8.0/10
+Source: kb_case_management_create_case.txt
+
+Key Information from KB:
+- Individual Contributor sees case types allowed by Case Eligibility Rules
+- Case Types filtered based on worker role configuration
+- Service Categories organize case types into groups
+- UI elements: Service Category tiles, Case Type tiles, breadcrumb navigation
 ================================================================================

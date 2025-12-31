@@ -2,19 +2,191 @@
 TEST ID: HLP-4-0020-03
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Managers
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Manager As Self
+EST. DURATION: 15 minutes
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify the case routes to correct Service Team when created by a Manager.
 
+This test validates that when a Manager creates a case using their manager-
+specific case types, the Case Routing Rules correctly assign it to the
+appropriate Service Team based on the selected Case Type and routing conditions.
+
+PREREQUISITES:
+- User logged in as Manager As Self (must have direct reports)
+- Manager-specific Case Types configured
+- Case Routing Rules configured for manager Case Types
+- Service Teams configured and active
+- Test data: Know expected Service Team for selected Case Type
+
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0020-03_complete.png"
+================================================================================
 
-VERIFICATION: nan
+-- STEP 1: Login Verification --
+1. verify user is logged in as Manager
+2. verify user has manager permissions
+
+-- STEP 2: Navigate to Create Case --
+3. enter search box as "Create Case"
+4. wait for search results
+5. click search result containing "Create Case"
+6. wait for page to load
+7. screenshot as "HLP-4-0020-03_create_case_manager.png"
+
+-- STEP 3: Verify Manager-Specific Case Types Available --
+8. verify page contains Service Category options
+9. scroll to view all categories
+10. screenshot as "HLP-4-0020-03_service_categories.png"
+
+-- STEP 4: Select Service Category --
+11. click tile for Service Category with manager Case Types
+12. wait for case types to load
+13. screenshot as "HLP-4-0020-03_case_types_manager.png"
+
+-- STEP 5: Select Manager-Specific Case Type --
+14. click tile for manager-specific Case Type with known routing rule
+15. wait for case form to load
+16. screenshot as "HLP-4-0020-03_case_type_selected.png"
+
+-- STEP 6: Complete Case Details --
+17. enter subject as "Manager Test Case - Routing Verification HLP-4-0020-03"
+18. enter description as "Case created by manager to verify routing to correct Service Team."
+19. screenshot as "HLP-4-0020-03_case_details.png"
+
+-- STEP 7: Complete Questionnaire (if present) --
+20. if questionnaire present, complete required fields
+21. screenshot as "HLP-4-0020-03_questionnaire.png"
+
+-- STEP 8: Submit Case --
+22. scroll to Submit button
+23. click button "Submit"
+24. wait for confirmation
+25. screenshot as "HLP-4-0020-03_case_submitted.png"
+
+-- STEP 9: Verify Case Created --
+26. verify message contains "Success" or case number
+27. note the Case Number from confirmation
+
+-- STEP 10: View Case Details to Verify Routing --
+28. click link to view created case OR
+29. enter search box as "View My Cases"
+30. wait for search results
+31. click search result containing "View My Cases"
+32. wait for page to load
+33. click on the recently created case
+34. wait for case details to load
+35. screenshot as "HLP-4-0020-03_case_details_view.png"
+
+-- STEP 11: Verify Service Team Assignment --
+36. scroll to "Assigned To" or "Service Team" section
+37. verify Service Team field shows expected team for manager case types
+38. screenshot as "HLP-4-0020-03_service_team_verification.png"
+39. screenshot as "HLP-4-0020-03_complete.png"
 
 ================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+VERIFICATION:
+================================================================================
+
+- [ ] Manager can access Create Case task
+- [ ] Manager-specific Case Types are visible
+- [ ] Case successfully created with confirmation
+- [ ] Case Number displayed after submission
+- [ ] Case routed to expected Service Team based on manager routing rules
+- [ ] Service Team visible in case details
+- [ ] No routing errors or unassigned status
+
+================================================================================
+TEST DATA REQUIREMENTS:
+================================================================================
+
+REQUIRED CONFIGURATION:
+- Service Category: [Must contain manager-specific Case Types]
+- Case Type: [Manager-only type with routing rule - e.g., "Team Issue", "HR Manager Request"]
+- Case Routing Rule: [Rule specific to manager Case Types]
+- Service Team: [Expected destination team for manager cases]
+
+EXPECTED ROUTING:
+- Manager Case Type [X] -> Manager Support Service Team [Y]
+- Example: "Team Performance Issue" -> "HR Manager Support Team"
+
+NOTE: Manager Case Types may differ from Individual Contributor types.
+Tester must identify Case Types available only to managers.
+
+================================================================================
+MANAGER VS INDIVIDUAL CONTRIBUTOR DIFFERENCES:
+================================================================================
+
+Managers typically have access to:
+- Employee-related case types (about direct reports)
+- Team management cases
+- Manager HR requests
+- Approval-related cases
+
+Routing may differ:
+- Manager cases often route to specialized support teams
+- May have different SLA levels
+- May require different security access for case workers
+
+================================================================================
+HOW TO IDENTIFY EXPECTED ROUTING:
+================================================================================
+
+Before running test, admin should verify:
+
+1. Search "Maintain Case Routing Rules"
+2. Find rule for the manager-specific Case Type
+3. Note the Service Team in the rule's "Route To" field
+4. That is the expected outcome
+
+================================================================================
+ALTERNATIVE VERIFICATION METHOD:
+================================================================================
+
+If case details don't show Service Team to manager:
+
+ADMIN VERIFICATION:
+1. Login as Help Case Team member or admin
+2. Search "Help Dashboard"
+3. Find the case by Case Number
+4. Verify "Service Team" assignment
+5. screenshot as "HLP-4-0020-03_admin_verification.png"
+
+================================================================================
+ERROR SCENARIOS:
+================================================================================
+
+MANAGER CASE TYPES NOT VISIBLE:
+- Verify Case Eligibility Rules for Manager role
+- Check user has active manager assignment
+- Verify user has direct reports
+
+CASE NOT ROUTED:
+- Verify Case Routing Rule exists for Case Type
+- Check routing rule conditions are met
+- Review "All Else Route To" fallback team
+
+WRONG SERVICE TEAM:
+- Check routing rule priority
+- Verify manager-specific rules vs generic rules
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+
+REST API: Not available for Case Management (UI-only workflow)
+SOAP API: No dedicated Help Desk WSDL
+
+================================================================================
+RELATED TESTS:
+================================================================================
+
+- HLP-4-0020-01: Verify appropriate case types show up for Managers
+- HLP-4-0020-02: Verify questionnaires appear for manager case types
+- HLP-4-0010-04: Verify routing for Individual Contributor (compare behavior)
+- HLP-5-0030: Case Routing Rule configuration
+
 ================================================================================

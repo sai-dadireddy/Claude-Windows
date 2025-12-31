@@ -2,19 +2,66 @@
 TEST ID: HLP-4-0030-01
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Help Case Team members
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Case
+
+DESCRIPTION:
+Verify appropriate case types show up for users in Help security groups
+
+PREREQUISITES:
+- User logged in with Case Creator role (Help Case Team member)
+- Case Management module enabled
+- Service Categories and Case Types configured
+- User is member of Help Security Group (e.g., Help Desk Admin, Case Worker)
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0030-01_complete.png"
+1. enter search box as "Create Case"
+2. press Enter or click Search
+3. wait for search results to load
+4. click search result containing "Create Case"
+5. wait for page to load
+6. screenshot as "HLP-4-0030-01_service_categories.png"
+7. verify Service Categories are displayed (all categories accessible)
+8. click tile for first Service Category
+9. wait for Case Types to load
+10. screenshot as "HLP-4-0030-01_case_types.png"
+11. verify ALL Case Types are displayed (Help Case Team has full access)
+12. verify confidential case types are accessible
+13. verify case types for all roles are visible (Individual Contributor + Manager + Admin types)
+14. verify option to create case on behalf of other workers is available
+15. click Back to return to Service Categories
+16. repeat steps 8-12 for remaining Service Categories
+17. screenshot as "HLP-4-0030-01_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] All Service Categories are accessible
+- [ ] All Case Types are visible (no eligibility restrictions for Help Case Team)
+- [ ] Confidential case types are accessible
+- [ ] Case types from all eligibility rules appear
+- [ ] Create on Behalf Of option is available
+- [ ] No error messages displayed
+
+ALTERNATE NAVIGATION:
+1. click worklet "Help"
+2. click link "Create Case"
+3. continue with step 6 above
+
+API ALTERNATIVE:
+- SOAP: Requests.Submit_Request - Creates a Request/Case
+- Note: Help Case Team members bypass eligibility restrictions via security group
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Score: 8.0/10
+Source: kb_case_management_create_case.txt
+
+Key Information from KB:
+- Help Case Team Member: Access to all case types
+- Can create cases on behalf of any worker
+- Can work/resolve cases
+- Not subject to Case Eligibility Rule filtering
+- UI elements: Service Category tiles, Case Type tiles, On Behalf Of field
 ================================================================================

@@ -2,19 +2,134 @@
 TEST ID: LA-4-0460
 FUNCTIONAL AREA: Lease Accounting
 TEST NAME: Leases: Supplier Contract for Finance Lease
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_lease_accounting_supplier_contract.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Supplier Contract
+NOTE: Task inferred from scenario description - original Excel Task/Step was null
+
+DESCRIPTION:
+Create a Supplier Contract for a Finance Lease. Finance leases recognize the
+leased asset and corresponding liability on the balance sheet, with separate
+recognition of depreciation/amortization expense and interest expense.
+
+FINANCE LEASE CLASSIFICATION CRITERIA (ASC 842):
+A lease is classified as Finance if ANY of these are met:
+1. Transfer of ownership to lessee at end of lease term
+2. Purchase option that lessee is reasonably certain to exercise
+3. Lease term is major part of asset's remaining economic life (>= 75%)
+4. Present value of payments is substantially all of asset's fair value (>= 90%)
+5. Asset is specialized with no alternative use to lessor
+
+ACCOUNTING TREATMENT:
+- ROU Asset: Recorded at present value of lease payments + initial direct costs
+- Lease Liability: Present value of future lease payments
+- Amortization: ROU Asset depreciated over shorter of lease term or useful life
+- Interest Expense: Calculated on declining lease liability balance
+- Expense Pattern: Front-loaded (higher total expense in early periods)
+
+PREREQUISITES:
+- User logged in with Lease Accounting Administrator permissions
+- Lease Book Code Configuration exists (see LA-1-0070)
+- Supplier Contract Types configured for Finance Leases (see LA-1-0040)
+- Active Supplier/Lessor exists in system
+- Asset Book Rules configured for Finance Lease depreciation (see LA-1-0060)
+- Depreciation Profile configured for ROU asset amortization
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "LA-4-0460_complete.png"
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{test_company}"
+6. enter supplier field as "{test_supplier}"
+7. select contract type as "Finance Lease Contract"
+8. enter contract date as "{current_date}"
+9. enter effective date as "{lease_commencement_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Finance Lease"
+13. enter lease term months as "{lease_term}"
+14. select accounting standard as "ASC 842"
+15. scroll to "Classification Criteria" section
+16. select primary classification reason as "{classification_criteria}"
+17. scroll to "ROU Asset" section
+18. select ROU asset class as "{rou_asset_class}"
+19. select accounting method as "Amortization"
+20. select depreciation profile as "{depreciation_profile}"
+21. enter useful life months as "{useful_life}"
+22. scroll to "Payment Schedule" section
+23. enter payment amount as "{monthly_payment}"
+24. select payment frequency as "Monthly"
+25. enter first payment date as "{first_payment_date}"
+26. enter discount rate as "{discount_rate_percent}"
+27. scroll to "Purchase Option" section
+28. check checkbox "Purchase Option Exists" if applicable
+29. enter purchase option price as "{purchase_option_amount}" if applicable
+30. enter purchase option exercise date as "{purchase_date}" if applicable
+31. click button "Submit"
+32. wait for confirmation
+33. verify message contains "successfully submitted"
+34. screenshot as "LA-4-0460_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Supplier Contract is created with contract number
+- [ ] Lease Classification shows "Finance Lease"
+- [ ] ROU Asset is created with Amortization accounting method
+- [ ] Lease Liability is calculated and recorded at present value
+- [ ] Depreciation/Amortization schedule is generated for ROU Asset
+- [ ] Interest expense schedule is generated based on effective interest method
+- [ ] Payment schedule reflects monthly payment amounts
+- [ ] Purchase option (if applicable) is recorded correctly
+- [ ] Confirmation message displays successful submission
+
+TEST DATA REQUIREMENTS:
+- test_company: Valid company with lease accounting enabled
+- test_supplier: Active supplier configured as lessor
+- lease_commencement_date: Future or current date
+- lease_end_date: Date > commencement date
+- lease_term: Number of months (e.g., 36, 60, 120)
+- classification_criteria: One of the 5 ASC 842 criteria
+- rou_asset_class: Valid asset class for Finance Lease ROU assets
+- depreciation_profile: Valid depreciation method (e.g., Straight-line)
+- useful_life: Shorter of lease term or asset economic life
+- monthly_payment: Lease payment amount
+- first_payment_date: Date of first payment
+- discount_rate_percent: Incremental borrowing rate or rate implicit in lease
+- purchase_option_amount: Optional - bargain purchase option price
+- purchase_date: Optional - date purchase option can be exercised
+
+FINANCE vs OPERATING LEASE COMPARISON:
+| Aspect | Finance Lease | Operating Lease |
+|--------|---------------|-----------------|
+| Balance Sheet | ROU Asset + Liability | ROU Asset + Liability |
+| Income Statement | Depreciation + Interest | Single Lease Expense |
+| Expense Pattern | Front-loaded | Straight-line |
+| Cash Flow Statement | Principal in Financing | All in Operating |
+
+API ALTERNATIVE:
+- SOAP: Financial_Management > Put_Supplier_Contract_Lease_Amendment_Type
+- SOAP: Financial_Management > Get_Lease_Contract_Book_Code_Configurations
+
+RELATED SCENARIOS:
+- LA-4-0010 through LA-4-0450: Operating Lease contracts
+- LA-4-0470 through LA-4-0600: Other Finance Lease variations
+- LA-4-0610 through LA-4-0660: Short-Term Operating Leases
+- LA-1-0060: Asset Book Rules (depreciation profiles)
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Query: "Supplier Contract Finance Lease ROU Asset Amortization"
+Score: 6.5/10 - KB article updated with Finance Lease configuration
+Status: Steps inferred from KB article and Workday finance lease accounting
+Source: kb_lease_accounting_supplier_contract.txt (updated with Finance Lease section)
+
+ENHANCEMENT NOTES:
+- Task name "Create Supplier Contract" inferred from scenario description
+- Original Excel had null Task/Step field
+- Key difference from Operating Lease: Amortization method + front-loaded expense
+- Finance Lease requires classification criteria selection
+- Purchase option fields optional based on lease terms
+- SME review recommended to verify field names match production environment
 ================================================================================

@@ -2,8 +2,8 @@
 TEST ID: USP-5-0110
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review FLSA Calendar Rules Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_payroll_flsa_calendar.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -14,48 +14,74 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Access to View FLSA Work Period Calendar Rules task
+- Knowledge of expected FLSA calendar rule configurations
 
 ELECTRON STEPS:
 1. enter search box as "View FLSA Work Period Calendar Rules"
 2. wait for search results
 3. click search result containing "View FLSA Work Period Calendar Rules"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0110_complete.png"
+5. verify rules table displays all configured rules
+6. verify column "Rule Name" is visible
+7. verify column "FLSA Calendar" is visible
+8. verify column "Eligibility Criteria" is visible
+9. verify column "Priority" is visible
+10. scroll to review all rules
+11. screenshot as "USP-5-0110_flsa_rules.png"
+12. click on first rule to view details
+13. wait for details to load
+14. verify eligibility criteria is clearly defined
+15. verify rule priority prevents conflicts
+16. verify associated FLSA calendar assignment
+17. screenshot as "USP-5-0110_rule_detail.png"
+18. navigate back to rules list
+19. verify all non-exempt employee groups have rules
+20. verify each worker can match exactly one rule
+21. screenshot as "USP-5-0110_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] FLSA calendar rules are correctly configured
+- [ ] Correct workers will be assigned to the right calendar
+- [ ] Each worker matches exactly one rule (no conflicts)
+- [ ] Rules cover all non-exempt employees
+- [ ] Rule priority prevents overlapping assignments
+- [ ] Eligibility criteria are accurate and complete
+
+FLSA CALENDAR RULE COMPONENTS TO VERIFY:
+- Rule Name
+- Associated FLSA Calendar
+- Eligibility Criteria (worker attributes)
+- Priority Order
+- Effective Date
+- Status (Active/Inactive)
+
+ELIGIBILITY CRITERIA EXAMPLES:
+- Pay Group
+- Worker Type
+- Position
+- Location
+- Supervisory Organization
+- Job Profile
+
+RELATED TASKS:
+- View FLSA Work Period Calendar
+- Create FLSA Work Period Calendar Rules
+- Edit FLSA Work Period Calendar Rules
+- Assign FLSA Calendar to Workers
+
+RELATED REPORTS:
+- FLSA Work Period Calendar Assignments
+- Workers by FLSA Calendar Rule
+- FLSA Calendar Rule Audit
+- Workers Missing FLSA Calendar Assignment
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  Service: Payroll
+  Operations: Get_FLSA_Work_Period_Calendar_Rules
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View FLSA Work Period Calendar Rules
-
-### 1. Test Scenarios Index (score: 11)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizatio
-
+  Endpoint: /payroll/v2/flsaCalendarRules
+  Method: GET
 ================================================================================

@@ -2,53 +2,83 @@
 TEST ID: HCM-1-0470
 FUNCTIONAL AREA: HCM
 TEST NAME: Audit Worker Data Conversion (Vaccination Details)
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_hcm_add_vaccination.txt] [WSDL: Human_Resources - Get_Vaccinations, Get_Vaccination_Status]
 ================================================================================
 
 DESCRIPTION:
-Verify that the worker's vaccination statuses are accurate. Verify that the expected fields have been populated and spot check for accuracy.
+Verify that the worker's vaccination statuses are accurate. Verify that the expected fields have been populated and spot check for accuracy. This is a data conversion validation test to ensure vaccination data was correctly migrated into Workday.
 
 WORKDAY ROLE: HR Administrator
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Access to Worker Data: Health and Safety domain
+- List of sample workers with expected vaccination data for comparison
+- Source system vaccination data for cross-reference
 
 ELECTRON STEPS:
-1. enter search box as "Vaccination Status (Custom Report)"
+1. enter search box as "View All Vaccinations"
 2. wait for search results
-3. click search result containing "Vaccination Status (Custom Report)"
+3. click search result containing "View All Vaccinations" or "All Vaccinations" report
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0470_complete.png"
+5. screenshot as "HCM-1-0470_all_vaccinations_report.png"
+6. verify report displays columns for Worker, Vaccination Type, Date, and Status
+7. scroll to review vaccination entries
+8. verify vaccination records are present for converted workers
+9. screenshot as "HCM-1-0470_records_list.png"
+10. click on first worker link to view details
+11. wait for worker vaccination details to load
+12. screenshot as "HCM-1-0470_worker_details.png"
+13. verify Vaccination Type field is populated
+14. verify Dose Number field is populated (First Dose, Second Dose, Booster)
+15. verify Vaccination Date field contains valid date
+16. verify Vaccination Status shows appropriate value (Completed, Scheduled)
+17. click button "Back" or navigate back to report
+18. wait for page to load
+19. enter filter for specific worker as "{test_worker_id}"
+20. wait for filtered results
+21. screenshot as "HCM-1-0470_filtered_worker.png"
+22. verify filtered worker vaccination matches expected source data
+23. screenshot as "HCM-1-0470_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
+- [ ] All Vaccinations report displays successfully
+- [ ] Worker vaccination records are present in the report
+- [ ] Vaccination Type field is correctly populated (COVID-19, Influenza, etc.)
+- [ ] Dose Number matches converted data (First Dose, Second Dose, Booster)
+- [ ] Vaccination Date is accurate per source system
+- [ ] Vaccination Status correctly reflects actual status
+- [ ] No data truncation or formatting issues in converted data
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 
+DATA VALIDATION CHECKLIST:
+- [ ] Vaccination Type values match source system categories
+- [ ] Dose sequences are correct (Dose 1 before Dose 2)
+- [ ] Vaccination dates are not in the future
+- [ ] Vaccination dates are within reasonable historical range
+- [ ] Manufacturer information present if converted
+- [ ] Lot numbers present if converted
+- [ ] No orphan records (vaccinations without valid workers)
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Get_Vaccinations (Human_Resources.wsdl) - Retrieve vaccination records
+- SOAP: Get_Vaccination_Status - Retrieve vaccination status values
+- SOAP: Get_Vaccines - Retrieve configured vaccines
+- REST: Worker Health API if configured
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Vaccination Status (Custom Report)
+RELATED TASKS:
+- Add Vaccination: Add new vaccination records to workers
+- Vaccination Tracking Setup: Configure vaccination types and statuses
+- Worker Profile: View vaccination data in worker profile
+- View All Vaccinations: Report for all vaccination records
 
-### 1. Admin Guide Human Capital Management (score: 2)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information...........................................
+NOTES:
+- Vaccination data is sensitive health information (PHI)
+- Ensure proper security access before accessing vaccination data
+- Cross-reference converted data against source system extract
+- Pay attention to date formats during conversion validation
+- Vaccination Status values must match configured reference data
 ================================================================================

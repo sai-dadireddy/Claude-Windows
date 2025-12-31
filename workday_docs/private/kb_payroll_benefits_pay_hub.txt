@@ -1,0 +1,126 @@
+================================================================================
+WORKDAY KB ARTICLE: BENEFITS AND PAY HUB
+================================================================================
+
+Source: Workday Human Capital Management / Payroll
+Category: Employee Self-Service
+Last Updated: 2025-12-30
+Created By: workday-agent-payroll-us-2
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Benefits and Pay Hub is an employee self-service dashboard in Workday that
+provides centralized access to:
+- Benefits enrollment and changes
+- Pay statements and history
+- Tax document access (W-2, W-4)
+- Payment elections
+- Time off balances
+- Compensation information
+
+Business Process: View Benefits and Pay Hub
+Functional Area: Employee Self-Service
+Initiator: Employee (Worker)
+Typical Duration: 5 minutes (review)
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. PAY SECTION
+   - Current Pay Statement
+   - Pay History
+   - Payment Elections
+   - Tax Withholding (W-4)
+   - Year-end Tax Documents (W-2)
+
+2. BENEFITS SECTION
+   - Current Benefit Elections
+   - Benefit Costs
+   - Dependents/Beneficiaries
+   - Open Enrollment Tasks
+   - Life Events
+
+3. TIME OFF SECTION
+   - Time Off Balances
+   - Request Time Off link
+   - Absence History
+
+4. RELATED ACTIONS
+   - Change Benefits
+   - Update Payment Elections
+   - View Pay Statements
+   - Update Tax Elections
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Access Benefits and Pay Hub (as Employee):
+1. Search: "Benefits and Pay Hub"
+2. Hub displays personalized dashboard
+3. Click sections to expand details
+
+Administrator Test:
+1. Log in as employee (or use View As)
+2. Navigate to Benefits and Pay Hub
+3. Verify all expected sections visible
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+- Hub is accessible to employees
+- Pay section shows current/historical pay statements
+- Benefits section shows current elections
+- Time off balances are accurate
+- All expected tasks/links are available
+- W-2/W-4 access is available (if configured)
+- Mobile-responsive layout works
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Step 1: Access as Employee
+1. enter search box as "Benefits and Pay Hub"
+2. wait for search results
+3. click search result containing "Benefits and Pay Hub"
+4. wait for page to load
+
+Step 2: Verify Pay Section
+5. verify section "Pay" is visible
+6. verify link "View Pay Statements" is available
+7. verify link "Payment Elections" is available
+8. screenshot as "{test_id}_pay_section.png"
+
+Step 3: Verify Benefits Section
+9. verify section "Benefits" is visible
+10. verify current benefit elections displayed
+11. verify link "Change Benefits" is available
+12. screenshot as "{test_id}_benefits_section.png"
+
+Step 4: Verify Time Off Section
+13. verify section "Time Off" is visible
+14. verify time off balances displayed
+15. screenshot as "{test_id}_time_off_section.png"
+
+Step 5: Verify Navigation
+16. click link "View Pay Statements"
+17. wait for pay statements to load
+18. verify pay statement list appears
+19. navigate back to Benefits and Pay Hub
+20. screenshot as "{test_id}_complete.png"
+
+================================================================================
+RELATED REPORTS
+================================================================================
+
+- Employee Self-Service Usage Report
+- Benefits Enrollment Summary
+- Pay Statement Distribution Report
+- Time Off Balance Report
+
+================================================================================

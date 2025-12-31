@@ -2,8 +2,8 @@
 TEST ID: PRO-1-0100
 FUNCTIONAL AREA: Procurement
 TEST NAME: Requisition Types
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG Enhanced - Manual Review]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_procurement_requisition_types.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -11,25 +11,61 @@ Review the requisition types. Requisition types are used for sourcing rules or a
 
 WORKDAY ROLE: Procurement Configurator
 
+PREREQUISITES:
+- User logged in with Procurement Configurator permissions
+- Access to Procurement configuration domain
+- Existing requisition types configured in tenant
+
 ELECTRON STEPS:
-1. enter search box as "Create Requisition Type"
+1. enter search box as "Maintain Requisition Types"
 2. wait for search results
-3. click search result containing "Create Requisition Type"
+3. click search result containing "Maintain Requisition Types"
 4. wait for page to load
-5. click button "OK" or "Add"
-6. wait for form to load
-7. verify page contains "Requisition" or "Purchase Order"
-8. screenshot as "PRO-1-0100_form.png"
-9. click button "Cancel"
-10. screenshot as "PRO-1-0100_complete.png"
+5. screenshot as "PRO-1-0100_requisition_types_list.png"
+6. verify page displays list of requisition types
+7. scroll to view all requisition types
+8. verify column "Requisition Type ID" is displayed
+9. verify column "Requisition Type" is displayed
+10. click first requisition type row to view details
+11. wait for details panel to load
+12. verify field "Requisition Type ID" is displayed
+13. verify field "Requisition Type" is displayed
+14. verify field "Description" is displayed (if populated)
+15. screenshot as "PRO-1-0100_requisition_type_details.png"
+16. click link "Related Actions"
+17. wait for menu to expand
+18. screenshot as "PRO-1-0100_related_actions.png"
+19. click link "Edit" in Related Actions menu
+20. wait for edit form to load
+21. verify checkbox "Inactive" is displayed
+22. screenshot as "PRO-1-0100_edit_form.png"
+23. click button "Cancel" to close edit form
+24. navigate to search box
+25. enter search box as "View Requisition Types"
+26. wait for search results
+27. click search result containing "View Requisition Types"
+28. wait for page to load
+29. verify all requisition types are displayed
+30. screenshot as "PRO-1-0100_complete.png"
 
 VERIFICATION:
-- [ ] Requisition/PO form accessible
-- [ ] Required fields visible
-- [ ] Cancel button works correctly
+- [ ] Requisition types list displayed correctly
+- [ ] Each type has ID and Name visible
+- [ ] Description field accessible for documentation
+- [ ] Edit functionality available for adjustments
+- [ ] Related Actions menu accessible
+- [ ] No error messages shown
+
+SUB-TASKS:
+- Review each requisition type's business purpose
+- Identify types used in sourcing rules
+- Document types used in business process logic
+- Identify needed adjustments for business requirements
 
 API ALTERNATIVE:
-- Query RAG for details
+- Note: Requisition Types are reference data managed via UI configuration
+- SOAP: Get_Purchase_Orders returns requisition type in response
+- Reporting: Use Report-as-a-Service (RaaS) to extract requisition type usage
 
-RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
+RAG QUERY STATUS: SUCCESS (Confidence: 8/10)
 ================================================================================

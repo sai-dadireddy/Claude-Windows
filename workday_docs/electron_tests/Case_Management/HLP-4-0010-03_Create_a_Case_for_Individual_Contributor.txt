@@ -2,19 +2,67 @@
 TEST ID: HLP-4-0010-03
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Individual Contributor
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 5 minutes
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify appropriate help text shows up when creating a case. This test validates
+that when an Individual Contributor accesses the Create Case functionality,
+the system displays the correct help text and guidance configured for each
+Service Category and Case Type.
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Help worklet is enabled and accessible
+- Service Categories and Case Types are configured with help text
+- User has access to at least one Service Category
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0010-03_complete.png"
+1. enter search box as "Create Case"
+2. wait for search results
+3. click search result containing "Create Case"
+4. wait for page to load
+5. screenshot as "HLP-4-0010-03_service_categories.png"
+6. verify Service Category tiles are displayed
+7. click first available Service Category tile
+8. wait for Case Types to load
+9. screenshot as "HLP-4-0010-03_case_types.png"
+10. verify help text section is visible on page
+11. verify help text contains guidance for selected category
+12. click first available Case Type tile
+13. wait for case creation form to load
+14. screenshot as "HLP-4-0010-03_help_text.png"
+15. verify help text displays for selected Case Type
+16. verify help text section is not empty
+17. scroll to view all help text content
+18. screenshot as "HLP-4-0010-03_complete.png"
+19. click button "Cancel"
+20. verify return to Help landing page
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Help text displays correctly for Service Category selection
+- [ ] Help text updates when Case Type is selected
+- [ ] Help text content matches configuration for each Case Type
+- [ ] Help text area is visible and properly formatted
+- [ ] No error messages displayed during navigation
 
-================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+SUB-TASKS:
+1. Navigate to Create Case via search
+2. Capture Service Category help text
+3. Select Service Category and capture Case Type help text
+4. Verify help text updates appropriately
+5. Cancel case creation
+
+API ALTERNATIVE:
+- REST: GET /help/cases (Help API)
+- SOAP: Get_Help_Case_Types (if available in Help WSDL)
+
+NOTES:
+- Help text is configured in Maintain Service Categories and Maintain Case Types
+- Different help text may appear based on worker eligibility rules
+- Test should verify help text for multiple Case Types if time permits
+
 ================================================================================

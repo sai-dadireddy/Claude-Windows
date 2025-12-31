@@ -2,19 +2,203 @@
 TEST ID: HLP-4-0030-03
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Help Case Team members
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Case Creator
+EST. DURATION: 15 minutes
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify the case routes to correct Service Team when created by a Help Case
+Team member with Case Creator role.
 
+This test validates that when a Help Case Team member (Case Creator) creates
+a case, the Case Routing Rules correctly assign it to the appropriate
+Service Team. Help Case Team members typically have access to all case types
+and can create cases on behalf of any worker.
+
+PREREQUISITES:
+- User logged in with Case Creator role (Help Case Team member)
+- User is member of a Service Team
+- All Case Types accessible to Case Creator
+- Case Routing Rules configured
+- Test data: Know expected Service Team for selected Case Type
+
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0030-03_complete.png"
+================================================================================
 
-VERIFICATION: nan
+-- STEP 1: Login Verification --
+1. verify user is logged in as Case Creator
+2. verify user has Help Case Team member permissions
+
+-- STEP 2: Navigate to Create Case --
+3. enter search box as "Create Case"
+4. wait for search results
+5. click search result containing "Create Case"
+6. wait for page to load
+7. screenshot as "HLP-4-0030-03_create_case_team.png"
+
+-- STEP 3: Verify All Case Types Available --
+8. verify page contains Service Category options
+9. verify all Service Categories are visible (no eligibility restrictions)
+10. scroll to view all categories
+11. screenshot as "HLP-4-0030-03_all_categories.png"
+
+-- STEP 4: Select Service Category --
+12. click tile for any Service Category
+13. wait for case types to load
+14. screenshot as "HLP-4-0030-03_case_types.png"
+
+-- STEP 5: Select Case Type with Known Routing --
+15. click tile for Case Type with known routing rule
+16. wait for case form to load
+17. screenshot as "HLP-4-0030-03_case_type_selected.png"
+
+-- STEP 6: Complete Case Details --
+18. enter subject as "Case Creator Test - Routing Verification HLP-4-0030-03"
+19. enter description as "Case created by Case Creator to verify routing to correct Service Team."
+20. screenshot as "HLP-4-0030-03_case_details.png"
+
+-- STEP 7: Complete Questionnaire (if present) --
+21. if questionnaire present, complete required fields
+22. screenshot as "HLP-4-0030-03_questionnaire.png"
+
+-- STEP 8: Submit Case --
+23. scroll to Submit button
+24. click button "Submit"
+25. wait for confirmation
+26. screenshot as "HLP-4-0030-03_case_submitted.png"
+
+-- STEP 9: Verify Case Created --
+27. verify message contains "Success" or case number
+28. note the Case Number from confirmation
+
+-- STEP 10: Navigate to Case Workspace --
+29. enter search box as "Help Dashboard"
+30. wait for search results
+31. click search result containing "Help Dashboard"
+32. wait for page to load
+33. screenshot as "HLP-4-0030-03_help_dashboard.png"
+
+-- STEP 11: Find and Verify Case Routing --
+34. search for the created case by Case Number
+35. click on the case to view details
+36. wait for case details to load
+37. screenshot as "HLP-4-0030-03_case_details_view.png"
+
+-- STEP 12: Verify Service Team Assignment --
+38. scroll to "Service Team" or "Assigned To" section
+39. verify Service Team field shows expected team
+40. verify case is visible in correct queue
+41. screenshot as "HLP-4-0030-03_service_team_verification.png"
+42. screenshot as "HLP-4-0030-03_complete.png"
 
 ================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+VERIFICATION:
+================================================================================
+
+- [ ] Case Creator can access all Service Categories
+- [ ] Case Creator can access all Case Types (no eligibility restrictions)
+- [ ] Case successfully created with confirmation
+- [ ] Case Number displayed after submission
+- [ ] Case routed to expected Service Team
+- [ ] Case appears in Help Dashboard
+- [ ] Service Team visible in case details
+- [ ] No routing errors or unassigned status
+
+================================================================================
+TEST DATA REQUIREMENTS:
+================================================================================
+
+REQUIRED CONFIGURATION:
+- User Role: Case Creator (Help Case Team member)
+- Service Team Membership: User must be member of at least one Service Team
+- Case Type: Any type with routing rule configured
+- Case Routing Rule: Active rule for Case Type
+- Service Team: Expected destination team
+
+EXPECTED ROUTING:
+- Case Type [X] -> Service Team [Y]
+
+NOTE: Case Creators typically have broader access than regular employees.
+Verify all case types are visible regardless of Case Eligibility Rules.
+
+================================================================================
+CASE CREATOR ROLE SPECIFICS:
+================================================================================
+
+Case Creators have special permissions:
+- View all Service Categories and Case Types
+- Create cases for any worker (including self)
+- Access Help Dashboard for case management
+- May be able to directly assign cases
+- Not restricted by Case Eligibility Rules
+
+This differs from employee/manager roles which see filtered case types.
+
+================================================================================
+HELP DASHBOARD ACCESS:
+================================================================================
+
+Case Creators access the Help Dashboard to:
+1. View cases assigned to their Service Team
+2. Manage case queues
+3. Verify routing worked correctly
+4. Work and resolve cases
+
+The Help Dashboard shows:
+- Case queue for assigned Service Team
+- Case details including routing information
+- SLA status and due dates
+- Case history and activities
+
+================================================================================
+HOW TO IDENTIFY EXPECTED ROUTING:
+================================================================================
+
+Before running test, verify:
+
+1. Search "Maintain Case Routing Rules"
+2. Find rule for the Case Type being tested
+3. Note the Service Team in "Route To" field
+4. Verify Case Creator is member of that Service Team
+
+================================================================================
+ERROR SCENARIOS:
+================================================================================
+
+CASE NOT VISIBLE IN DASHBOARD:
+- Verify Case Creator is member of the routed Service Team
+- Check Service Team security access
+- Verify case was actually created (check confirmation)
+
+CASE NOT ROUTED:
+- Verify Case Routing Rule exists
+- Check routing rule conditions
+- Review fallback "All Else Route To" team
+
+WRONG SERVICE TEAM:
+- Check routing rule priority order
+- Verify routing conditions match case data
+- Review multiple rules that may apply
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+
+REST API: Not available for Case Management (UI-only workflow)
+SOAP API: No dedicated Help Desk WSDL
+
+================================================================================
+RELATED TESTS:
+================================================================================
+
+- HLP-4-0030-01: Verify case types show up for Help Case Team
+- HLP-4-0030-02: Verify questionnaires appear for team members
+- HLP-4-0010-04: Verify routing for Individual Contributor (compare)
+- HLP-4-0020-03: Verify routing for Managers (compare)
+- HLP-5-0030: Case Routing Rule configuration
+- HLP-5-0110: Service Team configuration
+
 ================================================================================

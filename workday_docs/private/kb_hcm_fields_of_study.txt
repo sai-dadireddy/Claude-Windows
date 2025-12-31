@@ -1,0 +1,150 @@
+================================================================================
+WORKDAY KB ARTICLE: FIELDS OF STUDY REFERENCE DATA
+================================================================================
+
+Source: Workday Documentation & WSDL Analysis
+Area: HCM - Reference Data Management
+Created: 2025-12-30
+Agent: workday-agent-hcm-2
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Fields of Study is reference data in Workday that defines academic majors,
+concentrations, and areas of study used when capturing worker education
+information. This data populates dropdown selections when adding education
+records to worker profiles.
+
+This is part of the Academic Foundation configuration used in both
+Workday HCM (for worker education data) and Workday Student.
+
+================================================================================
+NAVIGATION
+================================================================================
+
+Method 1: Search Navigation
+1. Search for "All Fields of Study" or "Maintain Fields of Study"
+2. Click the task/report from search results
+3. View list of configured fields of study
+
+Method 2: Report Navigation
+1. Search for "All Fields of Study"
+2. This displays a report showing all configured fields of study
+3. Use filters to narrow results by active status
+
+Method 3: Maintain Reference Data
+1. Search for "Maintain Fields of Study"
+2. Use this task to add, edit, or inactivate fields of study
+
+================================================================================
+FIELDS OF STUDY REPORT ELEMENTS
+================================================================================
+
+The "All Fields of Study" report typically displays:
+- Field of Study ID: Unique identifier code
+- Field of Study Name: Display name (e.g., "Computer Science")
+- Description: Optional description of the field
+- Active Status: Whether the field is active for selection
+- Related Degrees: Degree types this field commonly pairs with
+- CIP Code: Classification of Instructional Programs code (US education standard)
+
+================================================================================
+KEY UI ELEMENTS
+================================================================================
+
+Report View:
+- Column headers: ID, Name, Description, Active
+- Filter bar: Filter by active/inactive status
+- Export button: Export to Excel
+- Row count: Total number of fields configured
+
+Create/Edit Form (Maintain Fields of Study):
+- Field of Study ID (text input): Required unique identifier
+- Name (text input): Required display name
+- Description (text area): Optional description
+- CIP Code (text input): Optional classification code
+- Active checkbox: Enable/disable the field for selection
+- Related Degrees (multi-select): Associate with degree types
+
+================================================================================
+COMMON FIELDS OF STUDY EXAMPLES
+================================================================================
+
+Business & Management:
+- Business Administration
+- Finance
+- Accounting
+- Marketing
+- Management
+
+STEM:
+- Computer Science
+- Information Technology
+- Engineering
+- Mathematics
+- Data Science
+
+Liberal Arts:
+- English
+- History
+- Psychology
+- Political Science
+- Communications
+
+Healthcare:
+- Nursing
+- Medicine
+- Public Health
+- Pharmacy
+
+================================================================================
+VERIFICATION CRITERIA
+================================================================================
+
+For "Review Fields of Study configuration" test:
+1. Verify the report displays all expected fields of study
+2. Confirm active/inactive status is correct
+3. Verify CIP codes are properly assigned (if used)
+4. Check that fields align with organization's education requirements
+5. Ensure no duplicate entries exist
+
+================================================================================
+API ALTERNATIVE
+================================================================================
+
+SOAP API (Academic_Foundation WSDL):
+- Get_Programs_of_Study: Retrieves programs of study data
+- Put_Program_of_Study: Creates/updates program of study
+
+Note: Fields of Study may also be managed through the Academic Foundation
+web service depending on tenant configuration.
+
+REST API:
+- Not directly available for Fields of Study
+- May be accessible through Reference Data API in newer versions
+
+================================================================================
+RELATED TASKS
+================================================================================
+
+- Maintain Degrees: Configure degree types (Bachelor's, Master's, etc.)
+- Maintain Schools: Configure educational institutions
+- Edit Education (Worker): Add education details to worker profiles
+- All Degrees: Report showing configured degrees
+- Education Data Configuration: Configure education-related settings
+
+================================================================================
+SECURITY REQUIREMENTS
+================================================================================
+
+Domain Security:
+- Set Up: Academic Foundation (for configuration changes)
+- Report: Academic Foundations (for viewing)
+
+Typical Roles:
+- HR Administrator
+- Academic Foundation Administrator
+- System Administrator
+
+================================================================================

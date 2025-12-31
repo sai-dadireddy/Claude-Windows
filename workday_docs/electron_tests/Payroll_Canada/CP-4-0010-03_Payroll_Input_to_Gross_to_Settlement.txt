@@ -3,8 +3,8 @@ TEST ID: CP-4-0010-03
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payroll Input to Gross to Settlement
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Articles: kb_payroll_canada_payroll_input.txt, kb_payroll_run_payroll.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,42 +16,103 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Partner permissions
-- Required data available in tenant
-- Access to CA payroll data
+- Pay calculation run completed successfully
+- Access to CA payroll data and reports
+- Comparison data from prior period available (for variance review)
 
 ELECTRON STEPS:
-1. enter search box as "3. Payroll Review"
+1. enter search box as "Pay Calculation Results for Worker"
 2. wait for search results
-3. click search result containing "3. Payroll Review"
+3. click search result containing "Pay Calculation Results for Worker"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-4-0010-03_complete.png"
+5. enter worker field as "{employee_id}"
+6. wait for results to load
+7. verify gross pay is displayed
+8. verify federal tax withheld (Canada)
+9. verify provincial tax withheld
+10. verify CPP contribution calculated correctly
+11. verify EI premium calculated correctly
+12. verify all deductions processed as expected
+13. verify net pay displayed
+14. screenshot as "CP-4-0010-03_worker_results.png"
+15. enter search box as "Payroll Results Summary"
+16. wait for search results
+17. click search result containing "Payroll Results Summary"
+18. wait for page to load
+19. select pay period as "{pay_period}"
+20. wait for summary to load
+21. verify total gross pay for all employees
+22. verify total deductions amount
+23. verify total taxes (Federal + Provincial + CPP + EI)
+24. verify total net pay
+25. verify employee count matches expected
+26. screenshot as "CP-4-0010-03_summary.png"
+27. enter search box as "Payroll Exception Report"
+28. wait for search results
+29. click search result containing "Payroll Exception Report" or "Calculation Errors"
+30. wait for page to load
+31. verify no calculation errors displayed
+32. verify no missing data warnings
+33. screenshot as "CP-4-0010-03_exceptions.png"
+34. enter search box as "Payroll Variance Report"
+35. wait for search results
+36. click search result containing "Payroll Variance Report"
+37. wait for page to load
+38. select current period and prior period for comparison
+39. wait for variance data to load
+40. verify no unusual variances flagged
+41. verify expected changes accounted for (new hires, raises, terminations)
+42. screenshot as "CP-4-0010-03_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] All payroll input processed correctly (one-time payments, timesheets)
+- [ ] Earnings calculated as expected (base, overtime, bonuses)
+- [ ] Federal tax withholding calculated correctly (Canada)
+- [ ] Provincial tax withholding calculated correctly
+- [ ] CPP/QPP contributions calculated
+- [ ] EI premiums calculated
+- [ ] All deductions processed correctly (benefits, retirement, garnishments)
+- [ ] Net pay amounts accurate
+- [ ] No calculation errors in exception report
+- [ ] Variance from prior period explained
+- [ ] Employee count matches expected
 - [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+
+VALIDATION CHECKS:
+- Total headcount matches expected employees in pay group
+- No employees with $0 pay (unless on leave/unpaid)
+- Overtime calculations match timesheet data
+- Tax withholding rates correct for each province
+- Deductions balanced (employee + employer contributions)
+- Net pay reasonable (not negative)
+
+ERROR HANDLING:
+- "Missing Timesheet Data": Contact manager, enter time, recalculate affected employee
+- "Invalid Tax Setup": Update employee tax withholding, recalculate
+- "Deduction Over Max": Adjust deduction or allow override
+- "Negative Net Pay": Review deductions, may need to split over periods
+
+REPORTS TO REVIEW:
+- Pay Calculation Results for Worker
+- Payroll Results Summary
+- Exception Report
+- Variance Report
+- Tax Register (Federal, Provincial, CPP, EI)
+- Deduction Summary Report
+
+POST-REVIEW TASKS:
+- Resolve any exceptions before proceeding
+- Document any variances with explanations
+- Run "Complete Payroll" when review is satisfactory
+- Prepare for approval workflow
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Payroll): Get_Payroll_Results - Retrieve payroll results summary
+- SOAP (Payroll): Get_Payroll_Payslips - Retrieve individual employee payslips
+- SOAP (Payroll): Get_Payroll_Balances - Retrieve payroll balances for validation
+- SOAP (Payroll_CAN): Get_Payroll_Payee_CPPs - Retrieve CPP contribution details
+- SOAP (Payroll_CAN): Get_Payroll_Payee_EIs - Retrieve EI premium details
+- SOAP (Payroll_CAN): Get_Federal_Annual_Elections - Retrieve federal tax elections
+- SOAP (Payroll_CAN): Get_Province_Annual_Elections - Retrieve provincial tax elections
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 3. Payroll Review
-
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Elect...
 ================================================================================

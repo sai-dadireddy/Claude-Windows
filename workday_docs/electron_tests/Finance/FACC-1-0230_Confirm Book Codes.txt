@@ -2,16 +2,255 @@
 TEST ID: FACC-1-0230
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Book Codes
-CONFIDENCE: [LOW] Score: 3.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_finance_confirm_books.txt] [WSDL: Financial_Management - Submit_Mass_Update_Ledger_Period_Status, Get_Ledger_Year_and_Ledger_Periods]
 ================================================================================
 
+DESCRIPTION:
+Confirm book codes as part of the period-end close process. This task verifies
+that all book codes (accounting standards like GAAP, IFRS, Tax, Statutory) are
+properly configured and their ledger periods are confirmed for accurate financial
+reporting across different accounting frameworks.
+
+Book codes enable multi-GAAP reporting by allowing organizations to:
+- Record transactions under different accounting standards
+- Maintain separate ledger views for each standard
+- Close and confirm each book independently
+- Generate compliant financial statements for each framework
+
+PREREQUISITES:
+- User logged in with Finance Administrator or Controller permissions
+- Access to book code configuration and period close functions
+- All journals posted for each book code
+- Trial balance verified for each book code
+- Intercompany eliminations complete (if applicable)
+
+================================================================================
 ELECTRON STEPS:
-[MANUAL TEST - INSUFFICIENT KB COVERAGE]
-This test requires SME input to generate valid Electron automation steps.
-RAG confidence score was too low (< 5.0).
+================================================================================
 
+--- STEP 1: Review Book Code Configuration ---
 
+1. enter search box as "View Book Codes"
+2. wait for search results
+3. click search result containing "View Book Codes" or "Book Code Configuration"
+4. wait for page to load
+5. verify list of configured book codes displays
+6. screenshot as "FACC-1-0230_book_codes_list.png"
+
+--- STEP 2: Review Period Status by Book Code ---
+
+7. enter search box as "Ledger Period Status"
+8. wait for search results
+9. click search result containing "Ledger Period Status"
+10. wait for page to load
+11. select Company as "{company_name}"
+12. select Fiscal Year as "{fiscal_year}"
+13. click button "OK"
+14. wait for report to load
+15. verify report displays status for each book code
+16. screenshot as "FACC-1-0230_period_status_all_books.png"
+
+--- STEP 3: Confirm Primary Book Code ---
+
+17. enter search box as "Confirm Books"
+18. wait for search results
+19. click search result containing "Confirm Books"
+20. wait for page to load
+21. select Company as "{company_name}"
+22. select Fiscal Year as "{fiscal_year}"
+23. select Fiscal Period as "{fiscal_period}"
+24. select Book Code as "Primary"
+25. click button "OK"
+26. wait for status to load
+27. verify no pending journals for Primary book
+28. verify balance status shows "In Balance"
+29. click button "Confirm"
+30. wait for confirmation
+31. verify message contains "confirmed"
+32. screenshot as "FACC-1-0230_primary_confirmed.png"
+
+--- STEP 4: Confirm IFRS Book Code ---
+
+33. enter search box as "Confirm Books"
+34. wait for search results
+35. click search result containing "Confirm Books"
+36. wait for page to load
+37. select Company as "{company_name}"
+38. select Fiscal Year as "{fiscal_year}"
+39. select Fiscal Period as "{fiscal_period}"
+40. select Book Code as "IFRS"
+41. click button "OK"
+42. wait for status to load
+43. verify no pending journals for IFRS book
+44. verify balance status shows "In Balance"
+45. click button "Confirm"
+46. wait for confirmation
+47. verify message contains "confirmed"
+48. screenshot as "FACC-1-0230_ifrs_confirmed.png"
+
+--- STEP 5: Confirm Tax Book Code ---
+
+49. enter search box as "Confirm Books"
+50. wait for search results
+51. click search result containing "Confirm Books"
+52. wait for page to load
+53. select Company as "{company_name}"
+54. select Fiscal Year as "{fiscal_year}"
+55. select Fiscal Period as "{fiscal_period}"
+56. select Book Code as "Tax"
+57. click button "OK"
+58. wait for status to load
+59. verify no pending journals for Tax book
+60. verify balance status shows "In Balance"
+61. click button "Confirm"
+62. wait for confirmation
+63. verify message contains "confirmed"
+64. screenshot as "FACC-1-0230_tax_confirmed.png"
+
+--- STEP 6: Confirm Statutory Book Code (if applicable) ---
+
+65. enter search box as "Confirm Books"
+66. wait for search results
+67. click search result containing "Confirm Books"
+68. wait for page to load
+69. select Company as "{company_name}"
+70. select Fiscal Year as "{fiscal_year}"
+71. select Fiscal Period as "{fiscal_period}"
+72. select Book Code as "Statutory"
+73. click button "OK"
+74. wait for status to load
+75. verify no pending journals for Statutory book
+76. verify balance status shows "In Balance"
+77. click button "Confirm"
+78. wait for confirmation
+79. verify message contains "confirmed"
+80. screenshot as "FACC-1-0230_statutory_confirmed.png"
+
+--- STEP 7: Verify All Book Codes Confirmed ---
+
+81. enter search box as "Ledger Period Status"
+82. wait for search results
+83. click search result containing "Ledger Period Status"
+84. wait for page to load
+85. select Company as "{company_name}"
+86. select Fiscal Year as "{fiscal_year}"
+87. click button "OK"
+88. wait for report to load
+89. verify Primary book code status shows "Confirmed"
+90. verify IFRS book code status shows "Confirmed"
+91. verify Tax book code status shows "Confirmed"
+92. verify Statutory book code status shows "Confirmed"
+93. verify all confirmation timestamps are current
+94. screenshot as "FACC-1-0230_all_books_confirmed.png"
+
+================================================================================
 VERIFICATION:
-- [ ] Transaction completed successfully
-- [ ] No error messages displayed
+================================================================================
+- [ ] Book code configuration displays all expected book codes
+- [ ] Pre-confirmation status report shows each book code correctly
+- [ ] Primary book code confirmed successfully
+- [ ] IFRS book code confirmed successfully
+- [ ] Tax book code confirmed successfully
+- [ ] Statutory book code confirmed successfully (if applicable)
+- [ ] All book codes show "Confirmed" status after completion
+- [ ] No pending journals exist for any book code
+- [ ] Trial balance balanced for each book code
+- [ ] Confirmation timestamps captured for audit trail
+- [ ] No error messages displayed during confirmation
+- [ ] Transaction completed successfully for all book codes
+
+================================================================================
+STANDARD BOOK CODES:
+================================================================================
+| Book Code | Description | Use Case |
+|-----------|-------------|----------|
+| Primary | US GAAP or default reporting | SEC filings, external reporting |
+| IFRS | International Financial Reporting Standards | Global subsidiaries, EU reporting |
+| Tax | Tax basis accounting | Tax returns, tax provisions |
+| Statutory | Local statutory requirements | Country-specific compliance |
+| Management | Internal management reporting | Internal analysis, budgeting |
+| Custom | Organization-specific codes | Special purpose reporting |
+
+================================================================================
+CONFIRMATION SEQUENCE:
+================================================================================
+Recommended order for confirming book codes:
+
+1. Primary/GAAP - Base accounting standard
+2. IFRS - Adjust GAAP differences
+3. Tax - Book-to-tax adjustments
+4. Statutory - Local GAAP adjustments
+5. Management - Internal allocations
+
+Note: Each book code can be confirmed independently, but Primary
+should typically be confirmed first as it's the basis for other books.
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+SOAP Operation: Submit_Mass_Update_Ledger_Period_Status
+WSDL: Financial_Management
+
+To confirm multiple book codes via API, submit separate requests for each:
+
+```xml
+<!-- Request 1: Confirm Primary -->
+<bsvc:Submit_Mass_Update_Ledger_Period_Status_Request bsvc:version="v42.2">
+    <bsvc:Mass_Update_Ledger_Period_Status_Data>
+        <bsvc:Company_Reference>
+            <bsvc:ID bsvc:type="Company_Reference_ID">US001</bsvc:ID>
+        </bsvc:Company_Reference>
+        <bsvc:Fiscal_Year_Reference>
+            <bsvc:ID bsvc:type="Fiscal_Year_ID">2025</bsvc:ID>
+        </bsvc:Fiscal_Year_Reference>
+        <bsvc:Fiscal_Posting_Interval_Reference>
+            <bsvc:ID bsvc:type="Fiscal_Posting_Interval_ID">Dec-2025</bsvc:ID>
+        </bsvc:Fiscal_Posting_Interval_Reference>
+        <bsvc:Book_Code_Reference>
+            <bsvc:ID bsvc:type="Book_Code_ID">Primary</bsvc:ID>
+        </bsvc:Book_Code_Reference>
+        <bsvc:Period_Status>Confirmed</bsvc:Period_Status>
+    </bsvc:Mass_Update_Ledger_Period_Status_Data>
+</bsvc:Submit_Mass_Update_Ledger_Period_Status_Request>
+
+<!-- Request 2: Confirm IFRS -->
+<bsvc:Submit_Mass_Update_Ledger_Period_Status_Request bsvc:version="v42.2">
+    <bsvc:Mass_Update_Ledger_Period_Status_Data>
+        ...
+        <bsvc:Book_Code_Reference>
+            <bsvc:ID bsvc:type="Book_Code_ID">IFRS</bsvc:ID>
+        </bsvc:Book_Code_Reference>
+        <bsvc:Period_Status>Confirmed</bsvc:Period_Status>
+    </bsvc:Mass_Update_Ledger_Period_Status_Data>
+</bsvc:Submit_Mass_Update_Ledger_Period_Status_Request>
+```
+
+Related SOAP Operations:
+- Get_Ledger_Year_and_Ledger_Periods: Retrieve current status
+- Put_Ledger: Configure ledger and book code settings
+- Get_Journals: Verify journals by book code
+
+================================================================================
+ERROR HANDLING:
+================================================================================
+- "Pending journals exist for book code" - Post or cancel pending journals
+- "Book code out of balance" - Review trial balance for specific book
+- "Book code not configured" - Configure book code in company setup
+- "Insufficient permissions" - Need book-specific confirmation access
+- "Book code already confirmed" - Already completed, no action needed
+- "Dependent book not confirmed" - May need to confirm Primary first
+- "Period not closed" - Close period before confirming
+
+================================================================================
+NOTES:
+================================================================================
+- Each book code maintains independent close status
+- Confirming one book code does not confirm others
+- Different book codes may have different close timelines
+- Year-end processing may require all book codes confirmed
+- Consider automation for consistent multi-book close
+- Document confirmation sequence for compliance
+- Audit trail includes who confirmed each book and when
+
 ================================================================================

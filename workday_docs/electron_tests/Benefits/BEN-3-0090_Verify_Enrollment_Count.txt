@@ -2,44 +2,92 @@
 TEST ID: BEN-3-0090
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Enrollment Count
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG: process_benefits_tests.py + kb_benefits_enrollment.txt]
 ================================================================================
 
-TASK/STEP: Enrollment Count
+DESCRIPTION:
+Verify benefit enrollment counts to confirm accurate enrollment statistics
+across all benefit plan types. This report provides participation rates and
+enrollment numbers for medical, dental, vision, and other benefit plans.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Enrollment Count
+WORKDAY ROLE: Benefits Administrator
 
-### 1. Test Scenarios Index (score: 7)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Superviso
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator permissions
+- Active benefit enrollment period completed
+- Employees enrolled in benefit plans
 
 ELECTRON STEPS:
+# Access Enrollment Count Report
 1. enter search box as "Enrollment Count"
 2. wait for search results
 3. click search result containing "Enrollment Count"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0090_complete.png"
+4. wait for page to load
+5. screenshot as "BEN-3-0090_report_loaded.png"
+
+# Configure Report Parameters (if prompts appear)
+6. select prompt "Benefit Plan Year" as current plan year
+7. select prompt "As Of Date" as "today"
+8. click button "OK"
+9. wait for report to generate
+
+# Review Enrollment Statistics
+10. verify enrollment statistics display:
+    - Total Enrolled Employees
+    - Enrollment by Plan Type
+    - Coverage Level Distribution
+11. screenshot as "BEN-3-0090_statistics.png"
+
+# Verify Counts by Plan Type
+12. verify counts by plan type displayed:
+    - Medical Plans: [PPO, HMO, HDHP counts]
+    - Dental Plans: [PPO Dental, DMO counts]
+    - Vision Plans: [enrollment numbers]
+    - Life Insurance: [Basic, Supplemental counts]
+    - Disability: [STD, LTD enrollment]
+    - FSA/HSA: [account enrollments]
+    - Retirement: [401k participation]
+13. screenshot as "BEN-3-0090_plan_breakdown.png"
+
+# Verify Participation Rates
+14. verify participation rates calculated:
+    - Medical participation percentage
+    - Dental participation percentage
+    - Vision participation percentage
+    - Overall benefits participation rate
+15. verify total enrollment numbers match headcount
+16. screenshot as "BEN-3-0090_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Enrollment count report successfully generated
+- [ ] Total enrolled employees count displayed
+- [ ] Counts by plan type (Medical, Dental, Vision) are accurate
+- [ ] Life insurance and disability enrollment shown
+- [ ] FSA/HSA account enrollment counts displayed
+- [ ] Retirement plan participation counts included
+- [ ] Participation rates are calculated correctly
+- [ ] Totals match individual enrollment records
+- [ ] No discrepancies between report and actual enrollments
+
+EXPECTED RESULT:
+Enrollment count report displays accurate statistics for all benefit plans,
+including total enrollment numbers, breakdown by plan type, coverage level
+distribution, and calculated participation rates.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Report typically run after open enrollment closes
+- Useful for carrier reconciliation and billing verification
+- Compare with prior year to identify trends
+- Export to Excel for detailed analysis
+- Participation rates = Enrolled / Eligible x 100
+- Some plans may have 0 enrollments (correctly waived)
+
+API ALTERNATIVE:
+- SOAP: Benefits_Administration.wsdl
+  - Get_Benefit_Elections (retrieve all elections for count)
+  - Get_Benefit_Plans (plan configuration)
+- REST: /workers endpoint with benefits expand
+- Report: Benefit Enrollment Summary (standard Workday report)
+
 ================================================================================

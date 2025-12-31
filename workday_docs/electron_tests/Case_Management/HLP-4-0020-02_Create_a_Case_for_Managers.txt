@@ -2,19 +2,74 @@
 TEST ID: HLP-4-0020-02
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Managers
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Manager As Self
+EST. DURATION: 10 minutes
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify questionnaires appear as expected for selected case types. This test
+validates that when a Manager creates a case, the appropriate questionnaire
+(if configured) displays for each Case Type, with all fields and conditional
+logic working correctly.
+
+PREREQUISITES:
+- User logged in with Manager As Self permissions
+- Help worklet is enabled and accessible
+- At least one Case Type is configured with a questionnaire
+- Manager has access to Service Categories with questionnaire-enabled Case Types
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0020-02_complete.png"
+1. enter search box as "Create Case"
+2. wait for search results
+3. click search result containing "Create Case"
+4. wait for page to load
+5. screenshot as "HLP-4-0020-02_service_categories.png"
+6. verify Service Category tiles are displayed for Manager role
+7. click Service Category that contains questionnaire-enabled Case Types
+8. wait for Case Types to load
+9. screenshot as "HLP-4-0020-02_case_types.png"
+10. click Case Type that has questionnaire configured
+11. wait for questionnaire to load
+12. screenshot as "HLP-4-0020-02_questionnaire_displayed.png"
+13. verify questionnaire section is visible
+14. verify all configured questionnaire fields are displayed
+15. verify required fields are marked with asterisk
+16. scroll to view all questionnaire fields
+17. screenshot as "HLP-4-0020-02_questionnaire_fields.png"
+18. enter sample data in first questionnaire text field
+19. verify field accepts input correctly
+20. select option from first questionnaire dropdown (if present)
+21. verify conditional fields appear/hide based on selections (if applicable)
+22. screenshot as "HLP-4-0020-02_complete.png"
+23. click button "Cancel"
+24. verify return to Help landing page
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Questionnaire displays for Case Types with configured questionnaires
+- [ ] All questionnaire fields appear as configured
+- [ ] Required fields are properly marked
+- [ ] Field types are correct (text, dropdown, checkbox, date, etc.)
+- [ ] Conditional logic works (fields show/hide based on answers)
+- [ ] No error messages during questionnaire interaction
+- [ ] Questionnaire does NOT appear for Case Types without configuration
 
-================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+SUB-TASKS:
+1. Navigate to Create Case as Manager
+2. Select Service Category with questionnaire-enabled Case Type
+3. Select Case Type and verify questionnaire loads
+4. Interact with questionnaire fields to verify functionality
+5. Optionally test multiple Case Types to compare questionnaire behavior
+
+API ALTERNATIVE:
+- REST: GET /help/caseTypes (to retrieve questionnaire configuration)
+- SOAP: Get_Questionnaires (if available in Help WSDL)
+
+NOTES:
+- Questionnaires are configured in "Maintain Questionnaires" task
+- Questionnaires are linked to Case Types in "Maintain Case Types"
+- Manager role may have access to additional Case Types not available to Individual Contributors
+- Test should verify both Case Types WITH and WITHOUT questionnaires
+
 ================================================================================

@@ -2,19 +2,163 @@
 TEST ID: HLP-4-0010-04
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Individual Contributor
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 15 minutes
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify the case routes to correct Service Team.
 
+This test validates that when an Individual Contributor creates a case,
+the Case Routing Rules correctly assign it to the appropriate Service Team
+based on the selected Case Type and any routing rule conditions.
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- Case Routing Rules configured for the Case Type
+- Service Teams configured and active
+- Test data: Know expected Service Team for selected Case Type
+
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0010-04_complete.png"
+================================================================================
 
-VERIFICATION: nan
+-- STEP 1: Navigate to Create Case --
+1. enter search box as "Create Case"
+2. wait for search results
+3. click search result containing "Create Case"
+4. wait for page to load
+5. screenshot as "HLP-4-0010-04_create_case.png"
+
+-- STEP 2: Select Service Category --
+6. verify page contains Service Category options
+7. click tile for appropriate Service Category
+8. wait for case types to load
+9. screenshot as "HLP-4-0010-04_service_category.png"
+
+-- STEP 3: Select Case Type --
+10. click tile for Case Type with known routing rule
+11. wait for case form to load
+12. screenshot as "HLP-4-0010-04_case_type_selected.png"
+
+-- STEP 4: Complete Case Details --
+13. enter subject as "Test Case for Routing Verification - HLP-4-0010-04"
+14. enter description as "This case is created to verify routing to the correct Service Team."
+15. screenshot as "HLP-4-0010-04_case_details.png"
+
+-- STEP 5: Submit Case --
+16. click button "Submit"
+17. wait for confirmation
+18. screenshot as "HLP-4-0010-04_case_submitted.png"
+
+-- STEP 6: Verify Case Created --
+19. verify message contains "Success" or case number
+20. note the Case Number from confirmation
+
+-- STEP 7: View Case Details to Verify Routing --
+21. click link to view created case OR
+22. enter search box as "View My Cases"
+23. wait for search results
+24. click search result containing "View My Cases"
+25. wait for page to load
+26. click on the recently created case
+27. wait for case details to load
+28. screenshot as "HLP-4-0010-04_case_details_view.png"
+
+-- STEP 8: Verify Service Team Assignment --
+29. scroll to "Assigned To" or "Service Team" section
+30. verify Service Team field shows expected team
+31. screenshot as "HLP-4-0010-04_service_team_verification.png"
+32. screenshot as "HLP-4-0010-04_complete.png"
 
 ================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+VERIFICATION:
+================================================================================
+
+- [ ] Case successfully created with confirmation
+- [ ] Case Number displayed after submission
+- [ ] Case routed to expected Service Team based on Case Routing Rules
+- [ ] Service Team visible in case details
+- [ ] No routing errors or unassigned status
+
+================================================================================
+TEST DATA REQUIREMENTS:
+================================================================================
+
+REQUIRED CONFIGURATION:
+- Service Category: [e.g., "HR Services", "IT Support"]
+- Case Type: [Must have Case Routing Rule configured]
+- Case Routing Rule: [Rule that routes to specific Service Team]
+- Service Team: [Expected destination team - verify in "Maintain Service Teams"]
+
+EXPECTED ROUTING:
+- Case Type [X] -> Service Team [Y]
+- Example: "Payroll Question" -> "Payroll Support Team"
+
+NOTE: Routing rules are tenant-specific. Tester must identify:
+1. Which Case Type to use
+2. What routing rule applies
+3. Which Service Team should receive the case
+
+================================================================================
+HOW TO IDENTIFY EXPECTED ROUTING:
+================================================================================
+
+Before running test, admin should verify:
+
+1. Search "Maintain Case Routing Rules"
+2. Find rule for the Case Type being tested
+3. Note the Service Team in the rule's "Route To" field
+4. That is the expected outcome
+
+================================================================================
+ALTERNATIVE VERIFICATION METHOD:
+================================================================================
+
+If case details don't show Service Team to employee:
+
+ADMIN VERIFICATION:
+1. Login as Help Case Team member or admin
+2. Search "Help Dashboard"
+3. Find the case by Case Number
+4. Verify "Service Team" assignment
+5. screenshot as "HLP-4-0010-04_admin_verification.png"
+
+================================================================================
+ERROR SCENARIOS:
+================================================================================
+
+CASE NOT ROUTED (Unassigned):
+- Verify Case Routing Rule exists for Case Type
+- Check routing rule conditions are met
+- Review "All Else Route To" fallback team
+
+WRONG SERVICE TEAM:
+- Check routing rule priority (lower number = higher priority)
+- Verify routing rule conditions match case data
+- Review multiple routing rules that may apply
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+
+REST API: Not available for Case Management (UI-only workflow)
+SOAP API: No dedicated Help Desk WSDL - managed through UI configuration
+
+To verify routing programmatically, use Workday Report:
+- Create custom report on Cases
+- Include Service Team field
+- Filter by Case Number
+
+================================================================================
+RELATED TESTS:
+================================================================================
+
+- HLP-4-0010-01: Verify appropriate case types show up for IC
+- HLP-4-0010-02: Verify questionnaires appear as expected
+- HLP-4-0010-03: Verify appropriate help text shows up
+- HLP-5-0030: Case Routing Rule configuration
+
 ================================================================================

@@ -2,19 +2,76 @@
 TEST ID: HLP-4-0030-02
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Help Case Team members
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Case Creator
+EST. DURATION: 10 minutes
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify questionnaires appear as expected for selected case types when creating
+a case as a Help Case Team member (Case Creator role). This test validates that
+users in Help security groups see the appropriate questionnaires configured for
+each Case Type, including any additional case types available to Case Creators.
+
+PREREQUISITES:
+- User logged in with Case Creator permissions (Help Case Team member)
+- Help worklet is enabled and accessible
+- At least one Case Type is configured with a questionnaire
+- User is assigned to a Help security group with Case Creator access
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0030-02_complete.png"
+1. enter search box as "Create Case"
+2. wait for search results
+3. click search result containing "Create Case"
+4. wait for page to load
+5. screenshot as "HLP-4-0030-02_service_categories.png"
+6. verify all Service Categories available to Case Creator are displayed
+7. click Service Category that contains questionnaire-enabled Case Types
+8. wait for Case Types to load
+9. screenshot as "HLP-4-0030-02_case_types.png"
+10. verify Case Creator has access to additional Case Types not available to employees
+11. click Case Type that has questionnaire configured
+12. wait for questionnaire to load
+13. screenshot as "HLP-4-0030-02_questionnaire_displayed.png"
+14. verify questionnaire section is visible
+15. verify all configured questionnaire fields are displayed
+16. verify required fields are marked with asterisk
+17. scroll to view all questionnaire fields
+18. screenshot as "HLP-4-0030-02_questionnaire_fields.png"
+19. enter sample data in questionnaire text fields
+20. verify fields accept input correctly
+21. select options from questionnaire dropdowns (if present)
+22. verify conditional fields appear/hide based on selections (if applicable)
+23. screenshot as "HLP-4-0030-02_complete.png"
+24. click button "Cancel"
+25. verify return to Help landing page
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Case Creator sees all eligible Case Types for their security group
+- [ ] Questionnaire displays for Case Types with configured questionnaires
+- [ ] All questionnaire fields appear as configured
+- [ ] Required fields are properly marked
+- [ ] Field types are correct (text, dropdown, checkbox, date, worker lookup, etc.)
+- [ ] Conditional logic works correctly
+- [ ] No error messages during questionnaire interaction
+- [ ] Case Creator may have access to Case Types not available to regular employees
 
-================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+SUB-TASKS:
+1. Navigate to Create Case as Case Creator
+2. Verify expanded Case Type access compared to Employee/Manager roles
+3. Select Service Category with questionnaire-enabled Case Type
+4. Select Case Type and verify questionnaire loads
+5. Interact with questionnaire fields to verify functionality
+
+API ALTERNATIVE:
+- REST: GET /help/caseTypes (to retrieve questionnaire configuration)
+- SOAP: Get_Questionnaires (if available in Help WSDL)
+
+NOTES:
+- Case Creator role typically has broader access to Case Types than employees
+- Case Creators can often create cases on behalf of other workers
+- Questionnaires may include additional fields for Case Creators (e.g., worker lookup)
+- Test should compare available Case Types to Employee/Manager roles
+
 ================================================================================

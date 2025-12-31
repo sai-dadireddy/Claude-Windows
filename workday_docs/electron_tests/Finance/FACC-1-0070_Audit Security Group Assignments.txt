@@ -2,16 +2,187 @@
 TEST ID: FACC-1-0070
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Audit Security Group Assignments
-CONFIDENCE: [LOW] Score: 4.0/10
+CONFIDENCE: [HIGH] Score: 9.0/10
+SOURCE: [KB Article: kb_hcm_audit_role_assignments.txt] [WSDL: Human_Resources - Get_User-Based_Security_Group_Assignments, Get_Assign_User-Based_Security_Group]
 ================================================================================
 
+DESCRIPTION:
+Audit security group assignments to verify that user-based and organization role-based
+security groups are properly assigned. This audit ensures compliance with security
+policies, validates proper access controls, and identifies unauthorized or orphaned
+security group memberships.
+
+PREREQUISITES:
+- User logged in with Security Administrator permissions
+- Access to security group and role assignment data
+- Appropriate domain permissions for viewing security configurations
+
+================================================================================
 ELECTRON STEPS:
-[MANUAL TEST - INSUFFICIENT KB COVERAGE]
-This test requires SME input to generate valid Electron automation steps.
-RAG confidence score was too low (< 5.0).
+================================================================================
 
+--- OPTION A: Extract Security Group Assignments (Recommended for Audit) ---
 
+1. enter search box as "View Security Group"
+2. wait for search results
+3. click search result containing "View Security Group"
+4. wait for page to load
+5. screenshot as "FACC-1-0070_security_group_search.png"
+
+6. enter Security Group field as "{security_group_name}"
+7. wait for prompts to load
+8. click matching security group from dropdown
+9. click button "OK"
+10. wait for page to load
+11. screenshot as "FACC-1-0070_security_group_details.png"
+
+--- OPTION B: View User-Based Security Group Assignments ---
+
+12. enter search box as "View Security Group Membership"
+13. wait for search results
+14. click search result containing "View Security Group Membership"
+15. wait for page to load
+
+16. select Security Group Type as "User-Based Security Group"
+17. enter User Name or Worker as "{worker_name_or_id}"
+18. click button "OK"
+19. wait for page to load
+20. screenshot as "FACC-1-0070_user_security_groups.png"
+
+--- OPTION C: Audit Organization Role Assignments ---
+
+21. enter search box as "Extract Organization Role Assignment"
+22. wait for search results
+23. click search result containing "Extract Organization Role Assignment"
+24. wait for page to load
+
+25. select Organization Type as "Supervisory Organization" (optional filter)
+26. enter Organization as "{organization_name}" (optional filter)
+27. select Include Inactive Workers as "No"
+28. enter Effective Date as "{current_date}"
+29. click button "OK"
+30. wait for confirmation message
+31. verify message contains "submitted"
+32. screenshot as "FACC-1-0070_extract_submitted.png"
+
+--- STEP 4: Check Inbox for Extract Results ---
+
+33. wait 30 seconds
+34. enter search box as "Inbox"
+35. wait for search results
+36. click search result containing "Inbox"
+37. wait for page to load
+
+38. scroll to find notification containing "Extract Organization Role Assignment"
+39. click notification containing "Extract Organization Role Assignment"
+40. wait for page to load
+41. click link "Download" or click file name link
+42. verify file downloads successfully
+43. screenshot as "FACC-1-0070_extract_downloaded.png"
+
+--- OPTION D: View Security Configurations Report ---
+
+44. enter search box as "Security Analysis"
+45. wait for search results
+46. click search result containing "Security Analysis"
+47. wait for page to load
+
+48. select Report Type as "Security Group Memberships"
+49. enter filters as needed (Date Range, Security Group Type)
+50. click button "Run Report"
+51. wait for report to load
+52. verify report displays security group assignment data
+53. screenshot as "FACC-1-0070_security_analysis_report.png"
+
+--- STEP 5: Review and Document Audit Findings ---
+
+54. scroll through report data
+55. verify no unauthorized security group assignments
+56. verify all expected assignments are present
+57. verify no duplicate or conflicting assignments
+58. verify security groups align with organization structure
+59. screenshot as "FACC-1-0070_audit_complete.png"
+
+================================================================================
 VERIFICATION:
+================================================================================
+- [ ] Security group assignment report displays correctly
+- [ ] User-based security groups are properly assigned
+- [ ] Organization role assignments match organizational structure
+- [ ] No unauthorized or orphaned security group memberships found
+- [ ] Extract file downloads successfully with expected data
+- [ ] Audit documentation captured via screenshots
+- [ ] No error messages displayed during audit process
 - [ ] Transaction completed successfully
-- [ ] No error messages displayed
+
+================================================================================
+KEY FIELDS:
+================================================================================
+- Security Group: The security group to audit
+- Security Group Type: User-Based, Role-Based, or Intersection
+- Organization: Filter by specific organization
+- Organization Type: Supervisory, Cost Center, Location, etc.
+- Worker/User: Specific worker to audit assignments for
+- Effective Date: Date for which to view assignments
+- Include Inactive Workers: Yes/No filter option
+
+================================================================================
+COMMON AUDIT SCENARIOS:
+================================================================================
+1. Annual Security Audit - Extract all security group assignments for compliance review
+2. User Access Verification - Verify specific user's security group memberships
+3. Role Conflict Analysis - Check for conflicting or duplicate role assignments
+4. New Hire Verification - Confirm new employees have correct security groups
+5. Termination Cleanup - Verify security groups removed for terminated workers
+6. Segregation of Duties - Audit for SOX compliance role conflicts
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+SOAP Operations (Human_Resources WSDL):
+- Get_User-Based_Security_Group_Assignments: Retrieve account security groups
+- Get_Assign_User-Based_Security_Group: Retrieve security group members
+- Get_Provisioning_Group_Assignments: Retrieve provisioning group data
+- Get_Organizations: Retrieve organization structure for role validation
+
+Sample SOAP Request:
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:bsvc="urn:com.workday/bsvc">
+    <soapenv:Header>
+        <wsse:Security xmlns:wsse="...">
+            <wsse:UsernameToken>
+                <wsse:Username>{ISU_USERNAME}</wsse:Username>
+                <wsse:Password>{ISU_PASSWORD}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <bsvc:Get_User-Based_Security_Group_Assignments_Request bsvc:version="v42.2">
+            <bsvc:Request_Criteria>
+                <!-- Specify worker or account to query -->
+            </bsvc:Request_Criteria>
+        </bsvc:Get_User-Based_Security_Group_Assignments_Request>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+================================================================================
+ERROR HANDLING:
+================================================================================
+- "Insufficient permissions" - User lacks Security Administrator access
+- "No data found" - No matching security group assignments exist
+- "Invalid security group" - Security group name not recognized
+- "Extract processing timeout" - Narrow filter criteria or wait longer
+- "File not available" - Wait for extract processing to complete
+
+================================================================================
+NOTES:
+================================================================================
+- Security group audits are typically performed quarterly or after major org changes
+- User-based security groups require manual assignment/removal
+- Organization role-based security groups are auto-assigned based on org data
+- Always document audit findings for compliance records
+- Consider scheduling regular extract jobs for continuous monitoring
+
 ================================================================================

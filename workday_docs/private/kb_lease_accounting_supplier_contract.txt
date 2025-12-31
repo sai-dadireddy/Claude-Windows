@@ -1,0 +1,211 @@
+================================================================================
+KB ARTICLE: Supplier Contract for Lease (Operating/Finance)
+AREA: Lease Accounting
+CREATED: 2025-12-30
+SOURCE: Workday WSDL Analysis + Financial Management Documentation
+================================================================================
+
+OVERVIEW:
+Supplier Contracts for Leases in Workday are used to manage lease agreements
+with suppliers/lessors. The contract defines lease terms, payment schedules,
+and accounting treatment under ASC 842 (US GAAP) or IFRS 16 standards.
+
+LEASE TYPES:
+1. Operating Lease - Expense recognized over lease term
+2. Finance Lease - Asset and liability recognized on balance sheet
+3. Short-Term Lease - Leases under 12 months (optional practical expedient)
+
+ACCOUNTING METHODS FOR OPERATING LEASES:
+1. ROU Asset Operating Expense - Right-of-use asset with operating expense
+2. Straight-line Lease Expense - Equal expense recognition over lease term
+
+================================================================================
+WORKDAY TASK: Create Supplier Contract
+================================================================================
+
+NAVIGATION:
+1. Search for "Create Supplier Contract"
+2. Click "Create Supplier Contract" from search results
+3. Select Contract Type (must be lease-enabled type)
+
+REQUIRED FIELDS - CONTRACT HEADER:
+- Company: Select the legal entity for the lease
+- Supplier: Select the lessor/supplier
+- Contract Type: Select lease contract type (e.g., "Operating Lease", "Finance Lease")
+- Contract Date: Date contract is created
+- Effective Date: Lease commencement date
+- End Date: Lease termination date
+
+LEASE-SPECIFIC FIELDS:
+- Lease Classification: Operating Lease / Finance Lease
+- Lease Term (Months): Duration of lease
+- Commencement Date: When lessee obtains control of asset
+- Accounting Standard: ASC 842 / IFRS 16
+- Book Code: Lease accounting book code configuration
+
+ROU ASSET CONFIGURATION:
+- ROU Asset Class: Classification for right-of-use asset
+- Accounting Method:
+  * Operating Expense (for operating leases)
+  * Amortization (for finance leases)
+- Depreciation Profile: Method and useful life
+- Asset Book: Asset book for tracking ROU asset
+
+PAYMENT SCHEDULE:
+- Payment Frequency: Monthly, Quarterly, Annually
+- Payment Amount: Fixed or variable lease payment
+- Payment Due Day: Day of month payment is due
+- First Payment Date: Date of first lease payment
+- Escalation: Annual increase percentage (if applicable)
+
+LEASE LIABILITIES:
+- Discount Rate: Rate used to calculate present value
+- Liability Account: GL account for lease liability
+- Initial Measurement: Present value of lease payments
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+STANDARD FLOW:
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{company_name}"
+6. enter supplier field as "{supplier_name}"
+7. select contract type as "Operating Lease Contract"
+8. enter contract date as "{date}"
+9. enter effective date as "{lease_start_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Operating Lease"
+13. enter lease term as "{months}"
+14. select accounting standard as "ASC 842"
+15. scroll to "ROU Asset" section
+16. select ROU asset class as "{asset_class}"
+17. select accounting method as "Operating Expense"
+18. scroll to "Payment Schedule" section
+19. enter payment amount as "{amount}"
+20. select payment frequency as "Monthly"
+21. enter first payment date as "{date}"
+22. click button "Submit"
+23. verify message contains "successfully submitted"
+
+================================================================================
+RELATED WSDL OPERATIONS (Financial_Management)
+================================================================================
+
+- Put_Supplier_Contract_Lease_Amendment_Type
+  Operation to add or modify Supplier Contract Lease Amendment Types
+
+- Get_Supplier_Contract_Lease_Amendment_Types
+  Operation to retrieve Supplier Contract Lease Amendment Types
+
+- Put_Lease_Contract_Book_Code_Configuration
+  Task used to add/edit lease contract book code configurations
+
+- Get_Lease_Contract_Book_Code_Configurations
+  View existing Lease Contract Book Configurations
+
+================================================================================
+VALIDATION / SUCCESS CRITERIA
+================================================================================
+
+1. Contract number is generated
+2. ROU Asset is created (if applicable)
+3. Lease liability is recorded
+4. Amortization schedule is generated
+5. Journal entries posted to GL (if auto-accounting enabled)
+6. Confirmation message displayed: "Supplier Contract successfully submitted"
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Common Errors:
+- "Supplier not found" - Verify supplier exists and is active
+- "Invalid lease term" - Check commencement/end dates
+- "Book code configuration missing" - Setup lease book code first
+- "Asset class required" - Select valid ROU asset class
+- "Discount rate required" - Enter rate for liability calculation
+
+================================================================================
+PREREQUISITES
+================================================================================
+
+Before creating Supplier Contract for Lease:
+1. Lease Book Code Configuration exists (LA-1-0070)
+2. Supplier Contract Types configured (LA-1-0040)
+3. Asset Book Rules configured (LA-1-0060)
+4. Company Asset Book setup (LA-1-0080)
+5. Account Posting Rules for leases (LA-1-0020)
+
+================================================================================
+REPORTING STANDARDS
+================================================================================
+
+Operating Lease under ONE Standard (US GAAP only):
+- Use ASC 842 classification rules
+- Operating expense for short-term/low-value leases
+- ROU Asset and Lease Liability for other operating leases
+- Straight-line lease expense over term
+
+Operating Lease under BOTH Standards:
+- Dual reporting: ASC 842 (GAAP) and IFRS 16 (IFRS)
+- May have different classifications between standards
+- Separate book codes for each standard
+
+================================================================================
+FINANCE LEASE CONFIGURATION
+================================================================================
+
+Finance leases differ from operating leases in accounting treatment:
+
+CLASSIFICATION CRITERIA (ASC 842):
+A lease is classified as Finance if ANY of these criteria are met:
+1. Transfer of ownership at end of lease
+2. Purchase option reasonably certain to be exercised
+3. Lease term is major part of asset's economic life (typically >= 75%)
+4. Present value of payments is substantially all of asset's fair value (>= 90%)
+5. Specialized asset with no alternative use
+
+FINANCE LEASE ACCOUNTING:
+- ROU Asset: Recorded at present value of lease payments + initial direct costs
+- Lease Liability: Present value of remaining lease payments
+- Amortization: ROU Asset depreciated over shorter of lease term or useful life
+- Interest Expense: Calculated on lease liability balance (front-loaded)
+- Expense Pattern: Total expense is front-loaded (higher in early periods)
+
+FINANCE LEASE STEPS:
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{company_name}"
+6. enter supplier field as "{supplier_name}"
+7. select contract type as "Finance Lease Contract"
+8. enter contract date as "{date}"
+9. enter effective date as "{lease_start_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Finance Lease"
+13. enter lease term as "{months}"
+14. select accounting standard as "ASC 842"
+15. scroll to "ROU Asset" section
+16. select ROU asset class as "{asset_class}"
+17. select accounting method as "Amortization"
+18. select depreciation profile as "{depreciation_profile}"
+19. enter useful life months as "{useful_life}"
+20. scroll to "Payment Schedule" section
+21. enter payment amount as "{amount}"
+22. select payment frequency as "Monthly"
+23. enter first payment date as "{date}"
+24. enter discount rate as "{discount_rate}"
+25. scroll to "Purchase Option" section (if applicable)
+26. check checkbox "Purchase Option" (if applicable)
+27. enter purchase option amount as "{purchase_price}" (if applicable)
+28. click button "Submit"
+29. verify message contains "successfully submitted"
+
+================================================================================

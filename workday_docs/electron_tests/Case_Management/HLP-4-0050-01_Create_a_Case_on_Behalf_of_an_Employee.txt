@@ -2,19 +2,71 @@
 TEST ID: HLP-4-0050-01
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case on Behalf of an Employee
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Case on Behalf Of
+
+DESCRIPTION:
+Ensure correct security groups are able to access the task from the Related Action from the Worker
+
+PREREQUISITES:
+- User logged in with Case Creator role (Help Case Team member)
+- Case Management module enabled
+- User has security group permissions for "Create Case on Behalf Of"
+- Target employee exists in Workday
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0050-01_complete.png"
+1. enter search box as "21001" (or target employee ID)
+2. press Enter or click Search
+3. wait for search results to load
+4. click search result containing employee name
+5. wait for worker profile to load
+6. screenshot as "HLP-4-0050-01_worker_profile.png"
+7. click button "Related Actions"
+8. wait for Related Actions menu to load
+9. screenshot as "HLP-4-0050-01_related_actions.png"
+10. verify "Help" submenu is visible in Related Actions
+11. hover over "Help" submenu
+12. verify "Create Case" option is visible
+13. click link "Create Case"
+14. wait for Create Case page to load
+15. screenshot as "HLP-4-0050-01_create_case.png"
+16. verify "On Behalf Of" field is pre-populated with target worker
+17. verify Service Categories are displayed
+18. click tile for first Service Category
+19. wait for Case Types to load
+20. click desired Case Type
+21. enter subject as "Test case on behalf of employee"
+22. enter description as "Testing create case on behalf of worker functionality"
+23. screenshot as "HLP-4-0050-01_case_details.png"
+24. click button "Submit"
+25. wait for confirmation
+26. verify message contains "Success"
+27. screenshot as "HLP-4-0050-01_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Related Actions menu displays Help submenu
+- [ ] Create Case option visible under Help
+- [ ] On Behalf Of field pre-populated with target worker
+- [ ] Service Categories and Case Types accessible
+- [ ] Case successfully created
+- [ ] Case shows correct "Created On Behalf Of" worker
+- [ ] No error messages displayed
+
+API ALTERNATIVE:
+- SOAP: Requests.Submit_Request - Creates a Request/Case
+- Include "On_Behalf_Of_Worker_Reference" in request payload
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Score: 8.0/10
+Source: kb_case_management_create_case.txt
+
+Key Information from KB:
+- Related Actions > Help > Create Case available on worker profile
+- Help Case Team members can create cases on behalf of any worker
+- On Behalf Of field allows specifying the case requester
+- Security groups control access to Create Case on Behalf Of functionality
 ================================================================================

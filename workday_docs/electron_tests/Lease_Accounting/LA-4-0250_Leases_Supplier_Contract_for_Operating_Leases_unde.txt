@@ -2,19 +2,133 @@
 TEST ID: LA-4-0250
 FUNCTIONAL AREA: Lease Accounting
 TEST NAME: Leases: Supplier Contract for Operating Leases under two reporting standards
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_lease_accounting_supplier_contract.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Supplier Contract
+NOTE: Task inferred from scenario description - original Excel Task/Step was null
+
+DESCRIPTION:
+Create a Supplier Contract for an Operating Lease configured for dual reporting
+under two accounting standards: US GAAP (ASC 842) and IFRS 16.
+
+Dual-standard reporting requires:
+- Two book codes (one per standard)
+- Potentially different lease classifications per standard
+- Separate journal entries for each standard
+- Reconciliation between GAAP and IFRS treatment
+
+Key Differences between ASC 842 and IFRS 16:
+| Aspect | ASC 842 (US GAAP) | IFRS 16 |
+|--------|-------------------|---------|
+| Operating Lease | Recognized (ROU + Liability) | All leases on balance sheet |
+| Classification | Operating vs Finance | Single model (Finance-like) |
+| Expense Pattern | Straight-line | Front-loaded (interest + depreciation) |
+
+PREREQUISITES:
+- User logged in with Lease Accounting Administrator permissions
+- Dual Book Code Configuration exists (ASC 842 + IFRS 16)
+- Supplier Contract Types configured for dual reporting
+- Active Supplier/Lessor exists in system
+- Asset Book Rules configured for both standards
+- Account Posting Rules for both GAAP and IFRS books
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "LA-4-0250_complete.png"
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{test_company}"
+6. enter supplier field as "{test_supplier}"
+7. select contract type as "Dual Standard Lease Contract"
+8. enter contract date as "{current_date}"
+9. enter effective date as "{lease_commencement_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Operating Lease"
+13. enter lease term months as "{lease_term}"
+14. scroll to "Accounting Standards" section
+15. check checkbox "ASC 842 (US GAAP)"
+16. check checkbox "IFRS 16"
+17. scroll to "ASC 842 Book Configuration" section
+18. select book code as "{asc842_book_code}"
+19. select ROU asset class as "{asc842_rou_asset_class}"
+20. select accounting method as "{asc842_accounting_method}"
+21. scroll to "IFRS 16 Book Configuration" section
+22. select book code as "{ifrs16_book_code}"
+23. select ROU asset class as "{ifrs16_rou_asset_class}"
+24. select accounting method as "{ifrs16_accounting_method}"
+25. scroll to "Payment Schedule" section
+26. enter payment amount as "{monthly_payment}"
+27. select payment frequency as "Monthly"
+28. enter first payment date as "{first_payment_date}"
+29. enter discount rate as "{discount_rate_percent}"
+30. click button "Submit"
+31. wait for confirmation
+32. verify message contains "successfully submitted"
+33. screenshot as "LA-4-0250_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Supplier Contract is created with contract number
+- [ ] Lease is associated with two book codes (ASC 842 and IFRS 16)
+- [ ] ASC 842 ROU Asset is created with specified accounting method
+- [ ] IFRS 16 ROU Asset is created with specified accounting method
+- [ ] Separate Lease Liabilities recorded for each standard
+- [ ] Payment schedule is generated for dual reporting
+- [ ] Journal entries posted to both GAAP and IFRS ledgers
+- [ ] Confirmation message displays successful submission
+
+TEST DATA REQUIREMENTS:
+- test_company: Company configured for dual-standard reporting
+- test_supplier: Active supplier configured as lessor
+- lease_commencement_date: Future or current date
+- lease_end_date: Date > commencement date
+- lease_term: Number of months (e.g., 36, 60, 120)
+- asc842_book_code: Book code for US GAAP ASC 842
+- asc842_rou_asset_class: Asset class for GAAP ROU assets
+- asc842_accounting_method: Operating Expense or Depreciation Expense
+- ifrs16_book_code: Book code for IFRS 16
+- ifrs16_rou_asset_class: Asset class for IFRS ROU assets
+- ifrs16_accounting_method: Depreciation Expense (IFRS always finance-like)
+- monthly_payment: Lease payment amount
+- first_payment_date: Date of first payment
+- discount_rate_percent: Incremental borrowing rate
+
+DUAL REPORTING CONSIDERATIONS:
+1. Classification Differences:
+   - ASC 842: May classify as Operating or Finance
+   - IFRS 16: Essentially all leases treated as Finance
+
+2. Expense Recognition:
+   - ASC 842 Operating: Straight-line lease expense
+   - IFRS 16: Interest expense + Depreciation expense (front-loaded)
+
+3. Balance Sheet:
+   - Both: ROU Asset and Lease Liability recognized
+   - Amounts may differ due to discount rate/treatment
+
+API ALTERNATIVE:
+- SOAP: Financial_Management > Put_Supplier_Contract_Lease_Amendment_Type
+- SOAP: Financial_Management > Get_Lease_Contract_Book_Code_Configurations
+
+RELATED SCENARIOS:
+- LA-4-0010 through LA-4-0240: Single standard Operating Leases
+- LA-4-0260 through LA-4-0450: Other dual standard variations
+- LA-1-0030: Book Codes configuration
+- LA-1-0070: Lease Contract Book Code Configuration
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Query: "Supplier Contract Operating Lease dual standard ASC 842 IFRS 16"
+Score: 6.5/10 - KB article reference for lease accounting
+Status: Steps inferred from KB article and Workday dual-standard lease knowledge
+Source: kb_lease_accounting_supplier_contract.txt
+
+ENHANCEMENT NOTES:
+- Task name "Create Supplier Contract" inferred from scenario description
+- Original Excel had null Task/Step field
+- Key difference: Dual-standard configuration (ASC 842 + IFRS 16)
+- Requires separate book code configuration per standard
+- SME review recommended to verify dual-standard field names
 ================================================================================

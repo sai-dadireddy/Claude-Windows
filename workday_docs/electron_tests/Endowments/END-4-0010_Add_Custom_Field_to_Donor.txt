@@ -3,38 +3,103 @@ TEST ID: END-4-0010
 FUNCTIONAL AREA: Endowments
 TEST NAME: Add Custom Field to Donor
 CONFIDENCE: [INCOMPLETE] Score: N/A
-STATUS: ❌ MISSING DATA - Cannot Generate
+STATUS: REQUIRES SME INPUT - Excel Source Missing "Task / Step"
 ================================================================================
 
-ISSUE:
-Excel source data is incomplete - "Task / Step" column shows "nan" (missing).
+ISSUE SUMMARY:
+The Excel source file (test_scenarios_v2.xlsx) row 4500 has missing values:
+- Task / Step: nan (MISSING)
+- Customer Expected Result: nan (MISSING)
+- Est. Effort (mins): nan (MISSING)
+- Workday Role: nan (MISSING)
 
-Without the actual Workday task name, cannot generate valid Electron automation steps.
-
-REQUIRED TO PROCEED:
-1. Excel row must have valid "Task / Step" value
-2. Typical values might be:
-   - "Create Custom Field"
-   - "Edit Donor Custom Organization Data"
-   - "Configure Custom Field Definition"
-
-RAG RESEARCH CONDUCTED:
-- Query: "Create Custom Field" → Score: 8/10 (generic admin guide)
-- Query: "donor custom field endowments" → Score: 4/10 (low coverage)
-
-RECOMMENDATION:
-- Review Excel source file for END-4-0010
-- Populate "Task / Step" with actual Workday task name
-- Re-run enhancement workflow
+Without the actual Workday task name, valid Electron automation cannot be generated.
 
 ================================================================================
-GENERAL CUSTOM FIELD PATTERN (if task is "Create Custom Field"):
-1. enter search box as "Create Custom Field"
+RAG RESEARCH CONDUCTED (2025-12-30):
+================================================================================
+
+QUERY 1: "Add Custom Field to Donor Endowments"
+  Score: 6/10 (Feature Descriptions PDF - generic)
+  Result: No specific donor custom field steps found
+
+QUERY 2: "custom field configuration donor"
+  Score: 4/10 (Feature Descriptions PDF - generic)
+  Result: No Endowments-specific custom field guidance
+
+QUERY 3: "Create Custom Object Donor Endowments"
+  Score: 5/10 (Feature Descriptions PDF)
+  Result: No donor custom object steps found
+
+WSDL ANALYSIS:
+- Searched Financial_Management.wsdl (401 operations)
+- Found: Get_Gifts, Submit_Gift, Get_Gift_Hierarchies, Put_Gift_Hierarchy
+- Found: Get_Custom_Worktags, Put_Custom_Worktag
+- NOT FOUND: Donor-specific CRUD operations
+- NOT FOUND: Endowments custom field operations
+
+CONCLUSION:
+- No dedicated Endowments WSDL exists (checked all 55 WSDLs)
+- Donor custom fields may use Workday Extensibility framework
+- Custom fields for Donors likely require:
+  1. "Create Custom Object Definition" or
+  2. "Edit Custom Object Instance" or
+  3. Configurable fields via "Maintain Custom Organization"
+
+================================================================================
+POSSIBLE WORKDAY TASKS (needs SME verification):
+================================================================================
+
+Based on Workday patterns, the task might be one of:
+1. "Edit Donor" with custom fields section
+2. "Create Custom Object Definition" for Donor object
+3. "Maintain Configurable Fields" for Endowments
+4. "Edit Custom Object Instance" on Donor
+
+================================================================================
+ELECTRON STEPS (PLACEHOLDER - NOT VALID FOR AUTOMATION):
+================================================================================
+
+The following are placeholder steps that REQUIRE SME verification:
+
+1. enter search box as "[NEEDS SME: Actual Workday Task Name]"
 2. wait for search results
-3. click search result containing "Create Custom Field"
+3. click search result containing "[Task Name]"
 4. wait for page to load
-5. [NEEDS SME INPUT - specific field configuration steps]
-6. screenshot as "END-4-0010_complete.png"
+5. [NEEDS SME: Navigation to custom fields section]
+6. [NEEDS SME: Field names for custom field definition]
+7. [NEEDS SME: Validation messages on save]
+8. screenshot as "END-4-0010_complete.png"
 
-NOTE: Cannot proceed without valid Excel data.
+================================================================================
+REQUIRED TO PROCEED:
+================================================================================
+
+1. SME must provide the actual Workday task name used to add custom fields to Donors
+2. SME must identify the exact UI navigation path
+3. SME must provide expected field names and validation messages
+4. Update Excel row 4500 with corrected "Task / Step" value
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+
+SOAP (if Donor custom fields use standard Extensibility):
+- Service: Workday_Extensibility.wsdl
+- Operations: Submit_Custom_Object, Get_Custom_Objects
+
+REST (if available):
+- Endpoint pattern: /ccx/api/v1/{tenant}/donors/{id}/customFields
+- Note: REST Endowments API availability unconfirmed
+
+================================================================================
+ENHANCEMENT HISTORY:
+================================================================================
+
+2025-12-30: Agent workday-agent-endowments-1 - Analyzed and marked INCOMPLETE
+  - RAG queries returned scores below threshold (max 6/10)
+  - No Endowments-specific KB article exists
+  - Excel source data is missing critical fields
+  - Cannot enhance without SME input
+
 ================================================================================

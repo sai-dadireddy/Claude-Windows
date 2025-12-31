@@ -36,7 +36,22 @@ Use the Read tool to read the file and understand:
 - What validation criteria exist (if any)
 - What specific Workday reports/tasks are mentioned
 
-### Step 3: Open Browser Tab and Research
+### Step 2.5: QUERY LOCAL RAG FIRST (MANDATORY)
+```bash
+cd "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs"
+python workday_rag.py "{Task name from test file}"
+```
+
+**DECISION TREE based on RAG score:**
+| RAG Score | Action |
+|-----------|--------|
+| **>= 7.0** | ✅ Use RAG data directly - skip browser research |
+| **5.0-6.9** | ⚠️ Try additional RAG queries, check existing KB files |
+| **< 5.0** | 🌐 **MUST USE BROWSER** - Go to Step 3 |
+
+**CRITICAL: If RAG score < 7.0 and you cannot find specific steps locally, you MUST open a browser tab and research Workday KB. Do NOT just mark as MANUAL without trying browser first!**
+
+### Step 3: Open Browser Tab and Research (REQUIRED when RAG < 7.0)
 
 #### 3.1 Create Your Tab
 ```

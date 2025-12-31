@@ -2,54 +2,93 @@
 TEST ID: HCM-1-0530
 FUNCTIONAL AREA: HCM
 TEST NAME: Unified Duplicate Management Framework - Validate Match Rules
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_hcm_duplicate_management.txt] [RAG: Human_Resources.wsdl - Get_Match_Rules, Put_Match_Rule]
 ================================================================================
 
 DESCRIPTION:
 Review the configured match rules for Unified Duplicate Management Framework if in scope for your deployment
 
-WORKDAY ROLE: Recruiting Administrator / 
- Security Administrator
+WORKDAY ROLE: Recruiting Administrator / Security Administrator
 EST. DURATION: 10 minutes
 
 PREREQUISITES:
-- User logged in with Recruiting Administrator / 
- Security Administrator permissions
-- Required data available in tenant
+- User logged in with Recruiting Administrator or Security Administrator permissions
+- Access to Duplicate Management domain
+- Organization uses Unified Duplicate Management Framework
 
 ELECTRON STEPS:
 1. enter search box as "Manage Match Rules"
 2. wait for search results
 3. click search result containing "Manage Match Rules"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0530_complete.png"
+5. screenshot as "HCM-1-0530_match_rules_list.png"
+6. verify report displays table with Match Rule listings
+7. verify column headers include "Match Rule Name", "Match Type", "Status"
+8. scroll to view all match rules configured
+9. click filter for "Status" column
+10. select filter as "Active" to show active rules only
+11. wait for filter to apply
+12. screenshot as "HCM-1-0530_active_rules.png"
+13. click first active match rule link to view details
+14. wait for detail page to load
+15. screenshot as "HCM-1-0530_rule_detail.png"
+16. verify rule header displays Name, ID, and Status
+17. scroll down to Match Criteria section
+18. verify Match Criteria table displays matching fields
+19. verify fields include key identifiers such as "Name", "Date of Birth", "Email"
+20. screenshot as "HCM-1-0530_match_criteria.png"
+21. verify Match Threshold or scoring configuration is visible
+22. click button "Close" or navigate back to match rules list
+23. enter search box as "Manage Email Match Exclusions"
+24. wait for search results
+25. click search result containing "Email Match Exclusions"
+26. wait for page to load
+27. screenshot as "HCM-1-0530_email_exclusions.png"
+28. verify email exclusion list is configured appropriately
+29. click button "Close" or navigate back
+30. screenshot as "HCM-1-0530_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
+- [ ] Manage Match Rules task is accessible
+- [ ] Match rules are configured and displayed in list
+- [ ] At least one active match rule exists
+- [ ] Match criteria include key identifying fields (Name, DOB, Email, SSN)
+- [ ] Match thresholds are appropriately configured
+- [ ] Match types (Exact/Fuzzy) are correctly set
+- [ ] Email exclusions list exists for common domains
+- [ ] Rules cover required scenarios (Candidate, Hire, Rehire detection)
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 
+DATA VALIDATION CHECKLIST:
+- [ ] Candidate to Employee match rule exists (if recruiting used)
+- [ ] Rehire detection rule exists (if rehire tracking required)
+- [ ] National ID/SSN included in match criteria (if applicable)
+- [ ] Name matching uses fuzzy logic for variations
+- [ ] Email matching excludes common public domains
+- [ ] Match thresholds balance accuracy vs false positives
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Human_Resources WSDL):
+  - Get_Match_Rules: Retrieve all configured match rules
+  - Put_Match_Rule: Create or update match rules
+  - Get_Email_Match_Exclusions: Retrieve excluded email addresses/domains
+  - Put_Email_Match_Exclusion: Add/update email exclusions
+  - Get_Name_Match_Exclusions: Retrieve excluded names
+  - Put_Name_Match_Exclusion: Add/update name exclusions
+- REST: Not directly available
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Manage Match Rules
+RELATED TASKS:
+- View Potential Duplicates: See detected duplicate records
+- Merge Duplicates: Combine duplicate records into one
+- Resolve Duplicate Candidates: Handle recruiting duplicates
+- Manage Name Match Exclusions: Configure excluded names
 
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Elec...
+NOTES:
+- Duplicate Management prevents creation of redundant person records
+- Match rules are critical for data quality in recruiting and hiring
+- Too strict thresholds may miss duplicates; too lenient creates false positives
+- Consider excluding common email domains (gmail.com, yahoo.com) from exact matching
+- Regular review of match rules ensures alignment with business needs
 ================================================================================

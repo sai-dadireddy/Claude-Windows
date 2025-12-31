@@ -1,0 +1,158 @@
+================================================================================
+WORKDAY KB ARTICLE: UNIFIED DUPLICATE MANAGEMENT FRAMEWORK - MATCH RULES
+================================================================================
+
+Source: Workday Documentation & WSDL Analysis
+Area: HCM - System Configuration / Data Quality
+Created: 2025-12-30
+Agent: workday-agent-hcm-2
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Unified Duplicate Management Framework in Workday is a system feature
+that helps organizations identify and prevent duplicate person records
+(workers, candidates, contacts) in the system. Match Rules define the
+criteria used to detect potential duplicates when new records are created
+or existing records are modified.
+
+Key use cases:
+- Recruiting: Detect if a candidate already exists as an employee
+- Hire: Check if a new hire might be a rehire
+- External candidates: Match against internal workers
+- Contact management: Prevent duplicate person contacts
+
+================================================================================
+NAVIGATION
+================================================================================
+
+Manage Match Rules:
+1. Search for "Manage Match Rules"
+2. Click the task from search results
+3. View list of configured match rules
+
+Alternatively:
+1. Search for "Match Rules" or "Duplicate Management"
+2. Select "Manage Match Rules" from results
+
+================================================================================
+MATCH RULE CONFIGURATION ELEMENTS
+================================================================================
+
+Match Rule Structure:
+- Match Rule ID: Unique identifier
+- Match Rule Name: Display name (e.g., "Candidate to Employee Match")
+- Description: Purpose of the rule
+- Status: Active/Inactive
+- Match Type: Type of record matching (Person, Candidate, etc.)
+- Match Criteria: Fields used for matching
+
+Match Criteria Types:
+- Exact Match: Fields must match exactly
+- Fuzzy Match: Approximate matching (e.g., name variations)
+- Weighted Match: Scoring based on multiple fields
+
+Common Match Fields:
+- Name (First, Last, Full Name)
+- Date of Birth
+- Email Address
+- Phone Number
+- National ID (SSN, etc.)
+- Address
+- Employee ID (for rehire detection)
+
+================================================================================
+KEY UI ELEMENTS
+================================================================================
+
+Manage Match Rules Report:
+- Column headers: Match Rule Name, Match Type, Status
+- Filter options: Filter by active status, match type
+- Row actions: View, Edit, Activate/Deactivate
+- Add button: Create new match rule
+
+Match Rule Detail View:
+- Rule header: Name, ID, Status
+- Description section: Purpose and usage
+- Match Criteria section: List of matching fields
+  - Field Name
+  - Match Type (Exact/Fuzzy)
+  - Weight (if weighted matching)
+- Match Threshold: Minimum score for a match
+- Action on Match: What happens when match found
+
+Match Exclusions:
+- Email Match Exclusions: Common email domains to ignore (e.g., gmail.com)
+- Name Match Exclusions: Common names to exclude from fuzzy matching
+
+================================================================================
+VERIFICATION CRITERIA
+================================================================================
+
+For "Validate Match Rules" test:
+1. Match rules are configured and active
+2. Match criteria include key identifying fields (Name, DOB, Email, SSN)
+3. Match thresholds are appropriate (not too strict/lenient)
+4. Email/Name exclusions are properly set
+5. Rules cover required scenarios (Candidate, Hire, Rehire)
+6. Status reflects intended activation state
+
+================================================================================
+API ALTERNATIVE
+================================================================================
+
+SOAP API (Human_Resources WSDL):
+- Get_Match_Rules: Retrieve configured match rules
+- Put_Match_Rule: Create or update match rules
+- Get_Email_Match_Exclusions: Retrieve email exclusion list
+- Put_Email_Match_Exclusion: Add/update email exclusions
+- Get_Name_Match_Exclusions: Retrieve name exclusion list
+- Put_Name_Match_Exclusion: Add/update name exclusions
+
+REST API:
+- Not directly available for Match Rules configuration
+
+================================================================================
+TYPICAL MATCH RULE SCENARIOS
+================================================================================
+
+1. Candidate to Employee Match:
+   - Purpose: Detect if external candidate is current employee
+   - Fields: Name, Email, Date of Birth
+   - Match Type: Fuzzy on Name, Exact on Email/DOB
+
+2. Rehire Detection:
+   - Purpose: Identify if new hire is a former employee
+   - Fields: Name, SSN/National ID, Date of Birth
+   - Match Type: Exact on SSN, Fuzzy on Name
+
+3. Person Duplicate Detection:
+   - Purpose: Prevent duplicate person records
+   - Fields: Full Name, Address, Phone
+   - Match Type: Weighted matching with threshold
+
+================================================================================
+RELATED TASKS
+================================================================================
+
+- View Potential Duplicates: See detected duplicates
+- Merge Duplicates: Combine duplicate records
+- Resolve Duplicate Candidates: Handle recruiting duplicates
+- Manage Email Match Exclusions: Configure excluded emails
+- Manage Name Match Exclusions: Configure excluded names
+
+================================================================================
+SECURITY REQUIREMENTS
+================================================================================
+
+Domain Security:
+- Setup: Duplicate Management (for configuration)
+- View: Duplicate Management (for viewing rules)
+
+Typical Roles:
+- Recruiting Administrator
+- Security Administrator
+- HR Partner (view only)
+
+================================================================================

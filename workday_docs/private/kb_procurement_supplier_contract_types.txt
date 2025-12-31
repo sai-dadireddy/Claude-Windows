@@ -1,0 +1,204 @@
+================================================================================
+WORKDAY KB ARTICLE: SUPPLIER CONTRACT TYPES CONFIGURATION
+================================================================================
+
+Source: Workday Resource Management WSDL Analysis & Best Practices
+Category: Procurement - Supplier Contract Configuration
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Supplier Contract Types are reference data that classify supplier contracts
+into categories for reporting, workflow routing, and feature configuration.
+They define how contracts are processed, what features are enabled, and
+which business processes apply.
+
+Functional Area: Procurement / Resource Management
+Task: Maintain Supplier Contract Types / Create Supplier Contract Type
+Typical Users: Accounts Payable Configurator, Procurement Administrator
+Configuration Level: Tenant-wide reference data
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. SUPPLIER CONTRACT TYPE ATTRIBUTES
+   - Contract Type ID (unique identifier)
+   - Contract Type Name (display name)
+   - Description (purpose/usage notes)
+   - Inactive Flag (for retiring contract types)
+   - Default Settings (payment terms, tax handling)
+
+2. FEATURE CONFIGURATIONS
+   - Catalog Integration (enable/disable catalog discounts)
+   - Invoice Matching (PO-based vs contract-based)
+   - Amendment Workflow (approval requirements)
+   - Auto-renewal Settings
+   - Hold Settings (enable contract line holds)
+   - Purchase Order Integration
+
+3. WORKFLOW ROUTING
+   - Approval Chain based on contract type
+   - Contract Specialist assignment
+   - Buyer assignment rules
+   - Notification recipients
+
+4. REPORTING CLASSIFICATION
+   - Spend analysis categorization
+   - Contract portfolio groupings
+   - Compliance reporting filters
+
+================================================================================
+NAVIGATION STEPS
+================================================================================
+
+TASK: VIEW/EDIT SUPPLIER CONTRACT TYPES
+---------------------------------------
+1. Search: "Maintain Supplier Contract Types" or "View Supplier Contract Types"
+2. Click search result to open configuration task
+3. Review existing contract types in list view
+4. Click specific contract type to view details
+5. Use "Edit" to modify existing type
+6. Use "Create Supplier Contract Type" for new types
+
+TASK: CREATE SUPPLIER CONTRACT TYPE
+-----------------------------------
+1. Search: "Create Supplier Contract Type"
+2. Click search result to open creation form
+3. Enter Contract Type ID (unique code)
+4. Enter Contract Type Name
+5. Add Description (optional but recommended)
+6. Configure feature settings:
+   - Enable/Disable catalog integration
+   - Set default payment terms
+   - Configure amendment settings
+7. Submit for approval (if business process configured)
+
+TASK: REVIEW AND AUDIT CONTRACT TYPES
+-------------------------------------
+1. Search: "View Supplier Contract Types" or "Maintain Supplier Contract Types"
+2. Export list if needed for audit
+3. Review each type's feature configuration
+4. Identify unused or duplicate types
+5. Document adjustments needed
+6. Create change requests for modifications
+
+================================================================================
+FIELD REFERENCE
+================================================================================
+
+| Field Name               | Type      | Required | Description                    |
+|-------------------------|-----------|----------|--------------------------------|
+| Contract Type ID        | Text      | Yes      | Unique identifier              |
+| Contract Type Name      | Text      | Yes      | Display name                   |
+| Description             | Text      | No       | Purpose and usage notes        |
+| Inactive                | Checkbox  | No       | Marks type as inactive         |
+| Catalog Discount        | Checkbox  | No       | Enable catalog discount %      |
+| Default Payment Terms   | Reference | No       | Default payment terms          |
+| Default Tax Code        | Reference | No       | Default tax handling           |
+| Allow Amendments        | Checkbox  | No       | Enable contract amendments     |
+| Auto-Renewal Eligible   | Checkbox  | No       | Allow auto-renewal             |
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Resource_Management
+
+Key Operations:
+
+1. Submit_Supplier_Contract (includes Supplier_Contract_Type reference)
+   - Supplier Contract Type is a reference field
+   - Used to classify contracts during creation
+   - Required for proper workflow routing
+
+2. Get_Supplier_Contracts
+   - Returns Supplier Contract Type in response
+   - Filterable by contract type for reporting
+
+Note: There is no direct API operation for managing Supplier Contract Types.
+Contract Types are reference data managed through Workday configuration UI.
+For programmatic access, use Raas (Report-as-a-Service) or EIB.
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+UI Selectors:
+- Search Box: input[data-automation-id="searchBox"]
+- Contract Type List: table[data-automation-id="contractTypeTable"]
+- Create Button: button:contains("Create Supplier Contract Type")
+- Edit Button: button:contains("Edit")
+- View Details: link[data-automation-id="contractTypeLink"]
+
+Validation:
+- Contract Type ID must be unique
+- Name should be descriptive and not duplicate existing
+- Review feature settings against business requirements
+- Verify workflow routing is correct
+- Check inactive flag for retired types
+
+Error Handling:
+- "Duplicate ID" - Use different Contract Type ID
+- "Cannot delete in use" - Mark inactive instead
+- "Approval required" - Submit to business process
+
+Screenshot Strategy:
+1. List of all contract types
+2. Individual contract type details
+3. Feature configuration settings
+4. Audit findings summary
+
+================================================================================
+COMMON CONTRACT TYPE EXAMPLES
+================================================================================
+
+| Type ID          | Type Name                  | Features Enabled            |
+|-----------------|----------------------------|-----------------------------|
+| STD_GOODS       | Standard Goods Contract    | PO integration, 3-way match |
+| STD_SERVICES    | Standard Services Contract | Deliverables, milestones    |
+| CONTINGENT      | Contingent Worker Contract | Time tracking, rates        |
+| LEASE           | Lease Contract             | Lease amendments, terms     |
+| BLANKET_PO      | Blanket Purchase Order     | Multiple POs, catalog       |
+| MASTER_SERVICE  | Master Service Agreement   | SOW, change orders          |
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+- Create Supplier Contract -> Uses Contract Type
+- Manage Supplier Catalogs -> Links to Contract Type
+- Contract Amendments -> Workflow by Contract Type
+- Spend Analysis Reports -> Filter by Contract Type
+- Supplier Performance -> Categorize by Contract Type
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Define clear naming conventions for contract types
+2. Document purpose of each type in Description field
+3. Limit number of types to avoid confusion
+4. Review and consolidate inactive types periodically
+5. Align types with procurement policies
+6. Configure appropriate approval workflows per type
+7. Train users on when to use each type
+8. Audit contract type usage quarterly
+9. Archive unused types (mark inactive)
+10. Maintain configuration change log
+
+================================================================================
+NOTES
+================================================================================
+
+- Contract Types are tenant-level configuration
+- Changes affect all future contracts of that type
+- Existing contracts retain their original type settings
+- Cannot delete types used by existing contracts
+- Types can be merged by updating contracts manually
+- Report on usage before making changes
+- Test configuration changes in sandbox first
+
+================================================================================

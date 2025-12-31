@@ -2,8 +2,8 @@
 TEST ID: HCM-1-0420
 FUNCTIONAL AREA: HCM
 TEST NAME: Collective Agreements
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_hcm_collective_agreements.txt] [RAG: Human_Resources.wsdl]
 ================================================================================
 
 DESCRIPTION:
@@ -14,40 +14,69 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Access to Collective Agreements domain
+- Organization has collective agreements configured (unionized workforce)
 
 ELECTRON STEPS:
-1. enter search box as "View Collective Agreement"
+1. enter search box as "All Collective Agreements"
 2. wait for search results
-3. click search result containing "View Collective Agreement"
+3. click search result containing "All Collective Agreements"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0420_complete.png"
+5. screenshot as "HCM-1-0420_report_view.png"
+6. verify report displays table with Collective Agreement listings
+7. verify column headers include "Collective Agreement Name", "Effective Date", "Status"
+8. scroll to view all collective agreement entries
+9. click column header "Collective Agreement Name" to sort alphabetically
+10. wait 2 seconds
+11. screenshot as "HCM-1-0420_sorted.png"
+12. click first collective agreement link to view details
+13. wait for detail page to load
+14. screenshot as "HCM-1-0420_agreement_detail.png"
+15. verify agreement details section displays Name, ID, Status
+16. verify Effective Date is visible
+17. scroll down to view Factors section
+18. verify Factors tab or section is present
+19. screenshot as "HCM-1-0420_factors_section.png"
+20. click link "Factors" or navigate to Factors section
+21. verify factor types and options are displayed
+22. click button "Close" or navigate back to report
+23. screenshot as "HCM-1-0420_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
+- [ ] All Collective Agreements report displays successfully
+- [ ] Collective agreements are listed with correct names and dates
+- [ ] Agreement status (Active/Inactive) is correctly shown
+- [ ] Effective dates align with organization's union contracts
+- [ ] Agreement detail view shows complete information
+- [ ] Factors and factor options are properly configured
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 
+DATA VALIDATION CHECKLIST:
+- [ ] Agreement names follow organizational naming conventions
+- [ ] Effective dates match actual contract periods
+- [ ] End dates set for expired agreements (if applicable)
+- [ ] Union references are correctly linked (if applicable)
+- [ ] Factor types align with compensation requirements
+- [ ] Factor options have valid values
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Human_Resources WSDL):
+  - Assign_Employee_Collective_Agreement_Event: Assign/update agreement for worker
+  - End_Collective_Agreement_Assignment: End agreement assignment
+  - Manage_Union_Membership: Manage worker union membership
+- REST: Not directly available
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Collective Agreement
+RELATED TASKS:
+- Create Collective Agreement: Set up new collective agreement
+- Edit Collective Agreement: Modify existing agreement
+- Assign Employee Collective Agreement: Assign worker to agreement
+- Maintain Unions: Configure union reference data
+- All Unions: View configured unions
 
-### 1. Kb Hcm Hire Employee (score: 3)
-Source: kb_hcm_hire_employee.txt
-```
-# Workday Hire Employee Business Process - Knowledge Base
-
-## Source
-- Workday Community AI-Generated Answer
-- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-- Releas...
+NOTES:
+- Collective Agreements define pay and benefits for unionized workers
+- Factors and factor options drive pay differentials
+- Expired agreements should have end dates set
+- Workers must be assigned to agreements to receive covered benefits
 ================================================================================

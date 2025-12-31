@@ -2,19 +2,114 @@
 TEST ID: LA-4-0090
 FUNCTIONAL AREA: Lease Accounting
 TEST NAME: Leases: Supplier Contract for Operating Lease with ROU Asset Depreciation Expense accounting method (reporting Operating Leases under only one standard)
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_lease_accounting_supplier_contract.txt]
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Create Supplier Contract
+NOTE: Task inferred from scenario description - original Excel Task/Step was null
+
+DESCRIPTION:
+Create a Supplier Contract for an Operating Lease using the ROU Asset Depreciation
+Expense accounting method. This scenario configures the lease to report under
+only one accounting standard (typically US GAAP ASC 842).
+
+The ROU Asset Depreciation Expense method differs from Operating Expense method:
+- ROU Asset is depreciated separately from lease liability amortization
+- Depreciation expense and interest expense shown as separate line items
+- More aligned with Finance Lease treatment on income statement
+- Used when entity prefers to show asset depreciation explicitly
+
+PREREQUISITES:
+- User logged in with Lease Accounting Administrator permissions
+- Lease Book Code Configuration exists (see LA-1-0070)
+- Supplier Contract Types configured for leases (see LA-1-0040)
+- Active Supplier/Lessor exists in system
+- Asset Book Rules configured for depreciation (see LA-1-0060)
+- Depreciation Profile configured for ROU assets
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "LA-4-0090_complete.png"
+1. enter search box as "Create Supplier Contract"
+2. wait for search results
+3. click search result containing "Create Supplier Contract"
+4. wait for page to load
+5. select company dropdown as "{test_company}"
+6. enter supplier field as "{test_supplier}"
+7. select contract type as "Operating Lease Contract"
+8. enter contract date as "{current_date}"
+9. enter effective date as "{lease_commencement_date}"
+10. enter end date as "{lease_end_date}"
+11. scroll to "Lease Details" section
+12. select lease classification as "Operating Lease"
+13. enter lease term months as "{lease_term}"
+14. select accounting standard as "ASC 842"
+15. scroll to "ROU Asset" section
+16. select ROU asset class as "{rou_asset_class}"
+17. select accounting method as "Depreciation Expense"
+18. select depreciation profile as "{depreciation_profile}"
+19. enter useful life months as "{useful_life}"
+20. scroll to "Payment Schedule" section
+21. enter payment amount as "{monthly_payment}"
+22. select payment frequency as "Monthly"
+23. enter first payment date as "{first_payment_date}"
+24. enter discount rate as "{discount_rate_percent}"
+25. click button "Submit"
+26. wait for confirmation
+27. verify message contains "successfully submitted"
+28. screenshot as "LA-4-0090_complete.png"
 
-VERIFICATION: nan
+VERIFICATION:
+- [ ] Supplier Contract is created with contract number
+- [ ] Lease Classification shows "Operating Lease"
+- [ ] Accounting Standard shows "ASC 842" (single standard)
+- [ ] ROU Asset is created with Depreciation Expense accounting method
+- [ ] Depreciation Profile is assigned to ROU Asset
+- [ ] Lease Liability is calculated and recorded
+- [ ] Payment schedule is generated based on inputs
+- [ ] Depreciation schedule is generated for ROU Asset
+- [ ] Confirmation message displays successful submission
+
+TEST DATA REQUIREMENTS:
+- test_company: Valid company with lease accounting enabled
+- test_supplier: Active supplier configured as lessor
+- lease_commencement_date: Future or current date
+- lease_end_date: Date > commencement date
+- lease_term: Number of months (e.g., 36, 60, 120)
+- rou_asset_class: Valid asset class for ROU assets
+- depreciation_profile: Valid depreciation method (e.g., Straight-line)
+- useful_life: Asset useful life in months
+- monthly_payment: Lease payment amount
+- first_payment_date: Date of first payment
+- discount_rate_percent: Incremental borrowing rate (e.g., 5%)
+
+ACCOUNTING METHOD COMPARISON:
+| Method | ROU Asset Treatment | Expense Recognition |
+|--------|---------------------|---------------------|
+| Operating Expense | Single lease expense | Combined straight-line |
+| Depreciation Expense | Separate depreciation | Depreciation + Interest |
+
+API ALTERNATIVE:
+- SOAP: Financial_Management > Put_Supplier_Contract_Lease_Amendment_Type
+- SOAP: Financial_Management > Get_Lease_Contract_Book_Code_Configurations
+
+RELATED SCENARIOS:
+- LA-4-0010: Operating Lease with Operating Expense method
+- LA-4-0020 through LA-4-0240: Other Operating Lease variations
+- LA-4-0460 through LA-4-0600: Finance Lease contracts
+- LA-1-0060: Asset Book Rules (depreciation configuration)
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Query: "Supplier Contract Operating Lease ROU Asset Depreciation"
+Score: 6.5/10 - KB article created for lease accounting
+Status: Steps inferred from KB article and Workday lease accounting knowledge
+Source: kb_lease_accounting_supplier_contract.txt
+
+ENHANCEMENT NOTES:
+- Task name "Create Supplier Contract" inferred from scenario description
+- Original Excel had null Task/Step field
+- Key difference from LA-4-0010: Depreciation Expense method vs Operating Expense
+- Depreciation Expense method requires depreciation profile configuration
+- Specific field IDs may vary by tenant configuration
+- SME review recommended to verify field names match production environment
 ================================================================================

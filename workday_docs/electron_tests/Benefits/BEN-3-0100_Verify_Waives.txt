@@ -2,52 +2,94 @@
 TEST ID: BEN-3-0100
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Waives
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [RAG: kb_benefits_enrollment.txt + Benefits_Administration WSDL]
 ================================================================================
 
-TASK/STEP: Enrollment Count report
+DESCRIPTION:
+Verify benefit waivers to confirm employees who have declined coverage are
+properly documented with valid waiver reasons. Extract worker benefit elections
+details to identify waived benefits and ensure compliance with waiver policies.
 
-Extract Worker Benefit Elections Details
+WORKDAY ROLE: Benefits Administrator
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Enrollment Count report
-
-Extract Worker Benefit Elections Details
-
-### 1. Test Scenarios Index (score: 13)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- 
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator permissions
+- Active benefit enrollment period
+- Employees who have waived benefit coverage
 
 ELECTRON STEPS:
-1. enter search box as "Enrollment Count report
-
-Extract Worker Benefit Elections Details"
+# Access Worker Benefit Elections Report
+1. enter search box as "Extract Worker Benefit Elections Details"
 2. wait for search results
-3. click search result containing "Enrollment Count report
+3. click search result containing "Worker Benefit Elections"
+4. wait for page to load
+5. screenshot as "BEN-3-0100_report_access.png"
 
-Extract Worker Benefit Elections Details"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0100_complete.png"
+# Configure Report for Waivers
+6. select prompt "Election Status" as "Waived"
+7. select prompt "As Of Date" as "today"
+8. select prompt "Benefit Plan Type" as "All"
+9. click button "OK"
+10. wait for report to generate
+11. screenshot as "BEN-3-0100_waiver_filter.png"
+
+# Review Waiver Details
+12. verify report displays waived elections:
+    - Worker Name
+    - Waived Benefit Plan
+    - Waiver Reason
+    - Waiver Effective Date
+    - Alternative Coverage Source
+13. screenshot as "BEN-3-0100_waiver_list.png"
+
+# Verify Waiver Reasons
+14. verify valid waiver reasons documented:
+    - Covered under spouse's plan
+    - Medicare/Medicaid coverage
+    - VA benefits
+    - Retiree coverage
+    - Cannot afford (if allowed)
+15. screenshot as "BEN-3-0100_waiver_reasons.png"
+
+# Confirm Waiver Compliance
+16. verify waiver attestations completed:
+    - Other coverage source certified
+    - Re-enrollment restrictions acknowledged
+    - Waiver effective date appropriate
+17. verify no incomplete waivers exist
+18. screenshot as "BEN-3-0100_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Worker Benefit Elections report successfully generated
+- [ ] Waived elections filter displays correctly
+- [ ] All waived benefits show valid waiver reasons
+- [ ] Waiver effective dates are appropriate
+- [ ] Alternative coverage sources documented
+- [ ] Attestations completed for all waivers
+- [ ] No employees with incomplete waiver documentation
+- [ ] Waiver counts match enrollment waiver totals
+- [ ] Compliance with company waiver policies confirmed
+
+EXPECTED RESULT:
+Worker Benefit Elections report with waiver filter displays all employees
+who have declined benefit coverage, with valid waiver reasons, alternative
+coverage documentation, and appropriate attestation completion.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Employees can waive coverage if covered under spouse or other source
+- Valid waiver reasons: Spouse coverage, Medicare, VA, Retiree plan
+- Waiving coverage restricts re-enrollment until next open enrollment
+- Exceptions: Qualifying life events allow mid-year changes
+- Loss of other coverage triggers special enrollment period
+- Document waiver reasons for compliance audits
+- Confirm waiver does not leave employee without required coverage
+
+API ALTERNATIVE:
+- SOAP: Benefits_Administration.wsdl
+  - Get_Benefit_Elections (filter for waived status)
+  - Change_Benefits (includes waiver processing)
+- REST: /workers/{id}/benefits (shows election status)
+- Report: Benefits Waiver Summary (standard Workday report)
+
 ================================================================================

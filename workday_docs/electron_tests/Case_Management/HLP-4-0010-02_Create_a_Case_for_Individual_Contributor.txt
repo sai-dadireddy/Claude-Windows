@@ -2,19 +2,123 @@
 TEST ID: HLP-4-0010-02
 FUNCTIONAL AREA: Case Management
 TEST NAME: Create a Case for Individual Contributor
-CONFIDENCE: [LOW] Score: 2.0/10
+WORKDAY ROLE: Employee As Self
+EST. DURATION: 10 minutes
+CONFIDENCE: [MEDIUM] Score: 6.5/10
+SOURCE: [KB Article: kb_case_management_create_case.txt]
 ================================================================================
 
-TASK/STEP: nan
+DESCRIPTION:
+Verify questionnaires appear as expected for selected case types.
 
+This test validates that when an Individual Contributor selects a Case Type
+that has a questionnaire configured, the questionnaire displays correctly
+with all expected fields.
+
+PREREQUISITES:
+- User logged in with Employee As Self permissions
+- At least one Case Type must have a questionnaire attached
+- Case Eligibility Rules allow employee to see the Case Type
+- Test data: Know which Case Type has questionnaire configured
+
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "HLP-4-0010-02_complete.png"
+================================================================================
 
-VERIFICATION: nan
+-- STEP 1: Navigate to Create Case --
+1. enter search box as "Create Case"
+2. wait for search results
+3. click search result containing "Create Case"
+4. wait for page to load
+5. screenshot as "HLP-4-0010-02_create_case_landing.png"
+
+-- STEP 2: Select Service Category --
+6. verify page contains "Service Category" or category tiles
+7. click tile for Service Category that has Case Type with questionnaire
+8. wait for case types to load
+9. screenshot as "HLP-4-0010-02_service_categories.png"
+
+-- STEP 3: Select Case Type with Questionnaire --
+10. click tile for Case Type that has questionnaire attached
+11. wait for questionnaire to load
+12. wait 2 seconds
+13. screenshot as "HLP-4-0010-02_questionnaire_loaded.png"
+
+-- STEP 4: Verify Questionnaire Appears --
+14. verify page contains questionnaire section
+15. verify questionnaire fields are displayed
+16. verify required field indicators are present
+
+-- STEP 5: Interact with Questionnaire (validation) --
+17. scroll to view all questionnaire fields
+18. screenshot as "HLP-4-0010-02_questionnaire_fields.png"
+
+-- STEP 6: Complete Test --
+19. click button "Cancel"
+20. screenshot as "HLP-4-0010-02_complete.png"
 
 ================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+VERIFICATION:
+================================================================================
+
+- [ ] Questionnaire displays when Case Type with questionnaire is selected
+- [ ] All configured questionnaire questions appear
+- [ ] Required fields are clearly marked
+- [ ] Questionnaire section is visible and interactive
+- [ ] Form fields match expected configuration for Case Type
+
+================================================================================
+TEST DATA REQUIREMENTS:
+================================================================================
+
+REQUIRED CONFIGURATION:
+- Service Category: [Configured in tenant - e.g., "HR Services"]
+- Case Type: [Must have questionnaire attached - configured by admin]
+- Questionnaire: [Pre-configured with fields per test requirements]
+
+VERIFICATION DATA:
+- Expected questionnaire name: [Per tenant configuration]
+- Expected fields: [Per tenant configuration]
+
+NOTE: Specific Service Category and Case Type names depend on tenant
+configuration. Tester must identify a Case Type with questionnaire in
+their environment prior to test execution.
+
+================================================================================
+ALTERNATIVE PATHS:
+================================================================================
+
+VIA HELP WORKLET:
+1. click worklet "Help"
+2. click link "Create Case" or "Contact Us"
+3. continue from Step 6 above
+
+================================================================================
+ERROR SCENARIOS:
+================================================================================
+
+NO QUESTIONNAIRE APPEARS:
+- Verify Case Type has questionnaire configured in "Maintain Case Types"
+- Check questionnaire is active and not archived
+
+CASE TYPE NOT VISIBLE:
+- Check Case Eligibility Rules for Individual Contributor role
+- Verify Service Category is active
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+
+REST API: Not available for Case Management (UI-only workflow)
+SOAP API: No dedicated Help Desk WSDL - managed through UI configuration
+
+================================================================================
+RELATED TESTS:
+================================================================================
+
+- HLP-4-0010-01: Verify appropriate case types show up for IC
+- HLP-4-0010-03: Verify appropriate help text shows up when creating a case
+- HLP-4-0010-04: Verify the case routes to correct Service Team
+- HLP-5-0090: Questionnaires configuration
+
 ================================================================================

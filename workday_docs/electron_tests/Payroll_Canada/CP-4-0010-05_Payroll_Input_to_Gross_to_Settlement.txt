@@ -3,8 +3,8 @@ TEST ID: CP-4-0010-05
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payroll Input to Gross to Settlement
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Articles: kb_payroll_canada_payroll_input.txt, kb_payroll_run_payroll.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,42 +16,81 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Partner permissions
-- Required data available in tenant
-- Access to CA payroll data
+- Pay calculation run completed successfully
+- Payroll results reviewed and approved
+- All exceptions resolved
+- No pending recalculations required
+- Approval workflow completed (if applicable)
 
 ELECTRON STEPS:
-1. enter search box as "5. Payroll Complete"
+1. enter search box as "Complete Payroll"
 2. wait for search results
-3. click search result containing "5. Payroll Complete"
+3. click search result containing "Complete Payroll"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-4-0010-05_complete.png"
+5. select pay group as "{pay_group}"
+6. wait for payroll run data to load
+7. verify pay period is displayed correctly
+8. verify employee count matches expected
+9. verify total gross pay amount
+10. verify total net pay amount
+11. screenshot as "CP-4-0010-05_before_complete.png"
+12. click button "Complete" or "Submit"
+13. wait for confirmation dialog
+14. verify confirmation message displayed
+15. click button "Confirm" or "OK"
+16. wait for completion process to finish
+17. verify payroll status changed to "Completed"
+18. verify payroll results are locked (no further changes allowed)
+19. screenshot as "CP-4-0010-05_complete.png"
+
+POST-COMPLETE VERIFICATION:
+20. enter search box as "View Completed Payroll"
+21. wait for search results
+22. click search result containing "View Completed Payroll" or "Payroll Summary"
+23. wait for page to load
+24. verify payroll run shows "Complete" status
+25. verify all employees processed
+26. screenshot as "CP-4-0010-05_verification.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Payroll completion initiated successfully
+- [ ] Correct pay group selected
+- [ ] Employee count matches expected
+- [ ] Gross pay total is correct
+- [ ] Net pay total is correct
+- [ ] Payroll status changed to "Completed"
+- [ ] Payroll results locked (no modifications allowed)
+- [ ] Ready for settlement run
 - [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+
+WHAT HAPPENS AT COMPLETE:
+- Payroll results are finalized and locked
+- No further changes can be made to this payroll run
+- Payroll becomes ready for settlement
+- Historical records created for reporting
+- Audit trail established
+
+ERROR HANDLING:
+- "Outstanding Exceptions": Resolve all exceptions before completing
+- "Approval Required": Complete approval workflow before proceeding
+- "Recalculation Pending": Wait for recalculation to finish
+- "Employee Results Missing": Run pay calculation for missing employees
+
+POST-COMPLETE TASKS:
+- Proceed to Create Settlement Run
+- Generate payroll reports for archival
+- Prepare bank file submission timeline
+- Notify stakeholders payroll is ready for settlement
+
+RELATED TASKS:
+- View Payroll Results (for verification)
+- Create Settlement Run (next step)
+- Payroll Approval (if workflow required)
+- Rollback Payroll (if issues found before settlement)
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Payroll): Get_Payroll_Results - Verify payroll results after completion
+- SOAP (Payroll): Get_Payroll_Payslips - Retrieve finalized payslips
+- Note: Complete Payroll is typically UI-driven, not directly available via API
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 5. Payroll Complete
-
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Ele...
 ================================================================================

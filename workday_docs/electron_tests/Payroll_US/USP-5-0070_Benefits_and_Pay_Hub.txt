@@ -2,58 +2,71 @@
 TEST ID: USP-5-0070
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Benefits and Pay Hub
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_payroll_benefits_pay_hub.txt]
 ================================================================================
 
 DESCRIPTION:
 As an Employee as Self worker. Ensure Benefits and Pay Hub is available to employee and contains the appropriate tasks/reports
 
-WORKDAY ROLE: Payroll Administrator
+WORKDAY ROLE: Employee (Self-Service) / Payroll Administrator for validation
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
-- User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- User logged in as Employee (or using View As Employee)
+- Employee has active payroll and benefits
+- Benefits and Pay Hub configured in tenant
 
 ELECTRON STEPS:
 1. enter search box as "Benefits and Pay Hub"
 2. wait for search results
 3. click search result containing "Benefits and Pay Hub"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0070_complete.png"
+5. verify section "Pay" is visible
+6. verify link "View Pay Statements" is available
+7. verify link "Payment Elections" is available
+8. screenshot as "USP-5-0070_pay_section.png"
+9. verify section "Benefits" is visible
+10. verify current benefit elections are displayed
+11. verify link "Change Benefits" is available
+12. screenshot as "USP-5-0070_benefits_section.png"
+13. verify section "Time Off" is visible
+14. verify time off balances are displayed
+15. screenshot as "USP-5-0070_time_off_section.png"
+16. click link "View Pay Statements"
+17. wait for pay statements page to load
+18. verify pay statement list appears
+19. navigate back to Benefits and Pay Hub
+20. screenshot as "USP-5-0070_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] Benefits and Pay Hub is accessible to employee
+- [ ] Pay section shows current/historical pay statements access
+- [ ] Benefits section shows current benefit elections
+- [ ] Time off balances are displayed accurately
+- [ ] All expected tasks/links are available
+- [ ] View Pay Statements link works correctly
+- [ ] Payment Elections link is accessible
+- [ ] Change Benefits link is accessible
+
+HUB COMPONENTS TO VERIFY:
+- Pay Section: Pay Statements, Payment Elections, Tax Documents
+- Benefits Section: Current Elections, Benefit Costs, Dependents
+- Time Off Section: Balances, Request Time Off
+- Related Actions: Change Benefits, Update Payments, View Pay
+
+RELATED REPORTS:
+- Employee Self-Service Usage Report
+- Benefits Enrollment Summary
+- Pay Statement Distribution Report
+- Time Off Balance Report
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  Service: Human_Resources
+  Operations: Get_Workers (with benefits response group)
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefits and Pay Hub
-
-### 1. Admin Guide Human Capital Management (score: 9)
-Source: Admin-Guide-Human-Capital-Management.pdf
-```
-Human Capital
-Management
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Human Capital Management.............................................................................27
-Worker Information......................................................
-
+  Endpoint: /payroll/v2/workers/{workerId}/payStatements
+  Method: GET
 ================================================================================

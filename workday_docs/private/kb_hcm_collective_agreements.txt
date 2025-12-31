@@ -1,0 +1,164 @@
+================================================================================
+WORKDAY KB ARTICLE: COLLECTIVE AGREEMENTS
+================================================================================
+
+Source: Workday Documentation & WSDL Analysis
+Area: HCM - Labor Relations / Union Management
+Created: 2025-12-30
+Agent: workday-agent-hcm-2
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Collective Agreements in Workday are formal contracts between an employer
+and a labor union that define terms of employment for workers covered by
+the agreement. They typically specify:
+- Pay rates and pay scales
+- Working conditions
+- Benefits entitlements
+- Seniority rules
+- Grievance procedures
+
+Collective Agreements are commonly used in unionized workforces, particularly
+in industries like manufacturing, healthcare, transportation, and public sector.
+
+================================================================================
+NAVIGATION
+================================================================================
+
+View Collective Agreements:
+1. Search for "All Collective Agreements" or "View Collective Agreement"
+2. Click the report/task from search results
+3. View list of configured collective agreements
+
+Maintain Collective Agreements:
+1. Search for "Create Collective Agreement" (to add new)
+2. Search for "Edit Collective Agreement" (to modify existing)
+3. Search for "Maintain Collective Agreements" (reference data setup)
+
+================================================================================
+KEY DATA ELEMENTS
+================================================================================
+
+Collective Agreement Fields:
+- Collective Agreement ID: Unique identifier
+- Collective Agreement Name: Display name (e.g., "UAW Local 600 2024")
+- Description: Details about the agreement
+- Effective Date: When agreement takes effect
+- End Date: When agreement expires (optional)
+- Status: Active/Inactive
+- Union Reference: Associated labor union
+- Factor Types: Applicable compensation factors
+
+Factor Types and Options:
+- Factors define pay differentials (e.g., shift differential, skill premium)
+- Factor Options specify values for each factor
+- Examples: "Shift" factor with options "Day", "Evening", "Night"
+- Factors can affect base pay, overtime rates, and allowances
+
+================================================================================
+VIEW COLLECTIVE AGREEMENT REPORT ELEMENTS
+================================================================================
+
+Report columns typically include:
+- Collective Agreement Name
+- Agreement ID/Reference ID
+- Effective Date
+- End Date
+- Union (if associated)
+- Status (Active/Inactive)
+- Factor Count
+- Workers Assigned (count of employees under this agreement)
+
+Detail View includes:
+- Full agreement details
+- List of applicable factors
+- Factor options and values
+- Associated pay rates/scales
+- Related documents/attachments
+- Assignment history
+
+================================================================================
+ASSIGNING COLLECTIVE AGREEMENTS TO WORKERS
+================================================================================
+
+Workers are assigned to Collective Agreements through:
+1. Assign Employee Collective Agreement Event
+2. During Hire process
+3. Job Change/Transfer process
+4. Collective Agreement Assignment task
+
+Assignment includes:
+- Worker reference
+- Collective Agreement reference
+- Effective date
+- Factor options selected for the worker
+
+================================================================================
+UI ELEMENTS
+================================================================================
+
+All Collective Agreements Report:
+- Filter bar: Filter by status, union, effective date
+- Column headers: Name, ID, Effective Date, Status
+- Row actions: View Details, Edit (if permitted)
+- Export button: Export to Excel
+
+View Collective Agreement Detail:
+- Header section: Name, ID, status
+- Effective Dating: Start/End dates
+- Factors tab/section: List of applicable factors
+- Factor Options: Configured values
+- Assigned Workers: List or count
+- Related Actions menu: Edit, Inactivate, Copy
+
+================================================================================
+API ALTERNATIVE
+================================================================================
+
+SOAP API (Human_Resources WSDL):
+- Assign_Employee_Collective_Agreement_Event: Assign/update collective agreement for worker
+  - Includes worker reference, agreement reference, factor options
+- End_Collective_Agreement_Assignment: End agreement assignment for worker
+- Manage_Union_Membership: Add worker to union
+
+================================================================================
+VERIFICATION CRITERIA
+================================================================================
+
+For "Collective Agreements" review test:
+1. Report loads successfully with all collective agreements
+2. Agreement details are complete (name, dates, status)
+3. Factors are properly configured
+4. Effective dates align with actual contract periods
+5. Worker assignments are accurate
+6. Union references are correct (if applicable)
+
+================================================================================
+RELATED TASKS
+================================================================================
+
+- Create Collective Agreement: Set up new collective agreement
+- Edit Collective Agreement: Modify existing agreement
+- Assign Employee Collective Agreement: Assign worker to agreement
+- End Collective Agreement Assignment: Remove worker from agreement
+- Maintain Unions: Configure union reference data
+- Manage Union Membership: Add/remove workers from unions
+- All Unions: Report showing configured unions
+
+================================================================================
+SECURITY REQUIREMENTS
+================================================================================
+
+Domain Security:
+- Setup: Collective Agreements (for configuration)
+- View: Collective Agreements (for viewing reports)
+- Worker Data: Collective Agreement Assignments
+
+Typical Roles:
+- HR Administrator
+- Labor Relations Administrator
+- Compensation Administrator
+
+================================================================================

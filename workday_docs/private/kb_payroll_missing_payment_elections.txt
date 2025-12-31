@@ -1,0 +1,192 @@
+================================================================================
+WORKDAY KB ARTICLE: AUDIT MISSING PAYMENT ELECTIONS
+================================================================================
+
+Source: Workday Payroll Administration
+Category: Payroll - Payment Elections Audit
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The "Audit Missing Payment Elections" report identifies workers who are active
+in a company but do not have the required payment elections configured. Payment
+elections determine how workers receive their pay (direct deposit, check, etc.)
+and are required before payroll can be processed successfully.
+
+This audit is critical before running payroll to ensure all workers will receive
+their payments through proper channels. The report shows MISSING elections only,
+not a list of existing elections.
+
+Business Process: Audit Missing Payment Elections (Report)
+Functional Area: Payroll Administration
+Initiator: Payroll Administrator
+Typical Duration: 5-10 minutes
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. REPORT CRITERIA
+   - Company (required)
+   - Pay Group (optional filter)
+   - Run Category (Regular, Additional, Off-cycle)
+   - Include terminated workers (optional)
+   - As of Date (defaults to current)
+
+2. REPORT OUTPUT COLUMNS
+   - Worker ID
+   - Worker Name
+   - Company
+   - Pay Group
+   - Missing Election Type
+   - Hire Date
+   - Current Status
+
+3. ELECTION TYPES CHECKED
+   - Regular Pay Election
+   - Additional Run Category Election
+   - Expense Payment Election (if applicable)
+   - One-Time Payment Election
+
+4. RESOLUTION OPTIONS
+   - Add Payment Election for Worker
+   - Maintain Payment Elections
+   - Payment Election Enrollment Event
+
+================================================================================
+NAVIGATION & TASKS
+================================================================================
+
+Run Audit Missing Payment Elections:
+1. Search: "Audit Missing Payment Elections"
+2. Select Company (required)
+3. Optionally filter by Pay Group
+4. Select Run Category (Regular, Additional, etc.)
+5. Click "OK" or "Run"
+6. Review workers with missing elections
+
+Add Payment Election for Worker:
+1. Search: "Maintain Payment Elections for Worker"
+2. Search for worker with missing election
+3. Select worker
+4. Choose Pay Type (Payroll Payments)
+5. Add payment election details:
+   - Payment Type (Direct Deposit, Check)
+   - Bank Account (for Direct Deposit)
+   - Distribution amount/percentage
+6. Submit
+
+Bulk Add Payment Elections:
+1. Use EIB (Enterprise Interface Builder) load
+2. Import payment election data for multiple workers
+3. Validate via Audit report
+
+================================================================================
+VALIDATION CHECKLIST
+================================================================================
+
+Pre-Payroll Validation:
+- Run Audit for all companies processing payroll
+- Verify zero missing elections for current pay period
+- Check additional run categories if applicable
+- Confirm expense payment elections if needed
+
+Resolution Verification:
+- Re-run audit after adding elections
+- Verify count reduced to zero
+- Check Payment Elections report for additions
+- Confirm election effective dates
+
+Integration Validation:
+- If using Payroll Interface, verify elections are synced
+- Check for duplicate elections
+- Validate bank account information
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+Run Audit Missing Payment Elections:
+1. enter search box as "Audit Missing Payment Elections"
+2. wait for search results
+3. click search result containing "Audit Missing Payment Elections"
+4. wait for page to load
+5. verify Company field is displayed
+6. select Company dropdown as "{company_name}"
+7. wait for Company to resolve
+8. select Run Category dropdown as "Regular"
+9. click button "OK"
+10. wait for report results to load
+11. wait 5 seconds
+12. verify results table displays or "No results found" message
+13. scroll to view all results if present
+14. verify columns: Worker, Company, Pay Group, Missing Election Type
+15. screenshot as "{test_id}_missing_elections_report.png"
+
+Review Workers with Missing Elections:
+16. if results exist, note count of workers with missing elections
+17. verify each worker shows appropriate Missing Election Type
+18. verify Pay Group assignment for each worker
+19. screenshot as "{test_id}_missing_elections_detail.png"
+
+Filter by Pay Group (Optional):
+1. enter search box as "Audit Missing Payment Elections"
+2. wait for search results
+3. click search result containing "Audit Missing Payment Elections"
+4. wait for page to load
+5. select Company dropdown as "{company_name}"
+6. wait for Company to resolve
+7. select Pay Group dropdown as "{pay_group_name}"
+8. wait for Pay Group to resolve
+9. select Run Category dropdown as "Regular"
+10. click button "OK"
+11. wait for report results to load
+12. verify filtered results display
+13. screenshot as "{test_id}_missing_elections_filtered.png"
+
+================================================================================
+SOAP API ALTERNATIVE
+================================================================================
+
+Service: Payroll
+Operation: Get_Payment_Election_Rules
+Description: Retrieves Payment Election Rules from the Workday system
+
+Note: Direct "Missing Payment Elections" audit is not available via SOAP.
+Use Get_Workers combined with payment election data to identify gaps.
+
+================================================================================
+RELATED REPORTS AND TASKS
+================================================================================
+
+Reports:
+- Payment Elections for Workers
+- Workers with Payment Elections
+- Payment Election Rules
+- Payroll Input Validation
+
+Tasks:
+- Maintain Payment Elections for Worker
+- Add Payment Election
+- Payment Election Enrollment Event
+- Configure Payment Election Rule
+
+================================================================================
+COMMON ISSUES AND RESOLUTIONS
+================================================================================
+
+Issue: "Worker has no payment election for Additional Run Category"
+Resolution: Add election specifically for the Additional run category
+
+Issue: "Payment election exists but not visible in audit"
+Resolution: Check effective date - may be future-dated
+
+Issue: "Cannot add payment election - no bank account on file"
+Resolution: Add bank account via "Maintain Bank Accounts for Worker" first
+
+Issue: "Multiple elections causing confusion"
+Resolution: Review election priority and distribution percentages
+
+================================================================================

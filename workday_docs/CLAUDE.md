@@ -109,6 +109,38 @@ complete_file('AGENT_ID', FILE_ID, success=True, new_confidence='HIGH',
 
 ## How to Search Workday Knowledge
 
+### CRITICAL: RAG-FIRST THEN BROWSER FALLBACK
+
+**MANDATORY WORKFLOW for all Workday agents:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 1: Query RAG FIRST                                     │
+│  python workday_rag.py "{Task name}"                        │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+    Score >= 7.0?                  Score < 7.0?
+         ↓                                ↓
+┌─────────────────┐         ┌─────────────────────────────────┐
+│ ✅ USE RAG DATA │         │ 🌐 MUST USE BROWSER             │
+│ Skip browser    │         │ Open Chrome tab and research    │
+│ Generate test   │         │ at resourcecenter.workday.com   │
+└─────────────────┘         └─────────────────────────────────┘
+```
+
+**RAG Score Decision Matrix:**
+| Score | Action | Browser Required? |
+|-------|--------|-------------------|
+| **>= 7.0** | Use RAG directly | ❌ No |
+| **5.0-6.9** | Try more RAG queries, check KB files | ⚠️ If still < 7.0 |
+| **< 5.0** | **MUST open browser** | ✅ **YES - MANDATORY** |
+
+**DO NOT just mark as MANUAL without trying browser first when score < 7.0!**
+
+---
+
 ### 1. RAG Query (Local - Fast)
 ```bash
 cd workday_docs
@@ -117,7 +149,7 @@ python workday_rag.py --list-wsdl
 python workday_rag.py --wsdl Human_Resources
 ```
 
-### 2. Community KB Search (Browser)
+### 2. Community KB Search (Browser) - REQUIRED when RAG < 7.0
 1. Navigate to: `https://resourcecenter.workday.com`
 2. Use search box for: `{task} business process steps`
 3. Filter by: Functional Area (HCM, Payroll, Finance, etc.)

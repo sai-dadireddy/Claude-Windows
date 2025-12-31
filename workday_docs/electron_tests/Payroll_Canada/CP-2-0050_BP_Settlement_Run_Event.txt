@@ -3,8 +3,8 @@ TEST ID: CP-2-0050
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: BP: Settlement Run Event
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_payroll_canada_settlement.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,41 +16,74 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Settlement Specialist permissions
-- Required data available in tenant
-- Access to CA payroll data
+- All pay calculations complete (no results in error status)
+- Bank accounts assigned to all employees
+- Bank routing rules configured for Canadian banks
+- GL accounts mapped for payroll posting
+- Company hierarchy in place for multi-company setup
+- Payroll approval workflow completed
 
 ELECTRON STEPS:
 1. enter search box as "Create Settlement Run"
 2. wait for search results
 3. click search result containing "Create Settlement Run"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-2-0050_complete.png"
+5. select company field as "{company_name}"
+6. wait for company data to load
+7. verify company hierarchy displayed (if applicable for multi-company)
+8. check checkbox "All Available Pay Groups"
+9. check checkbox "All Available Pay Group Exceptions"
+10. verify payment date is displayed
+11. verify pay period dates are correct
+12. scroll to review all settings
+13. screenshot as "CP-2-0050_settlement_config.png"
+14. click button "Submit"
+15. wait for confirmation message
+16. wait for settlement processing to begin
+17. verify settlement run ID is generated
+18. click link "View Settlement Run" if available
+19. verify status shows "In Progress" or "Complete"
+20. screenshot as "CP-2-0050_settlement_status.png"
+21. verify no errors displayed (integration errors may be ignored)
+22. verify employee count matches expected
+23. verify payment file generated
+24. verify GL entries created (no suspense postings expected)
+25. screenshot as "CP-2-0050_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Company hierarchy properly selected for all CAN companies
+- [ ] All Available Pay Groups filter selected
+- [ ] All Available Pay Group Exceptions filter selected
+- [ ] Complete pay results picked up successfully
+- [ ] Bank accounts assigned per routing rules
+- [ ] Settlement processed without errors to completion
+- [ ] No error messages displayed (integration errors acceptable)
+- [ ] Payment file generated successfully
+- [ ] GL journal entries created without suspense postings
+
+ERROR HANDLING:
+- "No complete pay results": Run pay calculation first before settlement
+- "Missing bank account": Assign bank account to employee before retry
+- "Bank routing error": Verify bank routing rules configuration
+- "GL account not found": Ensure payroll accounts are mapped
+- "Suspense account posting": Fix accounting configuration
+
+POST-SETTLEMENT TASKS:
+- Submit EFT file to bank (if not auto-submitted)
+- Print cheques for non-EFT employees (if applicable)
+- Review GL journal entries
+- Verify payroll register
+- Archive settlement documentation
+
+RELATED REPORTS:
+- Settlement Run Summary
+- Payment Register
+- EFT File Report
+- Payroll GL Report
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Payroll): Get_Payroll_Results - Returns payroll results for completed settlements
+- SOAP (Payroll_CAN): Get_Payroll_CAN_Year_End_Forms - For year-end processing
+- REST: Not specifically available for settlement initiation (settlement is UI-driven)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Create Settlement Run
-
-### 1. Kb Hcm Terminate Employee (score: 3)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HCM - Hu...
 ================================================================================

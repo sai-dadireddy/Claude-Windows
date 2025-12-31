@@ -2,35 +2,150 @@
 TEST ID: INV-1-0020
 FUNCTIONAL AREA: Inventory
 TEST NAME: Stocking Locations
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG Enhanced - Manual Review]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_inventory_stocking_locations.txt, Inventory.wsdl v45.1]
+EST. DURATION: 8 minutes
 ================================================================================
 
 DESCRIPTION:
-WORKDAY ROLE: 
+Verify and review Stocking Locations (Inventory Storage Locations) configuration
+in Workday. Stocking Locations are physical storage areas within Inventory Sites
+where items are stored (bins, shelves, racks). This test validates the ability
+to view, create, and manage stocking locations for inventory management.
 
-WORKDAY ROLE: ELECTRON STEPS:
+WORKDAY ROLE: Inventory Manager / Supply Chain Administrator
 
+PREREQUISITES:
+- User logged in with Inventory Manager or Supply Chain Administrator permissions
+- At least one Inventory Site must be configured in the system
+- Domain access: Get/Put Inventory Storage Locations
+
+================================================================================
 ELECTRON STEPS:
-1. enter search box as "Create Stocking Location"
+================================================================================
+
+STEP 1: VIEW ALL STOCKING LOCATIONS REPORT
+1. enter search box as "All Stocking Locations"
 2. wait for search results
-3. click search result containing "Create Stocking Location"
+3. click search result containing "Stocking Locations" or "All Stocking Locations"
 4. wait for page to load
-5. wait for results table to load
-6. verify table contains data
-7. screenshot as "INV-1-0020_list.png"
-8. click first row to view details
-9. wait for detail page to load
-10. verify details displayed
-11. screenshot as "INV-1-0020_complete.png"
+5. verify report page displays with stocking locations list
+6. verify table contains columns: Location ID, Location Name, Inventory Site, Status
+7. screenshot as "INV-1-0020_stocking_locations_list.png"
 
+STEP 2: VIEW STOCKING LOCATION DETAILS
+8. click link on first stocking location in the list
+9. wait for page to load
+10. verify location details display:
+    - Location ID
+    - Location Name
+    - Inventory Site
+    - Location Type (Standard/Par/Consigned)
+    - Active Status
+    - On Hold Status
+11. screenshot as "INV-1-0020_location_details.png"
+
+STEP 3: VERIFY CREATE STOCKING LOCATION ACCESS
+12. enter search box as "Create Stocking Location"
+13. wait for search results
+14. click search result containing "Create Stocking Location"
+15. wait for page to load
+16. verify create form displays with fields:
+    - Inventory Site (required)
+    - Location ID (required)
+    - Location Name
+    - Location Type
+17. screenshot as "INV-1-0020_create_form.png"
+18. click button "Cancel" to exit without saving
+
+STEP 4: CHECK PAR LOCATIONS (Optional)
+19. enter search box as "Par Locations"
+20. wait for search results
+21. click search result containing "Par Locations" or "Maintain Par Locations"
+22. wait for page to load
+23. verify par locations configuration page displays
+24. screenshot as "INV-1-0020_par_locations.png"
+
+STEP 5: VERIFY INVENTORY BALANCE VIEW
+25. enter search box as "Inventory Balance"
+26. wait for search results
+27. click search result containing "Inventory Balance"
+28. wait for page to load
+29. verify inventory balance report displays quantities by location
+30. screenshot as "INV-1-0020_complete.png"
+
+================================================================================
 VERIFICATION:
-- [ ] Inventory/location data displayed
-- [ ] Details page accessible
-- [ ] Data appears complete
+================================================================================
+- [ ] All Stocking Locations report loads successfully
+- [ ] Stocking locations display: Location ID, Name, Site, Status
+- [ ] Location detail page shows complete configuration
+- [ ] Create Stocking Location form is accessible
+- [ ] Create form shows required fields: Inventory Site, Location ID
+- [ ] Par Locations configuration is accessible (if configured)
+- [ ] Inventory Balance report shows quantities by location
+- [ ] No error messages displayed during navigation
+- [ ] User has appropriate access to all stocking location functions
 
+================================================================================
+ALTERNATE SEARCH TERMS:
+================================================================================
+If primary searches do not return results, try:
+- "Stocking Location" (singular)
+- "Inventory Storage Locations"
+- "View Stocking Locations"
+- "Maintain Stocking Locations"
+- "Storage Location"
+- "Inventory Locations"
+
+================================================================================
 API ALTERNATIVE:
-- Query RAG for details
+================================================================================
+SOAP Operations (Inventory.wsdl v45.1):
+- Put_Inventory_Storage_Location - Create/update storage location
+- Get_Inventory_Storage_Locations - Retrieve storage locations
+- Put_Inventory_Par_Location - Create/update par location
+- Get_Inventory_Par_Locations - Retrieve par locations
+- Put_Inventory_Par_Bin - Create/update par bin
+- Get_Inventory_Par_Bins - Retrieve par bins
+- Get_Inventory_Location_Attributes - Item attributes at location
+- Get_Inventory_Balance - Quantities at locations
 
-RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
+Endpoint Pattern:
+https://{tenant}.workday.com/ccx/service/{tenant}/Inventory/v45.1
+
+================================================================================
+BUSINESS CONTEXT:
+================================================================================
+Stocking Locations are the physical storage units within Workday Inventory:
+
+LOCATION TYPES:
+1. Standard Locations: Regular bins, shelves, racks for general storage
+2. Par Locations: Locations with min/max replenishment levels for auto-reorder
+3. Par Bins: Sub-divisions within par locations for item segregation
+4. Consigned Locations: Supplier-owned inventory stored on premises
+
+KEY FEATURES:
+- Hierarchical organization (zone > aisle > rack > bin)
+- On Hold status prevents outbound transactions
+- Lot tracking at location level for expiry management
+- Serial number tracking for high-value items
+- Consignment tracking for supplier-owned stock
+
+COMMON OPERATIONS:
+- Quick Issue: Issue items from stocking locations
+- Put-Away: Stock items into stocking locations
+- Inventory Move: Transfer items between locations
+- Par Count: Count inventory at par locations
+- Inventory Adjustment: Correct quantities at locations
+
+================================================================================
+NOTES:
+================================================================================
+- Each stocking location belongs to exactly one Inventory Site
+- Location IDs must be unique within an Inventory Site
+- On Hold locations cannot be used for issues until released
+- Par Locations trigger replenishment when below minimum level
+- Consigned locations track supplier ownership for invoicing
+
 ================================================================================

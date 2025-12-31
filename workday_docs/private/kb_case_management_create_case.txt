@@ -1,0 +1,205 @@
+================================================================================
+WORKDAY KB ARTICLE: CREATE A CASE (HELP DESK / CASE MANAGEMENT)
+================================================================================
+
+Source: Workday Help Module / Case Management
+Category: Help Desk, Case Management
+Created: 2025-12-30
+Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The "Create Case" task allows employees to submit help desk requests through
+Workday's Case Management system. The system presents different case types
+based on the employee's role (Individual Contributor, Manager, Help Case Team).
+
+Key Components:
+- Service Categories: High-level groupings of case types
+- Case Types: Specific types of requests (e.g., "Payroll Question", "Benefits Help")
+- Questionnaires: Data collection forms attached to specific case types
+- Case Eligibility Rules: Control which case types each employee role can see
+- Case Routing Rules: Determine which Service Team handles each case
+
+================================================================================
+NAVIGATION
+================================================================================
+
+Method 1: Help Worklet
+1. Click "Help" worklet on homepage
+2. Click "Create Case" or "Contact Us"
+
+Method 2: Search
+1. Search for "Create Case"
+2. Click "Create Case" from search results
+
+Method 3: Related Actions
+1. From any worker profile, click Related Actions
+2. Select Help > Create Case
+
+================================================================================
+CREATE A CASE - INDIVIDUAL CONTRIBUTOR FLOW
+================================================================================
+
+STEP 1: Access Create Case
+- Navigate to Help worklet OR search "Create Case"
+- System displays available Service Categories
+
+STEP 2: Select Service Category
+- View list of Service Categories (e.g., HR Services, IT Support, Payroll)
+- Click desired Service Category
+
+STEP 3: Select Case Type
+- System shows Case Types under selected category
+- Case Types filtered by Case Eligibility Rules for Individual Contributor role
+- Click desired Case Type
+
+STEP 4: Complete Questionnaire (if configured)
+- If Case Type has attached questionnaire, it displays
+- Complete required and optional fields
+- Questionnaire fields vary by Case Type configuration
+
+STEP 5: Enter Case Details
+- Case Subject (required): Brief description
+- Case Description (required): Detailed explanation
+- Attachments (optional): Supporting documents
+- Priority (if enabled): Case urgency level
+
+STEP 6: Submit Case
+- Review entered information
+- Click "Submit" button
+- System displays confirmation with Case Number
+
+================================================================================
+QUESTIONNAIRE BEHAVIOR
+================================================================================
+
+Questionnaires are configured per Case Type:
+1. Admin configures questionnaire in "Maintain Questionnaires"
+2. Questionnaire linked to Case Type in "Maintain Case Types"
+3. When employee selects Case Type, questionnaire appears
+4. Questionnaires can have:
+   - Text fields (single/multi-line)
+   - Dropdown selections
+   - Checkbox options
+   - Date fields
+   - Worker/organization lookups
+
+Verification Points for Questionnaires:
+- Questionnaire displays when expected Case Type is selected
+- All configured questions appear
+- Required fields are marked
+- Conditional logic works (questions show/hide based on answers)
+
+================================================================================
+FIELD REFERENCE
+================================================================================
+
+CREATE CASE FORM FIELDS:
+- Service Category (required): Dropdown/tile selection
+- Case Type (required): Dropdown/tile selection based on category
+- Subject (required): Text input, max 100 characters
+- Description (required): Multi-line text
+- Priority: Dropdown (Low, Medium, High, Critical) - if enabled
+- Attachments: File upload area
+- About Worker: Worker lookup (for cases about others)
+- Questionnaire fields: Varies by Case Type
+
+================================================================================
+UI ELEMENTS
+================================================================================
+
+BUTTONS:
+- "Submit" - Submit the case
+- "Cancel" - Abandon case creation
+- "Back" - Return to previous step
+- "Add Attachment" - Open file upload dialog
+- "Remove" - Remove attachment
+
+NAVIGATION ELEMENTS:
+- Help worklet icon
+- Breadcrumb trail showing: Help > Create Case > [Service Category] > [Case Type]
+
+SUCCESS MESSAGE:
+- "Success! Case [Case Number] has been created."
+- Case number format: CASE-XXXXXX or configured sequence
+
+================================================================================
+VALIDATION RULES
+================================================================================
+
+Required field validation:
+- Subject cannot be empty
+- Description cannot be empty
+- All required questionnaire fields must be filled
+
+Eligibility validation:
+- Case Types only appear if worker matches Case Eligibility Rules
+- Service Categories only appear if they contain eligible Case Types
+
+================================================================================
+AUTOMATION CONSIDERATIONS FOR ELECTRON
+================================================================================
+
+NAVIGATION:
+1. enter search box as "Create Case"
+2. click search result "Create Case"
+3. wait for page to load
+
+OR (via worklet):
+1. click worklet "Help"
+2. click link "Create Case"
+
+FORM INTERACTION:
+1. click tile for Service Category (e.g., "HR Services")
+2. wait for Case Types to load
+3. click tile for Case Type (e.g., "Benefits Question")
+4. wait for questionnaire to load (if applicable)
+5. fill questionnaire fields if present
+6. enter subject as "{test subject text}"
+7. enter description as "{test description text}"
+8. click button "Submit"
+
+VERIFICATION:
+- verify message contains "Success"
+- verify Case Number is displayed
+- verify questionnaire appeared for configured Case Type
+
+SCREENSHOTS:
+- {TEST_ID}_service_categories.png - Show available categories
+- {TEST_ID}_case_types.png - Show case types for selected category
+- {TEST_ID}_questionnaire.png - Show questionnaire (if applicable)
+- {TEST_ID}_complete.png - Show success confirmation
+
+================================================================================
+RELATED TASKS
+================================================================================
+
+- Maintain Service Categories: Configure service categories
+- Maintain Case Types: Configure case types with questionnaires
+- Maintain Case Eligibility Rules: Control who sees which case types
+- Maintain Case Routing Rules: Route cases to service teams
+- Maintain Questionnaires: Create/edit questionnaires
+- View My Cases: Review submitted cases
+- Help Dashboard: Admin view of all cases
+
+================================================================================
+ROLE-SPECIFIC BEHAVIOR
+================================================================================
+
+Individual Contributor (Employee As Self):
+- Sees case types allowed by Case Eligibility Rules for their role
+- Can only create cases for themselves (unless "On Behalf Of" enabled)
+- Limited to non-confidential case types
+
+Manager:
+- May see additional case types for manager-specific issues
+- Can create cases about direct reports
+
+Help Case Team Member:
+- Access to all case types
+- Can create cases on behalf of any worker
+- Can work/resolve cases
+
+================================================================================

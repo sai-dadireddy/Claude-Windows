@@ -1,0 +1,351 @@
+================================================================================
+WORKDAY KB ARTICLE: CONFIRM BOOKS / BOOK CLOSE PROCESS
+================================================================================
+
+Source: Workday Financial Management WSDL Analysis
+WSDL: Financial_Management
+Category: Financial Management - Period Close
+Last Updated: 2025-12-30
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The "Confirm Books" process is part of Workday's period-end close procedure
+that allows finance teams to verify and confirm the status of accounting books
+(Book Codes) for specific ledger periods. This is critical for multi-GAAP
+reporting environments where organizations maintain separate books for
+different accounting standards (US GAAP, IFRS, Tax, Statutory).
+
+Business Context:
+- Confirms that all transactions for a book code are complete
+- Marks a book as ready for financial reporting
+- Part of the close checklist before period lock
+- Enables segregation of close activities by book type
+
+Book Codes (Examples):
+- Primary/GAAP: US Generally Accepted Accounting Principles
+- IFRS: International Financial Reporting Standards
+- Tax: Tax basis accounting
+- Statutory: Local statutory requirements
+- Management: Internal management reporting
+
+================================================================================
+KEY COMPONENTS
+================================================================================
+
+1. LEDGER PERIOD STATUS
+   - Open: Transactions can be posted
+   - Closed: No new transactions allowed
+   - Confirmed: Book validated and ready for reporting
+
+2. BOOK CODE
+   - Identifies the accounting standard/purpose
+   - Each company can have multiple book codes
+   - Journals are tagged with book codes
+
+3. COMPANY/COMPANY HIERARCHY
+   - Confirm books at company or hierarchy level
+   - Roll-up confirmation for consolidated reporting
+
+4. FISCAL YEAR/POSTING INTERVAL
+   - Specify which fiscal period to confirm
+   - Monthly, quarterly, or annual intervals
+
+================================================================================
+WORKDAY SOAP API OPERATIONS
+================================================================================
+
+Relevant WSDL: Financial_Management
+
+Key Operations:
+
+1. Submit_Mass_Update_Ledger_Period_Status
+   - Updates Ledger Period status for a Company/Hierarchy
+   - Specifies Fiscal Year, Fiscal Posting Interval, Book Code
+   - Changes status: Open → Closed → Confirmed
+
+2. Get_Ledger_Year_and_Ledger_Periods
+   - Returns ledger years and ledger periods for a company
+   - Shows current status of each period/book combination
+
+3. Put_Ledger_Year_and_Ledger_Periods
+   - Creates or updates ledger year and period configurations
+   - Initial setup for book code periods
+
+4. Get_Journals (with Book Code filter)
+   - Retrieve journals by book code to verify completeness
+   - Validate all entries are posted before confirmation
+
+API Request Example:
+```xml
+<bsvc:Submit_Mass_Update_Ledger_Period_Status_Request bsvc:version="v42.2">
+  <bsvc:Mass_Update_Ledger_Period_Status_Data>
+    <bsvc:Company_Reference>
+      <bsvc:ID bsvc:type="Company_Reference_ID">US001</bsvc:ID>
+    </bsvc:Company_Reference>
+    <bsvc:Fiscal_Year_Reference>
+      <bsvc:ID bsvc:type="Fiscal_Year_ID">2025</bsvc:ID>
+    </bsvc:Fiscal_Year_Reference>
+    <bsvc:Fiscal_Posting_Interval_Reference>
+      <bsvc:ID bsvc:type="Fiscal_Posting_Interval_ID">Dec-2025</bsvc:ID>
+    </bsvc:Fiscal_Posting_Interval_Reference>
+    <bsvc:Book_Code_Reference>
+      <bsvc:ID bsvc:type="Book_Code_ID">Primary</bsvc:ID>
+    </bsvc:Book_Code_Reference>
+    <bsvc:Period_Status>Confirmed</bsvc:Period_Status>
+  </bsvc:Mass_Update_Ledger_Period_Status_Data>
+</bsvc:Submit_Mass_Update_Ledger_Period_Status_Request>
+```
+
+================================================================================
+IMPLEMENTATION STEPS
+================================================================================
+
+STEP 1: REVIEW PERIOD STATUS
+-----------------------------
+Before confirming books, review current period status:
+
+Navigation: Reports > Financial Reports > Ledger Period Status
+
+Actions:
+1. Select Company or Company Hierarchy
+2. Select Fiscal Year
+3. View status of each book code for each period
+4. Identify books not yet confirmed
+
+STEP 2: VERIFY TRANSACTIONS COMPLETE
+-------------------------------------
+Ensure all transactions are posted before confirmation:
+
+Validation Checklist:
+- All journals posted
+- Intercompany eliminations complete
+- Currency revaluation processed
+- Allocations complete
+- Accruals posted
+- Adjustments made
+
+Navigation: Reports > Financial Reports > Trial Balance by Book Code
+
+STEP 3: NAVIGATE TO CONFIRM BOOKS
+----------------------------------
+Navigation: Search for "Confirm Books"
+
+Actions:
+1. Search "Confirm Books" in Workday search
+2. Click task from search results
+3. Wait for page to load
+
+STEP 4: SELECT PARAMETERS
+--------------------------
+Configure confirmation parameters:
+
+Fields:
+- Company: Select legal entity
+- Company Hierarchy: (optional) For multi-company confirmation
+- Fiscal Year: Year containing period to confirm
+- Fiscal Period: Specific period to confirm (e.g., Dec 2025)
+- Book Code: Accounting standard to confirm (Primary, IFRS, Tax)
+
+STEP 5: REVIEW BOOK STATUS
+---------------------------
+System displays current status and pending actions:
+
+Status Display:
+- Current Status: Open/Closed/Confirmed
+- Pending Journals: Count of unposted journals
+- Balance Status: In balance/Out of balance
+- Intercompany Status: Balanced/Unbalanced
+
+STEP 6: CONFIRM BOOK
+---------------------
+Execute confirmation:
+
+Actions:
+1. Verify no pending issues
+2. Click "Confirm" or "Submit"
+3. System validates requirements
+4. Status changes to "Confirmed"
+5. Confirmation timestamp recorded
+
+STEP 7: VERIFY CONFIRMATION
+----------------------------
+Validate book is confirmed:
+
+Actions:
+1. Check period status report
+2. Verify book shows "Confirmed" status
+3. Verify timestamp is correct
+4. Screenshot confirmation for audit trail
+
+STEP 8: REPEAT FOR OTHER BOOKS
+-------------------------------
+If multiple book codes exist:
+
+Actions:
+1. Return to Confirm Books task
+2. Select next book code (IFRS, Tax, etc.)
+3. Complete validation and confirmation
+4. Document all book confirmations
+
+================================================================================
+AUTOMATION CONSIDERATIONS
+================================================================================
+
+Electron Navigation:
+1. enter search box as "Confirm Books"
+2. wait for search results
+3. click search result containing "Confirm Books"
+4. wait for page to load
+
+Field Entry:
+5. select Company as "{company_name}"
+6. select Fiscal Year as "{fiscal_year}"
+7. select Fiscal Period as "{fiscal_period}"
+8. select Book Code as "{book_code}"
+9. click button "OK"
+10. wait for status to load
+
+Confirmation:
+11. verify no pending journals exist
+12. verify balance status shows "In Balance"
+13. click button "Confirm"
+14. wait for confirmation message
+15. verify message contains "confirmed"
+16. screenshot as "confirm_books_complete.png"
+
+UI Selectors:
+- Company dropdown: select[data-automation-id="company"]
+- Fiscal Year dropdown: select[data-automation-id="fiscalYear"]
+- Fiscal Period dropdown: select[data-automation-id="fiscalPeriod"]
+- Book Code dropdown: select[data-automation-id="bookCode"]
+- Confirm button: button[data-automation-id="CONFIRM"]
+- Status text: div[data-automation-id="periodStatus"]
+
+Validation:
+- Book must be in "Closed" or "Open" status to confirm
+- No pending journals for the book/period
+- Trial balance must be balanced
+- Intercompany entries must be balanced
+- User must have appropriate security access
+
+Error Handling:
+- "Pending journals exist" - Post or cancel pending journals
+- "Period out of balance" - Review and correct imbalances
+- "Insufficient permissions" - Contact security admin
+- "Period already confirmed" - No action needed
+
+Screenshot Strategy:
+1. Confirm Books search result
+2. Parameter selection screen
+3. Pre-confirmation status
+4. Confirmation success message
+5. Updated period status report
+
+================================================================================
+COMMON SCENARIOS
+================================================================================
+
+Scenario 1: Monthly Close - Primary Book
+- Confirm Primary/GAAP book for month-end
+- Typically done 5-10 business days after period end
+- Required before financial statements
+
+Scenario 2: Multi-GAAP Confirmation
+- Confirm Primary book first
+- Then confirm IFRS adjustments
+- Then confirm Tax book
+- Each book independent close timeline
+
+Scenario 3: Quarterly Close
+- Confirm all three months of quarter
+- Run quarter-end reports
+- Confirm quarterly book codes
+
+Scenario 4: Year-End Close
+- Confirm final month of fiscal year
+- Run annual reports
+- Confirm annual book codes
+- Process year-end rollovers
+
+Scenario 5: Audit Support
+- Provide book confirmation timestamps
+- Document confirmation sequence
+- Show audit trail of close activities
+
+================================================================================
+RELATED PROCESSES
+================================================================================
+
+Pre-Confirmation Tasks:
+- Post all manual journals
+- Complete intercompany eliminations
+- Run currency revaluations
+- Process allocations
+- Post depreciation
+- Run reconciliations
+
+Post-Confirmation Tasks:
+- Generate financial statements
+- Run variance analysis
+- Create management reports
+- Archive period data
+- Notify stakeholders
+
+Related Reports:
+- Ledger Period Status Report
+- Trial Balance by Book Code
+- Journal Status Report
+- Intercompany Balance Report
+- Period Close Checklist
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Establish clear close calendar with book confirmation dates
+2. Use close checklist to track all pre-confirmation tasks
+3. Confirm books in sequence: Primary → IFRS → Tax → Statutory
+4. Document all book confirmations for audit trail
+5. Run trial balance reports before and after confirmation
+6. Set up notifications for confirmation completion
+7. Review prior period confirmations for consistency
+8. Train backup personnel on confirmation process
+9. Test confirmation in sandbox before production
+10. Monitor confirmation timing for SLA compliance
+
+================================================================================
+CONFIGURATION REQUIREMENTS
+================================================================================
+
+Security:
+- Confirm Books security policy access
+- Company access for each company to confirm
+- Book code access for multi-book organizations
+
+Setup:
+- Book codes configured for each company
+- Ledger periods created for fiscal year
+- Close calendar established
+- Approval workflows configured (if required)
+
+Integration:
+- ERP data feeds complete before confirmation
+- Sub-ledgers closed (AP, AR, FA)
+- Payroll posted
+- Expense reports processed
+
+================================================================================
+NOTES
+================================================================================
+
+- Book confirmation is reversible with appropriate security
+- Confirmed books prevent new postings to that period/book
+- Different book codes can be confirmed at different times
+- Year-end confirmation triggers special processing
+- Confirmation timestamps captured for audit trail
+- Consider batch confirmation for multiple companies
+- API can automate confirmation for scheduled close
+
+================================================================================

@@ -2,16 +2,238 @@
 TEST ID: FACC-1-0220
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Confirm Books
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_finance_confirm_books.txt] [WSDL: Financial_Management - Submit_Mass_Update_Ledger_Period_Status, Get_Ledger_Year_and_Ledger_Periods]
 ================================================================================
 
+DESCRIPTION:
+Confirm books as part of the period-end close process. This task validates and
+confirms that all transactions for a specific book code (e.g., Primary/GAAP,
+IFRS, Tax) are complete for a ledger period, enabling financial reporting and
+preventing further postings to that period/book combination.
+
+PREREQUISITES:
+- User logged in with Finance Administrator or Controller permissions
+- Access to period close and book confirmation functions
+- All journals posted for the period
+- Intercompany eliminations complete
+- Trial balance verified as balanced
+
+================================================================================
 ELECTRON STEPS:
-[MANUAL TEST - INSUFFICIENT KB COVERAGE]
-This test requires SME input to generate valid Electron automation steps.
-RAG confidence score was too low (< 5.0).
+================================================================================
 
+--- STEP 1: Review Period Status (Pre-Confirmation Check) ---
 
+1. enter search box as "Ledger Period Status"
+2. wait for search results
+3. click search result containing "Ledger Period Status"
+4. wait for page to load
+5. select Company as "{company_name}"
+6. select Fiscal Year as "{fiscal_year}"
+7. click button "OK"
+8. wait for report to load
+9. verify report displays period status for each book code
+10. screenshot as "FACC-1-0220_period_status_before.png"
+
+--- STEP 2: Navigate to Confirm Books Task ---
+
+11. enter search box as "Confirm Books"
+12. wait for search results
+13. click search result containing "Confirm Books"
+14. wait for page to load
+15. screenshot as "FACC-1-0220_confirm_books_page.png"
+
+--- STEP 3: Configure Confirmation Parameters ---
+
+16. select Company as "{company_name}"
+17. wait for prompts to load
+18. select Company Hierarchy as "{company_hierarchy}" (optional for rollup)
+19. select Fiscal Year as "{fiscal_year}"
+20. wait for periods to load
+21. select Fiscal Period as "{fiscal_period}"
+22. wait for book codes to load
+23. select Book Code as "{book_code}"
+24. screenshot as "FACC-1-0220_parameters_selected.png"
+
+--- STEP 4: Review Pre-Confirmation Status ---
+
+25. click button "OK"
+26. wait for page to load
+27. verify Current Status shows "Open" or "Closed"
+28. verify Pending Journals count shows "0"
+29. verify Balance Status shows "In Balance"
+30. verify Intercompany Status shows "Balanced" (if applicable)
+31. screenshot as "FACC-1-0220_status_review.png"
+
+--- STEP 5: Execute Book Confirmation ---
+
+32. click button "Confirm"
+33. wait for confirmation dialog
+34. click button "OK" to confirm
+35. wait for processing
+36. verify message contains "confirmed" or "successfully"
+37. screenshot as "FACC-1-0220_confirmation_success.png"
+
+--- STEP 6: Verify Confirmation Complete ---
+
+38. enter search box as "Ledger Period Status"
+39. wait for search results
+40. click search result containing "Ledger Period Status"
+41. wait for page to load
+42. select Company as "{company_name}"
+43. select Fiscal Year as "{fiscal_year}"
+44. click button "OK"
+45. wait for report to load
+46. verify book code "{book_code}" status shows "Confirmed"
+47. verify confirmation timestamp is current date
+48. screenshot as "FACC-1-0220_period_status_after.png"
+
+--- STEP 7: Confirm Additional Book Codes (if multi-book) ---
+
+49. enter search box as "Confirm Books"
+50. wait for search results
+51. click search result containing "Confirm Books"
+52. wait for page to load
+53. select Company as "{company_name}"
+54. select Fiscal Year as "{fiscal_year}"
+55. select Fiscal Period as "{fiscal_period}"
+56. select Book Code as "IFRS" (or next book code)
+57. click button "OK"
+58. verify status allows confirmation
+59. click button "Confirm"
+60. wait for confirmation
+61. verify message contains "confirmed"
+62. screenshot as "FACC-1-0220_ifrs_confirmed.png"
+
+================================================================================
 VERIFICATION:
+================================================================================
+- [ ] Pre-confirmation period status report displays correctly
+- [ ] Company and fiscal year parameters selected successfully
+- [ ] Book code selection available for target accounting standard
+- [ ] No pending journals exist for the book/period combination
+- [ ] Trial balance shows "In Balance" status
+- [ ] Intercompany eliminations are complete (if applicable)
+- [ ] Confirmation executes without error
+- [ ] Post-confirmation status shows "Confirmed" for book code
+- [ ] Confirmation timestamp captured correctly
+- [ ] All required book codes confirmed (Primary, IFRS, Tax)
+- [ ] No error messages displayed during confirmation process
 - [ ] Transaction completed successfully
-- [ ] No error messages displayed
+
+================================================================================
+KEY FIELDS:
+================================================================================
+- Company: Legal entity to confirm books for
+- Company Hierarchy: (Optional) For multi-company confirmation rollup
+- Fiscal Year: Year containing the period to confirm
+- Fiscal Period: Specific period to confirm (e.g., January 2025, Q1 2025)
+- Book Code: Accounting standard (Primary/GAAP, IFRS, Tax, Statutory)
+- Period Status: Open, Closed, Confirmed
+
+================================================================================
+BOOK CODE VALUES:
+================================================================================
+- Primary: US GAAP or primary reporting standard
+- IFRS: International Financial Reporting Standards
+- Tax: Tax basis accounting
+- Statutory: Local statutory requirements
+- Management: Internal management reporting
+- Custom: Organization-specific book codes
+
+================================================================================
+PERIOD STATUS TRANSITIONS:
+================================================================================
+Open → Closed → Confirmed
+
+- Open: Transactions can be posted freely
+- Closed: No new transactions, adjustments only with security
+- Confirmed: Book validated, ready for reporting, no changes allowed
+
+================================================================================
+API ALTERNATIVE:
+================================================================================
+SOAP Operation: Submit_Mass_Update_Ledger_Period_Status
+WSDL: Financial_Management
+
+Description: Updates the Ledger Period status for a Company and Company
+Hierarchy for a specific Fiscal Year, Fiscal Posting Interval, and Book Code
+combinations.
+
+Sample SOAP Request:
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:bsvc="urn:com.workday/bsvc">
+    <soapenv:Header>
+        <wsse:Security xmlns:wsse="...">
+            <wsse:UsernameToken>
+                <wsse:Username>{ISU_USERNAME}</wsse:Username>
+                <wsse:Password>{ISU_PASSWORD}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <bsvc:Submit_Mass_Update_Ledger_Period_Status_Request bsvc:version="v42.2">
+            <bsvc:Mass_Update_Ledger_Period_Status_Data>
+                <bsvc:Company_Reference>
+                    <bsvc:ID bsvc:type="Company_Reference_ID">US001</bsvc:ID>
+                </bsvc:Company_Reference>
+                <bsvc:Fiscal_Year_Reference>
+                    <bsvc:ID bsvc:type="Fiscal_Year_ID">2025</bsvc:ID>
+                </bsvc:Fiscal_Year_Reference>
+                <bsvc:Fiscal_Posting_Interval_Reference>
+                    <bsvc:ID bsvc:type="Fiscal_Posting_Interval_ID">Dec-2025</bsvc:ID>
+                </bsvc:Fiscal_Posting_Interval_Reference>
+                <bsvc:Book_Code_Reference>
+                    <bsvc:ID bsvc:type="Book_Code_ID">Primary</bsvc:ID>
+                </bsvc:Book_Code_Reference>
+                <bsvc:Period_Status>Confirmed</bsvc:Period_Status>
+            </bsvc:Mass_Update_Ledger_Period_Status_Data>
+        </bsvc:Submit_Mass_Update_Ledger_Period_Status_Request>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+Related SOAP Operations:
+- Get_Ledger_Year_and_Ledger_Periods: Retrieve current period status
+- Put_Ledger_Year_and_Ledger_Periods: Create/update ledger periods
+- Get_Journals: Verify all journals posted before confirmation
+
+================================================================================
+ERROR HANDLING:
+================================================================================
+- "Pending journals exist" - Post or cancel all pending journals for period/book
+- "Period out of balance" - Review trial balance and correct discrepancies
+- "Intercompany not balanced" - Complete intercompany eliminations first
+- "Insufficient permissions" - User needs Confirm Books security access
+- "Period already confirmed" - No action needed, book already confirmed
+- "Invalid book code" - Verify book code is configured for company
+- "Period not closed" - Close period before confirming (if required)
+
+================================================================================
+CLOSE SEQUENCE BEST PRACTICES:
+================================================================================
+1. Complete all operational postings (AP, AR, FA, Payroll)
+2. Post all manual journal entries
+3. Run currency revaluations
+4. Process allocations
+5. Complete intercompany eliminations
+6. Run trial balance and verify balance
+7. Confirm Primary/GAAP book first
+8. Then confirm IFRS book (with adjustments)
+9. Then confirm Tax book (with tax adjustments)
+10. Generate financial statements after all books confirmed
+
+================================================================================
+NOTES:
+================================================================================
+- Book confirmation is typically the final step in period close
+- Different book codes can have different confirmation timelines
+- Confirmation creates audit trail with timestamp and user
+- Once confirmed, postings to that period/book require special security
+- Year-end confirmation may trigger additional processing
+- Consider batch confirmation for multiple companies in hierarchy
+- API can automate confirmation as part of scheduled close
+
 ================================================================================

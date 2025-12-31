@@ -2,8 +2,8 @@
 TEST ID: HCM-1-0340
 FUNCTIONAL AREA: HCM
 TEST NAME: Review Fields of Study configuration
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_hcm_fields_of_study.txt] [RAG: Academic_Foundation.wsdl, Admin-Guide-Student.pdf]
 ================================================================================
 
 DESCRIPTION:
@@ -14,42 +14,58 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Access to Academic Foundation or Reference Data domains
+- List of expected fields of study for comparison
 
 ELECTRON STEPS:
-1. enter search box as "Fields of Study"
+1. enter search box as "All Fields of Study"
 2. wait for search results
-3. click search result containing "Fields of Study"
+3. click search result containing "All Fields of Study"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0340_complete.png"
+5. screenshot as "HCM-1-0340_report_view.png"
+6. verify report displays table with columns "Field of Study ID" and "Name"
+7. scroll to view all fields of study entries
+8. verify column headers include "ID", "Name", "Active"
+9. click column header "Name" to sort alphabetically
+10. wait 2 seconds
+11. screenshot as "HCM-1-0340_sorted.png"
+12. verify filter option is available for Active status
+13. click filter dropdown for "Active" column
+14. select filter as "Yes" to show only active fields
+15. wait for filter to apply
+16. screenshot as "HCM-1-0340_active_filtered.png"
+17. verify expected fields of study appear in the list
+18. click link "Export to Excel" if export verification needed
+19. screenshot as "HCM-1-0340_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
+- [ ] All Fields of Study report displays successfully
+- [ ] Expected fields of study are present (Computer Science, Business Administration, etc.)
+- [ ] Active/inactive status correctly reflects configuration
+- [ ] No duplicate field of study entries exist
+- [ ] Report can be filtered and sorted
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 
+DATA VALIDATION CHECKLIST:
+- [ ] Common business fields present (Business Administration, Finance, Marketing)
+- [ ] Common STEM fields present (Computer Science, Engineering, Mathematics)
+- [ ] Healthcare fields present if applicable (Nursing, Medicine)
+- [ ] CIP codes assigned where required
+- [ ] Field naming conventions are consistent
+
 API ALTERNATIVE:
-- SOAP: Get_Programs_of_Study
-- REST: Not available in RAG results
+- SOAP: Get_Programs_of_Study (Academic_Foundation WSDL)
+- REST: Not directly available - use Reference Data API if configured
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Fields of Study
+RELATED TASKS:
+- Maintain Fields of Study: Add or edit field of study entries
+- All Degrees: Review configured degree types
+- Maintain Schools: Review educational institutions
+- Edit Education: Add education to worker profile using these fields
 
-### 1. Admin Guide Glossary (score: 3)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
- | Full Glossary of Terms | ...
+NOTES:
+- Fields of Study populates education dropdowns in worker profiles
+- Inactive fields will not appear in worker education selection
+- Consider CIP code alignment with US education standards if applicable
 ================================================================================

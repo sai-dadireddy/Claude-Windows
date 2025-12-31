@@ -2,8 +2,8 @@
 TEST ID: USP-5-0040
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Pay Run Group Configuration
-CONFIDENCE: [MEDIUM] Score: 7.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_payroll_canada_pay_run_group.txt - adapted for US]
 ================================================================================
 
 DESCRIPTION:
@@ -14,45 +14,57 @@ EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Access to View Pay Run Group task
+- Knowledge of expected pay run group names and configurations
 
 ELECTRON STEPS:
 1. enter search box as "View Pay Run Group"
 2. wait for search results
 3. click search result containing "View Pay Run Group"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-5-0040_complete.png"
+5. verify pay run group list is displayed
+6. verify column "Pay Run Group Name" is visible
+7. verify column "Pay Groups" is visible
+8. scroll through list to view all groups
+9. screenshot as "USP-5-0040_pay_run_groups.png"
+10. click on first pay run group to view details
+11. wait for details to load
+12. verify included pay groups listed
+13. verify processing order displayed
+14. verify company assignments are correct
+15. screenshot as "USP-5-0040_pay_run_group_detail.png"
+16. navigate back to pay run group list
+17. verify all expected US pay groups are assigned to a run group
+18. verify no pay groups missing from any run group
+19. screenshot as "USP-5-0040_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
-- [ ] No error messages displayed
-- [ ] All required fields/sections are visible
+- [ ] All expected pay run groups are present in the tenant
+- [ ] Each pay run group contains the expected pay groups
+- [ ] Processing order is appropriate
+- [ ] No gaps in pay group coverage
+- [ ] Settlement associations are correct
+- [ ] Company assignments are valid
+
+PAY RUN GROUP COMPONENTS TO VERIFY:
+- Pay Run Group Name
+- Pay Run Group ID
+- Included Pay Groups
+- Processing Order
+- Company assignments
+
+RELATED REPORTS:
+- Pay Run Group Summary
+- Pay Group Assignment Report
+- Payroll Processing Schedule
+- Pay Group Configuration Report
 
 API ALTERNATIVE:
 SOAP:
-  No SOAP operation found
+  Service: Payroll
+  Operations: Get_Pay_Run_Groups
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Pay Run Group
-
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Elec
-
+  Endpoint: /payroll/v2/payRunGroups
+  Method: GET
 ================================================================================

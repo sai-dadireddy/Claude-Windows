@@ -1,0 +1,223 @@
+# Workday Job History Industries - Knowledge Base
+
+## Source
+- Workday HCM Reference Data Configuration
+- Documentation: Human Resources Setup Guide
+- Release: 2025R1
+- Created: 2025-12-30
+
+## Overview
+
+**Job History Industries** is reference data in Workday that provides a list of industry classifications for use when recording a worker's previous employment history. When workers or HR administrators add prior work experience (job history from previous employers), they can select from the configured list of industries to categorize the previous employer's business sector.
+
+## Purpose
+
+- Standardize industry classification across worker job history records
+- Enable reporting and analytics on workers' prior industry experience
+- Support talent acquisition by filtering candidates with specific industry backgrounds
+- Facilitate compliance with industry-specific regulations (e.g., financial services, healthcare)
+
+## Common Industry Categories
+
+Workday typically provides or supports standard industry classifications such as:
+
+### Standard Industries (Examples):
+- Agriculture, Forestry, Fishing
+- Mining and Extraction
+- Manufacturing
+- Construction
+- Utilities
+- Wholesale Trade
+- Retail Trade
+- Transportation and Warehousing
+- Information Technology
+- Finance and Insurance
+- Real Estate
+- Professional Services
+- Healthcare and Social Assistance
+- Education
+- Arts and Entertainment
+- Accommodation and Food Services
+- Government / Public Administration
+- Nonprofit / NGO
+
+### Industry Classification Standards:
+- NAICS (North American Industry Classification System)
+- SIC (Standard Industrial Classification)
+- ISIC (International Standard Industrial Classification)
+- Custom tenant-specific classifications
+
+## Navigation in Workday
+
+### Primary Task:
+**Task Name**: "All Job History Industries"
+**Search Term**: "Job History Industries"
+
+### Alternative Tasks:
+- "Maintain Job History Industries" - Add/edit industry entries
+- "Create Job History Industry" - Add new industry entry
+
+## Implementation Steps
+
+### Viewing Job History Industries:
+
+1. Navigate to Search
+2. Enter "All Job History Industries" in search box
+3. Click task result "All Job History Industries"
+4. Report displays table with columns:
+   - Industry ID / Reference ID
+   - Industry Name
+   - Active (Yes/No)
+   - Description (optional)
+
+### Reviewing Configuration:
+
+1. Verify expected industries are present
+2. Check Active status for each entry
+3. Confirm naming conventions are consistent
+4. Validate against source system list (if migrated)
+
+### Adding New Industry:
+
+1. Search for "Create Job History Industry"
+2. Click task to open form
+3. Enter Reference ID (unique identifier)
+4. Enter Industry Name
+5. Set Active = Yes
+6. Enter Description (optional)
+7. Click OK/Submit
+
+### Editing Industry:
+
+1. From "All Job History Industries" report
+2. Click on Industry Name link
+3. Related Actions > Edit
+4. Modify fields as needed
+5. Click OK/Submit
+
+## Automation Considerations for Electron
+
+### UI Elements:
+
+**Report View:**
+- Report header: "All Job History Industries"
+- Grid columns: Reference ID, Name, Active, Description
+- Column headers are clickable for sorting
+- Filter icons available on columns
+- Export options: Excel, PDF
+
+**Form View (Create/Maintain):**
+- Reference ID: Text input field
+- Industry Name: Text input field
+- Active: Checkbox
+- Description: Text area (optional)
+
+### Electron Command Pattern:
+
+```
+1. enter search box as "All Job History Industries"
+2. wait for search results
+3. click search result containing "All Job History Industries"
+4. wait for page to load
+5. screenshot as "{test_id}_report_view.png"
+6. verify report displays table with columns "Reference ID" and "Name"
+7. scroll to view all industry entries
+8. verify column headers include "ID", "Name", "Active"
+9. click column header "Name" to sort alphabetically
+10. wait 2 seconds
+11. screenshot as "{test_id}_sorted.png"
+12. verify expected industries appear in the list
+13. verify Active status shows "Yes" for active industries
+14. click filter dropdown for "Active" column if filtering needed
+15. select filter as "Yes" to show only active entries
+16. wait for filter to apply
+17. screenshot as "{test_id}_filtered.png"
+18. click link "Export to Excel" if export verification needed
+19. screenshot as "{test_id}_complete.png"
+```
+
+### Verification Points:
+
+- [ ] All Job History Industries report loads successfully
+- [ ] Report displays Reference ID and Name columns
+- [ ] Expected industries are present (based on requirements)
+- [ ] Active/inactive status is correctly set
+- [ ] No duplicate industry entries exist
+- [ ] Report can be sorted and filtered
+- [ ] Export functionality works if tested
+
+## Data Validation Checklist
+
+### Standard Industries to Verify:
+- [ ] Manufacturing
+- [ ] Healthcare and Social Assistance
+- [ ] Finance and Insurance
+- [ ] Professional Services
+- [ ] Information Technology
+- [ ] Retail Trade
+- [ ] Education
+- [ ] Government / Public Administration
+
+### Configuration Validation:
+- [ ] Reference IDs follow naming convention
+- [ ] Industry names are descriptive and consistent
+- [ ] No deprecated industries are set to Active
+- [ ] Industry list aligns with organizational needs
+
+## Security Considerations
+
+### Required Domain Permissions:
+- View: HCM Reference Data (or similar domain)
+- Modify: HCM Reference Data Setup (for add/edit)
+
+### Typical Security Groups:
+- HR Administrator
+- HRIS Administrator
+- System Administrator
+
+## Related Tasks
+
+- Maintain Job History Industries - Add or edit industry entries
+- Create Job History Industry - Add new industry
+- All Job History Companies - Review configured companies for job history
+- Edit Prior Work Experience - Use industries when entering job history
+
+## Integration Considerations
+
+### SOAP API:
+- No direct WSDL operation for Job History Industries specifically
+- Related: Put_Previous_System_Job_History (Human_Resources.wsdl)
+- Related: Get_Previous_System_Job_History (Human_Resources.wsdl)
+
+### REST API:
+- Reference Data APIs may provide access if configured
+- Typically managed through UI for small reference datasets
+
+## Common Issues
+
+1. **Industry Not Appearing in Dropdown**:
+   - Check if Active = Yes
+   - Verify security access to reference data
+
+2. **Duplicate Industries**:
+   - Review Reference IDs for uniqueness
+   - Consolidate duplicates via edit/inactivate
+
+3. **Migration Validation**:
+   - Compare count of industries with source system
+   - Verify all migrated industries are present
+
+## Best Practices
+
+1. Use consistent naming conventions
+2. Include Reference IDs for integration purposes
+3. Keep industry list manageable (not overly granular)
+4. Regularly review and inactivate obsolete industries
+5. Document custom industries specific to organization
+6. Consider NAICS or SIC alignment for standard reporting
+
+## References
+
+- Workday HCM: Reference Data Setup
+- NAICS: North American Industry Classification System
+- Workday Community: Job History Configuration

@@ -2,51 +2,73 @@
 TEST ID: HCM-1-0350
 FUNCTIONAL AREA: HCM
 TEST NAME: Review Job History Industries configuration
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_hcm_job_history_industries.txt] [Pattern: Similar to Fields of Study, Degrees configuration tasks]
 ================================================================================
 
 DESCRIPTION:
-Verify that all expected job history industries are present in the tenant
+Verify that all expected job history industries are present in the tenant. Job History Industries provides a list of industry classifications for use when recording a worker's previous employment history.
 
 WORKDAY ROLE: HR Administrator
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
 - User logged in with HR Administrator permissions
-- Required data available in tenant
+- Access to HCM Reference Data domains
+- List of expected industries for comparison (if available)
 
 ELECTRON STEPS:
-1. enter search box as "Maintain Job History Industries"
+1. enter search box as "All Job History Industries"
 2. wait for search results
-3. click search result containing "Maintain Job History Industries"
+3. click search result containing "All Job History Industries"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-1-0350_complete.png"
+5. screenshot as "HCM-1-0350_report_view.png"
+6. verify report displays table with columns "Reference ID" and "Name"
+7. scroll to view all industry entries
+8. verify column headers include "ID", "Name", "Active"
+9. click column header "Name" to sort alphabetically
+10. wait 2 seconds
+11. screenshot as "HCM-1-0350_sorted.png"
+12. verify expected industries appear in the list
+13. verify Active status shows "Yes" for active industries
+14. click filter dropdown for "Active" column
+15. select filter as "Yes" to show only active entries
+16. wait for filter to apply
+17. screenshot as "HCM-1-0350_active_filtered.png"
+18. verify filter applied successfully
+19. click link "Export to Excel" if export verification needed
+20. screenshot as "HCM-1-0350_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
+- [ ] All Job History Industries report displays successfully
+- [ ] Expected industries are present (Manufacturing, Healthcare, Finance, etc.)
+- [ ] Active/inactive status correctly reflects configuration
+- [ ] No duplicate industry entries exist
+- [ ] Report can be filtered and sorted
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 
+DATA VALIDATION CHECKLIST:
+- [ ] Standard industries present (Manufacturing, Healthcare, Finance, Retail, IT)
+- [ ] Professional Services / Consulting industries present
+- [ ] Education and Government sectors present if applicable
+- [ ] Industry naming conventions are consistent
+- [ ] Reference IDs follow expected pattern
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: No direct operation - Job History Industries is reference data
+- SOAP: Related: Put_Previous_System_Job_History, Get_Previous_System_Job_History (Human_Resources.wsdl)
+- REST: Reference Data API if configured for tenant
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Maintain Job History Industries
+RELATED TASKS:
+- Maintain Job History Industries: Add or edit industry entries
+- Create Job History Industry: Add new industry to the list
+- All Job History Companies: Review companies for job history
+- Edit Prior Work Experience: Uses industries when entering worker job history
 
-### 1. Kb Hcm Change Job (score: 3)
-Source: kb_hcm_change_job.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday HC...
+NOTES:
+- Job History Industries populates industry dropdown in prior work experience entry
+- Inactive industries will not appear in worker profile selection
+- Consider alignment with NAICS or SIC codes for standard reporting
+- This is reference data setup, not transactional data
 ================================================================================

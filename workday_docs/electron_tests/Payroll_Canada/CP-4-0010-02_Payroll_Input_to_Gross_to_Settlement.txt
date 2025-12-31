@@ -3,8 +3,8 @@ TEST ID: CP-4-0010-02
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Payroll Input to Gross to Settlement
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Articles: kb_payroll_canada_payroll_input.txt, kb_payroll_run_payroll.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,42 +16,89 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Partner permissions
-- Required data available in tenant
-- Access to CA payroll data
+- Payroll inputs entered for the pay period (timesheets, one-time payments, adjustments)
+- Pay group configured for Canadian payroll
+- Employee tax withholding configured (Federal, Provincial, CPP, EI)
+- Benefits elections updated
+- No pending employee changes blocking payroll
+- Tax tables current (updated quarterly)
 
 ELECTRON STEPS:
-1. enter search box as "2. Payroll Processing"
+1. enter search box as "Run Pay Calculation"
 2. wait for search results
-3. click search result containing "2. Payroll Processing"
+3. click search result containing "Run Pay Calculation"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-4-0010-02_complete.png"
+5. select pay group as "{pay_group}"
+6. verify pay period start date is correct
+7. verify pay period end date is correct
+8. verify payment date (check date) is displayed
+9. select run type as "Regular" (or "Simulation" for test run)
+10. screenshot as "CP-4-0010-02_config.png"
+11. click button "Submit"
+12. wait for confirmation message
+13. verify background process initiated
+14. enter search box as "View Background Processes"
+15. wait for search results
+16. click search result containing "View Background Processes"
+17. wait for page to load
+18. find "Run Pay Calculation" job in list
+19. verify status shows "Running" or "Complete"
+20. wait for calculation to complete (15-120 minutes depending on employee count)
+21. screenshot as "CP-4-0010-02_process_status.png"
+22. enter search box as "Pay Calculation Results for Worker"
+23. wait for search results
+24. click search result containing "Pay Calculation Results for Worker"
+25. wait for page to load
+26. enter worker field as "{employee_id}"
+27. wait for results to load
+28. verify gross pay calculated
+29. verify federal tax withheld (Canada)
+30. verify provincial tax withheld
+31. verify CPP contribution calculated
+32. verify EI premium calculated
+33. verify net pay displayed
+34. screenshot as "CP-4-0010-02_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Pay calculation initiated successfully
+- [ ] Correct pay period dates selected
+- [ ] Background process completed without errors
+- [ ] Gross pay calculated for all employees in pay group
+- [ ] Federal tax withholding calculated correctly
+- [ ] Provincial tax withholding calculated correctly
+- [ ] CPP/QPP contributions calculated
+- [ ] EI premiums calculated
+- [ ] Deductions processed
+- [ ] Net pay calculated correctly
 - [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+
+ERROR HANDLING:
+- "Missing Timesheet": Contact manager, enter time, recalculate
+- "Invalid Tax Setup": Update employee tax withholding, recalculate
+- "Calculation Failed": Review error log in background process
+- "Employee Blocked": Check for pending job changes or termination
+- "Tax Rate Not Found": Verify provincial tax tables are current
+
+POST-CALCULATION TASKS:
+- Review payroll results summary
+- Run variance report (compare to prior period)
+- Review exception report for errors
+- Spot-check 5-10 employee payslips
+- Resolve any exceptions before proceeding to approval
+- Run "Complete Payroll" after review
+
+RELATED REPORTS:
+- Payroll Results Summary
+- Variance Report
+- Exception Report
+- Tax Register (Federal, Provincial, CPP, EI)
+- Payroll Pre-Check Report
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP (Payroll): Submit_Payroll_Input - Submit payroll input data
+- SOAP (Payroll): Get_Payroll_Results - Retrieve payroll calculation results
+- SOAP (Payroll): Get_Payroll_Payslips - Retrieve employee payslips
+- SOAP (Payroll_CAN): Get_Payroll_Payee_CPPs - Retrieve CPP data
+- SOAP (Payroll_CAN): Get_Payroll_Payee_EIs - Retrieve EI data
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 2. Payroll Processing
-
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample E...
 ================================================================================
