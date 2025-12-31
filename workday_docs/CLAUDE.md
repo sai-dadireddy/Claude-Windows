@@ -3,6 +3,25 @@
 ## Overview
 This folder contains a comprehensive RAG (Retrieval-Augmented Generation) system for Workday API and business process documentation, designed to generate confident Electron test automation steps.
 
+## How to Use Browser Automation
+
+**Known Bug**: Custom subagents (`Workday API Expert`) cannot access MCP tools due to Claude Code bug #7296/#13898.
+
+**Solution**: Use `general-purpose` built-in subagent OR invoke `/workday` skill directly:
+
+```python
+# Option 1: Use general-purpose agent (HAS MCP access)
+Task(
+    subagent_type="general-purpose",
+    prompt="You are a Workday expert. Scrape KB article about hire employee..."
+)
+
+# Option 2: Use /workday skill (runs in main session with full MCP)
+# Just type: /workday scrape hire employee KB
+```
+
+**Skills available**: `/workday` (API + Electron tests), `/peoplesoft`, `/oracle`
+
 ## RAG Statistics
 - **117 Documents Indexed**
 - 30 PDFs (Admin/User Guides)
