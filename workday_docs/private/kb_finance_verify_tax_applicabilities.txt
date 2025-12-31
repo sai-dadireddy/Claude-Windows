@@ -1,20 +1,51 @@
 # Workday KB: Verify Tax Applicabilities
 # Searched: 2024-12-31
 # Query: "Verify Tax Applicabilities"
-# Total Results: 500 (estimated ~70 English Admin Guide)
-# Pages: 17 (EN content in pages 1-10 only)
+# Total Results: 500 (95 English Admin Guide)
+# Pages with EN content: 1-10
 
-## Summary by Page (Sampled)
-Page 1: 15 EN Admin Guide results
-Page 2: 8 EN Admin Guide results
-Page 3: 11 EN Admin Guide results
-Pages 4-9: estimated 5-8 each (~35 total)
-Page 10: 1 EN Admin Guide result
-Pages 11-17: 0 EN Admin Guide results
+## Results by Page
+Page 1: 15 EN Admin Guide docs
+Page 2: 8 EN Admin Guide docs
+Page 3: 11 EN Admin Guide docs
+Page 4: 13 EN Admin Guide docs
+Page 5: 5 EN Admin Guide docs
+Page 6: 13 EN Admin Guide docs
+Page 7: 11 EN Admin Guide docs
+Page 8: 9 EN Admin Guide docs
+Page 9: 9 EN Admin Guide docs
+Page 10: 1 EN Admin Guide doc
+Pages 11-17: 0 EN Admin Guide docs
 
-## Estimated Total: ~70 EN Admin Guide results
+## TOTAL: 95 English Admin Guide documents
+
+## Key Documents (Page 1 Sample)
+1. Set Up Tax Applicability for Financial Transactions | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/dan1370796765428.html
+2. Configure Transaction Tax Rules for Items | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/cho1470865900641.html
+3. Configure Transaction Tax Rules for Worktags | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/nnn1579030372468.html
+4. Reference: Verification Reports for Payroll Inputs | https://doc.workday.com/admin-guide/en-us/payroll/payroll-processing/process-payroll/dxu1601640309169.html
+5. Verify Procurement Card Transactions | https://doc.workday.com/admin-guide/en-us/spend-management/procurement/procurement-cards/dan1370797240628.html
+6. Create Tax Declarations | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/
+
+## Page 2 Sample
+7. Configure Withholding Tax Exemptions | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/withholding-taxes/
+8. Configure Transaction Tax Rule Exceptions | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/
+9. Reference: Tax Options | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/
+10. Set Up Transaction Tax Codes | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/
+
+## Page 3 Sample
+11. Manage Global Tax Settings | https://doc.workday.com/admin-guide/en-us/vndly-documentation/taxes/
+12. Configure Transaction Tax Rules for Countries | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/
+13. Setup Considerations: Transaction Taxes | https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/
+
+## Page 4 Sample
+14. Steps: Set Up Tax ID Validation Integration
+15. Verify Authorization Security for Workday Web Services
+16. Reference: Transaction Tax Business Objects
+17. Create Case Validations
 
 ## Related Topics
 - Tax Applicability configuration
-- Tax setup and validation
-- Financial Management tax settings
+- Transaction Tax Rules
+- Withholding Tax setup
+- Tax Declarations
