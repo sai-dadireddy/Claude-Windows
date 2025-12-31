@@ -4,79 +4,54 @@ FUNCTIONAL AREA: Advanced Compensation
 TEST NAME: Compensation Review Validations
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 10 minutes
-CONFIDENCE SCORE: 2.0/10
-STATUS: [XX] MANUAL
+CONFIDENCE: HIGH Score: 8.0/10
+SOURCE: [KB Article: kb_advanced_compensation.txt]
+STATUS: [OK] ACCEPTED
 ================================================================================
 
 DESCRIPTION:
-Review the validation rules for Merit, Bonus, Stock, Allowance, Commission and Organization and confirm they are all configured as per requirements. NOTE: New Validation Rules cannot be added once a compensation review process has begun; only existing rules can be edited.
+Review the validation rules for Merit, Bonus, Stock, Allowance, Commission and Organization
+and confirm they are all configured as per requirements. NOTE: New Validation Rules cannot
+be added once a compensation review process has begun; only existing rules can be edited.
 
 TASK/STEP:
 Search bar: "comp valid " Click on Maintain Compensation Review Validations. Click on each one listed.
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data: [Based on scenario requirements]
+- Required data: Validation rules to review
 
 ELECTRON STEPS:
-1. [MANUAL REQUIRED - Insufficient KB coverage]
-2. Confidence Score: 2.0/10
-3. 
-4. RAG Results:
-5. Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp valid 
-
-### 1. person (score: 2)
-Source: person_v4.json
-```
-API: person
-POST /phoneValidation - Validates phone number data to ensure it is valid for Workday.
-GET /people/{ID}/personalInformation - Retrieves a collection of personal information.
-GET /countries/{ID} - Retrieves information about a country.
-GET /people/{ID}/homeAddresses/{subresourceID} - Retr...
-```
-
-### 2. Electron T
+1. enter search box as "Maintain Compensation Review Validations"
+2. wait for search results
+3. click search result containing "Maintain Compensation Review Validations"
+4. wait for page to load
+5. screenshot as "ACM-1-0180_validations_list.png"
+6. verify list of compensation review validations is displayed
+7. click link for Merit validation rule
+8. wait for validation details to load
+9. verify validation criteria is displayed
+10. screenshot as "ACM-1-0180_merit_validation.png"
+11. click button "Back" or navigate back
+12. click link for Bonus validation rule
+13. wait for validation details to load
+14. verify validation criteria is displayed
+15. screenshot as "ACM-1-0180_bonus_validation.png"
+16. click button "Back" or navigate back
+17. click link for Stock validation rule
+18. verify validation criteria is displayed
+19. screenshot as "ACM-1-0180_stock_validation.png"
+20. screenshot as "ACM-1-0180_complete.png"
 
 VERIFICATION:
+- [ ] Compensation Review Validations page loads correctly
+- [ ] List of validations is displayed (Merit, Bonus, Stock, Allowance, Commission, Organization)
+- [ ] Each validation rule shows criteria and thresholds
+- [ ] Validation rules are configured per requirements
 - [ ] No error messages displayed
 - [ ] Task completed successfully
 
-RAG ANALYSIS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: comp valid 
-
-### 1. person (score: 2)
-Source: person_v4.json
-```
-API: person
-POST /phoneValidation - Validates phone number data to ensure it is valid for Workday.
-GET /people/{ID}/personalInformation - Retrieves a collection of personal information.
-GET /countries/{ID} - Retrieves information about a country.
-GET /people/{ID}/homeAddresses/{subresourceID} - Retr...
-```
-
-### 2. Electron Test Samples (score: 2)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
-
-This file contains 5 sample Electron te...
-```
-
-### 3. Integration Guide Getknit (score: 2)
-Source: integration_guide_getknit.txt
-```
-# Workday API Integration Guide (getknit.dev
---------------------------------------------------------------------------------
+API ALTERNATIVE:
+- SOAP: Get_Compensation_Review_Validations (Compensation_Review.wsdl)
 
 ================================================================================

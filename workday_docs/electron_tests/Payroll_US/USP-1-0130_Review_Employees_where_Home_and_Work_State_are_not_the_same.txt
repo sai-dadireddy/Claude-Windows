@@ -3,7 +3,7 @@ TEST ID: USP-1-0130
 FUNCTIONAL AREA: Payroll for the United States
 TEST NAME: Review Employees where Home and Work State are not the same
 CONFIDENCE: [HIGH] Score: 9.0/10
-SOURCE: [RAG]
+SOURCE: [KB Article: kb_payroll_tax_reporting.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -14,48 +14,65 @@ EST. DURATION: 10 minutes
 
 PREREQUISITES:
 - User logged in with Payroll Administrator permissions
-- System is in proper state for payroll operations
+- Understanding of multi-state taxation rules
+- List of state reciprocity agreements
+- Knowledge of employee remote work arrangements
 
 ELECTRON STEPS:
 1. enter search box as "Audit - Workers with Primary Work Address Not Equal to Location State"
 2. wait for search results
 3. click search result containing "Audit - Workers with Primary Work Address Not Equal to Location State"
 4. wait for page to load
-5. verify page title contains expected content
-6. review configuration/data as described in test description
-7. screenshot as "USP-1-0130_complete.png"
+5. verify page title contains "Workers with Primary Work Address"
+6. wait for report data to load
+7. verify worker list displays
+8. scroll to view Worker column
+9. scroll to view Home State column
+10. scroll to view Work State column
+11. verify list contains workers with mismatched states
+12. screenshot as "USP-1-0130_multistate_workers.png"
+13. click first worker row to view details
+14. wait for worker profile to load
+15. click related actions menu
+16. click link "View Tax Elections"
+17. wait for tax elections to load
+18. verify state tax elections section displays
+19. verify elections exist for both home and work states
+20. screenshot as "USP-1-0130_tax_elections.png"
+21. click button "Done"
+22. enter search box as "Multi-State Tax Summary"
+23. wait for search results
+24. click search result containing "Multi-State Tax Summary"
+25. wait for report to load
+26. verify reciprocity settings display
+27. verify non-resident certificates are documented
+28. screenshot as "USP-1-0130_reciprocity.png"
+29. enter search box as "Local Tax Elections"
+30. wait for search results
+31. click search result containing "Local Tax Elections"
+32. wait for page to load
+33. verify local elections in place where needed
+34. screenshot as "USP-1-0130_complete.png"
 
 VERIFICATION:
-- [ ] Page loads successfully
-- [ ] Configuration/data matches expected values
+- [ ] All multi-state employees identified
+- [ ] Home state and work state correctly recorded
+- [ ] State tax elections exist for both states (where applicable)
+- [ ] Reciprocity agreements properly applied
+- [ ] Non-resident certificates documented
+- [ ] Local tax elections in place where required
+- [ ] Withholding allocation is reasonable
+- [ ] Remote work arrangements properly configured
+- [ ] No employees missing required tax elections
 - [ ] No error messages displayed
-- [ ] All required fields/sections are visible
 
 API ALTERNATIVE:
 SOAP:
-  ### 3. WSDL: Financial_Management (score: 11)
-  WSDL: Financial_Management
+  WSDL: Payroll
+  Operation: Get_Worker_Tax_Elections
 
 REST:
-  N/A
-
-RAG QUERY RESULTS:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Audit - Workers with Primary Work Address Not Equal to Location State
-
-### 1. Test Scenarios Index (score: 17)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Region
+  Endpoint: /payroll/v2/workerTaxElections
+  Method: GET
 
 ================================================================================

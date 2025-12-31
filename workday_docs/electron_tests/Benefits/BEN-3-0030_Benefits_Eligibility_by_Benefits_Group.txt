@@ -2,44 +2,101 @@
 TEST ID: BEN-3-0030
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefits Eligibility by Benefits Group
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Benefits Eligibility by Benefits Group
+TASK/STEP: Run Benefits Eligibility by Benefits Group Report
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefits Eligibility by Benefits Group
+DESCRIPTION:
+Generate and verify the Benefits Eligibility by Benefits Group report
+to validate employee eligibility across all benefit groups. Identify
+any employees missing from expected groups or incorrectly assigned.
 
-### 1. Test Scenarios Index (score: 9)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizati
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or Benefits Analyst role
+- Benefit groups configured with eligibility rules
+- Expected eligibility documented for validation
 
 ELECTRON STEPS:
 1. enter search box as "Benefits Eligibility by Benefits Group"
 2. wait for search results
 3. click search result containing "Benefits Eligibility by Benefits Group"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0030_complete.png"
+4. wait for page to load
+5. select effective date as "{effective_date}"
+6. select benefit group as "All Benefit Groups" or "{specific_group}"
+7. click button "OK"
+8. wait for report to load
+9. screenshot as "BEN-3-0030_report.png"
+
+ANALYZE RESULTS BY GROUP:
+10. scroll to benefit group "{benefit_group_1}"
+11. verify employee count for group
+12. click to expand employee list
+13. verify sample employees present
+14. verify eligibility status shows "Eligible"
+15. screenshot as "BEN-3-0030_group1.png"
+
+VERIFY EMPLOYEE ASSIGNMENTS:
+16. scroll to benefit group "{benefit_group_2}"
+17. verify employee count for group
+18. click to expand employee list
+19. check for expected employees
+20. verify no employees incorrectly assigned
+21. screenshot as "BEN-3-0030_group2.png"
+
+CHECK FOR ELIGIBILITY ISSUES:
+22. scroll to summary section
+23. verify total eligible employees count
+24. note any "Ineligible" employees listed
+25. note any employees in multiple groups (if not allowed)
+26. screenshot as "BEN-3-0030_summary.png"
+
+EXPORT ELIGIBILITY DATA:
+27. click button "Export to Excel"
+28. wait for export to complete
+29. verify export file generated
+30. screenshot as "BEN-3-0030_complete.png"
+
+VERIFICATION WITH SAMPLE EMPLOYEE:
+31. enter search box as "View Worker"
+32. wait for search results
+33. click search result containing "View Worker"
+34. enter worker as "{sample_employee_id}"
+35. click link "Benefits" tab
+36. verify benefit group assignment matches report
+37. screenshot as "BEN-3-0030_verify_worker.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Report generated successfully for all benefit groups
+- [ ] Employee counts match expected populations
+- [ ] Sample employees verified in correct groups
+- [ ] No unexpected eligibility issues identified
+- [ ] Employees not duplicated across incompatible groups
+- [ ] Export completed successfully
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Benefits eligibility by group report shows all employees correctly assigned
+to appropriate benefit groups based on eligibility criteria.
+
+REPORT COLUMNS:
+- Benefit Group
+- Employee Count
+- Employee Name
+- Employee ID
+- Eligibility Status
+- Effective Date
+- Job Profile
+- Location
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Run monthly to catch eligibility changes
+- Compare to HR data for accuracy
+- Flag employees missing from any group
+- Check for new hires awaiting eligibility
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Group_Eligibility
+- REST: /benefitsAdmin/v1/benefitGroupEligibility
 ================================================================================

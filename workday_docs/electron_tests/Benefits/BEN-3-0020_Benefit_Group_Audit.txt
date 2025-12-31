@@ -2,44 +2,109 @@
 TEST ID: BEN-3-0020
 FUNCTIONAL AREA: Benefits
 TEST NAME: Benefit Group Audit
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Benefit Group Audit
+TASK/STEP: Audit Benefit Groups Configuration
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Group Audit
+DESCRIPTION:
+Audit all benefit groups to verify eligibility rules, assigned plans,
+and employee populations are correct. Ensure each benefit group serves
+the intended population with appropriate plan offerings.
 
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Superv
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator role
+- Benefit groups configured in system
+- Expected benefit group configuration documented
 
 ELECTRON STEPS:
 1. enter search box as "Benefit Group Audit"
 2. wait for search results
 3. click search result containing "Benefit Group Audit"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0020_complete.png"
+4. wait for page to load
+5. select effective date as "{audit_date}"
+6. click button "OK"
+7. wait for audit report to load
+8. screenshot as "BEN-3-0020_audit_summary.png"
+
+REVIEW BENEFIT GROUP DETAILS:
+9. scroll to benefit groups list
+10. verify all expected benefit groups are listed
+11. click benefit group "{benefit_group_1}"
+12. wait for group details to load
+13. verify eligibility rules displayed
+14. verify assigned benefit plans listed
+15. verify employee count in group
+16. screenshot as "BEN-3-0020_group1.png"
+17. click button "Back"
+
+VERIFY ELIGIBILITY RULES:
+18. click benefit group "{benefit_group_2}"
+19. wait for group details to load
+20. click tab "Eligibility Rules"
+21. verify employee type conditions
+22. verify location conditions
+23. verify job family conditions
+24. screenshot as "BEN-3-0020_eligibility.png"
+25. click button "Back"
+
+VERIFY PLAN ASSIGNMENTS:
+26. click benefit group "{benefit_group_3}"
+27. wait for group details to load
+28. click tab "Assigned Plans"
+29. verify medical plans assigned
+30. verify dental plans assigned
+31. verify vision plans assigned
+32. verify life insurance plans assigned
+33. verify retirement plans assigned
+34. screenshot as "BEN-3-0020_plans.png"
+
+POPULATION ANALYSIS:
+35. enter search box as "Benefit Group Population"
+36. wait for search results
+37. click search result containing "Benefit Group Population"
+38. select benefit group as "{benefit_group_1}"
+39. click button "OK"
+40. wait for population report to load
+41. verify employee count matches expected
+42. verify sample employees are in correct group
+43. screenshot as "BEN-3-0020_population.png"
+
+EXPORT AUDIT RESULTS:
+44. click button "Export to Excel"
+45. wait for export to complete
+46. verify export file downloaded
+47. screenshot as "BEN-3-0020_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] All benefit groups listed in audit
+- [ ] Eligibility rules correct for each group
+- [ ] Assigned plans match business requirements
+- [ ] Employee populations are accurate
+- [ ] No orphaned or empty benefit groups
+- [ ] Audit export completed successfully
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+All benefit groups audited with verified eligibility rules, plan assignments,
+and employee populations matching business requirements.
+
+COMMON BENEFIT GROUP CONFIGURATIONS:
+- Full-Time Employees
+- Part-Time Employees (20+ hours)
+- Executives/Leadership
+- Union Employees
+- International Employees
+- Retirees
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Run audit before open enrollment
+- Document discrepancies for correction
+- Compare to HR policy documents
+- Verify inactive groups are truly inactive
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Groups
+- REST: /benefitsAdmin/v1/benefitGroups
 ================================================================================

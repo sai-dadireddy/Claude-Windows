@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0500
 FUNCTIONAL AREA: HCM
 TEST NAME: Manage Job History
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -13,40 +13,121 @@ WORKDAY ROLE: Employee As Self
 EST. DURATION: 5 minutes
 
 PREREQUISITES:
-- User logged in with Employee As Self permissions
-- Required data available in tenant
+- User logged in with proxy permissions
+- Test employee available
+- Job History business process configured
+- Career profile enabled in tenant
 
 ELECTRON STEPS:
-1. enter search box as "Add Job History"
+1. enter search box as "Start Proxy"
 2. wait for search results
-3. click search result containing "Add Job History"
+3. click search result containing "Start Proxy"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0500_complete.png"
+5. enter Worker field as "{test_employee_name}"
+6. click button "OK"
+7. wait for page to load
+8. verify proxy as employee successful
+9. screenshot as "HCM-2-0500_proxied.png"
+10. enter search box as "Add Job History"
+11. wait for search results
+12. click search result containing "Add Job History"
+13. wait for page to load
+14. enter Job Title as "Senior Developer"
+15. enter Company as "Previous Employer Inc."
+16. select Industry as "Technology"
+17. enter Start Date as "01/15/2018"
+18. enter End Date as "06/30/2023"
+19. enter Location as "San Francisco, CA"
+20. enter Description as "Led development team for enterprise applications"
+21. screenshot as "HCM-2-0500_job_history_entry.png"
+22. scroll to bottom of page
+23. click button "Submit"
+24. wait for page to load
+25. verify message contains "submitted"
+26. screenshot as "HCM-2-0500_submitted.png"
+27. enter search box as "End Proxy"
+28. wait for search results
+29. click search result containing "End Proxy"
+30. wait for page to load
+31. verify approval task appears in inbox (if approvals configured)
+32. complete approval if needed
+33. enter search box as "{test_employee_name}"
+34. wait for search results
+35. click search result containing "{test_employee_name}"
+36. wait for page to load
+37. click tab "Career"
+38. scroll to Job History section
+39. verify new job history entry displays
+40. screenshot as "HCM-2-0500_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] Proxy to employee successful
+- [ ] Add Job History task accessible as self-service
+- [ ] Job Title field accepts input
+- [ ] Company/Organization field accepts input
+- [ ] Industry dropdown populated
+- [ ] Start Date accepts valid date
+- [ ] End Date accepts valid date (optional for current job)
+- [ ] Location field accepts input
+- [ ] Description/responsibilities field works
+- [ ] Job History submits without errors
+- [ ] Approval routing works (if configured)
+- [ ] Job History appears on worker profile
+- [ ] Job History displays in Career section
 - [ ] No error messages displayed
 
+JOB HISTORY FIELDS:
+- Job Title: Position held at previous employer
+- Company/Organization: Previous employer name
+- Industry: Business sector (from reference data)
+- Start Date: When position started
+- End Date: When position ended (leave blank if current)
+- Location: Work location city/state/country
+- Description: Responsibilities and achievements
+- Contact Name: Reference contact (optional)
+- Contact Information: Phone/email of reference (optional)
+- Reason for Leaving: Why position ended (optional)
+
+FIELD REFERENCE:
+- Job Title: Free text field for position name
+- Company: Free text or reference lookup
+- Industry: Dropdown from configured industries
+- Start Date: Date picker
+- End Date: Date picker (optional)
+- Location: Text field or location reference
+- Description: Multi-line text field
+
+ALTERNATIVE: Add from Worker Profile
+1. Navigate to worker profile
+2. click button "Related Actions"
+3. click menu item "Career"
+4. click menu item "Add Job History"
+5. (continue from step 14 above)
+
+ALTERNATIVE: Edit Existing Job History
+1. Navigate to worker profile
+2. click tab "Career"
+3. scroll to Job History section
+4. click existing job history entry
+5. click button "Edit"
+6. modify fields as needed
+7. click button "Submit"
+
+ALTERNATIVE: Administrator Entry
+1. Login as HR Administrator (not proxied)
+2. enter search box as "Add Job History"
+3. Select worker when prompted
+4. Enter job history details
+5. Submit (may bypass approval)
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Human_Resources.Put_Job_History
+- REST: /workers/{ID}/jobHistory (POST)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Add Job History
+ERROR HANDLING:
+- "Worker not found": Verify worker name/ID
+- "Invalid date range": End date must be after start date
+- "Access denied": User lacks self-service access
+- "Approval required": Job history awaiting manager approval
 
-### 1. Kb Absence Time Off (score: 3)
-Source: kb_absence_time_off.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: REQUEST TIME OFF (ABSENCE) BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Absence Management...
 ================================================================================

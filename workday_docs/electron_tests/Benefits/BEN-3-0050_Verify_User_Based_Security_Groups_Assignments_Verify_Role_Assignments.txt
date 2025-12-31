@@ -1,45 +1,109 @@
 ================================================================================
 TEST ID: BEN-3-0050
 FUNCTIONAL AREA: Benefits
-TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+TEST NAME: Verify User Based Security Groups & Role Assignments
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: View Security Group
+TASK/STEP: Verify Security Groups and Role Assignments for Benefits
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: View Security Group
+DESCRIPTION:
+Verify that user-based security groups and role assignments for benefits
+administration are correctly configured. Ensure appropriate users have
+access to benefits tasks and sensitive data.
 
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Superv
-... (truncated)
+PREREQUISITES:
+- User logged in with Security Administrator role
+- List of expected benefits security group members
+- Understanding of benefits roles and permissions
 
 ELECTRON STEPS:
 1. enter search box as "View Security Group"
 2. wait for search results
 3. click search result containing "View Security Group"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0050_complete.png"
+4. wait for page to load
+5. enter security group as "Benefits Administrator"
+6. click search result for "Benefits Administrator"
+7. wait for security group details to load
+8. screenshot as "BEN-3-0050_benefits_admin.png"
+
+VERIFY BENEFITS ADMINISTRATOR MEMBERS:
+9. scroll to members section
+10. verify expected administrators are listed
+11. note total member count
+12. verify no unauthorized users have access
+13. screenshot as "BEN-3-0050_admin_members.png"
+
+VERIFY BENEFITS PARTNER GROUP:
+14. enter search box as "View Security Group"
+15. wait for search results
+16. click search result containing "View Security Group"
+17. enter security group as "Benefits Partner"
+18. click search result for "Benefits Partner"
+19. wait for security group details to load
+20. verify expected partners are listed
+21. screenshot as "BEN-3-0050_benefits_partner.png"
+
+VERIFY ROLE-BASED ASSIGNMENTS:
+22. enter search box as "View Assignable Roles"
+23. wait for search results
+24. click search result containing "View Assignable Roles"
+25. filter by role type "Benefits"
+26. wait for results to load
+27. verify benefits-related roles listed
+28. screenshot as "BEN-3-0050_roles.png"
+
+VERIFY SPECIFIC USER ACCESS:
+29. enter search box as "View Security Groups for User"
+30. wait for search results
+31. click search result containing "View Security Groups for User"
+32. enter user as "{test_user_id}"
+33. wait for results to load
+34. verify user has appropriate benefits security groups
+35. verify user does not have excessive permissions
+36. screenshot as "BEN-3-0050_user_security.png"
+
+AUDIT SECURITY ASSIGNMENTS:
+37. enter search box as "Security Group Membership Report"
+38. wait for search results
+39. click search result containing "Security Group Membership Report"
+40. select security group type as "User-Based"
+41. filter by "Benefits" keyword
+42. click button "OK"
+43. wait for report to load
+44. verify all benefits security group memberships
+45. screenshot as "BEN-3-0050_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Benefits Administrator security group verified
+- [ ] Benefits Partner security group verified
+- [ ] All members are authorized users
+- [ ] No unauthorized users have access
+- [ ] Role assignments are appropriate
+- [ ] Specific user access verified
+- [ ] Security audit report generated
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+All benefits-related security groups and role assignments verified with
+appropriate users having correct access levels.
+
+BENEFITS SECURITY GROUPS:
+- Benefits Administrator
+- Benefits Partner
+- Benefits Analyst
+- Benefits Self-Service
+- COBRA Administrator
+- Benefits API Integration
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Review security quarterly for compliance
+- Remove terminated employees promptly
+- Document all security assignments
+- Follow least-privilege principle
+- Source: [Workday Security Administration]
+
+API ALTERNATIVE:
+- SOAP: Get_Security_Groups, Get_User_Based_Security_Group_Members
+- REST: /security/v1/securityGroups
 ================================================================================

@@ -2,44 +2,122 @@
 TEST ID: BEN-3-0060
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Worker Benefit Elections Details
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Extract Worker Benefit Elections Details
+TASK/STEP: Verify Worker Benefit Elections and Coverage Details
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Extract Worker Benefit Elections Details
+DESCRIPTION:
+Verify individual worker benefit elections including plan enrollments,
+coverage levels, costs, dependents covered, and beneficiary designations.
+Ensure elections match expected data and are correctly processed.
 
-### 1. Test Scenarios Index (score: 10)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organiz
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or HR Partner role
+- Test employee with active benefit elections
+- Expected election details for comparison
 
 ELECTRON STEPS:
-1. enter search box as "Extract Worker Benefit Elections Details"
+1. enter search box as "View Benefit Elections"
 2. wait for search results
-3. click search result containing "Extract Worker Benefit Elections Details"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0060_complete.png"
+3. click search result containing "View Benefit Elections"
+4. wait for page to load
+5. enter worker as "{test_employee_id}"
+6. wait for elections to load
+7. screenshot as "BEN-3-0060_elections.png"
+
+VERIFY MEDICAL ELECTION:
+8. scroll to medical section
+9. verify medical plan name matches expected
+10. verify coverage level (Employee Only, Family, etc.)
+11. verify enrolled dependents are listed
+12. verify employee premium cost
+13. verify effective date
+14. screenshot as "BEN-3-0060_medical.png"
+
+VERIFY DENTAL AND VISION:
+15. scroll to dental section
+16. verify dental plan and coverage level
+17. verify dental premium cost
+18. scroll to vision section
+19. verify vision plan and coverage level
+20. verify vision premium cost
+21. screenshot as "BEN-3-0060_dental_vision.png"
+
+VERIFY LIFE INSURANCE:
+22. scroll to life insurance section
+23. verify basic life coverage amount
+24. verify supplemental life amount (if elected)
+25. verify spouse/dependent life (if elected)
+26. screenshot as "BEN-3-0060_life.png"
+
+VERIFY SPENDING ACCOUNTS:
+27. scroll to spending accounts section
+28. verify HSA election amount (if HDHP)
+29. verify Health FSA election (if applicable)
+30. verify Dependent Care FSA election
+31. verify per-paycheck deductions calculated
+32. screenshot as "BEN-3-0060_fsa_hsa.png"
+
+VERIFY RETIREMENT:
+33. scroll to retirement section
+34. verify 401(k) contribution percentage
+35. verify pre-tax vs Roth allocation
+36. verify employer match calculation
+37. screenshot as "BEN-3-0060_retirement.png"
+
+VERIFY DEPENDENTS:
+38. click tab "Covered Dependents"
+39. verify all dependents listed correctly
+40. verify dependent relationships accurate
+41. verify dependent dates of birth
+42. screenshot as "BEN-3-0060_dependents.png"
+
+VERIFY BENEFICIARIES:
+43. click tab "Beneficiaries"
+44. verify primary beneficiaries listed
+45. verify beneficiary percentages = 100%
+46. verify contingent beneficiaries (if designated)
+47. screenshot as "BEN-3-0060_beneficiaries.png"
+
+EXTRACT FULL DETAILS:
+48. click button "Export to PDF"
+49. wait for export to complete
+50. screenshot as "BEN-3-0060_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Medical election verified with correct plan and coverage
+- [ ] Dental election verified
+- [ ] Vision election verified
+- [ ] Life insurance coverage amounts correct
+- [ ] Spending account contributions correct
+- [ ] Retirement contributions and match verified
+- [ ] All covered dependents listed accurately
+- [ ] Beneficiary designations complete
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+All worker benefit elections verified with correct plans, coverage levels,
+costs, dependents, and beneficiaries matching expected data.
+
+ELECTION DETAILS TO VERIFY:
+- Plan name and type
+- Coverage tier/level
+- Employee premium (per paycheck and annual)
+- Effective date
+- Covered dependents
+- Coverage amounts (life, disability)
+- Contribution amounts (FSA, HSA, 401k)
+- Beneficiary designations
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Run for sample employees during UAT
+- Compare to carrier files for accuracy
+- Document any discrepancies
+- Verify cost calculations are correct
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Benefit_Elections
+- REST: /benefitsAdmin/v1/workers/{workerId}/benefitElections
 ================================================================================

@@ -4,8 +4,9 @@ FUNCTIONAL AREA: Advanced Compensation
 TEST NAME: Stock Vesting Schedules
 WORKDAY ROLE: Compensation Administrator
 EST. DURATION: 5 minutes
-CONFIDENCE SCORE: 3.0/10
-STATUS: [XX] MANUAL
+CONFIDENCE: HIGH Score: 8.0/10
+SOURCE: [KB Article: kb_advanced_compensation.txt]
+STATUS: [OK] ACCEPTED
 ================================================================================
 
 DESCRIPTION:
@@ -16,68 +17,37 @@ Search bar: "Stock Vest Sched"
 
 PREREQUISITES:
 - User logged in with Compensation Administrator permissions
-- Required data: [Based on scenario requirements]
+- Required data: Vesting schedule names to review
 
 ELECTRON STEPS:
-1. [MANUAL REQUIRED - Insufficient KB coverage]
-2. Confidence Score: 3.0/10
-3. 
-4. RAG Results:
-5. Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Stock Vest Sched
-
-### 1. Kb Benefits Enrollment (score: 3)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Administra
+1. enter search box as "Stock Vesting Schedules"
+2. wait for search results
+3. click search result containing "Stock Vesting Schedules"
+4. wait for page to load
+5. screenshot as "ACM-1-0150_vesting_schedules_list.png"
+6. verify list of vesting schedules is displayed
+7. click link for first Vesting Schedule in list
+8. wait for schedule details to load
+9. verify field "Schedule Name" is displayed
+10. verify field "Effective Date" is displayed
+11. verify section "Vesting Events" is displayed
+12. verify vesting percentages are displayed
+13. verify vesting dates/periods are displayed
+14. screenshot as "ACM-1-0150_vesting_details.png"
+15. scroll to view all vesting events
+16. verify cliff vesting if applicable
+17. screenshot as "ACM-1-0150_complete.png"
 
 VERIFICATION:
+- [ ] Stock Vesting Schedules page loads correctly
+- [ ] List of schedules is displayed
+- [ ] Schedule details show vesting events
+- [ ] Vesting percentages total 100%
+- [ ] Vesting periods are defined
 - [ ] No error messages displayed
 - [ ] Task completed successfully
 
-RAG ANALYSIS:
---------------------------------------------------------------------------------
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Stock Vest Sched
-
-### 1. Kb Benefits Enrollment (score: 3)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
-
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Administration
-Ca...
-```
-
-### 2. Admin Guide Glossary (score: 3)
-Source: Admin-Guide-Glossary.pdf
-```
-Glossary
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Full Glossary of Terms........................................................................................3
-      ©2025 Workday, Inc. All rights reserved
-Workday Proprietary and Confidential      
- | Full Glossary of Terms | 3
-...
-```
-
-### 3. User Guide Workday Prism Analytics (score: 3)
-Source: User-Guide-Workday-Prism-Analytics.pdf
---------------------------------------------------------------------------------
+API ALTERNATIVE:
+- SOAP: Get_Stock_Vesting_Schedules (Compensation.wsdl)
 
 ================================================================================

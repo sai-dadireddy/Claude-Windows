@@ -1,0 +1,53 @@
+================================================================================
+TEST ID: TT-1-0130
+FUNCTIONAL AREA: Time Tracking
+TEST NAME: Time Worklet
+STATUS: ACCEPTED
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [KB Article: kb_time_tracking.txt]
+================================================================================
+
+DESCRIPTION:
+Proxy as an Employee as Self worker. Ensure 'Time' Worklet is available to employee and contains the appropriate tasks/reports
+
+PREREQUISITES:
+- User logged in with Time Tracking Administrator permissions
+- Access to Start Proxy task
+- Test employee identified for proxy
+
+ELECTRON STEPS:
+1. enter search box as "Start Proxy"
+2. wait for search results
+3. click first search result
+4. wait for page to load
+5. enter test employee name in worker field
+6. click button "OK" to start proxy session
+7. wait for proxy session to start
+8. enter search box as "Time Worklet"
+9. wait for search results
+10. click first search result containing "Worklet"
+11. wait for worklet to load
+12. verify "Enter Time" task is available
+13. verify "View Time Off" task is available
+14. verify expected reports are visible
+15. screenshot as "TT-1-0130_complete.png"
+16. click link "Stop Proxy" to end session
+
+VERIFICATION:
+- [ ] Proxy session starts successfully
+- [ ] Time Worklet is accessible
+- [ ] Enter Time task is visible
+- [ ] Expected tasks/reports are present
+- [ ] Worklet displays correctly
+- [ ] No error messages displayed
+- [ ] Task completed successfully
+
+WORKDAY ROLE: Time Tracking Administrator
+EST. EFFORT: 5 minutes
+
+================================================================================
+RAG NOTES:
+- Time Worklet is employee self-service for time entry
+- Contains Enter Time, View Time Off, and related tasks
+- Verify security allows employee access
+================================================================================

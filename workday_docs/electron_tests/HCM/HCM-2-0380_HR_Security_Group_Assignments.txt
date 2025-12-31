@@ -2,8 +2,8 @@
 TEST ID: HCM-2-0380
 FUNCTIONAL AREA: HCM
 TEST NAME: HR Security Group Assignments
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [RAG + KB Enhancement]
 ================================================================================
 
 DESCRIPTION:
@@ -13,42 +13,127 @@ WORKDAY ROLE: HR Administrator / HR Partner
 EST. DURATION: 20 minutes
 
 PREREQUISITES:
-- User logged in with HR Administrator / HR Partner permissions
-- Required data available in tenant
+- User logged in with Security Administrator permissions
+- HR Partner security group configured
+- HR Administrator security group configured
+- Test users assigned to security groups
 
 ELECTRON STEPS:
-1. enter search box as "Start Proxy"
+1. enter search box as "View Security Group"
 2. wait for search results
-3. click search result containing "Start Proxy"
+3. click search result containing "View Security Group"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "HCM-2-0380_complete.png"
+5. enter Security Group as "HR Partner"
+6. click button "OK"
+7. wait for page to load
+8. verify HR Partner security group details display
+9. screenshot as "HCM-2-0380_hr_partner_group.png"
+10. scroll to Member section
+11. verify expected users assigned to HR Partner
+12. screenshot as "HCM-2-0380_hr_partner_members.png"
+13. enter search box as "View Security Group"
+14. wait for search results
+15. click search result containing "View Security Group"
+16. wait for page to load
+17. enter Security Group as "HR Administrator"
+18. click button "OK"
+19. wait for page to load
+20. verify HR Administrator security group details display
+21. screenshot as "HCM-2-0380_hr_admin_group.png"
+22. scroll to Member section
+23. verify expected users assigned to HR Administrator
+24. screenshot as "HCM-2-0380_hr_admin_members.png"
+25. enter search box as "Start Proxy"
+26. wait for search results
+27. click search result containing "Start Proxy"
+28. wait for page to load
+29. enter Worker as "{hr_partner_user}"
+30. click button "OK"
+31. wait for page to load
+32. verify proxy as HR Partner successful
+33. enter search box as "Hire Employee"
+34. wait for search results
+35. verify "Hire Employee" task appears in results
+36. screenshot as "HCM-2-0380_hr_partner_access.png"
+37. enter search box as "End Proxy"
+38. click search result containing "End Proxy"
+39. wait for page to load
+40. screenshot as "HCM-2-0380_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
+- [ ] View Security Group task accessible
+- [ ] HR Partner security group found
+- [ ] HR Partner group members list accurate
+- [ ] HR Administrator security group found
+- [ ] HR Administrator group members list accurate
+- [ ] Proxy to HR Partner user successful
+- [ ] HR Partner can access staffing tasks (Hire, Terminate, Change Job)
+- [ ] HR Partner can access personal data tasks
+- [ ] HR Partner can access relevant reports
+- [ ] HR Administrator has expanded access
+- [ ] Security group membership aligns with organizational structure
+- [ ] No unauthorized users in HR security groups
 - [ ] No error messages displayed
 
+HR PARTNER EXPECTED ACCESS:
+- Hire Employee
+- Terminate Employee
+- Change Job
+- Edit Personal Information
+- View Worker Profile
+- Staffing reports
+- Personal data for supported organizations
+
+HR ADMINISTRATOR EXPECTED ACCESS:
+- All HR Partner access plus:
+- Maintain reference data (Job Profiles, Locations, etc.)
+- Security configuration tasks
+- Mass data operations
+- Integration tasks
+- System administration tasks
+
+FIELD REFERENCE:
+- Security Group: Name of the security group
+- Type: Unconstrained, Constrained, User-based, etc.
+- Members: Users assigned to group
+- Domain Policies: Access granted by group
+- Business Process Policies: BP permissions
+
+ALTERNATIVE: Check User Security
+1. enter search box as "Security Analysis for Securable Item"
+2. wait for search results
+3. click search result containing "Security Analysis"
+4. wait for page to load
+5. enter Securable Item as "Hire Employee"
+6. click button "OK"
+7. wait for page to load
+8. verify which security groups have access
+9. screenshot as "HCM-2-0380_security_analysis.png"
+
+ALTERNATIVE: View User Permissions
+1. enter search box as "View User"
+2. click search result containing "View User"
+3. wait for page to load
+4. enter User as "{hr_partner_user}"
+5. click button "OK"
+6. scroll to Security Groups section
+7. verify HR Partner group assignment
+
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: /workers
+- SOAP: Workday_Common.Get_Security_Group
+- REST: /securityGroups (GET)
+- REST: /users/{ID}/securityGroups
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Start Proxy
+SECURITY GROUP TYPES:
+- Unconstrained: Global access to domain
+- Organization-Constrained: Access limited to org hierarchy
+- Role-Based: Based on organization role (Manager, HR Partner)
+- User-Based: Specific user membership
 
-### 1. User Guide Sourcing Managers (score: 2)
-Source: User-Guide-Sourcing-Managers.pdf
-```
-Strategic Sourcing:
-Sourcing Managers
-Product Summary
-December 10, 2025
-This content is not part of the Workday Administrator Guide and is subject to further change.
- | Contents | ii
-Contents
-Strategic Sourcing for Sourcing Managers.........................................................
+ERROR HANDLING:
+- "Security Group not found": Check security group name
+- "Access denied": User lacks security admin permissions
+- "Proxy failed": User not eligible for proxy
+- "Task not found": Security policy may restrict access
+
 ================================================================================

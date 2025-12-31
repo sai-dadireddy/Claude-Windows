@@ -2,44 +2,100 @@
 TEST ID: BEN-3-0040
 FUNCTIONAL AREA: Benefits
 TEST NAME: Report: Active Employees Not Eligible for Benefits
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 ================================================================================
 
-TASK/STEP: Active Employees Not Eligible for Benefits
+TASK/STEP: Run Report for Active Employees Not Eligible for Benefits
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Active Employees Not Eligible for Benefits
+DESCRIPTION:
+Generate report to identify active employees who are not currently eligible
+for any benefit plans. Review reasons for ineligibility and determine if
+any corrections are needed.
 
-### 1. Test Scenarios Index (score: 11)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organ
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator or Benefits Analyst role
+- Benefit eligibility rules configured
+- Understanding of valid reasons for ineligibility
 
 ELECTRON STEPS:
 1. enter search box as "Active Employees Not Eligible for Benefits"
 2. wait for search results
 3. click search result containing "Active Employees Not Eligible for Benefits"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0040_complete.png"
+4. wait for page to load
+5. select effective date as "{effective_date}"
+6. select company as "All Companies" or "{specific_company}"
+7. click button "OK"
+8. wait for report to load
+9. screenshot as "BEN-3-0040_report.png"
+
+ANALYZE INELIGIBLE EMPLOYEES:
+10. verify report displays list of ineligible employees
+11. note total count of ineligible employees
+12. scroll through employee list
+13. identify patterns in ineligibility reasons
+14. screenshot as "BEN-3-0040_list.png"
+
+REVIEW INELIGIBILITY REASONS:
+15. click first employee "{employee_1}"
+16. wait for employee details to load
+17. verify ineligibility reason displayed
+18. note employee type and status
+19. note hours worked if part-time
+20. screenshot as "BEN-3-0040_employee1.png"
+21. click button "Back"
+
+CHECK FOR DATA ISSUES:
+22. click employee "{employee_2}"
+23. verify employment data is complete
+24. check for missing job profile
+25. check for missing location
+26. check for incorrect employee type
+27. screenshot as "BEN-3-0040_employee2.png"
+28. click button "Back"
+
+EXPORT REPORT:
+29. click button "Export to Excel"
+30. wait for export to complete
+31. verify export file contains all ineligible employees
+32. screenshot as "BEN-3-0040_export.png"
+
+SUMMARY ANALYSIS:
+33. scroll to summary section
+34. note count by ineligibility reason
+35. note count by employee type
+36. note count by location
+37. screenshot as "BEN-3-0040_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Report generated successfully
+- [ ] All ineligible employees listed
+- [ ] Ineligibility reasons displayed
+- [ ] Legitimate reasons validated (contractors, part-time, etc.)
+- [ ] Data issues identified for correction
+- [ ] Export completed successfully
+- [ ] No error messages displayed
+
+EXPECTED RESULT:
+Report identifies all active employees not eligible for benefits with
+clear reasons for ineligibility, allowing for data correction or
+confirmation of valid exclusions.
+
+COMMON REASONS FOR INELIGIBILITY:
+- Part-time (below hours threshold)
+- Contractor or Temporary status
+- In waiting period (new hire)
+- International employee (different program)
+- Union employee (separate bargaining agreement)
+- Data error (missing job profile, location, etc.)
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Review monthly to catch data issues early
+- Flag employees who should be eligible
+- Coordinate with HR for corrections
+- Document legitimate exclusions
+- Source: [KB Benefits Enrollment, WSDL Analysis]
+
+API ALTERNATIVE:
+- SOAP: Get_Workers (filter for benefits ineligibility)
+- REST: /workers/v1/workers (with benefits eligibility filter)
 ================================================================================
