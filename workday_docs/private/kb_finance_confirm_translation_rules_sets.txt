@@ -1,32 +1,27 @@
-TOPIC: Confirm Translation Rules Sets
-SEARCH DATE: 2025-12-31
-TOTAL RESULTS: 847
-PAGE: 1 of 29 (30 results per page)
+# Workday KB: Confirm Translation Rules Sets
+# Searched: 2024-12-31
+# Query: "Confirm Translation Rules Sets"
+# Total Results: 500 (132 English Admin Guide)
+# Pages: 17 (EN content in pages 1-10 only)
 
-=== SEARCH RESULTS ===
+## Summary by Page
+Page 1: 25 EN Admin Guide results
+Page 2: 16 EN Admin Guide results
+Page 3: 17 EN Admin Guide results
+Page 4: 13 EN Admin Guide results
+Page 5: 15 EN Admin Guide results
+Page 6: 18 EN Admin Guide results
+Page 7: 9 EN Admin Guide results
+Page 8: 6 EN Admin Guide results
+Page 9: 7 EN Admin Guide results
+Page 10: 6 EN Admin Guide results
+Pages 11-17: 0 EN Admin Guide results (non-English translations only)
 
-1. Steps: Preserve Historical Data When Updating Account Translation Rule Sets
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/currency-translation/steps--preserve-historical-data-when-updating-acco.html
-   EXCERPT: Steps: Preserve Historical Data When Updating Account Translation Rule Sets Set Up Currency Translation Methods Create Rules for Translating Ledger Accounts ... Example: Standard
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-10
+- Pages 11-17 contain only non-English translations
+- 132 total EN Admin Guide results out of 500 total search results
 
-2. Steps: Preserve Historical Data When Updating Account Translation Rule Sets in AP&C
-   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/currency-translation-in-ap&c/steps--preserve-historical-data-when-updating-acco.html
-   EXCERPT: Create Rules for Translating Ledger Accounts in AP&C ... Since Workday doesn't apply effective dating on account translation rule sets, changing the rule set also changes historical data
-
-3. Create Rules for Translating Ledger Accounts
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/currency-translation/dan1370796739208.html
-   EXCERPT: Enter a name for the translation rule set. Enter a name for the rule set.
-
-4. Steps: Set Up Currency Translations
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/currency-translation/dan1370796984592.html
-   EXCERPT: Set Up Currency Translation Methods, Create Rules for Translating Ledger Accounts
-
-5. Steps: Set Up Currency Translations in AP&C
-   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/currency-translation-in-ap&c/dan1370796984592.html
-   EXCERPT: Set Up Currency Translation Methods in AP&C, Create Rules for Translating Ledger Accounts in AP&C
-
-KEY DOCUMENTATION LINKS:
-- Currency Translation: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/currency-translation/
-- AP&C Currency Translation: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/currency-translation-in-ap&c/
-
-NOTE: 847 total results available. First 30 captured. Use pagination for more results.
+## Key Topics
+- Translation rules sets configuration
+- Related to currency translation and consolidation
