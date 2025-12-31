@@ -69,15 +69,22 @@ JSON.stringify(filtered.map(x => ({title: x.title, url: x.clickUri, excerpt: x.e
 
 **Example:** 500 results = 17 pages. Must extract all 17.
 
-## Electron Commands
-| Command | Example |
-|---------|---------|
-| enter | `enter search box as "Hire Employee"` |
-| click | `click button "Submit"` |
-| select | `select reason as "Resignation"` |
-| verify | `verify message contains "Success"` |
-| screenshot | `screenshot as "HCM-1-0010.png"` |
-| wait | `wait for page to load` |
+## Electron DSL Commands
+Natural language commands for test scripts (see `private/kb_electron_dsl.txt` for full reference).
+
+| Command | Example | Usage |
+|---------|---------|-------|
+| enter | `enter search box as "Hire Employee"` | Text input |
+| click | `click button "Submit"` | Click element |
+| select | `select reason as "Resignation"` | Dropdown |
+| verify | `verify success message displays` | Assertion |
+| screenshot | `screenshot as "HCM-1-0010.png"` | Capture |
+| wait | `wait for page to load (3 seconds)` | Delay |
+| navigate | `navigate back to Benefits Hub` | Navigation |
+| complete | `complete required fields` | Form fill |
+| review | `review configuration settings` | Visual check |
+
+**Top commands (270+ scripts):** wait for search results (2899), wait for page to load (2784), click "Submit" (413)
 
 ## File Structure
 ```

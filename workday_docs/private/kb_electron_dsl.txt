@@ -1,0 +1,276 @@
+# Workday Electron Test DSL Reference
+# Domain-Specific Language for Natural Language Test Scripts
+# Date: 2025-12-31
+
+================================================================================
+OVERVIEW
+================================================================================
+The Workday Electron test app interprets natural language commands.
+Scripts are human-readable and executed by the Electron test runner.
+
+================================================================================
+COMMAND REFERENCE
+================================================================================
+
+## 1. INPUT COMMANDS
+
+### enter
+Type text into a field.
+```
+enter search box as "Hire Employee"
+enter worker name as "{worker_id}"
+enter supplier name as "{supplier_name}"
+enter search box as "nan"  # Empty/skip
+```
+
+### fill
+Fill form fields (often with dynamic data).
+```
+fill required fields based on RAG guidance
+complete required fields
+```
+
+### select
+Choose from dropdown/option list.
+```
+select supplier category
+select reason as "Resignation"
+select option from dropdown
+```
+
+### press
+Keyboard action.
+```
+press Enter
+press Enter or click Search
+```
+
+================================================================================
+## 2. NAVIGATION COMMANDS
+
+### click
+Click on elements.
+```
+click search result
+click search result containing "Extract Companies"
+click button "Submit"
+click button "OK"
+click "Submit" button
+click "Done" or "Submit"
+click "OK" to search with default criteria
+click on the first relevant result
+click link "View Pay Statements"
+```
+
+### navigate
+Navigate to pages.
+```
+navigate to appropriate page
+navigate back to Benefits and Pay Hub
+```
+
+================================================================================
+## 3. WAIT COMMANDS
+
+### wait for
+Wait for specific states.
+```
+wait for search results
+wait for search results (2 seconds)
+wait for search results to load
+wait for page to load
+wait for page to load (3 seconds)
+wait for page load
+wait for confirmation
+wait for results to load
+wait for report to generate
+wait for pay statements page to load
+wait 2  # Wait 2 seconds
+```
+
+================================================================================
+## 4. VERIFICATION COMMANDS
+
+### verify
+Assert conditions.
+```
+verify settings are correct
+verify configuration page displays
+verify success message displays
+verify all required fields are populated
+verify page displays correctly
+verify data displays
+verify page title contains expected content
+verify information is accurate
+verify no error messages displayed
+verify page loaded successfully
+verify search page displays
+verify results display
+verify section "Pay" is visible
+verify link "View Pay Statements" is available
+verify current benefit elections are displayed
+verify time off balances are displayed
+verify pay statement list appears
+```
+
+### review
+Visual inspection.
+```
+review configuration settings
+review configuration/data as described in test description
+review available fields and options
+```
+
+================================================================================
+## 5. ACTION COMMANDS
+
+### submit
+Submit forms.
+```
+submit form
+```
+
+### complete
+Complete actions.
+```
+complete required fields
+complete required actions
+```
+
+### screenshot
+Capture screen state.
+```
+screenshot as "HCM-1-0010_complete.png"
+screenshot as "USP-5-0070_pay_section.png"
+```
+
+================================================================================
+## 6. SPECIAL MARKERS
+
+### RAG-extracted steps
+Auto-generated steps from RAG.
+```
+RAG-extracted steps:
+   - Audit Company Setup: Extract Companies
+   - Audit Location Setup: Extract Location
+```
+
+### MANUAL markers
+When automation not possible.
+```
+[MANUAL REQUIRED - Insufficient KB coverage]
+[MANUAL] No RAG guidance available - manual test required
+```
+
+================================================================================
+COMMAND FREQUENCY (from 270+ test files)
+================================================================================
+| Command | Count | Usage |
+|---------|-------|-------|
+| wait for search results | 2899 | After every search |
+| wait for page to load | 2784 | After navigation |
+| complete required fields | 683 | Form filling |
+| wait for confirmation | 432 | After submit |
+| verify settings are correct | 415 | Validation |
+| verify configuration page displays | 415 | Page check |
+| click "Submit" button | 413 | Form submission |
+| verify success message displays | 387 | Success validation |
+| verify all required fields are populated | 318 | Field check |
+| verify page displays correctly | 303 | Page validation |
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Always wait after actions:
+   ```
+   click search result
+   wait for page to load
+   ```
+
+2. Verify before screenshot:
+   ```
+   verify success message displays
+   screenshot as "test_complete.png"
+   ```
+
+3. Use specific selectors when possible:
+   ```
+   click search result containing "Hire Employee"
+   ```
+   Instead of:
+   ```
+   click search result
+   ```
+
+4. Include wait times for slow pages:
+   ```
+   wait for page to load (3 seconds)
+   ```
+
+5. Add verification after each major action:
+   ```
+   click "Submit" button
+   wait for confirmation
+   verify success message displays
+   ```
+
+================================================================================
+TEST SCRIPT TEMPLATE
+================================================================================
+
+```
+================================================================================
+TEST ID: {AREA}-{NUMBER}
+FUNCTIONAL AREA: {Area Name}
+TEST NAME: {Test Name}
+CONFIDENCE: [HIGH/MEDIUM/LOW] Score: X.X/10
+SOURCE: [RAG/KB Article/Manual]
+================================================================================
+
+DESCRIPTION:
+{What this test verifies}
+
+WORKDAY ROLE: {Required role}
+EST. DURATION: {X minutes}
+
+PREREQUISITES:
+- User logged in with {role} permissions
+- Required data available in tenant
+
+ELECTRON STEPS:
+1. enter search box as "{Task Name}"
+2. wait for search results
+3. click search result containing "{Task Name}"
+4. wait for page to load
+5. verify page displays correctly
+6. complete required fields
+7. click "Submit" button
+8. wait for confirmation
+9. verify success message displays
+10. screenshot as "{TEST_ID}_complete.png"
+
+VERIFICATION:
+- [ ] Task completed successfully
+- [ ] No error messages displayed
+- [ ] Data saved correctly
+
+API ALTERNATIVE:
+- SOAP: {Service/Operation}
+- REST: {Endpoint/Method}
+================================================================================
+```
+
+================================================================================
+DSL EVOLUTION
+================================================================================
+Future commands to consider:
+- `scroll to element "..."`
+- `hover over "..."`
+- `drag "..." to "..."`
+- `upload file "..."`
+- `assert count of "..." equals N`
+- `loop N times: ...`
+- `if "..." visible then ...`
+
+================================================================================
