@@ -1,0 +1,238 @@
+================================================================================
+WORKDAY KB RESEARCH - SESSION PROMPTS
+================================================================================
+Total: 79 topics across 5 sessions
+Each session: Own Chrome tab, unique topics, no conflicts
+================================================================================
+
+================================================================================
+SESSION 1: FINANCE PRIORITY 1 (15 topics)
+================================================================================
+COPY THIS PROMPT:
+---
+You are researching Workday KB topics. Your task:
+
+1. CREATE YOUR OWN Chrome tab (CRITICAL - don't share):
+   - mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=true)
+   - mcp__claude-in-chrome__tabs_create_mcp()
+   - Save TAB_ID for all calls
+
+2. Navigate to: https://doc.workday.com/admin-guide/en-us/
+
+3. Research ONLY these 15 topics (search each, extract via Coveo):
+   - Confirm Statistical Definitions
+   - Verify Tax Applicabilities
+   - Verify Tax Recoverabilities
+   - Confirm Book Codes
+   - Confirm Revaluation Rules
+   - Confirm Revaluation Groups
+   - Confirm Worktag Usage
+   - Verify Tax Authorities
+   - Verify Tax Declaration Definitions
+   - Unpost Accounting Journal
+   - Create Accounting Adjustment
+   - View Accounting Adjustment
+   - View Allocation Accounting
+   - View Revaluation Results
+   - Review Elimination Rules
+
+4. For each topic:
+   - Search with quotes: "Tax Applicabilities"
+   - Extract via Coveo JS:
+     var e = document.querySelector("atomic-search-interface").engine;
+     JSON.stringify(e.state.search.results.map(function(r){return {title: r.title, url: r.clickUri};}));
+   - Save to: workday_docs/private/kb_finance_{topic_slug}.txt
+   - Wait 3-5 seconds between searches
+
+5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
+
+6. Close tab when finished: navigate to about:blank
+---
+
+================================================================================
+SESSION 2: FINANCE PRIORITY 2 + CASE MANAGEMENT (12 topics)
+================================================================================
+COPY THIS PROMPT:
+---
+You are researching Workday KB topics. Your task:
+
+1. CREATE YOUR OWN Chrome tab (CRITICAL - don't share):
+   - mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=true)
+   - mcp__claude-in-chrome__tabs_create_mcp()
+   - Save TAB_ID for all calls
+
+2. Navigate to: https://doc.workday.com/admin-guide/en-us/
+
+3. Research ONLY these 12 topics:
+   FINANCE:
+   - Confirm Translation Rules Sets
+   - Confirm Allocation Definitions
+   - Confirm Allocation Group Sets
+   - Verify Transaction Tax Rates
+   - Verify Transaction Tax Codes
+   - Verify Tax Declaration Component Categories
+   - Verify Tax Declaration Components
+   - Run Consolidated Trial Balance
+
+   CASE MANAGEMENT:
+   - Create a Case on Behalf of a Non-Worker
+   - Create a Case About a Worker
+   - Create a Case for Individual Contributor
+   - Create a Case for Managers
+
+4. For each topic:
+   - Search with quotes
+   - Extract via Coveo JS
+   - Save to: workday_docs/private/kb_{area}_{topic_slug}.txt
+   - Wait 3-5 seconds between searches
+
+5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
+
+6. Close tab when finished
+---
+
+================================================================================
+SESSION 3: HCM (13 topics)
+================================================================================
+COPY THIS PROMPT:
+---
+You are researching Workday KB topics. Your task:
+
+1. CREATE YOUR OWN Chrome tab (CRITICAL - don't share):
+   - mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=true)
+   - mcp__claude-in-chrome__tabs_create_mcp()
+   - Save TAB_ID for all calls
+
+2. Navigate to: https://doc.workday.com/admin-guide/en-us/
+
+3. Research ONLY these 13 HCM topics:
+   - Academic Faculty Review Academic Periods
+   - Academic Faculty Review Academic Rank
+   - Academic Faculty Review Tenure Status
+   - Start Union Membership
+   - End Union Membership
+   - Compensation Security Group Assignments
+   - Manager Security Visibility
+   - Employee Visibility
+   - Hire Using Position Management
+   - Rehire a Terminated Worker
+   - Contract a Contingent Worker
+   - Auto Generated IDs Edit Integration IDs
+   - Audit Worker Data Conversion
+
+4. For each topic:
+   - Search with quotes
+   - Extract via Coveo JS
+   - Save to: workday_docs/private/kb_hcm_{topic_slug}.txt
+   - Wait 3-5 seconds between searches
+
+5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
+
+6. Close tab when finished
+---
+
+================================================================================
+SESSION 4: PAYROLL (10 topics)
+================================================================================
+COPY THIS PROMPT:
+---
+You are researching Workday KB topics. Your task:
+
+1. CREATE YOUR OWN Chrome tab (CRITICAL - don't share):
+   - mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=true)
+   - mcp__claude-in-chrome__tabs_create_mcp()
+   - Save TAB_ID for all calls
+
+2. Navigate to: https://doc.workday.com/admin-guide/en-us/
+
+3. Research ONLY these 10 PAYROLL topics:
+   CANADA:
+   - New Hire to Off-Cycle to Settlement
+   - Termination to Off-Cycle to Settlement
+   - BP Settlement Run Event
+   - Payroll Input to Gross to Settlement
+
+   US:
+   - Missing Payment Elections Review
+   - Review Tenant Analyzer
+   - Review Period Schedule Configuration
+   - Review Pay Run Group Configuration
+   - Benefits and Pay Hub
+   - Review FLSA Calendar Configuration
+
+4. For each topic:
+   - Search with quotes
+   - Extract via Coveo JS
+   - Save to: workday_docs/private/kb_payroll_{topic_slug}.txt
+   - Wait 3-5 seconds between searches
+
+5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
+
+6. Close tab when finished
+---
+
+================================================================================
+SESSION 5: PROCUREMENT + INVENTORY + LEASE + BENEFITS + ENDOWMENTS (14 topics)
+================================================================================
+COPY THIS PROMPT:
+---
+You are researching Workday KB topics. Your task:
+
+1. CREATE YOUR OWN Chrome tab (CRITICAL - don't share):
+   - mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=true)
+   - mcp__claude-in-chrome__tabs_create_mcp()
+   - Save TAB_ID for all calls
+
+2. Navigate to: https://doc.workday.com/admin-guide/en-us/
+
+3. Research ONLY these 14 topics:
+   PROCUREMENT:
+   - View Business Process for Requisition
+   - Create Requisition from PunchOut
+   - Spend Transaction Instructions
+   - Supplier Contract Types
+   - Requisition Types
+
+   INVENTORY:
+   - Confirm Custom Validations
+   - Confirm Worktag Usages
+   - Create Ad Hoc Putaway
+   - Inventory Site Configuration
+   - Stocking Locations
+
+   LEASE ACCOUNTING:
+   - Supplier Contract for Operating Lease
+   - Supplier Contract for Finance Lease
+
+   BENEFITS:
+   - Benefit Census Verification
+
+   ENDOWMENTS:
+   - Add Custom Field to Donor
+
+4. For each topic:
+   - Search with quotes
+   - Extract via Coveo JS
+   - Save to: workday_docs/private/kb_{area}_{topic_slug}.txt
+   - Wait 3-5 seconds between searches
+
+5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
+
+6. Close tab when finished
+---
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+- Each session creates its OWN Chrome tab
+- No topic overlap between sessions
+- Wait 3-5 sec between searches (anti-bot)
+- Save files to: workday_docs/private/
+- Update research_tracker.txt when done
+- Close tabs when finished
+
+COVEO EXTRACTION JS:
+var e = document.querySelector("atomic-search-interface").engine;
+JSON.stringify(e.state.search.results.map(function(r){return {title: r.title, url: r.clickUri};}));
+
+================================================================================
