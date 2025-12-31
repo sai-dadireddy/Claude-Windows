@@ -161,6 +161,58 @@ python workday_rag.py --wsdl Human_Resources
 curl -o {service}_v{version}.json "https://community.workday.com/sites/default/files/file-hosting/restapi/{service}_{version}_{date}_oas2.json"
 ```
 
+### 4. AUTOMATED COVEO EXTRACTION (doc.workday.com)
+
+**BEST METHOD for extracting search results from doc.workday.com!**
+
+doc.workday.com uses Coveo Atomic search components. We can extract ALL search results (30 per page) directly via JavaScript without clicking "Copy to Clipboard" buttons.
+
+```javascript
+// Step 1: Navigate to search
+// https://doc.workday.com/en-us/search.html#q="Tax Applicability"&numberOfResults=30
+
+// Step 2: Extract ALL results from Coveo engine state
+var engine = document.querySelector("atomic-search-interface").engine;
+var results = engine.state.search.results;
+var totalCount = engine.state.search.response.totalCount;
+
+// Each result has:
+// - title: Article title
+// - excerpt: Summary snippet
+// - clickUri: Full URL to documentation
+// - raw: Additional metadata
+
+// Step 3: Format as JSON
+JSON.stringify(results.map(function(r) {
+  return {
+    title: r.title,
+    excerpt: r.excerpt,
+    url: r.clickUri
+  };
+}));
+```
+
+**Benefits over Copy to Clipboard:**
+- Extract ALL 30 results at once (not one by one)
+- Structured JSON output
+- Can paginate through all pages programmatically
+- Get full URLs for navigation
+- Faster and more reliable
+
+**Chrome MCP Workflow:**
+```python
+# Navigate to search
+mcp__claude-in-chrome__navigate(url="https://doc.workday.com/en-us/search.html#q=Tax Applicability", tabId=TAB_ID)
+mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=TAB_ID)
+
+# Extract via JavaScript
+mcp__claude-in-chrome__javascript_tool(
+  action="javascript_exec",
+  text='var e=document.querySelector("atomic-search-interface").engine; JSON.stringify(e.state.search.results.map(function(r){return {t:r.title,u:r.clickUri}}))',
+  tabId=TAB_ID
+)
+```
+
 ---
 
 ## KB Article Format
