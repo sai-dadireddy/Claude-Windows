@@ -1,0 +1,91 @@
+================================================================================
+ELECTRON PERFORMANCE GUIDE - KB
+================================================================================
+Source: https://www.electronjs.org/docs/latest/tutorial/performance
+Date: 2025-12-31
+
+================================================================================
+PERFORMANCE CHECKLIST (8 Critical Items)
+================================================================================
+1. Don't carelessly include modules - load on demand
+2. Don't load/run code too soon - defer non-critical ops
+3. Don't block the main process - use async I/O
+4. Don't block the renderer process - use Web Workers
+5. Remove unnecessary polyfills - Electron has known environment
+6. Avoid unnecessary/blocking network requests
+7. Bundle your code - reduces require() overhead
+8. Call Menu.setApplicationMenu(null) if unused
+
+================================================================================
+CODE EXAMPLES
+================================================================================
+
+--- BAD: Eager Loading ---
+const fs = require('node:fs')
+const fooParser = require('foo-parser')
+class Parser {
+  constructor() {
+    this.files = fs.readdirSync('.')  // SYNC - blocks!
+  }
+}
+
+--- GOOD: Lazy Loading ---
+const fs = require('node:fs')
+class Parser {
+  async getFiles() {
+    this.files = this.files || await fs.promises.readdir('.')
+    return this.files
+  }
+  async getParsedFiles() {
+    const fooParser = require('foo-parser')  // Load when needed
+    const files = await this.getFiles()
+    return fooParser.parse(files)
+  }
+}
+
+--- Disable Default Menu ---
+Menu.setApplicationMenu(null)  // Before app.on("ready")
+
+================================================================================
+BEST PRACTICES FOR ELECTRON SCRIPTS
+================================================================================
+
+| Practice | Why |
+|----------|-----|
+| Profile with Chrome DevTools | Find actual bottlenecks |
+| Use async I/O in main process | Prevent UI freeze |
+| Defer non-critical ops | Faster startup |
+| Bundle app code | Single require() call |
+| Include static assets locally | No network latency |
+| Use Web Workers for CPU tasks | Keep renderer responsive |
+| Use requestIdleCallback() | Maintain 60fps |
+
+================================================================================
+PROFILING COMMANDS
+================================================================================
+node --cpu-prof --heap-prof -e "require('module-name')"
+
+DevTools:
+- Performance tab: CPU profiling
+- Memory tab: Heap analysis
+- Network tab: Request analysis
+
+================================================================================
+WARNINGS
+================================================================================
+- NEVER use sync IPC or @electron/remote - blocks UI thread
+- NEVER block main process - entire app freezes
+- Test with network throttling to find dependencies
+
+================================================================================
+RELATED ELECTRON DOCS TO SCRAPE
+================================================================================
+- /docs/latest/tutorial/quick-start
+- /docs/latest/tutorial/process-model
+- /docs/latest/api/app
+- /docs/latest/api/browser-window
+- /docs/latest/api/ipc-main
+- /docs/latest/api/ipc-renderer
+- /docs/latest/tutorial/security
+- /docs/latest/tutorial/testing
+================================================================================
