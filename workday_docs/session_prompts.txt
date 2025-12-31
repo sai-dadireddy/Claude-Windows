@@ -38,10 +38,14 @@ You are researching Workday KB topics. Your task:
 
 4. For each topic:
    - Search with quotes: "Tax Applicabilities"
+   - CHANGE TO 30 RESULTS PER PAGE (click dropdown, select 30)
    - Extract via Coveo JS:
      var e = document.querySelector("atomic-search-interface").engine;
-     JSON.stringify(e.state.search.results.map(function(r){return {title: r.title, url: r.clickUri};}));
-   - Save to: workday_docs/private/kb_finance_{topic_slug}.txt
+     var total = e.state.search.response.totalCount;
+     JSON.stringify({total: total, results: e.state.search.results.map(function(r){return {title: r.title, url: r.clickUri};})});
+   - PAGINATE: If more pages exist, click Next, wait 3s, extract again
+   - Repeat until ALL pages captured
+   - Save ALL results to: workday_docs/private/kb_finance_{topic_slug}.txt
    - Wait 3-5 seconds between searches
 
 5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
@@ -82,6 +86,8 @@ You are researching Workday KB topics. Your task:
 
 4. For each topic:
    - Search with quotes
+   - CHANGE TO 30 RESULTS PER PAGE
+   - PAGINATE: Click Next until ALL pages captured
    - Extract via Coveo JS
    - Save to: workday_docs/private/kb_{area}_{topic_slug}.txt
    - Wait 3-5 seconds between searches
@@ -122,6 +128,8 @@ You are researching Workday KB topics. Your task:
 
 4. For each topic:
    - Search with quotes
+   - CHANGE TO 30 RESULTS PER PAGE
+   - PAGINATE: Click Next until ALL pages captured
    - Extract via Coveo JS
    - Save to: workday_docs/private/kb_hcm_{topic_slug}.txt
    - Wait 3-5 seconds between searches
@@ -162,6 +170,8 @@ You are researching Workday KB topics. Your task:
 
 4. For each topic:
    - Search with quotes
+   - CHANGE TO 30 RESULTS PER PAGE
+   - PAGINATE: Click Next until ALL pages captured
    - Extract via Coveo JS
    - Save to: workday_docs/private/kb_payroll_{topic_slug}.txt
    - Wait 3-5 seconds between searches
@@ -212,6 +222,8 @@ You are researching Workday KB topics. Your task:
 
 4. For each topic:
    - Search with quotes
+   - CHANGE TO 30 RESULTS PER PAGE
+   - PAGINATE: Click Next until ALL pages captured
    - Extract via Coveo JS
    - Save to: workday_docs/private/kb_{area}_{topic_slug}.txt
    - Wait 3-5 seconds between searches
@@ -227,6 +239,8 @@ IMPORTANT NOTES
 - Each session creates its OWN Chrome tab
 - No topic overlap between sessions
 - Wait 3-5 sec between searches (anti-bot)
+- CHANGE TO 30 RESULTS PER PAGE before extracting
+- PAGINATE through ALL pages for each search
 - Save files to: workday_docs/private/
 - Update research_tracker.txt when done
 - Close tabs when finished
