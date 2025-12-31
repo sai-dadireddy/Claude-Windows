@@ -26,15 +26,33 @@ python workday_rag.py --list              # List REST APIs
 | REST API | community.workday.com/sites/default/files/file-hosting/restapi/ |
 | Community | resourcecenter.workday.com |
 
+## Search URL Structure (doc.workday.com)
+
+**Base:** `https://doc.workday.com/en-us/search.html#q={QUERY}&numberOfResults=30&firstResult={offset}`
+
+| Param | Purpose | Example |
+|-------|---------|---------|
+| `q=` | URL-encoded query | `q=%22Tax%20Applicabilities%22` |
+| `numberOfResults=` | Per page (max 30) | `numberOfResults=30` |
+| `firstResult=` | Pagination offset | Page N: `firstResult=(N-1)*30` |
+
+**Pagination:**
+- Page 1: `firstResult=0` (or omit)
+- Page 2: `firstResult=30`
+- Page 3: `firstResult=60`
+
 ## Coveo Extraction (doc.workday.com)
 
-Extract ALL search results via JS (no manual clicking):
+Extract results via JS:
 ```javascript
 var e = document.querySelector("atomic-search-interface").engine;
-var results = e.state.search.results;
-JSON.stringify(results.map(function(r){
-  return {title: r.title, url: r.clickUri, excerpt: r.excerpt};
-}));
+var r = e.state.search.results;
+// Get total count
+var total = e.state.search.response.totalCount;
+// Filter English Admin Guide only
+var filtered = r.filter(x => x.clickUri.includes('/en-us/') && x.clickUri.includes('admin-guide'));
+// Extract
+JSON.stringify(filtered.map(x => ({title: x.title, url: x.clickUri, excerpt: x.excerpt})));
 ```
 
 ## Electron Commands
