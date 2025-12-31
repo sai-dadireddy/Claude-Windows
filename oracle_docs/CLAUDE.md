@@ -15,6 +15,58 @@ This folder contains Oracle and PeopleSoft documentation for RAG-based queries a
 └── CLAUDE.md         # This file
 ```
 
+## MCP BROWSER ACCESS (For general-purpose agents)
+
+When deployed as a `general-purpose` agent, you have full MCP browser access.
+
+### Create Your Browser Tab (ALWAYS DO THIS FIRST)
+```python
+# Step 1: Get context
+mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=True)
+
+# Step 2: Create YOUR tab (NEVER share tabs)
+result = mcp__claude-in-chrome__tabs_create_mcp()
+TAB_ID = result["tabId"]  # Save this for all operations!
+
+# Step 3: Navigate to MOS
+mcp__claude-in-chrome__navigate(url="https://support.oracle.com/support/", tabId=TAB_ID)
+
+# Step 4: Wait (anti-bot - REQUIRED)
+mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=TAB_ID)
+
+# Step 5: Screenshot to verify login state
+mcp__claude-in-chrome__computer(action="screenshot", tabId=TAB_ID)
+```
+
+### Search MOS and Extract Content
+```python
+# Find search box
+mcp__claude-in-chrome__find(query="search box", tabId=TAB_ID)
+
+# Enter search term
+mcp__claude-in-chrome__form_input(ref="ref_id", value="PeopleSoft upgrade", tabId=TAB_ID)
+
+# Submit search
+mcp__claude-in-chrome__computer(action="key", text="Enter", tabId=TAB_ID)
+mcp__claude-in-chrome__computer(action="wait", duration=5, tabId=TAB_ID)
+
+# Extract page text
+mcp__claude-in-chrome__get_page_text(tabId=TAB_ID)
+
+# Read detailed page structure
+mcp__claude-in-chrome__read_page(tabId=TAB_ID)
+```
+
+### Anti-Bot Rules (CRITICAL - Oracle is strict!)
+1. **Wait 3-5 seconds** between actions (longer than Workday)
+2. **Scroll naturally** before clicking
+3. **Max 10 pages** per session
+4. Use logged-in Chrome session (MOS requires auth)
+5. Close tabs when done: `mcp__claude-in-chrome__navigate(url="about:blank", tabId=TAB_ID)`
+6. **Never automate login** - use existing session only
+
+---
+
 ## Knowledge Sources
 
 ### My Oracle Support (MOS)

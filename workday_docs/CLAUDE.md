@@ -37,6 +37,76 @@ payroll_v2_20251227_oas2.json
 
 ---
 
+## MCP BROWSER ACCESS (For general-purpose agents)
+
+When deployed as a `general-purpose` agent, you have full MCP browser access.
+
+### Create Your Browser Tab (ALWAYS DO THIS FIRST)
+```python
+# Step 1: Get context
+mcp__claude-in-chrome__tabs_context_mcp(createIfEmpty=True)
+
+# Step 2: Create YOUR tab (NEVER share tabs)
+result = mcp__claude-in-chrome__tabs_create_mcp()
+TAB_ID = result["tabId"]  # Save this for all operations!
+
+# Step 3: Navigate
+mcp__claude-in-chrome__navigate(url="https://community.workday.com", tabId=TAB_ID)
+
+# Step 4: Wait (anti-bot - REQUIRED)
+mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=TAB_ID)
+
+# Step 5: Screenshot to verify
+mcp__claude-in-chrome__computer(action="screenshot", tabId=TAB_ID)
+```
+
+### Search and Extract Content
+```python
+# Find search box
+mcp__claude-in-chrome__find(query="search box", tabId=TAB_ID)
+
+# Enter search term
+mcp__claude-in-chrome__form_input(ref="ref_id", value="hire employee", tabId=TAB_ID)
+
+# Submit search
+mcp__claude-in-chrome__computer(action="key", text="Enter", tabId=TAB_ID)
+mcp__claude-in-chrome__computer(action="wait", duration=3, tabId=TAB_ID)
+
+# Extract page text
+mcp__claude-in-chrome__get_page_text(tabId=TAB_ID)
+```
+
+### Anti-Bot Rules (CRITICAL)
+1. **Wait 2-5 seconds** between actions
+2. **Scroll before clicking** (human-like behavior)
+3. **Max 10-20 pages** per session
+4. Use logged-in Chrome session
+5. Close tabs when done: `mcp__claude-in-chrome__navigate(url="about:blank", tabId=TAB_ID)`
+
+---
+
+## Enhancement Tracker (For parallel agent coordination)
+
+```bash
+TRACKER="$HOME/OneDrive - ERPA/Claude/workday_docs/electron_tests/_scripts/enhancement_tracker.py"
+
+# Claim a file for processing
+python "$TRACKER" claim AGENT_ID AREA
+
+# Check overall status
+python "$TRACKER" status
+
+# Reset stuck files
+python "$TRACKER" reset
+
+# Report completion (Python)
+from enhancement_tracker import complete_file
+complete_file('AGENT_ID', FILE_ID, success=True, new_confidence='HIGH',
+              rag_updated=True, kb_updated=True, steps_added=5, validation_added=3)
+```
+
+---
+
 ## How to Search Workday Knowledge
 
 ### 1. RAG Query (Local - Fast)
