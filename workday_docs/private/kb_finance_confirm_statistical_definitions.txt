@@ -1,30 +1,41 @@
 # Workday KB: Confirm Statistical Definitions
 # Searched: 2024-12-31
 # Query: "Confirm Statistical Definitions"
-# Total Results: 500 (showing top Admin Guide English results)
+# Total Results: 500 (96 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11 only)
 
-## Page 1 Results (Admin Guide EN)
+## Summary by Page
+Page 1: 19 EN Admin Guide results
+Page 2: 12 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 8 EN Admin Guide results
+Page 5: 8 EN Admin Guide results
+Page 6: 7 EN Admin Guide results
+Page 7: 7 EN Admin Guide results
+Page 8: 5 EN Admin Guide results
+Page 9: 9 EN Admin Guide results
+Page 10: 9 EN Admin Guide results
+Page 11: 3 EN Admin Guide results
+Pages 12-17: 0 EN Admin Guide results (non-English translations only)
+
+## Key Results (Page 1 - Most Relevant)
 1. Define Statistic Types | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1400549015315.html
 2. Define Statistic Types in AP&C | https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1400549015315_1.html
 3. Enter Statistic Values | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1401491577246.html
-4. Configure Reports | https://doc.workday.com/admin-guide/en-us/vndly-documentation/reporting/manage_report_settings_orig.html
-5. Confirm and Dismiss Journal Line Anomalies | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/journal-insights/jqs1628544030923.html
-6. Configure Report Design Payroll Checks | https://doc.workday.com/admin-guide/en-us/financial-management/settlement/check-and-advice-printing/iqp1563557209330.html
-7. Steps: Upload Statistics | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/steps--upload-statistics.html
-
-## Page 2 Results (Admin Guide EN)
-8. Configure Financial Metrics Reporting | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/financial-analytics/dan1370797681764.html
-9. Define Cash Forecast Components | https://doc.workday.com/admin-guide/en-us/financial-management/cash/cash-forecasting/dan1370797738499.html
-10. Steps: Configure Compensation Review Grid Profiles | https://doc.workday.com/admin-guide/en-us/human-capital-management/compensation/set-up-compensation-reviews/
+4. Enter Statistic Values in AP&C | https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1401491577246_1.html
+5. Configure Account Certification Dashboard | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/period-and-year-close/
+6. Configure Reports | https://doc.workday.com/admin-guide/en-us/vndly-documentation/reporting/
+7. Confirm and Dismiss Journal Line Anomalies | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/journal-insights/
+8. Configure Report Design Payroll Checks | https://doc.workday.com/admin-guide/en-us/financial-management/settlement/check-and-advice-printing/
+9. Steps: Upload Statistics | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/
 
 ## Key Topics
 - Statistic definitions establish statistic types in Adaptive Planning and Consolidation (AP&C)
 - Uses period end balance as statistical amount
 - Statistical amounts can be associated with ledger types or plan structures
-- Workday recommends using statistic ledger accounts over statistic definitions for better reporting
+- Related: Define Statistic Types, Enter Statistic Values, Upload Statistics
 
-## Related Tasks
-- Define Statistic Types
-- Enter Statistic Values
-- Upload Statistics
-- Configure Financial Metrics Reporting
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-11
+- Pages 12-17 contain only non-English translations (German, Japanese, Chinese, Korean, French, Spanish)
+- ~96 total EN Admin Guide results out of 500 total search results

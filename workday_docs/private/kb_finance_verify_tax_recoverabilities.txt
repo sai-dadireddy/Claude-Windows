@@ -1,21 +1,13 @@
 # Workday KB: Verify Tax Recoverabilities
-# Searched: "Verify Tax Recoverabilities"
-# Total Results: 500
-# Captured: 30 (top results)
-# Date: 2025-12-31
+# Searched: 2024-12-31
+# Query: "Verify Tax Recoverabilities"
+# Total Results: 500 (estimated ~65 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11)
 
-## Results
+## Sampled Pages
+Page 1: 10 EN Admin Guide results
+Page 5: 5 EN Admin Guide results
+Page 10: 6 EN Admin Guide results
+Page 12+: 0 EN Admin Guide results
 
-1. Set Up Tax Recoverabilities for Financial Transactions
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/uuj1500505847873.html
-   Excerpt: Set Up Tax Recoverabilities for Financial Transactions. Expense reports. Access the Maintain Tax Recoverabilities task.
-
-2. Reference: Ad Hoc Bank Transaction Connector XML Schema
-   URL: https://doc.workday.com/admin-guide/en-us/integrations/financials-connectors/ad-hoc-bank-transaction-connector/grk1484782509803.html
-   Excerpt: If the transaction line has a tax code then tax applicability is required. If the transaction line has a tax applicability value, Workday will validate...
-
-3. Tax Recoverability Rules
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/
-
-4. Configure Transaction Tax Rules
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/
+## Estimated Total: ~65 EN Admin Guide results
