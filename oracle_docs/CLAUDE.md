@@ -4,25 +4,6 @@
 
 This folder contains Oracle and PeopleSoft documentation for RAG-based queries and integration development.
 
-## How to Use Browser Automation
-
-**Known Bug**: Custom subagents (`PeopleSoft Expert`) cannot access MCP tools due to Claude Code bug #7296/#13898.
-
-**Solution**: Use `general-purpose` built-in subagent OR invoke skills directly:
-
-```python
-# Option 1: Use general-purpose agent (HAS MCP access)
-Task(
-    subagent_type="general-purpose",
-    prompt="You are a PeopleSoft expert. Scrape MOS KB article KB593233..."
-)
-
-# Option 2: Use /peoplesoft or /oracle skill (runs in main session with full MCP)
-# Just type: /peoplesoft scrape MOS article KB593233
-```
-
-**Skills available**: `/peoplesoft` (Integration Broker, MOS), `/oracle` (general Oracle docs)
-
 ## Directory Structure
 
 ```
