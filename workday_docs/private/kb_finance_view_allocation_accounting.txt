@@ -1,0 +1,29 @@
+# Workday KB: View Allocation Accounting
+# Searched: 2024-12-31
+# Query: "View Allocation Accounting"
+# Total Results: 500 (192 English Admin Guide)
+# Pages: 17 (EN content in pages 1-12 only)
+
+## Summary by Page
+Page 1: 29 EN Admin Guide results
+Page 2: 29 EN Admin Guide results
+Page 3: 19 EN Admin Guide results
+Page 4: 19 EN Admin Guide results
+Page 5: 20 EN Admin Guide results
+Page 6: 12 EN Admin Guide results
+Page 7: 16 EN Admin Guide results
+Page 8: 17 EN Admin Guide results
+Page 9: 9 EN Admin Guide results
+Page 10: 7 EN Admin Guide results
+Page 11: 8 EN Admin Guide results
+Page 12: 7 EN Admin Guide results
+Pages 13-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-12
+- Pages 13-17 contain only non-English translations
+- 192 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Viewing allocation accounting results
+- Related to cost allocations and allocation rules
