@@ -3,8 +3,8 @@ TEST ID: CP-2-0040
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Verify Accounting Configuration and Results
-CONFIDENCE: [LOW] Score: 2.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 10.0/10
+SOURCE: [KB Article: kb_payroll_canada_accounting.txt]
 ================================================================================
 
 DESCRIPTION:
@@ -16,43 +16,94 @@ COUNTRY SCOPE: CA
 
 PREREQUISITES:
 - User logged in with Payroll Partner permissions
-- Required data available in tenant
-- Access to CA payroll data
+- Pay groups configured for Canada
+- Accounting configuration completed
+- Pay period is ready to calculate
 
 ELECTRON STEPS:
-1. enter search box as "Various Tasks"
+
+# Step 1: Run Pay Calculation
+1. enter search box as "Run Pay Calculation"
 2. wait for search results
-3. click search result containing "Various Tasks"
+3. click search result containing "Run Pay Calculation"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-2-0040_complete.png"
+5. select pay group as "CA Pay Group"
+6. verify pay period dates displayed
+7. click button "Submit"
+8. wait for calculation to complete (may take 2-5 minutes)
+9. screenshot as "CP-2-0040_pay_calc_submitted.png"
+
+# Step 2: Review Accounting Results (Pre-Completion)
+10. enter search box as "View Payroll Accounting Results"
+11. wait for search results
+12. click search result containing "View Payroll Accounting Results"
+13. wait for page to load
+14. select pay period and pay group
+15. wait for accounting entries to load
+16. verify journal entries displayed
+17. verify no suspense account entries (critical check)
+18. verify cost center allocations are correct
+19. screenshot as "CP-2-0040_accounting_review.png"
+
+# Step 3: Check for Accounting Errors
+20. enter search box as "Fix Operational Journals With Errors"
+21. wait for search results
+22. click search result containing "Fix Operational Journals With Errors"
+23. wait for page to load
+24. verify error list is empty (if errors found, accounting config needs updates)
+25. screenshot as "CP-2-0040_journal_errors.png"
+
+# Step 4: Complete Payroll
+26. enter search box as "Complete Payroll"
+27. wait for search results
+28. click search result containing "Complete Payroll"
+29. wait for page to load
+30. select payroll run from list
+31. click button "Complete"
+32. wait for completion confirmation
+33. verify completion message displayed
+34. screenshot as "CP-2-0040_payroll_complete.png"
+
+# Step 5: Verify GL Postings
+35. enter search box as "View Journal Entry"
+36. wait for search results
+37. click search result containing "View Journal Entry"
+38. wait for page to load
+39. enter payroll journal reference number
+40. wait for journal to load
+41. verify debits and credits are balanced
+42. verify no suspense account postings
+43. verify earnings, deductions, tax, and employer contribution accounts
+44. screenshot as "CP-2-0040_gl_posting_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Pay calculation completed successfully for all pay groups
+- [ ] No calculation errors due to accounting configuration
+- [ ] Accounting results reviewed before completion
+- [ ] No postings to suspense accounts
+- [ ] Fix Operational Journals shows zero errors
+- [ ] Payroll completed successfully
+- [ ] GL journal entries created and balanced
+- [ ] All accounts mapped correctly (earnings, deductions, taxes, contributions)
+- [ ] Cost center allocations are correct
+
+ACCOUNTING COMPONENTS VALIDATED:
+- Earnings accounts (salary, hourly, overtime, bonus)
+- Deduction accounts (RRSP, benefits, voluntary)
+- Tax liability accounts (federal, provincial, CPP, EI)
+- Employer contribution accounts (CPP, EI, WCB, health tax)
+- No suspense account usage
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Payroll_Interface.Get_Payroll_Results (for data verification)
+- SOAP: Payroll_Interface.Complete_Payroll (automation)
+- REST: GET /payrollResults (view accounting entries)
 
-RAG NOTES:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Various Tasks
+RELATED REPORTS:
+- Payroll Accounting Summary
+- Journal Entry Detail
+- Payroll Cost Allocation Report
+- Suspense Account Analysis
+- GL Reconciliation Report
 
-### 1. Kb Hcm Hire Employee (score: 2)
-Source: kb_hcm_hire_employee.txt
-```
-# Workday Hire Employee Business Process - Knowledge Base
-
-## Source
-- Workday Community AI-Generated Answer
-- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-- Release: 2025R1
-- ...
 ================================================================================

@@ -2,19 +2,35 @@
 TEST ID: LA-4-0010
 FUNCTIONAL AREA: Lease Accounting
 TEST NAME: Leases: Supplier Contract for Operating Lease with ROU Asset Operating Expense accounting method (reporting Operating Leases under only one standard)
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [MANUAL REQUIRED] Score: 0.0/10
 ================================================================================
 
-TASK/STEP: nan
+TASK/STEP: Not specified in source data
+
+STATUS: MANUAL TEST REQUIRED
+REASON: Task/Step field is null in source Excel. Cannot determine which Workday task to automate without this critical information.
+
+RECOMMENDATION:
+1. Verify Excel source data - Task/Step column is required
+2. Contact SME to identify the specific Workday task for:
+   - Creating supplier contracts for operating leases
+   - Configuring ROU Asset with Operating Expense accounting method
+3. Once task name is confirmed, re-submit for automation enhancement
 
 ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "LA-4-0010_complete.png"
+[CANNOT GENERATE - Missing task name]
 
-VERIFICATION: nan
+VERIFICATION:
+[CANNOT GENERATE - Missing expected results]
 
 ================================================================================
 RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+Query: "supplier contract operating lease ROU asset"
+Score: 4.0/10 - Insufficient knowledge base coverage
+Status: No KB article exists for Lease Accounting supplier contracts
+
+ENHANCEMENT REQUIRED:
+- Create kb_lease_accounting_supplier_contract.txt
+- Document: Navigation, field names, button labels, validation messages
+- Re-index RAG after KB enhancement
 ================================================================================

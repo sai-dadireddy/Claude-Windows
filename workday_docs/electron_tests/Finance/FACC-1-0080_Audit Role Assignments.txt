@@ -2,16 +2,76 @@
 TEST ID: FACC-1-0080
 FUNCTIONAL AREA: Accounting & Finance
 TEST NAME: Audit Role Assignments
-CONFIDENCE: [LOW] Score: 3.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+SOURCE: [KB Article: kb_hcm_audit_role_assignments.txt]
 ================================================================================
 
-ELECTRON STEPS:
-[MANUAL TEST - INSUFFICIENT KB COVERAGE]
-This test requires SME input to generate valid Electron automation steps.
-RAG confidence score was too low (< 5.0).
+DESCRIPTION:
+Audit organization role assignments to verify that role assignments are accurate,
+aligned with security policies, and comply with regulatory requirements. This is
+a critical security audit task for maintaining proper access controls.
 
+PREREQUISITES:
+- User logged in with Security Administrator or Auditor permissions
+- Access to "Extract Organization Role Assignment" task
+- Understanding of organization structure and expected role assignments
+
+ELECTRON STEPS:
+1. enter search box as "Extract Organization Role Assignment"
+2. wait for search results
+3. click search result containing "Extract Organization Role Assignment"
+4. wait for page to load
+5. select Organization Type as "Supervisory Organization" (optional - for filtering)
+6. enter Effective Date as "{current_date}"
+7. select Include Inactive Workers as "No"
+8. screenshot as "FACC-1-0080_extract_parameters.png"
+9. click button "OK"
+10. wait for confirmation message
+11. verify message contains "submitted" or "processing"
+12. screenshot as "FACC-1-0080_extract_submitted.png"
+13. wait 30 seconds
+14. enter search box as "Inbox"
+15. click search result "Inbox"
+16. wait for page to load
+17. scroll to find "Extract Organization Role Assignment"
+18. click notification containing "Extract Organization Role Assignment"
+19. wait for page to load
+20. click link "Download"
+21. wait for file download
+22. screenshot as "FACC-1-0080_complete.png"
 
 VERIFICATION:
-- [ ] Transaction completed successfully
+- [ ] Extract task submitted successfully
+- [ ] Confirmation message displayed
+- [ ] Inbox notification received
+- [ ] CSV/Excel file downloaded successfully
+- [ ] File contains expected columns: Worker, Organization, Role, Effective Date, Reason
+- [ ] Data matches expected organization structure
+- [ ] No unauthorized or orphaned role assignments identified
 - [ ] No error messages displayed
+
+AUDIT VALIDATION POINTS:
+- [ ] All managers have appropriate supervisory org roles
+- [ ] Cost Center Managers assigned correctly
+- [ ] No duplicate or conflicting role assignments
+- [ ] No roles assigned to terminated workers
+- [ ] Role assignments align with organizational structure
+
+ALTERNATIVE APPROACH:
+For real-time viewing without file download:
+1. enter search box as "View Organization Role Assignments"
+2. click search result "View Organization Role Assignments"
+3. select Organization as "{org_name}"
+4. click button "OK"
+5. verify report data displayed
+6. screenshot as "FACC-1-0080_report_view.png"
+
+API ALTERNATIVE:
+- REST: Not available for role assignment extraction
+- SOAP: Security_Administration WSDL - Get_Organization_Role_Assignments operation
+
+COMMON ERRORS:
+- "No data found" - Parameters too restrictive or no assignments exist
+- "Insufficient permissions" - User lacks View access to organization roles
+- "Processing timeout" - Extract too large, need to narrow parameters
 ================================================================================

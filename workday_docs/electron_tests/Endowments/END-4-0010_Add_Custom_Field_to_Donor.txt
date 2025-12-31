@@ -2,19 +2,39 @@
 TEST ID: END-4-0010
 FUNCTIONAL AREA: Endowments
 TEST NAME: Add Custom Field to Donor
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [INCOMPLETE] Score: N/A
+STATUS: ❌ MISSING DATA - Cannot Generate
 ================================================================================
 
-TASK/STEP: nan
+ISSUE:
+Excel source data is incomplete - "Task / Step" column shows "nan" (missing).
 
-ELECTRON STEPS:
-1. enter search box as "nan"
-2. [MANUAL] No RAG guidance available - manual test required
-3. screenshot as "END-4-0010_complete.png"
+Without the actual Workday task name, cannot generate valid Electron automation steps.
 
-VERIFICATION: nan
+REQUIRED TO PROCEED:
+1. Excel row must have valid "Task / Step" value
+2. Typical values might be:
+   - "Create Custom Field"
+   - "Edit Donor Custom Organization Data"
+   - "Configure Custom Field Definition"
+
+RAG RESEARCH CONDUCTED:
+- Query: "Create Custom Field" → Score: 8/10 (generic admin guide)
+- Query: "donor custom field endowments" → Score: 4/10 (low coverage)
+
+RECOMMENDATION:
+- Review Excel source file for END-4-0010
+- Populate "Task / Step" with actual Workday task name
+- Re-run enhancement workflow
 
 ================================================================================
-RAG RESPONSE SUMMARY:
-[NO RAG RESPONSE] - Manual test creation required
+GENERAL CUSTOM FIELD PATTERN (if task is "Create Custom Field"):
+1. enter search box as "Create Custom Field"
+2. wait for search results
+3. click search result containing "Create Custom Field"
+4. wait for page to load
+5. [NEEDS SME INPUT - specific field configuration steps]
+6. screenshot as "END-4-0010_complete.png"
+
+NOTE: Cannot proceed without valid Excel data.
 ================================================================================

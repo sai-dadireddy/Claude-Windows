@@ -2,35 +2,58 @@
 TEST ID: INV-1-0010
 FUNCTIONAL AREA: Inventory
 TEST NAME: Inventory Site
-CONFIDENCE: [LOW] Score: 3.0/10
-SOURCE: [RAG Enhanced - Manual Review]
+CONFIDENCE: [MEDIUM] Score: 5.0/10
+SOURCE: [RAG: Resource_Management.wsdl, Admin Guides - NEEDS SME REVIEW]
+EST. DURATION: Unknown
 ================================================================================
 
 DESCRIPTION:
-WORKDAY ROLE: 
+Review and verify Inventory Site configuration in Workday. This task involves
+accessing and validating the setup of inventory sites which are physical
+locations where inventory is stored and managed.
 
-WORKDAY ROLE: ELECTRON STEPS:
+WORKDAY ROLE: Inventory Manager / Supply Chain Administrator
+
+PREREQUISITES:
+- User logged in with Inventory Manager or Supply Chain Administrator permissions
+- At least one Inventory Site must be configured in the system
+
+[NEEDS SME REVIEW] - Insufficient KB coverage for specific field names and navigation paths.
+RAG confidence: 5.0/10. The following steps are based on standard Workday report patterns
+but require SME validation for accuracy.
 
 ELECTRON STEPS:
-1. enter search box as "Create Inventory Site"
+1. enter search box as "Inventory Site"
 2. wait for search results
-3. click search result containing "Create Inventory Site"
+3. click search result containing "Inventory Site"
 4. wait for page to load
-5. wait for results table to load
-6. verify table contains data
-7. screenshot as "INV-1-0010_list.png"
-8. click first row to view details
-9. wait for detail page to load
-10. verify details displayed
-11. screenshot as "INV-1-0010_complete.png"
+5. verify page title contains "Inventory Site"
+6. screenshot as "INV-1-0010_report_page.png"
+7. verify table or list view displays
+8. screenshot as "INV-1-0010_complete.png"
 
 VERIFICATION:
-- [ ] Inventory/location data displayed
-- [ ] Details page accessible
-- [ ] Data appears complete
+- [ ] Inventory Site report or configuration page loads successfully
+- [ ] Data is displayed (sites list or configuration details)
+- [ ] No error messages displayed
+- [ ] User has appropriate access to view inventory sites
+
+SME REVIEW REQUIRED FOR:
+- [ ] Exact report/task name (is it "Inventory Site", "View Inventory Sites", or "Inventory Site Report"?)
+- [ ] Specific field names and values to verify
+- [ ] Whether this is a report view or configuration task
+- [ ] Navigation path if not found via search
+- [ ] Required data elements to validate
 
 API ALTERNATIVE:
-- Query RAG for details
+- SOAP: Resource_Management.wsdl - Contains inventory-related operations
+- REST: Check Inventory or Supply Chain API schemas
 
-RAG QUERY STATUS: SUCCESS (Confidence: 3/10)
+NOTES:
+- Current knowledge base lacks detailed Inventory Site documentation
+- Recommend creating KB article after SME provides accurate steps
+- May be related to Supply Chain Management module
+
+RAG QUERY STATUS: LOW CONFIDENCE (Score: 5.0/10)
+KNOWLEDGE GAP: Specific Inventory Site task details not available in current documentation
 ================================================================================

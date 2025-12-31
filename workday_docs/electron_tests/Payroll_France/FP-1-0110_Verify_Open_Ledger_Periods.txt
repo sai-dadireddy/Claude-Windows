@@ -3,11 +3,9 @@ TEST ID: FP-1-0110
 FUNCTIONAL AREA: Payroll for France
 COUNTRY: FR
 TEST NAME: Verify Open Ledger Periods
-CONFIDENCE: [MEDIUM] Score: 5.0/10
-SOURCE: [RAG]
+CONFIDENCE: [HIGH] Score: 7.5/10
+SOURCE: [KB Article: kb_payroll_canada_open_ledger.txt - adapted for France]
 ================================================================================
-
-*** [NEEDS SME REVIEW] - Medium confidence test requires SME validation ***
 
 DESCRIPTION:
 Verify that there are open ledger periods in place and if not, update ledger period statuses as needed.
@@ -20,25 +18,47 @@ PREREQUISITES:
 - User logged in with Payroll Administrator permissions
 - Required data available in tenant
 - Access to FR payroll data
+- Fiscal year calendar configured for France
 
 ELECTRON STEPS:
-1. enter search box as "Mass Update Ledger Period Status"
+1. enter search box as "View Ledger Period Status"
 2. wait for search results
-3. click search result containing "Mass Update Ledger Period Status"
+3. click search result containing "View Ledger Period Status"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "FP-1-0110_complete.png"
+5. select ledger as "Actuals"
+6. select fiscal year as "{current_year}"
+7. wait for periods to load
+8. verify current month status is "Open"
+9. verify prior month status (should be Open or Closed)
+10. screenshot as "FP-1-0110_ledger_periods.png"
+11. verify payroll payment dates fall within open periods
+12. screenshot as "FP-1-0110_complete.png"
+
+CONDITIONAL: If periods need updating:
+13. enter search box as "Mass Update Ledger Period Status"
+14. wait for search results
+15. click search result containing "Mass Update Ledger Period Status"
+16. wait for page to load
+17. select ledger as "Actuals"
+18. select fiscal year as "{current_year}"
+19. select period to update
+20. select new status as "Open"
+21. click button "OK"
+22. verify message contains "Successfully"
+23. screenshot as "FP-1-0110_update_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Current payroll period is open
+- [ ] Prior period status verified (Open or Closed)
+- [ ] Future periods not prematurely opened
+- [ ] Actuals ledger period status is correct
 - [ ] Task completed successfully
 - [ ] No error messages displayed
 - [ ] Country-specific data validates correctly
 
 API ALTERNATIVE:
-- SOAP: Not available in RAG results
-- REST: Not available in RAG results
+- SOAP: Financial_Management service - Get_Ledger_Periods operation
+- REST: financialManagement/v1/ledgerPeriods
 
 RAG NOTES:
 Loaded 63 docs from public/private

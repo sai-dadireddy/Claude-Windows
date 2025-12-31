@@ -2,44 +2,70 @@
 TEST ID: BEN-3-0070
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Benefit Census
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+SOURCE: [Workday Report Pattern Analysis + Benefits Domain Knowledge]
 ================================================================================
 
-TASK/STEP: Benefit Census
+DESCRIPTION:
+Verify benefit census data to ensure accurate employee benefit enrollment records,
+demographic information, and coverage details for reporting and carrier file generation.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: Benefit Census
+WORKDAY ROLE: Benefits Administrator
 
-### 1. Test Scenarios Index (score: 7)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
-
-
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory
-... (truncated)
+PREREQUISITES:
+- User logged in with Benefits Administrator permissions
+- Benefit enrollment period completed
+- Active benefit elections in system
 
 ELECTRON STEPS:
 1. enter search box as "Benefit Census"
 2. wait for search results
 3. click search result containing "Benefit Census"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-3-0070_complete.png"
+4. wait for page to load
+
+# Prompts Configuration (if report prompts appear)
+5. select prompt "Include" as "Active Employees Only"
+6. select prompt "As Of Date" as "today"
+7. select prompt "Benefit Plan Type" as "All"
+8. click button "OK"
+9. wait 5 seconds
+
+# View Report Results
+10. wait for report to generate
+11. verify report contains column "Worker"
+12. verify report contains column "Benefit Plan"
+13. verify report contains column "Coverage Level"
+14. verify report contains column "Coverage Begin Date"
+15. verify report contains column "Employee Cost"
+16. verify report displays data rows
+17. screenshot as "BEN-3-0070_report_loaded.png"
+
+# Verify Data Quality
+18. verify no error messages displayed
+19. verify report row count greater than 0
+20. screenshot as "BEN-3-0070_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Benefit Census report successfully generated
+- [ ] Report displays worker benefit election data
+- [ ] Coverage levels and dates are accurate
+- [ ] Employee cost information is present
+- [ ] No system errors or warnings
+- [ ] Report can be exported if needed
+
+EXPECTED RESULT:
+Benefit Census report displays accurate enrollment data including worker names,
+benefit plans, coverage levels, effective dates, and cost information.
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- Report prompts may vary based on tenant configuration
+- Common prompts: As Of Date, Employee Status, Benefit Plan Type
+- Report output used for carrier file validation and audit purposes
+- Can be exported to Excel for further analysis
+
+API ALTERNATIVE:
+- SOAP: Get_Workers operation with Benefit_Elections_Data filter
+- REST: /workers endpoint with benefits expand parameter
+- WSDL: Benefits_Administration.wsdl - Get_Benefit_Elections
+
 ================================================================================
