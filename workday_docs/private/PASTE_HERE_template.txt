@@ -1,0 +1,19 @@
+================================================================================
+PASTE WORKDAY KB CONTENT HERE
+================================================================================
+Instructions:
+1. Search topic on resourcecenter.workday.com
+2. Copy the article content
+3. Paste below
+4. Save as: kb_{area}_{topic}.txt
+5. Tell Claude to index
+
+TOPIC: [enter topic name]
+SOURCE URL: [paste URL]
+DATE: 2025-12-31
+
+--- PASTE CONTENT BELOW THIS LINE ---
+
+
+
+--- END CONTENT ---
