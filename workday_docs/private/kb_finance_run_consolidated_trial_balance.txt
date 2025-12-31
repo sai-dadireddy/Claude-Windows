@@ -1,0 +1,27 @@
+# Workday KB: Run Consolidated Trial Balance
+# Searched: 2024-12-31
+# Query: "Run Consolidated Trial Balance"
+# Total Results: 500 (123 English Admin Guide)
+# Pages: 17 (EN content in pages 1-10 only)
+
+## Summary by Page
+Page 1: 29 EN Admin Guide results
+Page 2: 18 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 14 EN Admin Guide results
+Page 5: 9 EN Admin Guide results
+Page 6: 13 EN Admin Guide results
+Page 7: 7 EN Admin Guide results
+Page 8: 9 EN Admin Guide results
+Page 9: 8 EN Admin Guide results
+Page 10: 7 EN Admin Guide results
+Pages 11-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-10
+- Pages 11-17 contain only non-English translations
+- 123 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Running consolidated trial balance reports
+- Related to financial consolidation and reporting

@@ -1,0 +1,28 @@
+# Workday KB: Confirm Allocation Group Sets
+# Searched: 2024-12-31
+# Query: "Confirm Allocation Group Sets"
+# Total Results: 500 (87 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11 only)
+
+## Summary by Page
+Page 1: 15 EN Admin Guide results
+Page 2: 9 EN Admin Guide results
+Page 3: 3 EN Admin Guide results
+Page 4: 9 EN Admin Guide results
+Page 5: 6 EN Admin Guide results
+Page 6: 8 EN Admin Guide results
+Page 7: 11 EN Admin Guide results
+Page 8: 12 EN Admin Guide results
+Page 9: 8 EN Admin Guide results
+Page 10: 4 EN Admin Guide results
+Page 11: 2 EN Admin Guide results
+Pages 12-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-11
+- Pages 12-17 contain only non-English translations
+- 87 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Confirming allocation group sets
+- Related to allocation configurations and grouping

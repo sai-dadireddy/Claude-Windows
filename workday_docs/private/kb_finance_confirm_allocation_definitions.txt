@@ -1,0 +1,30 @@
+# Workday KB: Confirm Allocation Definitions
+# Searched: 2024-12-31
+# Query: "Confirm Allocation Definitions"
+# Total Results: 500 (271 English Admin Guide)
+# Pages: 17 (EN content in pages 1-13 only)
+
+## Summary by Page
+Page 1: 28 EN Admin Guide results
+Page 2: 27 EN Admin Guide results
+Page 3: 27 EN Admin Guide results
+Page 4: 17 EN Admin Guide results
+Page 5: 21 EN Admin Guide results
+Page 6: 15 EN Admin Guide results
+Page 7: 25 EN Admin Guide results
+Page 8: 20 EN Admin Guide results
+Page 9: 18 EN Admin Guide results
+Page 10: 19 EN Admin Guide results
+Page 11: 17 EN Admin Guide results
+Page 12: 21 EN Admin Guide results
+Page 13: 16 EN Admin Guide results
+Pages 14-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-13
+- Pages 14-17 contain only non-English translations
+- 271 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Confirming allocation definitions
+- Related to cost allocations and financial reporting

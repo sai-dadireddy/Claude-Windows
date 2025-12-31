@@ -1,0 +1,33 @@
+# Workday KB: Verify Tax Declaration Component Categories
+# Searched: 2024-12-31
+# Query: "Verify Tax Declaration Component Categories"
+# Total Results: 500 (343 English Admin Guide)
+# Pages: 17 (EN content in pages 1-15)
+
+## Summary by Page
+Page 1: 26 EN Admin Guide results
+Page 2: 24 EN Admin Guide results
+Page 3: 28 EN Admin Guide results
+Page 4: 29 EN Admin Guide results
+Page 5: 24 EN Admin Guide results
+Page 6: 23 EN Admin Guide results
+Page 7: 25 EN Admin Guide results
+Page 8: 27 EN Admin Guide results
+Page 9: 22 EN Admin Guide results
+Page 10: 16 EN Admin Guide results
+Page 11: 23 EN Admin Guide results
+Page 12: 24 EN Admin Guide results
+Page 13: 23 EN Admin Guide results
+Page 14: 23 EN Admin Guide results
+Page 15: 6 EN Admin Guide results
+Pages 16-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-15
+- Pages 16-17 contain only non-English translations
+- 343 total EN Admin Guide results out of 500 total search results
+- Highest EN coverage of all topics researched
+
+## Key Topics
+- Verifying tax declaration component categories
+- Related to payroll tax configuration and compliance
