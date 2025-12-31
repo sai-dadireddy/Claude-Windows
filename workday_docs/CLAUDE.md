@@ -43,17 +43,31 @@ python workday_rag.py --list              # List REST APIs
 
 ## Coveo Extraction (doc.workday.com)
 
-Extract results via JS:
+**CRITICAL: Capture ALL pages, not just first 30!**
+
+### Step 1: Check Total
 ```javascript
 var e = document.querySelector("atomic-search-interface").engine;
-var r = e.state.search.results;
-// Get total count
 var total = e.state.search.response.totalCount;
-// Filter English Admin Guide only
+var pages = Math.ceil(total / 30);
+console.log("Total:", total, "Pages:", pages);
+```
+
+### Step 2: Extract Current Page
+```javascript
+var r = e.state.search.results;
 var filtered = r.filter(x => x.clickUri.includes('/en-us/') && x.clickUri.includes('admin-guide'));
-// Extract
 JSON.stringify(filtered.map(x => ({title: x.title, url: x.clickUri, excerpt: x.excerpt})));
 ```
+
+### Step 3: Paginate (if total > 30)
+1. Click "Next" button or navigate to page 2
+2. Wait 3 seconds for results to load
+3. Extract again with Step 2
+4. Append to same KB file
+5. Repeat until ALL pages captured
+
+**Example:** 500 results = 17 pages. Must extract all 17.
 
 ## Electron Commands
 | Command | Example |
