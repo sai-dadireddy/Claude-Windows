@@ -1,0 +1,619 @@
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ENROLLMENT EVENTS AND OPEN ENROLLMENT
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration - Enrollment Events
+Category: Human Capital Management - Benefits - Enrollment
+Last Updated: 2025-12-31
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Benefit Enrollment Events in Workday trigger benefit elections and changes
+for employees. Events include new hire enrollment, open enrollment, life
+events, and job changes. Proper configuration ensures employees can enroll
+in benefits at the right time with appropriate plan options.
+
+Event Categories:
+- New Hire Enrollment: Initial benefits for new employees
+- Open Enrollment: Annual enrollment period
+- Life Events: Qualifying events (marriage, birth, etc.)
+- Job Change Events: Position changes affecting eligibility
+- Passive Events: Automatic system-generated enrollments
+- COBRA Events: Continuation coverage after qualifying events
+
+Key Components:
+- Enrollment Event Types: Categories of events
+- Enrollment Event Rules: Plan changes allowed per event
+- Enrollment Periods: Time windows for making elections
+- Benefit Elections: Employee plan selections
+- Evidence of Insurability: Medical underwriting for certain coverages
+
+================================================================================
+ENROLLMENT EVENT TYPES
+================================================================================
+
+TASK: Maintain Enrollment Event Types
+Navigation: Search > "Maintain Enrollment Event Types"
+Purpose: Configure event types that trigger enrollment
+
+Steps:
+1. enter search box as "Maintain Enrollment Event Types"
+2. wait for search results
+3. click search result containing "Enrollment Event Types"
+4. wait for page to load
+5. view existing event types or click "Add" for new type
+
+Standard Event Types:
+1. NEW HIRE
+   - Trigger: Hire business process
+   - Window: 31 days from eligibility date
+   - Plans: All eligible plans
+   - Actions: Enroll, Waive
+
+2. OPEN ENROLLMENT
+   - Trigger: Annual enrollment period
+   - Window: Defined period (e.g., 11/1 - 11/30)
+   - Plans: All eligible plans
+   - Actions: Enroll, Change, Waive
+
+3. MARRIAGE/DOMESTIC PARTNERSHIP
+   - Trigger: Life event reported
+   - Window: 31 days from event date
+   - Plans: Health, dental, vision, life
+   - Actions: Add spouse/partner, change coverage level
+
+4. BIRTH/ADOPTION
+   - Trigger: Life event reported
+   - Window: 31 days from event date
+   - Plans: Health, dental, vision, life
+   - Actions: Add child, change coverage level
+
+5. DIVORCE/LEGAL SEPARATION
+   - Trigger: Life event reported
+   - Window: 31 days from event date
+   - Plans: Health, dental, vision, life
+   - Actions: Remove spouse, change coverage level
+
+6. LOSS OF OTHER COVERAGE
+   - Trigger: Life event reported
+   - Window: 31 days from event date
+   - Plans: Health, dental, vision
+   - Actions: Enroll, add dependents
+
+7. DEATH OF DEPENDENT
+   - Trigger: Life event reported
+   - Window: 31 days from event date
+   - Plans: All with dependent coverage
+   - Actions: Remove dependent, change coverage level
+
+8. JOB CHANGE - ELIGIBLE
+   - Trigger: Job change to benefits-eligible position
+   - Window: 31 days from new eligibility date
+   - Plans: All newly eligible plans
+   - Actions: Enroll, Waive
+
+9. JOB CHANGE - INELIGIBLE
+   - Trigger: Job change to non-eligible position
+   - Window: N/A (automatic termination)
+   - Plans: All previously enrolled
+   - Actions: Coverage end, COBRA offer
+
+Event Type Configuration Fields:
+- Event Type Name
+- Event Category (New Hire, Life Event, etc.)
+- Triggering Condition
+- Enrollment Window Duration (days)
+- Allowed Plan Actions
+- Required Documentation
+- Dependent Changes Allowed
+
+================================================================================
+OPEN ENROLLMENT
+================================================================================
+
+TASK: Configure Open Enrollment
+Navigation: Search > "Maintain Open Enrollment"
+Purpose: Set up annual open enrollment period
+
+Steps:
+1. enter search box as "Maintain Open Enrollment"
+2. wait for search results
+3. click search result containing "Maintain Open Enrollment"
+4. wait for page to load
+5. click "Add" to create new open enrollment period
+
+Configuration Fields:
+6. enter Open Enrollment Name (e.g., "2026 Open Enrollment")
+7. enter Enrollment Period Start Date (e.g., 11/1/2025)
+8. enter Enrollment Period End Date (e.g., 11/30/2025)
+9. enter Effective Date for Elections (e.g., 1/1/2026)
+10. select Eligible Employee Population:
+    - All Benefits-Eligible Employees
+    - Specific Benefit Groups
+    - Custom Population
+11. select Available Plans:
+    - All eligible plans
+    - Specific plan selection
+12. configure Elections Options:
+    - Require Active Election (prevent passive enrollment)
+    - Allow Waiver of Coverage
+    - Allow Dependent Changes
+    - Allow Beneficiary Updates
+13. set Communication Settings:
+    - Notification Start Date
+    - Reminder Frequency
+    - Deadline Warning Days
+14. click button "Submit"
+15. verify open enrollment period created
+
+--------------------------------------------------------------------------------
+
+TASK: View Open Enrollment Status
+Navigation: Search > "Open Enrollment Status"
+Purpose: Monitor enrollment progress during open enrollment
+
+Steps:
+1. enter search box as "Open Enrollment Status"
+2. wait for search results
+3. click search result containing "Open Enrollment Status"
+4. wait for page to load
+5. select Open Enrollment Period
+6. view status metrics:
+   - Total Eligible Employees
+   - Employees Who Have Elected
+   - Employees Not Yet Elected
+   - Election Completion Rate (%)
+7. filter by:
+   - Benefit Group
+   - Company
+   - Location
+   - Manager
+8. view election details by plan
+9. screenshot as "open_enrollment_status.png"
+
+Status Metrics:
+- Eligible: Total employees eligible for enrollment
+- Completed: Employees who submitted elections
+- In Progress: Employees with saved but not submitted elections
+- Not Started: Employees who haven't accessed enrollment
+- Waived: Employees who waived coverage
+
+--------------------------------------------------------------------------------
+
+TASK: Send Open Enrollment Reminders
+Navigation: Search > "Send Open Enrollment Reminders"
+Purpose: Send notifications to employees who haven't enrolled
+
+Steps:
+1. enter search box as "Send Open Enrollment Reminders"
+2. wait for search results
+3. click search result containing "Send Open Enrollment Reminders"
+4. wait for page to load
+5. select Open Enrollment Period
+6. select Reminder Type:
+   - Initial Reminder
+   - Deadline Reminder
+   - Final Reminder
+7. select Target Population:
+   - Employees Not Yet Elected
+   - Employees with Incomplete Elections
+   - All Eligible Employees
+8. preview message content
+9. click button "Send Reminders"
+10. verify reminders sent successfully
+
+================================================================================
+NEW HIRE ENROLLMENT
+================================================================================
+
+TASK: View New Hire Enrollment Events
+Navigation: Search > "New Hire Enrollment Events"
+Purpose: Monitor new employee benefit enrollment
+
+Steps:
+1. enter search box as "New Hire Enrollment Events"
+2. wait for search results
+3. click search result containing "New Hire Enrollment Events"
+4. wait for page to load
+5. filter by:
+   - Hire Date Range
+   - Enrollment Status (Pending, Completed, Missed)
+   - Company/Location
+6. view new hire enrollment data:
+   - Employee Name
+   - Hire Date
+   - Eligibility Date
+   - Enrollment Deadline
+   - Enrollment Status
+7. click employee to view enrollment details
+8. screenshot as "new_hire_enrollment.png"
+
+New Hire Enrollment Timeline:
+Day 0: Hire Date
+Day 1-30: Waiting Period (if applicable)
+Day 31: Eligibility Date (varies by plan)
+Day 31-62: Enrollment Window (31 days from eligibility)
+Day 62: Enrollment Deadline
+Day 63+: Elections Effective
+
+--------------------------------------------------------------------------------
+
+TASK: Enroll New Hire in Benefits (HR-Initiated)
+Navigation: Worker Profile > Actions > Benefits > Enroll in Benefits
+Purpose: HR administrator enrolls new hire in benefits
+
+Steps:
+1. enter search box as "{Employee Name or ID}"
+2. wait for search results
+3. click search result containing employee name
+4. wait for worker profile to load
+5. click "Actions" dropdown
+6. click "Benefits"
+7. click "Enroll in Benefits"
+8. wait for enrollment page to load
+9. select New Hire Event
+10. verify eligibility date
+11. for each benefit plan:
+    - Click plan tab (Medical, Dental, Vision, etc.)
+    - Select plan option
+    - Select coverage level
+    - Add dependents (if applicable)
+    - Review cost
+12. click "Beneficiaries" tab
+13. add primary and contingent beneficiaries
+14. review total costs and elections
+15. click button "Submit"
+16. verify enrollment confirmation
+
+================================================================================
+LIFE EVENT ENROLLMENT
+================================================================================
+
+TASK: Report Life Event
+Navigation: Benefits Hub > Report a Life Event
+Purpose: Employee reports qualifying life event
+
+Steps:
+1. enter search box as "Report a Life Event"
+2. wait for search results
+3. click search result containing "Report a Life Event"
+4. wait for page to load
+5. select Life Event Type:
+   - Marriage/Domestic Partnership
+   - Divorce/Annulment
+   - Birth of Child
+   - Adoption
+   - Death of Dependent
+   - Loss of Other Coverage
+   - Gain of Other Coverage
+6. enter Event Date (must be within last 31 days)
+7. upload Required Documentation:
+   - Marriage Certificate
+   - Birth Certificate
+   - Court Order
+   - Prior Coverage Termination Letter
+8. click button "Continue"
+9. make benefit changes allowed by life event
+10. review and submit elections
+11. verify confirmation message
+
+Life Event Documentation Requirements:
+- Marriage: Marriage certificate
+- Birth: Birth certificate, hospital record
+- Adoption: Adoption decree, placement letter
+- Divorce: Divorce decree, court order
+- Death: Death certificate
+- Loss of Coverage: Termination letter from prior carrier
+
+--------------------------------------------------------------------------------
+
+TASK: Approve Life Event (Manager/HR)
+Navigation: Inbox > Life Event Approval
+Purpose: Review and approve employee life event
+
+Steps:
+1. navigate to Inbox
+2. find Life Event approval task
+3. click task to open
+4. review life event details:
+   - Employee Name
+   - Event Type
+   - Event Date
+   - Supporting Documentation
+5. verify documentation:
+   - Date matches event date
+   - Document type appropriate for event
+   - Names match employee/dependent
+6. select action:
+   - Approve: Accept life event
+   - Send Back: Request additional information
+   - Deny: Reject (with reason)
+7. enter comments (required for Send Back/Deny)
+8. click button "Submit"
+9. verify approval processed
+
+================================================================================
+ENROLLMENT EVENT RULES
+================================================================================
+
+TASK: Maintain Enrollment Event Rules
+Navigation: Search > "Maintain Enrollment Event Rules"
+Purpose: Configure plan actions allowed for each event type
+
+Steps:
+1. enter search box as "Maintain Enrollment Event Rules"
+2. wait for search results
+3. click search result containing "Enrollment Event Rules"
+4. wait for page to load
+5. select Event Type to configure
+6. for each Benefit Plan:
+   - Check/uncheck Enroll allowed
+   - Check/uncheck Change allowed
+   - Check/uncheck Waive allowed
+   - Check/uncheck Add Dependent allowed
+   - Check/uncheck Remove Dependent allowed
+7. configure FSA/HSA rules:
+   - Allow contribution changes
+   - Mid-year increase allowed
+   - Mid-year decrease allowed
+8. click button "Submit"
+9. verify rules updated
+
+Event Rule Matrix Example:
+| Event Type          | Medical | Dental | Vision | FSA   | 401k  |
+|---------------------|---------|--------|--------|-------|-------|
+| New Hire            | E,W     | E,W    | E,W    | E,W   | E,C   |
+| Open Enrollment     | E,C,W   | E,C,W  | E,C,W  | E,C,W | E,C,W |
+| Marriage            | E,C,D   | E,C,D  | E,C,D  | C     | -     |
+| Birth/Adoption      | E,C,D   | E,C,D  | E,C,D  | C     | -     |
+| Loss of Coverage    | E,D     | E,D    | E,D    | E     | -     |
+
+E=Enroll, C=Change, W=Waive, D=Add Dependent
+
+================================================================================
+PASSIVE ENROLLMENT EVENTS
+================================================================================
+
+TASK: Configure Passive Enrollment
+Navigation: Search > "Maintain Passive Enrollment Rules"
+Purpose: Set up automatic benefit enrollment
+
+Steps:
+1. enter search box as "Maintain Passive Enrollment Rules"
+2. wait for search results
+3. click search result containing "Passive Enrollment"
+4. wait for page to load
+5. configure passive enrollment rules:
+
+Passive Enrollment Types:
+- Auto-Enroll Default: Enroll in default plans if no election
+- Carry Forward: Continue prior year elections
+- Opt-Out Required: Automatic unless declined
+
+6. select Plans for Passive Enrollment:
+   - Default Medical Plan
+   - Default Dental Plan
+   - Basic Life Insurance (employer-paid)
+   - Disability (if employer-paid)
+7. select Coverage Level Default:
+   - Employee Only
+   - Same as prior year
+8. configure Conditions:
+   - Apply if no election by deadline
+   - Apply to specific populations
+9. click button "Submit"
+10. verify passive enrollment rules configured
+
+--------------------------------------------------------------------------------
+
+TASK: Review Passive Enrollment Results
+Navigation: Search > "Passive Enrollment Audit"
+Purpose: Review automatically enrolled employees
+
+Steps:
+1. enter search box as "Passive Enrollment Audit"
+2. wait for search results
+3. click search result containing "Passive Enrollment Audit"
+4. wait for page to load
+5. select Enrollment Period
+6. view passive enrollment data:
+   - Employee Name
+   - Plans Passively Enrolled
+   - Default Elections Applied
+   - Prior Elections Carried Forward
+7. filter by:
+   - Enrollment Reason (Default, Carry Forward)
+   - Plan Type
+   - Company/Location
+8. screenshot as "passive_enrollment_audit.png"
+
+================================================================================
+EVIDENCE OF INSURABILITY (EOI)
+================================================================================
+
+TASK: View Evidence of Insurability Status
+Navigation: Search > "Evidence of Insurability Status"
+Purpose: Track EOI submissions and approvals
+
+Steps:
+1. enter search box as "Evidence of Insurability"
+2. wait for search results
+3. click search result containing "Evidence of Insurability"
+4. wait for page to load
+5. filter by:
+   - EOI Status (Pending, Approved, Denied)
+   - Plan Type (Life, LTD)
+   - Date Range
+6. view EOI records:
+   - Employee Name
+   - Plan Requested
+   - Coverage Amount
+   - Submission Date
+   - Carrier Status
+   - Approval/Denial Date
+7. screenshot as "eoi_status.png"
+
+EOI Requirements:
+- Supplemental Life over Guarantee Issue
+- Late enrollment in life insurance
+- Spouse/dependent life over guarantee
+- Long-term disability (some employers)
+
+--------------------------------------------------------------------------------
+
+TASK: Process Evidence of Insurability Response
+Navigation: Search > "Process EOI Response"
+Purpose: Record carrier EOI decision
+
+Steps:
+1. enter search box as "Process EOI Response"
+2. wait for search results
+3. click search result containing "Process EOI Response"
+4. wait for page to load
+5. search for employee with pending EOI
+6. enter EOI decision:
+   - Approved: Coverage amount approved
+   - Partially Approved: Lower amount approved
+   - Denied: Coverage not approved
+7. enter Effective Date of decision
+8. upload carrier documentation
+9. click button "Submit"
+10. verify EOI status updated
+
+================================================================================
+ENROLLMENT AUDIT AND REPORTS
+================================================================================
+
+1. ENROLLMENT COUNT REPORT
+   Task: Search > "Enrollment Count"
+   - Total enrollments by plan
+   - Coverage level breakdown
+   - Year-over-year comparison
+
+2. ENROLLMENT AUDIT REPORT
+   Task: Search > "Enrollment Audit"
+   - All enrollment events processed
+   - Event type, date, employee
+   - Elections made
+
+3. BENEFIT CENSUS
+   Task: Search > "Benefit Census"
+   - Complete employee benefit data
+   - Coverage details by plan
+   - Dependent information
+
+4. WAIVER REPORT
+   Task: Search > "Benefit Waivers" or "Verify Waives"
+   - Employees who waived coverage
+   - Waiver reasons
+   - Alternative coverage attestations
+
+5. LIFE EVENT AUDIT
+   Task: Search > "Life Event Audit"
+   - All life events reported
+   - Approval status
+   - Resulting benefit changes
+
+================================================================================
+API OPERATIONS
+================================================================================
+
+SOAP Operations (Benefits_Administration.wsdl):
+- Change_Benefits: Initiate enrollment/change for life event
+- Enroll_in_Retirement_Savings_Plans: Retirement enrollment
+- Put_Evidence_of_Insurability: Record EOI status
+- Grant_COBRA_Eligibility: Create COBRA enrollment
+
+REST Endpoints:
+- /benefits/enrollmentEvents: GET enrollment events
+- /benefits/openEnrollment: GET open enrollment status
+- /workers/{id}/benefits/elections: GET/PUT benefit elections
+- /benefits/lifeEvents: POST report life event
+
+================================================================================
+CONFIGURATION BEST PRACTICES
+================================================================================
+
+1. OPEN ENROLLMENT
+   - Schedule 4-6 weeks duration
+   - Send reminders at start, middle, and before deadline
+   - Enable passive enrollment for critical coverage
+   - Provide decision support tools (plan comparison)
+   - Test end-to-end before go-live
+
+2. LIFE EVENTS
+   - Define all qualifying events clearly
+   - Set consistent 31-day windows
+   - Require documentation for all events
+   - Configure approval workflow appropriately
+   - Train HR on documentation review
+
+3. NEW HIRE ENROLLMENT
+   - Align waiting period with company policy
+   - Send welcome communication with enrollment instructions
+   - Provide enrollment deadline reminders
+   - Default to passive enrollment if missed deadline
+
+4. ENROLLMENT RULES
+   - Map each event type to allowed plan changes
+   - Be restrictive with mid-year FSA changes (IRS rules)
+   - Document rule matrix for HR reference
+   - Test rules with various scenarios
+
+5. EVIDENCE OF INSURABILITY
+   - Integrate with carrier EOI process
+   - Track pending EOIs and follow up
+   - Communicate EOI requirements to employees
+   - Process EOI decisions promptly
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+1. EMPLOYEE CAN'T ACCESS ENROLLMENT
+   Check:
+   - Enrollment event generated
+   - Enrollment window still open
+   - Employee eligibility status
+   - System access/permissions
+
+2. PLAN OPTIONS NOT SHOWING
+   Check:
+   - Event rule allows plan changes
+   - Employee eligible for plan
+   - Plan effective date covers enrollment
+   - Benefit group assignment
+
+3. ENROLLMENT WON'T SUBMIT
+   Check:
+   - All required fields completed
+   - Dependents have required information
+   - Beneficiaries designated (if required)
+   - No validation errors
+
+4. LIFE EVENT NOT GENERATING ENROLLMENT
+   Check:
+   - Event type configured correctly
+   - Event date within enrollment window
+   - Documentation approved
+   - Employee eligibility for changed plans
+
+================================================================================
+NOTES
+================================================================================
+
+- Enrollment events drive all benefit election changes
+- Open enrollment typically occurs annually in Q4
+- Life events provide IRS-allowed mid-year changes
+- 31-day enrollment windows are standard (IRS requirement)
+- Passive enrollment prevents coverage gaps
+- EOI applies to life insurance over guarantee amounts
+- Document all enrollment events for compliance
+- Test enrollment configuration thoroughly before go-live
+- Train employees on self-service enrollment process
+- Monitor enrollment progress with dashboards and reports
+
+================================================================================

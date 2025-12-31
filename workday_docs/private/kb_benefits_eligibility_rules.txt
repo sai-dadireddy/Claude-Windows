@@ -1,0 +1,520 @@
+================================================================================
+WORKDAY KB ARTICLE: BENEFIT ELIGIBILITY RULES CONFIGURATION
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration - Eligibility Rules
+Category: Human Capital Management - Benefits - Configuration
+Last Updated: 2025-12-31
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Benefit Eligibility Rules in Workday determine which employees qualify for
+specific benefit plans. These rules evaluate employee attributes (employment
+status, hours worked, job classification, location, etc.) to automatically
+assign or restrict access to benefit plans.
+
+Key Concepts:
+- Eligibility Rules: Criteria that must be met to enroll in a plan
+- Benefit Groups: Collections of plans with shared eligibility
+- Eligibility Events: Triggers that evaluate eligibility (hire, job change)
+- Waiting Periods: Time between eligibility and enrollment availability
+- Coverage Targets: Who can be covered (employee, dependents)
+
+Rule Types:
+- Employee Type Rules (Full-time, Part-time, Temporary)
+- Hours-Based Rules (minimum hours per week/month)
+- Job Classification Rules (exempt, non-exempt, union)
+- Location Rules (state, country, work location)
+- Tenure Rules (years of service)
+- Custom Rules (calculated fields, conditions)
+
+================================================================================
+WORKDAY TASKS - ELIGIBILITY RULES
+================================================================================
+
+TASK: Maintain Benefit Eligibility Rules
+Navigation: Search > "Maintain Benefit Eligibility Rules"
+Purpose: Create, edit, or view benefit eligibility rules
+
+Steps:
+1. enter search box as "Maintain Benefit Eligibility Rules"
+2. wait for search results
+3. click search result containing "Maintain Benefit Eligibility Rules"
+4. wait for page to load
+5. view existing rules or click "Add" to create new rule
+
+Creating a New Rule:
+6. enter Rule Name (e.g., "Full-Time Medical Eligibility")
+7. enter Rule Description
+8. select Rule Category:
+   - Employee Type
+   - Hours Worked
+   - Job Classification
+   - Location
+   - Custom
+9. define Rule Conditions:
+   - Condition Type (equals, greater than, in list, etc.)
+   - Field to Evaluate
+   - Value(s) for comparison
+10. add additional conditions if needed (AND/OR logic)
+11. click button "Submit"
+12. verify rule created successfully
+
+Rule Condition Examples:
+- Employee Type = "Regular Full-Time"
+- Scheduled Weekly Hours >= 30
+- Worker Type IN ("Employee", "Contingent Worker")
+- Pay Rate Type = "Hourly"
+- Job Family = "Engineering"
+- Location Country = "United States"
+- Years of Service >= 1
+
+--------------------------------------------------------------------------------
+
+TASK: Benefit Eligibility Rules Audit
+Navigation: Search > "Benefit Eligibility Rules Audit"
+Purpose: Review all configured eligibility rules
+
+Steps:
+1. enter search box as "Benefit Eligibility Rules Audit"
+2. wait for search results
+3. click search result containing "Eligibility Rules Audit"
+4. wait for page to load
+5. filter by:
+   - Benefit Plan (optional)
+   - Benefit Group (optional)
+   - Rule Type (optional)
+6. click button "OK" or "Run"
+7. verify report displays:
+   - Rule Name
+   - Rule Description
+   - Associated Benefit Plans
+   - Condition Logic
+   - Effective Date
+   - Active/Inactive Status
+8. screenshot as "eligibility_rules_audit.png"
+
+Report Columns:
+- Eligibility Rule Name
+- Rule Type
+- Condition Summary
+- Plans Using This Rule
+- Last Modified Date
+- Modified By
+
+--------------------------------------------------------------------------------
+
+TASK: View Benefit Plan Eligibility
+Navigation: Search > "Benefit Plans" > Select Plan > "Eligibility Rules" tab
+Purpose: View eligibility rules for a specific benefit plan
+
+Steps:
+1. enter search box as "Benefit Plans"
+2. wait for search results
+3. click search result containing "Benefit Plans"
+4. wait for page to load
+5. click on specific benefit plan name
+6. wait for plan details page
+7. click tab "Eligibility Rules"
+8. verify eligibility configuration:
+   - Eligible Employee Types
+   - Waiting Period (if any)
+   - Eligibility Date Calculation
+   - Required Eligibility Events
+9. screenshot as "plan_eligibility.png"
+
+Eligibility Tab Fields:
+- Eligibility Rule (linked rule name)
+- Waiting Period Type:
+  - First of Month Following Hire
+  - Date of Hire
+  - First of Month Following X Days
+  - First of Quarter Following Hire
+- Waiting Period Duration (days/months)
+- Eligibility Date Rule
+- Dependent Eligibility Rules
+
+================================================================================
+BENEFIT GROUPS
+================================================================================
+
+TASK: Maintain Benefit Groups
+Navigation: Search > "Maintain Benefit Groups"
+Purpose: Create or modify benefit groups (collections of plans)
+
+Steps:
+1. enter search box as "Maintain Benefit Groups"
+2. wait for search results
+3. click search result containing "Maintain Benefit Groups"
+4. wait for page to load
+5. view existing groups or click "Add" for new group
+6. enter Group Name (e.g., "US Full-Time Employees")
+7. enter Group Description
+8. assign Eligibility Rule for the group
+9. add Benefit Plans to the group:
+   - Medical Plans
+   - Dental Plans
+   - Vision Plans
+   - Life Insurance
+   - Retirement Plans
+10. set Group Priority (if employee qualifies for multiple groups)
+11. click button "Submit"
+12. verify group created/updated
+
+Benefit Group Structure:
+- Group Name
+- Group Description
+- Primary Eligibility Rule
+- Included Benefit Plans
+- Effective Date
+- Priority Order (lower number = higher priority)
+
+--------------------------------------------------------------------------------
+
+TASK: View Benefit Groups
+Navigation: Search > "View Benefit Groups"
+Purpose: Review configured benefit groups
+
+Steps:
+1. enter search box as "View Benefit Groups"
+2. wait for search results
+3. click search result containing "View Benefit Groups"
+4. wait for page to load
+5. select Company (if multi-company)
+6. view group list:
+   - Group Name
+   - Eligibility Rule
+   - Plan Count
+   - Employee Count
+7. click group name for details
+8. verify plans assigned to group
+9. screenshot as "benefit_groups.png"
+
+================================================================================
+ELIGIBILITY EVENTS AND TRIGGERS
+================================================================================
+
+TASK: Maintain Enrollment Event Types
+Navigation: Search > "Maintain Enrollment Event Types"
+Purpose: Configure events that trigger eligibility evaluation
+
+Steps:
+1. enter search box as "Maintain Enrollment Event Types"
+2. wait for search results
+3. click search result containing "Enrollment Event Types"
+4. wait for page to load
+5. view or add enrollment event types
+
+Standard Enrollment Event Types:
+- New Hire: Employee hired into benefits-eligible position
+- Open Enrollment: Annual enrollment period
+- Life Event: Marriage, birth, divorce, etc.
+- Job Change: Transfer, promotion affecting eligibility
+- Dependent Event: Add/remove dependent
+- Loss of Coverage: Spouse loses coverage elsewhere
+- COBRA Qualifying Event: Termination, reduced hours
+
+Event Configuration Fields:
+- Event Type Name
+- Event Category
+- Triggering Business Process
+- Enrollment Window (days)
+- Allowed Plan Changes
+- Documentation Required
+
+--------------------------------------------------------------------------------
+
+TASK: View Enrollment Event Rules
+Navigation: Search > "Enrollment Event Rules"
+Purpose: Review rules that link events to plan changes
+
+Steps:
+1. enter search box as "Enrollment Event Rules"
+2. wait for search results
+3. click search result containing "Enrollment Event Rules"
+4. wait for page to load
+5. filter by:
+   - Event Type
+   - Benefit Plan
+   - Effective Date
+6. verify rule configuration:
+   - Event Type
+   - Plan Actions Allowed (Enroll, Change, Waive)
+   - Enrollment Window Duration
+   - Dependent Changes Allowed
+7. screenshot as "enrollment_event_rules.png"
+
+================================================================================
+WAITING PERIODS
+================================================================================
+
+Waiting Period Types:
+1. FIRST OF MONTH FOLLOWING HIRE
+   - Eligibility starts 1st of month after hire date
+   - Example: Hired 3/15 -> Eligible 4/1
+
+2. DATE OF HIRE
+   - Eligible immediately on hire date
+   - Example: Hired 3/15 -> Eligible 3/15
+
+3. FIRST OF MONTH FOLLOWING X DAYS
+   - Wait X days, then 1st of following month
+   - Example: 30-day wait, Hired 3/15 -> 4/14 + 1st of month = 5/1
+
+4. FIRST OF QUARTER FOLLOWING HIRE
+   - Eligibility starts 1st of next quarter
+   - Example: Hired 3/15 -> Eligible 4/1 (Q2 start)
+
+5. ANNIVERSARY OF HIRE
+   - Eligibility on hire anniversary
+   - Example: Hired 3/15/2024 -> Eligible 3/15/2025
+
+TASK: Configure Waiting Periods
+Navigation: Search > "Benefit Plans" > Select Plan > "Eligibility Rules" tab
+Purpose: Set waiting period for benefit plan
+
+Steps:
+1. navigate to specific Benefit Plan
+2. click tab "Eligibility Rules"
+3. click "Edit"
+4. locate Waiting Period section
+5. select Waiting Period Type:
+   - First of Month Following Hire
+   - Date of Hire
+   - First of Month Following X Days
+   - First of Quarter
+   - Anniversary
+6. enter Waiting Period Duration (if applicable):
+   - Days (e.g., 30, 60, 90)
+   - Months (e.g., 3, 6, 12)
+7. click button "Submit"
+8. verify waiting period updated
+
+================================================================================
+COVERAGE TARGETS
+================================================================================
+
+TASK: Maintain Coverage Targets
+Navigation: Search > "Maintain Coverage Targets"
+Purpose: Define who can be covered under benefit plans
+
+Steps:
+1. enter search box as "Maintain Coverage Targets"
+2. wait for search results
+3. click search result containing "Coverage Targets"
+4. wait for page to load
+5. view or add coverage targets
+
+Coverage Target Types:
+- Employee Only
+- Employee + Spouse
+- Employee + Child(ren)
+- Employee + Family (Spouse + Children)
+- Employee + Domestic Partner
+- Dependent Only (for dependent coverage plans)
+
+Coverage Target Configuration:
+- Target Name
+- Covered Relationships (spouse, child, domestic partner)
+- Maximum Dependents (optional)
+- Age Limits (children: up to 26 for medical, varies by plan)
+- Student Status Requirements
+- Disabled Dependent Rules
+
+--------------------------------------------------------------------------------
+
+TASK: View Health Care Coverage Targets
+Navigation: Search > "View Health Care Coverage Targets"
+Purpose: Review coverage levels for health plans
+
+Steps:
+1. enter search box as "Health Care Coverage Targets"
+2. wait for search results
+3. click search result containing "Health Care Coverage Targets"
+4. wait for page to load
+5. verify coverage target configuration:
+   - Coverage Level Name
+   - Eligible Relationships
+   - Premium Tier (if tiered pricing)
+   - Cost Allocation (employee/employer share)
+6. screenshot as "coverage_targets.png"
+
+================================================================================
+ELIGIBILITY REPORTS
+================================================================================
+
+1. BENEFIT ELIGIBILITY RULES AUDIT
+   - All configured eligibility rules
+   - Rule conditions and logic
+   - Associated benefit plans
+
+2. ACTIVE EMPLOYEES NOT ELIGIBLE FOR BENEFITS
+   Task: Search > "Active Employees Not Eligible for Benefits"
+   - Employees who don't meet eligibility criteria
+   - Reason for ineligibility
+   - Potential eligibility date
+
+3. BENEFITS ELIGIBILITY BY BENEFIT GROUP
+   Task: Search > "Benefits Eligibility by Benefit Group"
+   - Employees by benefit group assignment
+   - Group eligibility rule details
+   - Employee count per group
+
+4. VIEW ELIGIBLE WORKERS
+   Task: Related Action on Benefit Plan > "View Eligible Workers"
+   - Workers who qualify for specific plan
+   - Eligibility date
+   - Enrollment status
+
+5. ENROLLMENT AUDIT
+   Task: Search > "Enrollment Audit"
+   - Enrollment events processed
+   - Plan elections by employee
+   - Enrollment errors/exceptions
+
+================================================================================
+API OPERATIONS
+================================================================================
+
+SOAP Operations (Benefits_Administration.wsdl):
+- Get_Benefit_Plans: Includes eligibility rule references
+- Put_Benefit_Plan: Create/update plan with eligibility rules
+- Get_Custom_Validation_Rules: Retrieve eligibility validation logic
+- Put_Custom_Validation_Rule: Create custom eligibility rules
+
+SOAP Operations (Human_Resources.wsdl):
+- Get_Workers: Include benefits eligibility in response
+- Get_Employee_Benefits_Elections: Current elections by worker
+
+REST Endpoints:
+- /benefitPlans: GET plans with eligibility configuration
+- /benefitPlans/{id}/eligibilityRules: GET specific plan rules
+- /workers/{id}/benefits/eligibility: GET worker eligibility status
+
+================================================================================
+CONFIGURATION BEST PRACTICES
+================================================================================
+
+1. RULE NAMING CONVENTIONS
+   - Use descriptive names: "US FT Medical Eligible"
+   - Include key criteria in name
+   - Version rules if changes needed: "US FT Medical Eligible v2"
+
+2. RULE LOGIC
+   - Keep rules simple and specific
+   - Use AND logic sparingly (all conditions must be true)
+   - Test rules thoroughly before go-live
+   - Document complex rule logic
+
+3. WAITING PERIODS
+   - Align with company policy and regulations
+   - Consider ACA 90-day maximum for full-time employees
+   - Coordinate with payroll for deduction timing
+
+4. BENEFIT GROUPS
+   - Create logical groupings (by country, employee type)
+   - Set clear priority order
+   - Review group assignments regularly
+
+5. ELIGIBILITY EVENTS
+   - Define all triggering events
+   - Set reasonable enrollment windows
+   - Require documentation for life events
+   - Test event processing end-to-end
+
+6. DEPENDENT ELIGIBILITY
+   - Define age limits clearly (e.g., children to 26)
+   - Require annual dependent verification
+   - Handle disabled dependent exceptions
+   - Document domestic partner requirements
+
+================================================================================
+COMMON ELIGIBILITY SCENARIOS
+================================================================================
+
+1. NEW HIRE ELIGIBILITY
+   Trigger: Hire business process completes
+   Rule: Employee Type = Full-Time, Hours >= 30/week
+   Waiting: First of Month Following 30 Days
+   Window: 31 days from eligibility date
+   Action: System generates enrollment event
+
+2. JOB CHANGE - ELIGIBILITY GAIN
+   Trigger: Job change to benefits-eligible position
+   Rule: Previously ineligible, now meets criteria
+   Waiting: Varies by policy (immediate or standard)
+   Window: 31 days from new eligibility date
+   Action: Enrollment event for newly eligible plans
+
+3. JOB CHANGE - ELIGIBILITY LOSS
+   Trigger: Job change to non-eligible position
+   Rule: No longer meets eligibility criteria
+   Waiting: N/A (losing coverage)
+   Window: Coverage ends per plan rules
+   Action: Coverage termination, COBRA offer
+
+4. LIFE EVENT - MARRIAGE
+   Trigger: Life event reported in Workday
+   Rule: Allows adding spouse to coverage
+   Waiting: None (life event override)
+   Window: 31 days from event date
+   Action: Add spouse to eligible plans
+
+5. OPEN ENROLLMENT
+   Trigger: Annual enrollment period opens
+   Rule: All benefit-eligible employees
+   Waiting: None
+   Window: Defined enrollment period (e.g., 11/1 - 11/30)
+   Action: Review/change/waive all elections
+
+================================================================================
+TROUBLESHOOTING ELIGIBILITY ISSUES
+================================================================================
+
+1. EMPLOYEE NOT SHOWING AS ELIGIBLE
+   Check:
+   - Employee Type matches rule criteria
+   - Hours meet minimum requirement
+   - Waiting period has passed
+   - No eligibility rule exclusions
+   - Benefit group assignment correct
+
+2. WRONG BENEFIT GROUP ASSIGNED
+   Check:
+   - Group eligibility rules
+   - Group priority order
+   - Employee attributes match correct group
+   - Effective dates of group assignments
+
+3. WAITING PERIOD CALCULATED INCORRECTLY
+   Check:
+   - Hire date accuracy
+   - Waiting period type configuration
+   - Eligibility date calculation rule
+   - Calendar vs. business days setting
+
+4. ENROLLMENT EVENT NOT GENERATED
+   Check:
+   - Enrollment event type configuration
+   - Triggering business process completed
+   - Employee meets eligibility criteria
+   - Enrollment window hasn't expired
+
+================================================================================
+NOTES
+================================================================================
+
+- Eligibility rules are evaluated when business processes complete
+- Changes to rules affect future eligibility; retro changes require reprocessing
+- Benefit groups simplify management of multiple plans
+- Waiting periods cannot exceed 90 days for ACA-covered plans
+- Enrollment events have configurable windows (typically 31 days)
+- Coverage targets define dependent eligibility by plan
+- Custom rules allow complex eligibility logic via calculated fields
+- Audit reports should be run periodically for compliance
+- Rule changes should be tested in sandbox before production
+
+================================================================================
