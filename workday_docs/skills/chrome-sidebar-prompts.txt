@@ -1,0 +1,268 @@
+================================================================================
+WORKDAY KB RESEARCH - CHROME SIDEBAR PROMPTS
+================================================================================
+Instructions:
+1. Open resourcecenter.workday.com in Chrome
+2. Open Claude sidebar (Ctrl+Shift+P or click extension)
+3. Paste ONE prompt per tab
+4. Copy JSON output and paste to Claude Code
+5. Claude Code will save to KB files
+
+================================================================================
+TAB 1: FINANCE
+================================================================================
+Research these Finance topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Confirm Books
+2. Book Codes
+3. Translation Rules Sets
+4. Worktag Usage
+5. Revaluation Rules
+
+RULES (CRITICAL):
+- ONLY extract info visible on search results and articles
+- Say "NOT FOUND" if topic has no clear documentation
+- NO guessing or inventing steps
+- Cite exact page URLs
+- Note any PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Business process steps (numbered 1, 2, 3...)
+- Required fields with data types
+- Validation rules
+- UI navigation path (Search > Task > ...)
+
+OUTPUT FORMAT (JSON):
+{
+  "area": "Finance",
+  "topics": [
+    {
+      "name": "Confirm Books",
+      "source_url": "exact URL",
+      "confidence": "HIGH/MEDIUM/LOW/NOT_FOUND",
+      "steps": ["1. Navigate to...", "2. Click..."],
+      "fields": [{"name": "Book", "type": "dropdown", "required": true}],
+      "validation": ["Rule 1...", "Rule 2..."],
+      "navigation": "Search > Confirm Books > ...",
+      "downloads": ["guide.pdf"]
+    }
+  ]
+}
+
+================================================================================
+TAB 2: HCM
+================================================================================
+Research these HCM topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Collective Agreements
+2. Fields of Study configuration
+3. Job History Industries
+4. Duplicate Management Framework
+5. Academic Faculty Periods
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing - cite exact URLs
+- Note any PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Configuration/setup steps
+- Required fields
+- Validation rules
+
+OUTPUT as JSON with area: "HCM"
+
+================================================================================
+TAB 3: CASE MANAGEMENT
+================================================================================
+Research these Case Management topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Create a Case for Individual Contributor
+2. Create a Case for Managers
+3. Create a Case on Behalf of an Employee
+4. Case Routing Rule
+5. Case Eligibility Rule
+6. Service Category
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Step-by-step process
+- Required fields
+- User roles/permissions needed
+
+OUTPUT as JSON with area: "Case_Management"
+
+================================================================================
+TAB 4: PAYROLL US
+================================================================================
+Research these Payroll US topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Benefits and Pay Hub
+2. Missing Payment Elections Review
+3. Period Schedule Configuration
+4. Pay Run Group Configuration
+5. FLSA Calendar Configuration
+6. FLSA Calendar Rules
+7. Company Accounting Configuration
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing - cite URLs
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Configuration steps
+- Required fields
+- Validation rules
+
+OUTPUT as JSON with area: "Payroll_US"
+
+================================================================================
+TAB 5: PROCUREMENT
+================================================================================
+Research these Procurement topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Requisition Types
+2. Supplier Contract Types
+3. Create a Purchase Order
+4. Match Rules
+5. Spend Transaction Instructions
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing
+- Note PDF/template downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Setup/configuration steps
+- Required fields
+- Business process flow
+
+OUTPUT as JSON with area: "Procurement"
+
+================================================================================
+TAB 6: BENEFITS
+================================================================================
+Research these Benefits topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. ACA Measurement Period
+2. Benefit Eligibility Rules
+3. Enrollment Count
+4. Verify Benefit Groups
+5. Health Care Plans
+6. HSA Plans
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing - cite URLs
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Configuration steps
+- Required fields
+- Validation criteria
+
+OUTPUT as JSON with area: "Benefits"
+
+================================================================================
+TAB 7: INVENTORY
+================================================================================
+Research these Inventory topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Inventory Site configuration
+2. Stocking Locations setup
+3. Inventory Adjustment
+4. Shipping Information
+5. Inventory Count
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Setup steps
+- Required fields
+- Validation rules
+
+OUTPUT as JSON with area: "Inventory"
+
+================================================================================
+TAB 8: LEASE ACCOUNTING
+================================================================================
+Research these Lease Accounting topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. Supplier Contract for Operating Lease
+2. Supplier Contract for Finance Lease
+3. Lease Amendment
+4. Leases Tenant Setup
+5. Leases Book Codes
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Configuration steps
+- Required fields
+- Accounting treatment rules
+
+OUTPUT as JSON with area: "Lease_Accounting"
+
+================================================================================
+TAB 9: PAYROLL CANADA
+================================================================================
+Research these Payroll Canada topics on this Workday Community site:
+
+TOPICS TO SEARCH:
+1. New Hire to Off-Cycle to Settlement
+2. Termination to Off-Cycle to Settlement
+3. Payroll Input to Gross to Settlement
+4. ROE History
+5. Federal and Province Tax Reporting
+
+RULES (CRITICAL):
+- ONLY extract info visible on this site
+- Say "NOT FOUND" if missing
+- NO guessing - cite URLs
+- Note PDF downloads
+
+FOR EACH TOPIC, EXTRACT:
+- Process steps
+- Required fields
+- Canadian-specific rules
+
+OUTPUT as JSON with area: "Payroll_Canada"
+
+================================================================================
+AFTER RESEARCH COMPLETE
+================================================================================
+1. Copy each JSON output
+2. Paste to Claude Code
+3. Say: "Save this to KB for {area}"
+4. Claude Code will:
+   - Save to workday_docs/private/kb_{area}_{topic}.txt
+   - Update tracker
+   - Index to RAG
+
+================================================================================

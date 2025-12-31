@@ -1,168 +1,178 @@
 # Workday KB Research Skill for Claude Chrome Sidebar
+# Updated: 2025-12-31
 
-## Shortcut Name: /workday-research
+## Overview
+Research Workday topics from Community KB using Claude Chrome sidebar.
+Copy JSON output and paste to Claude Code to save to local KB.
 
-## Description
-Research Workday topics from Community KB, extract structured data, and download relevant documents.
+## Workflow
+1. Open resourcecenter.workday.com in Chrome
+2. Open Claude sidebar (Ctrl+Shift+P)
+3. Paste prompt below (replace {TOPIC})
+4. Copy JSON output
+5. Paste to Claude Code → saves to workday_docs/private/
 
----
+================================================================================
+MASTER PROMPT TEMPLATE
+================================================================================
 
-## PROMPT (Copy to Claude Chrome Sidebar)
+Research "{TOPIC}" on this Workday Community site.
 
-You are a Workday Knowledge Base Research Agent.
-
-## YOUR TASK
-Research "{TOPIC}" on the current Workday Community page or search for it.
-
-## RULES (CRITICAL - NO HALLUCINATIONS)
-1. ONLY extract information visible on the page
-2. If information is NOT on the page, say "NOT FOUND"
+RULES (CRITICAL - NO HALLUCINATIONS):
+1. ONLY extract info visible on THIS page/site
+2. Say "NOT FOUND" if topic has no clear documentation
 3. NEVER guess or invent steps, fields, or processes
 4. ALWAYS cite the exact source URL
-5. Include direct quotes when possible
+5. Note any PDFs available for download (I'll download manually)
 
-## RESEARCH STEPS
-1. If not already on search results, search for "{TOPIC}"
-2. Click the most relevant KB article or documentation
-3. Read the full page content
-4. Extract structured information (see OUTPUT below)
-5. If PDFs or guides are linked, note them for download
+SEARCH STRATEGY:
+1. Use the search box at top of page
+2. Click most relevant KB article or documentation
+3. Read full page content before extracting
+4. Check related articles if needed
 
-## DOWNLOADS
-- Identify any PDF, Excel, or document links
-- Click to download relevant guides
-- Note filename: "Downloaded: {filename}"
-- Suggest save location: workday_docs/private/
+EXTRACT:
+- Business process steps (numbered 1, 2, 3...)
+- Required fields with data types
+- Validation rules
+- UI navigation path
 
-## OUTPUT FORMAT
-Respond with this exact JSON structure:
-
+OUTPUT FORMAT (JSON):
 {
   "topic": "{TOPIC}",
   "source_url": "exact page URL",
-  "source_title": "page title",
-  "confidence": "HIGH/MEDIUM/LOW",
-
-  "business_process_steps": [
+  "confidence": "HIGH/MEDIUM/LOW/NOT_FOUND",
+  "steps": [
     "1. Navigate to...",
     "2. Click...",
     "3. Enter..."
   ],
-
-  "required_fields": [
-    {"field": "Worker", "type": "lookup", "required": true},
-    {"field": "Effective Date", "type": "date", "required": true}
+  "fields": [
+    {"name": "Worker", "type": "lookup", "required": true}
   ],
-
-  "validation_rules": [
-    "Rule 1: ...",
-    "Rule 2: ..."
-  ],
-
-  "ui_navigation": "Search > Task Name > ...",
-
-  "related_tasks": ["Task 1", "Task 2"],
-
-  "downloads": [
-    {"filename": "guide.pdf", "url": "...", "description": "Admin Guide"}
-  ],
-
+  "validation": ["Rule 1...", "Rule 2..."],
+  "navigation": "Search > Task Name > ...",
+  "downloads": ["filename.pdf if available"],
   "notes": "Any additional context"
 }
 
-## CONFIDENCE SCORING
+CONFIDENCE SCORING:
 - HIGH: Direct KB article with step-by-step instructions
 - MEDIUM: Related article, some inference needed
 - LOW: Only tangential information found
+- NOT_FOUND: No documentation exists for this topic
 
-## IF TOPIC NOT FOUND
+IF NOT FOUND:
 {
   "topic": "{TOPIC}",
   "confidence": "NOT_FOUND",
-  "search_attempted": true,
-  "suggestion": "Try searching for: [alternative terms]"
+  "suggestion": "Try alternative search: [terms]"
 }
 
-## AFTER COMPLETION
-1. Summarize what was found
-2. List any downloaded files
-3. Suggest next topics to research
+================================================================================
+BATCH PROMPT - MULTIPLE TOPICS
+================================================================================
 
----
+Research these topics on this Workday Community site:
 
-## USAGE IN CLAUDE CHROME
+TOPICS:
+1. {TOPIC1}
+2. {TOPIC2}
+3. {TOPIC3}
+4. {TOPIC4}
+5. {TOPIC5}
 
-### Option 1: Save as Shortcut
-1. Open Claude Chrome sidebar
-2. Type the prompt above
-3. Click "Save as Shortcut"
-4. Name it: /workday-research
-5. Next time, type /workday-research and replace {TOPIC}
+RULES:
+- ONLY extract info visible on THIS site
+- Say "NOT FOUND" for any topic without clear docs
+- NO guessing - cite exact URLs
+- Note any PDF downloads available
 
-### Option 2: Quick Use
-1. Navigate to resourcecenter.workday.com
-2. Open Claude sidebar (Ctrl+Shift+P)
-3. Paste prompt, replace {TOPIC} with actual topic
-4. Run and save output
+FOR EACH TOPIC EXTRACT:
+- Business process steps
+- Required fields with types
+- Validation rules
 
----
+OUTPUT as JSON array:
+{
+  "area": "{AREA}",
+  "topics": [
+    {
+      "name": "...",
+      "source_url": "...",
+      "confidence": "...",
+      "steps": [...],
+      "fields": [...],
+      "validation": [...],
+      "downloads": [...]
+    }
+  ]
+}
 
-## TOPIC LIST FOR BATCH RESEARCH
+================================================================================
+TOPIC LIST BY AREA (for batch research)
+================================================================================
 
-### Finance
+FINANCE:
 - Confirm Books
 - Book Codes
 - Translation Rules Sets
-- Ledger Configuration
+- Worktag Usage
+- Revaluation Rules
 
-### HCM
+HCM:
 - Collective Agreements
 - Fields of Study
 - Job History Industries
 - Duplicate Management Framework
-- Hire Employee
-- Terminate Employee
+- Academic Faculty Periods
 
-### Payroll
+CASE MANAGEMENT:
+- Create Case for Individual Contributor
+- Create Case for Managers
+- Create Case on Behalf of Employee
+- Case Routing Rule
+- Case Eligibility Rule
+
+PAYROLL US:
 - Benefits and Pay Hub
 - Missing Payment Elections
 - Period Schedule Configuration
-- Pay Run Group
-- FLSA Calendar
-- FLSA Calendar Rules
+- Pay Run Group Configuration
+- FLSA Calendar Configuration
 
-### Procurement
+PROCUREMENT:
 - Requisition Types
 - Supplier Contract Types
-- Purchase Order
+- Create Purchase Order
+- Match Rules
 
-### Benefits
+BENEFITS:
 - ACA Measurement Period
 - Benefit Eligibility Rules
 - Enrollment Count
+- Benefit Groups
 
-### Inventory
+INVENTORY:
 - Inventory Site
 - Stocking Locations
+- Inventory Adjustment
 - Shipping Information
 
-### Case Management
-- Create Case for Employee
-- Create Case for Managers
-- Create Case on Behalf
+LEASE ACCOUNTING:
+- Supplier Contract Operating Lease
+- Supplier Contract Finance Lease
+- Lease Amendment
+- Leases Tenant Setup
 
-### Lease Accounting
-- Supplier Contract for Operating Lease
-- Supplier Contract for Finance Lease
+================================================================================
+AFTER RESEARCH
+================================================================================
 
----
-
-## OUTPUT SAVE LOCATION
-
-Save JSON output to:
-C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/private/kb_{area}_{topic_slug}.txt
-
-Example:
-- kb_finance_confirm_books.txt
-- kb_hcm_collective_agreements.txt
-- kb_payroll_benefits_pay_hub.txt
+1. Copy the JSON output from Claude sidebar
+2. Paste to Claude Code
+3. Say: "Save this KB research for {area}"
+4. Claude Code will:
+   - Save to workday_docs/private/kb_{area}_{topic}.txt
+   - Update the enhancement tracker
+   - Index content to RAG
