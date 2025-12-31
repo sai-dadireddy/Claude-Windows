@@ -51,6 +51,24 @@ You are researching Workday KB topics. Your task:
 5. Update tracker: workday_docs/research_tracker.txt - mark [x] when done
 
 6. Close tab when finished: navigate to about:blank
+
+  IMPORTANT: You must capture ALL pages, not just the first 30 results.
+
+    For each search:
+    1. After extracting first page (30 results), check total count
+    2. If totalCount > 30, click "Next" button or page 2
+    3. Wait 3 seconds
+    4. Extract again with Coveo JS
+    5. Append to the same KB file
+    6. Repeat until ALL pages captured
+
+    Example: If total is 500 results = 17 pages (500/30). Extract all 17 pages.
+
+    Coveo JS to check total:
+    var e = document.querySelector("atomic-search-interface").engine;
+    console.log("Total:", e.state.search.response.totalCount, "Current page results:", e.state.search.results.length);
+
+    After clicking Next, extract and append to file. Continue until you've captured everything.
 ---
 
 ================================================================================
