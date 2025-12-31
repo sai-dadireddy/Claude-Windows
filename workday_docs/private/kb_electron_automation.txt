@@ -1,0 +1,351 @@
+# Electron Automation APIs KB
+Source: https://www.electronjs.org/docs/latest/api/web-contents
+Date: 2025-12-31
+
+================================================================================
+WEBCONTENTS API - KEY METHODS FOR TEST AUTOMATION
+================================================================================
+
+## Access webContents
+```javascript
+const { BrowserWindow } = require('electron')
+const win = new BrowserWindow({ width: 800, height: 600 })
+const contents = win.webContents
+```
+
+================================================================================
+PAGE LOADING
+================================================================================
+
+### loadURL(url, options)
+```javascript
+// Load a URL
+await win.webContents.loadURL('https://workday.com')
+
+// With options
+await win.webContents.loadURL('https://workday.com', {
+  extraHeaders: 'pragma: no-cache\n',
+  userAgent: 'Custom Agent'
+})
+```
+
+### loadFile(filePath)
+```javascript
+await win.loadFile('src/index.html')
+```
+
+### getURL() / getTitle()
+```javascript
+const url = win.webContents.getURL()
+const title = win.webContents.getTitle()
+```
+
+================================================================================
+JAVASCRIPT EXECUTION (CRITICAL FOR TESTS)
+================================================================================
+
+### executeJavaScript(code, userGesture)
+```javascript
+// Execute JS and get result
+const result = await win.webContents.executeJavaScript(`
+  document.querySelector('.search-box').value
+`)
+
+// With user gesture (for fullscreen, etc.)
+await win.webContents.executeJavaScript(`
+  document.getElementById('btn').click()
+`, true)
+
+// Fetch data
+const data = await win.webContents.executeJavaScript(`
+  fetch('/api/data').then(r => r.json())
+`)
+```
+
+### executeJavaScriptInIsolatedWorld(worldId, scripts)
+```javascript
+// Run in isolated context (for security)
+await win.webContents.executeJavaScriptInIsolatedWorld(999, [{
+  code: 'document.body.innerHTML'
+}])
+```
+
+================================================================================
+INPUT EVENTS
+================================================================================
+
+### sendInputEvent(event)
+```javascript
+// Mouse click
+win.webContents.sendInputEvent({
+  type: 'mouseDown',
+  x: 100,
+  y: 200,
+  button: 'left',
+  clickCount: 1
+})
+win.webContents.sendInputEvent({
+  type: 'mouseUp',
+  x: 100,
+  y: 200,
+  button: 'left'
+})
+
+// Keyboard input
+win.webContents.sendInputEvent({
+  type: 'keyDown',
+  keyCode: 'Enter'
+})
+win.webContents.sendInputEvent({
+  type: 'char',
+  keyCode: 'a'
+})
+```
+
+### insertText(text)
+```javascript
+// Insert text at focused element
+await win.webContents.insertText('Hello World')
+```
+
+================================================================================
+SCREENSHOTS
+================================================================================
+
+### capturePage(rect, opts)
+```javascript
+// Capture full page
+const image = await win.webContents.capturePage()
+fs.writeFileSync('screenshot.png', image.toPNG())
+
+// Capture specific area
+const image = await win.webContents.capturePage({
+  x: 0, y: 0, width: 800, height: 600
+})
+
+// Keep hidden window visible during capture
+const image = await win.webContents.capturePage(null, {
+  stayHidden: true,
+  stayAwake: true
+})
+```
+
+================================================================================
+FIND IN PAGE
+================================================================================
+
+### findInPage(text, options)
+```javascript
+// Start search
+const requestId = win.webContents.findInPage('searchText', {
+  forward: true,
+  matchCase: false
+})
+
+// Handle results
+win.webContents.on('found-in-page', (event, result) => {
+  console.log(`Found ${result.matches} matches`)
+  if (result.finalUpdate) {
+    win.webContents.stopFindInPage('clearSelection')
+  }
+})
+```
+
+================================================================================
+CSS INJECTION
+================================================================================
+
+### insertCSS(css)
+```javascript
+// Inject CSS
+const key = await win.webContents.insertCSS(`
+  .highlight { background: yellow; }
+`)
+
+// Remove later
+await win.webContents.removeInsertedCSS(key)
+```
+
+================================================================================
+NAVIGATION
+================================================================================
+
+### Navigation History
+```javascript
+// New API (Electron 32+)
+win.webContents.navigationHistory.canGoBack()
+win.webContents.navigationHistory.canGoForward()
+win.webContents.navigationHistory.goBack()
+win.webContents.navigationHistory.goForward()
+win.webContents.navigationHistory.clear()
+
+// Legacy (deprecated)
+win.webContents.canGoBack()
+win.webContents.goBack()
+```
+
+### Other Navigation
+```javascript
+win.webContents.reload()
+win.webContents.reloadIgnoringCache()
+win.webContents.stop()
+```
+
+================================================================================
+KEY EVENTS FOR TEST AUTOMATION
+================================================================================
+
+### did-finish-load
+```javascript
+// Page fully loaded
+win.webContents.on('did-finish-load', () => {
+  console.log('Page loaded')
+})
+```
+
+### dom-ready
+```javascript
+// DOM ready (before images/css)
+win.webContents.on('dom-ready', () => {
+  console.log('DOM ready')
+})
+```
+
+### did-fail-load
+```javascript
+// Load failed
+win.webContents.on('did-fail-load', (event, errorCode, errorDescription) => {
+  console.error(`Failed: ${errorDescription}`)
+})
+```
+
+### did-navigate
+```javascript
+// Navigation completed
+win.webContents.on('did-navigate', (event, url) => {
+  console.log(`Navigated to: ${url}`)
+})
+```
+
+### console-message
+```javascript
+// Capture console logs
+win.webContents.on('console-message', (event, level, message) => {
+  console.log(`[${level}] ${message}`)
+})
+```
+
+### before-input-event
+```javascript
+// Intercept keyboard input
+win.webContents.on('before-input-event', (event, input) => {
+  if (input.key === 'Escape') {
+    event.preventDefault()
+  }
+})
+```
+
+================================================================================
+STATE CHECKS
+================================================================================
+
+```javascript
+win.webContents.isLoading()        // Still loading?
+win.webContents.isLoadingMainFrame() // Main frame loading?
+win.webContents.isWaitingForResponse() // Waiting for response?
+win.webContents.isCrashed()        // Renderer crashed?
+win.webContents.isDestroyed()      // WebContents destroyed?
+win.webContents.isFocused()        // Has focus?
+```
+
+================================================================================
+ZOOM CONTROL
+================================================================================
+
+```javascript
+win.webContents.setZoomFactor(1.5)  // 150%
+win.webContents.getZoomFactor()
+win.webContents.setZoomLevel(2)     // 1.2^2 = 144%
+win.webContents.getZoomLevel()
+```
+
+================================================================================
+DEVTOOLS
+================================================================================
+
+```javascript
+win.webContents.openDevTools({ mode: 'detach' })
+win.webContents.closeDevTools()
+win.webContents.isDevToolsOpened()
+win.webContents.toggleDevTools()
+win.webContents.inspectElement(x, y)  // Inspect at coordinates
+```
+
+================================================================================
+EDITING COMMANDS
+================================================================================
+
+```javascript
+win.webContents.undo()
+win.webContents.redo()
+win.webContents.cut()
+win.webContents.copy()
+win.webContents.paste()
+win.webContents.delete()
+win.webContents.selectAll()
+```
+
+================================================================================
+PDF GENERATION
+================================================================================
+
+```javascript
+const pdfData = await win.webContents.printToPDF({
+  landscape: false,
+  printBackground: true,
+  pageSize: 'A4'
+})
+fs.writeFileSync('output.pdf', pdfData)
+```
+
+================================================================================
+IPC COMMUNICATION (For Test Scripts)
+================================================================================
+
+### Send from Main to Renderer
+```javascript
+// Main process
+win.webContents.send('test-command', { action: 'click', selector: '#btn' })
+
+// Renderer process
+ipcRenderer.on('test-command', (event, data) => {
+  document.querySelector(data.selector).click()
+})
+```
+
+### From Renderer to Main
+```javascript
+// Renderer
+ipcRenderer.send('test-result', { success: true })
+
+// Main
+win.webContents.on('ipc-message', (event, channel, ...args) => {
+  console.log(`Received: ${channel}`, args)
+})
+```
+
+================================================================================
+BEST PRACTICES FOR WORKDAY TESTS
+================================================================================
+
+| Action | Method |
+|--------|--------|
+| Wait for load | `on('did-finish-load')` |
+| Click element | `executeJavaScript('el.click()')` |
+| Type text | `insertText()` or `executeJavaScript()` |
+| Get value | `executeJavaScript('el.value')` |
+| Screenshot | `capturePage()` |
+| Check loaded | `isLoading()` |
+| Navigate | `loadURL()` |
+
+================================================================================

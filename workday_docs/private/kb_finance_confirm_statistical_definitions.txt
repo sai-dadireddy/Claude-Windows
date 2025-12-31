@@ -1,39 +1,30 @@
 # Workday KB: Confirm Statistical Definitions
-# Searched: "Confirm Statistical Definitions"
-# Total Results: 500
-# Captured: 30 (top results)
-# Date: 2025-12-31
+# Searched: 2024-12-31
+# Query: "Confirm Statistical Definitions"
+# Total Results: 500 (showing top Admin Guide English results)
 
-## Results
+## Page 1 Results (Admin Guide EN)
+1. Define Statistic Types | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1400549015315.html
+2. Define Statistic Types in AP&C | https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1400549015315_1.html
+3. Enter Statistic Values | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1401491577246.html
+4. Configure Reports | https://doc.workday.com/admin-guide/en-us/vndly-documentation/reporting/manage_report_settings_orig.html
+5. Confirm and Dismiss Journal Line Anomalies | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/journal-insights/jqs1628544030923.html
+6. Configure Report Design Payroll Checks | https://doc.workday.com/admin-guide/en-us/financial-management/settlement/check-and-advice-printing/iqp1563557209330.html
+7. Steps: Upload Statistics | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/steps--upload-statistics.html
 
-1. Define Statistic Types
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1400549015315.html
-   Excerpt: Statistic definitions establish the statistic types, business dimensions, and ledgers or plan structures...
+## Page 2 Results (Admin Guide EN)
+8. Configure Financial Metrics Reporting | https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/financial-analytics/dan1370797681764.html
+9. Define Cash Forecast Components | https://doc.workday.com/admin-guide/en-us/financial-management/cash/cash-forecasting/dan1370797738499.html
+10. Steps: Configure Compensation Review Grid Profiles | https://doc.workday.com/admin-guide/en-us/human-capital-management/compensation/set-up-compensation-reviews/
 
-2. Define Statistic Types in AP&C
-   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1400549015315_1.html
-   Excerpt: Statistic definitions establish the statistic types in Adaptive Planning and Consolidation (AP&C)...
+## Key Topics
+- Statistic definitions establish statistic types in Adaptive Planning and Consolidation (AP&C)
+- Uses period end balance as statistical amount
+- Statistical amounts can be associated with ledger types or plan structures
+- Workday recommends using statistic ledger accounts over statistic definitions for better reporting
 
-3. Enter Statistic Values
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1401491577246.html
-
-4. CONFIDENCE
-   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/wwo1645063004223.html
-
-5. CONFIDENCE.T
-   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/uwo1645062094850.html
-
-6. CONFIDENCE.NORM
-   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/bwo1645058707287.html
-
-7. Enter Statistic Values in AP&C
-   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1401491577246_1.html
-
-8. Configure Account Certification Dashboard
-   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/period-and-year-close/period-close-management/account-certification/nrr1580236843829.html
-
-9. Configure Account Certification Dashboard in AP&C
-   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/period-and-year-close-in-ap&c/period-close-management-in-ap&c/account-certification-in-ap&c/nrr1580236843829_1.html
-
-10. Set Up Spend Thresholds
-    URL: https://doc.workday.com/admin-guide/en-us/financial-management/expenses/expense-entry/set-up-spend-thresholds/rvc1569445461212.html
+## Related Tasks
+- Define Statistic Types
+- Enter Statistic Values
+- Upload Statistics
+- Configure Financial Metrics Reporting

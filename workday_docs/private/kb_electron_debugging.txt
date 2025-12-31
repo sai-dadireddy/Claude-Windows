@@ -1,0 +1,419 @@
+# Electron Debugging & BrowserWindow KB
+Source: https://www.electronjs.org/docs/latest/
+Date: 2025-12-31
+
+================================================================================
+BROWSERWINDOW - KEY METHODS FOR TEST AUTOMATION
+================================================================================
+
+## Create Window
+```javascript
+const { BrowserWindow } = require('electron')
+const win = new BrowserWindow({
+  width: 800,
+  height: 600,
+  show: false,  // Start hidden
+  webPreferences: {
+    nodeIntegration: false,
+    contextIsolation: true,
+    preload: path.join(__dirname, 'preload.js')
+  }
+})
+```
+
+================================================================================
+WINDOW VISIBILITY & STATE
+================================================================================
+
+### Show/Hide
+```javascript
+win.show()              // Show and focus
+win.showInactive()      // Show without focus
+win.hide()              // Hide window
+win.isVisible()         // Check if visible
+```
+
+### Ready-to-Show Event (Best Practice)
+```javascript
+// Avoid visual flash - wait until ready
+win.once('ready-to-show', () => {
+  win.show()
+})
+```
+
+### Window State
+```javascript
+win.focus()             // Focus window
+win.blur()              // Remove focus
+win.isFocused()         // Check focus
+win.isDestroyed()       // Check if destroyed
+win.minimize()          // Minimize
+win.maximize()          // Maximize
+win.restore()           // Restore from minimized
+win.isMinimized()       // Check if minimized
+win.isMaximized()       // Check if maximized
+win.isNormal()          // Not minimized/maximized/fullscreen
+```
+
+================================================================================
+WINDOW SIZE & POSITION
+================================================================================
+
+```javascript
+// Size
+win.setSize(800, 600)
+win.getSize()           // Returns [width, height]
+win.setContentSize(800, 600)  // Content area only
+win.getContentSize()
+
+// Position
+win.setPosition(100, 100)
+win.getPosition()       // Returns [x, y]
+win.center()            // Center on screen
+
+// Bounds (size + position)
+win.setBounds({ x: 100, y: 100, width: 800, height: 600 })
+win.getBounds()         // Returns Rectangle
+
+// Constraints
+win.setMinimumSize(400, 300)
+win.setMaximumSize(1920, 1080)
+```
+
+================================================================================
+SCREENSHOTS (CRITICAL FOR TESTS)
+================================================================================
+
+```javascript
+// Capture entire visible page
+const image = await win.capturePage()
+fs.writeFileSync('screenshot.png', image.toPNG())
+
+// Capture specific region
+const image = await win.capturePage({
+  x: 0, y: 0, width: 800, height: 600
+})
+
+// Capture hidden window
+const image = await win.capturePage(null, {
+  stayHidden: true,
+  stayAwake: true
+})
+
+// Save as different formats
+fs.writeFileSync('shot.png', image.toPNG())
+fs.writeFileSync('shot.jpg', image.toJPEG(80))  // 80% quality
+const dataURL = image.toDataURL()
+```
+
+================================================================================
+LOADING PAGES
+================================================================================
+
+```javascript
+// Load URL
+await win.loadURL('https://workday.com')
+
+// Load local file
+await win.loadFile('src/index.html')
+
+// With options
+await win.loadURL('https://workday.com', {
+  userAgent: 'Custom Agent',
+  extraHeaders: 'Authorization: Bearer token\n'
+})
+
+// Reload
+win.reload()
+win.webContents.reloadIgnoringCache()
+```
+
+================================================================================
+KEY EVENTS FOR TEST AUTOMATION
+================================================================================
+
+### Window Events
+```javascript
+// Window ready
+win.once('ready-to-show', () => { /* safe to show */ })
+
+// Window focus
+win.on('focus', () => { /* window focused */ })
+win.on('blur', () => { /* window lost focus */ })
+
+// Window state
+win.on('maximize', () => {})
+win.on('minimize', () => {})
+win.on('restore', () => {})
+
+// Window closing
+win.on('close', (e) => {
+  e.preventDefault()  // Prevent close
+})
+win.on('closed', () => { /* cleanup */ })
+
+// Unresponsive
+win.on('unresponsive', () => {
+  console.log('Window unresponsive!')
+})
+win.on('responsive', () => {
+  console.log('Window responsive again')
+})
+```
+
+### WebContents Events (Most Important)
+```javascript
+// Page load complete
+win.webContents.on('did-finish-load', () => {
+  console.log('Page loaded')
+})
+
+// DOM ready (faster than did-finish-load)
+win.webContents.on('dom-ready', () => {
+  console.log('DOM ready')
+})
+
+// Load failed
+win.webContents.on('did-fail-load', (e, code, desc) => {
+  console.error(`Load failed: ${desc}`)
+})
+
+// Navigation
+win.webContents.on('did-navigate', (e, url) => {
+  console.log(`Navigated to: ${url}`)
+})
+```
+
+================================================================================
+DEBUGGING MAIN PROCESS
+================================================================================
+
+### Command Line Flags
+```bash
+# Enable inspector on default port 9229
+electron --inspect=9229 your/app
+
+# Pause on first line
+electron --inspect-brk=9229 your/app
+```
+
+### Connect Debugger
+1. Open Chrome
+2. Navigate to `chrome://inspect`
+3. Click "inspect" on your Electron app
+
+### VSCode Debug Config
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug Electron Main",
+  "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+  "args": ["${workspaceFolder}/main.js"],
+  "protocol": "inspector"
+}
+```
+
+================================================================================
+DEVTOOLS
+================================================================================
+
+```javascript
+// Open DevTools
+win.webContents.openDevTools()
+win.webContents.openDevTools({ mode: 'detach' })
+win.webContents.openDevTools({ mode: 'right' })
+win.webContents.openDevTools({ mode: 'bottom' })
+
+// Close/Toggle
+win.webContents.closeDevTools()
+win.webContents.toggleDevTools()
+
+// Check if open
+win.webContents.isDevToolsOpened()
+
+// Inspect specific element
+win.webContents.inspectElement(x, y)
+
+// Events
+win.webContents.on('devtools-opened', () => {})
+win.webContents.on('devtools-closed', () => {})
+```
+
+================================================================================
+WEBPREFERENCES FOR TESTING
+================================================================================
+
+```javascript
+const win = new BrowserWindow({
+  webPreferences: {
+    // Security (keep enabled unless needed)
+    nodeIntegration: false,
+    contextIsolation: true,
+    sandbox: true,
+
+    // For testing
+    devTools: true,           // Enable DevTools
+    preload: 'preload.js',    // Preload script
+
+    // Performance
+    backgroundThrottling: false,  // Don't throttle background
+
+    // Debugging
+    webSecurity: false,       // ONLY for testing!
+  }
+})
+```
+
+================================================================================
+COMMON TEST PATTERNS
+================================================================================
+
+### Wait for Page Load
+```javascript
+async function waitForLoad(win) {
+  return new Promise((resolve) => {
+    win.webContents.once('did-finish-load', resolve)
+  })
+}
+
+// Usage
+await win.loadURL('https://workday.com')
+await waitForLoad(win)
+```
+
+### Wait for Element
+```javascript
+async function waitForElement(win, selector, timeout = 5000) {
+  const start = Date.now()
+  while (Date.now() - start < timeout) {
+    const exists = await win.webContents.executeJavaScript(`
+      !!document.querySelector('${selector}')
+    `)
+    if (exists) return true
+    await new Promise(r => setTimeout(r, 100))
+  }
+  throw new Error(`Element ${selector} not found`)
+}
+```
+
+### Click Element
+```javascript
+async function clickElement(win, selector) {
+  await win.webContents.executeJavaScript(`
+    document.querySelector('${selector}').click()
+  `)
+}
+```
+
+### Type Text
+```javascript
+async function typeText(win, selector, text) {
+  await win.webContents.executeJavaScript(`
+    const el = document.querySelector('${selector}')
+    el.focus()
+    el.value = '${text}'
+    el.dispatchEvent(new Event('input', { bubbles: true }))
+  `)
+}
+```
+
+### Get Text
+```javascript
+async function getText(win, selector) {
+  return await win.webContents.executeJavaScript(`
+    document.querySelector('${selector}').textContent
+  `)
+}
+```
+
+### Screenshot on Error
+```javascript
+async function runTest(win, testFn) {
+  try {
+    await testFn(win)
+  } catch (error) {
+    const image = await win.capturePage()
+    fs.writeFileSync(`error_${Date.now()}.png`, image.toPNG())
+    throw error
+  }
+}
+```
+
+================================================================================
+FULLSCREEN & KIOSK MODE
+================================================================================
+
+```javascript
+win.setFullScreen(true)
+win.isFullScreen()
+
+// Kiosk mode (no escape, ideal for testing)
+win.setKiosk(true)
+win.isKiosk()
+```
+
+================================================================================
+MODAL & PARENT WINDOWS
+================================================================================
+
+```javascript
+// Create child window
+const child = new BrowserWindow({
+  parent: win,
+  modal: true
+})
+
+// Get relationships
+win.getParentWindow()
+win.getChildWindows()
+```
+
+================================================================================
+KEYBOARD SHORTCUTS
+================================================================================
+
+```javascript
+// Prevent menu shortcuts during test
+win.webContents.on('before-input-event', (event, input) => {
+  if (input.control || input.meta) {
+    event.preventDefault()
+  }
+})
+
+// Or ignore all menu shortcuts
+win.webContents.setIgnoreMenuShortcuts(true)
+```
+
+================================================================================
+STATIC METHODS
+================================================================================
+
+```javascript
+// Get all windows
+BrowserWindow.getAllWindows()
+
+// Get focused window
+BrowserWindow.getFocusedWindow()
+
+// Find window by ID
+BrowserWindow.fromId(id)
+
+// Find window from webContents
+BrowserWindow.fromWebContents(webContents)
+```
+
+================================================================================
+BEST PRACTICES FOR WORKDAY TESTS
+================================================================================
+
+| Practice | Implementation |
+|----------|----------------|
+| Wait before show | `win.once('ready-to-show')` |
+| Screenshot on fail | `win.capturePage()` in catch block |
+| Wait for load | `webContents.on('did-finish-load')` |
+| Execute JS | `webContents.executeJavaScript()` |
+| Disable throttling | `backgroundThrottling: false` |
+| Debug | `--inspect-brk` flag |
+
+================================================================================

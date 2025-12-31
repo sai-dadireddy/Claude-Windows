@@ -1,0 +1,226 @@
+# Electron Automated Testing KB
+Source: https://www.electronjs.org/docs/latest/tutorial/automated-testing
+Date: 2025-12-31
+
+================================================================================
+TESTING FRAMEWORKS FOR ELECTRON
+================================================================================
+
+## 1. WebdriverIO (WDIO) - RECOMMENDED
+Best for: Existing WebDriver setups, cross-browser testing
+
+### Setup
+```bash
+npm init wdio@latest ./
+# Select "Desktop Testing - of Electron Applications"
+```
+
+### Config (wdio.conf.js)
+```javascript
+export const config = {
+  services: ['electron'],
+  capabilities: [{
+    browserName: 'electron',
+    'wdio:electronServiceOptions': {
+      appBinaryPath: './path/to/bundled/application.exe',
+      appArgs: ['foo', 'bar=baz']
+    }
+  }]
+}
+```
+
+### Test Example
+```javascript
+import { browser, $, expect } from '@wdio/globals'
+
+describe('keyboard input', () => {
+  it('should detect keyboard input', async () => {
+    await browser.keys(['y', 'o'])
+    await expect($('keypress-count')).toHaveText('YO')
+  })
+})
+```
+
+### Access Electron APIs in Tests
+```javascript
+await browser.electron.execute(
+  (electron, param1, param2) => {
+    const appWindow = electron.BrowserWindow.getFocusedWindow()
+    electron.dialog.showMessageBox(appWindow, {
+      message: 'Hello World!',
+      detail: `${param1} + ${param2}`
+    })
+  }, 1, 2
+)
+```
+
+### Run Tests
+```bash
+npx wdio run wdio.conf.js
+```
+
+================================================================================
+## 2. Playwright - RECOMMENDED FOR E2E
+Best for: CDP-based testing, screenshots, modern API
+
+### Setup
+```bash
+npm install --save-dev @playwright/test
+```
+
+### Launch Electron App
+```javascript
+import { test, _electron as electron } from '@playwright/test'
+
+test('launch app', async () => {
+  const electronApp = await electron.launch({ args: ['.'] })
+  await electronApp.close()
+})
+```
+
+### Access Main Process
+```javascript
+const isPackaged = await electronApp.evaluate(async ({ app }) => {
+  return app.isPackaged  // Runs in Electron's main process
+})
+```
+
+### Get Window & Screenshot
+```javascript
+const window = await electronApp.firstWindow()
+await window.screenshot({ path: 'intro.png' })
+```
+
+### Full Test Example
+```javascript
+import { test, expect, _electron as electron } from '@playwright/test'
+
+test('example test', async () => {
+  const electronApp = await electron.launch({ args: ['.'] })
+
+  const isPackaged = await electronApp.evaluate(async ({ app }) => {
+    return app.isPackaged
+  })
+  expect(isPackaged).toBe(false)
+
+  const window = await electronApp.firstWindow()
+  await window.screenshot({ path: 'intro.png' })
+
+  await electronApp.close()
+})
+```
+
+### Run Tests
+```bash
+npx playwright test
+```
+
+================================================================================
+## 3. Selenium + ChromeDriver
+Best for: Legacy setups, custom configurations
+
+### Setup
+```bash
+npm install --save-dev electron-chromedriver selenium-webdriver
+./node_modules/.bin/chromedriver  # Starts on port 9515
+```
+
+### Test Example
+```javascript
+const webdriver = require('selenium-webdriver')
+
+const driver = new webdriver.Builder()
+  .usingServer('http://localhost:9515')
+  .withCapabilities({
+    'goog:chromeOptions': {
+      binary: '/Path-to-Your-App.app/Contents/MacOS/Electron'
+    }
+  })
+  .forBrowser('chrome')
+  .build()
+
+driver.get('https://www.google.com')
+driver.findElement(webdriver.By.name('q')).sendKeys('webdriver')
+driver.findElement(webdriver.By.name('btnG')).click()
+driver.quit()
+```
+
+================================================================================
+## 4. Custom IPC Test Driver
+Best for: Low overhead, custom methods
+
+### Test Driver (spawn Electron with IPC)
+```javascript
+const electronPath = require('electron')
+const childProcess = require('node:child_process')
+
+const appProcess = childProcess.spawn(electronPath, ['./app'], {
+  stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
+  env: { APP_TEST_DRIVER: 1 }
+})
+
+// Listen for messages
+appProcess.on('message', (msg) => { /* handle */ })
+
+// Send messages
+appProcess.send({ my: 'message' })
+```
+
+### App Handler (main.js)
+```javascript
+const METHODS = {
+  isReady() { return true },
+  // Define RPC methods here
+}
+
+if (process.env.APP_TEST_DRIVER) {
+  process.on('message', async ({ msgId, cmd, args }) => {
+    const method = METHODS[cmd] || (() => new Error('Invalid'))
+    try {
+      const resolve = await method(...args)
+      process.send({ msgId, resolve })
+    } catch (err) {
+      process.send({ msgId, reject: { message: err.message } })
+    }
+  })
+}
+```
+
+================================================================================
+BEST PRACTICES FOR WORKDAY ELECTRON TESTS
+================================================================================
+
+| Practice | Implementation |
+|----------|----------------|
+| Use Playwright | Best CDP support, screenshot API |
+| Wait for elements | `await window.waitForSelector('.element')` |
+| Screenshot on failure | `await window.screenshot({ path: 'error.png' })` |
+| Access main process | `electronApp.evaluate()` |
+| Isolate tests | Fresh app instance per test |
+
+================================================================================
+RELEVANT APIs FOR TEST SCRIPTS
+================================================================================
+
+### Element Interaction
+- `page.click(selector)` - Click element
+- `page.fill(selector, value)` - Fill input
+- `page.type(selector, text)` - Type text
+- `page.selectOption(selector, value)` - Select dropdown
+- `page.press(selector, key)` - Press key
+
+### Waiting
+- `page.waitForSelector(selector)` - Wait for element
+- `page.waitForLoadState('networkidle')` - Wait for network
+- `page.waitForTimeout(ms)` - Wait fixed time
+
+### Assertions
+- `expect(locator).toHaveText('text')` - Check text
+- `expect(locator).toBeVisible()` - Check visibility
+- `expect(page).toHaveTitle('title')` - Check title
+
+### Screenshots
+- `page.screenshot({ path: 'file.png' })` - Full page
+- `locator.screenshot({ path: 'element.png' })` - Element only
+
+================================================================================
