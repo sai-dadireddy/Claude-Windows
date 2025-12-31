@@ -1,0 +1,152 @@
+WORKDAY KB RESEARCH TRACKER
+============================
+Last Updated: 2025-12-31
+Status: [ ] = Pending, [x] = Done, [~] = Partial
+
+================================================================================
+FINANCE (30 topics)
+================================================================================
+
+Priority 1 (Score 2-3) - Critical:
+[ ] Confirm Statistical Definitions          -> kb_finance_statistical_definitions.txt
+[ ] Verify Tax Applicabilities               -> kb_finance_tax_applicabilities.txt
+[ ] Verify Tax Recoverabilities              -> kb_finance_tax_recoverabilities.txt
+[ ] Confirm Book Codes                       -> kb_finance_book_codes.txt
+[ ] Confirm Revaluation Rules                -> kb_finance_revaluation_rules.txt
+[ ] Confirm Revaluation Groups               -> kb_finance_revaluation_groups.txt
+[ ] Confirm Worktag Usage                    -> kb_finance_worktag_usage.txt
+[ ] Verify Tax Authorities                   -> kb_finance_tax_authorities.txt
+[ ] Verify Tax Declaration Definitions       -> kb_finance_tax_declaration_definitions.txt
+[ ] Unpost Accounting Journal                -> kb_finance_unpost_journal.txt
+[ ] Create Accounting Adjustment             -> kb_finance_accounting_adjustment.txt
+[ ] View Accounting Adjustment               -> kb_finance_view_adjustment.txt
+[ ] View Allocation Accounting               -> kb_finance_allocation_accounting.txt
+[ ] View Revaluation Results                 -> kb_finance_revaluation_results.txt
+[ ] Review Elimination Rules                 -> kb_finance_elimination_rules.txt
+
+Priority 2 (Score 4-5):
+[ ] Confirm Translation Rules Sets           -> kb_finance_translation_rules.txt
+[ ] Confirm Allocation Definitions           -> kb_finance_allocation_definitions.txt
+[ ] Confirm Allocation Group Sets            -> kb_finance_allocation_groups.txt
+[ ] Verify Transaction Tax Rates             -> kb_finance_tax_rates.txt
+[ ] Verify Transaction Tax Codes             -> kb_finance_tax_codes.txt
+[ ] Verify Tax Declaration Component Categories -> kb_finance_tax_component_categories.txt
+[ ] Verify Tax Declaration Components        -> kb_finance_tax_components.txt
+[ ] Run Consolidated Trial Balance           -> kb_finance_trial_balance.txt
+
+================================================================================
+CASE MANAGEMENT (4 topics)
+================================================================================
+[ ] Create a Case on Behalf of a Non-Worker  -> kb_case_non_worker.txt
+[ ] Create a Case About a Worker             -> kb_case_about_worker.txt
+[ ] Create a Case for Individual Contributor -> kb_case_individual.txt
+[ ] Create a Case for Managers               -> kb_case_managers.txt
+
+================================================================================
+HCM (15+ topics)
+================================================================================
+
+Academic/Faculty:
+[ ] Academic Faculty Review Academic Periods -> kb_hcm_academic_periods.txt
+[ ] Academic Faculty Review Academic Rank    -> kb_hcm_academic_rank.txt
+[ ] Academic Faculty Review Tenure Status    -> kb_hcm_tenure_status.txt
+
+Unions:
+[ ] Start Union Membership                   -> kb_hcm_union_start.txt
+[ ] End Union Membership                     -> kb_hcm_union_end.txt
+
+Security:
+[ ] Compensation Security Group Assignments  -> kb_hcm_compensation_security.txt
+[ ] Manager Security Visibility              -> kb_hcm_manager_visibility.txt
+[ ] Employee Visibility                      -> kb_hcm_employee_visibility.txt
+
+Worker Management:
+[ ] Hire Using Position Management           -> kb_hcm_hire_position.txt
+[ ] Rehire a Terminated Worker               -> kb_hcm_rehire.txt
+[ ] Contract a Contingent Worker             -> kb_hcm_contingent_worker.txt
+[ ] Auto Generated IDs Edit Integration IDs  -> kb_hcm_integration_ids.txt
+[ ] Audit Worker Data Conversion             -> kb_hcm_worker_data_conversion.txt
+
+================================================================================
+PAYROLL CANADA (4 topics)
+================================================================================
+[ ] New Hire to Off-Cycle to Settlement      -> kb_payroll_ca_new_hire_settlement.txt
+[ ] Termination to Off-Cycle to Settlement   -> kb_payroll_ca_termination_settlement.txt
+[ ] BP Settlement Run Event                  -> kb_payroll_ca_settlement_run.txt
+[ ] Payroll Input to Gross to Settlement     -> kb_payroll_ca_input_gross.txt
+
+================================================================================
+PAYROLL US (6 topics)
+================================================================================
+[ ] Missing Payment Elections Review         -> kb_payroll_us_payment_elections.txt
+[ ] Review Tenant Analyzer                   -> kb_payroll_us_tenant_analyzer.txt
+[ ] Review Period Schedule Configuration     -> kb_payroll_us_period_schedule.txt
+[ ] Review Pay Run Group Configuration       -> kb_payroll_us_pay_run_group.txt
+[ ] Benefits and Pay Hub                     -> kb_payroll_us_benefits_pay_hub.txt
+[ ] Review FLSA Calendar Configuration       -> kb_payroll_us_flsa_calendar.txt
+
+================================================================================
+PROCUREMENT (5 topics)
+================================================================================
+[ ] View Business Process for Requisition    -> kb_procurement_requisition_bp.txt
+[ ] Create Requisition from PunchOut         -> kb_procurement_punchout.txt
+[ ] Spend Transaction Instructions           -> kb_procurement_spend_instructions.txt
+[ ] Supplier Contract Types                  -> kb_procurement_contract_types.txt
+[ ] Requisition Types                        -> kb_procurement_requisition_types.txt
+
+================================================================================
+INVENTORY (5 topics)
+================================================================================
+[ ] Confirm Custom Validations               -> kb_inventory_custom_validations.txt
+[ ] Confirm Worktag Usages                   -> kb_inventory_worktag_usages.txt
+[ ] Create Ad Hoc Putaway                    -> kb_inventory_adhoc_putaway.txt
+[ ] Inventory Site Configuration             -> kb_inventory_site.txt
+[ ] Stocking Locations                       -> kb_inventory_stocking_locations.txt
+
+================================================================================
+BENEFITS (6 topics)
+================================================================================
+[x] ACA Affordable Care Act                  -> kb_benefits_aca.txt (Done 2025-12-31)
+[x] Benefits Eligibility Rules               -> kb_benefits_eligibility_rules.txt (Done)
+[x] Benefits Enrollment Events               -> kb_benefits_enrollment_events.txt (Done)
+[ ] Benefit Census Verification              -> kb_benefits_census.txt
+[ ] Enrollment Count Verification            -> kb_benefits_enrollment_count.txt
+[ ] Waives Verification                      -> kb_benefits_waives.txt
+
+================================================================================
+LEASE ACCOUNTING (3 topics)
+================================================================================
+[ ] Supplier Contract for Operating Lease    -> kb_lease_operating.txt
+[ ] Supplier Contract for Finance Lease      -> kb_lease_finance.txt
+[ ] Operating Leases under New Standards     -> kb_lease_new_standards.txt
+
+================================================================================
+ENDOWMENTS (1 topic)
+================================================================================
+[ ] Add Custom Field to Donor                -> kb_endowments_custom_field.txt
+
+================================================================================
+RESEARCH INSTRUCTIONS (FOR NEXT SESSION)
+================================================================================
+
+1. CHECK THIS FILE - See what's pending above
+2. PICK A SECTION - Start with Finance Priority 1
+3. NAVIGATE TO: https://doc.workday.com/admin-guide/en-us/
+4. SEARCH for topic (use quotes for exact match)
+5. EXTRACT via Coveo:
+   var e = document.querySelector("atomic-search-interface").engine;
+   JSON.stringify(e.state.search.results.map(function(r){
+     return {title: r.title, url: r.clickUri};
+   }));
+6. SAVE to: workday_docs/private/{kb_file}
+7. UPDATE this tracker - change [ ] to [x]
+8. REBUILD RAG: python workday_rag.py --rebuild
+
+ANTI-BOT RULES:
+- Wait 3-5 seconds between searches
+- Max 10 searches per session
+- Use separate Chrome tab
+
+================================================================================
+TOTAL: 82 topics | Done: 3 | Remaining: 79
+================================================================================
