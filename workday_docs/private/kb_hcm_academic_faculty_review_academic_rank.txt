@@ -1,0 +1,34 @@
+# Workday KB Research: Academic Faculty Review Academic Rank
+# Query: Academic Faculty Review Academic Rank
+# Total Results: 512
+# Collected: Page 1 (30 results)
+# Date: 2025-12-31
+
+## Page 1 Results
+
+[1] Steps: Manage Academic Appointments
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796957078.html
+... in which the options for the Rank field display in prompts. You can use faculty rank to track promotions throughout an appointment. ... Academic Tenure Status that reflects tenure achieved.
+
+[2] Create Academic Track Types
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796956068.html
+Set up academic ranks and define academic track type categories and category groups. ... Appointments and Related Data in the Academic Faculty functional area. You can configure academic ...
+
+[3] Add Academic Appointments
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796779209.html
+business process and security policy in the Academic Faculty functional area...
+
+## Key Topics Identified:
+- Academic Rank field configuration
+- Faculty rank tracking for promotions
+- Academic Track Types
+- Academic Appointments management
+- Academic Faculty functional area
+
+## Related Tasks:
+- Manage Academic Appointments
+- Create Academic Track Types
+- Add Academic Appointments
+- Configure Rank field display
+
+## Note: 512 total results available. First 30 captured for reference.

@@ -1,0 +1,24 @@
+# Workday KB: Verify Tax Applicabilities
+# Searched: "Verify Tax Applicabilities"
+# Total Results: 500
+# Captured: 30 (top results)
+# Date: 2025-12-31
+
+## Results
+
+1. Set Up Tax Applicability for Financial Transactions
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/dan1370796765428.html
+   Excerpt: field on taxable transactions to filter tax applicabilities by: Tax Applicability by Company's Country Tax Applicability by Country Tax Applicabilities Workday uses the tax applicability...
+
+2. Configure Transaction Tax Rules for Items
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/cho1470865900641.html
+   Excerpt: can override all other tax codes and tax applicability by defining tax code and tax applicability rules. This value overrides other tax applicabilities that Workday automatically populates...
+
+3. Tax ID Validation
+   URL: https://doc.workday.com/release-notes/en-us/fintax/7580905.html
+
+4. Configure Transaction Taxes
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-taxes/
+
+5. Tax Applicability Rules
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-transaction-taxes/transaction-tax-rules/tax-applicability-rules/

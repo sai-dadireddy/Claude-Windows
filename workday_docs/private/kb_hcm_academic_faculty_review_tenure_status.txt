@@ -1,0 +1,35 @@
+# Workday KB Research: Academic Faculty Review Tenure Status
+# Query: Academic Faculty Review Tenure Status
+# Total Results: 663
+# Collected: Page 1 (30 results)
+# Date: 2025-12-31
+
+## Page 1 Results
+
+[1] Steps: Manage Academic Appointments
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796957078.html
+Task ... Academic Tenure Status that reflects tenure achieved. ... , Set Up: Academics , and ... domains in the Academic Faculty functional area. Create Academic Track Types.
+
+[2] Create Academic Track Types
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796956068.html
+... and Related Data in the Academic Faculty functional area. Tenure Award Date, Tenure Home, Tenure Status, Tenure Track Start Date, Includes Sabbatical Program
+
+[3] Update Academic Appointments
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796779599.html
+Configure the Update Academic Appointment business process...
+
+## Key Topics Identified:
+- Academic Tenure Status tracking
+- Tenure Award Date
+- Tenure Home
+- Tenure Track Start Date
+- Sabbatical Program
+- Academic Track Types configuration
+
+## Related Tasks:
+- Manage Academic Appointments
+- Create Academic Track Types
+- Update Academic Appointments
+- Configure Tenure Status
+
+## Note: 663 total results available. First 30 captured for reference.

@@ -1,0 +1,46 @@
+# Termination to Off-Cycle to Settlement KB (Canada Payroll)
+Source: https://doc.workday.com/en-us/search.html#q="Termination to Off-Cycle to Settlement"
+Total Results: 500
+Captured: 2025-12-31
+
+## Top Relevant Results
+
+1. Additional Settlement Run Advanced Filters
+   URL: https://doc.workday.com/release-notes/en-us/finset/8428679.html
+   Excerpt: Select open intercompany transactions as well as on-cycle and off-cycle payroll payments in settlement runs.
+
+2. Off-Cycle Pay Calculation
+   URL: https://doc.workday.com/release-notes/en-us/paywdretro/8190517.html
+   Excerpt: Impacted workers with retroactive position changes. Run an off-cycle pay calculation for workers in the impacted population.
+
+3. Concept: Settlement Processing
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/settlement/payment-settlement/dan1370796993708.html
+   Excerpt: Create a settlement run to select and manage unpaid open items and pending payments.
+
+4. Setup Considerations: Settlement Run Filters
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/settlement/settlement-configuration/fdk1575332924818.html
+   Excerpt: Configuration options for settlement run filters.
+
+5. Reference: Settlement Run Custom Filters
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/settlement/settlement-configuration/wrr1562350097058.html
+   Excerpt: Custom filter reference for settlement runs.
+
+6. Run Off-Cycle Pay Calculation [Delivery Update]
+   URL: https://doc.workday.com/release-notes/en-us/paywdarch/8856631.html
+   Excerpt: Delivery update for running off-cycle pay calculations.
+
+7. Concept: Off-Cycle Payments
+   URL: https://doc.workday.com/admin-guide/en-us/payroll/payroll-processing/off-cycle-payments/
+   Excerpt: Overview of off-cycle payment processing.
+
+## Key Topics
+- Termination payroll processing
+- Final pay calculations
+- Off-cycle settlement for terminated employees
+- Last paycheck processing
+
+## Related Tasks
+- Process Termination Payroll
+- Run Off-Cycle Pay Calculation
+- Create Final Pay Settlement
+- Configure Termination Payment Rules

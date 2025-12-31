@@ -1,0 +1,35 @@
+# View Business Process for Requisition KB
+Source: https://doc.workday.com search
+Query: "View Business Process for Requisition"
+Date: 2025-12-31
+
+## Search Results (10 found)
+
+1. **Set Up Security for Job Requisitions**
+   URL: https://doc.workday.com/admin-guide/en-us/human-capital-management/staffing/job-requisitions/dan1389294486493.html
+
+2. **Set Up the Requisition Business Process**
+   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/requisitions/dan1370797711496.html
+
+3. **Set Up Requisitions Worklet**
+   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/requisitions-worklet/uss1665010750618.html
+
+4. **Setup Considerations: Requisitions**
+   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/requisitions/pew1583490601506.html
+
+5. **Steps: Set Up Mass Actions on Job Requisitions**
+   URL: https://doc.workday.com/admin-guide/en-us/human-capital-management/staffing/job-requisitions/coa1484566264726.html
+
+6. **Steps: Create Supplier Contracts from Requisitions**
+   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/supplier-contracts/
+
+## Key Topics
+- Requisition Business Process setup
+- Security configuration for requisitions
+- Worklet configuration
+- Mass actions on job requisitions
+- Supplier contract creation from requisitions
+
+## Related Areas
+- Spend Management > Procurement > Requisitions
+- HCM > Staffing > Job Requisitions

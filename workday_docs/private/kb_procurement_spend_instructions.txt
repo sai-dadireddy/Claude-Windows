@@ -1,0 +1,40 @@
+# Spend Transaction Instructions KB
+Source: https://doc.workday.com search
+Query: "Spend Transaction Instructions"
+Date: 2025-12-31
+
+## Search Results (30 found)
+
+1. **Provide Spend Transaction Instructions**
+2. **Steps: Set Up Procurement**
+3. **Steps: Set Up Spend Authorizations**
+4. **Example: Freeze Spend Authorizations**
+5. **Review Budget Check Results for Spend Transactions**
+6. **Customize the Expense Report Event Business Process**
+7. **Instructional User Help Text in the Requisitions Worklet**
+8. **Change the Budget Date for a Spend Transaction**
+9. **Set Control Options for Spend Plans**
+10. **Steps: Configure Budget Checking for Spend Transactions**
+11. **Supplier Contract Spend Transaction**
+12. **Setup Considerations: Spend Authorizations**
+13. **Steps: Create Invoices for Cost Reimbursable Award Transactions**
+14. **View Accounting for Spend Commitments and Obligations**
+15. **Steps: Configure Commitment Accounting for Expenses**
+16. **Put External Reference on Spend Transaction SOAP API**
+17. **Steps: Set Up Cash Advance Requests**
+18. **Fournir des instructions de transaction de dépense** (French)
+19. **Setup Considerations: Expense Items**
+20. **Allowable Spend for Grant**
+21. **Steps: Map Spend Categories or Pay Components to Sponsor Expenditure Categories**
+
+## Key Topics
+- Spend transaction setup and configuration
+- Budget checking for spend transactions
+- Spend authorizations
+- Commitment accounting
+- Cash advance requests
+
+## Related Areas
+- Spend Management > Procurement
+- Spend Management > Expenses
+- Grants Management

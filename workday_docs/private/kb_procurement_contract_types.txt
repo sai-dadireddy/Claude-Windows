@@ -1,0 +1,41 @@
+# Supplier Contract Types KB
+Source: https://doc.workday.com search
+Query: "Supplier Contract Types"
+Date: 2025-12-31
+
+## Search Results (30 found)
+
+1. **Set Up Supplier Contract Types for Lease Accounting**
+2. **Expand Multi-Supplier Functionality to Multi-Participant Contract Types**
+3. **Define Supplier Contract Renewal Terms**
+4. **Steps: Create Supplier Contracts**
+5. **Submit Supplier Contract Lease Amendment**
+6. **Reference: Accounting Methods for Lease-Type Supplier Contracts**
+7. **Add or Update Project-Based Service Lines on Supplier Contracts**
+8. **Setup Considerations: Lease Accounting**
+9. **Create Receipts**
+10. **Setup Considerations: Consigned Inventory**
+11. **Submit Supplier Contract**
+12. **Get Supplier Contract**
+13. **Require Supplier for Workday Contract Types**
+14. **Troubleshooting: Strategic Sourcing Supplier Contracts Connector**
+15. **Create Purchase Orders from Supplier Contract Lines**
+16. **Create Contract Types**
+17. **Steps: Create Supplier Contracts from Requisitions**
+18. **Concept: Procurement Items**
+19. **Steps: Set Up Supplier Contract Connector**
+20. **Steps: Set Up Consignment**
+21. **Spend Category on Supplier Contract**
+22. **Process Supplier Contract Automatic Renewals**
+23. **Steps: Create Supplier Invoice Schedules and Installments**
+
+## Key Topics
+- Supplier contract type setup
+- Lease accounting integration
+- Contract renewals
+- Multi-supplier contracts
+- Consigned inventory
+
+## Related Areas
+- Spend Management > Procurement > Supplier Contracts
+- Financial Management > Lease Accounting

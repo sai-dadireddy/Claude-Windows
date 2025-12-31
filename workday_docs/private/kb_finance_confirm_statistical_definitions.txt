@@ -1,0 +1,39 @@
+# Workday KB: Confirm Statistical Definitions
+# Searched: "Confirm Statistical Definitions"
+# Total Results: 500
+# Captured: 30 (top results)
+# Date: 2025-12-31
+
+## Results
+
+1. Define Statistic Types
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1400549015315.html
+   Excerpt: Statistic definitions establish the statistic types, business dimensions, and ledgers or plan structures...
+
+2. Define Statistic Types in AP&C
+   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1400549015315_1.html
+   Excerpt: Statistic definitions establish the statistic types in Adaptive Planning and Consolidation (AP&C)...
+
+3. Enter Statistic Values
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1401491577246.html
+
+4. CONFIDENCE
+   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/wwo1645063004223.html
+
+5. CONFIDENCE.T
+   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/uwo1645062094850.html
+
+6. CONFIDENCE.NORM
+   URL: https://doc.workday.com/user-guide/en-us/workday-worksheets/worksheets-function-reference/all-worksheets-functions/bwo1645058707287.html
+
+7. Enter Statistic Values in AP&C
+   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1401491577246_1.html
+
+8. Configure Account Certification Dashboard
+   URL: https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/period-and-year-close/period-close-management/account-certification/nrr1580236843829.html
+
+9. Configure Account Certification Dashboard in AP&C
+   URL: https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/period-and-year-close-in-ap&c/period-close-management-in-ap&c/account-certification-in-ap&c/nrr1580236843829_1.html
+
+10. Set Up Spend Thresholds
+    URL: https://doc.workday.com/admin-guide/en-us/financial-management/expenses/expense-entry/set-up-spend-thresholds/rvc1569445461212.html

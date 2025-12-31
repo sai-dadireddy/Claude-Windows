@@ -1,0 +1,51 @@
+# Workday KB Research: Academic Faculty Review Academic Periods
+# Query: Academic Faculty Review Academic Periods
+# Total Results: 703
+# Collected: Page 1 (30 results)
+# Date: 2025-12-31
+
+## Page 1 Results
+
+[1] Set Up Academic Pay Period Calendar
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-pay/dan1370797209239.html
+The academic pay period is the same as the academic work period, which is the period of time during which ... Use the View Academic Pay Periods report to review all of your academic pay period ...
+
+[2] Steps: Set Up Period Activity Pay
+https://doc.workday.com/admin-guide/en-us/education-and-government/period-activity-pay/dan1370797524934.html
+... academic periods using the Maintain Academic Periods task. Set up period activity ... Period Activity Pay business process correctly, Workday routes business process steps to the managers ...
+
+[3] Steps: Manage Academic Pay
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-pay/dan1370797209508.html
+Academics can be considered full-time employees by their institution and receive an annual salary...
+
+[4] Update Academic Period Dates
+https://doc.workday.com/admin-guide/en-us/student/academic-foundation/academic-calendar-for-student-records-and-financia/kbt1613076829922.html
+Update Academic Period Dates task...
+
+[5] Steps: Manage Academic Appointments
+https://doc.workday.com/admin-guide/en-us/education-and-government/academic-staffing/academic-appointments/dan1370796957078.html
+Academic appointments management...
+
+[6] Academic Period
+https://doc.workday.com/release-notes/en-us/stuaf/7359579.html
+Release notes for Academic Period...
+
+[7] Academic Periods for Existing Academic Year
+https://doc.workday.com/release-notes/en-us/stuaf/8534535.html
+Release notes for Academic Periods for Existing Academic Year...
+
+## Key Topics Identified:
+- Academic Pay Period Calendar setup
+- Period Activity Pay
+- Academic Pay management
+- Academic Period Dates
+- Academic Appointments
+- Academic Period configuration
+
+## Related Tasks:
+- Maintain Academic Periods
+- View Academic Pay Periods report
+- Set Up Period Activity Pay
+- Manage Academic Appointments
+
+## Note: 703 total results available. First 30 captured for reference.
