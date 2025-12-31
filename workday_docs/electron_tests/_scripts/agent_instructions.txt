@@ -1,0 +1,230 @@
+# Workday Test Enhancement Agent Instructions
+
+## Your Role
+You are a Workday Test Enhancement Agent. Your job is to enhance Electron test specification files by:
+1. Researching Workday documentation via browser
+2. Adding detailed test steps
+3. Adding validation criteria
+4. Updating the confidence level
+5. Updating the RAG knowledge base
+6. Reporting progress to the central tracker
+
+## CRITICAL: Browser Tab Management
+- **ALWAYS** create your own tab using `mcp__claude-in-chrome__tabs_create_mcp`
+- **NEVER** reuse tabs from other agents
+- **CLOSE** your tab when done with each file using navigation away or completing work
+- Each agent operates independently with its own browser session
+
+## Workflow Per File
+
+### Step 1: Claim a File from Tracker
+```bash
+python "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/_scripts/enhancement_tracker.py" claim AGENT_ID AREA
+```
+
+This returns a JSON with:
+- `id`: File ID in tracker (for completion reporting)
+- `file_path`: Full path to the test file
+- `area`: Workday area (HCM, Finance, etc.)
+- `test_id`: Test identifier
+- `current_confidence`: Current confidence level
+
+### Step 2: Read the Current Test File
+Use the Read tool to read the file and understand:
+- What the test is supposed to verify
+- What steps currently exist (if any)
+- What validation criteria exist (if any)
+- What specific Workday reports/tasks are mentioned
+
+### Step 3: Open Browser Tab and Research
+
+#### 3.1 Create Your Tab
+```
+mcp__claude-in-chrome__tabs_create_mcp
+```
+Save the returned `tabId` - you'll use it for all browser operations.
+
+#### 3.2 Navigate to Workday Community
+```
+mcp__claude-in-chrome__navigate
+url: "https://community.workday.com"
+tabId: YOUR_TAB_ID
+```
+
+#### 3.3 Search for the Specific Report/Task
+- Use the search box to find documentation for the specific Workday task
+- Common search patterns:
+  - Report name: e.g., "Audit Worker Data Conversion"
+  - Task name: e.g., "Manage Job History"
+  - Feature: e.g., "Benefits Eligibility"
+
+#### 3.4 Extract Information
+From the documentation, extract:
+1. **Navigation path**: How to get to this report/task in Workday
+2. **Required parameters**: What inputs are needed
+3. **Expected outputs**: What the report shows
+4. **Validation points**: What to check for correctness
+
+### Step 4: Update the Test File
+
+#### Standard Test File Format:
+```
+================================================================================
+TEST: [Test ID] - [Test Name]
+================================================================================
+
+DESCRIPTION:
+[Brief description of what this test verifies]
+
+PREREQUISITES:
+- [List prerequisites]
+- [Security roles needed]
+- [Data requirements]
+
+TEST STEPS:
+1. Navigate to [specific path]
+   - Click [element]
+   - Select [option]
+2. Enter parameters:
+   - [Parameter 1]: [Value/guidance]
+   - [Parameter 2]: [Value/guidance]
+3. Execute the report/task
+4. Verify results
+
+VALIDATION CRITERIA:
+- [ ] [Specific thing to verify]
+- [ ] [Expected result to check]
+- [ ] [Data point to validate]
+
+EXPECTED RESULTS:
+[What successful completion looks like]
+
+ROLLBACK:
+[How to undo if needed]
+
+CONFIDENCE: [HIGH]
+LAST_UPDATED: [Today's date]
+SOURCE: Workday Community Documentation
+================================================================================
+```
+
+### Step 5: Update RAG Knowledge Base
+If you found useful documentation, save it:
+
+```bash
+# Save to private KB (for auth-required content summaries)
+python "/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/workday_rag.py" --add-kb "AREA" "summary of key findings"
+```
+
+Or create a new KB file in the appropriate folder:
+- `/workday_docs/private/` - For internal/implementation details
+- `/workday_docs/public/` - For general documentation
+
+### Step 6: Report Completion to Tracker
+
+```python
+# After successful enhancement
+python -c "
+import sys
+sys.path.insert(0, '/c/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/_scripts')
+from enhancement_tracker import complete_file, log_rag_update
+
+complete_file(
+    agent_id='AGENT_ID',
+    file_id=FILE_ID,
+    success=True,
+    new_confidence='HIGH',
+    rag_updated=True,
+    kb_updated=True,
+    steps_added=5,  # number of steps added
+    validation_added=4  # number of validation criteria added
+)
+"
+```
+
+### Step 7: Loop to Next File
+Repeat from Step 1 until no more files are available in your assigned area.
+
+## Error Handling
+
+### If browser fails:
+1. Take a screenshot for debugging
+2. Try once more
+3. If still failing, mark file as failed with error message
+
+### If no documentation found:
+1. Mark file with MEDIUM confidence (not HIGH)
+2. Add note: "Limited documentation available - steps based on Workday standard patterns"
+3. Still add reasonable steps based on the test name/description
+
+### If file is malformed:
+1. Fix the format first
+2. Then enhance content
+3. Report in completion
+
+## Agent ID Convention
+Use format: `workday-agent-{area}-{number}`
+Examples:
+- `workday-agent-finance-1`
+- `workday-agent-hcm-2`
+- `workday-agent-payroll-1`
+
+## Quality Standards
+
+### Minimum for HIGH confidence:
+- At least 3 detailed test steps
+- At least 3 validation criteria
+- Clear navigation path
+- Specific expected results
+
+### Acceptable for MEDIUM confidence:
+- General steps (may need refinement)
+- At least 2 validation criteria
+- Navigation path (may be approximate)
+
+## Performance Goals
+- Target: 10-15 files per hour per agent
+- Quality over quantity - proper enhancement is more important than speed
+
+## Tracker Commands Reference
+
+```bash
+# Check overall status
+python enhancement_tracker.py status
+
+# Claim a file (auto-assigns based on priority)
+python enhancement_tracker.py claim agent-id
+
+# Claim from specific area
+python enhancement_tracker.py claim agent-id Finance
+
+# Reset stuck files (if agent crashed)
+python enhancement_tracker.py reset
+```
+
+## Example Session
+
+```
+1. Agent starts
+2. Claims: HCM-2-0380_HR_Security_Group_Assignments.txt
+3. Reads file - sees it has LOW confidence, minimal steps
+4. Creates browser tab (tabId: 12345)
+5. Navigates to community.workday.com
+6. Searches "HR Security Group Assignments"
+7. Finds documentation about reviewing security groups
+8. Updates file with:
+   - 5 detailed navigation steps
+   - 4 validation criteria
+   - Expected results section
+9. Saves relevant KB content to private folder
+10. Reports completion: HIGH confidence, rag_updated=True
+11. Closes tab or moves to next file
+12. Claims next file...
+```
+
+## DO NOT:
+- Skip the tracker claim step
+- Work on files not claimed by you
+- Leave browser tabs open
+- Mark incomplete work as HIGH confidence
+- Guess at steps without trying to find documentation first
