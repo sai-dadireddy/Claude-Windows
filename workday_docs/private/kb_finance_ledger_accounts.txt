@@ -1,0 +1,394 @@
+================================================================================
+WORKDAY KB ARTICLE: LEDGER ACCOUNTS AND CHART OF ACCOUNTS
+================================================================================
+
+Source: Workday Financial Management WSDL Analysis and Documentation
+WSDL: Financial_Management
+Category: Financial Management - Chart of Accounts Configuration
+Last Updated: 2025-12-31
+
+================================================================================
+OVERVIEW
+================================================================================
+
+Ledger Accounts in Workday are the fundamental building blocks of the Chart
+of Accounts (COA). They represent the categories used to classify financial
+transactions and generate financial statements. Workday uses a flat chart
+of accounts structure with worktag dimensions for detailed tracking.
+
+Key Concepts:
+- Ledger Account: Individual account for recording transactions
+- Ledger Account Summary: Grouping of ledger accounts for reporting
+- Account Set: Collection of ledger accounts (can be designated as COA)
+- Chart of Accounts: Account set designated as primary COA for company
+- Worktags: Dimensional attributes that provide transaction detail
+
+Workday COA Philosophy:
+Unlike traditional ERP systems with segment-based COAs, Workday uses:
+- Flat account structure (no embedded segments)
+- Worktag dimensions (Cost Center, Fund, Program, Project, etc.)
+- Account summaries for reporting rollups
+- Posting rules for dynamic account determination
+
+================================================================================
+LEDGER ACCOUNT TYPES
+================================================================================
+
+| Type | Account Range | Usage |
+|------|---------------|-------|
+| Assets | 1000-1999 | Cash, Receivables, Fixed Assets |
+| Liabilities | 2000-2999 | Payables, Accruals, Debt |
+| Equity | 3000-3999 | Retained Earnings, Capital |
+| Revenue | 4000-4999 | Sales, Services, Other Income |
+| Expenses | 5000-7999 | COGS, OpEx, Depreciation |
+| Statistical | 9000-9999 | Non-financial metrics |
+
+Account Categories (Summaries):
+- Balance Sheet: Assets, Liabilities, Equity
+- Income Statement: Revenue, Expenses
+- Statistical: Non-financial tracking accounts
+
+================================================================================
+SOAP API OPERATIONS
+================================================================================
+
+WSDL: Financial_Management
+
+1. Get_Account_Sets
+   Description: Retrieves Account Sets and their included Ledger Accounts.
+   Returns: Account Set, Ledger Accounts, included Account Sets, COA designation
+
+2. Put_Account_Set
+   Description: Creates or updates Account Sets.
+   Can: Create ledger accounts, organize into sets, designate as COA
+
+3. Get_Ledger_Account_Summaries
+   Description: Returns Ledger Account Summaries and included accounts.
+   Options: Include All Ledger Account Data for indirect inclusions
+
+4. Put_Ledger_Account_Summary
+   Description: Creates/updates Ledger Account Summaries or Ledger Accounts.
+   Can: Define summary hierarchy, add accounts to summaries
+
+API Request Example (Get Account Sets):
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:bsvc="urn:com.workday/bsvc">
+    <soapenv:Header>
+        <wsse:Security xmlns:wsse="...">
+            <wsse:UsernameToken>
+                <wsse:Username>{ISU_USERNAME}</wsse:Username>
+                <wsse:Password>{ISU_PASSWORD}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <bsvc:Get_Account_Sets_Request bsvc:version="v42.2">
+            <bsvc:Request_References>
+                <bsvc:Account_Set_Reference>
+                    <bsvc:ID bsvc:type="Account_Set_ID">US_COA</bsvc:ID>
+                </bsvc:Account_Set_Reference>
+            </bsvc:Request_References>
+        </bsvc:Get_Account_Sets_Request>
+    </soapenv:Body>
+</soapenv:Envelope>
+```
+
+================================================================================
+LEDGER ACCOUNT CONFIGURATION
+================================================================================
+
+STEP 1: NAVIGATE TO LEDGER ACCOUNTS
+-----------------------------------
+Search: "View Ledger Accounts" or "Ledger Accounts"
+
+Alternative Navigation:
+1. Financial Management Setup
+2. Chart of Accounts
+3. Ledger Accounts
+
+STEP 2: VIEW EXISTING LEDGER ACCOUNTS
+-------------------------------------
+Task: "View All Ledger Accounts"
+
+Displays:
+- Ledger Account ID (Number)
+- Ledger Account Name
+- Account Type (Asset, Liability, etc.)
+- Ledger Account Summary assignments
+- Active/Inactive status
+
+STEP 3: CREATE NEW LEDGER ACCOUNT
+---------------------------------
+Task: "Create Ledger Account"
+
+Required Fields:
+- Ledger Account ID: Unique numeric identifier (e.g., "1100")
+- Ledger Account Name: Descriptive name (e.g., "Accounts Receivable - Trade")
+
+Configuration Fields:
+- Account Type: Asset, Liability, Equity, Revenue, Expense, Statistical
+- Normal Balance: Debit or Credit
+- Worktag Required: Which worktags must be provided
+- Restricted from Manual Journal: Yes/No
+- Inactive: Yes/No
+
+STEP 4: CREATE LEDGER ACCOUNT SUMMARY
+-------------------------------------
+Task: "Create Ledger Account Summary"
+
+Purpose: Group ledger accounts for financial statement presentation
+
+Required Fields:
+- Summary ID: Unique identifier
+- Summary Name: Display name (e.g., "Total Current Assets")
+- Parent Summary: Where this summary rolls up
+
+Included Accounts:
+- Add individual ledger accounts
+- Add other summaries (for nested hierarchies)
+
+STEP 5: ASSIGN TO CHART OF ACCOUNTS
+-----------------------------------
+Task: "Edit Account Set"
+
+Configuration:
+- Add ledger accounts to account set
+- Include sub-account sets
+- Designate as Chart of Accounts
+
+================================================================================
+LEDGER ACCOUNT SUMMARY HIERARCHY
+================================================================================
+
+Financial Statement Structure Example:
+
+BALANCE SHEET (Root Summary)
+|
++-- ASSETS
+|   |
+|   +-- Current Assets
+|   |   +-- Cash (1000-1099)
+|   |   +-- Accounts Receivable (1100-1199)
+|   |   +-- Inventory (1200-1299)
+|   |   +-- Prepaid Expenses (1300-1399)
+|   |
+|   +-- Fixed Assets
+|       +-- Property, Plant & Equipment (1500-1699)
+|       +-- Accumulated Depreciation (1700-1799)
+|
++-- LIABILITIES
+|   |
+|   +-- Current Liabilities
+|   |   +-- Accounts Payable (2000-2099)
+|   |   +-- Accrued Expenses (2100-2199)
+|   |   +-- Current Portion LTD (2200-2299)
+|   |
+|   +-- Long-Term Liabilities
+|       +-- Notes Payable (2500-2599)
+|       +-- Bonds Payable (2600-2699)
+|
++-- EQUITY
+    +-- Common Stock (3000-3099)
+    +-- Retained Earnings (3100-3199)
+
+INCOME STATEMENT (Root Summary)
+|
++-- REVENUE
+|   +-- Product Revenue (4000-4099)
+|   +-- Service Revenue (4100-4199)
+|   +-- Other Income (4500-4599)
+|
++-- EXPENSES
+    +-- Cost of Goods Sold (5000-5499)
+    +-- Operating Expenses (6000-6999)
+    +-- Depreciation (7000-7099)
+    +-- Interest Expense (7500-7599)
+    +-- Tax Expense (7800-7899)
+
+================================================================================
+ELECTRON AUTOMATION STEPS
+================================================================================
+
+--- View Ledger Accounts ---
+
+1. enter search box as "View All Ledger Accounts"
+2. wait for search results
+3. click search result containing "View All Ledger Accounts"
+4. wait for page to load
+5. verify list of ledger accounts displays
+6. verify Account ID, Name, Type columns visible
+7. screenshot as "ledger_accounts_list.png"
+
+--- Create Ledger Account ---
+
+8. enter search box as "Create Ledger Account"
+9. wait for search results
+10. click search result containing "Create Ledger Account"
+11. wait for page to load
+12. enter Ledger Account ID as "{account_id}"
+13. enter Ledger Account Name as "{account_name}"
+14. select Account Type as "{account_type}"
+15. select Normal Balance as "{debit_or_credit}"
+16. select Worktag Required as needed
+17. click button "OK"
+18. wait for confirmation
+19. verify message contains "created" or "success"
+20. screenshot as "ledger_account_created.png"
+
+--- Create Ledger Account Summary ---
+
+21. enter search box as "Create Ledger Account Summary"
+22. wait for search results
+23. click search result containing "Create Ledger Account Summary"
+24. wait for page to load
+25. enter Summary ID as "{summary_id}"
+26. enter Summary Name as "{summary_name}"
+27. select Parent Summary as "{parent_summary}"
+28. click button "Add" to add ledger accounts
+29. search and select accounts to include
+30. click button "OK"
+31. wait for confirmation
+32. verify message contains "created"
+33. screenshot as "ledger_summary_created.png"
+
+--- View Ledger Account Summary Hierarchy ---
+
+34. enter search box as "View Ledger Account Summary Hierarchy"
+35. wait for search results
+36. click search result containing "View Ledger Account Summary Hierarchy"
+37. wait for page to load
+38. expand hierarchy nodes to view structure
+39. verify account rollup structure is correct
+40. screenshot as "ledger_summary_hierarchy.png"
+
+--- Confirm Ledger Accounts Configuration ---
+
+41. enter search box as "Confirm Ledger Accounts & Ledger Account Summaries"
+42. wait for search results
+43. click search result containing "Confirm Ledger Accounts"
+44. wait for page to load
+45. verify ledger accounts display correctly
+46. verify account summaries show proper hierarchy
+47. verify no orphan accounts (unassigned to summary)
+48. verify account types are correctly assigned
+49. screenshot as "ledger_accounts_confirmed.png"
+
+================================================================================
+ACCOUNT POSTING RULES
+================================================================================
+
+Posting rules automate account determination for operational transactions.
+
+Components:
+- Rule Set: Collection of posting rules
+- Rule: Specific account determination logic
+- Condition: When to apply the rule
+- Account Assignment: Which ledger account to use
+
+Common Rule Triggers:
+- Spend Category → Expense Account
+- Revenue Category → Revenue Account
+- Payment Type → Cash Account
+- Customer Category → AR Account
+- Supplier Category → AP Account
+
+Task: "View Account Posting Rules"
+Task: "Create Account Posting Rule"
+Task: "Edit Account Posting Rule Set"
+
+================================================================================
+WORKTAG REQUIREMENTS
+================================================================================
+
+Ledger accounts can require specific worktags:
+
+| Worktag Type | Purpose | Example |
+|--------------|---------|---------|
+| Cost Center | Department tracking | Marketing, IT, HR |
+| Fund | Fund accounting | General, Restricted, Grant |
+| Program | Program tracking | Program A, Program B |
+| Project | Project tracking | Project 001, Capital Proj |
+| Grant | Grant tracking | NSF Grant, DOE Grant |
+| Custom Worktag | Organization-specific | Business Unit, Division |
+
+Configuration:
+- Required on Entry: Worktag must be provided on journal
+- Optional: Worktag can be blank
+- Default Value: Pre-populate if not specified
+
+================================================================================
+CHART OF ACCOUNTS VALIDATION
+================================================================================
+
+Pre-Go-Live Checklist:
+- [ ] All required accounts created
+- [ ] Account numbering follows convention
+- [ ] Account types correctly assigned
+- [ ] Normal balances properly set
+- [ ] Summaries cover all accounts
+- [ ] Summary hierarchy correct
+- [ ] Posting rules configured
+- [ ] Worktag requirements set
+- [ ] Account set designated as COA
+- [ ] Company linked to COA
+
+Validation Reports:
+- Orphan Accounts Report: Accounts not in any summary
+- Account Summary Hierarchy: Visual hierarchy review
+- Posting Rules Test: Test rule determination
+- Trial Balance: Verify account balances
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. Use consistent account numbering scheme
+2. Document account naming conventions
+3. Create summaries before individual accounts
+4. Test posting rules thoroughly
+5. Review worktag requirements carefully
+6. Avoid overly complex summary hierarchies
+7. Plan for future account additions
+8. Maintain account mapping documentation
+9. Regular COA review and cleanup
+10. Archive unused/inactive accounts
+
+================================================================================
+COMMON ISSUES AND RESOLUTION
+================================================================================
+
+Issue: Account not appearing in journal entry
+- Check: Account is active
+- Check: Account is in company's COA
+- Check: User has posting access to account
+
+Issue: Posting rule not determining correct account
+- Check: Rule priority/sequence
+- Check: Rule conditions match transaction
+- Check: Rule set assigned to company
+
+Issue: Summary totals incorrect
+- Check: All accounts assigned to summaries
+- Check: Summary hierarchy correct
+- Check: No duplicate account inclusions
+
+Issue: Cannot create journal to account
+- Check: Account not restricted from manual entry
+- Check: Worktag requirements met
+- Check: User security permissions
+
+================================================================================
+NOTES
+================================================================================
+
+- Ledger accounts cannot be deleted if transactions exist
+- Account numbers should be unique within COA
+- Changes to account type affect historical data presentation
+- Consider data conversion when changing COA structure
+- Book code affects which accounts are available
+- Statistical accounts don't impact financial statements
+- Reserve account number ranges for future use
+- Document any deviations from standard COA
+
+================================================================================

@@ -1,0 +1,468 @@
+================================================================================
+WORKDAY KB ARTICLE: AFFORDABLE CARE ACT (ACA) COMPLIANCE
+================================================================================
+
+Source: Workday Community & WSDL Analysis
+URL: Workday Benefits Administration - ACA
+Category: Human Capital Management - Benefits - ACA Compliance
+Last Updated: 2025-12-31
+
+================================================================================
+OVERVIEW
+================================================================================
+
+The Affordable Care Act (ACA) requires Applicable Large Employers (ALEs) to
+track employee hours, determine full-time status, and offer minimum essential
+coverage to eligible employees. Workday provides comprehensive ACA management
+through Measurement Periods, Stability Periods, and automated reporting.
+
+Key ACA Components in Workday:
+- ACA Measurement Periods (Initial and Standard)
+- ACA Stability Periods
+- Affordable Care Reporting Configuration
+- 1095-C Form Generation and Transmission
+- ACA Worker Hours and Wages Tracking
+- ACA Dashboard and Compliance Reports
+
+Applicable Large Employer (ALE) Threshold:
+- 50+ full-time equivalent employees
+- Full-time = 30+ hours/week or 130+ hours/month
+
+================================================================================
+ACA MEASUREMENT PERIODS
+================================================================================
+
+1. STANDARD MEASUREMENT PERIOD
+   Purpose: Track hours for existing employees to determine FT status
+   Duration: 3-12 months (employer choice)
+
+   Configuration:
+   - Measurement Period Start Date (typically 10/15 - 11/14)
+   - Measurement Period End Date
+   - Administrative Period (up to 90 days after measurement)
+   - Stability Period Start Date (typically 1/1 following year)
+   - Stability Period Duration (at least as long as measurement period)
+
+   Example Timeline:
+   - Standard Measurement: 10/15/2024 - 10/14/2025 (12 months)
+   - Administrative Period: 10/15/2025 - 12/31/2025 (90 days)
+   - Stability Period: 1/1/2026 - 12/31/2026 (12 months)
+
+2. INITIAL MEASUREMENT PERIOD
+   Purpose: Track hours for NEW employees (hired mid-year)
+   Duration: 3-12 months from date of hire
+
+   Configuration:
+   - Starts on hire date (or first of following month)
+   - Administrative Period: 30-90 days after measurement
+   - Stability Period: Must begin no later than first of 13th month
+
+   Example Timeline (Hire Date: 4/15/2025):
+   - Initial Measurement: 5/1/2025 - 4/30/2026 (12 months)
+   - Administrative Period: 5/1/2026 - 6/30/2026 (60 days)
+   - Stability Period: 7/1/2026 - 6/30/2027 (12 months)
+
+================================================================================
+WORKDAY TASKS - ACA MEASUREMENT
+================================================================================
+
+TASK: View ACA Measurement Period
+Navigation: Search > "View ACA Measurement Period"
+Purpose: View configured measurement periods and employee assignments
+
+Steps:
+1. enter search box as "View ACA Measurement Period"
+2. wait for search results
+3. click search result containing "View ACA Measurement Period"
+4. wait for page to load
+5. select Company (if multi-company)
+6. select Measurement Period Type:
+   - Standard Measurement Period
+   - Initial Measurement Period
+7. enter Measurement Period Year or Date Range
+8. click button "OK" or "View"
+9. verify measurement period details display:
+   - Measurement Start Date
+   - Measurement End Date
+   - Administrative Period Start/End
+   - Stability Period Start/End
+   - Employee Count in Period
+
+Fields Displayed:
+- Measurement Period Name
+- Measurement Period Type (Standard/Initial)
+- Start Date
+- End Date
+- Hours Threshold (130/month or 30/week)
+- Stability Period Length
+- Administrative Period Length
+- Associated Companies/Locations
+
+--------------------------------------------------------------------------------
+
+TASK: Edit ACA Measurement Period
+Navigation: Search > "Edit ACA Measurement Period"
+Purpose: Modify measurement period configuration
+
+Steps:
+1. enter search box as "Edit ACA Measurement Period"
+2. wait for search results
+3. click search result containing "Edit ACA Measurement Period"
+4. wait for page to load
+5. select Measurement Period to edit
+6. modify fields as needed:
+   - Measurement Period Name
+   - Start Date
+   - End Date
+   - Hours Threshold
+   - Stability Period Duration (months)
+   - Administrative Period Duration (days)
+7. click button "Submit"
+8. verify confirmation message displays
+
+--------------------------------------------------------------------------------
+
+TASK: Create ACA Measurement Period
+Navigation: Search > "Create ACA Measurement Period"
+Purpose: Create new measurement period for ACA tracking
+
+Steps:
+1. enter search box as "Create ACA Measurement Period"
+2. wait for search results
+3. click search result containing "Create ACA Measurement Period"
+4. wait for page to load
+5. enter Measurement Period Name
+6. select Measurement Period Type:
+   - Standard Measurement Period
+   - Initial Measurement Period
+7. enter Start Date
+8. enter End Date
+9. enter Hours Threshold:
+   - Monthly: 130 hours
+   - Weekly: 30 hours
+10. enter Stability Period Duration (months)
+11. enter Administrative Period Duration (days)
+12. select Applicable Companies
+13. click button "Submit"
+14. verify measurement period created successfully
+
+================================================================================
+AFFORDABLE CARE REPORTING CONFIGURATION
+================================================================================
+
+TASK: Affordable Care Reporting Configuration
+Navigation: Search > "Affordable Care Reporting Configuration"
+Purpose: Configure ACA reporting settings for 1094-C and 1095-C forms
+
+Steps:
+1. enter search box as "Affordable Care Reporting Configuration"
+2. wait for search results
+3. click search result containing "Affordable Care Reporting Configuration"
+4. wait for page to load
+5. verify/configure sections:
+
+SECTION 1: Employer Information (1094-C Part I)
+- Company Name (as registered with IRS)
+- EIN (Employer Identification Number)
+- Company Address
+- Contact Person Name
+- Contact Phone Number
+
+SECTION 2: ALE Member Information (1094-C Part II)
+- Total Number of 1095-C Forms
+- Aggregate Group Member indicator
+- Certifications of Eligibility:
+  - Qualifying Offer Method
+  - Section 4980H Transition Relief
+  - 98% Offer Method
+
+SECTION 3: Full-Time Employee Count (1094-C Part III)
+- Monthly Full-Time Employee Count
+- Total Employee Count by Month
+- Aggregate Group Indicator by Month
+
+SECTION 4: Coverage Configuration (1095-C Part II)
+- Offer of Coverage Codes (1-Series):
+  - 1A: Qualifying Offer (MV, <9.5% mainland FPL)
+  - 1B: MV Coverage to Employee Only
+  - 1C: MV Coverage to Employee + Dependents
+  - 1D: MV Coverage to Employee + Spouse
+  - 1E: MV Coverage to Employee + Spouse + Dependents
+  - 1F: MV Coverage NOT providing minimum value
+  - 1G: Conditional Offer to Spouse
+  - 1H: No Offer of Coverage
+  - 1I: Qualifying Offer Transition Relief
+  - 1J-1S: Reserved codes
+- Safe Harbor Codes (2-Series):
+  - 2A: Not employed during month
+  - 2B: Not full-time employee
+  - 2C: Enrolled in Coverage
+  - 2D: Limited Non-Assessment Period (IMP)
+  - 2E: Multi-employer Interim Rule Relief
+  - 2F: Section 4980H Affordability W-2 Safe Harbor
+  - 2G: Section 4980H Affordability FPL Safe Harbor
+  - 2H: Section 4980H Affordability Rate of Pay Safe Harbor
+  - 2I: Non-calendar year transition relief
+
+6. click button "Submit" to save configuration
+7. screenshot as "ACA_reporting_config.png"
+
+================================================================================
+ACA 1095-C FORM GENERATION
+================================================================================
+
+TASK: Generate 1095-C Forms
+Navigation: Search > "Generate 1095-C Forms" or "Run ACA 1095-C Report"
+Purpose: Generate employee 1095-C forms for IRS submission
+
+Steps:
+1. enter search box as "Generate 1095-C Forms"
+2. wait for search results
+3. click search result containing "Generate 1095-C Forms"
+4. wait for page to load
+5. enter parameters:
+   - Tax Year (e.g., 2025)
+   - Company (or All Companies)
+   - Workers (specific or all eligible)
+   - Form Type: Original, Corrected, or Replacement
+6. click button "OK" or "Run"
+7. wait for process to complete
+8. verify forms generated:
+   - Total Forms Created
+   - Successful/Failed counts
+   - Error messages for any failures
+
+1095-C Form Parts:
+Part I - Employee Information:
+- Employee Name, SSN, Address
+- Employer Name, EIN, Address
+
+Part II - Employee Offer and Coverage:
+- Line 14: Offer of Coverage Code (monthly)
+- Line 15: Employee Share of Lowest-Cost Monthly Premium
+- Line 16: Safe Harbor Code or Other Code (monthly)
+
+Part III - Covered Individuals:
+- Name, SSN/DOB of covered individuals
+- Coverage months
+
+--------------------------------------------------------------------------------
+
+TASK: View 1095-C Forms
+Navigation: Search > "View 1095-C Forms" or "ACA 1095-C Forms Report"
+Purpose: Review generated 1095-C forms before distribution
+
+Steps:
+1. enter search box as "View 1095-C Forms"
+2. wait for search results
+3. click search result containing "1095-C Forms"
+4. wait for page to load
+5. filter by:
+   - Tax Year
+   - Company
+   - Worker (optional)
+   - Form Status (Draft, Final, Transmitted)
+6. click worker name to view form details
+7. verify form accuracy:
+   - Personal information correct
+   - Coverage codes accurate
+   - Premium amounts correct
+   - Covered individuals listed
+8. screenshot as "1095C_review.png"
+
+================================================================================
+ACA WORKER HOURS TRACKING
+================================================================================
+
+TASK: View ACA Worker Hours
+Navigation: Search > "View ACA Worker Hours" or "ACA Hours Audit"
+Purpose: Review employee hours for ACA full-time determination
+
+Steps:
+1. enter search box as "View ACA Worker Hours"
+2. wait for search results
+3. click search result containing "ACA Worker Hours"
+4. wait for page to load
+5. enter parameters:
+   - Worker ID or search for employee
+   - Measurement Period
+   - Date Range
+6. click button "OK" or "View"
+7. verify hours data:
+   - Total Hours in Measurement Period
+   - Average Hours per Month
+   - Average Hours per Week
+   - Full-Time Status Determination
+   - Hours Source (Time Tracking, Calculated, etc.)
+
+Full-Time Determination Logic:
+- Monthly Average >= 130 hours = Full-Time
+- Weekly Average >= 30 hours = Full-Time
+- Measured over 3-12 month period
+- Excludes unpaid leave (FMLA, military, etc.)
+
+--------------------------------------------------------------------------------
+
+TASK: Put ACA Worker Hours and Wages (API)
+SOAP Operation: Put_Affordable_Care_Act_Worker_Hours_And_Wages
+Purpose: Load hours data from external systems
+
+Request Parameters:
+- Worker Reference (Employee ID)
+- Period Start Date
+- Period End Date
+- Total Hours
+- Hours Source
+- Wages (optional for affordability)
+
+================================================================================
+ACA DASHBOARD AND REPORTS
+================================================================================
+
+TASK: ACA Dashboard
+Navigation: Search > "ACA Dashboard"
+Purpose: View ACA compliance status at a glance
+
+Dashboard Widgets:
+1. Full-Time Employee Count
+   - Current FT employees
+   - Trending over time
+   - By company/location
+
+2. Measurement Period Status
+   - Active measurement periods
+   - Upcoming stability periods
+   - Employees in administrative period
+
+3. Compliance Alerts
+   - Employees approaching FT threshold
+   - Missing hours data
+   - Pending coverage offers
+
+4. Form Generation Status
+   - 1095-C forms generated
+   - Forms pending review
+   - Transmission status
+
+--------------------------------------------------------------------------------
+
+ACA REPORTS:
+1. ACA Full-Time Status Report
+   - Lists employees and FT determination
+   - Filter by period, company, status
+
+2. ACA Measurement Period Audit
+   - Hours tracked vs. threshold
+   - Employees gaining/losing FT status
+
+3. ACA Coverage Offer Report
+   - Coverage offered by employee
+   - Offer codes assigned
+   - Premium amounts
+
+4. 1094-C Summary Report
+   - Aggregate employer data
+   - Monthly employee counts
+   - Certification status
+
+5. 1095-C Audit Report
+   - Employee-level form data
+   - Code validation
+   - Data discrepancies
+
+================================================================================
+ACA API OPERATIONS
+================================================================================
+
+SOAP Operations (Benefits_Administration.wsdl):
+- Put_Affordable_Care_Act_Worker_Hours_And_Wages: Load hours/wages data
+- Get_ACA_1095-C_Forms_Data: Retrieve 1095-C form data
+
+SOAP Operations (ACA_Partner_Integrations.wsdl):
+- Get_ACA_Employee_Data: Retrieve 1095-C forms for transmission
+- Get_ACA_Employer_Data: Retrieve 1094-C data for transmission
+- Put_Federal_ACA_Transmission_Details: Record federal transmission
+- Put_State_ACA_Transmission_Details: Record state transmission
+
+REST Endpoints:
+- /benefits/acaMeasurementPeriods: GET measurement period data
+- /benefits/aca1095CForms: GET 1095-C form data
+- /workers/{id}/acaHours: GET worker ACA hours
+
+================================================================================
+ACA COMPLIANCE BEST PRACTICES
+================================================================================
+
+1. MEASUREMENT PERIOD SETUP
+   - Use 12-month Standard Measurement for predictability
+   - Align Initial Measurement with Standard where possible
+   - Set Administrative Period to maximum 90 days
+
+2. HOURS TRACKING
+   - Integrate time tracking system with Workday
+   - Include ALL hours (regular, overtime, on-call)
+   - Document hours for variable-hour employees
+   - Use equivalencies for non-hourly employees
+
+3. COVERAGE OFFERS
+   - Offer coverage before Stability Period starts
+   - Document all offers (accepted and declined)
+   - Track premium amounts for affordability
+
+4. FORM GENERATION
+   - Generate draft forms early (January)
+   - Review for accuracy before finalization
+   - Distribute to employees by January 31
+   - File with IRS by February 28 (paper) or March 31 (electronic)
+
+5. RECORD RETENTION
+   - Keep records for 7 years minimum
+   - Document measurement period determinations
+   - Archive 1094-C and 1095-C forms
+   - Maintain hours calculation methodology
+
+================================================================================
+COMMON ACA SCENARIOS
+================================================================================
+
+1. NEW HIRE (Full-Time from Start)
+   - Offer coverage within 90 days
+   - No measurement period needed
+   - 1095-C shows coverage from hire
+
+2. NEW HIRE (Variable Hours)
+   - Start Initial Measurement Period
+   - Track hours for 3-12 months
+   - Determine FT status at end of measurement
+   - Offer coverage if FT during Stability Period
+
+3. EMPLOYEE GAINS FT STATUS
+   - Hours exceed threshold during measurement
+   - Offer coverage during Administrative Period
+   - Coverage effective by Stability Period start
+
+4. EMPLOYEE LOSES FT STATUS
+   - Hours below threshold during measurement
+   - Coverage continues through Stability Period
+   - May lose coverage in next Stability Period
+
+5. TERMINATION
+   - End coverage on termination date
+   - Complete 1095-C for months employed
+   - Code 2A for months not employed
+
+================================================================================
+NOTES
+================================================================================
+
+- ACA applies to Applicable Large Employers (50+ FT/FTE employees)
+- Measurement Period determines FT status for Stability Period
+- Initial Measurement for new hires; Standard for ongoing employees
+- Administrative Period allows time to process and offer coverage
+- 1094-C is employer transmittal; 1095-C is employee statement
+- Electronic filing required for 250+ forms
+- State ACA reporting may have additional requirements
+- Safe Harbor codes protect against penalties if properly applied
+- Keep documentation for at least 7 years
+
+================================================================================
