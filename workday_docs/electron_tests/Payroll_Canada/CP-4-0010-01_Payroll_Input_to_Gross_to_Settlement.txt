@@ -54,4 +54,29 @@ Source: test_scenarios_v2.xlsx
 ================================================================================
 
 This file contains 5 sample El...
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible
+- Step 3 fails: Try "Settlement Run" or "Create Payment Run"
+- Step 5 fails: Verify all pay calculations complete
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- 01 Payroll Input to Gross to Settlement verification completes successfully
+- All configuration settings validated as expected
+- No error messages or issues encountered
+- All verification criteria pass
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify configuration with SME | Business rules require domain expertise |
+| M2 | Cross-reference with legacy system data | Migration validation requires source comparison |
+| M3 | Confirm settings meet business requirements | Compliance verification requires business approval |
 ================================================================================

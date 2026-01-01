@@ -2,38 +2,76 @@
 TEST ID: BEN-1-0200
 FUNCTIONAL AREA: Benefits
 TEST NAME: Health Care Plans
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
-TASK/STEP: View Benefit Plan > Health Care Plans
+TASK/STEP: Health Care Plans
 
 PREREQUISITES:
 - User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- Test data: Health care plans configured
 
 ELECTRON STEPS:
-1. enter search box as "View Benefit Plan > Health Care Plans"
+1. enter search box as "Health Care Plans"
 2. wait for search results
-3. click search result containing "View Benefit Plan > Health Care Plans"
+3. click search result containing "Health Care Plans"
 4. wait for page to load
 5. screenshot as "BEN-1-0200_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0200_complete.png"
+6. verify health care plans are listed
+7. verify plan details: Name, Type, Carrier, Status
+8. screenshot as "BEN-1-0200_complete.png"
 
 VERIFICATION:
-- [ ] View Benefit Plan > Health Care Plans task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Health Care Plans task completed successfully
+- [ ] All health care plans displayed
+- [ ] Plan configurations are correct
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Verify health care plans are configured in tenant
+- Step 7 fails: Details may require clicking individual plan
+- General failure: Check Maintain Benefit Plans configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Health Care Plans page displays successfully
+- Medical plans listed:
+  - PPO (Preferred Provider Organization)
+  - HMO (Health Maintenance Organization)
+  - HDHP (High Deductible Health Plan)
+- Dental plans listed:
+  - PPO Dental
+  - DMO Dental
+- Vision plans listed
+- Each plan shows:
+  - Plan Name and Description
+  - Carrier Name
+  - Plan Type
+  - Active/Inactive Status
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify plan names match carrier contracts | Ensure naming consistency |
+| M2 | Check carrier information is current | Validate vendor details |
+| M3 | Confirm HSA eligibility for HDHP plans | Ensure proper plan designation |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0200
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 7.0/10 based on KB coverage
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Get_Benefit_Plans (Benefits_Administration.wsdl)
+- REST: /benefits/plans (if available)
 
 ================================================================================

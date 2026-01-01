@@ -53,4 +53,29 @@ WORKDAY KB ARTICLE: CHANGE JOB / TRANSFER EMPLOYEE BUSINESS PROCESS
 
 Source: Workday Community & WSDL Analysis
 URL: Workday HCM - Human...
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name with "View" or "Maintain" prefix
+- Step 4 fails: Wait additional 5 seconds for page load; check for system alerts
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- 01 Mid-Period Salary Change verification completes successfully
+- All configuration settings validated as expected
+- No error messages or issues encountered
+- All verification criteria pass
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify configuration with SME | Business rules require domain expertise |
+| M2 | Cross-reference with legacy system data | Migration validation requires source comparison |
+| M3 | Confirm settings meet business requirements | Compliance verification requires business approval |
 ================================================================================

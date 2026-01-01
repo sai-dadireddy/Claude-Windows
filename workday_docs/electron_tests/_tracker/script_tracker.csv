@@ -1659,3 +1659,208 @@ CP-1-0120_Pay_Group_Assignments_Review.txt,Payroll_Canada,Pay Group Assignments,
 CP-1-0130_Review_Tenant_Analyzer.txt,Payroll_Canada,Tenant Analyzer,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
 CP-2-0010_BP_Assign_Pay_Group.txt,Payroll_Canada,Assign Pay Group BP,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
 CP-2-0020_Payment_Election_Rule_Configuration.txt,Payroll_Canada,Payment Election Rule Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+BEN-1-0010_Verify_Benefit_Plans.txt,Benefits,Benefit Plans,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0020_Verify_Benefit_Groups.txt,Benefits,Benefit Groups,7.5,7.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0030_Benefit_Group_Audit.txt,Benefits,Benefit Group Audit,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0040_Benefits_Eligibility_by_Benefits_Group.txt,Benefits,Benefits Eligibility,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0050_Report_Active_Employees_Not_Eligible_for_Benefits.txt,Benefits,Ineligibility Report,7.5,7.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0060_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Benefits,Security Groups,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0070_Verify_Worker_Benefit_Elections_Details.txt,Benefits,Worker Elections,7.5,7.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0080_Verify_Benefit_Census.txt,Benefits,Benefit Census,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0090_Verify_Benefit_Eligibility_Rules_Audit.txt,Benefits,Eligibility Rules Audit,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0100_Verify_Enrollment_Count.txt,Benefits,Enrollment Count,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0110_Verify_Waives.txt,Benefits,Waived Coverage,7.5,7.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0120_Verify_ACA_Measurement_Period.txt,Benefits,ACA Measurement,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0130_Verify_Affordable_Care_Reporting_Configuration.txt,Benefits,ACA Reporting Config,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0140_Verify_Benefit_Coverage_Types.txt,Benefits,Coverage Types,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-1-0150_Verify_Related_Person_Relationships.txt,Benefits,Related Persons,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+CP-2-0030_Review_Payslip_Configuration.txt,Payroll_Canada,Payslip Configuration,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0040_Verify_Accounting_Configuration_and_Results.txt,Payroll_Canada,Accounting Configuration,10.0,10.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0050_BP_Settlement_Run_Event.txt,Payroll_Canada,Settlement Run Event,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0060_Verify_Additional_Run_Category_Configuration.txt,Payroll_Canada,Additional Run Category,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0070_Payroll_Security_Group_Assignments.txt,Payroll_Canada,Security Group Assignments,6.0,6.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0080_Verify_Statutory_Holiday_Configuration.txt,Payroll_Canada,Statutory Holiday Configuration,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0090_Verify_Vacation_Pay_Configuration.txt,Payroll_Canada,Vacation Pay Configuration,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0010_Review_Period_Schedule_Configuration.txt,Payroll_Canada,Period Schedule Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0020_Review_Run_Category_Configuration.txt,Payroll_Canada,Review Run Category Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0030_Review_Pay_Group_Configuration.txt,Payroll_Canada,Review Pay Group Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0040_Review_Pay_Run_Group_Configuration.txt,Payroll_Canada,Review Pay Run Group Configuration,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0050_Review_Payment_Election_Rule_Configuration.txt,Payroll_Canada,Review Payment Election Rule Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0060_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Payroll_Canada,Verify User Based Security Groups Assignments Verify Role Assignments,32.0,32.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0070_Benefits_and_Pay_Hub.txt,Payroll_Canada,Benefits and Pay Hub,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0080_Review_Earnings_Configuration.txt,Payroll_Canada,Review Earnings Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0090_Review_Deductions_Configuration.txt,Payroll_Canada,Review Deductions Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0100_Review_Company_Accounting_Configuration.txt,Payroll_Canada,Review Company Accounting Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0110_Verify_Open_Ledger_Periods.txt,Payroll_Canada,Verify Open Ledger Periods,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0120_Review_Company_Federal_and_Province_Tax_Reporting_Configuration.txt,Payroll_Canada,Review Company Federal and Province Tax Reporting Configuration,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0130_CAN_Tax_Elections_Review.txt,Payroll_Canada,CAN Tax Elections Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0140_Missing_Payment_Elections_Review.txt,Payroll_Canada,Missing Payment Elections Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0150_Payment_Election_Review.txt,Payroll_Canada,Payment Election Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0160_Pay_Group_Assignments_Review.txt,Payroll_Canada,Pay Group Assignments Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0170_Review_Involuntary_Withholding_Orders.txt,Payroll_Canada,Review Involuntary Withholding Orders,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0180_Payroll_History_YTDs_Review.txt,Payroll_Canada,Payroll History YTDs Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0190_Workers_Compensation_Configuration_Review.txt,Payroll_Canada,Workers Compensation Configuration Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0200_Review_ROE_History.txt,Payroll_Canada,Review ROE History,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-3-0210_Review_Tenant_Analyzer.txt,Payroll_Canada,Review Tenant Analyzer,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-01_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,01 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-02_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,02 Payroll Input to Gross to Settlement,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-03_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,03 Payroll Input to Gross to Settlement,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-04_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,04 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-05_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,05 Payroll Input to Gross to Settlement,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-06_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,06 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-07_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,07 Payroll Input to Gross to Settlement,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-08_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,08 Payroll Input to Gross to Settlement,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-09_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,09 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-10_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,10 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-11_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,11 Payroll Input to Gross to Settlement,2.0,2.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010-12_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,12 Payroll Input to Gross to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0010_Payroll_Input_to_Gross_to_Settlement.txt,Payroll_Canada,Payroll Input to Gross to Settlement,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-01_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,01 New Hire to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-02_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,02 New Hire to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-03_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,03 New Hire to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-04_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,04 New Hire to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-05_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,05 New Hire to Off-Cycle to Settlement,2.0,2.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-06_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,06 New Hire to Off-Cycle to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020-07_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,07 New Hire to Off-Cycle to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0020_New_Hire_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,New Hire to Off-Cycle to Settlement,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-01_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,01 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-02_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,02 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-03_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,03 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-04_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,04 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-05_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,05 Termination to Off-Cycle to Settlement,2.0,2.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-06_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,06 Termination to Off-Cycle to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-07_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,07 Termination to Off-Cycle to Settlement,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-08_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,08 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-09_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,09 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-10_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,10 Termination to Off-Cycle to Settlement,2.0,2.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030-11_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,11 Termination to Off-Cycle to Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0030_Termination_to_Off-Cycle_to_Settlement.txt,Payroll_Canada,Termination to Off-Cycle to Settlement,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0040-01_Terminated_Employee_with_Pay.txt,Payroll_Canada,01 Terminated Employee with Pay,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0040-02_Terminated_Employee_with_Pay.txt,Payroll_Canada,02 Terminated Employee with Pay,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0040-03_Terminated_Employee_with_Pay.txt,Payroll_Canada,03 Terminated Employee with Pay,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0040_Terminated_Employee_with_Pay.txt,Payroll_Canada,Terminated Employee with Pay,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0050-01_One-Time_Payment_to_Gross.txt,Payroll_Canada,01 One-Time Payment to Gross,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0050-02_One-Time_Payment_to_Gross.txt,Payroll_Canada,02 One-Time Payment to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0050-03_One-Time_Payment_to_Gross.txt,Payroll_Canada,03 One-Time Payment to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0050_One-Time_Payment_to_Gross.txt,Payroll_Canada,One-Time Payment to Gross,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0060-01_Time_Integration_to_Gross.txt,Payroll_Canada,01 Time Integration to Gross,6.0,6.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0060-02_Time_Integration_to_Gross.txt,Payroll_Canada,02 Time Integration to Gross,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0060-03_Time_Integration_to_Gross.txt,Payroll_Canada,03 Time Integration to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0060-04_Time_Integration_to_Gross.txt,Payroll_Canada,04 Time Integration to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0060_Time_Integration_to_Gross.txt,Payroll_Canada,Time Integration to Gross,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0070-01_Benefits_Inbound_Integration_to_Gross.txt,Payroll_Canada,01 Benefits Inbound Integration to Gross,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0070-02_Benefits_Inbound_Integration_to_Gross.txt,Payroll_Canada,02 Benefits Inbound Integration to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0070-03_Benefits_Inbound_Integration_to_Gross.txt,Payroll_Canada,03 Benefits Inbound Integration to Gross,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0070-04_Benefits_Inbound_Integration_to_Gross.txt,Payroll_Canada,04 Benefits Inbound Integration to Gross,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0070_Benefits_Inbound_Integration_to_Gross.txt,Payroll_Canada,Benefits Inbound Integration to Gross,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0080-01_Mid-Period_Salary_Change.txt,Payroll_Canada,01 Mid-Period Salary Change,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0080-02_Mid-Period_Salary_Change.txt,Payroll_Canada,02 Mid-Period Salary Change,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0080-03_Mid-Period_Salary_Change.txt,Payroll_Canada,03 Mid-Period Salary Change,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0080_Mid-Period_Salary_Change.txt,Payroll_Canada,Mid-Period Salary Change,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-01_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,01 Retro Comp Change Payroll Impact,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-02_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,02 Retro Comp Change Payroll Impact,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-03_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,03 Retro Comp Change Payroll Impact,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-04_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,04 Retro Comp Change Payroll Impact,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-05_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,05 Retro Comp Change Payroll Impact,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090-06_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,06 Retro Comp Change Payroll Impact,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0090_Retro_Comp_Change_Payroll_Impact.txt,Payroll_Canada,Retro Comp Change Payroll Impact,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-01_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,01 Retro Benefit Change Payroll Impact,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-02_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,02 Retro Benefit Change Payroll Impact,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-03_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,03 Retro Benefit Change Payroll Impact,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-04_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,04 Retro Benefit Change Payroll Impact,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-05_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,05 Retro Benefit Change Payroll Impact,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100-06_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,06 Retro Benefit Change Payroll Impact,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0100_Retro_Benefit_Change_Payroll_Impact.txt,Payroll_Canada,Retro Benefit Change Payroll Impact,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0110-01_PT_to_FT_Change_to_Gross.txt,Payroll_Canada,01 PT to FT Change to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0110-02_PT_to_FT_Change_to_Gross.txt,Payroll_Canada,02 PT to FT Change to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0110-03_PT_to_FT_Change_to_Gross.txt,Payroll_Canada,03 PT to FT Change to Gross,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0110_PT_to_FT_Change_to_Gross.txt,Payroll_Canada,PT to FT Change to Gross,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-01_Additional_Run_Category_Payroll.txt,Payroll_Canada,01 Additional Run Category Payroll,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-02_Additional_Run_Category_Payroll.txt,Payroll_Canada,02 Additional Run Category Payroll,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-03_Additional_Run_Category_Payroll.txt,Payroll_Canada,03 Additional Run Category Payroll,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-04_Run_Pay_Calculation.txt,Payroll_Canada,04 Run Pay Calculation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-05_Employer_Paid_Taxes.txt,Payroll_Canada,05 Employer Paid Taxes,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-06_Record_Involuntary_Withholding_Order_for_Worker.txt,Payroll_Canada,06 Record Involuntary Withholding Order for Worker,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-07_Banking_Setup.txt,Payroll_Canada,07 Banking Setup,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-08_Run_Pay_Complete.txt,Payroll_Canada,08 Run Pay Complete,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120-09_Tax_Filing_Reports.txt,Payroll_Canada,09 Tax Filing Reports,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-4-0120_Additional_Run_Category_Payroll.txt,Payroll_Canada,Additional Run Category Payroll,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0010_Review_Period_Schedule_Configuration.txt,Payroll_Canada,Review Period Schedule Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0020_Review_Run_Category_Configuration.txt,Payroll_Canada,Review Run Category Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0030_Review_Pay_Group_Configuration.txt,Payroll_Canada,Review Pay Group Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0040_Review_Pay_Run_Group_Configuration.txt,Payroll_Canada,Review Pay Run Group Configuration,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0050_Review_Payment_Election_Rule_Configuration.txt,Payroll_Canada,Review Payment Election Rule Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0060_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Payroll_Canada,Verify User Based Security Groups Assignments Verify Role Assignments,32.0,32.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0070_Benefits_and_Pay_Hub.txt,Payroll_Canada,Benefits and Pay Hub,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0080_Review_Earnings_Configuration.txt,Payroll_Canada,Review Earnings Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0090_Review_Deductions_Configuration.txt,Payroll_Canada,Review Deductions Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0100_Review_Company_Accounting_Configuration.txt,Payroll_Canada,Review Company Accounting Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0110_Verify_Open_Ledger_Periods.txt,Payroll_Canada,Verify Open Ledger Periods,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0120_Review_Company_Federal_and_Province_Tax_Reporting_Configuration.txt,Payroll_Canada,Review Company Federal and Province Tax Reporting Configuration,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0130_CAN_Tax_Elections_Review.txt,Payroll_Canada,CAN Tax Elections Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0140_Missing_Payment_Elections_Review.txt,Payroll_Canada,Missing Payment Elections Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0150_Payment_Election_Review.txt,Payroll_Canada,Payment Election Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0160_Pay_Group_Assignments_Review.txt,Payroll_Canada,Pay Group Assignments Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0170_Review_Involuntary_Withholding_Orders.txt,Payroll_Canada,Review Involuntary Withholding Orders,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0180_Payroll_History_YTDs_Review.txt,Payroll_Canada,Payroll History YTDs Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0190_Workers_Compensation_Configuration_Review.txt,Payroll_Canada,Workers Compensation Configuration Review,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0200_Review_ROE_History.txt,Payroll_Canada,Review ROE History,5.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-5-0210_Review_Tenant_Analyzer.txt,Payroll_Canada,Review Tenant Analyzer,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0010_Pay_Component_Mapping.txt,Payroll_Canada,CP-P1-0010 Pay Component Mapping,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0020_Payroll_History.txt,Payroll_Canada,CP-P1-0020 Payroll History,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0030_Time_and_Time_Off_Data.txt,Payroll_Canada,CP-P1-0030 Time and Time Off Data,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0040_Catch_Up_Transactions.txt,Payroll_Canada,CP-P1-0040 Catch Up Transactions,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0050_Payroll_Input.txt,Payroll_Canada,CP-P1-0050 Payroll Input,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0060_Payroll_Calculation.txt,Payroll_Canada,CP-P1-0060 Payroll Calculation,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0070_Payroll_Audit_Reports.txt,Payroll_Canada,CP-P1-0070 Payroll Audit Reports,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0080_Review_Payroll_Process.txt,Payroll_Canada,CP-P1-0080 Review Payroll Process,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0090_Setup_PROVE.txt,Payroll_Canada,CP-P1-0090 Setup PROVE,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0100_Prove2_Map_Validation.txt,Payroll_Canada,CP-P1-0100 Prove2 Map Validation,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0110_Prove2_Workday_Pay_Codes_Not_In_Mapping.txt,Payroll_Canada,CP-P1-0110 Prove2 Workday Pay Codes Not In Mapping,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0120_Prove2_Legacy_Pay_Codes_Not_In_Mapping.txt,Payroll_Canada,CP-P1-0120 Prove2 Legacy Pay Codes Not In Mapping,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0130_Prove2_Workday_EmpID_without_Legacy_Match.txt,Payroll_Canada,CP-P1-0130 Prove2 Workday EmpID without Legacy Match,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0140_Prove_5_Legacy_EmpID_without_Workday_Match.txt,Payroll_Canada,CP-P1-0140 Prove 5 Legacy EmpID without Workday Match,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0150_Prove2_Legacy_Amounts_Not_in_WD.txt,Payroll_Canada,CP-P1-0150 Prove2 Legacy Amounts Not in WD,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0160_Earnings_Validation.txt,Payroll_Canada,CP-P1-0160 Earnings Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0170_Deduction_Validation.txt,Payroll_Canada,CP-P1-0170 Deduction Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0180_Tax_Validation.txt,Payroll_Canada,CP-P1-0180 Tax Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0190_Complete_Payroll.txt,Payroll_Canada,CP-P1-0190 Complete Payroll,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0200_Settlement.txt,Payroll_Canada,CP-P1-0200 Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0210_Post_Complete_Audits.txt,Payroll_Canada,CP-P1-0210 Post Complete Audits,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0220_Wage_Payments.txt,Payroll_Canada,CP-P1-0220 Wage Payments,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0230_Tax_Filing.txt,Payroll_Canada,CP-P1-0230 Tax Filing,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0240_RRSP_Funding.txt,Payroll_Canada,CP-P1-0240 RRSP Funding,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0250_Other_Benefits.txt,Payroll_Canada,CP-P1-0250 Other Benefits,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P1-0260_General_Ledger.txt,Payroll_Canada,CP-P1-0260 General Ledger,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0010_Legacy_Pay_Data.txt,Payroll_Canada,CP-P2-0010 Legacy Pay Data,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0020_Legacy_Pay_Data.txt,Payroll_Canada,CP-P2-0020 Legacy Pay Data,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0030_Pay_Component_Mapping.txt,Payroll_Canada,CP-P2-0030 Pay Component Mapping,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0040_Time_and_Time_Off_Data.txt,Payroll_Canada,CP-P2-0040 Time and Time Off Data,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0050_Catch_Up_Transactions.txt,Payroll_Canada,CP-P2-0050 Catch Up Transactions,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0060_Payroll_Input.txt,Payroll_Canada,CP-P2-0060 Payroll Input,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0070_Payroll_Calculation.txt,Payroll_Canada,CP-P2-0070 Payroll Calculation,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0080_Retro_Calculation.txt,Payroll_Canada,CP-P2-0080 Retro Calculation,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0090_Audit_Retro.txt,Payroll_Canada,CP-P2-0090 Audit Retro,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0100_Re-calculate_Payroll.txt,Payroll_Canada,CP-P2-0100 Re-calculate Payroll,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0110_Payroll_Audit_Reports.txt,Payroll_Canada,CP-P2-0110 Payroll Audit Reports,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0120_Review_Payroll_Process.txt,Payroll_Canada,CP-P2-0120 Review Payroll Process,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0130_Setup_PROVE.txt,Payroll_Canada,CP-P2-0130 Setup PROVE,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0140_Prove_1_Map_Validation.txt,Payroll_Canada,CP-P2-0140 Prove 1 Map Validation,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0150_Prove_2_Workday_Pay_Codes_Not_In_Mapping.txt,Payroll_Canada,CP-P2-0150 Prove 2 Workday Pay Codes Not In Mapping,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0160_Prove_3_Legacy_Pay_Codes_Not_In_Mapping.txt,Payroll_Canada,CP-P2-0160 Prove 3 Legacy Pay Codes Not In Mapping,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0170_Prove_4_Workday_EmpID_without_Legacy_Match.txt,Payroll_Canada,CP-P2-0170 Prove 4 Workday EmpID without Legacy Match,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0180_Prove_5_Legacy_EmpID_without_Workday_Match.txt,Payroll_Canada,CP-P2-0180 Prove 5 Legacy EmpID without Workday Match,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0190_Prove_9_Legacy_Amounts_Not_in_WD.txt,Payroll_Canada,CP-P2-0190 Prove 9 Legacy Amounts Not in WD,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0200_Earnings_Validation.txt,Payroll_Canada,CP-P2-0200 Earnings Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0210_Deduction_Validation.txt,Payroll_Canada,CP-P2-0210 Deduction Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0220_Tax_Validation.txt,Payroll_Canada,CP-P2-0220 Tax Validation,0.0,0.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0230_Complete_Retro.txt,Payroll_Canada,CP-P2-0230 Complete Retro,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0240_Re-calculate_Payroll.txt,Payroll_Canada,CP-P2-0240 Re-calculate Payroll,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0250_Complete_Payroll.txt,Payroll_Canada,CP-P2-0250 Complete Payroll,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0260_Settlement.txt,Payroll_Canada,CP-P2-0260 Settlement,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0270_Post_Complete_Audits.txt,Payroll_Canada,CP-P2-0270 Post Complete Audits,3.0,3.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0280_Wage_Payments.txt,Payroll_Canada,CP-P2-0280 Wage Payments,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0290_Tax_Filing.txt,Payroll_Canada,CP-P2-0290 Tax Filing,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0300_RRSP_Funding.txt,Payroll_Canada,CP-P2-0300 RRSP Funding,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0310_Other_Benefits.txt,Payroll_Canada,CP-P2-0310 Other Benefits,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-P2-0320_General_Ledger.txt,Payroll_Canada,CP-P2-0320 General Ledger,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4

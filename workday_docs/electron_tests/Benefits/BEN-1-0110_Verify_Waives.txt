@@ -6,27 +6,60 @@ CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
-TASK/STEP: Enrollment Count report
+TASK/STEP: Verify Waived Coverage Report
 
 PREREQUISITES:
 - User logged in with Benefits Administrator or HR Partner role
 - Test data: Valid worker IDs and benefit plans configured
 
 ELECTRON STEPS:
-1. enter search box as "Enrollment Count"
+1. enter search box as "Waived Coverage"
 2. wait for search results
-3. click search result containing "Enrollment Count"
+3. click search result containing "Waived" or "Enrollment Count"
 4. wait for page to load
-5. screenshot as "BEN-1-0110_enrollment_count.png"
-6. verify enrollment statistics display
-7. verify counts by plan type: Medical, Dental, Vision
-8. verify total enrollment numbers
+5. screenshot as "BEN-1-0110_waives_page.png"
+6. verify waived coverage details display
+7. verify waiver reasons are documented
+8. verify counts by plan type
 9. screenshot as "BEN-1-0110_complete.png"
 
 VERIFICATION:
-- [ ] Enrollment counts are accurate
-- [ ] Counts match individual enrollment records
-- [ ] Participation rates are calculated correctly
+- [ ] Waived coverage counts are accurate
+- [ ] Waiver reasons are documented
+- [ ] Employees who waived coverage are identifiable
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Try searching "Enrollment Count" and filter to waived
+- Step 6 fails: Verify employees have waived coverage in system
+- Step 7 fails: Waiver reasons may not be required; check configuration
+- General failure: Check waiver options are configured for plans
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Waived Coverage report displays successfully
+- All employees who declined coverage are listed
+- Waiver reasons are documented:
+  - Covered under spouse's plan
+  - Medicare/Medicaid coverage
+  - VA benefits
+  - Cannot afford coverage
+  - Other coverage source
+- Waiver attestations are captured
+- Data supports compliance review
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify waiver attestations are complete | Compliance requires documentation |
+| M2 | Check high earners who waived coverage | Review for potential ACA implications |
+| M3 | Contact sample employees to verify coverage | Confirm alternate coverage is valid |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt

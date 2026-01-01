@@ -2,15 +2,15 @@
 TEST ID: BEN-1-0130
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Affordable Care Reporting Configuration
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
 TASK/STEP: Affordable Care Reporting Configuration
 
 PREREQUISITES:
-- User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- User logged in with Benefits Administrator or ACA Administrator role
+- Test data: Company is Applicable Large Employer (50+ FTE)
 
 ELECTRON STEPS:
 1. enter search box as "Affordable Care Reporting Configuration"
@@ -18,22 +18,60 @@ ELECTRON STEPS:
 3. click search result containing "Affordable Care Reporting Configuration"
 4. wait for page to load
 5. screenshot as "BEN-1-0130_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0130_complete.png"
+6. verify Employer Information section (1094-C Part I)
+7. verify ALE Member Information section (1094-C Part II)
+8. verify Coverage Configuration section (1095-C Part II)
+9. screenshot as "BEN-1-0130_complete.png"
 
 VERIFICATION:
 - [ ] Affordable Care Reporting Configuration task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Employer information is complete and accurate
+- [ ] Coverage codes are properly configured
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has ACA Administrator or Benefits Administrator role
+- Step 5 fails: Verify ACA reporting is configured for company
+- Step 6-8 fails: Configuration may be incomplete; check each section
+- General failure: Confirm company meets ALE threshold (50+ FTE)
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Affordable Care Reporting Configuration displays successfully
+- Employer Information (1094-C Part I) shows:
+  - Company Name as registered with IRS
+  - EIN (Employer Identification Number)
+  - Company Address
+  - Contact Person and Phone
+- ALE Member Information (1094-C Part II) shows:
+  - Aggregate Group Member indicator
+  - Certifications of Eligibility
+- Coverage Configuration (1095-C Part II) shows:
+  - Offer of Coverage Codes (1A through 1H)
+  - Safe Harbor Codes (2A through 2I)
+- Configuration supports 1094-C and 1095-C form generation
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify EIN matches IRS records | Critical for form filing accuracy |
+| M2 | Confirm coverage codes match plan offerings | Codes must reflect actual offers |
+| M3 | Review certifications with tax counsel | Legal review of ALE attestations |
 
 NOTES:
-- Enhanced using KB article: kb_benefits_enrollment.txt
+- Enhanced using KB article: kb_benefits_aca.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0130
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 5.0/10 based on KB coverage - ACA configuration is complex
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Get_ACA_1095-C_Forms_Data, Get_ACA_Employee_Data (ACA_Partner_Integrations.wsdl)
+- REST: /benefits/aca1095CForms (if available)
 
 ================================================================================

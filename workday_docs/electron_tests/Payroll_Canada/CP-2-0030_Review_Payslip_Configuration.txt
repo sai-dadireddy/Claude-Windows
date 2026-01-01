@@ -18,21 +18,35 @@ PREREQUISITES:
 - User logged in with Payroll Partner permissions
 - Required data available in tenant
 - Access to CA payroll data
+- Pay calculation run completed for test employee
 
 ELECTRON STEPS:
 1. enter search box as "Pay Calculation Results for Worker"
 2. wait for search results
 3. click search result containing "Pay Calculation Results for Worker"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-2-0030_complete.png"
+5. select test employee
+6. verify pay calculation results displayed
+7. click Related Actions menu
+8. navigate to Payroll Result > View Payslip
+9. wait for payslip to load
+10. verify payslip displays correctly
+11. verify all Pay Component Groups displayed
+12. verify earnings section correct
+13. verify deductions section correct
+14. verify tax withholding section correct
+15. screenshot as "CP-2-0030_payslip_view.png"
+16. click PDF view to check print layout
+17. verify print layout matches requirements
+18. screenshot as "CP-2-0030_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Payslip displays correctly
+- [ ] All Pay Component Groups visible
+- [ ] Earnings section accurate
+- [ ] Deductions section accurate
+- [ ] Tax withholding correct
+- [ ] Print layout matches requirements
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -42,15 +56,35 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Pay Calculation Results for Worker
 
-### 1. Kb Hcm Terminate Employee (score: 5)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "View Pay Results" or "Employee Pay Results"
+- Step 4 fails: Wait additional 5 seconds for page load
+- Step 8 fails: Navigate via Related Actions menu carefully; may need to hover first
+- Step 10 fails: Payslip may take longer to render; wait additional time
+- Step 16 fails: PDF generation may require popup permissions
 
-Source: Workday Community & WSDL Analysis
-URL: Wor...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Payslip Configuration review completes successfully
+- Pay calculation results are accessible for test employee
+- Payslip online view displays correctly as per requirements
+- All Pay Component Groups linked on configuration are working
+- Earnings, deductions, and tax sections display correctly
+- PDF/check print layout matches requirements
+- Online view and print layout compared for consistency
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Compare payslip layout with business requirements document | Visual design compliance requires human judgment |
+| M2 | Verify all Pay Component Groups with payroll SME | Business rules require domain expertise |
+| M3 | Compare online view with print layout for consistency | Layout comparison requires visual inspection |
 ================================================================================

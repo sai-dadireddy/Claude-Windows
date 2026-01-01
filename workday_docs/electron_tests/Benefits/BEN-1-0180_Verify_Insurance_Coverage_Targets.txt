@@ -2,7 +2,7 @@
 TEST ID: BEN-1-0180
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Insurance Coverage Targets
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
@@ -10,7 +10,7 @@ TASK/STEP: Insurance Coverage Targets
 
 PREREQUISITES:
 - User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- Test data: Insurance plans configured with coverage targets
 
 ELECTRON STEPS:
 1. enter search box as "Insurance Coverage Targets"
@@ -18,13 +18,46 @@ ELECTRON STEPS:
 3. click search result containing "Insurance Coverage Targets"
 4. wait for page to load
 5. screenshot as "BEN-1-0180_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0180_complete.png"
+6. verify coverage targets are listed
+7. verify target details: Type, Amount, Eligibility
+8. screenshot as "BEN-1-0180_complete.png"
 
 VERIFICATION:
 - [ ] Insurance Coverage Targets task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] All insurance coverage targets displayed
+- [ ] Coverage amounts are correct
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Verify insurance coverage targets are configured
+- Step 7 fails: Details may require selecting specific insurance type
+- General failure: Check Maintain Insurance Coverage Targets configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Insurance Coverage Targets page displays successfully
+- Coverage targets for:
+  - Life Insurance (1x, 2x, 3x salary up to max)
+  - AD&D Coverage (matching life amount)
+  - Short-Term Disability (60-70% of salary)
+  - Long-Term Disability (60% of salary)
+  - Supplemental Life (incremental amounts)
+- Coverage maximums and minimums shown
+- Evidence of Insurability thresholds displayed
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify coverage formulas match policy | Ensure salary multipliers are correct |
+| M2 | Check EOI guarantee issue amounts | Validate amounts requiring underwriting |
+| M3 | Confirm coverage caps with carrier | Ensure maximums match contract |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt

@@ -2,7 +2,7 @@
 TEST ID: BEN-1-0160
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Health Care Coverage Targets
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
@@ -18,16 +18,52 @@ ELECTRON STEPS:
 3. click search result containing "Health Care Coverage Targets"
 4. wait for page to load
 5. screenshot as "BEN-1-0160_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0160_complete.png"
+6. verify coverage targets are listed
+7. verify target details: Name, Covered Relationships, Premium Tier
+8. screenshot as "BEN-1-0160_complete.png"
 
 VERIFICATION:
 - [ ] Health Care Coverage Targets task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] All coverage targets are displayed
+- [ ] Coverage levels are correct (Employee Only, Employee+Spouse, Family)
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Verify coverage targets are configured in tenant
+- Step 7 fails: Details may require clicking individual target
+- General failure: Check Maintain Coverage Targets configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Health Care Coverage Targets page displays successfully
+- Coverage targets are listed:
+  - Employee Only
+  - Employee + Spouse
+  - Employee + Child(ren)
+  - Employee + Family
+  - Employee + Domestic Partner
+- Each target shows:
+  - Coverage Level Name
+  - Eligible Relationships
+  - Premium Tier
+  - Cost Allocation
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify coverage levels match carrier contract | Ensure alignment with vendor |
+| M2 | Check dependent age limits per target | Confirm ACA compliance (26 for medical) |
+| M3 | Validate premium tiers against rate tables | Ensure cost calculations are correct |
 
 NOTES:
-- Enhanced using KB article: kb_benefits_enrollment.txt
+- Enhanced using KB article: kb_benefits_eligibility_rules.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0160
 - Confidence score: 5.0/10 based on KB coverage

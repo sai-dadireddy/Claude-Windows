@@ -18,21 +18,46 @@ PREREQUISITES:
 - User logged in with Payroll Partner permissions
 - Required data available in tenant
 - Access to CA payroll data
+- Hourly employees with vacation accrual configured
+- Vacationable Earnings PCG configured
 
 ELECTRON STEPS:
-1. enter search box as "Pay Calculation Results for Group of Workers"
+1. enter search box as "View Pay Component Group"
 2. wait for search results
-3. click search result containing "Pay Calculation Results for Group of Workers"
+3. click search result containing "View Pay Component Group"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-2-0090_complete.png"
+5. search for "Vacationable Earnings"
+6. verify Vacationable Earnings PCG exists
+7. verify correct earnings linked to PCG
+8. screenshot as "CP-2-0090_pcg_config.png"
+9. enter search box as "Run Pay Calculation"
+10. wait for search results
+11. click search result containing "Run Pay Calculation"
+12. wait for page to load
+13. select applicable pay group
+14. click button "Submit"
+15. wait for calculation to complete
+16. enter search box as "Pay Calculation Results for Worker"
+17. wait for search results
+18. click search result containing "Pay Calculation Results for Worker"
+19. wait for page to load
+20. select hourly employee from Province 1 (e.g., Ontario)
+21. verify vacation pay accrual calculated correctly
+22. verify vacation rate matches provincial requirement
+23. screenshot as "CP-2-0090_province1.png"
+24. select hourly employee from Province 2 (e.g., BC)
+25. verify vacation pay accrual calculated correctly
+26. verify vacation rate matches provincial requirement
+27. screenshot as "CP-2-0090_province2.png"
+28. verify all Vacationable Earnings included in calculation
+29. screenshot as "CP-2-0090_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Vacationable Earnings PCG configured correctly
+- [ ] Correct earnings linked to PCG
+- [ ] Vacation pay accrued for hourly employees
+- [ ] Provincial vacation rates applied correctly
+- [ ] All Vacationable Earnings included in calculation
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -42,14 +67,35 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Pay Calculation Results for Group of Workers
 
-### 1. Kb Hcm Terminate Employee (score: 7)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try alternative "Pay Component Groups" search
+- Step 5 fails: PCG may have different name; check configuration documentation
+- Step 7 fails: If earnings not linked, configuration update required
+- Step 15 fails: Wait additional time; calculation may take longer
+- Step 21 fails: Verify employee is hourly and vacation-eligible
+- Step 22 fails: Provincial rates vary (4%, 6%, etc.); verify correct rate
 
-Source: Workday Community & WSDL Analysi...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Vacation Pay Configuration verification completes successfully
+- Vacationable Earnings Pay Component Group confirmed configured
+- Correct earnings linked to Vacationable Earnings PCG
+- Vacation pay accruing correctly for hourly employees
+- Provincial vacation rates applied correctly (e.g., 4% Ontario, 6% BC after 5 years)
+- All Vacationable Earnings included in vacation calculation
+- Pay results verified across multiple provinces
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify Vacationable Earnings list with payroll SME | Business rules require domain expertise |
+| M2 | Confirm provincial vacation rates with HR/Legal | Provincial compliance requires official sources |
+| M3 | Test vacation accrual for employees with varying tenure | Tenure-based rates require manual calculation verification |
 ================================================================================

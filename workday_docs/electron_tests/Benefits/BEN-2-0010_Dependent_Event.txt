@@ -2,7 +2,7 @@
 TEST ID: BEN-2-0010
 FUNCTIONAL AREA: Benefits
 TEST NAME: Dependent Event
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
@@ -10,30 +10,69 @@ TASK/STEP: Dependent Add
 
 PREREQUISITES:
 - User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- Test data: Worker with active benefits, dependent information ready
 
 ELECTRON STEPS:
-1. enter search box as "Dependent Add"
+1. enter search box as "Add Dependent"
 2. wait for search results
-3. click search result containing "Dependent Add"
+3. click search result containing "Add Dependent"
 4. wait for page to load
-5. screenshot as "BEN-2-0010_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-2-0010_complete.png"
+5. enter worker field as "{WORKER_ID}"
+6. screenshot as "BEN-2-0010_page.png"
+7. enter dependent name as "{DEPENDENT_NAME}"
+8. enter dependent date of birth as "{DOB}"
+9. select relationship as "Child" or "Spouse"
+10. click button "Submit"
+11. wait for confirmation
+12. screenshot as "BEN-2-0010_complete.png"
 
 VERIFICATION:
-- [ ] Dependent Add task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Dependent Event task completed successfully
+- [ ] Dependent added to worker record
+- [ ] Enrollment event generated if applicable
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 5 fails: Verify worker ID is valid and benefits-eligible
+- Step 7-9 fails: Check required fields and valid data format
+- Step 10 fails: Dependent may already exist; check for duplicates
+- General failure: Verify dependent eligibility requirements
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Add Dependent task completes successfully
+- Dependent record created with:
+  - Full Legal Name
+  - Date of Birth
+  - Social Security Number (if required)
+  - Relationship Type (Spouse, Child, Domestic Partner)
+  - Gender
+- Enrollment event triggered if dependent adds coverage eligibility
+- System prompts for benefit coverage changes
+- Documentation upload available if required
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify dependent appears on worker record | Confirm successful addition |
+| M2 | Check enrollment event was generated | Validate benefit change process |
+| M3 | Verify documentation requirements | Some relationships need verification |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-2-0010
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 7.5/10 based on KB coverage
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Put_Dependent (Human_Resources.wsdl)
+- REST: /workers/{id}/dependents (if available)
 
 ================================================================================

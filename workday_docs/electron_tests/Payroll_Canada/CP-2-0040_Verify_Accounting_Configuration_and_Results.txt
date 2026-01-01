@@ -106,4 +106,36 @@ RELATED REPORTS:
 - Suspense Account Analysis
 - GL Reconciliation Report
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 7 fails: Verify pay period is open and not already calculated
+- Step 8 fails: Wait longer for calculation; may take up to 10 minutes for large groups
+- Step 17 fails: CRITICAL - Suspense account postings indicate accounting config issues
+- Step 24 fails: If errors exist, document and fix accounting configuration before proceeding
+- Step 31 fails: Verify all calculations are complete before attempting completion
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Full payroll calculation completes successfully for all CA pay groups
+- No pay calculation errors due to accounting configuration
+- Accounting results reviewed and verified before completion
+- No postings to suspense accounts (all accounts properly mapped)
+- Fix Operational Journals shows zero errors
+- Payroll completed without issues
+- GL journal entries created with balanced debits and credits
+- All earnings, deductions, taxes, and contributions posted correctly
+- Screenshots captured at each verification step
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify GL account mappings with Finance team | Accounting compliance requires finance approval |
+| M2 | Cross-reference journal entries with accounting requirements | Business rules require domain expertise |
+| M3 | Validate cost center allocations with cost accounting team | Allocation accuracy requires business verification |
+| M4 | Review suspense account analysis with accounting SME | Error resolution requires accounting expertise |
 ================================================================================

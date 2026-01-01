@@ -2,15 +2,15 @@
 TEST ID: BEN-1-0120
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify ACA Measurement Period
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [MEDIUM] Score: 5.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
 TASK/STEP: View ACA Measurement Period
 
 PREREQUISITES:
-- User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- User logged in with Benefits Administrator or ACA Administrator role
+- Test data: ACA measurement periods configured for applicable companies
 
 ELECTRON STEPS:
 1. enter search box as "View ACA Measurement Period"
@@ -18,22 +18,58 @@ ELECTRON STEPS:
 3. click search result containing "View ACA Measurement Period"
 4. wait for page to load
 5. screenshot as "BEN-1-0120_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0120_complete.png"
+6. select Company (if multi-company)
+7. select Measurement Period Type (Standard or Initial)
+8. verify measurement period details display
+9. verify dates: Start, End, Administrative Period, Stability Period
+10. screenshot as "BEN-1-0120_complete.png"
 
 VERIFICATION:
 - [ ] View ACA Measurement Period task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Measurement period dates are accurate
+- [ ] Employee count in period is displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has ACA Administrator or Benefits Administrator role
+- Step 6 fails: Verify company is an Applicable Large Employer (ALE)
+- Step 8-9 fails: Confirm ACA measurement periods are configured
+- General failure: Check ACA module is enabled for tenant
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- ACA Measurement Period details display successfully
+- Standard Measurement Period shows:
+  - Measurement Start Date
+  - Measurement End Date
+  - Administrative Period (up to 90 days)
+  - Stability Period Start
+  - Stability Period Duration (12 months)
+- Initial Measurement Period configuration visible
+- Hours threshold displayed (130/month or 30/week)
+- Associated companies/locations listed
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify measurement period aligns with company policy | ACA allows flexibility in period length |
+| M2 | Confirm 90-day limit for administrative period | IRS requirement |
+| M3 | Check stability period meets minimum requirements | Must be at least as long as measurement |
 
 NOTES:
-- Enhanced using KB article: kb_benefits_enrollment.txt
+- Enhanced using KB article: kb_benefits_aca.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0120
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 5.0/10 based on KB coverage - ACA configuration varies significantly
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Put_Affordable_Care_Act_Worker_Hours_And_Wages (Benefits_Administration.wsdl)
+- REST: /benefits/acaMeasurementPeriods (if available)
 
 ================================================================================

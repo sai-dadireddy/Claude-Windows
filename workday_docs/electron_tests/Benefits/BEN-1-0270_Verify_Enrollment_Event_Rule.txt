@@ -2,38 +2,74 @@
 TEST ID: BEN-1-0270
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify Enrollment Event Rule
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
-TASK/STEP: Enrollment Event Rule
+TASK/STEP: Enrollment Event Rules
 
 PREREQUISITES:
-- User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- User logged in with Benefits Administrator role
+- Test data: Enrollment event rules configured
 
 ELECTRON STEPS:
-1. enter search box as "Enrollment Event Rule"
+1. enter search box as "Enrollment Event Rules"
 2. wait for search results
-3. click search result containing "Enrollment Event Rule"
+3. click search result containing "Enrollment Event Rules"
 4. wait for page to load
 5. screenshot as "BEN-1-0270_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0270_complete.png"
+6. verify enrollment event rules are listed
+7. verify rule details: Event Type, Plans, Actions Allowed
+8. screenshot as "BEN-1-0270_complete.png"
 
 VERIFICATION:
-- [ ] Enrollment Event Rule task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Enrollment Event Rules task completed successfully
+- [ ] All event rules displayed
+- [ ] Rule configurations are correct
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Verify enrollment event rules are configured
+- Step 7 fails: Details may require selecting specific rule
+- General failure: Check event rule linkage to enrollment events
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Enrollment Event Rules page displays successfully
+- Rules linking events to plan changes:
+  - New Hire: Enroll in all eligible plans
+  - Open Enrollment: Change any elections
+  - Life Event - Marriage: Add spouse to coverage
+  - Life Event - Birth: Add child, change FSA
+  - Job Change: Adjust coverage per new eligibility
+- Each rule shows:
+  - Event Type
+  - Plan Actions Allowed (Enroll, Change, Waive, Drop)
+  - Enrollment Window Duration
+  - Dependent Changes Allowed
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify rules match HR policy | Ensure compliance |
+| M2 | Test event-to-plan mapping | Confirm correct plans affected |
+| M3 | Check dependent change rules | Validate family coverage options |
 
 NOTES:
-- Enhanced using KB article: kb_benefits_enrollment.txt
+- Enhanced using KB article: kb_benefits_eligibility_rules.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0270
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 7.0/10 based on KB coverage
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Get_Benefit_Plans (Benefits_Administration.wsdl)
+- REST: /benefits/enrollmentEvents (if available)
 
 ================================================================================

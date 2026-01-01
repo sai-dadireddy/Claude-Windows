@@ -18,26 +18,34 @@ PREREQUISITES:
 - User logged in with Payroll Partner permissions
 - Required data available in tenant
 - Access to CA payroll data
+- Non-regular run category configured (e.g., off-cycle, bonus, commission)
 
 ELECTRON STEPS:
 1. enter search box as "Configure Run Category"
 2. wait for search results
 3. click search result containing "Configure Run Category"
 4. wait for page to load
-5. verify run category list is displayed
-6. verify column "Run Category Name" is visible
-7. verify column "Pay Group" is visible
-8. verify column "Frequency" is visible
-9. review configuration for each run category
-10. verify off-cycle run categories exist
-11. screenshot as "CP-2-0060_complete.png"
+5. verify non-regular run categories exist
+6. identify test run category (off-cycle, bonus, etc.)
+7. screenshot as "CP-2-0060_run_categories.png"
+8. enter search box as "Run Pay Calculation"
+9. wait for search results
+10. click search result containing "Run Pay Calculation"
+11. wait for page to load
+12. select non-regular run category
+13. select applicable pay group
+14. click button "Submit"
+15. wait for calculation to complete
+16. verify pay results generated
+17. verify results match expected for non-regular run
+18. screenshot as "CP-2-0060_complete.png"
 
 VERIFICATION:
-- [ ] All run categories configured
-- [ ] Run category names are descriptive
-- [ ] Pay groups correctly assigned
-- [ ] Frequency settings appropriate
-- [ ] Off-cycle categories exist for special payments
+- [ ] Non-regular run categories exist and configured
+- [ ] Pay calculation runs successfully for non-regular category
+- [ ] Pay results generated as expected
+- [ ] Run category settings applied correctly
+- [ ] Off-cycle processing works as expected
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -47,14 +55,34 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Pay Calculation Results for Group of Workers
 
-### 1. Kb Hcm Terminate Employee (score: 7)
-Source: kb_hcm_terminate_employee.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: TERMINATE EMPLOYEE BUSINESS PROCESS
-================================================================================
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 5 fails: If no non-regular run categories exist, this test is N/A
+- Step 10 fails: Try alternative task name "Pay Calculation" or "Calculate Pay"
+- Step 12 fails: Non-regular run category may have specific selection criteria
+- Step 15 fails: Wait additional time; non-regular runs may process differently
+- Step 16 fails: Verify payroll input exists for test employees
 
-Source: Workday Community & WSDL Analysi...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Additional Run Category Configuration verified successfully
+- Non-regular run categories confirmed to exist in tenant
+- Pay calculation runs successfully for non-regular category
+- Pay results generated as expected per run category configuration
+- Run category settings (frequency, tax treatment, etc.) applied correctly
+- Off-cycle/bonus/commission processing works as expected
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify non-regular run category configuration with payroll SME | Business rules require domain expertise |
+| M2 | Test additional scenarios (bonus, commission, etc.) if applicable | Edge case testing requires manual input |
+| M3 | Confirm tax treatment for non-regular runs | Tax compliance requires payroll expertise |
 ================================================================================

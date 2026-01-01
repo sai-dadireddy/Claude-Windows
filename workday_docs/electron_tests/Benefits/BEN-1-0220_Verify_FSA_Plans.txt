@@ -2,38 +2,72 @@
 TEST ID: BEN-1-0220
 FUNCTIONAL AREA: Benefits
 TEST NAME: Verify FSA Plans
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.0/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
-TASK/STEP: View Benefit Plan > Spending Account Plans
+TASK/STEP: FSA Plans
 
 PREREQUISITES:
 - User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- Test data: FSA plans configured
 
 ELECTRON STEPS:
-1. enter search box as "View Benefit Plan > Spending Account Plans"
+1. enter search box as "FSA Plans"
 2. wait for search results
-3. click search result containing "View Benefit Plan > Spending Account Plans"
+3. click search result containing "FSA Plans"
 4. wait for page to load
 5. screenshot as "BEN-1-0220_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-1-0220_complete.png"
+6. verify FSA plans are listed
+7. verify plan details: Type, Annual Limits, Carryover Rules
+8. screenshot as "BEN-1-0220_complete.png"
 
 VERIFICATION:
-- [ ] View Benefit Plan > Spending Account Plans task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] FSA Plans task completed successfully
+- [ ] All FSA plans displayed (Health Care FSA, Dependent Care FSA)
+- [ ] Contribution limits are correct per IRS guidelines
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Verify FSA plans are configured in tenant
+- Step 7 fails: Check plan year dates for applicable limits
+- General failure: Check FSA plan configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- FSA Plans page displays successfully
+- Health Care FSA details:
+  - Annual Limit (2026: $3,200)
+  - Carryover Amount ($640)
+  - Grace Period (if applicable)
+- Dependent Care FSA details:
+  - Annual Limit ($5,000 or $2,500 if married filing separately)
+  - No carryover (use-it-or-lose-it)
+  - Qualifying Expenses listed
+- Limited Purpose FSA (if offered with HSA)
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify IRS limits are current year | Limits change annually |
+| M2 | Check carryover rules match company policy | Some employers don't offer carryover |
+| M3 | Confirm HSA/FSA rules are enforced | Cannot have both HCFSA and HSA |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0220
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 7.0/10 based on KB coverage
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Get_Benefit_Plans (Benefits_Administration.wsdl)
+- REST: /benefits/plans (if available)
 
 ================================================================================

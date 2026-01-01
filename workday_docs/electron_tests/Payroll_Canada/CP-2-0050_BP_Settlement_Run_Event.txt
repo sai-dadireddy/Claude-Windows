@@ -86,4 +86,37 @@ API ALTERNATIVE:
 - SOAP (Payroll_CAN): Get_Payroll_CAN_Year_End_Forms - For year-end processing
 - REST: Not specifically available for settlement initiation (settlement is UI-driven)
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Settlement Run" or "Create Payment Run"
+- Step 5 fails: Verify company is active and has payroll enabled
+- Step 14 fails: Verify all prerequisites met; check for incomplete pay calculations
+- Step 16 fails: Settlement processing may take 5-15 minutes; wait longer
+- Step 21 fails: Document integration errors separately; these are acceptable during testing
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Settlement Run creation completes successfully
+- Company hierarchy properly configured for all CAN companies
+- All Available Pay Groups and Exceptions filters applied
+- Complete pay results picked up without errors
+- Bank accounts assigned correctly per routing rules
+- Settlement processes to completion without critical errors
+- Payment file generated successfully (EFT format)
+- GL journal entries created without suspense postings
+- Integration errors documented but acceptable during testing phase
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify company hierarchy with multi-company setup SME | Complex org structures require expertise |
+| M2 | Review payment file format with treasury/banking team | Banking compliance requires business approval |
+| M3 | Verify GL entries with finance team | Accounting accuracy requires finance verification |
+| M4 | Test EFT submission with bank if applicable | Banking integration requires actual submission |
 ================================================================================

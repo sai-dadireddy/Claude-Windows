@@ -2,38 +2,80 @@
 TEST ID: BEN-2-0020
 FUNCTIONAL AREA: Benefits
 TEST NAME: Beneficiary Change
-CONFIDENCE: [HIGH] Score: 5.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
 SOURCE: KB Article + RAG Enhancement
 ================================================================================
 
-TASK/STEP: Edit Beneficiary
+TASK/STEP: Change Beneficiaries
 
 PREREQUISITES:
-- User logged in with Benefits Administrator or HR Partner role
-- Test data: Valid worker IDs and benefit plans configured
+- User logged in with Benefits Administrator or worker self-service
+- Test data: Worker with life insurance or retirement plan
 
 ELECTRON STEPS:
-1. enter search box as "Edit Beneficiary"
+1. enter search box as "Change Beneficiaries"
 2. wait for search results
-3. click search result containing "Edit Beneficiary"
+3. click search result containing "Change Beneficiaries"
 4. wait for page to load
-5. screenshot as "BEN-2-0020_page.png"
-6. verify page loaded successfully
-7. screenshot as "BEN-2-0020_complete.png"
+5. enter worker field as "{WORKER_ID}"
+6. screenshot as "BEN-2-0020_page.png"
+7. select benefit plan requiring beneficiary
+8. add or update beneficiary information
+9. enter allocation percentage (must equal 100%)
+10. click button "Submit"
+11. wait for confirmation
+12. screenshot as "BEN-2-0020_complete.png"
 
 VERIFICATION:
-- [ ] Edit Beneficiary task completed successfully
-- [ ] No errors displayed
-- [ ] Required data is visible
+- [ ] Beneficiary Change task completed successfully
+- [ ] Beneficiary designation updated
+- [ ] Allocation percentages total 100%
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has appropriate security role
+- Step 5 fails: Verify worker has life insurance or retirement enrollment
+- Step 9 fails: Percentages must total exactly 100%
+- Step 10 fails: Required fields may be missing (SSN, DOB, Address)
+- General failure: Verify beneficiary designation is enabled for plan
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Change Beneficiaries task completes successfully
+- Beneficiary designation includes:
+  - Primary Beneficiaries (with percentage allocation)
+  - Contingent Beneficiaries (with percentage allocation)
+  - Beneficiary Information:
+    - Full Legal Name
+    - Date of Birth
+    - Social Security Number
+    - Relationship to Employee
+    - Address
+- Total allocation equals 100% for each type
+- Effective date recorded
+- Confirmation provided to employee
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify beneficiary appears on plan record | Confirm designation saved |
+| M2 | Check allocation totals 100% | Validate percentage math |
+| M3 | Confirm contingent beneficiaries if applicable | Secondary designation |
 
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-2-0020
-- Confidence score: 5.0/10 based on KB coverage
+- Confidence score: 7.5/10 based on KB coverage
 
 API ALTERNATIVE:
-- SOAP: Get_Benefit_Plans, Get_Benefit_Elections (Benefits_Administration.wsdl)
-- REST: /benefits/plans, /benefits/enrollments (if available)
+- SOAP: Change_Beneficiary_Elections (Benefits_Administration.wsdl)
+- REST: /workers/{id}/beneficiaries (if available)
 
 ================================================================================
