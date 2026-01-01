@@ -1,0 +1,31 @@
+# Workday KB: Review Tenant Analyzer (US)
+# Searched: 2025-12-31
+# Query: "Review Tenant Analyzer"
+# Total Results: 500 (168 English Admin Guide)
+# Pages: 17 (EN content in pages 1-13 only)
+
+## Summary by Page
+Page 1: 7 EN Admin Guide results
+Page 2: 15 EN Admin Guide results
+Page 3: 20 EN Admin Guide results
+Page 4: 25 EN Admin Guide results
+Page 5: 22 EN Admin Guide results
+Page 6: 15 EN Admin Guide results
+Page 7: 9 EN Admin Guide results
+Page 8: 8 EN Admin Guide results
+Page 9: 12 EN Admin Guide results
+Page 10: 15 EN Admin Guide results
+Page 11: 9 EN Admin Guide results
+Page 12: 7 EN Admin Guide results
+Page 13: 4 EN Admin Guide results
+Pages 14-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-13
+- 168 total EN Admin Guide results
+- Pages 14-17 contain only translated/non-EN content
+
+## Key Topics
+- Tenant analyzer review and configuration
+- Tenant setup validation
+- US Payroll tenant analysis

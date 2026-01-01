@@ -1,0 +1,31 @@
+# Workday KB: Review Period Schedule Configuration (US)
+# Searched: 2025-12-31
+# Query: "Review Period Schedule Configuration"
+# Total Results: 500 (251 English Admin Guide)
+# Pages: 17 (EN content in pages 1-13 only)
+
+## Summary by Page
+Page 1: 29 EN Admin Guide results
+Page 2: 20 EN Admin Guide results
+Page 3: 18 EN Admin Guide results
+Page 4: 16 EN Admin Guide results
+Page 5: 18 EN Admin Guide results
+Page 6: 16 EN Admin Guide results
+Page 7: 19 EN Admin Guide results
+Page 8: 18 EN Admin Guide results
+Page 9: 22 EN Admin Guide results
+Page 10: 24 EN Admin Guide results
+Page 11: 18 EN Admin Guide results
+Page 12: 21 EN Admin Guide results
+Page 13: 12 EN Admin Guide results
+Pages 14-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-13
+- 251 total EN Admin Guide results
+- Pages 14-17 contain only translated/non-EN content
+
+## Key Topics
+- US Payroll period schedule configuration
+- Pay period setup and review
+- Schedule configuration for payroll processing

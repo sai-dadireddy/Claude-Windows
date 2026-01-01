@@ -1,0 +1,22 @@
+# Workday KB: Termination to Off-Cycle to Settlement (Canada)
+# Searched: 2025-12-31
+# Query: "Termination to Off-Cycle to Settlement"
+# Total Results: 500 (10 English Admin Guide)
+# Pages: 17 (EN content in pages 1-4 only)
+
+## Summary by Page
+Page 1: 4 EN Admin Guide results
+Page 2: 0 EN Admin Guide results
+Page 3: 2 EN Admin Guide results
+Page 4: 4 EN Admin Guide results
+Pages 5-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-4
+- 10 total EN Admin Guide results
+- Pages 5-17 contain only translated/non-EN content
+
+## Key Topics
+- Canada Payroll termination processing
+- Off-cycle payroll for terminations
+- Settlement processing for terminated workers

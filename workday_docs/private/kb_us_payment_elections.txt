@@ -1,0 +1,28 @@
+# Workday KB: Missing Payment Elections Review (US)
+# Searched: 2025-12-31
+# Query: "Missing Payment Elections Review"
+# Total Results: 500 (162 English Admin Guide)
+# Pages: 17 (EN content in pages 1-10 only)
+
+## Summary by Page
+Page 1: 28 EN Admin Guide results
+Page 2: 19 EN Admin Guide results
+Page 3: 21 EN Admin Guide results
+Page 4: 13 EN Admin Guide results
+Page 5: 10 EN Admin Guide results
+Page 6: 15 EN Admin Guide results
+Page 7: 17 EN Admin Guide results
+Page 8: 16 EN Admin Guide results
+Page 9: 16 EN Admin Guide results
+Page 10: 7 EN Admin Guide results
+Pages 11-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-10
+- 162 total EN Admin Guide results
+- Pages 11-17 contain only translated/non-EN content
+
+## Key Topics
+- US Payroll payment elections
+- Missing payment elections identification
+- Payment method configuration review
