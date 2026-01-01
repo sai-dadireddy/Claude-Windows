@@ -1,0 +1,126 @@
+================================================================================
+ELECTRON SCRIPT VALIDATION LOG - FINANCE
+================================================================================
+Agent: electron-2
+Date: 2026-01-01
+
+[2026-01-01] electron-2: Finance Full Validation
+  Location: electron_tests/_reports/finance_full_validation.txt
+  Scripts Validated: 307
+  HIGH Confidence: 66 (21.5%)
+  MEDIUM Confidence: 188 (61.2%)
+  LOW Confidence: 29 (9.4%)
+  MANUAL REQUIRED: 24 (7.8%)
+  RAG Average Score: 5.8/10
+  Format Compliance: 92% (basic sections), 4% (advanced sections)
+
+  Issues Found:
+    - 6 scripts with INDEX.txt vs file score discrepancies
+    - 7 task types with low RAG coverage (<5.0)
+    - 24 scripts missing Task/Step in source Excel
+    - Only 12 enhanced scripts have full format compliance
+
+  RAG Coverage Gaps (Need KB Research):
+    - Approve Journal (2.0)
+    - Consolidation Journal (2.0)
+    - Allocation Process (2.0)
+    - Month End Close (3.0)
+    - Year End Close (3.0)
+    - Equity Pickup Process (3.0)
+    - Intercompany Accounting Journal (3.0)
+
+  Discrepancies Found:
+    - FACC-3-0280_Confirm Worktag Usage.txt: INDEX=HIGH, FILE=LOW (3.0)
+    - FACC-1-0220_Confirm Books.txt: INDEX=LOW, FILE=HIGH (8.0) with 240 lines
+
+  Recommendations:
+    Priority 1: Deploy 66 HIGH confidence scripts immediately
+    Priority 2: Browser scrape KB for 7 low-coverage tasks
+    Priority 3: Fix INDEX.txt discrepancies
+    Priority 4: Add ON FAILURE/EXPECTED OUTCOME sections to all scripts
+
+================================================================================
+RAG QUERIES EXECUTED (24 unique task types)
+================================================================================
+
+Query                                | Score | Source
+-------------------------------------|-------|----------------------------------
+Audit Supervisory Organizations      | 8.0   | test_scenarios_index.txt
+Create Accounting Journal            | 8.0   | Admin-Guide-Financial-Management.pdf
+Confirm Account Posting Rules        | 9.0   | test_scenarios_index.txt
+Approve Journal                      | 2.0   | No direct match
+Payroll Accounting Configuration     | 8.0   | kb_payroll_canada_accounting.txt
+Consolidation Journal                | 2.0   | Indirect only
+Intercompany Accounting Journal      | 3.0   | kb_finance_journal_entry.txt
+Revaluation Process                  | 7.0   | kb_finance_confirm_books.txt
+Month End Close                      | 3.0   | Generic KB only
+Year End Close                       | 3.0   | Generic KB only
+Allocation Process                   | 2.0   | No direct match
+Worktag Usage                        | 7.0   | kb_finance_confirm_worktag_usage.txt
+Segregation of Duties                | 8.0   | kb_hcm_audit_role_assignments.txt
+Tax Declaration                      | 7.0   | kb_finance_tax_declaration_definitions.txt
+Ledger Accounts                      | 7.0   | kb_finance_ledger_accounts.txt
+Custom Worktags                      | 7.0   | kb_procurement_requisition.txt
+Fiscal Schedules                     | 7.0   | Admin-Guide-Financial-Management.pdf
+Accounting Adjustment                | 7.0   | kb_finance_accounting_adjustment.txt
+Recurring Journals                   | 7.0   | kb_finance_journal_entry.txt
+Intercompany Settlement              | 7.0   | kb_finance_journal_entry.txt
+Hire Employee                        | 7.0   | kb_hcm_hire_employee.txt
+Currency Rate Types                  | 8.0   | Financial_Management.wsdl
+Book Codes                           | 7.0   | kb_finance_confirm_book_codes.txt
+Equity Pickup Process                | 3.0   | Admin-Guide-Financial-Management.pdf
+
+================================================================================
+SCRIPTS SAMPLED FOR FORMAT COMPLIANCE
+================================================================================
+
+1. FACC-1-0010_Audit Supervisory Organizations.txt
+   Score: 8.0/10 (HIGH)
+   Has ELECTRON STEPS: Yes
+   Has VERIFICATION: Yes
+   Has ON FAILURE: No
+   Has EXPECTED OUTCOME: No
+   Has MANUAL VERIFICATION: No
+   Lines: 21
+
+2. FACC-2-0010_Create Accounting Journal.txt
+   Score: 8.0/10 (HIGH)
+   Has ELECTRON STEPS: Yes
+   Has VERIFICATION: Yes
+   Has RAG INSIGHTS: Yes
+   Has ON FAILURE: No
+   Lines: 38
+
+3. FACC-1-0220_Confirm Books.txt
+   Score: 8.0/10 (HIGH)
+   Has ELECTRON STEPS: Yes (62 steps)
+   Has VERIFICATION: Yes (detailed)
+   Has KEY FIELDS: Yes
+   Has API ALTERNATIVE: Yes (SOAP sample)
+   Has ERROR HANDLING: Yes
+   Has BEST PRACTICES: Yes
+   Lines: 240 (Enhanced)
+
+4. FACC-4-0260_Month End Close.txt
+   Score: 7.5/10 (HIGH)
+   Has ELECTRON STEPS: Yes (20 steps)
+   Has VERIFICATION: Yes
+   Has API ALTERNATIVE: Yes
+   Lines: 55 (Enhanced)
+
+5. FACC-4-0210_Equity Pickup Process.txt
+   Score: 6.5/10 (MEDIUM)
+   Has ELECTRON STEPS: Yes (17 steps)
+   Has VERIFICATION: Yes
+   Has API ALTERNATIVE: Yes
+   Lines: 51 (Enhanced)
+
+6. FACC-3-0090_Translations.txt
+   Score: 0.0/10 (MANUAL)
+   Has ELECTRON STEPS: No
+   Status: Missing Task/Step
+   Lines: 12
+
+================================================================================
+END OF VALIDATION LOG
+================================================================================
