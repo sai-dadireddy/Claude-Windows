@@ -230,6 +230,82 @@ Pages {N}-17: 0 EN (translations only)
 ```
 
 ---
+## Electron Script Generation
+
+### Template Location
+`electron_tests/_templates/ELECTRON_TEST_TEMPLATE.txt`
+
+### Script Format
+```
+================================================================================
+TEST: {TEST_ID} {Name}
+AREA: {Module} > {Sub-Area}
+CONFIDENCE: {X.X}/10
+PRIORITY: {High|Medium|Low}
+VERSION: 1.0 | UPDATED: {YYYY-MM-DD}
+================================================================================
+
+PURPOSE
+{Why this test matters}
+
+PREREQUISITES
+- {Required role/permission}
+- {Required data/setup}
+
+AUTOMATED STEPS
+1. navigate to "{Task}"
+2. enter search box as "{value}"
+3. wait for search results (3 seconds)
+4. verify "{Expected}" displays
+5. screenshot as "{TEST_ID}-05-desc.png"
+
+MANUAL VERIFICATION
+| Step | Action | Reason |
+| M1 | {action} | {why can't automate} |
+
+ON FAILURE
+- Step N fails: {fallback}
+
+EXPECTED OUTCOME
+- {result}
+================================================================================
+```
+
+### Parallel Agent Coordination
+
+**Tracker:** `electron_tests/script_tracker.txt`
+
+| Status | Meaning |
+|--------|---------|
+| [_] | Pending |
+| [G] | Generated |
+| [V] | Verified |
+| [R] | Needs Re-review |
+
+**Agent IDs:** electron-1, electron-2, electron-3, electron-4
+
+**Workflow:**
+1. Check tracker for [_] pending scripts
+2. Query RAG: `python workday_rag.py "{task}"`
+3. Generate script if RAG >= 7.0
+4. Update tracker with trust score
+5. Mark [R] if trust < 7.0
+
+### Confidence Scoring
+| RAG Score | Trust | Action |
+|-----------|-------|--------|
+| >= 8.0 | HIGH (8-10) | Generate immediately |
+| 5.0-7.9 | MEDIUM (5-7) | Generate + flag review |
+| < 5.0 | LOW (1-4) | Mark MANUAL, skip |
+
+### Strict Rules
+1. **NO HALLUCINATIONS** - Only RAG/KB content
+2. **NO GUESSING** - Unknown = MANUAL
+3. **VERIFY** - Cross-check task names
+4. **SCREENSHOT** - Every verification step
+5. **UPDATE TRACKER** - Always log work
+
+---
 ## Sources
 - [2025 RAG Guide](https://www.edenai.co/post/the-2025-guide-to-retrieval-augmented-generation-rag)
 - [RAG Best Practices Research](https://arxiv.org/abs/2501.07391)

@@ -1,0 +1,73 @@
+================================================================================
+TEST: {TEST_ID} {Test Name}
+AREA: {Module} > {Sub-Area}
+CONFIDENCE: {X.X}/10
+PRIORITY: {High|Medium|Low}
+VERSION: 1.0 | UPDATED: {YYYY-MM-DD}
+================================================================================
+
+PURPOSE
+{One sentence describing why this test matters - business value, compliance, etc.}
+
+PREREQUISITES
+- {Required role/permission}
+- {Required data/setup}
+- {Required prior configuration}
+
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. navigate to "{Task Name}" task
+2. enter search box as "{search_term}"
+3. wait for search results (3 seconds)
+4. click first result
+5. verify "{Expected Element}" displays
+6. screenshot as "{TEST_ID}-05-{description}.png"
+7. {action} "{element}"
+8. wait for page to load (2 seconds)
+9. verify {expected state}
+10. screenshot as "{TEST_ID}-10-{description}.png"
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | {Manual action} | {Why it can't be automated} |
+| M2 | {Manual action} | {Why it can't be automated} |
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step {N} fails: {Fallback action or troubleshooting}
+- Step {N} fails: {Fallback action or troubleshooting}
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- {Expected result 1}
+- {Expected result 2}
+- {N} screenshots captured
+
+================================================================================
+TEMPLATE USAGE NOTES (Remove in actual scripts)
+================================================================================
+TEST_ID Format: {AREA}-{NUMBER}-{SEQUENCE} (e.g., HCM-1-0010, FIN-2-0050)
+CONFIDENCE Score:
+  - 9-10: Full RAG coverage, all steps verified
+  - 7-8: Good RAG coverage, minor gaps
+  - 5-6: Partial coverage, needs KB research
+  - <5: Low coverage, manual review required
+
+DSL Commands Reference:
+  enter {field} as "{value}"      - Text input
+  click {element}                 - Click action
+  select {dropdown} as "{option}" - Dropdown selection
+  wait for {condition} ({time})   - Wait with timeout
+  verify {assertion}              - Assertion check
+  screenshot as "{filename}"      - Capture screenshot
+  navigate to "{task/page}"       - Navigation
+  press {key}                     - Keyboard action
+
+Screenshot Naming: {TEST_ID}-{STEP}-{description}.png
+================================================================================

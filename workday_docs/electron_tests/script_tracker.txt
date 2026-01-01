@@ -1,0 +1,75 @@
+================================================================================
+ELECTRON SCRIPT TRACKER
+================================================================================
+Last Updated: 2026-01-01
+Status: [_] = Pending, [G] = Generated, [V] = Verified, [R] = Needs Re-review
+
+LEGEND:
+  TRUST: Confidence score from RAG/KB (1-10)
+  STATUS: Generation status
+  REVIEW: Manual review status (PASS/FAIL/PENDING)
+  AGENT: Which agent processed it (for parallel tracking)
+
+================================================================================
+HCM SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+| HCM-1-0010 | Audit Company Setup | [_] | - | PENDING | - | - |
+| HCM-1-0020 | Hire Employee | [_] | - | PENDING | - | - |
+
+================================================================================
+FINANCE SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+| FIN-1-0010 | Journal Entry | [_] | - | PENDING | - | - |
+
+================================================================================
+PAYROLL US SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+
+================================================================================
+PAYROLL CA SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+
+================================================================================
+PROCUREMENT SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+
+================================================================================
+BENEFITS SCRIPTS
+================================================================================
+| Test ID | Name | Status | Trust | Review | Agent | Notes |
+|---------|------|--------|-------|--------|-------|-------|
+
+================================================================================
+SUMMARY
+================================================================================
+Total Scripts: 0
+Generated [G]: 0
+Verified [V]: 0
+Needs Re-review [R]: 0
+Pending [_]: 0
+
+Average Trust Score: -
+Scripts >= 8.0 Trust: 0
+Scripts < 7.0 (Need KB Research): 0
+
+================================================================================
+INSTRUCTIONS FOR AGENTS
+================================================================================
+1. BEFORE generating: Check this tracker for assigned scripts
+2. AFTER generating: Update status to [G] and add trust score
+3. IF trust < 7.0: Mark for re-review [R]
+4. LOG your agent ID in the Agent column
+5. COMMIT changes after each batch
+
+Agent IDs: electron-1, electron-2, electron-3, electron-4
+================================================================================
