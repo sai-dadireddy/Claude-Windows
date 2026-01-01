@@ -47,25 +47,25 @@ HCM (15+ topics)
 ================================================================================
 
 Academic/Faculty:
-[ ] Academic Faculty Review Academic Periods -> kb_hcm_academic_periods.txt
-[ ] Academic Faculty Review Academic Rank    -> kb_hcm_academic_rank.txt
-[ ] Academic Faculty Review Tenure Status    -> kb_hcm_tenure_status.txt
+[x] Academic Faculty Review Academic Periods -> kb_hcm_academic_periods.txt (Done 2025-12-31)
+[x] Academic Faculty Review Academic Rank    -> kb_hcm_academic_rank.txt (Done 2025-12-31)
+[x] Academic Faculty Review Tenure Status    -> kb_hcm_tenure_status.txt (Done 2025-12-31)
 
 Unions:
-[ ] Start Union Membership                   -> kb_hcm_union_start.txt
-[ ] End Union Membership                     -> kb_hcm_union_end.txt
+[x] Start Union Membership                   -> kb_hcm_union_start.txt (Done 2025-12-31)
+[x] End Union Membership                     -> kb_hcm_union_end.txt (Done 2025-12-31)
 
 Security:
-[ ] Compensation Security Group Assignments  -> kb_hcm_compensation_security.txt
-[ ] Manager Security Visibility              -> kb_hcm_manager_visibility.txt
-[ ] Employee Visibility                      -> kb_hcm_employee_visibility.txt
+[x] Compensation Security Group Assignments  -> kb_hcm_compensation_security.txt (342 EN)
+[x] Manager Security Visibility              -> kb_hcm_manager_visibility.txt (170 EN)
+[x] Employee Visibility                      -> kb_hcm_employee_visibility.txt (76 EN)
 
 Worker Management:
-[ ] Hire Using Position Management           -> kb_hcm_hire_position.txt
-[ ] Rehire a Terminated Worker               -> kb_hcm_rehire.txt
-[ ] Contract a Contingent Worker             -> kb_hcm_contingent_worker.txt
-[ ] Auto Generated IDs Edit Integration IDs  -> kb_hcm_integration_ids.txt
-[ ] Audit Worker Data Conversion             -> kb_hcm_worker_data_conversion.txt
+[x] Hire Using Position Management           -> kb_hcm_hire_position.txt (194 EN)
+[x] Rehire a Terminated Worker               -> kb_hcm_rehire.txt (41 EN)
+[x] Contract a Contingent Worker             -> kb_hcm_contingent_worker.txt (111 EN)
+[x] Auto Generated IDs Edit Integration IDs  -> kb_hcm_integration_ids.txt (169 EN)
+[x] Audit Worker Data Conversion             -> kb_hcm_worker_data_conversion.txt (242 EN)
 
 ================================================================================
 PAYROLL CANADA (4 topics)
