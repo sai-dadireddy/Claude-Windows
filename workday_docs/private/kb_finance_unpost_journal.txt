@@ -1,0 +1,28 @@
+# Workday KB: Unpost Accounting Journal
+# Searched: 2026-01-01
+# Query: "Unpost Accounting Journal"
+# Total Results: 500 (127 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 30 EN Admin Guide results
+Page 2: 23 EN Admin Guide results
+Page 3: 6 EN Admin Guide results
+Page 4: 16 EN Admin Guide results
+Page 5: 11 EN Admin Guide results
+Page 6: 12 EN Admin Guide results
+Page 7: 14 EN Admin Guide results
+Page 8: 4 EN Admin Guide results
+Page 9: 8 EN Admin Guide results
+Page 10: 3 EN Admin Guide results
+Pages 11-17: 0 EN (translations only)
+
+## Key Topics Found
+- Unpost Accounting Journal
+- View Detailed Accounting Results
+- Setup Considerations: Period End Revenue Accounting
+- Financial Close in AP&C
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/accounting-journals/
+

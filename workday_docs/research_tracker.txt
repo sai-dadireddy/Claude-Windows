@@ -17,7 +17,7 @@ Priority 1 (Score 2-3) - Critical:
 [x] Confirm Worktag Usage                    -> kb_finance_worktag_usage.txt (140 EN)
 [x] Verify Tax Authorities                   -> kb_finance_tax_authorities.txt (87 EN)
 [x] Verify Tax Declaration Definitions       -> kb_finance_tax_declaration_definitions.txt (219 EN)
-[ ] Unpost Accounting Journal                -> kb_finance_unpost_journal.txt
+[x] Unpost Accounting Journal                -> kb_finance_unpost_journal.txt (127 EN)
 [ ] Create Accounting Adjustment             -> kb_finance_accounting_adjustment.txt
 [ ] View Accounting Adjustment               -> kb_finance_view_adjustment.txt
 [ ] View Allocation Accounting               -> kb_finance_allocation_accounting.txt
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 37 | Remaining: 45
+TOTAL: 82 topics | Done: 48 | Remaining: 34
 ================================================================================
