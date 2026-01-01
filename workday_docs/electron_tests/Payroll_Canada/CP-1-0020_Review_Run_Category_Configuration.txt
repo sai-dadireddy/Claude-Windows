@@ -47,19 +47,33 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: All Run Categories
 
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name "View Run Categories" or "Maintain Run Categories"
+- Step 4 fails: Wait additional 5 seconds for page load; check for system maintenance alerts
+- Step 5 fails: Verify user has Payroll Administrator permissions
+- Step 10 fails: Off-cycle run categories may have different naming conventions; consult documentation
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Run Category Configuration review completes successfully
+- All expected run categories are present in tenant
+- Run category names are descriptive and follow naming convention
+- Pay groups correctly assigned to each run category
+- Frequency settings are appropriate for business requirements
+- Off-cycle run categories exist for special payment scenarios
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervi...
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify run category naming convention with business | Naming standards require business approval |
+| M2 | Confirm off-cycle categories meet all use cases | Business scenario coverage not automatable |
+| M3 | Cross-reference with legacy system run categories | Migration validation requires manual comparison |
 ================================================================================

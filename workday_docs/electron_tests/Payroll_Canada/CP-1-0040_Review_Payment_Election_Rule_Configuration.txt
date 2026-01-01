@@ -45,16 +45,33 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Payment Election Rules
 
-### 1. Kb Hcm Hire Employee (score: 8)
-Source: kb_hcm_hire_employee.txt
-```
-# Workday Hire Employee Business Process - Knowledge Base
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name "Maintain Payment Election Rules" or "View Payment Election Rules"
+- Step 4 fails: Wait additional 5 seconds for page load; check for system maintenance alerts
+- Step 5 fails: Filter by Election Rule Type = Payroll Rule if table is not showing expected rules
+- Step 9 fails: Bank account validation may be configured separately; check Payment Type configuration
 
-## Source
-- Workday Community AI-Generated Answer
-- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-- Release: ...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Payment Election Rule Configuration review completes successfully
+- All payment election rules with Election Rule Type = Payroll Rule are verified
+- Allowed payment types are correctly configured
+- Default payment types are set appropriately
+- Bank account validation rules are active
+- Payment types (ACH, check, wire, etc.) are properly defined
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify allowed payment types with treasury/finance | Banking compliance requires business approval |
+| M2 | Confirm default payment type with HR policy | Policy alignment not automatable |
+| M3 | Test bank account validation with sample accounts | Edge case testing requires manual input |
 ================================================================================

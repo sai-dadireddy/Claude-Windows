@@ -47,19 +47,36 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: All Earnings
 
-### 1. Test Scenarios Index (score: 7)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name "Maintain Earnings" or "View All Earnings"
+- Step 4 fails: Wait additional 5 seconds for page load; earnings list may be large
+- Step 5 fails: Filter by Owner = Customer to show only customer-owned earnings
+- Step 10 fails: Tax treatment may be on separate tab; navigate to Tax Applicabilities section
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Earnings Configuration review completes successfully
+- All expected earnings (owner = customer) are present in tenant
+- Salary earnings types are configured correctly
+- Hourly earnings types are configured correctly
+- Overtime earnings types exist with proper calculations
+- Bonus earnings types are properly set up
+- Tax treatment is correct for each earning type
+- GL accounts are mapped to earnings
+- No deprecated earnings codes are active
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory ....
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify tax treatment with tax/payroll SME | Tax compliance requires domain expertise |
+| M2 | Confirm GL account mappings with finance team | Accounting standards require finance approval |
+| M3 | Cross-reference earnings with legacy system | Migration validation requires source comparison |
 ================================================================================

@@ -3,50 +3,44 @@ TEST ID: CP-1-0050
 FUNCTIONAL AREA: Payroll for Canada
 COUNTRY: CA
 TEST NAME: Verify User Based Security Groups Assignments & Verify Role Assignments
-CONFIDENCE: [HIGH] Score: 32.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
 SOURCE: [RAG]
 ================================================================================
 
 DESCRIPTION:
 Verify the correct workers are assigned to Payroll Security Groups (i.e. Payroll Administrator, Payroll Administrator CAN, Payroll Calculations Administrator, Payroll Integrations Administrator, Payroll Partner, Organization Partner (on Pay Groups), Payroll Settlement Specialist and Payroll Auditor)
 
-WORKDAY ROLE: Payroll Administrator /
-Security Administrator
+WORKDAY ROLE: Payroll Administrator / Security Administrator
 EST. DURATION: 5 minutes
 COUNTRY SCOPE: CA
 
 PREREQUISITES:
-- User logged in with Payroll Administrator /
-Security Administrator permissions
+- User logged in with Payroll Administrator / Security Administrator permissions
 - Required data available in tenant
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "Run the report "View Security Group" and select the respective security group:
-For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
-For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+1. enter search box as "View Security Group"
 2. wait for search results
-3. click search result containing "Run the report "View Security Group" and select the respective security group:
-For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
-For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s)."
+3. click search result containing "View Security Group"
 4. wait for page to load
-5. RAG-extracted steps:
-   ## Results for: Run the report "View Security Group" and select the respective security group:
-   For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
-   For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-   Description: The Human Resources Web Service contains operations that expose Workday Human Capital Management Business Services data, including Employee, Contingent Worker and Organization information. This Web Service can be used for integration with enterprise systems includi...
-6. screenshot as "CP-1-0050_complete.png"
+5. select "Payroll Administrator" security group
+6. click "Members" to view assigned users
+7. verify correct workers are assigned
+8. repeat for "Payroll Administrator CAN"
+9. repeat for "Payroll Calculations Administrator"
+10. repeat for "Payroll Integrations Administrator"
+11. repeat for "Payroll Partner" (check Assignable Role)
+12. repeat for "Organization Partner" on Pay Groups
+13. repeat for "Payroll Settlement Specialist"
+14. repeat for "Payroll Auditor"
+15. screenshot as "CP-1-0050_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Payroll Administrator assignments verified
+- [ ] Payroll Administrator CAN assignments verified
+- [ ] Role-based security groups have correct assignees
+- [ ] Organization assignments are appropriate
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -56,9 +50,36 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Run the report "View Security Group" and select the respective security group:
-For User Based Security Groups (i.e. Administrators), select "Members" to view the list of assigned users.
-For Role Based Security Groups (i.e. Partners), select "Assignable Role" to get the list of current role assignments. Verify that the Assignee(s) are assigned to the appropriate Organization(s).
 
-### 1. Te...
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Use simplified search "View Security Group" instead of full description
+- Step 3 fails: Navigate to Security administration area and search for security groups directly
+- Step 4 fails: Wait additional 5 seconds; security reports may take longer to load
+- Step 6 fails: If Members tab not visible, check if user has Security Administrator permissions
+- General: For each security group, verify user has View permissions before attempting to access
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Security Group Assignments verification completes successfully
+- Correct workers assigned to Payroll Administrator group
+- Correct workers assigned to Payroll Administrator CAN group
+- Payroll Calculations Administrator assignments verified
+- Payroll Integrations Administrator assignments verified
+- Payroll Partner role assignments confirmed
+- Organization Partner assignments on Pay Groups verified
+- Payroll Settlement Specialist assignments verified
+- Payroll Auditor assignments verified
+- Screenshots captured for each security group verification
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify security assignments with HR/Security team | Separation of duties requires HR approval |
+| M2 | Confirm organization assignments are appropriate | Business structure knowledge required |
+| M3 | Cross-reference with access request documentation | Audit trail validation not automatable |
 ================================================================================

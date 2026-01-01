@@ -48,19 +48,33 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: All Pay Groups
 
-### 1. Test Scenarios Index (score: 8)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name "View Pay Groups" or "Maintain Pay Groups"
+- Step 4 fails: Wait additional 5 seconds for page load; check for system maintenance alerts
+- Step 9 fails: If no pay groups visible, verify filter settings; check security permissions
+- Step 10 fails: Payment election rules may be on separate tab; navigate to Rules section
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Pay Group Configuration review completes successfully
+- All expected pay groups are present in tenant
+- Run Categories are correctly assigned to pay groups
+- Period Schedules are appropriately linked
+- Auto Assignment Rules are configured as expected
+- Payment election rules verified for each pay group
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisory...
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify auto assignment rules with HR/Payroll SME | Business rules require domain expertise |
+| M2 | Confirm pay frequency matches employment contracts | Legal/contractual validation not automatable |
+| M3 | Cross-reference pay groups with legacy system | Migration validation requires source comparison |
 ================================================================================
