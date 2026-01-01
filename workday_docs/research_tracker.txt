@@ -81,9 +81,9 @@ PAYROLL US (6 topics)
 [x] Missing Payment Elections Review         -> kb_payroll_us_payment_elections.txt (162 EN)
 [x] Review Tenant Analyzer                   -> kb_payroll_us_tenant_analyzer.txt (168 EN)
 [x] Review Period Schedule Configuration     -> kb_payroll_us_period_schedule.txt (251 EN)
-[ ] Review Pay Run Group Configuration       -> kb_payroll_us_pay_run_group.txt
-[ ] Benefits and Pay Hub                     -> kb_payroll_us_benefits_pay_hub.txt
-[ ] Review FLSA Calendar Configuration       -> kb_payroll_us_flsa_calendar.txt
+[x] Review Pay Run Group Configuration       -> kb_payroll_us_pay_run_group.txt (267 EN)
+[x] Benefits and Pay Hub                    -> kb_payroll_us_benefits_pay_hub.txt (98 EN)
+[x] Review FLSA Calendar Configuration       -> kb_payroll_us_flsa_calendar.txt (192 EN)
 
 ================================================================================
 PROCUREMENT (5 topics)
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 48 | Remaining: 34
+TOTAL: 82 topics | Done: 56 | Remaining: 26
 ================================================================================

@@ -1,0 +1,26 @@
+# Workday KB: Benefits and Pay Hub
+# Searched: 2026-01-01
+# Query: "Benefits and Pay Hub"
+# Total Results: 540 (98 English Admin Guide)
+# Pages: 18
+
+## Summary by Page
+Page 1: 17 EN Admin Guide results
+Page 2: 13 EN Admin Guide results
+Page 3: 13 EN Admin Guide results
+Page 4: 9 EN Admin Guide results
+Page 5: 10 EN Admin Guide results
+Page 6: 14 EN Admin Guide results
+Page 7: 7 EN Admin Guide results
+Page 8: 3 EN Admin Guide results
+Page 9: 9 EN Admin Guide results
+Page 10: 3 EN Admin Guide results
+Pages 11-18: 0 EN (translations only)
+
+## Key Topics Found
+- Reference: Benefits and Pay Hub
+- Configure the Benefits and Wellbeing Wallet
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/benefits/benefits-and-pay-hub/
+

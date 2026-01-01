@@ -1,0 +1,29 @@
+# Workday KB: Review FLSA Calendar Configuration
+# Searched: 2026-01-01
+# Query: "Review FLSA Calendar Configuration"
+# Total Results: 500 (192 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 27 EN Admin Guide results
+Page 2: 22 EN Admin Guide results
+Page 3: 21 EN Admin Guide results
+Page 4: 12 EN Admin Guide results
+Page 5: 22 EN Admin Guide results
+Page 6: 11 EN Admin Guide results
+Page 7: 15 EN Admin Guide results
+Page 8: 16 EN Admin Guide results
+Page 9: 13 EN Admin Guide results
+Page 10: 15 EN Admin Guide results
+Page 11: 17 EN Admin Guide results
+Page 12: 1 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- Create FLSA Work Period Calendars (USA)
+- Create FLSA Work Period Calendars Rules
+- Create FLSA Company Relationships (USA)
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/payroll/flsa/
+
