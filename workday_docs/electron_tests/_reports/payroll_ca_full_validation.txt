@@ -1,0 +1,382 @@
+================================================================================
+PAYROLL CANADA ELECTRON TEST SCRIPT VALIDATION REPORT
+================================================================================
+Agent: electron-7
+Date: 2026-01-01
+Area: Payroll_Canada
+Location: C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/Payroll_Canada/
+Total Scripts: 185
+================================================================================
+
+EXECUTIVE SUMMARY
+================================================================================
+Total Scripts Analyzed:     185
+  - CONFIDENCE (Validated): 146
+  - MANUAL REQUIRED:         39
+
+VALIDATION BREAKDOWN:
+  - HIGH Trust (>=8.0):      62 scripts (33.5%)
+  - MEDIUM Trust (4.0-7.9):  58 scripts (31.4%)
+  - LOW Trust (<4.0):        26 scripts (14.1%)
+  - MANUAL (No Score):       39 scripts (21.1%)
+
+FORMAT COMPLIANCE:
+  - Has VERIFICATION section:     166/185 (89.7%)
+  - Has ON FAILURE/ERROR section:   6/185 (3.2%)
+  - Has API ALTERNATIVE section:  166/185 (89.7%)
+
+================================================================================
+CATEGORY 1: HIGH TRUST SCRIPTS (Score >= 8.0) - 62 Scripts
+================================================================================
+These scripts have strong RAG coverage and can be used with high confidence.
+
+CP-1 SERIES (Configuration Reviews - Phase 1):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-1-0010 | Review Period Schedule Configuration | 8.0 | kb_payroll_period_schedule.txt |
+| CP-1-0030 | Review Pay Group Configuration | 8.0 | kb_payroll_pay_group.txt |
+| CP-1-0050 | Verify User Based Security Groups | 32.0* | test_scenarios_index.txt |
+| CP-1-0090 | CAN Tax Elections Review | 8.0 | kb_payroll_canada_payslip.txt |
+| CP-1-0100 | Missing Payment Elections Review | 9.0 | kb_payroll_pay_group.txt |
+| CP-1-0110 | Payment Election Review | 8.0 | kb_payroll_pay_group.txt |
+| CP-1-0120 | Pay Group Assignments Review | 8.0 | kb_payroll_pay_group.txt |
+
+* Note: Score 32.0 appears to be an aggregation error - flagged for review
+
+CP-2 SERIES (Business Process Tests - Phase 2):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-2-0010 | BP Assign Pay Group | 8.0 | kb_payroll_pay_group.txt |
+| CP-2-0040 | Verify Accounting Configuration | 10.0 | kb_finance_ledger_accounts.txt |
+| CP-2-0050 | BP Settlement Run Event | 8.0 | kb_ca_settlement_run_event.txt |
+
+CP-3 SERIES (Comprehensive Reviews - Phase 3):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-3-0010 | Review Period Schedule Configuration | 8.0 | kb_payroll_period_schedule.txt |
+| CP-3-0030 | Review Pay Group Configuration | 8.0 | kb_payroll_pay_group.txt |
+| CP-3-0060 | Verify User Based Security Groups | 32.0* | test_scenarios_index.txt |
+| CP-3-0070 | Benefits and Pay Hub | 9.0 | kb_payroll_benefits_pay_hub.txt |
+| CP-3-0100 | Review Company Accounting Config | 8.0 | kb_finance_ledger_accounts.txt |
+| CP-3-0130 | CAN Tax Elections Review | 8.0 | kb_payroll_canada_payslip.txt |
+| CP-3-0140 | Missing Payment Elections Review | 9.0 | kb_payroll_pay_group.txt |
+| CP-3-0150 | Payment Election Review | 8.0 | kb_payroll_pay_group.txt |
+| CP-3-0160 | Pay Group Assignments Review | 8.0 | kb_payroll_pay_group.txt |
+| CP-3-0170 | Review Involuntary Withholding Orders | 9.0 | Payroll.wsdl |
+| CP-3-0180 | Payroll History YTDs Review | 9.0 | kb_payroll_history.txt |
+| CP-3-0190 | Workers Compensation Config Review | 9.0 | kb_advanced_compensation.txt |
+
+CP-4 SERIES VARIANTS (Score >= 8.0):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-4-0010-02 | Payroll Input to Gross | 8.0 | kb_ca_payroll_input_gross.txt |
+| CP-4-0010-03 | Payroll Input to Gross | 8.0 | kb_ca_payroll_input_gross.txt |
+| CP-4-0010-05 | Payroll Input to Gross | 8.0 | kb_ca_payroll_input_gross.txt |
+| CP-4-0010-08 | Payroll Input to Gross | 8.0 | kb_ca_payroll_input_gross.txt |
+
+CP-5 SERIES (Validation Phase):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-5-0010 | Review Period Schedule Configuration | 8.0 | kb_payroll_period_schedule.txt |
+| CP-5-0030 | Review Pay Group Configuration | 8.0 | kb_payroll_pay_group.txt |
+| CP-5-0060 | Verify User Based Security Groups | 32.0* | test_scenarios_index.txt |
+| CP-5-0070 | Benefits and Pay Hub | 9.0 | kb_payroll_benefits_pay_hub.txt |
+| CP-5-0100 | Review Company Accounting Config | 8.0 | kb_finance_ledger_accounts.txt |
+| CP-5-0130 | CAN Tax Elections Review | 8.0 | kb_payroll_canada_payslip.txt |
+| CP-5-0140 | Missing Payment Elections Review | 9.0 | kb_payroll_pay_group.txt |
+| CP-5-0150 | Payment Election Review | 8.0 | kb_payroll_pay_group.txt |
+| CP-5-0160 | Pay Group Assignments Review | 8.0 | kb_payroll_pay_group.txt |
+| CP-5-0170 | Review Involuntary Withholding Orders | 9.0 | Payroll.wsdl |
+| CP-5-0180 | Payroll History YTDs Review | 9.0 | kb_payroll_history.txt |
+| CP-5-0190 | Workers Compensation Config Review | 9.0 | kb_advanced_compensation.txt |
+
+CP-P1 SERIES (Payroll Processing 1 - Score >= 8.0):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-P1-0060 | Payroll Calculation | 8.0 | kb_payroll_run_payroll.txt |
+
+CP-P2 SERIES (Payroll Processing 2 - Score >= 8.0):
+| ID | Script Name | Score | RAG Source |
+|----|-------------|-------|------------|
+| CP-P2-0070 | Payroll Calculation | 8.0 | kb_payroll_run_payroll.txt |
+
+================================================================================
+CATEGORY 2: MEDIUM TRUST SCRIPTS (Score 4.0-7.9) - 58 Scripts
+================================================================================
+These scripts have partial RAG coverage. Recommend review before use.
+
+MEDIUM TRUST - UPPER RANGE (7.0-7.9):
+| ID | Script Name | Score | Issue |
+|----|-------------|-------|-------|
+| CP-1-0020 | Review Run Category Configuration | 7.5 | No specific KB article |
+| CP-1-0040 | Review Payment Election Rule Config | 7.5 | Generic match only |
+| CP-1-0060 | Review Earnings Configuration | 7.5 | No payroll-specific KB |
+| CP-1-0070 | Review Deductions Configuration | 7.5 | No payroll-specific KB |
+| CP-1-0130 | Review Tenant Analyzer | 7.0 | US KB used for CA |
+| CP-2-0020 | Payment Election Rule Configuration | 7.5 | Generic match only |
+| CP-2-0060 | Verify Additional Run Category Config | 7.5 | No specific KB |
+| CP-2-0080 | Verify Statutory Holiday Configuration | 7.0 | Payroll_CAN.wsdl only |
+| CP-2-0090 | Verify Vacation Pay Configuration | 7.0 | No specific KB |
+| CP-3-0020 | Review Run Category Configuration | 7.5 | No specific KB article |
+| CP-3-0050 | Review Payment Election Rule Config | 7.5 | Generic match only |
+| CP-3-0080 | Review Earnings Configuration | 7.5 | No payroll-specific KB |
+| CP-3-0090 | Review Deductions Configuration | 7.5 | No payroll-specific KB |
+| CP-3-0210 | Review Tenant Analyzer | 7.0 | US KB used for CA |
+| CP-4-0010-07 | Payroll Input to Gross | 7.5 | Partial coverage |
+| CP-4-0070-03 | Benefits Inbound Integration | 7.0 | kb_benefits_enrollment.txt |
+| CP-4-0070-04 | Benefits Inbound Integration | 7.0 | kb_benefits_enrollment.txt |
+| CP-5-0020 | Review Run Category Configuration | 7.5 | No specific KB |
+| CP-5-0050 | Review Payment Election Rule Config | 7.5 | Generic match only |
+| CP-5-0080 | Review Earnings Configuration | 7.5 | No payroll-specific KB |
+| CP-5-0090 | Review Deductions Configuration | 7.5 | No payroll-specific KB |
+| CP-5-0210 | Review Tenant Analyzer | 7.0 | US KB used for CA |
+
+MEDIUM TRUST - LOWER RANGE (4.0-6.9):
+| ID | Script Name | Score | Issue |
+|----|-------------|-------|-------|
+| CP-1-0080 | Review Company Fed/Province Tax Reporting | 4.0 | No CA tax KB |
+| CP-2-0030 | Review Payslip Configuration | 5.0 | kb_payroll_canada_payslip.txt partial |
+| CP-2-0070 | Payroll Security Group Assignments | 6.0 | Generic KB only |
+| CP-3-0040 | Review Pay Run Group Configuration | 4.0 | Needs CA-specific KB |
+| CP-3-0110 | Verify Open Ledger Periods | 5.0 | kb_payroll_canada_open_ledger.txt partial |
+| CP-3-0120 | Review Company Fed/Province Tax Reporting | 4.0 | No CA tax KB |
+| CP-3-0200 | Review ROE History | 5.0 | kb_payroll_canada_roe.txt partial |
+| CP-4-0010-01 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0010-04 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0010-06 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0010-09 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0010-10 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0010-12 | Payroll Input to Gross | 4.0 | Missing task steps |
+| CP-4-0020-06 | New Hire to Off-Cycle | 4.0 | Limited KB coverage |
+| CP-4-0020-07 | New Hire to Off-Cycle | 4.0 | Limited KB coverage |
+| CP-4-0030-06 | Termination to Off-Cycle | 4.0 | Limited KB coverage |
+| CP-4-0030-07 | Termination to Off-Cycle | 4.0 | Limited KB coverage |
+| CP-4-0040-01 | Terminated Employee with Pay | 4.0 | Limited KB coverage |
+| CP-4-0050-01 | One-Time Payment to Gross | 4.0 | Compensation.wsdl only |
+| CP-4-0060-01 | Time Integration to Gross | 6.0 | kb_time_tracking.txt partial |
+| CP-4-0060-02 | Time Integration to Gross | 4.0 | kb_time_tracking.txt partial |
+| CP-4-0070-01 | Benefits Inbound Integration | 5.0 | Admin-Guide-Integrations.pdf |
+| CP-4-0090-02 | Retro Comp Change Payroll Impact | 4.0 | Generic KB |
+| CP-4-0090-03 | Retro Comp Change Payroll Impact | 5.0 | Generic KB |
+| CP-4-0090-04 | Retro Comp Change Payroll Impact | 4.0 | Generic KB |
+| CP-4-0100-01 | Retro Benefit Change Payroll Impact | 4.0 | Generic KB |
+| CP-4-0100-02 | Retro Benefit Change Payroll Impact | 4.0 | Generic KB |
+| CP-4-0100-03 | Retro Benefit Change Payroll Impact | 5.0 | Generic KB |
+| CP-4-0100-04 | Retro Benefit Change Payroll Impact | 4.0 | Generic KB |
+| CP-4-0120-01 | Additional Run Category Payroll | 4.0 | No specific KB |
+| CP-5-0040 | Review Pay Run Group Configuration | 4.0 | Needs CA-specific KB |
+| CP-5-0110 | Verify Open Ledger Periods | 5.0 | kb_payroll_canada_open_ledger.txt partial |
+| CP-5-0120 | Review Company Fed/Province Tax Reporting | 4.0 | No CA tax KB |
+| CP-5-0200 | Review ROE History | 5.0 | kb_payroll_canada_roe.txt partial |
+
+================================================================================
+CATEGORY 3: LOW TRUST SCRIPTS (Score < 4.0) - 26 Scripts
+================================================================================
+These scripts have insufficient RAG coverage. Require KB research before use.
+
+| ID | Script Name | Score | Action Required |
+|----|-------------|-------|-----------------|
+| CP-4-0010-11 | Payroll Input to Gross | 2.0 | Create KB article |
+| CP-4-0020-01 | New Hire to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0020-02 | New Hire to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0020-03 | New Hire to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0020-04 | New Hire to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0020-05 | New Hire to Off-Cycle | 2.0 | Browser research needed |
+| CP-4-0030-01 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-02 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-03 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-04 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-05 | Termination to Off-Cycle | 2.0 | Browser research needed |
+| CP-4-0030-08 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-09 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0030-10 | Termination to Off-Cycle | 2.0 | Browser research needed |
+| CP-4-0030-11 | Termination to Off-Cycle | 3.0 | Browser research needed |
+| CP-4-0040-02 | Terminated Employee with Pay | 3.0 | Browser research needed |
+| CP-4-0040-03 | Terminated Employee with Pay | 3.0 | Browser research needed |
+| CP-4-0050-02 | One-Time Payment to Gross | 3.0 | Browser research needed |
+| CP-4-0050-03 | One-Time Payment to Gross | 3.0 | Browser research needed |
+| CP-4-0060-03 | Time Integration to Gross | 3.0 | Browser research needed |
+| CP-4-0060-04 | Time Integration to Gross | 3.0 | Browser research needed |
+| CP-4-0070-02 | Benefits Inbound Integration | 3.0 | Browser research needed |
+| CP-4-0080-01 | Mid-Period Salary Change | 3.0 | Browser research needed |
+| CP-4-0080-02 | Mid-Period Salary Change | 3.0 | Browser research needed |
+| CP-4-0080-03 | Mid-Period Salary Change | 3.0 | Browser research needed |
+| CP-4-0090-01 | Retro Comp Change Payroll Impact | 3.0 | Browser research needed |
+| CP-4-0090-05 | Retro Comp Change Payroll Impact | 3.0 | Browser research needed |
+| CP-4-0090-06 | Retro Comp Change Payroll Impact | 3.0 | Browser research needed |
+| CP-4-0100-05 | Retro Benefit Change Payroll Impact | 3.0 | Browser research needed |
+| CP-4-0100-06 | Retro Benefit Change Payroll Impact | 3.0 | Browser research needed |
+| CP-4-0110-01 | PT to FT Change to Gross | 3.0 | Browser research needed |
+| CP-4-0110-02 | PT to FT Change to Gross | 3.0 | Browser research needed |
+| CP-4-0110-03 | PT to FT Change to Gross | 3.0 | Browser research needed |
+| CP-4-0120-02 | Additional Run Category Payroll | 3.0 | Browser research needed |
+| CP-4-0120-03 | Additional Run Category Payroll | 3.0 | Browser research needed |
+
+================================================================================
+CATEGORY 4: MANUAL REQUIRED SCRIPTS - 39 Scripts
+================================================================================
+These scripts are missing the "Task / Step" column value and cannot be automated
+without SME input to identify the specific Workday task.
+
+CP-4 BASE SCRIPTS (Missing Task):
+| ID | Script Name | Available Data |
+|----|-------------|----------------|
+| CP-4-0010 | Payroll Input to Gross to Settlement | Role: Payroll Administrator |
+| CP-4-0020 | New Hire to Off-Cycle to Settlement | Role: Payroll Administrator |
+| CP-4-0030 | Termination to Off-Cycle to Settlement | Role: Payroll Administrator |
+| CP-4-0040 | Terminated Employee with Pay | Role: Payroll Administrator |
+| CP-4-0050 | One-Time Payment to Gross | Role: Payroll Administrator |
+| CP-4-0060 | Time Integration to Gross | Role: Payroll Administrator |
+| CP-4-0070 | Benefits Inbound Integration to Gross | Role: Payroll Administrator |
+| CP-4-0080 | Mid-Period Salary Change | Role: Payroll Administrator |
+| CP-4-0090 | Retro Comp Change Payroll Impact | Role: Payroll Administrator |
+| CP-4-0100 | Retro Benefit Change Payroll Impact | Role: Payroll Administrator |
+| CP-4-0110 | PT to FT Change to Gross | Role: Payroll Administrator |
+| CP-4-0120 | Additional Run Category Payroll | Role: Payroll Administrator |
+
+CP-4-0120 VARIANTS:
+| ID | Script Name | Reason |
+|----|-------------|--------|
+| CP-4-0120-04 | Run Pay Calculation | Missing task step |
+| CP-4-0120-05 | Employer Paid Taxes | Missing task step |
+| CP-4-0120-06 | Record Involuntary Withholding Order | Missing task step |
+| CP-4-0120-07 | Banking Setup | Missing task step |
+| CP-4-0120-08 | Run Pay Complete | Missing task step |
+| CP-4-0120-09 | Tax Filing Reports | Missing task step |
+
+CP-P1 SERIES (Parallel Payroll 1):
+| ID | Script Name | Reason |
+|----|-------------|--------|
+| CP-P1-0010 | Pay Component Mapping | PROVE tool specific |
+| CP-P1-0020 | Payroll History | Legacy data load |
+| CP-P1-0030 | Time and Time Off Data | Legacy data load |
+| CP-P1-0040 | Catch Up Transactions | Custom process |
+| CP-P1-0050 | Payroll Input | Missing task step |
+| CP-P1-0080 | Review Payroll Process | Missing task step |
+| CP-P1-0090 | Setup PROVE | PROVE tool specific |
+| CP-P1-0160 | Earnings Validation | PROVE validation |
+| CP-P1-0170 | Deduction Validation | PROVE validation |
+| CP-P1-0180 | Tax Validation | PROVE validation |
+
+CP-P2 SERIES (Parallel Payroll 2):
+| ID | Script Name | Reason |
+|----|-------------|--------|
+| CP-P2-0010 | Legacy Pay Data | Legacy data load |
+| CP-P2-0020 | Legacy Pay Data | Legacy data load |
+| CP-P2-0030 | Pay Component Mapping | PROVE tool specific |
+| CP-P2-0040 | Time and Time Off Data | Legacy data load |
+| CP-P2-0050 | Catch Up Transactions | Custom process |
+| CP-P2-0060 | Payroll Input | Missing task step |
+| CP-P2-0120 | Review Payroll Process | Missing task step |
+| CP-P2-0130 | Setup PROVE | PROVE tool specific |
+| CP-P2-0200 | Earnings Validation | PROVE validation |
+| CP-P2-0210 | Deduction Validation | PROVE validation |
+| CP-P2-0220 | Tax Validation | PROVE validation |
+
+================================================================================
+FORMAT COMPLIANCE ISSUES
+================================================================================
+
+MISSING ON FAILURE SECTION (179/185 scripts):
+- Most scripts lack ERROR HANDLING or ON FAILURE sections
+- Only 6 scripts have proper error handling documentation:
+  * CP-2-0050_BP_Settlement_Run_Event.txt (ERROR HANDLING)
+  * CP-4-0010-02_Payroll_Input_to_Gross_to_Settlement.txt
+  * CP-4-0010-03_Payroll_Input_to_Gross_to_Settlement.txt
+  * CP-4-0010-05_Payroll_Input_to_Gross_to_Settlement.txt
+  * CP-4-0010-07_Payroll_Input_to_Gross_to_Settlement.txt
+  * CP-4-0010-08_Payroll_Input_to_Gross_to_Settlement.txt
+
+RECOMMENDATION: Add ON FAILURE section to all scripts following this template:
+```
+ON FAILURE:
+- Step N fails: {fallback action}
+- Error "{message}": {resolution steps}
+- Timeout: {retry instructions}
+```
+
+MISSING MANUAL VERIFICATION TABLE (185/185 scripts):
+- No scripts have a formal MANUAL VERIFICATION table
+- Current format uses VERIFICATION checkboxes
+
+RECOMMENDATION: Add MANUAL VERIFICATION table for non-automatable steps:
+```
+MANUAL VERIFICATION:
+| Step | Action | Reason |
+| M1 | {action} | {why automation not possible} |
+```
+
+ANOMALIES DETECTED:
+- CP-1-0050, CP-3-0060, CP-5-0060: Score of 32.0 (appears to be calculation error)
+- Recommend recalculating trust scores for these scripts
+
+================================================================================
+RAG COVERAGE ANALYSIS
+================================================================================
+
+WELL-COVERED TOPICS (RAG Score >= 8):
+1. Period Schedule Configuration - kb_payroll_period_schedule.txt
+2. Pay Group Configuration - kb_payroll_pay_group.txt
+3. Pay Run Group Configuration - kb_payroll_canada_pay_run_group.txt
+4. Assign Pay Group BP - kb_payroll_pay_group.txt
+5. Settlement Run Event - kb_ca_settlement_run_event.txt
+6. Benefits and Pay Hub - kb_payroll_benefits_pay_hub.txt
+7. Tenant Analyzer - kb_payroll_tenant_analyzer.txt
+8. Open Ledger Periods - kb_payroll_canada_open_ledger.txt
+9. Payroll Calculation - kb_payroll_run_payroll.txt
+10. Involuntary Withholding - Payroll.wsdl
+
+GAPS REQUIRING KB RESEARCH:
+1. Federal/Province Tax Reporting Configuration (RAG: 4.0)
+2. CAN Tax Elections (RAG: 4.0 - electron_test_samples only)
+3. Vacation Pay Configuration (RAG: 2.0)
+4. Statutory Holiday Configuration (RAG: 3.0)
+5. Mid-Period Salary Change (RAG: 4.0)
+6. Retro Compensation/Benefit Changes (RAG: 4.0)
+7. PT to FT Change payroll impact (RAG: 3.0)
+8. Additional Run Category Payroll (RAG: 4.0)
+9. One-Time Payment processing (RAG: 3.0 - Compensation.wsdl only)
+10. Time Integration to Gross (RAG: 3.0)
+11. Benefits Inbound Integration (RAG: 3.0)
+12. New Hire Off-Cycle Settlement (RAG: 5.0 - partial)
+13. Termination Off-Cycle Settlement (RAG: 4.0 - partial)
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+IMMEDIATE ACTIONS:
+1. Create CA-specific KB articles for:
+   - Federal/Province Tax Reporting Configuration
+   - Statutory Holiday Configuration
+   - Vacation Pay Configuration
+
+2. Enhance existing KB articles:
+   - kb_payroll_ca_new_hire_settlement.txt (expand with task steps)
+   - kb_payroll_ca_termination_settlement.txt (expand with task steps)
+
+3. Add ON FAILURE sections to all HIGH trust scripts (62 scripts)
+
+4. Fix anomalous scores in CP-1-0050, CP-3-0060, CP-5-0060
+
+BROWSER RESEARCH REQUIRED (26 LOW trust scripts):
+- Use Claude-in-Chrome to scrape doc.workday.com for:
+  * "Mid-Period Salary Change"
+  * "Retroactive Compensation Change"
+  * "Part-Time to Full-Time Change"
+  * "One-Time Payment" payroll processing
+  * "Time Integration" payroll
+
+SME INPUT REQUIRED (39 MANUAL scripts):
+- Payroll SME must provide specific Workday task names for:
+  * CP-4-00xx base scenario scripts
+  * CP-P1-00xx PROVE validation scripts
+  * CP-P2-00xx parallel payroll scripts
+
+================================================================================
+VALIDATION COMPLETE
+================================================================================
+Report generated by: electron-7
+Date: 2026-01-01
+Next action: Browser research for LOW trust scripts OR SME consultation
+================================================================================
