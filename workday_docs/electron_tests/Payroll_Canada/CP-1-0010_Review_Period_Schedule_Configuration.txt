@@ -24,20 +24,20 @@ ELECTRON STEPS:
 2. wait for search results
 3. click search result containing "View Period Schedule"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-   GET /values/enterTimeByType/timeTypeNested/ -
-6. screenshot as "CP-1-0010_complete.png"
+5. verify period schedule list is displayed
+6. verify column "Period Start Date" is visible
+7. verify column "Period End Date" is visible
+8. verify column "Payment Date" is visible
+9. review forward accrual settings for each schedule
+10. verify Absence/Time Tracking linkages
+11. screenshot as "CP-1-0010_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] All expected period schedules are present
+- [ ] Period dates (start, end, payment) are correct
+- [ ] Forward accrual settings match requirements
+- [ ] Absence/Time Tracking linkages verified
+- [ ] Correct number of periods per year
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -47,16 +47,31 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: View Period Schedule
 
-### 1. Electron Test Samples (score: 8)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task name "Maintain Period Schedules" or "View All Period Schedules"
+- Step 4 fails: Wait additional 5 seconds for page load; check for system maintenance alerts
+- Step 5 fails: Verify user has Payroll Administrator permissions; check security group assignments
 
-This file contains 5 sample El...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Period Schedule Configuration review completes successfully
+- All expected period schedules are visible in tenant
+- Period dates (start, end, payment) are verified correct
+- Forward accrual settings match requirements
+- Absence/Time Tracking linkages confirmed
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Cross-reference period schedules with legacy system | Data migration validation requires source comparison |
+| M2 | Verify period count per year matches business requirements | Business rule validation not automatable |
+| M3 | Confirm forward accrual settings with payroll SME | Requires domain expertise verification |
 ================================================================================
