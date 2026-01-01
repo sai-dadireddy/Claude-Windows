@@ -47,3 +47,29 @@ December 10, 2025
 Contents
 Spend Management............
 ================================================================================
+
+================================================================================
+ON FAILURE:
+================================================================================
+- Step 1-3 fails (search not found): Try alternate search terms for "Consignment Setup / Transaction Test"
+- Navigation error: Clear browser cache and retry
+- Permission denied: Verify user has appropriate Inventory domain access
+- Page timeout: Increase wait time and retry
+
+================================================================================
+EXPECTED OUTCOME:
+================================================================================
+- Consignment Setup / Transaction Test task completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+================================================================================
+MANUAL VERIFICATION:
+================================================================================
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data accuracy | Business validation required |
+| M2 | Confirm configuration matches requirements | Business logic validation |
+
+================================================================================

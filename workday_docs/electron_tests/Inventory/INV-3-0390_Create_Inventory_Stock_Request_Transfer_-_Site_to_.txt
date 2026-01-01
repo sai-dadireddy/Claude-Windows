@@ -26,7 +26,7 @@ Order Type = Transfer Request
 3. submit form
 4. screenshot as "INV-3-0390_complete.png"
 
-VERIFICATION: nan
+VERIFICATION: N/A
 
 ================================================================================
 RAG RESPONSE SUMMARY:
@@ -44,4 +44,30 @@ Source: Resource_Management.wsdl
 ```
 WSDL: Resource_Management
 Description: The Resource Management  Web Service contains operations that expose Workday Financials Res...
+================================================================================
+
+================================================================================
+ON FAILURE:
+================================================================================
+- Step 1-3 fails (search not found): Try alternate search terms for "Create Inventory Stock Request Transfer - Site to Site"
+- Navigation error: Clear browser cache and retry
+- Permission denied: Verify user has appropriate Inventory domain access
+- Page timeout: Increase wait time and retry
+
+================================================================================
+EXPECTED OUTCOME:
+================================================================================
+- Create Inventory Stock Request Transfer - Site to Site task completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+================================================================================
+MANUAL VERIFICATION:
+================================================================================
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data accuracy | Business validation required |
+| M2 | Confirm configuration matches requirements | Business logic validation |
+
 ================================================================================

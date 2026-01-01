@@ -14,7 +14,7 @@ Process will depend on your Requisition Event BP"
 2. submit form
 3. screenshot as "INV-3-0930_complete.png"
 
-VERIFICATION: nan
+VERIFICATION: N/A
 
 ================================================================================
 RAG RESPONSE SUMMARY:
@@ -29,4 +29,30 @@ Source: Resource_Management.wsdl
 ```
 WSDL: Resource_Management
 Description: The Resource Management  Web Service contains operations that expose Workday Financials Resource Management data. It includes data relative to Suppl...
+================================================================================
+
+================================================================================
+ON FAILURE:
+================================================================================
+- Step 1-3 fails (search not found): Try alternate search terms for "Create Requisition"
+- Navigation error: Clear browser cache and retry
+- Permission denied: Verify user has appropriate Inventory domain access
+- Page timeout: Increase wait time and retry
+
+================================================================================
+EXPECTED OUTCOME:
+================================================================================
+- Create Requisition task completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+================================================================================
+MANUAL VERIFICATION:
+================================================================================
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data accuracy | Business validation required |
+| M2 | Confirm configuration matches requirements | Business logic validation |
+
 ================================================================================

@@ -7,9 +7,9 @@ SOURCE: [RAG Enhanced]
 ================================================================================
 
 DESCRIPTION:
+Verify and validate Inventory Adjustment Reasons configuration in Workday Inventory module.
 
-
-WORKDAY ROLE: 
+WORKDAY ROLE: Inventory Manager / Supply Chain Administrator
 
 ELECTRON STEPS:
 1. enter search box as "Run report"

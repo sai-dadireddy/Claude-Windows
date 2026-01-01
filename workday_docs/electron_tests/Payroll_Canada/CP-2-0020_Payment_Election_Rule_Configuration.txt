@@ -20,22 +20,27 @@ PREREQUISITES:
 - Access to CA payroll data
 
 ELECTRON STEPS:
-1. enter search box as "Configure Payment Election Rule"
+1. enter search box as "Maintain Payment Elections for Worker"
 2. wait for search results
-3. click search result containing "Configure Payment Election Rule"
+3. click search result containing "Maintain Payment Elections for Worker"
 4. wait for page to load
-5. verify payment election rules table
-6. verify column "Rule Name" is visible
-7. verify column "Payment Type" is visible
-8. verify default payment methods configured
-9. verify bank account validation rules
-10. screenshot as "CP-2-0020_complete.png"
+5. select test employee
+6. create new bank account if needed
+7. enter payment election
+8. verify allowed payment types
+9. verify default payment type applied
+10. test maximum number of elections
+11. test mix of payment types
+12. test distribution options
+13. save payment elections
+14. screenshot as "CP-2-0020_complete.png"
 
 VERIFICATION:
-- [ ] Payment election rules configured
-- [ ] Default payment methods set
-- [ ] Bank account validation active
-- [ ] Payment types defined (ACH, check, wire, etc.)
+- [ ] Payment elections entered successfully
+- [ ] Allowed payment types enforced
+- [ ] Default payment type works
+- [ ] Maximum elections enforced
+- [ ] Distribution options working
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -45,19 +50,35 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Maintain Payment Elections for Worker
 
-### 1. Test Scenarios Index (score: 5)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Maintain Payment Election Rules" or "View Payment Election Rules"
+- Step 4 fails: Wait additional 5 seconds for page load
+- Step 6 fails: Bank account creation may require additional permissions
+- Step 10 fails: Maximum elections limit may vary by rule configuration
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Payment Election Rule Configuration test completes successfully
+- Payment elections entered on behalf of employee successfully
+- Bank accounts created as needed
+- Payment elections modified successfully
+- Allowed payment types verified correct
+- Default payment type functions as expected
+- Maximum number of elections enforced correctly
+- Mix of payment types and distribution options work as configured
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizatio...
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify payment type restrictions with treasury/finance | Banking compliance requires business approval |
+| M2 | Test distribution options with various scenarios | Edge case testing requires manual input |
+| M3 | Confirm bank account validation rules work correctly | Validation testing requires sample bank data |
 ================================================================================

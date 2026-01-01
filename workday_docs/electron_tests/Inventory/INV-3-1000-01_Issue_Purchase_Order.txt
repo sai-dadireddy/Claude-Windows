@@ -32,7 +32,7 @@ Expand Details and Process - Note POA ID
 ### 1" with appropriate value
 3. screenshot as "INV-3-1000-01_complete.png"
 
-VERIFICATION: nan
+VERIFICATION: N/A
 
 ================================================================================
 RAG RESPONSE SUMMARY:
@@ -57,4 +57,30 @@ Product Summary
 December 18, 2025
  | Contents | ii
 C...
+================================================================================
+
+================================================================================
+ON FAILURE:
+================================================================================
+- Step 1-3 fails (search not found): Try alternate search terms for "Issue Purchase Order"
+- Navigation error: Clear browser cache and retry
+- Permission denied: Verify user has appropriate Inventory domain access
+- Page timeout: Increase wait time and retry
+
+================================================================================
+EXPECTED OUTCOME:
+================================================================================
+- Issue Purchase Order task completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+================================================================================
+MANUAL VERIFICATION:
+================================================================================
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data accuracy | Business validation required |
+| M2 | Confirm configuration matches requirements | Business logic validation |
+
 ================================================================================

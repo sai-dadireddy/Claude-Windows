@@ -24,20 +24,21 @@ ELECTRON STEPS:
 2. wait for search results
 3. click search result containing "Assign Pay Group"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Workday Community AI-Generated Answer
-   - Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-   - URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-   - Release: 2025R1
-   - ...
-   - Get_Payroll_Results: Return Payroll Results for selected Workers, Companies, Pay Calculations for specifie...
-6. screenshot as "CP-2-0010_complete.png"
+5. select test employee
+6. verify pay group is auto-inferred
+7. verify Auto Assignment Rule applied correctly
+8. submit task
+9. verify business process steps triggered
+10. proxy as approver if needed
+11. complete approval steps
+12. verify pay group assignment saved
+13. screenshot as "CP-2-0010_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Pay group auto-inferred correctly
+- [ ] Auto Assignment Rules working
+- [ ] Business process approvals triggered
+- [ ] Pay group assignment saved
 
 API ALTERNATIVE:
 - SOAP: Get_Payroll_Results
@@ -47,16 +48,33 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Assign Pay Group
 
-### 1. Kb Hcm Hire Employee (score: 8)
-Source: kb_hcm_hire_employee.txt
-```
-# Workday Hire Employee Business Process - Knowledge Base
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Change Pay Group" or "Maintain Pay Group Assignment"
+- Step 4 fails: Wait additional 5 seconds for page load; select employee first if prompted
+- Step 6 fails: Verify Pay Group Automatic Assignment rules are configured in tenant
+- General: Test for each Pay Group Automatic Assignment Rule; proxy as other roles as needed
 
-## Source
-- Workday Community AI-Generated Answer
-- Documentation: Hire Employee Task Redesign & Consolidated Hire Business Process with Compensation
-- URL: https://doc.workday.com/release-notes/en-us/hrcore/8768925.html
-- Release: 2025R1...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Assign Pay Group business process completes successfully
+- Pay group is automatically inferred based on Auto Assignment rules
+- Business process steps (approvals) trigger as expected
+- Proxy functionality works for completing all approval steps
+- Process tested for each Pay Group Automatic Assignment Rule
+- Employee pay group assignment is correctly saved
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify auto-assignment rules with HR/Payroll SME | Business rules require domain expertise confirmation |
+| M2 | Test approval routing with actual approvers | Workflow testing requires real user participation |
+| M3 | Confirm proxy functionality meets security requirements | Security validation requires IT/HR approval |
 ================================================================================

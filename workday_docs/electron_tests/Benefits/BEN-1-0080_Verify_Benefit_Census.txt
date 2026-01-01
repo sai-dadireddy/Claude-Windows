@@ -28,6 +28,39 @@ VERIFICATION:
 - [ ] All active enrollments are included
 - [ ] Dependent counts match actual enrollments
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Census report may require date parameters; add effective date
+- Step 7 fails: Column names may vary by tenant configuration
+- Step 8 fails: Large dataset may take time to load; increase wait time
+- General failure: Verify census report is configured for tenant
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Benefit Census report displays successfully
+- All enrolled employees are listed with:
+  - Employee name and ID
+  - Plan name (Medical, Dental, Vision, etc.)
+  - Coverage level (Employee Only, Employee+Spouse, Family)
+  - Number of dependents covered
+  - Employee cost per period
+- Data can be exported for carrier file transmission
+- Census supports annual benefit audit requirements
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Reconcile census to carrier enrollment file | Validate data matches carrier records |
+| M2 | Verify dependent counts for sample employees | Confirm family coverage is accurate |
+| M3 | Check terminated employees are excluded | Ensure census reflects active population only |
+
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands

@@ -45,16 +45,34 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: No delivered report exists - needs to be added to dapzulu
 
-### 1. User Guide Workday Prism Analytics (score: 9)
-Source: User-Guide-Workday-Prism-Analytics.pdf
-```
-Workday Prism Analytics
-Product Summary
-December 10, 2025
-This content is not part of the Workday Administrator Guide and is subject to further change.
- | Contents | ii
-Contents
-Set Up Languages in Prism Analytics..................
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "View Pay Group Assignments" or "Employee Pay Groups"
+- Step 4 fails: Wait additional 5 seconds for page load; assignment list may be large
+- Step 5 fails: Filter by company or employment status if results are too large
+- General: Include current year terminations in the review scope
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Pay Group Assignments review completes successfully
+- All active CAN employees are assigned to a pay group
+- Current year terminations are assigned to pay groups
+- Assignment effective dates are verified correct
+- No duplicate pay group assignments exist
+- Pay group assignments match job data
+- No unassigned employees remain
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify pay group assignments with HR for job changes | Job data alignment requires HR confirmation |
+| M2 | Confirm terminated employees have correct final pay group | Termination scenarios require business judgment |
+| M3 | Cross-reference with legacy pay group data | Migration validation requires source comparison |
 ================================================================================

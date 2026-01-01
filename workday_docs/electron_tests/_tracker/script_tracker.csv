@@ -1444,3 +1444,218 @@ HCM-5-0540_Academic_Faculty_Review_Named_Professorship_Status.txt,HCM,Academic F
 HCM-5-0550_Academic_Faculty_Review_Named_Professorship_Gifts.txt,HCM,Academic Faculty Review Named Professorship Gifts,4.0,5.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-2
 HCM-5-0560_Academic_Faculty_Review_Period_Activity_Categories.txt,HCM,Academic Faculty Review Period Activity Categories,3.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-2
 HCM-5-0570_Academic_Faculty_Review_Period_Activity_Tasks.txt,HCM,Academic Faculty Review Period Activity Tasks,8.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-2
+INV-1-0010_Inventory_Site.txt,Inventory,Inventory Site,7.5,8.0,enhanced,FIX_NAN,2026-01-01,enhance-7
+INV-1-0020_Stocking_Locations.txt,Inventory,Stocking Locations,7.5,8.0,enhanced,FIX_NAN,2026-01-01,enhance-7
+INV-1-0030_Inventory_Location_Usage_Type.txt,Inventory,Inventory Location Usage Type,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0040_Purchase_Items.txt,Inventory,Purchase Items,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0050_Item_Identifier_Types.txt,Inventory,Item Identifier Types,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0060_Unit_of_Measure_Sets.txt,Inventory,Unit of Measure Sets,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0070_Inventory_Adjustment_Reasons.txt,Inventory,Inventory Adjustment Reasons,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0080_Inventory_Put-Away_Rules.txt,Inventory,Inventory Put-Away Rules,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0090_Inventory_ABC_Classification.txt,Inventory,Inventory ABC Classification,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0100_Confirm_Company_Procurement_Options.txt,Inventory,Confirm Company Procurement Options,5.0,5.5,enhanced,DESCRIPTION;WORKDAY ROLE,2026-01-01,enhance-7
+INV-1-0110_Review_Spend_Categories.txt,Inventory,Review Spend Categories,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0120_Review_Units_of_Measure.txt,Inventory,Review Units of Measure,9.0,9.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0130_Requisition_Types.txt,Inventory,Requisition Types,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0140_User_Based_Inventory_Roles.txt,Inventory,User Based Inventory Roles,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0150_Role-Based_Inventory_Roles.txt,Inventory,Role-Based Inventory Roles,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0160_Confirm_Inventory_Posting_Rules.txt,Inventory,Confirm Inventory Posting Rules,6.0,6.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0170_Confirm_Shipping_Information.txt,Inventory,Confirm Shipping Information,4.0,4.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0180_Confirm_Custom_Validations.txt,Inventory,Confirm Custom Validations,4.0,4.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0190_Confirm_Worktag_Usages.txt,Inventory,Confirm Worktag Usages,4.0,4.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0200_Confirm_Related_worktag_usages.txt,Inventory,Confirm Related worktag usages,5.0,5.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0210_Create_Ad_Hoc_Putaway.txt,Inventory,Create Ad Hoc Putaway,1.0,1.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0220_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0230_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0240_Inventory_Adjustment.txt,Inventory,Inventory Adjustment,6.0,6.5,enhanced,DESCRIPTION;WORKDAY ROLE;FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0250_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,7.0,7.5,enhanced,DESCRIPTION;WORKDAY ROLE;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0260_Inventory_Adjustment.txt,Inventory,Inventory Adjustment,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0270_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0280_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0290_Create_Ad_Hoc_Inventory_Count.txt,Inventory,Create Ad Hoc Inventory Count,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0300_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0310_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0320_Inventory_Count.txt,Inventory,Inventory Count,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0330_Find_Inventory_Count_Sheet.txt,Inventory,Find Inventory Count Sheet,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0340_Count_Inventory.txt,Inventory,Count Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0350_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0360_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0370_Adjust_Average_Cost_of_an_Inventoried_Item.txt,Inventory,Adjust Average Cost of an Inventoried Item,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0380_View_Business_Process_for_Quick_Issue_Event.txt,Inventory,View Business Process for Quick Issue Event,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0390_Create_a_Quick_Issue.txt,Inventory,Create a Quick Issue,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0400_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-1-0410_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0010_Create_Inventory_Site.txt,Inventory,Create Inventory Site,3.0,3.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0020_Create_Stocking_Locations.txt,Inventory,Create Stocking Locations,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0030_Create_Par_Location.txt,Inventory,Create Par Location,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0040_Create_Purchase_Item.txt,Inventory,Create Purchase Item,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0050_Create_a_Requisition_for_an_Inventory_Items.txt,Inventory,Create a Requisition for an Inventory Item(s),7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0060_Approve_Requisition.txt,Inventory,Approve Requisition,3.0,3.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0070_Source_Requisition_to_Purchase_Order.txt,Inventory,Source Requisition to Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0080_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0090_Create_Receipt.txt,Inventory,Create Receipt,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0100_Put-Away_Inventory.txt,Inventory,Put-Away Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0110_View_Business_Process_for_Inventory_Stock_Request_.txt,Inventory,View Business Process for Inventory Stock Request Event,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0120_Create_Inventory_Stock_Request.txt,Inventory,Create Inventory Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0130_View_Business_Process_for_Inventory_Pick_List_Even.txt,Inventory,View Business Process for Inventory Pick List Event,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0140_Create_Inventory_Picking_Lists.txt,Inventory,Create Inventory Picking Lists,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0150_Move_Inventory.txt,Inventory,Move Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-2-0160_Change_Item_Spend_Category.txt,Inventory,Change Item Spend Category,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0010_Inventory_Site.txt,Inventory,Inventory Site,3.0,3.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0020_Stocking_Locations.txt,Inventory,Stocking Locations,10.0,10.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0030_Inventory_Location_Usage_Type.txt,Inventory,Inventory Location Usage Type,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0040_Purchase_Items.txt,Inventory,Purchase Items,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0050_Item_Identifier_Types.txt,Inventory,Item Identifier Types,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0060_Unit_of_Measure_Sets.txt,Inventory,Unit of Measure Sets,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0070_Inventory_Adjustment_Reasons.txt,Inventory,Inventory Adjustment Reasons,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0080_Inventory_Put-Away_Rules.txt,Inventory,Inventory Put-Away Rules,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0090_Inventory_ABC_Classification.txt,Inventory,Inventory ABC Classification,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0100_Confirm_Company_Procurement_Options.txt,Inventory,Confirm Company Procurement Options,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0110_Review_Spend_Categories.txt,Inventory,Review Spend Categories,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0120_Review_Units_of_Measure.txt,Inventory,Review Units of Measure,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0130_Requisition_Types.txt,Inventory,Requisition Types,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0140_User_Based_Inventory_Roles.txt,Inventory,User Based Inventory Roles,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0150_Role-Based_Inventory_Roles.txt,Inventory,Role-Based Inventory Roles,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0160_Confirm_Inventory_Posting_Rules.txt,Inventory,Confirm Inventory Posting Rules,8.5,9.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0170_Confirm_Shipping_Information.txt,Inventory,Confirm Shipping Information,8.5,9.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0180_Confirm_Custom_Validations.txt,Inventory,Confirm Custom Validations,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0190_Confirm_Worktag_Usages.txt,Inventory,Confirm Worktag Usages,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0200_Confirm_Related_worktag_usages.txt,Inventory,Confirm Related worktag usages,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0210_Replenish_Inventory.txt,Inventory,Replenish Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0220_Find_Requisition.txt,Inventory,Find Requisition,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0230_Find_Purchase_Order.txt,Inventory,Find Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0240_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0250_Receive_Purchase_Order.txt,Inventory,Receive Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0260_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0270_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0280_Create_Inventory_Stock_Request_to_request_goods_fr.txt,Inventory,Create Inventory Stock Request to request goods from Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0290_Find_Inventory_Pick_List.txt,Inventory,Find Inventory Pick List,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0300_Inventory_Shipment.txt,Inventory,Inventory Shipment,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0310_Capture_Good_Delivery_for_Stock_Request.txt,Inventory,Capture Good Delivery for Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0320_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0330_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0340_Create_Inventory_Return.txt,Inventory,Create Inventory Return,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0350_Adjust_Inventory_For_Return_Order.txt,Inventory,Adjust Inventory For Return Order,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0360_Putaway_Inventory.txt,Inventory,Putaway Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0370_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0380_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0390_Create_Inventory_Stock_Request_Transfer_-_Site_to_.txt,Inventory,Create Inventory Stock Request Transfer - Site to Site,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0400_Find_Stock_Request_to_Pick_Inventory.txt,Inventory,Find Stock Request to Pick Inventory,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0410_Inventory_Putaway.txt,Inventory,Inventory Putaway,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0420_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0430_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0440_Create_Par_Count_for_Kanban_Par_Location.txt,Inventory,Create Par Count for Kanban Par Location,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0450_Find_Inventory_Stock_Request.txt,Inventory,Find Inventory Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0460_Pick_Inventory.txt,Inventory,Pick Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0470_Create_Inventory_Shipment.txt,Inventory,Create Inventory Shipment,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0480_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0490_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0500_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0510_Find_Requisition.txt,Inventory,Find Requisition,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0520_Find_Purchase_Order.txt,Inventory,Find Purchase Order,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0530_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0540_Create_Receipt.txt,Inventory,Create Receipt,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0550_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0560_Create_Par_Count_for_Par_Location.txt,Inventory,Create Par Count for Par Location,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0570_Find_Inventory_Stock_Request.txt,Inventory,Find Inventory Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0580_Pick_Inventory.txt,Inventory,Pick Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0590_Inventory_Shipment.txt,Inventory,Inventory Shipment,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0600_Capture_Good_Delivery_for_Stock_Request.txt,Inventory,Capture Good Delivery for Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0610_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0620_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0630_Find_Requisitions.txt,Inventory,Find Requisitions,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0640_Find_Requisition.txt,Inventory,Find Requisition,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0650_Find_Purchase_Orders.txt,Inventory,Find Purchase Orders,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0660_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0670_Create_Receipt.txt,Inventory,Create Receipt,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0680_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0690_Find_Requisition.txt,Inventory,Find Requisition,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0700_Find_Purchase_Order.txt,Inventory,Find Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0710_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0720_Create_Receipt.txt,Inventory,Create Receipt,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0730_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0740_Create_Requisition.txt,Inventory,Create Requisition,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0750_Find_Purchase_Order.txt,Inventory,Find Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0760_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0770_Create_Receipt.txt,Inventory,Create Receipt,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0780_Click_Inventory_Tab.txt,Inventory,Click Inventory Tab,2.0,2.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0790_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0800_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0810_Create_Requisition.txt,Inventory,Create Requisition,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0820_Create_Requisition.txt,Inventory,Create Requisition,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0830_Fulfill_Stock_Item_from_Requisition.txt,Inventory,Fulfill Stock Item from Requisition,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0840_Pick_Inventory.txt,Inventory,Pick Inventory,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0850_Ship_Inventory.txt,Inventory,Ship Inventory,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0860_Capture_Good_Delivery_for_Stock_Request.txt,Inventory,Capture Good Delivery for Stock Request,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0870_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0880_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0890_Find_Purchase_Order.txt,Inventory,Find Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0900_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0910_Create_Receipt.txt,Inventory,Create Receipt,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0920_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0930-01_Create_Requisition.txt,Inventory,Create Requisition,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0930_Create_Requisition.txt,Inventory,Create Requisition,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0940_Source_Requisition.txt,Inventory,Source Requisition,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0950_Find_Purchase_Order.txt,Inventory,Find Purchase Order,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0960_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0970_Create_Receipt.txt,Inventory,Create Receipt,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0980_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-0990_Create_Purchase_Order.txt,Inventory,Create Purchase Order,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1000-01_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1000-02_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1000_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1010-01_Find_Receipt.txt,Inventory,Find Receipt,8.5,9.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1010_Find_Receipt.txt,Inventory,Find Receipt,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1020_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1030_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1040_Create_Return.txt,Inventory,Create Return,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1050_Create_Return.txt,Inventory,Create Return,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1060_To_Do_-_Adjust_Inventory_to_ship_goods_back_to_Sup.txt,Inventory,To Do - Adjust Inventory to ship goods back to Supplier,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1070_Find_Inventory_Balance.txt,Inventory,Find Inventory Balance,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1080_Find_Inventory_Transaction.txt,Inventory,Find Inventory Transaction,7.0,7.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1090_Create_Change_Order.txt,Inventory,Create Change Order,2.0,2.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1100_Find_Purchase_Order.txt,Inventory,Find Purchase Order,9.0,9.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1110_Issue_Purchase_Order.txt,Inventory,Issue Purchase Order,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1120_Create_Receipt.txt,Inventory,Create Receipt,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1130_Capture_Goods_Delivery.txt,Inventory,Capture Goods Delivery,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-01_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-02_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-03_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-04_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-05_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-06_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-07_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-08_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-09_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-10_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-11_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-12_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-13_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-14_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,8.5,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-15_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-16_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-17_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,8.5,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-18_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-19_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-20_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-21_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-22_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-23_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-24_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,8.5,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140-25_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,7.5,8.0,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+INV-3-1140_Consignment_Setup__Transaction_Test.txt,Inventory,Consignment Setup / Transaction Test,6.0,6.5,enhanced,FIX_NAN;ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-7
+CP-1-0010_Review_Period_Schedule_Configuration.txt,Payroll_Canada,Period Schedule Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0020_Review_Run_Category_Configuration.txt,Payroll_Canada,Run Category Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0030_Review_Pay_Group_Configuration.txt,Payroll_Canada,Pay Group Configuration,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0040_Review_Payment_Election_Rule_Configuration.txt,Payroll_Canada,Payment Election Rule Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0050_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Payroll_Canada,Security Groups Assignments,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0060_Review_Earnings_Configuration.txt,Payroll_Canada,Earnings Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0070_Review_Deductions_Configuration.txt,Payroll_Canada,Deductions Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0080_Review_Company_Federal_and_Province_Tax_Reporting_Configuration.txt,Payroll_Canada,Company Tax Reporting Configuration,4.0,4.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0090_CAN_Tax_Elections_Review.txt,Payroll_Canada,CAN Tax Elections,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0100_Missing_Payment_Elections_Review.txt,Payroll_Canada,Missing Payment Elections,9.0,9.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0110_Payment_Election_Review.txt,Payroll_Canada,Payment Election Review,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0120_Pay_Group_Assignments_Review.txt,Payroll_Canada,Pay Group Assignments,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-1-0130_Review_Tenant_Analyzer.txt,Payroll_Canada,Tenant Analyzer,7.0,7.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0010_BP_Assign_Pay_Group.txt,Payroll_Canada,Assign Pay Group BP,8.0,8.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+CP-2-0020_Payment_Election_Rule_Configuration.txt,Payroll_Canada,Payment Election Rule Configuration,7.5,7.5,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4

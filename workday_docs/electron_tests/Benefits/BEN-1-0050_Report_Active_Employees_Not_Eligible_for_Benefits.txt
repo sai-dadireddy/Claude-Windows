@@ -28,6 +28,37 @@ VERIFICATION:
 - [ ] Reasons for ineligibility are documented
 - [ ] Report can be exported successfully
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Report may have large dataset; increase wait time
+- Step 7-8 fails: If no data, confirm there are ineligible employees in system
+- General failure: Check eligibility rules are properly configured
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Report displays all active employees not eligible for benefits
+- Each employee shows clear reason for ineligibility:
+  - Employee Type (e.g., Part-Time, Contractor)
+  - Hours below threshold (less than 30 hours/week)
+  - Waiting period not yet completed
+  - Job classification exclusion
+- Report can be exported for further analysis
+- Data supports ACA compliance review
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify sample ineligible employees | Confirm reasons match expected criteria |
+| M2 | Check newly hired employees in waiting period | Validate waiting period calculations |
+| M3 | Cross-reference with HR records | Ensure employee status is accurate |
+
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands

@@ -27,8 +27,41 @@ VERIFICATION:
 - [ ] Rule logic is correctly configured
 - [ ] Effective dates are appropriate
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator or Auditor role
+- Step 6 fails: Confirm eligibility rules exist in configuration
+- Step 7 fails: Report columns may vary; verify Rule Name at minimum
+- General failure: Check Maintain Benefit Eligibility Rules for configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Benefit Eligibility Rules Audit report displays successfully
+- All configured eligibility rules are listed:
+  - Employee Type Rules (Full-time, Part-time)
+  - Hours-Based Rules (30+ hours/week)
+  - Job Classification Rules (Exempt, Non-exempt)
+  - Location Rules (Country, State)
+  - Tenure Rules (Years of Service)
+- Rule conditions show logic (equals, greater than, in list)
+- Effective dates indicate when rules became active
+- Associated benefit plans are shown
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Compare rules to HR eligibility policy | Validate configuration matches policy |
+| M2 | Test rule logic with sample employees | Confirm rules evaluate correctly |
+| M3 | Verify ACA compliance (90-day maximum wait) | Ensure waiting periods meet regulations |
+
 NOTES:
-- Enhanced using KB article: kb_benefits_enrollment.txt
+- Enhanced using KB article: kb_benefits_eligibility_rules.txt
 - All steps are valid Electron commands
 - Screenshots use test ID: BEN-1-0090
 - Confidence score: 8.5/10 based on KB coverage

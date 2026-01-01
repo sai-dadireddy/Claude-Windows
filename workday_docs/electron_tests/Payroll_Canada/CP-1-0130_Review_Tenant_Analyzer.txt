@@ -24,19 +24,22 @@ ELECTRON STEPS:
 2. wait for search results
 3. click search result containing "Tenant Analyzer"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-1-0130_complete.png"
+5. select Canada as country filter
+6. run tenant analyzer
+7. navigate to Payroll tabs
+8. review Validations section
+9. review Calculation Exception Audit results
+10. document Critical errors
+11. review Warning items
+12. review Informational items
+13. screenshot as "CP-1-0130_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Tenant Analyzer runs successfully
+- [ ] Payroll tabs reviewed
+- [ ] Critical errors documented
+- [ ] Warning items understood
+- [ ] Informational items reviewed
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -46,19 +49,35 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Tenant Analyzer
 
-### 1. Test Scenarios Index (score: 7)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Run Tenant Analyzer" or "Launch Tenant Analyzer"
+- Step 4 fails: Wait additional 10 seconds; Tenant Analyzer may take longer to load
+- Step 6 fails: Select Canada-specific filters before running analyzer
+- General: Focus on Payroll tabs; consult Payroll consultant for complex issues
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Tenant Analyzer for Canada completes successfully
+- Payroll tabs are reviewed thoroughly
+- Validations section reviewed and understood
+- Calculation Exception Audit results analyzed
+- Critical errors are identified and documented
+- Warning items are reviewed and understood
+- Informational items are reviewed for awareness
+- Payroll consultant consulted for complex issues
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Extract Supervisor...
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Discuss Critical errors with Payroll consultant | Complex issues require domain expertise |
+| M2 | Document resolution plan for each Critical error | Remediation planning requires business judgment |
+| M3 | Review Warning items with SME for potential impact | Risk assessment requires payroll expertise |
 ================================================================================

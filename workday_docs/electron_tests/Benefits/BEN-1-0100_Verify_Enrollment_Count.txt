@@ -28,6 +28,39 @@ VERIFICATION:
 - [ ] Counts match individual enrollment records
 - [ ] Participation rates are calculated correctly
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Report may require date parameters; specify effective date
+- Step 7-8 fails: Verify enrollments exist in system for reporting period
+- General failure: Check enrollment data has been processed
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Enrollment Count report displays successfully
+- Counts are shown by plan type:
+  - Medical: Total enrolled, by plan option (PPO, HMO, HDHP)
+  - Dental: Total enrolled, by plan option
+  - Vision: Total enrolled
+  - Life Insurance: Total enrolled
+  - Retirement: Total enrolled, average contribution
+- Participation rates calculated (Enrolled / Eligible)
+- Waiver counts are included
+- Data supports Open Enrollment planning
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Reconcile counts to carrier billing | Validate enrollment matches invoices |
+| M2 | Verify participation rates by department | Support benefits strategy analysis |
+| M3 | Compare to prior year enrollment | Track enrollment trends |
+
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands

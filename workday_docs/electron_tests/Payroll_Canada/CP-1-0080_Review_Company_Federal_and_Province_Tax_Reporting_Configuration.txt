@@ -24,15 +24,21 @@ ELECTRON STEPS:
 2. wait for search results
 3. click search result containing "Company CAN Tax Reporting"
 4. wait for page to load
-5. RAG-extracted steps:
-   [RAG data available but no specific steps found - follow standard task flow]
-6. screenshot as "CP-1-0080_complete.png"
+5. verify federal tax configuration is present
+6. verify provincial tax configuration is present
+7. review Worker Criteria Assignments
+8. verify EI reduced rates where applicable
+9. verify health and payroll tax setup
+10. verify WCB rates configuration
+11. verify sales tax setup where applicable
+12. screenshot as "CP-1-0080_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Federal tax configuration present
+- [ ] Provincial tax configuration present
+- [ ] Worker Criteria Assignments correct
+- [ ] EI reduced rates verified
+- [ ] WCB rates correctly configured
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -42,16 +48,35 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Company CAN Tax Reporting
 
-### 1. Electron Test Samples (score: 4)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Maintain Company CAN Tax" or "View Tax Configuration"
+- Step 4 fails: Wait additional 5 seconds for page load; tax configuration may be complex
+- Step 5 fails: Navigate to specific company and access tax reporting tab
+- General: Verify user has Payroll Administrator permissions for tax configuration access
 
-This file contains 5 samp...
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Company Federal and Province Tax Reporting Configuration review completes successfully
+- All expected company tax configurations (federal and province) are present
+- Worker Criteria Assignments are correctly configured
+- EI reduced rates verified where applicable
+- Health and payroll tax setup confirmed where applicable
+- WCB rates are correctly configured
+- Sales tax setup verified where applicable
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify EI reduced rates with CRA documentation | Government rate compliance requires official source |
+| M2 | Confirm WCB rates with provincial authorities | Provincial compliance requires official rates |
+| M3 | Cross-reference tax setup with legacy system | Migration validation requires source comparison |
+| M4 | Validate Worker Criteria Assignments with payroll SME | Business rules require domain expertise |
 ================================================================================

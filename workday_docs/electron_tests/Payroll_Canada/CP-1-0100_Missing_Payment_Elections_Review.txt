@@ -24,19 +24,18 @@ ELECTRON STEPS:
 2. wait for search results
 3. click search result containing "Audit Missing Payment Elections"
 4. wait for page to load
-5. RAG-extracted steps:
-   - Audit Company Setup: Extract Companies
-   - Audit Location Setup: Extract Location
-   - Audit Cost Center Setup: Extract Cost Center
-   - Audit Region Setup: Extract Regions
-   - Audit Supervisory Organizations: Extract Supervisory ...
-6. screenshot as "CP-1-0100_complete.png"
+5. verify report parameters
+6. select appropriate company filter
+7. run report
+8. review list of employees with missing elections
+9. verify additional run categories are checked
+10. screenshot as "CP-1-0100_complete.png"
 
 VERIFICATION:
-- [ ] Task completed successfully
-- [ ] Task completed successfully
-- [ ] No error messages displayed
-- [ ] Country-specific data validates correctly
+- [ ] Report generates successfully
+- [ ] Missing elections identified
+- [ ] Additional run categories checked
+- [ ] Remediation list created
 
 API ALTERNATIVE:
 - SOAP: Not available in RAG results
@@ -46,19 +45,33 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: Audit Missing Payment Elections
 
-### 1. Test Scenarios Index (score: 9)
-Source: test_scenarios_index.txt
-```
-# Workday Test Scenarios Index
-Total: 6858 scenarios
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "Missing Payment Elections" or "Payment Election Audit"
+- Step 4 fails: Wait additional 5 seconds for page load; audit report may take time to generate
+- Step 7 fails: Filter by company or pay group if results are too large
+- General: Report shows MISSING elections only, not all existing elections
 
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Missing Payment Elections review completes successfully
+- Report generates showing all employees with missing payment elections
+- Active employees in CAN companies are verified for payment elections
+- Additional run categories are checked for missing elections
+- Employees without payment elections are identified for remediation
+- No critical missing elections remain unaddressed
+- Screenshots captured at key verification steps
 
-## HCM (439 scenarios)
-- Audit Company Setup: Extract Companies
-- Audit Location Setup: Extract Location
-- Audit Cost Center Setup: Extract Cost Center
-- Audit Region Setup: Extract Regions
-- Audit Supervisory Organizations: Ex...
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Contact employees with missing elections for banking info | Personal data collection requires direct contact |
+| M2 | Verify new hires have elections before first pay run | Timing-sensitive validation requires business judgment |
+| M3 | Confirm terminated employees are excluded from report | Employment status verification may require HR input |
 ================================================================================

@@ -46,16 +46,34 @@ RAG NOTES:
 Loaded 63 docs from public/private
 Loaded 55 WSDLs with 3169 operations
 Total: 118 documents
-## Results for: No delivered report exists - needs to be added to dapzulu
 
-### 1. User Guide Workday Prism Analytics (score: 9)
-Source: User-Guide-Workday-Prism-Analytics.pdf
-```
-Workday Prism Analytics
-Product Summary
-December 10, 2025
-This content is not part of the Workday Administrator Guide and is subject to further change.
- | Contents | ii
-Contents
-Set Up Languages in Prism Analytics..................
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search box is visible; try clicking on global search icon first
+- Step 3 fails: Try alternative task names "View Payment Elections" or "Maintain Payment Elections"
+- Step 4 fails: Wait additional 5 seconds for page load; election list may be large
+- Step 5 fails: Filter by company or pay group if results are too large
+- Step 9 fails: Use custom report if delivered report does not exist
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Payment Election review completes successfully
+- All CAN employee payment elections are reviewed
+- Bank account information is verified accurate
+- Payment methods (ACH, check, etc.) are correctly configured
+- Split payment configurations are verified
+- Payment election details match employee preferences
+- No employees with missing payment elections remain
+- Screenshots captured at key verification steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify bank account details with employees for accuracy | Personal financial data requires employee confirmation |
+| M2 | Confirm split payment percentages total 100% | Calculation validation may require manual review |
+| M3 | Cross-reference with legacy payment election data | Migration validation requires source comparison |
 ================================================================================

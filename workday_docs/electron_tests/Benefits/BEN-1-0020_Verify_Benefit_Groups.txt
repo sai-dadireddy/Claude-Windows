@@ -28,6 +28,34 @@ VERIFICATION:
 - [ ] Group configurations are correct
 - [ ] Active groups are properly marked
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 5 fails: Confirm benefit groups exist in tenant configuration
+- Step 7-8 fails: Verify at least one benefit group is configured
+- General failure: Check benefit group configuration in Maintain Benefit Groups task
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Benefit Groups page displays successfully
+- All configured benefit groups are visible (e.g., US Full-Time Employees, Part-Time, etc.)
+- Group details show Group Name, Description, and Status
+- Eligibility rules are associated with each group
+- Priority order is correctly displayed
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Compare group list to HR policy document | Validate groups match organizational structure |
+| M2 | Verify eligibility rules per group | Ensure correct employee types are assigned |
+| M3 | Check priority order for overlapping eligibility | Confirm correct group assignment logic |
+
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands

@@ -27,6 +27,34 @@ VERIFICATION:
 - [ ] Group assignments are accurate
 - [ ] No eligibility gaps exist
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Step 6 fails: Confirm eligibility rules are configured for benefit groups
+- Step 7 fails: Verify employees are assigned to benefit groups
+- General failure: Check Maintain Benefit Eligibility Rules for configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Benefits Eligibility by Benefits Group report displays successfully
+- Eligibility rules show criteria (Employee Type, Hours, Job Classification, Location)
+- Employees are correctly assigned to appropriate benefit groups
+- Waiting periods are displayed where applicable
+- No gaps in eligibility coverage for intended employees
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify sample employees match expected groups | Validate eligibility rule accuracy |
+| M2 | Check employees at boundary conditions | Confirm edge cases handled correctly |
+| M3 | Compare to HR policy eligibility requirements | Ensure configuration matches policy |
+
 NOTES:
 - Enhanced using KB article: kb_benefits_enrollment.txt
 - All steps are valid Electron commands
