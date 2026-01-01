@@ -1,0 +1,326 @@
+================================================================================
+ELECTRON-4 BATCH REPORT: INVENTORY
+================================================================================
+Date: 2026-01-01
+Agent: electron-4
+Scripts Processed: 183
+
+================================================================================
+FORMAT REQUIREMENTS (Template Standard):
+================================================================================
+Required Sections:
+- PURPOSE (or DESCRIPTION)
+- PREREQUISITES
+- AUTOMATED STEPS (ELECTRON STEPS)
+- MANUAL VERIFICATION
+- ON FAILURE
+- EXPECTED OUTCOME
+
+================================================================================
+SCRIPT ANALYSIS SUMMARY
+================================================================================
+
+| Test ID         | Test Name                                    | Trust | Format OK | Needs Update |
+|-----------------|----------------------------------------------|-------|-----------|--------------|
+| INV-1-0010      | Inventory Site                               | 7.5   | YES       | NO           |
+| INV-1-0020      | Stocking Locations                           | 7.5   | YES       | NO           |
+| INV-1-0030      | Inventory Location Usage Type                | 7.0   | NO        | YES          |
+| INV-1-0040      | Purchase Items                               | 7.0   | NO        | YES          |
+| INV-1-0050      | Item Identifier Types                        | 7.0   | NO        | YES          |
+| INV-1-0060      | Unit of Measure Sets                         | 4.0   | NO        | YES          |
+| INV-1-0070      | Inventory Adjustment Reasons                 | 3.0   | NO        | YES          |
+| INV-1-0080      | Inventory Put-Away Rules                     | 8.0   | NO        | YES          |
+| INV-1-0090      | Inventory ABC Classification                 | 3.0   | NO        | YES          |
+| INV-1-0100      | Confirm Company Procurement Options          | 3.0   | NO        | YES          |
+| INV-1-0110      | Review Spend Categories                      | 7.0   | NO        | YES          |
+| INV-1-0120      | Review Units of Measure                      | 4.0   | NO        | YES          |
+| INV-1-0130      | Requisition Types                            | 7.0   | NO        | YES          |
+| INV-1-0140      | User Based Inventory Roles                   | 4.0   | NO        | YES          |
+| INV-1-0150      | Role-Based Inventory Roles                   | 4.0   | NO        | YES          |
+| INV-1-0160      | Confirm Inventory Posting Rules              | 3.0   | NO        | YES          |
+| INV-1-0170      | Confirm Shipping Information                 | 3.0   | NO        | YES          |
+| INV-1-0180      | Confirm Custom Validations                   | 3.0   | NO        | YES          |
+| INV-1-0190      | Confirm Worktag Usages                       | 3.0   | NO        | YES          |
+| INV-1-0200      | Confirm Related worktag usages               | 3.0   | NO        | YES          |
+| INV-1-0210      | Create Ad Hoc Putaway                        | 8.0   | NO        | YES          |
+| INV-1-0220      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0230      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-1-0240      | Inventory Adjustment                         | 7.0   | NO        | YES          |
+| INV-1-0250      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0260      | Inventory Adjustment                         | 6.0   | NO        | YES          |
+| INV-1-0270      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0280      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-1-0290      | Create Ad Hoc Inventory Count                | 4.0   | NO        | YES          |
+| INV-1-0300      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0310      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-1-0320      | Inventory Count                              | 4.0   | NO        | YES          |
+| INV-1-0330      | Find Inventory Count Sheet                   | 3.0   | NO        | YES          |
+| INV-1-0340      | Count Inventory                              | 4.0   | NO        | YES          |
+| INV-1-0350      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0360      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-1-0370      | Adjust Average Cost of an Inventoried Item   | 3.0   | NO        | YES          |
+| INV-1-0380      | View Business Process for Quick Issue Event  | 8.0   | NO        | YES          |
+| INV-1-0390      | Create a Quick Issue                         | 8.0   | NO        | YES          |
+| INV-1-0400      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-1-0410      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-2-0010      | Create Inventory Site                        | 3.0   | NO        | YES          |
+| INV-2-0020      | Create Stocking Locations                    | 7.0   | NO        | YES          |
+| INV-2-0030      | Create Par Location                          | 7.0   | NO        | YES          |
+| INV-2-0040      | Create Purchase Item                         | 3.0   | NO        | YES          |
+| INV-2-0050      | Create a Requisition for Inventory Items     | 7.5   | NO        | YES          |
+| INV-2-0060      | Approve Requisition                          | 3.0   | NO        | YES          |
+| INV-2-0070      | Source Requisition to Purchase Order         | 7.0   | NO        | YES          |
+| INV-2-0080      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-2-0090      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-2-0100      | Put-Away Inventory                           | 8.0   | NO        | YES          |
+| INV-2-0110      | View Business Process Inventory Stock Request| 8.0   | NO        | YES          |
+| INV-2-0120      | Create Inventory Stock Request               | 8.0   | NO        | YES          |
+| INV-2-0130      | View Business Process Inventory Pick List    | 8.0   | NO        | YES          |
+| INV-2-0140      | Create Inventory Picking Lists               | 8.0   | NO        | YES          |
+| INV-2-0150      | Move Inventory                               | 7.0   | NO        | YES          |
+| INV-2-0160      | Change Item Spend Category                   | 4.0   | NO        | YES          |
+| INV-3-0010      | Inventory Site                               | 3.0   | NO        | YES          |
+| INV-3-0020      | Stocking Locations                           | 10.0  | NO        | YES          |
+| INV-3-0030      | Inventory Location Usage Type                | 4.0   | NO        | YES          |
+| INV-3-0040      | Purchase Items                               | 3.0   | NO        | YES          |
+| INV-3-0050      | Item Identifier Types                        | 3.0   | NO        | YES          |
+| INV-3-0060      | Unit of Measure Sets                         | 4.0   | NO        | YES          |
+| INV-3-0070      | Inventory Adjustment Reasons                 | 3.0   | NO        | YES          |
+| INV-3-0080      | Inventory Put-Away Rules                     | 8.0   | NO        | YES          |
+| INV-3-0090      | Inventory ABC Classification                 | 3.0   | NO        | YES          |
+| INV-3-0100      | Confirm Company Procurement Options          | 7.5   | NO        | YES          |
+| INV-3-0110      | Review Spend Categories                      | 7.0   | NO        | YES          |
+| INV-3-0120      | Review Units of Measure                      | 4.0   | NO        | YES          |
+| INV-3-0130      | Requisition Types                            | 7.0   | NO        | YES          |
+| INV-3-0140      | User Based Inventory Roles                   | 4.0   | NO        | YES          |
+| INV-3-0150      | Role-Based Inventory Roles                   | 4.0   | NO        | YES          |
+| INV-3-0160      | Confirm Inventory Posting Rules              | 3.0   | NO        | YES          |
+| INV-3-0170      | Confirm Shipping Information                 | 3.0   | NO        | YES          |
+| INV-3-0180      | Confirm Custom Validations                   | 3.0   | NO        | YES          |
+| INV-3-0190      | Confirm Worktag Usages                       | 3.0   | NO        | YES          |
+| INV-3-0200      | Confirm Related worktag usages               | 3.0   | NO        | YES          |
+| INV-3-0210      | Replenish Inventory                          | 7.0   | NO        | YES          |
+| INV-3-0220      | Find Requisition                             | 7.0   | NO        | YES          |
+| INV-3-0230      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0240      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0250      | Receive Purchase Order                       | 7.0   | NO        | YES          |
+| INV-3-0260      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0270      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0280      | Create Inventory Stock Request goods         | 8.0   | NO        | YES          |
+| INV-3-0290      | Find Inventory Pick List                     | 8.0   | NO        | YES          |
+| INV-3-0300      | Inventory Shipment                           | 7.0   | NO        | YES          |
+| INV-3-0310      | Capture Good Delivery for Stock Request      | 8.0   | NO        | YES          |
+| INV-3-0320      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0330      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0340      | Create Inventory Return                      | 7.0   | NO        | YES          |
+| INV-3-0350      | Adjust Inventory For Return Order            | 7.0   | NO        | YES          |
+| INV-3-0360      | Putaway Inventory                            | 8.0   | NO        | YES          |
+| INV-3-0370      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0380      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0390      | Create Inventory Stock Request Transfer      | 9.0   | NO        | YES          |
+| INV-3-0400      | Find Stock Request to Pick Inventory         | 8.0   | NO        | YES          |
+| INV-3-0410      | Inventory Putaway                            | 8.0   | NO        | YES          |
+| INV-3-0420      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0430      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0440      | Create Par Count for Kanban Par Location     | 7.0   | NO        | YES          |
+| INV-3-0450      | Find Inventory Stock Request                 | 8.0   | NO        | YES          |
+| INV-3-0460      | Pick Inventory                               | 8.0   | NO        | YES          |
+| INV-3-0470      | Create Inventory Shipment                    | 7.0   | NO        | YES          |
+| INV-3-0480      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0490      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0500      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0510      | Find Requisition                             | 7.0   | NO        | YES          |
+| INV-3-0520      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0530      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0540      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0550      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0560      | Create Par Count for Par Location            | 7.0   | NO        | YES          |
+| INV-3-0570      | Find Inventory Stock Request                 | 8.0   | NO        | YES          |
+| INV-3-0580      | Pick Inventory                               | 8.0   | NO        | YES          |
+| INV-3-0590      | Inventory Shipment                           | 7.0   | NO        | YES          |
+| INV-3-0600      | Capture Good Delivery for Stock Request      | 8.0   | NO        | YES          |
+| INV-3-0610      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0620      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0630      | Find Requisitions                            | 7.0   | NO        | YES          |
+| INV-3-0640      | Find Requisition                             | 7.0   | NO        | YES          |
+| INV-3-0650      | Find Purchase Orders                         | 7.0   | NO        | YES          |
+| INV-3-0660      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0670      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0680      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0690      | Find Requisition                             | 7.0   | NO        | YES          |
+| INV-3-0700      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0710      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0720      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0730      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0740      | Create Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0750      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0760      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0770      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0780      | Click Inventory Tab                          | 2.0   | NO        | YES          |
+| INV-3-0790      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0800      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0810      | Create Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0820      | Create Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0830      | Fulfill Stock Item from Requisition          | 8.0   | NO        | YES          |
+| INV-3-0840      | Pick Inventory                               | 8.0   | NO        | YES          |
+| INV-3-0850      | Ship Inventory                               | 7.0   | NO        | YES          |
+| INV-3-0860      | Capture Good Delivery for Stock Request      | 8.0   | NO        | YES          |
+| INV-3-0870      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-0880      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-0890      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0900      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0910      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0920      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0930      | Create Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0930-01   | Create Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0940      | Source Requisition                           | 7.0   | NO        | YES          |
+| INV-3-0950      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-0960      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-0970      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-0980      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-0990      | Create Purchase Order                        | 7.0   | NO        | YES          |
+| INV-3-1000      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-1000-01   | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-1000-02   | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-1010      | Find Receipt                                 | 7.0   | NO        | YES          |
+| INV-3-1010-01   | Find Receipt                                 | 7.0   | NO        | YES          |
+| INV-3-1020      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-1030      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-1040      | Create Return                                | 7.0   | NO        | YES          |
+| INV-3-1050      | Create Return                                | 7.0   | NO        | YES          |
+| INV-3-1060      | To Do - Adjust Inventory to ship goods       | 7.0   | NO        | YES          |
+| INV-3-1070      | Find Inventory Balance                       | 3.0   | NO        | YES          |
+| INV-3-1080      | Find Inventory Transaction                   | 3.0   | NO        | YES          |
+| INV-3-1090      | Create Change Order                          | 3.0   | NO        | YES          |
+| INV-3-1100      | Find Purchase Order                          | 7.0   | NO        | YES          |
+| INV-3-1110      | Issue Purchase Order                         | 8.0   | NO        | YES          |
+| INV-3-1120      | Create Receipt                               | 7.0   | NO        | YES          |
+| INV-3-1130      | Capture Goods Delivery                       | 8.0   | NO        | YES          |
+| INV-3-1140      | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-01   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-02   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-03   | Consignment Setup / Transaction Test         | 6.0   | NO        | YES          |
+| INV-3-1140-04   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-05   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-06   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-07   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-08   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-09   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-10   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-11   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-12   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-13   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-14   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-15   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-16   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-17   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-18   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-19   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-20   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-21   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-22   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-23   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-24   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+| INV-3-1140-25   | Consignment Setup / Transaction Test         | 2.0   | NO        | YES          |
+
+================================================================================
+SUMMARY
+================================================================================
+
+Total Scripts Analyzed: 183
+
+FORMAT COMPLIANCE:
+- Scripts with proper format (all required sections): 2 (1.1%)
+- Scripts needing format update: 181 (98.9%)
+
+TRUST SCORE DISTRIBUTION:
+- HIGH Trust (>= 7.0): 98 scripts (53.6%)
+- MEDIUM Trust (4.0 - 6.9): 19 scripts (10.4%)
+- LOW Trust (< 4.0): 66 scripts (36.1%)
+
+WELL-FORMATTED SCRIPTS (Model Examples):
+1. INV-1-0010 - Inventory Site (7.5) - Full template with all sections
+2. INV-1-0020 - Stocking Locations (7.5) - Full template with all sections
+
+HIGH PRIORITY UPDATES NEEDED (Low Trust):
+- INV-3-0780 - Click Inventory Tab (Trust: 2.0) - Missing RAG data
+- INV-3-1140 series (26 scripts) - Consignment Setup (Trust: 2.0) - No KB docs
+- Various "Find Inventory Balance/Transaction" scripts (Trust: 3.0)
+
+RAG COVERAGE BY TOPIC:
+| Topic                          | RAG Score | KB Available |
+|--------------------------------|-----------|--------------|
+| Inventory Site                 | 7.0       | YES          |
+| Stocking Locations             | 7.0       | YES          |
+| Inventory Location Usage Type  | 4.0       | NO           |
+| Purchase Items                 | 3.0       | NO           |
+| Item Identifier Types          | 3.0       | NO           |
+| Unit of Measure Sets           | 4.0       | NO           |
+| Inventory Adjustment Reasons   | 3.0       | NO           |
+| Inventory Put-Away Rules       | 8.0       | YES (WSDL)   |
+| Inventory ABC Classification   | 3.0       | NO           |
+| Company Procurement Options    | 3.0       | NO           |
+| Spend Categories               | 7.0       | YES          |
+| Requisition Types              | 7.0       | YES          |
+| Inventory Roles                | 4.0       | NO           |
+| Inventory Posting Rules        | 3.0       | NO           |
+| Ad Hoc Putaway                 | 8.0       | YES          |
+| Find Inventory Balance         | 3.0       | NO           |
+| Inventory Adjustment           | 7.0       | YES          |
+| Ad Hoc Inventory Count         | 4.0       | NO           |
+| Quick Issue                    | 8.0       | YES (WSDL)   |
+| Inventory Stock Request        | 8.0       | YES (WSDL)   |
+| Inventory Pick List            | 8.0       | YES (WSDL)   |
+| Move Inventory                 | 7.0       | YES          |
+| Purchase Order Issue           | 8.0       | YES          |
+| Create Receipt                 | 7.0       | YES          |
+| Put Away Inventory             | 8.0       | YES          |
+| Replenish Inventory            | 7.0       | YES          |
+| Inventory Shipment             | 7.0       | YES (WSDL)   |
+| Capture Goods Delivery         | 8.0       | YES (WSDL)   |
+| Par Count                      | 7.0       | YES (WSDL)   |
+| Consignment Setup              | 2.0       | NO           |
+| Inventory Return               | 7.0       | YES          |
+| Change Item Spend Category     | 4.0       | NO           |
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. IMMEDIATE ACTION - Format Updates:
+   - 181 scripts need format update to match template standard
+   - Missing sections: PURPOSE, PREREQUISITES, MANUAL VERIFICATION, ON FAILURE, EXPECTED OUTCOME
+
+2. LOW TRUST SCRIPTS - Browser Research Required:
+   - 66 scripts have trust < 7.0 and need browser research
+   - Priority: Consignment Setup series (26 scripts), Find Inventory Balance/Transaction
+
+3. KB ARTICLE GAPS:
+   The following topics need KB article creation via browser research:
+   - Inventory Location Usage Type
+   - Purchase Items
+   - Item Identifier Types
+   - Unit of Measure Sets
+   - Inventory Adjustment Reasons
+   - Inventory ABC Classification
+   - Company Procurement Options
+   - Inventory Posting Rules
+   - Inventory Roles
+   - Consignment Setup
+
+4. TEMPLATE SCRIPTS TO USE AS REFERENCE:
+   - INV-1-0010_Inventory_Site.txt - Complete format example
+   - INV-1-0020_Stocking_Locations.txt - Complete format example
+
+================================================================================
+NOTES
+================================================================================
+- RAG scores from workday_rag.py queries on 2026-01-01
+- Format compliance based on template requirements from CLAUDE.md
+- Trust scores reflect RAG confidence, not script quality
+- Scripts with "nan" in VERIFICATION field are marked as needing update
+- Consignment series has 26 sub-scripts all needing KB research
+
+================================================================================
+END OF REPORT
+================================================================================

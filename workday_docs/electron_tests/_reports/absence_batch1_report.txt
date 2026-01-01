@@ -1,0 +1,149 @@
+================================================================================
+ELECTRON-7 BATCH REPORT: ABSENCE
+Date: 2026-01-01
+Agent: electron-7
+================================================================================
+
+| Test ID      | Test Name                           | Trust | Format OK | Needs Update |
+|--------------|-------------------------------------|-------|-----------|--------------|
+| ABS-1-0010   | Calculation Audit                   | 4     | YES       | YES          |
+| ABS-1-0020   | Calculated Field Audit              | 5     | YES       | YES          |
+| ABS-1-0030   | Absence Data Audit                  | 4     | YES       | YES          |
+| ABS-1-0040   | Review Time Off Plan Configuration  | 5     | YES       | YES          |
+| ABS-1-0050   | Review Time Off Configuration       | 5     | YES       | YES          |
+| ABS-1-0060   | Review Accrual Configuration        | 4     | YES       | YES          |
+| ABS-1-0070   | Review Time Off Type Configuration  | 4     | YES       | YES          |
+| ABS-1-0080   | Review Leave Configuration          | 4     | YES       | YES          |
+| ABS-1-0090   | Review Leave Reasons                | 5     | YES       | YES          |
+| ABS-1-0100   | Review Period Schedule Config       | 4     | YES       | YES          |
+
+================================================================================
+SUMMARY
+================================================================================
+
+Scripts verified:      10
+Format compliant:      10 (100%)
+Need format update:    0
+Low trust (< 7):       10 (100%)
+
+--------------------------------------------------------------------------------
+TRUST SCORE ANALYSIS
+--------------------------------------------------------------------------------
+
+All 10 scripts have LOW trust scores (4-5 out of 10):
+
+1. ABS-1-0010 - Calculation Exception Audit
+   - RAG Score: 4
+   - Best Match: kb_absence_calculation_exception_audit.txt (score: 4)
+   - Issue: Generic KB match, no specific SOAP operation for audit report
+
+2. ABS-1-0020 - Calculated Field Exception Audit
+   - RAG Score: 5
+   - Best Match: kb_absence_calculation_exception_audit.txt (score: 5)
+   - Issue: Related but not exact match for calculated field audit
+
+3. ABS-1-0030 - Worker Absence Eligibility Audit
+   - RAG Score: 4
+   - Best Match: kb_absence_calculation_exception_audit.txt (score: 4)
+   - Issue: No specific KB for eligibility audit
+
+4. ABS-1-0040 - All Time Off Plans
+   - RAG Score: 5
+   - Best Match: electron_test_samples.txt (score: 5)
+   - Issue: No specific Time Off Plan configuration docs
+
+5. ABS-1-0050 - All Time Offs
+   - RAG Score: 5
+   - Best Match: electron_test_samples.txt (score: 5)
+   - Issue: Generic match to test samples
+
+6. ABS-1-0060 - All Accruals
+   - RAG Score: 4
+   - Best Match: Admin-Guide-Education-and-Government.pdf (score: 4)
+   - Issue: Not related to absence accruals
+
+7. ABS-1-0070 - Time Off Types
+   - RAG Score: 4
+   - Best Match: electron_test_samples.txt (score: 4)
+   - Issue: No specific Time Off Types configuration docs
+
+8. ABS-1-0080 - All Leave Families
+   - RAG Score: 4
+   - Best Match: Human_Resources.wsdl (score: 4)
+   - Issue: WSDL match but no Leave Families operations
+
+9. ABS-1-0090 - View Leave Type > Additional Fields
+   - RAG Score: 5
+   - Best Match: kb_absence_time_off.txt (score: 5)
+   - Issue: Related KB but not specific to Leave Types
+
+10. ABS-1-0100 - View Period Schedule
+    - RAG Score: 4
+    - Best Match: electron_test_samples.txt (score: 4)
+    - Issue: kb_payroll_period_schedule.txt exists but low relevance
+
+--------------------------------------------------------------------------------
+FORMAT COMPLIANCE CHECK
+--------------------------------------------------------------------------------
+
+All scripts follow the standard Electron test format:
+
+[PASS] JSDoc header with:
+       - Test ID and name
+       - Functional Area
+       - CONFIDENCE level
+       - REASONING for confidence
+       - Scenario description
+       - Task/Step
+       - Expected Result
+       - Estimated Effort
+       - Workday Role
+
+[PASS] Playwright test structure:
+       - const { test, expect } = require('@playwright/test')
+       - test.describe() block
+       - test.beforeEach() for login
+       - test() with execution steps
+
+[PASS] RAG Reference Data section at bottom
+
+--------------------------------------------------------------------------------
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+
+All 10 scripts require KB enrichment before automation:
+
+ACTION REQUIRED:
+1. Browser-based research needed for all 10 tests
+2. Search doc.workday.com for:
+   - "Calculation Exception Audit" report
+   - "Calculated Field Exception Audit" report
+   - "Worker Absence Eligibility Audit" report
+   - "Time Off Plan" configuration
+   - "Time Off" configuration
+   - "Accrual" configuration absence
+   - "Time Off Types" setup
+   - "Leave Families" configuration
+   - "Leave Type" additional fields
+   - "Period Schedule" absence
+
+3. Update KB articles in workday_docs/private/
+
+4. Re-run RAG queries after KB enrichment
+
+5. Update scripts with improved confidence scores
+
+--------------------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------------------
+
+- All scripts are syntactically correct
+- All scripts use test.skip() due to LOW confidence
+- Scripts include placeholder automation steps
+- RAG Reference Data sections contain original query results
+- These are primarily REVIEW/AUDIT tasks (manual verification)
+- Many tasks involve running reports and visual review
+
+================================================================================
+END OF REPORT
+================================================================================
