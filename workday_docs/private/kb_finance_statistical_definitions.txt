@@ -1,0 +1,44 @@
+# Workday KB: Confirm Statistical Definitions
+# Searched: 2026-01-01
+# Query: "Confirm Statistical Definitions"
+# Total Results: 500 (90 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 18 EN Admin Guide results
+Page 2: 7 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 6 EN Admin Guide results
+Page 5: 10 EN Admin Guide results
+Page 6: 7 EN Admin Guide results
+Page 7: 6 EN Admin Guide results
+Page 8: 6 EN Admin Guide results
+Page 9: 11 EN Admin Guide results
+Page 10: 8 EN Admin Guide results
+Page 11: 2 EN Admin Guide results
+Pages 12-17: 0 EN (translations only)
+
+## Key Topics Found
+- Define Statistic Types
+- Define Statistic Types in AP&C
+- Enter Statistic Values
+- Enter Statistic Values in AP&C
+- Configure Account Certification Dashboard
+- Configure Financial Metrics Reporting
+- Define Cash Forecast Components
+- Configure Learning Content Highlights Rules
+- Steps: Configure Compensation Review Grid Profiles
+- Reference: Comma-Separated Value (CSV) Attributes for Document Transformation
+- Reference: CSV-Mtable-Writer Properties
+- Submit Evaluations
+- Create Consolidation Data Mapping Table Definitions in AP&C
+- Example: Configure Report Design Payroll Checks
+- Concept: Good Faith Estimate Reporting
+- Concept: Data Scrambling
+- Concept: Period Close Activity Group of Consolidation Data Capture
+- Create Calculation Compensation Basis
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1400549015315.html
+- https://doc.workday.com/admin-guide/en-us/adaptive-planning-and-consolidation/financial-accounting-in-ap&c/statistics-in-ap&c/she1400549015315_1.html
+- https://doc.workday.com/admin-guide/en-us/financial-management/financial-accounting/statistics/she1401491577246.html

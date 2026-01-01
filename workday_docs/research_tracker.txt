@@ -8,11 +8,11 @@ FINANCE (30 topics)
 ================================================================================
 
 Priority 1 (Score 2-3) - Critical:
-[ ] Confirm Statistical Definitions          -> kb_finance_statistical_definitions.txt
-[ ] Verify Tax Applicabilities               -> kb_finance_tax_applicabilities.txt
-[ ] Verify Tax Recoverabilities              -> kb_finance_tax_recoverabilities.txt
-[ ] Confirm Book Codes                       -> kb_finance_book_codes.txt
-[ ] Confirm Revaluation Rules                -> kb_finance_revaluation_rules.txt
+[x] Confirm Statistical Definitions          -> kb_finance_statistical_definitions.txt (90 EN)
+[x] Verify Tax Applicabilities               -> kb_finance_tax_applicabilities.txt (95 EN)
+[x] Verify Tax Recoverabilities              -> kb_finance_tax_recoverabilities.txt (72 EN)
+[x] Confirm Book Codes                       -> kb_finance_book_codes.txt (99 EN)
+[x] Confirm Revaluation Rules                -> kb_finance_revaluation_rules.txt (159 EN)
 [ ] Confirm Revaluation Groups               -> kb_finance_revaluation_groups.txt
 [ ] Confirm Worktag Usage                    -> kb_finance_worktag_usage.txt
 [ ] Verify Tax Authorities                   -> kb_finance_tax_authorities.txt

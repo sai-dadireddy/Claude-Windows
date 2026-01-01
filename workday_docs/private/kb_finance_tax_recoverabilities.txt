@@ -1,0 +1,28 @@
+# Workday KB: Verify Tax Recoverabilities
+# Searched: 2026-01-01
+# Query: "Verify Tax Recoverabilities"
+# Total Results: 500 (72 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 10 EN Admin Guide results
+Page 2: 11 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 6 EN Admin Guide results
+Page 5: 5 EN Admin Guide results
+Page 6: 7 EN Admin Guide results
+Page 7: 6 EN Admin Guide results
+Page 8: 5 EN Admin Guide results
+Page 9: 8 EN Admin Guide results
+Page 10: 5 EN Admin Guide results
+Pages 11-17: 0 EN (translations only)
+
+## Key Topics Found
+- Set Up Tax Recoverabilities for Financial Transactions
+- Reference: Ad Hoc Bank Transaction Connector XML Schema
+- Create Recurring Supplier Invoices
+- Reference: Verification Reports for Payroll Inputs
+- Create Ad Hoc Bank Transactions
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/transaction-tax/
