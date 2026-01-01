@@ -1,0 +1,31 @@
+# Workday KB: Verify Tax Declaration Definitions
+# Searched: 2026-01-01
+# Query: "Verify Tax Declaration Definitions"
+# Total Results: 500 (219 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 25 EN Admin Guide results
+Page 2: 24 EN Admin Guide results
+Page 3: 18 EN Admin Guide results
+Page 4: 18 EN Admin Guide results
+Page 5: 20 EN Admin Guide results
+Page 6: 16 EN Admin Guide results
+Page 7: 19 EN Admin Guide results
+Page 8: 10 EN Admin Guide results
+Page 9: 21 EN Admin Guide results
+Page 10: 15 EN Admin Guide results
+Page 11: 17 EN Admin Guide results
+Page 12: 13 EN Admin Guide results
+Page 13: 3 EN Admin Guide results
+Pages 14-17: 0 EN (translations only)
+
+## Key Topics Found
+- Create Tax Declaration Components
+- Set Up Worker Taxes (AUS)
+- Set Up Tax Authorities
+- Reference: Tax Options
+- Create Tax Declaration Definitions
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/payroll/tax-declarations/

@@ -1,0 +1,30 @@
+# Workday KB: Confirm Worktag Usage
+# Searched: 2026-01-01
+# Query: "Confirm Worktag Usage"
+# Total Results: 500 (140 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 17 EN Admin Guide results
+Page 2: 11 EN Admin Guide results
+Page 3: 7 EN Admin Guide results
+Page 4: 11 EN Admin Guide results
+Page 5: 18 EN Admin Guide results
+Page 6: 13 EN Admin Guide results
+Page 7: 13 EN Admin Guide results
+Page 8: 11 EN Admin Guide results
+Page 9: 14 EN Admin Guide results
+Page 10: 9 EN Admin Guide results
+Page 11: 11 EN Admin Guide results
+Page 12: 5 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- Configure Related Worktags
+- Configure Worktags for Transactions
+- Reference: Validate Worktags
+- Configure Worktag Defaulting
+- Concept: Validate Worktags REST API
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/worktags/
