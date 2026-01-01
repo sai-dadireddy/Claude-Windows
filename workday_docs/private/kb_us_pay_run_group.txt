@@ -1,0 +1,9 @@
+# Workday KB: Review Pay Run Group Configuration (US)
+# Searched: 2025-12-31
+# Query: "Review Pay Run Group Configuration"
+# Total Results: 500 (EN Admin Guide count TBD)
+# Pages: 17
+
+## Page 1
+EN Admin Guide: 25
+
