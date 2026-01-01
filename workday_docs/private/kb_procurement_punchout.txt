@@ -1,31 +1,27 @@
-# Create Requisition from PunchOut KB
-Source: https://doc.workday.com search
-Query: "Create Requisition from PunchOut"
-Date: 2025-12-31
+# Workday KB: Create Requisition from PunchOut
+# Searched: 2026-01-01
+# Query: "Create Requisition from PunchOut"
+# Total Results: 500 (61 English Admin Guide)
+# Pages: 17
 
-## Search Results (10 found)
+## Summary by Page
+Page 1: 25 EN Admin Guide results
+Page 2: 8 EN Admin Guide results
+Page 3: 8 EN Admin Guide results
+Page 4: 4 EN Admin Guide results
+Page 5: 4 EN Admin Guide results
+Page 6: 4 EN Admin Guide results
+Page 7: 2 EN Admin Guide results
+Page 8: 6 EN Admin Guide results
+Pages 9-17: 0 EN (translations only)
 
-1. **Create Supplier Punchout Connections**
-   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/supplier-punchout/dan1370797004335.html
+## Key Topics Found
+- Steps: Set Up Supplier Punchout
+- Concept: Supplier Punchout
+- Setup Considerations: Supplier Punchout Integration
+- Create Requisitions
+- Create and Edit Job Requisitions
 
-2. **Concept: Supplier Punchout**
-   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/supplier-punchout/dan1370797005535.html
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/procurement-and-spend/supplier-punchout/
 
-3. **Steps: Set Up Supplier Punchout**
-   URL: https://doc.workday.com/admin-guide/en-us/spend-management/procurement/supplier-punchout/dan1370797005165.html
-
-4. **Punch-Out Requisition** (Release Notes)
-   URL: https://doc.workday.com/release-notes/en-us/smreq/7985847.html
-
-5. **Steps: Set Up Punchout Purchase Order Integration**
-   URL: https://doc.workday.com/admin-guide/en-us/integrations/financials-connectors/
-
-## Key Topics
-- Supplier Punchout connections
-- Punchout configuration
-- Purchase order integration
-- Requisition creation from punchout
-
-## Related Areas
-- Spend Management > Procurement > Supplier Punchout
-- Integrations > Financials Connectors

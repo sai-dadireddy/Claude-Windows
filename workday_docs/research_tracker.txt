@@ -1,6 +1,6 @@
 WORKDAY KB RESEARCH TRACKER
 ============================
-Last Updated: 2025-12-31
+Last Updated: 2026-01-01
 Status: [ ] = Pending, [x] = Done, [~] = Partial
 
 ================================================================================
@@ -88,11 +88,11 @@ PAYROLL US (6 topics)
 ================================================================================
 PROCUREMENT (5 topics)
 ================================================================================
-[ ] View Business Process for Requisition    -> kb_procurement_requisition_bp.txt
-[ ] Create Requisition from PunchOut         -> kb_procurement_punchout.txt
-[ ] Spend Transaction Instructions           -> kb_procurement_spend_instructions.txt
-[ ] Supplier Contract Types                  -> kb_procurement_contract_types.txt
-[ ] Requisition Types                        -> kb_procurement_requisition_types.txt
+[x] View Business Process for Requisition    -> kb_procurement_requisition_bp.txt (208 EN)
+[x] Create Requisition from PunchOut         -> kb_procurement_punchout.txt (61 EN)
+[x] Spend Transaction Instructions          -> kb_procurement_spend_instructions.txt (315 EN)
+[x] Supplier Contract Types                  -> kb_procurement_contract_types.txt (282 EN)
+[x] Requisition Types                        -> kb_procurement_requisition_types.txt (284 EN)
 
 ================================================================================
 INVENTORY (5 topics)
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 56 | Remaining: 26
+TOTAL: 82 topics | Done: 61 | Remaining: 21
 ================================================================================

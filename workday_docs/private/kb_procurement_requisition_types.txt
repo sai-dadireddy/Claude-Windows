@@ -1,221 +1,31 @@
-================================================================================
-WORKDAY KB ARTICLE: REQUISITION TYPES CONFIGURATION
-================================================================================
+# Workday KB: Requisition Types
+# Searched: 2026-01-01
+# Query: "Requisition Types"
+# Total Results: 504 (284 English Admin Guide)
+# Pages: 17
 
-Source: Workday Spend Management Admin Guide & WSDL Analysis
-Category: Procurement - Requisition Configuration
-Last Updated: 2025-12-30
+## Summary by Page
+Page 1: 28 EN Admin Guide results
+Page 2: 28 EN Admin Guide results
+Page 3: 28 EN Admin Guide results
+Page 4: 23 EN Admin Guide results
+Page 5: 19 EN Admin Guide results
+Page 6: 23 EN Admin Guide results
+Page 7: 20 EN Admin Guide results
+Page 8: 22 EN Admin Guide results
+Page 9: 22 EN Admin Guide results
+Page 10: 23 EN Admin Guide results
+Page 11: 26 EN Admin Guide results
+Page 12: 22 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
 
-================================================================================
-OVERVIEW
-================================================================================
+## Key Topics Found
+- Maintain Requisition Types
+- Concept: Requisition Templates
+- Maintain Purchase Order Types
+- Steps: Create Supplier Contracts from Requisitions
+- Reference: Auto-Reassign Job Requisition Events
 
-Requisition Types are reference data that classify procurement requests and
-drive business process routing, sourcing rules, and reporting dimensions.
-They help distinguish between different types of purchases and enable
-differentiated approval workflows and sourcing strategies.
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/procurement-and-spend/requisitions/
 
-Functional Area: Procurement / Resource Management
-Task: Maintain Requisition Types / View Requisition Types
-Typical Users: Procurement Configurator, Procurement Administrator
-Configuration Level: Tenant-wide reference data
-
-================================================================================
-KEY COMPONENTS
-================================================================================
-
-1. STANDARD REQUISITION TYPES
-   - Goods: Physical items, equipment, supplies
-   - Services: Professional services, consulting, maintenance
-   - Contingent Worker: Temporary staff, contractors
-   - Catalog: Items from approved supplier catalogs
-   - Non-Catalog: Custom or one-time purchases
-
-2. REQUISITION TYPE ATTRIBUTES
-   - Requisition Type ID (unique identifier)
-   - Requisition Type Name (display name)
-   - Description (purpose and usage notes)
-   - Inactive Flag (for retiring types)
-   - Associated Business Process Rules
-
-3. SOURCING RULE INTEGRATION
-   - Requisition types can trigger different sourcing rules
-   - Automatic supplier selection based on type
-   - Preferred supplier routing
-   - Competitive bidding requirements
-
-4. BUSINESS PROCESS LOGIC
-   - Approval routing based on requisition type
-   - Different approval thresholds per type
-   - Procurement review requirements
-   - Finance oversight levels
-
-================================================================================
-NAVIGATION STEPS
-================================================================================
-
-TASK: VIEW/MAINTAIN REQUISITION TYPES
---------------------------------------
-1. Search: "Maintain Requisition Types" or "View Requisition Types"
-2. Click search result to open configuration task
-3. Review existing requisition types in list view
-4. Click specific type to view details
-5. Use "Edit" to modify existing type
-6. Use "Create Requisition Type" for new types
-
-TASK: CREATE REQUISITION TYPE
------------------------------
-1. Search: "Create Requisition Type"
-2. Click search result to open creation form
-3. Enter Requisition Type ID (unique code)
-4. Enter Requisition Type Name
-5. Add Description (optional but recommended)
-6. Configure sourcing and routing options
-7. Submit for activation
-
-TASK: REVIEW FOR SOURCING RULES
--------------------------------
-1. Search: "View Requisition Types" or "Maintain Requisition Types"
-2. Export list for documentation
-3. Review each type's description
-4. Identify types used for sourcing rule conditions
-5. Document current type usage and business purpose
-6. Identify needed adjustments or new types
-
-================================================================================
-FIELD REFERENCE
-================================================================================
-
-| Field Name           | Type      | Required | Description                      |
-|---------------------|-----------|----------|----------------------------------|
-| Requisition Type ID | Text      | Yes      | Unique identifier code           |
-| Requisition Type    | Text      | Yes      | Display name                     |
-| Description         | Text      | No       | Purpose and usage notes          |
-| Inactive            | Checkbox  | No       | Marks type as inactive           |
-
-================================================================================
-SOURCING RULES INTEGRATION
-================================================================================
-
-Requisition Types serve as a key dimension in sourcing rules:
-
-1. SOURCING RULE CONDITIONS
-   - "If Requisition Type = 'Services' THEN route to Procurement Review"
-   - "If Requisition Type = 'Contingent Worker' THEN require staffing approval"
-   - "If Requisition Type = 'Catalog' AND Amount > $5000 THEN require manager approval"
-
-2. SUPPLIER ROUTING
-   - Preferred suppliers by requisition type
-   - Automatic supplier selection for catalog types
-   - RFQ requirements for non-catalog types
-
-3. APPROVAL LOGIC
-   - Different approval chains based on type
-   - Services may require additional SOW review
-   - Contingent workers may require HR involvement
-
-================================================================================
-BUSINESS PROCESS LOGIC EXAMPLES
-================================================================================
-
-Sample BP Logic Using Requisition Type:
-
-```
-Condition: Requisition Type
-  - If Goods → Standard approval chain
-  - If Services → Add Contract Review step
-  - If Contingent Worker → Add HR Approval step
-  - If Non-Catalog → Add Procurement Review step
-  - If Catalog → Skip competitive review (pre-negotiated pricing)
-```
-
-Threshold Variations:
-- Goods: Manager $5K, Director $25K, VP $100K
-- Services: Manager $2.5K, Director $10K, VP $50K
-- Contingent: Any amount requires HR approval
-
-================================================================================
-AUTOMATION CONSIDERATIONS
-================================================================================
-
-UI Selectors:
-- Search Box: input[data-automation-id="searchBox"]
-- Requisition Type List: table[data-automation-id="requisitionTypeTable"]
-- Create Button: button:contains("Create Requisition Type")
-- Edit Button: button:contains("Edit")
-- View Details: link[data-automation-id="requisitionTypeLink"]
-- Inactive Checkbox: checkbox[data-automation-id="inactive"]
-
-Validation:
-- Requisition Type ID must be unique
-- Name should be descriptive and distinct
-- Description should explain business purpose
-- Review sourcing rules before modifying types
-- Check business process conditions using type
-
-Error Handling:
-- "Duplicate ID" - Use different Requisition Type ID
-- "Cannot delete in use" - Mark inactive instead
-- "Sourcing rule dependency" - Update sourcing rules first
-
-Screenshot Strategy:
-1. List of all requisition types
-2. Individual requisition type details
-3. Sourcing rules using type (if accessible)
-4. Business process conditions using type
-
-================================================================================
-COMMON REQUISITION TYPES
-================================================================================
-
-| Type ID         | Type Name           | Primary Use                    |
-|-----------------|---------------------|--------------------------------|
-| GOODS           | Goods               | Physical items, equipment      |
-| SERVICES        | Services            | Professional services, SOW     |
-| CONTINGENT      | Contingent Worker   | Temp staff, contractors        |
-| CATALOG         | Catalog             | Pre-approved catalog items     |
-| NON_CATALOG     | Non-Catalog         | Custom/one-time purchases      |
-| CAPITAL         | Capital Equipment   | Fixed assets, major equipment  |
-| SOFTWARE        | Software            | Software licenses, SaaS        |
-| MAINTENANCE     | Maintenance         | Facilities, equipment service  |
-| TRAVEL          | Travel              | Travel-related expenses        |
-
-================================================================================
-RELATED CONFIGURATIONS
-================================================================================
-
-- Sourcing Rules: Use requisition type as condition dimension
-- Business Process Conditions: Route approvals by requisition type
-- Spend Categories: Map to requisition types for reporting
-- Approval Routing: Different chains per requisition type
-- Procurement Settings: Type-specific policies
-
-================================================================================
-BEST PRACTICES
-================================================================================
-
-1. Keep requisition types limited and well-defined
-2. Use clear, business-meaningful names
-3. Document purpose in description field
-4. Review sourcing rules when modifying types
-5. Test business process routing after changes
-6. Communicate changes to requestors
-7. Train users on when to use each type
-8. Audit type usage quarterly
-9. Consolidate similar types to reduce complexity
-10. Maintain alignment with procurement policies
-
-================================================================================
-NOTES
-================================================================================
-
-- Requisition types are tenant-level configuration
-- Changes affect all future requisitions
-- Existing requisitions retain their assigned type
-- Cannot delete types used by existing requisitions
-- Types drive both sourcing and approval logic
-- Custom types can be created for specific needs
-- Type selection impacts downstream PO creation
-- Review spend analytics by requisition type regularly
-
-================================================================================

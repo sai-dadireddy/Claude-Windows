@@ -1,40 +1,31 @@
-# Spend Transaction Instructions KB
-Source: https://doc.workday.com search
-Query: "Spend Transaction Instructions"
-Date: 2025-12-31
+# Workday KB: Spend Transaction Instructions
+# Searched: 2026-01-01
+# Query: "Spend Transaction Instructions"
+# Total Results: 502 (315 English Admin Guide)
+# Pages: 17
 
-## Search Results (30 found)
+## Summary by Page
+Page 1: 27 EN Admin Guide results
+Page 2: 29 EN Admin Guide results
+Page 3: 26 EN Admin Guide results
+Page 4: 27 EN Admin Guide results
+Page 5: 29 EN Admin Guide results
+Page 6: 27 EN Admin Guide results
+Page 7: 26 EN Admin Guide results
+Page 8: 25 EN Admin Guide results
+Page 9: 28 EN Admin Guide results
+Page 10: 27 EN Admin Guide results
+Page 11: 20 EN Admin Guide results
+Page 12: 24 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
 
-1. **Provide Spend Transaction Instructions**
-2. **Steps: Set Up Procurement**
-3. **Steps: Set Up Spend Authorizations**
-4. **Example: Freeze Spend Authorizations**
-5. **Review Budget Check Results for Spend Transactions**
-6. **Customize the Expense Report Event Business Process**
-7. **Instructional User Help Text in the Requisitions Worklet**
-8. **Change the Budget Date for a Spend Transaction**
-9. **Set Control Options for Spend Plans**
-10. **Steps: Configure Budget Checking for Spend Transactions**
-11. **Supplier Contract Spend Transaction**
-12. **Setup Considerations: Spend Authorizations**
-13. **Steps: Create Invoices for Cost Reimbursable Award Transactions**
-14. **View Accounting for Spend Commitments and Obligations**
-15. **Steps: Configure Commitment Accounting for Expenses**
-16. **Put External Reference on Spend Transaction SOAP API**
-17. **Steps: Set Up Cash Advance Requests**
-18. **Fournir des instructions de transaction de dépense** (French)
-19. **Setup Considerations: Expense Items**
-20. **Allowable Spend for Grant**
-21. **Steps: Map Spend Categories or Pay Components to Sponsor Expenditure Categories**
+## Key Topics Found
+- Provide Spend Transaction Instructions
+- Steps: Set Up Procurement
+- Setup Considerations: Spend Authorizations
+- Create Spend Categories
+- Create Spend Authorizations
 
-## Key Topics
-- Spend transaction setup and configuration
-- Budget checking for spend transactions
-- Spend authorizations
-- Commitment accounting
-- Cash advance requests
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/procurement-and-spend/
 
-## Related Areas
-- Spend Management > Procurement
-- Spend Management > Expenses
-- Grants Management
