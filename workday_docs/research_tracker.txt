@@ -97,11 +97,11 @@ PROCUREMENT (5 topics)
 ================================================================================
 INVENTORY (5 topics)
 ================================================================================
-[ ] Confirm Custom Validations               -> kb_inventory_custom_validations.txt
+[x] Confirm Custom Validations               -> kb_inventory_custom_validations.txt (80 EN)
 [x] Confirm Worktag Usage                    -> kb_finance_worktag_usage.txt (140 EN)
-[ ] Create Ad Hoc Putaway                    -> kb_inventory_adhoc_putaway.txt
-[ ] Inventory Site Configuration             -> kb_inventory_site.txt
-[ ] Stocking Locations                       -> kb_inventory_stocking_locations.txt
+[x] Create Ad Hoc Putaway                    -> kb_inventory_adhoc_putaway.txt (176 EN)
+[x] Inventory Site Configuration             -> kb_inventory_site.txt (211 EN)
+[x] Stocking Locations                       -> kb_inventory_stocking_locations.txt (157 EN)
 
 ================================================================================
 BENEFITS (6 topics)
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 61 | Remaining: 21
+TOTAL: 82 topics | Done: 65 | Remaining: 17
 ================================================================================

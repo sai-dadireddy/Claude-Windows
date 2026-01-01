@@ -1,0 +1,31 @@
+# Workday KB: Create Ad Hoc Putaway
+# Searched: 2026-01-01
+# Query: "Create Ad Hoc Putaway"
+# Total Results: 500 (176 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 19 EN Admin Guide results
+Page 2: 10 EN Admin Guide results
+Page 3: 18 EN Admin Guide results
+Page 4: 16 EN Admin Guide results
+Page 5: 20 EN Admin Guide results
+Page 6: 18 EN Admin Guide results
+Page 7: 19 EN Admin Guide results
+Page 8: 18 EN Admin Guide results
+Page 9: 14 EN Admin Guide results
+Page 10: 10 EN Admin Guide results
+Page 11: 12 EN Admin Guide results
+Page 12: 2 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- Create Ad Hoc Payments
+- Create Ad Hoc Bank Transactions
+- Create Ad Hoc Bank Transaction Templates
+- Steps: Manage Ad Hoc Payments
+- Create Ad Hoc Project Transactions
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/inventory/
+

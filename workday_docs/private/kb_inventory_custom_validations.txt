@@ -1,0 +1,29 @@
+# Workday KB: Confirm Custom Validations
+# Searched: 2026-01-01
+# Query: "Confirm Custom Validations"
+# Total Results: 500 (80 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 19 EN Admin Guide results
+Page 2: 12 EN Admin Guide results
+Page 3: 5 EN Admin Guide results
+Page 4: 9 EN Admin Guide results
+Page 5: 7 EN Admin Guide results
+Page 6: 4 EN Admin Guide results
+Page 7: 3 EN Admin Guide results
+Page 8: 10 EN Admin Guide results
+Page 9: 8 EN Admin Guide results
+Page 10: 3 EN Admin Guide results
+Pages 11-17: 0 EN (translations only)
+
+## Key Topics Found
+- Steps: Set Up Custom Validations
+- Set Up Custom Validation Severity and Conditions
+- Create Custom Object Validations
+- Configure Custom Validation Messages
+- Create Case Validations
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/configuring-workday/custom-validations/
+

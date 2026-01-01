@@ -1,204 +1,30 @@
-================================================================================
-WORKDAY KB ARTICLE: STOCKING LOCATIONS (INVENTORY STORAGE LOCATIONS)
-================================================================================
+# Workday KB: Stocking Locations
+# Searched: 2026-01-01
+# Query: "Stocking Locations"
+# Total Results: 515 (157 English Admin Guide)
+# Pages: 18
 
-Source: Workday Inventory WSDL (v45.1)
-URL: Workday Inventory Web Service
-Created: 2025-12-30
-Functional Area: Inventory / Supply Chain Management
+## Summary by Page
+Page 1: 23 EN Admin Guide results
+Page 2: 20 EN Admin Guide results
+Page 3: 19 EN Admin Guide results
+Page 4: 10 EN Admin Guide results
+Page 5: 14 EN Admin Guide results
+Page 6: 13 EN Admin Guide results
+Page 7: 7 EN Admin Guide results
+Page 8: 15 EN Admin Guide results
+Page 9: 15 EN Admin Guide results
+Page 10: 11 EN Admin Guide results
+Page 11: 10 EN Admin Guide results
+Pages 12-18: 0 EN (translations only)
 
-================================================================================
-OVERVIEW
-================================================================================
+## Key Topics Found
+- Set Up Inventory Stocking Locations
+- Steps: Set Up Inventory Locations
+- Reference: Location Usages
+- Set Up Inventory Sites
+- Define Put-Away Rules
 
-Stocking Locations (also called Inventory Storage Locations) are physical
-locations within an Inventory Site where items are stored. They represent
-bins, shelves, racks, or other storage areas used to organize and track
-inventory. Each Stocking Location belongs to an Inventory Site and can hold
-multiple items.
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/inventory/
 
-================================================================================
-KEY CONCEPTS
-================================================================================
-
-STOCKING LOCATION TYPES:
-- Standard Storage Locations: Regular bins/shelves for stock
-- Par Locations: Locations with min/max replenishment levels
-- Par Bins: Sublevel storage within Par Locations
-- Consigned Locations: Supplier-owned inventory storage
-
-STOCKING LOCATION ATTRIBUTES:
-- Location ID / Reference
-- Inventory Site Association
-- Location Name / Description
-- Location Type (Standard, Par, Consigned)
-- Active/Inactive Status
-- On Hold Status (prevents issues from this location)
-- Location Hierarchy (zone, aisle, rack, bin)
-
-LOCATION ENABLED OBJECT:
-- Inventory_Location_Enabled (used in WSDL operations)
-- Contains: Location Reference, Item Reference, Quantity
-- Status: Active, On Hold, Inactive
-
-================================================================================
-RELATED WORKDAY TASKS
-================================================================================
-
-CREATE / MAINTAIN STOCKING LOCATIONS:
-- Task: "Create Stocking Location"
-- Task: "Maintain Stocking Locations"
-- Task: "View Stocking Locations"
-  SOAP: Put_Inventory_Storage_Location, Get_Inventory_Storage_Locations
-
-PAR LOCATION MANAGEMENT:
-- Task: "Create Par Location"
-- Task: "Maintain Par Locations"
-  SOAP: Put_Inventory_Par_Location, Get_Inventory_Par_Locations
-
-- Task: "Create Par Bin"
-- Task: "Maintain Par Bins"
-  SOAP: Put_Inventory_Par_Bin, Get_Inventory_Par_Bins
-
-INVENTORY LOCATION ATTRIBUTES:
-- Task: "Maintain Inventory Location Attributes"
-  SOAP: Get_Inventory_Location_Attributes, Put_Inventory_Location_Attributes
-
-================================================================================
-NAVIGATION PATHS
-================================================================================
-
-PRIMARY NAVIGATION:
-1. Search: "Create Stocking Location" or "Stocking Locations"
-2. Menu: Supply Chain Hub > Inventory > Stocking Locations
-3. From Inventory Site: Related Actions > Create Stocking Location
-
-COMMON SEARCHES:
-- "All Stocking Locations" - Report of all configured locations
-- "Create Stocking Location" - Create new storage location
-- "Maintain Stocking Locations" - Edit existing locations
-- "Par Locations" - View par inventory locations
-- "Inventory Balance" - View quantities at locations
-
-================================================================================
-FIELD NAMES (from WSDL)
-================================================================================
-
-STOCKING LOCATION DATA:
-- Location_Reference (LocationObjectType)
-- Inventory_Site_Reference (parent site)
-- Location_Name
-- Location_Description
-- Location_ID
-- Active_Status (boolean)
-- On_Hold_Status (boolean)
-
-PAR LOCATION SPECIFIC:
-- Par_Level_Minimum (reorder point)
-- Par_Level_Maximum (max quantity)
-- Par_Location_Reference
-- Item_Reference (tracked item)
-- Unit_of_Measure_Reference
-
-INVENTORY LOCATION ATTRIBUTES:
-- Inventory_Item_Reference (Purchase_ItemObjectType)
-- Unit_of_Measure_Reference
-- Supplier_Reference (for consigned locations)
-- Item_Lot_Reference (for lot-controlled items)
-- Quantity
-
-================================================================================
-VALIDATION RULES
-================================================================================
-
-1. Stocking Location must belong to a valid Inventory Site
-2. Location cannot be marked On Hold for new issues
-3. Consigned locations require Supplier reference
-4. Lot-controlled items require Item Lot reference
-5. Serial-controlled items require serial number tracking
-6. UOM must be valid for the item at that location
-7. Quantity cannot exceed location capacity (if configured)
-
-================================================================================
-ELECTRON TEST AUTOMATION
-================================================================================
-
-CREATE NEW STOCKING LOCATION:
-1. enter search box as "Create Stocking Location"
-2. wait for search results
-3. click search result containing "Create Stocking Location"
-4. wait for page to load
-5. select inventory site as "[site name]"
-6. enter location ID as "[location_id]"
-7. enter location name as "[location_name]"
-8. select location type as "Standard" or "Par"
-9. click button "OK" or "Submit"
-10. verify success message displays
-11. screenshot as "INV_stocking_location_created.png"
-
-VIEW ALL STOCKING LOCATIONS:
-1. enter search box as "All Stocking Locations"
-2. wait for search results
-3. click search result containing "Stocking Locations"
-4. wait for page to load
-5. verify list displays with columns: Location, Site, Status, Type
-6. screenshot as "INV_stocking_locations_list.png"
-
-VIEW INVENTORY AT LOCATION:
-1. enter search box as "Inventory Balance"
-2. wait for search results
-3. click search result containing "Inventory Balance"
-4. wait for page to load
-5. filter by inventory site or location
-6. verify quantities display for items at locations
-7. screenshot as "INV_inventory_balance.png"
-
-================================================================================
-SOAP API OPERATIONS (Inventory.wsdl v45.1)
-================================================================================
-
-STORAGE LOCATION OPERATIONS:
-- Put_Inventory_Storage_Location - Create/update storage location
-- Get_Inventory_Storage_Locations - Retrieve storage locations
-
-PAR LOCATION OPERATIONS:
-- Put_Inventory_Par_Location - Create/update par location
-- Get_Inventory_Par_Locations - Retrieve par locations
-- Put_Inventory_Par_Bin - Create/update par bin
-- Get_Inventory_Par_Bins - Retrieve par bins
-
-LOCATION ATTRIBUTES:
-- Put_Inventory_Location_Attributes - Update item attributes at location
-- Get_Inventory_Location_Attributes - Get item attributes at location
-
-INVENTORY TRANSACTIONS (using locations):
-- Submit_Inventory_Quick_Issue - Issue from location
-- Submit_Inventory_Move - Move between locations
-- Submit_Put-Away - Put items into location
-- Submit_Inventory_Adjustment - Adjust quantity at location
-- Get_Inventory_Balance - Get quantities at locations
-
-================================================================================
-RELATED BUSINESS PROCESSES
-================================================================================
-
-- Create Stocking Location
-- Maintain Par Locations
-- Par Count (inventory counting at par locations)
-- Par Removal (remove par inventory)
-- Quick Issue (issue from stocking location)
-- Inventory Move (move between locations)
-- Put-Away (stock items into locations)
-- Inventory Adjustment (adjust quantities)
-
-================================================================================
-INTEGRATION NOTES
-================================================================================
-
-- Stocking Locations are referenced by Location_ID in integrations
-- Par Locations have additional replenishment parameters
-- Consigned locations link to Supplier for ownership tracking
-- Lot and serial tracking enabled at location level
-- On Hold status prevents outbound transactions
-
-================================================================================
