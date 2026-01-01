@@ -1,0 +1,25 @@
+# Workday KB: Create a Case for Managers
+# Searched: 2024-12-31
+# Query: "Create a Case for Managers"
+# Total Results: 500 (36 English Admin Guide)
+# Pages: 17 (EN content in pages 1-7 only)
+
+## Summary by Page
+Page 1: 13 EN Admin Guide results
+Page 2: 5 EN Admin Guide results
+Page 3: 3 EN Admin Guide results
+Page 4: 3 EN Admin Guide results
+Page 5: 5 EN Admin Guide results
+Page 6: 3 EN Admin Guide results
+Page 7: 4 EN Admin Guide results
+Pages 8-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-7
+- Pages 8-17 contain only non-English translations
+- 36 total EN Admin Guide results out of 500 total search results
+
+## Key Topics
+- Creating cases for managers
+- Manager-specific case creation and escalation
+

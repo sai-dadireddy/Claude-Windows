@@ -1,0 +1,28 @@
+# Workday KB: Create a Case on Behalf of a Non-Worker
+# Searched: 2024-12-31
+# Query: "Create a Case on Behalf of a Non-Worker"
+# Total Results: 500 (16 English Admin Guide)
+# Pages: 17 (EN content sparse across pages 1-10)
+
+## Summary by Page
+Page 1: 8 EN Admin Guide results
+Page 2: 0 EN Admin Guide results
+Page 3: 0 EN Admin Guide results
+Page 4: 1 EN Admin Guide results
+Page 5: 3 EN Admin Guide results
+Page 6: 0 EN Admin Guide results
+Page 7: 1 EN Admin Guide results
+Page 8: 2 EN Admin Guide results
+Page 9: 0 EN Admin Guide results
+Page 10: 1 EN Admin Guide results
+Pages 11-17: 0 EN Admin Guide results (non-English translations only)
+
+## Pattern Observed
+- EN Admin Guide results sparse across pages 1-10
+- Only 16 total EN Admin Guide results out of 500 total
+- Low coverage topic - may need broader search terms
+
+## Key Topics
+- Creating cases on behalf of non-workers
+- Help Desk case management functionality
+
