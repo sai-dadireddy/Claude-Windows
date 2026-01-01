@@ -25,22 +25,22 @@ Priority 1 (Score 2-3) - Critical:
 [ ] Review Elimination Rules                 -> kb_finance_elimination_rules.txt
 
 Priority 2 (Score 4-5):
-[ ] Confirm Translation Rules Sets           -> kb_finance_translation_rules.txt
-[ ] Confirm Allocation Definitions           -> kb_finance_allocation_definitions.txt
-[ ] Confirm Allocation Group Sets            -> kb_finance_allocation_groups.txt
-[ ] Verify Transaction Tax Rates             -> kb_finance_tax_rates.txt
-[ ] Verify Transaction Tax Codes             -> kb_finance_tax_codes.txt
-[ ] Verify Tax Declaration Component Categories -> kb_finance_tax_component_categories.txt
-[ ] Verify Tax Declaration Components        -> kb_finance_tax_components.txt
-[ ] Run Consolidated Trial Balance           -> kb_finance_trial_balance.txt
+[x] Confirm Translation Rules Sets           -> kb_finance_confirm_translation_rules_sets.txt (132 EN)
+[x] Confirm Allocation Definitions           -> kb_finance_confirm_allocation_definitions.txt (271 EN)
+[x] Confirm Allocation Group Sets            -> kb_finance_confirm_allocation_group_sets.txt (87 EN)
+[x] Verify Transaction Tax Rates             -> kb_finance_verify_transaction_tax_rates.txt (175 EN)
+[x] Verify Transaction Tax Codes             -> kb_finance_verify_transaction_tax_codes.txt (199 EN)
+[x] Verify Tax Declaration Component Categories -> kb_finance_verify_tax_declaration_component_categories.txt (343 EN)
+[x] Verify Tax Declaration Components        -> kb_finance_verify_tax_declaration_components.txt (294 EN)
+[x] Run Consolidated Trial Balance           -> kb_finance_run_consolidated_trial_balance.txt (123 EN)
 
 ================================================================================
 CASE MANAGEMENT (4 topics)
 ================================================================================
-[ ] Create a Case on Behalf of a Non-Worker  -> kb_case_non_worker.txt
-[ ] Create a Case About a Worker             -> kb_case_about_worker.txt
-[ ] Create a Case for Individual Contributor -> kb_case_individual.txt
-[ ] Create a Case for Managers               -> kb_case_managers.txt
+[x] Create a Case on Behalf of a Non-Worker  -> kb_case_management_create_case_on_behalf_of_non_worker.txt (16 EN)
+[x] Create a Case About a Worker             -> kb_case_management_create_case_about_a_worker.txt (115 EN)
+[x] Create a Case for Individual Contributor -> kb_case_management_create_case_for_individual_contributors.txt (39 EN)
+[x] Create a Case for Managers               -> kb_case_management_create_case_for_managers.txt (36 EN)
 
 ================================================================================
 HCM (15+ topics)
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 3 | Remaining: 79
+TOTAL: 82 topics | Done: 15 | Remaining: 67
 ================================================================================
