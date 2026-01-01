@@ -1,0 +1,27 @@
+# Workday KB: Rehire a Terminated Worker
+# Searched: 2025-12-31
+# Query: "Rehire a Terminated Worker"
+# Total Results: 500 (41 English Admin Guide)
+# Pages: 17 (EN content in pages 1-9 only)
+
+## Summary by Page
+Page 1: 13 EN Admin Guide results
+Page 2: 2 EN Admin Guide results
+Page 3: 4 EN Admin Guide results
+Page 4: 3 EN Admin Guide results
+Page 5: 8 EN Admin Guide results
+Page 6: 2 EN Admin Guide results
+Page 7: 5 EN Admin Guide results
+Page 8: 3 EN Admin Guide results
+Page 9: 1 EN Admin Guide results
+Pages 10-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-9
+- 41 total EN Admin Guide results
+- Pages 10-17 contain only translated/non-EN content
+
+## Key Topics
+- Rehire business process configuration
+- Terminated worker rehire workflows
+- Rehire eligibility and rules

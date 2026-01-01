@@ -1,0 +1,30 @@
+# Workday KB: Hire Using Position Management
+# Searched: 2025-12-31
+# Query: "Hire Using Position Management"
+# Total Results: 500 (194 English Admin Guide)
+# Pages: 17 (EN content in pages 1-12 only)
+
+## Summary by Page
+Page 1: 29 EN Admin Guide results
+Page 2: 25 EN Admin Guide results
+Page 3: 8 EN Admin Guide results
+Page 4: 15 EN Admin Guide results
+Page 5: 17 EN Admin Guide results
+Page 6: 11 EN Admin Guide results
+Page 7: 21 EN Admin Guide results
+Page 8: 16 EN Admin Guide results
+Page 9: 14 EN Admin Guide results
+Page 10: 17 EN Admin Guide results
+Page 11: 12 EN Admin Guide results
+Page 12: 9 EN Admin Guide results
+Pages 13-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-12
+- 194 total EN Admin Guide results
+- Pages 13-17 contain only translated/non-EN content
+
+## Key Topics
+- Position-based hiring workflows
+- Position management configuration
+- Hire employee business process with positions

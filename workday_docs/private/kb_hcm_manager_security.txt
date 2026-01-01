@@ -1,0 +1,33 @@
+# Workday KB: Manager Security Visibility
+# Searched: 2025-12-31
+# Query: "Manager Security Visibility"
+# Total Results: 500 (170 English Admin Guide)
+# Pages: 17 (EN content in pages 1-14, 17)
+
+## Summary by Page
+Page 1: 15 EN Admin Guide results
+Page 2: 14 EN Admin Guide results
+Page 3: 15 EN Admin Guide results
+Page 4: 10 EN Admin Guide results
+Page 5: 17 EN Admin Guide results
+Page 6: 15 EN Admin Guide results
+Page 7: 11 EN Admin Guide results
+Page 8: 17 EN Admin Guide results
+Page 9: 9 EN Admin Guide results
+Page 10: 9 EN Admin Guide results
+Page 11: 16 EN Admin Guide results
+Page 12: 14 EN Admin Guide results
+Page 13: 6 EN Admin Guide results
+Page 14: 1 EN Admin Guide results
+Pages 15-16: 0 EN Admin Guide results
+Page 17: 1 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-14
+- 170 total EN Admin Guide results
+- Pages 15-16 contain only translated/non-EN content
+
+## Key Topics
+- Manager visibility security configuration
+- Security group assignments for manager access
+- Supervisory organization visibility settings

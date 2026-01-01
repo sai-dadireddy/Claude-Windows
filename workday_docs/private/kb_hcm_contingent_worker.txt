@@ -1,0 +1,29 @@
+# Workday KB: Contract a Contingent Worker
+# Searched: 2025-12-31
+# Query: "Contract a Contingent Worker"
+# Total Results: 500 (111 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11 only)
+
+## Summary by Page
+Page 1: 26 EN Admin Guide results
+Page 2: 24 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 8 EN Admin Guide results
+Page 5: 12 EN Admin Guide results
+Page 6: 6 EN Admin Guide results
+Page 7: 8 EN Admin Guide results
+Page 8: 4 EN Admin Guide results
+Page 9: 7 EN Admin Guide results
+Page 10: 5 EN Admin Guide results
+Page 11: 2 EN Admin Guide results
+Pages 12-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-11
+- 111 total EN Admin Guide results
+- Pages 12-17 contain only translated/non-EN content
+
+## Key Topics
+- Contingent worker onboarding
+- Contract worker business process
+- External workforce management

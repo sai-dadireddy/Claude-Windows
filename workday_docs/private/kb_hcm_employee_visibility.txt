@@ -1,0 +1,29 @@
+# Workday KB: Employee Visibility
+# Searched: 2025-12-31
+# Query: "Employee Visibility"
+# Total Results: 500 (76 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11 only)
+
+## Summary by Page
+Page 1: 11 EN Admin Guide results
+Page 2: 7 EN Admin Guide results
+Page 3: 9 EN Admin Guide results
+Page 4: 10 EN Admin Guide results
+Page 5: 4 EN Admin Guide results
+Page 6: 8 EN Admin Guide results
+Page 7: 6 EN Admin Guide results
+Page 8: 9 EN Admin Guide results
+Page 9: 5 EN Admin Guide results
+Page 10: 3 EN Admin Guide results
+Page 11: 4 EN Admin Guide results
+Pages 12-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-11
+- 76 total EN Admin Guide results
+- Pages 12-17 contain only translated/non-EN content
+
+## Key Topics
+- Employee visibility and data access settings
+- Self-service visibility configuration
+- Worker profile visibility controls

@@ -1,0 +1,33 @@
+# Workday KB: Compensation Security Group Assignments
+# Searched: 2025-12-31
+# Query: "Compensation Security Group Assignments"
+# Total Results: 500 (342 English Admin Guide)
+# Pages: 17 (EN content in pages 1-15 only)
+
+## Summary by Page
+Page 1: 30 EN Admin Guide results
+Page 2: 29 EN Admin Guide results
+Page 3: 24 EN Admin Guide results
+Page 4: 25 EN Admin Guide results
+Page 5: 24 EN Admin Guide results
+Page 6: 27 EN Admin Guide results
+Page 7: 29 EN Admin Guide results
+Page 8: 21 EN Admin Guide results
+Page 9: 22 EN Admin Guide results
+Page 10: 21 EN Admin Guide results
+Page 11: 25 EN Admin Guide results
+Page 12: 24 EN Admin Guide results
+Page 13: 19 EN Admin Guide results
+Page 14: 13 EN Admin Guide results
+Page 15: 9 EN Admin Guide results
+Pages 16-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-15
+- 342 total EN Admin Guide results (highest count so far!)
+- Pages 16-17 contain only translated/non-EN content
+
+## Key Topics
+- Compensation security group configuration
+- Security group assignments for pay data access
+- Role-based compensation data visibility
