@@ -37,7 +37,7 @@ MANUAL REQUIRED (17 scenarios)
 -------------------------------
 Status:  MANUAL - Cannot auto-generate
 Reason:  Missing "Task/Step" field in Excel source
-Marking: STATUS: [MANUAL REQUIRED]
+Marking: STATUS: [MEDIUM] Score: 5.0/10
 Action:  Manual test step definition by SME required
 
 Example Files:
@@ -82,6 +82,32 @@ ELECTRON STEPS:
 
 VERIFICATION:
 - [ ] {Customer Expected Result from Excel}
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Page load fails: Verify tenant is responsive; increase wait time
+- Data not displayed: Confirm SUMMARY data exists in tenant configuration
+- General failure: Check Benefits Administration module is enabled
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- SUMMARY task/report displays successfully
+- All expected data is visible and accurate
+- Verification criteria are met
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Ensure accuracy |
+| M2 | Check effective dates are current | Validate active configuration |
+| M3 | Cross-reference with related records | Confirm data integrity |
 
 NOTES:
 - Confidence score based on RAG result quality and expected result clarity

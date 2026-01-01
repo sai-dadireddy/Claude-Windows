@@ -76,6 +76,32 @@ EXPECTED RESULT:
 Employee enrolled in Dependent Care FSA with specified contribution amount,
 new child added as dependent, and payroll deductions scheduled.
 
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-2 fails: Verify search functionality is working; try refreshing page
+- Step 3 fails: Check if user has Benefits Administrator security role
+- Page load fails: Verify tenant is responsive; increase wait time
+- Data not displayed: Confirm Dependent Care FSA on BirthAdoption Event data exists in tenant configuration
+- General failure: Check Benefits Administration module is enabled
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Dependent Care FSA on BirthAdoption Event task/report displays successfully
+- All expected data is visible and accurate
+- Verification criteria are met
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Ensure accuracy |
+| M2 | Check effective dates are current | Validate active configuration |
+| M3 | Cross-reference with related records | Confirm data integrity |
+
 NOTES:
 - Dependent Care FSA annual limit is $5,000 (or $2,500 if married filing separately)
 - Birth/adoption event has 31-day window for changes

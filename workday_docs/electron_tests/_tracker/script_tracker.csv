@@ -1864,3 +1864,228 @@ CP-P2-0290_Tax_Filing.txt,Payroll_Canada,CP-P2-0290 Tax Filing,1.0,1.0,enhanced,
 CP-P2-0300_RRSP_Funding.txt,Payroll_Canada,CP-P2-0300 RRSP Funding,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
 CP-P2-0310_Other_Benefits.txt,Payroll_Canada,CP-P2-0310 Other Benefits,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
 CP-P2-0320_General_Ledger.txt,Payroll_Canada,CP-P2-0320 General Ledger,1.0,1.0,enhanced,ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION,2026-01-01,enhance-4
+BEN-2-0030_Change_Benefits_Beneficiary_Change.txt,Benefits,Change Benefits Beneficiary Change,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0040_Change_Benefits_Life_Event.txt,Benefits,Change Benefits Life Event,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0050_Passive_Event_Overage_Dependent_Passive_Event.txt,Benefits,Passive Event Overage Dependent Passive Event,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0060_Passive_Event_Overage_Dependent_Passive_Event.txt,Benefits,Passive Event Overage Dependent Passive Event,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0070_Run_Additional_Passive_Events.txt,Benefits,Run Additional Passive Events,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0080_AddWaive_Coverage_test_all_coverage_targets.txt,Benefits,AddWaive Coverage test all coverage targets,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0090_Drop_coverage.txt,Benefits,Drop coverage,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0100_Drop_coverage_with_dependent.txt,Benefits,Drop coverage with dependent,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0110_Applicable_Benefit_Rate_Attributes.txt,Benefits,Applicable Benefit Rate Attributes,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0120_Insurance_Reduction.txt,Benefits,Insurance Reduction,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0130_Evidence_of_Insurability_-_Currently_Waiving.txt,Benefits,Evidence of Insurability - Currently Waiving,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0140_Evidence_of_Insurability_-_Currently_Covered.txt,Benefits,Evidence of Insurability - Currently Covered,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0150_Disability_Coverage_Amounts.txt,Benefits,Disability Coverage Amounts,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0160_Dependent_Age_Limit.txt,Benefits,Dependent Age Limit,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0170_Dependent_Age_Limit.txt,Benefits,Dependent Age Limit,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0180_HDHP_with_HSA.txt,Benefits,HDHP with HSA,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0190_HSA_and_FSA.txt,Benefits,HSA and FSA,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0200_Voluntary_Life_before_SpouseChild_Life.txt,Benefits,Voluntary Life before SpouseChild Life,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0210_Cross_Plan_Rules_-_Insurance_Maximum_Rules.txt,Benefits,Cross Plan Rules - Insurance Maximum Rules,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0220_Cross_Plan_Rules_-_Insurance_Percentage_Rules.txt,Benefits,Cross Plan Rules - Insurance Percentage Rules,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0230_Divorce_Event.txt,Benefits,Divorce Event,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0240_Dependent_Care_FSA_on_BirthAdoption_Event.txt,Benefits,Dependent Care FSA on BirthAdoption Event,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0250_Dependent_Event_-_BirthAdoption_Event.txt,Benefits,Dependent Event - BirthAdoption Event,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0260_Dependent_Care_FSA_on_Marriage_Event.txt,Benefits,Dependent Care FSA on Marriage Event,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0270_Dependent_Event_-_Marriage_Event.txt,Benefits,Dependent Event - Marriage Event,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0280_Administrative_Changes.txt,Benefits,Administrative Changes,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0290_Benefits_Security_Group_Assignments.txt,Benefits,Benefits Security Group Assignments,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0300_Benefit_Group_Eligibility.txt,Benefits,Benefit Group Eligibility,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0310_Benefit_Plan_Eligibility.txt,Benefits,Benefit Plan Eligibility,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0320_Dependent_Eligibility.txt,Benefits,Dependent Eligibility,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0330_Waiting_Period_for_New_Hires.txt,Benefits,Waiting Period for New Hires,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-2-0340_Calculated_Coverage_Plan_Change_for_Compensation_Changes.txt,Benefits,Calculated Coverage Plan Change for Compensation Changes,8.0,8.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0010_Verify_Benefit_Plans.txt,Benefits,Verify Benefit Plans,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0020_Benefit_Group_Audit.txt,Benefits,Benefit Group Audit,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0030_Benefits_Eligibility_by_Benefits_Group.txt,Benefits,Benefits Eligibility by Benefits Group,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0040_Report_Active_Employees_Not_Eligible_for_Benefits.txt,Benefits,Report Active Employees Not Eligible for Benefits,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0050_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Benefits,Verify User Based Security Groups Assignments Verify Role Assignments,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0060_Verify_Worker_Benefit_Elections_Details.txt,Benefits,Verify Worker Benefit Elections Details,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0070_Verify_Benefit_Census.txt,Benefits,Verify Benefit Census,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0080_Verify_Benefit_Eligibility_Rules_Audit.txt,Benefits,Verify Benefit Eligibility Rules Audit,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0090_Verify_Enrollment_Count.txt,Benefits,Verify Enrollment Count,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0100_Verify_Waives.txt,Benefits,Verify Waives,8.5,8.5,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0110_Verify_ACA_Measurement_Period.txt,Benefits,Verify ACA Measurement Period,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0120_Verify_Affordable_Care_Reporting_Configuration.txt,Benefits,Verify Affordable Care Reporting Configuration,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0130_Verify_Benefit_Groups.txt,Benefits,Verify Benefit Groups,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0140_Verify_Benefit_Coverage_Types.txt,Benefits,Verify Benefit Coverage Types,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0150_Verify_Related_Person_Relationships.txt,Benefits,Verify Related Person Relationships,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0160_Verify_Health_Care_Coverage_Targets.txt,Benefits,Verify Health Care Coverage Targets,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0170_Verify_Health_Care_Rates.txt,Benefits,Verify Health Care Rates,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0180_Verify_Insurance_Coverage_Targets.txt,Benefits,Verify Insurance Coverage Targets,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0190_Verify_Insurance_Coverages.txt,Benefits,Verify Insurance Coverages,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0200_Health_Care_Plans.txt,Benefits,Health Care Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0210_Verify_HSA_Plans.txt,Benefits,Verify HSA Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0220_Verify_FSA_Plans.txt,Benefits,Verify FSA Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0230_Verify_Insurance_Plans.txt,Benefits,Verify Insurance Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0240_Verify_Retirement_Plans.txt,Benefits,Verify Retirement Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0250_Verify_Additional_Benefits_Plans.txt,Benefits,Verify Additional Benefits Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0260_Verify_Enrollment_Event_Types.txt,Benefits,Verify Enrollment Event Types,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0270_Verify_Enrollment_Event_Rule.txt,Benefits,Verify Enrollment Event Rule,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-3-0280_Verify_Benefits_and_Pay_Hub.txt,Benefits,Verify Benefits and Pay Hub,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-01_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-01_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-02_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-02_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-03_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-03_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-04_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-04_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-05_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010-05_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010_New_Hire_to_Pay_with_Elections.txt,Benefits,New Hire to Pay with Elections,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0010_Rehire_to_Pay_with_No_elections.txt,Benefits,Rehire to Pay with No elections,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-01_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-01_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-02_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-02_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-03_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-03_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-04_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-04_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-05_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020-05_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020_New_Hire_to_Pay_with_No_Elections.txt,Benefits,New Hire to Pay with No Elections,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0020_Rehire_to_Pay_with_Elections.txt,Benefits,Rehire to Pay with Elections,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030-01_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030-02_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030-03_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030-04_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030-05_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030_Evidence_of_Insurability_-_Newly_Eligible.txt,Benefits,Evidence of Insurability - Newly Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0030_Job_Change_-_Eligible_to_Non-Eligible.txt,Benefits,Job Change - Eligible to Non-Eligible,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0040-01_Job_Change_-_Non-Eligible_to_Eligible.txt,Benefits,Job Change - Non-Eligible to Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0040-02_Job_Change_-_Non-Eligible_to_Eligible.txt,Benefits,Job Change - Non-Eligible to Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0040-03_Job_Change_-_Non-Eligible_to_Eligible.txt,Benefits,Job Change - Non-Eligible to Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0040-04_Job_Change_-_Non-Eligible_to_Eligible.txt,Benefits,Job Change - Non-Eligible to Eligible,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0040_Job_Change_-_Non-Eligible_to_Eligible.txt,Benefits,Job Change - Non-Eligible to Eligible,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0050-01_Job_Change_-_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0050-02_Job_Change_-_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0050-03_Job_Change_-_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0050-04_Job_Change_-_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0050_Job_Change_-_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Electing No Eligibility Change,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0060-01_Job_Change_-_Not_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Not Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0060-02_Job_Change_-_Not_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Not Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0060-03_Job_Change_-_Not_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Not Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0060-04_Job_Change_-_Not_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Not Electing No Eligibility Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0060_Job_Change_-_Not_Electing_No_Eligibility_Change.txt,Benefits,Job Change - Not Electing No Eligibility Change,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0070-01_Compensation_Change_-_Calculated_Coverage_Plan_-_Changed.txt,Benefits,Compensation Change - Calculated Coverage Plan - Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0070-02_Compensation_Change_-_Calculated_Coverage_Plan_-_Changed.txt,Benefits,Compensation Change - Calculated Coverage Plan - Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0070-03_Compensation_Change_-_Calculated_Coverage_Plan_-_Changed.txt,Benefits,Compensation Change - Calculated Coverage Plan - Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0070-04_Compensation_Change_-_Calculated_Coverage_Plan_-_Changed.txt,Benefits,Compensation Change - Calculated Coverage Plan - Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0070_Compensation_Change_-_Calculated_Coverage_Plan_-_Changed.txt,Benefits,Compensation Change - Calculated Coverage Plan - Changed,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0080-01_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_Changed.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0080-02_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_Changed.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0080-03_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_Changed.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0080-04_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_Changed.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan Changed,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0080_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_Changed.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan Changed,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0090-01_Compensation_Change_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Compensation Change - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0090-02_Compensation_Change_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Compensation Change - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0090-03_Compensation_Change_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Compensation Change - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0090-04_Compensation_Change_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Compensation Change - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0090_Compensation_Change_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Compensation Change - Calculated Coverage Plan - No Change,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0100-01_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0100-02_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0100-03_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0100-04_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan - No Change,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0100_Initiate_Compensation_Review_Process_-_Calculated_Coverage_Plan_-_No_Change.txt,Benefits,Initiate Compensation Review Process - Calculated Coverage Plan - No Change,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110-01_Termination.txt,Benefits,Termination,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110-02_Termination.txt,Benefits,Termination,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110-03_Termination.txt,Benefits,Termination,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110-04_Termination.txt,Benefits,Termination,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110-05_Termination.txt,Benefits,Termination,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0110_Termination.txt,Benefits,Termination,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120-01_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120-02_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120-03_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120-04_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120-05_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0120_Termination_-_Death.txt,Benefits,Termination - Death,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0130-01_Affordable_Care_Act.txt,Benefits,Affordable Care Act,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0130-02_Affordable_Care_Act.txt,Benefits,Affordable Care Act,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0130-03_Affordable_Care_Act.txt,Benefits,Affordable Care Act,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0130_Affordable_Care_Act.txt,Benefits,Affordable Care Act,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0140-01_Retro_Benefit_Change_to_PI.txt,Benefits,Retro Benefit Change to PI,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0140-02_Retro_Benefit_Change_to_PI.txt,Benefits,Retro Benefit Change to PI,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0140_Retro_Benefit_Change_to_PI.txt,Benefits,Retro Benefit Change to PI,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0150_Validate_Benefit_Election.txt,Benefits,Validate Benefit Election,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0160_Termination_-_COBRA.txt,Benefits,Termination - COBRA,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0170_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0180_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0190_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0200_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0210_Termination_-_Death.txt,Benefits,Termination - Death,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-01_Open_Enrollment_Rollout_at_Go-Live_-_Mobile_Enabled.txt,Benefits,Open Enrollment Rollout at Go-Live - Mobile Enabled,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-02_Open_Enrollment_Rollout_at_Go-Live_-_Changes_to_Benefit_Groups_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Changes to Benefit Groups if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-03_Open_Enrollment_Rollout_at_Go-Live_-_Benefit_Group_Audit.txt,Benefits,Open Enrollment Rollout at Go-Live - Benefit Group Audit,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-04_Open_Enrollment_Rollout_at_Go-Live_-_New_Benefit_Providers_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - New Benefit Providers if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-05_Open_Enrollment_Rollout_at_Go-Live_-_Changes_to_Coverage_Types_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Changes to Coverage Types if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-06_Open_Enrollment_Rollout_at_Go-Live_-_Changes_to_Benefit_Plans_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Changes to Benefit Plans if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-07_Open_Enrollment_Rollout_at_Go-Live_-_Health_Care_Plans.txt,Benefits,Open Enrollment Rollout at Go-Live - Health Care Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-08_Open_Enrollment_Rollout_at_Go-Live_-_Health_Care_Plans_-_Extended_Plan_Details.txt,Benefits,Open Enrollment Rollout at Go-Live - Health Care Plans - Extended Plan Details,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-09_Open_Enrollment_Rollout_at_Go-Live_-_Health_Care_Rates_and_Credits.txt,Benefits,Open Enrollment Rollout at Go-Live - Health Care Rates and Credits,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-10_Open_Enrollment_Rollout_at_Go-Live_-_Wellness_Data_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Wellness Data if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-11_Open_Enrollment_Rollout_at_Go-Live_-_Decision_Support_for_Medical_Plan_Election_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Decision Support for Medical Plan Election if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-12_Open_Enrollment_Rollout_at_Go-Live_-_Savings_Account_Plans.txt,Benefits,Open Enrollment Rollout at Go-Live - Savings Account Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-13_Open_Enrollment_Rollout_at_Go-Live_-_Spending_Account_Plans.txt,Benefits,Open Enrollment Rollout at Go-Live - Spending Account Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-14_Open_Enrollment_Rollout_at_Go-Live_-_Insurance_Plans_Coverage_Targets_and_Coverage_Levels.txt,Benefits,Open Enrollment Rollout at Go-Live - Insurance Plans Coverage Targets and Coverage Levels,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-15_Open_Enrollment_Rollout_at_Go-Live_-_Insurance_Plans_Insurance_Coverages_Rates_and_Credits.txt,Benefits,Open Enrollment Rollout at Go-Live - Insurance Plans Insurance Coverages Rates and Credits,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-16_Open_Enrollment_Rollout_at_Go-Live_-_Retirement_Savings_Plans_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Retirement Savings Plans if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-17_Open_Enrollment_Rollout_at_Go-Live_-_Additional_Benefit_Plans_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Additional Benefit Plans if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-18_Open_Enrollment_Rollout_at_Go-Live_-_Individual_Rates.txt,Benefits,Open Enrollment Rollout at Go-Live - Individual Rates,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-19_Open_Enrollment_Rollout_at_Go-Live_-_Cross_Plan_Rules.txt,Benefits,Open Enrollment Rollout at Go-Live - Cross Plan Rules,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-20_Open_Enrollment_Rollout_at_Go-Live_-_Changes_to_Dependent_Eligibility_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Changes to Dependent Eligibility if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-21_Open_Enrollment_Rollout_at_Go-Live_-_Enrollment_Instructions.txt,Benefits,Open Enrollment Rollout at Go-Live - Enrollment Instructions,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-22_Open_Enrollment_Rollout_at_Go-Live_-_Benefit_Defaults_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Benefit Defaults if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-23_Open_Enrollment_Rollout_at_Go-Live_-_Benefit_Annual_Rates_if_applicable.txt,Benefits,Open Enrollment Rollout at Go-Live - Benefit Annual Rates if applicable,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220-24_Open_Enrollment_Rollout_at_Go-Live_-_Eligibility_Validation.txt,Benefits,Open Enrollment Rollout at Go-Live - Eligibility Validation,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0220_Open_Enrollment_Rollout_at_Go-Live_-_Mobile_Enabled.txt,Benefits,Open Enrollment Rollout at Go-Live - Mobile Enabled,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0230_Open_Enrollment_Business_Process.txt,Benefits,Open Enrollment Business Process,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0240_Reopen_Open_Enrollment_Business_Process.txt,Benefits,Reopen Open Enrollment Business Process,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0250_Open_Enrollment_-_Review_Plan_Year_Definition.txt,Benefits,Open Enrollment - Review Plan Year Definition,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0260_Open_Enrollment_-_Review_the_Open_Enrollment_Event_Type.txt,Benefits,Open Enrollment - Review the Open Enrollment Event Type,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0270_Open_Enrollment_-_Review_Enrollment_Event_Rule.txt,Benefits,Open Enrollment - Review Enrollment Event Rule,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0280_Open_Enrollment_-_Benefit_Plan_Mapping.txt,Benefits,Open Enrollment - Benefit Plan Mapping,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0290_Open_Enrollment_-_Launch_Open_Enrollment.txt,Benefits,Open Enrollment - Launch Open Enrollment,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0300_Open_Enrollment_-_Review_the_Open_Enrollment_Status_Report.txt,Benefits,Open Enrollment - Review the Open Enrollment Status Report,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0310_Open_Enrollment_-_Employee_As_Self.txt,Benefits,Open Enrollment - Employee As Self,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0320_Open_Enrollment_-_Coordination_of_Events.txt,Benefits,Open Enrollment - Coordination of Events,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0330_Open_Enrollment_-_Coordination_of_Events.txt,Benefits,Open Enrollment - Coordination of Events,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0340_Open_Enrollment_-_Close.txt,Benefits,Open Enrollment - Close,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0350_Open_Enrollment_-_Finalize.txt,Benefits,Open Enrollment - Finalize,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0360_Open_Enrollment_-_Coordination_of_Events.txt,Benefits,Open Enrollment - Coordination of Events,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0370_Open_Enrollment_-_Coordination_of_Events.txt,Benefits,Open Enrollment - Coordination of Events,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0380_Open_Enrollment_-_Coordination_of_Events_and_Close_Finalize.txt,Benefits,Open Enrollment - Coordination of Events and Close Finalize,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0390_Run_Additional_Passive_Events.txt,Benefits,Run Additional Passive Events,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0400_Dependent_Care_FSA_on_BirthAdoption_Event.txt,Benefits,Dependent Care FSA on BirthAdoption Event,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-4-0410_Dependent_Event_-_Marriage_Event.txt,Benefits,Dependent Event - Marriage Event,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0010_Verify_Benefit_Plans.txt,Benefits,Verify Benefit Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0020_Benefit_Group_Audit.txt,Benefits,Benefit Group Audit,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0030_Benefits_Eligibility_by_Benefits_Group.txt,Benefits,Benefits Eligibility by Benefits Group,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0040_Active_Employees_Not_Eligible_for_Benefits.txt,Benefits,Active Employees Not Eligible for Benefits,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0050_Verify_User_Based_Security_Groups_Assignments_Verify_Role_Assignments.txt,Benefits,Verify User Based Security Groups Assignments Verify Role Assignments,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0060_Verify_Worker_Benefit_Elections_Details.txt,Benefits,Verify Worker Benefit Elections Details,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0070_Verify_Benefit_Census.txt,Benefits,Verify Benefit Census,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0080_Verify_Benefit_Eligibility_Rules_Audit.txt,Benefits,Verify Benefit Eligibility Rules Audit,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0090_Verify_Enrollment_Count.txt,Benefits,Verify Enrollment Count,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0100_Verify_Waives.txt,Benefits,Verify Waives,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0110_Verify_ACA_Measurement_Period.txt,Benefits,Verify ACA Measurement Period,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0120_Verify_Affordable_Care_Reporting_Configuration.txt,Benefits,Verify Affordable Care Reporting Configuration,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0130_Verify_Benefit_Groups.txt,Benefits,Verify Benefit Groups,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0140_Verify_Benefit_Coverage_Types.txt,Benefits,Verify Benefit Coverage Types,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0150_Verify_Related_Person_Relationships.txt,Benefits,Verify Related Person Relationships,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0160_Verify_Health_Care_Coverage_Targets.txt,Benefits,Verify Health Care Coverage Targets,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0170_Verify_Health_Care_Rates.txt,Benefits,Verify Health Care Rates,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0180_Verify_Insurance_Coverage_Targets.txt,Benefits,Verify Insurance Coverage Targets,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0190_Verify_Insurance_Coverages.txt,Benefits,Verify Insurance Coverages,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0200_Health_Care_Plans.txt,Benefits,Health Care Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0210_Verify_HSA_Plans.txt,Benefits,Verify HSA Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0220_Verify_FSA_Plans.txt,Benefits,Verify FSA Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0230_Verify_Insurance_Plans.txt,Benefits,Verify Insurance Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0240_Verify_Retirement_Plans.txt,Benefits,Verify Retirement Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0250_Verify_Additional_Benefits_Plans.txt,Benefits,Verify Additional Benefits Plans,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0260_Verify_Enrollment_Event_Types.txt,Benefits,Verify Enrollment Event Types,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0270_Verify_Enrollment_Event_Rule.txt,Benefits,Verify Enrollment Event Rule,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+BEN-5-0280_Verify_Benefits_and_Pay_Hub.txt,Benefits,Verify Benefits and Pay Hub,7.0,7.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
+GENERATION_SUMMARY.txt,Benefits,SUMMARY,5.0,5.0,enhanced,"ON FAILURE;EXPECTED OUTCOME;MANUAL VERIFICATION",2026-01-01,enhance-6
