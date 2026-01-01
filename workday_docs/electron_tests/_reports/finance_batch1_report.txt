@@ -1,0 +1,128 @@
+================================================================================
+ELECTRON-2 BATCH REPORT: FINANCE
+================================================================================
+Date: 2026-01-01
+Agent: electron-2
+Scripts Processed: 10
+Folder: C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/Finance/
+
+================================================================================
+RESULTS TABLE
+================================================================================
+| Test ID        | Test Name                                        | Script Score | RAG Score | Format OK | Needs Update |
+|----------------|--------------------------------------------------|--------------|-----------|-----------|--------------|
+| FACC-1-0010    | Audit Supervisory Organizations                  | 8.0          | 8         | NO        | YES          |
+| FACC-1-0010    | Confirm Organization Types                       | 8.0          | 8         | NO        | YES          |
+| FACC-1-0020    | Audit Supervisory Hierarchy Structure            | 9.0          | 9         | NO        | YES          |
+| FACC-1-0020    | Confirm Organization Subtypes                    | 8.0          | 8         | NO        | YES          |
+| FACC-1-0030    | Audit Job Profile Setup                          | 9.0          | 9         | NO        | YES          |
+| FACC-1-0030    | Confirm Companies & Company Hierarchies          | 10.0         | 4         | NO        | YES          |
+| FACC-1-0040    | Audit Worker Data Conversion (Names)             | 10.0         | 5         | NO        | YES          |
+| FACC-1-0040    | Confirm Intercompany Profile Setup               | 9.0          | 9         | NO        | YES          |
+| FACC-1-0050    | Audit Worker Data Conversion (Job Data)          | 5.0          | 5         | NO        | YES          |
+| FACC-1-0050    | Confirm Location Types                           | 8.0          | 8         | NO        | YES          |
+
+================================================================================
+FORMAT ANALYSIS
+================================================================================
+Expected Template Sections:
+- PURPOSE
+- PREREQUISITES
+- AUTOMATED STEPS
+- MANUAL VERIFICATION
+- ON FAILURE
+- EXPECTED OUTCOME
+
+Current Script Format (ALL 10 scripts):
+- TEST ID
+- FUNCTIONAL AREA
+- TEST NAME
+- CONFIDENCE
+- ELECTRON STEPS (basic)
+- VERIFICATION (checklist only)
+
+MISSING FROM ALL SCRIPTS:
+- PURPOSE section (why this test matters)
+- PREREQUISITES section (required role/permission, required data/setup)
+- MANUAL VERIFICATION table (Step, Action, Reason columns)
+- ON FAILURE section (fallback instructions)
+- EXPECTED OUTCOME section (detailed results)
+
+================================================================================
+TRUST SCORE ANALYSIS
+================================================================================
+High Trust (RAG >= 7):
+- Audit Supervisory Organizations (8)
+- Confirm Organization Types (8)
+- Audit Supervisory Hierarchy Structure (9)
+- Confirm Organization Subtypes (8)
+- Audit Job Profile Setup (9)
+- Confirm Intercompany Profile Setup (9)
+- Confirm Location Types (8)
+
+Low Trust (RAG < 7) - NEEDS VERIFICATION:
+- Confirm Companies & Company Hierarchies (RAG: 4) - Script claims 10.0, RAG shows 4
+- Audit Worker Data Conversion (Names) (RAG: 5) - Script claims 10.0, RAG shows 5
+- Audit Worker Data Conversion (Job Data) (RAG: 5) - Script claims 5.0, RAG shows 5
+
+================================================================================
+SUMMARY
+================================================================================
+- Scripts verified: 10
+- Need format update: 10 (ALL scripts lack required template sections)
+- Low trust (RAG < 7): 3 scripts
+- Trust score mismatch: 2 scripts (FACC-1-0030 Companies, FACC-1-0040 Names)
+
+RECOMMENDATIONS:
+1. Update ALL scripts to include missing template sections
+2. Re-verify low trust scripts (RAG < 7) with browser research
+3. Correct trust score discrepancies (scripts claiming higher confidence than RAG supports)
+4. Add proper PREREQUISITES for Finance/Accounting roles
+5. Add ON FAILURE fallback instructions for each test
+
+================================================================================
+RAG QUERY DETAILS
+================================================================================
+Query 1: "Audit Supervisory Organizations"
+  Top Match: test_scenarios_index.txt (score: 8)
+  Context: HCM organization auditing task
+
+Query 2: "Confirm Organization Types"
+  Top Match: electron_test_samples.txt (score: 8)
+  Context: Organization configuration verification
+
+Query 3: "Audit Supervisory Hierarchy Structure"
+  Top Match: test_scenarios_index.txt (score: 9)
+  Context: Supervisory hierarchy audit task
+
+Query 4: "Confirm Organization Subtypes"
+  Top Match: test_scenarios_index.txt (score: 8)
+  Context: Organization subtype configuration
+
+Query 5: "Audit Job Profile Setup"
+  Top Match: test_scenarios_index.txt (score: 9)
+  Context: Job profile setup audit
+
+Query 6: "Confirm Companies Company Hierarchies"
+  Top Match: electron_test_samples.txt (score: 4)
+  Context: Limited documentation - needs browser research
+
+Query 7: "Audit Worker Data Conversion Names"
+  Top Match: kb_generic_extract_tasks.txt (score: 5)
+  Context: Generic extract pattern - not specific to Names conversion
+
+Query 8: "Confirm Intercompany Profile Setup"
+  Top Match: test_scenarios_index.txt (score: 9)
+  Context: Intercompany configuration verification
+
+Query 9: "Audit Worker Data Conversion Job Data"
+  Top Match: kb_generic_extract_tasks.txt (score: 5)
+  Context: Generic extract pattern - not specific to Job Data conversion
+
+Query 10: "Confirm Location Types"
+  Top Match: test_scenarios_index.txt (score: 8)
+  Context: Location type configuration
+
+================================================================================
+END OF REPORT
+================================================================================

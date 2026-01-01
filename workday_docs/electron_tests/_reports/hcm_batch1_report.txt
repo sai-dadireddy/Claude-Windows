@@ -1,0 +1,106 @@
+================================================================================
+ELECTRON-1 BATCH REPORT: HCM
+================================================================================
+Date: 2026-01-01
+Scripts Processed: 10
+Agent: electron-1
+================================================================================
+
+| Test ID       | Test Name                                | Trust | Format OK | Needs Update |
+|---------------|------------------------------------------|-------|-----------|--------------|
+| HCM-1-0010    | Audit Company Setup                      | 8.0   | NO        | YES          |
+| HCM-1-0020    | Audit Location Setup                     | 8.0   | NO        | YES          |
+| HCM-1-0030    | Audit Cost Center Setup                  | 9.0   | NO        | YES          |
+| HCM-1-0040    | Audit Region Setup                       | 8.0   | NO        | YES          |
+| HCM-1-0050    | Audit Supervisory Organizations          | 8.0   | NO        | YES          |
+| HCM-1-0060    | Audit Organization Structures            | 8.0   | NO        | YES          |
+| HCM-1-0070    | Audit Supervisory Hierarchy Structure    | 9.0   | NO        | YES          |
+| HCM-1-0080    | Audit Compensation Package Setup         | 9.0   | NO        | YES          |
+| HCM-1-0090    | Audit Compensation Basis Setup - CTC     | 8.0   | NO        | YES          |
+| HCM-1-0100    | Audit Compensation Plan Setup            | 9.0   | NO        | YES          |
+
+================================================================================
+SUMMARY
+================================================================================
+- Scripts verified: 10
+- Need format update: 10
+- Low trust (< 7): 0
+- High trust (>= 7): 10
+
+================================================================================
+FORMAT COMPLIANCE DETAILS
+================================================================================
+Template requires the following sections:
+  [x] PURPOSE - Present as "DESCRIPTION" (non-compliant naming)
+  [x] PREREQUISITES - Present
+  [x] AUTOMATED STEPS - Present as "ELECTRON STEPS" (non-compliant naming)
+  [ ] MANUAL VERIFICATION - MISSING (table format with Step/Action/Reason)
+  [ ] ON FAILURE - MISSING (fallback instructions)
+  [x] EXPECTED OUTCOME - Present as "VERIFICATION" (non-compliant naming)
+  [?] API ALTERNATIVE - Extra section (not in template)
+  [?] RAG NOTES - Extra section (not in template)
+  [ ] Separator lines (----------------) - MISSING
+
+ISSUES FOUND:
+1. Section naming inconsistent with template:
+   - "DESCRIPTION" should be "PURPOSE"
+   - "ELECTRON STEPS" should be "AUTOMATED STEPS"
+   - "VERIFICATION" should be "EXPECTED OUTCOME"
+
+2. Missing required sections:
+   - MANUAL VERIFICATION table (Step | Action | Reason)
+   - ON FAILURE fallback instructions
+
+3. RAG-extracted steps are generic:
+   - Step 5 shows same content for all scripts (boilerplate)
+   - Should have task-specific detailed steps
+
+4. Duplicate verification checkboxes:
+   - "Task completed successfully" appears twice in each script
+
+================================================================================
+RAG TRUST SCORE DETAILS
+================================================================================
+| Test ID    | RAG Score | Source                    | Confidence |
+|------------|-----------|---------------------------|------------|
+| HCM-1-0010 | 8.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0020 | 8.0       | kb_electron_dsl.txt       | HIGH       |
+| HCM-1-0030 | 9.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0040 | 8.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0050 | 8.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0060 | 8.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0070 | 9.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0080 | 9.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0090 | 8.0       | test_scenarios_index.txt  | HIGH       |
+| HCM-1-0100 | 9.0       | test_scenarios_index.txt  | HIGH       |
+
+Note: All scripts have good RAG coverage (>= 8.0). However, RAG content is
+primarily from the test_scenarios_index.txt which only contains task names
+and search terms. Deeper KB articles with detailed steps are not being matched.
+
+================================================================================
+RECOMMENDED ACTIONS
+================================================================================
+1. Update all 10 scripts to match the template format:
+   - Rename sections to match template
+   - Add MANUAL VERIFICATION table
+   - Add ON FAILURE section
+   - Add proper separator lines
+
+2. Enhance RAG queries:
+   - Query for specific Workday tasks (e.g., "Extract Companies task")
+   - Look for corresponding KB articles with detailed procedures
+
+3. Fix duplicate verification checkboxes
+
+4. Consider adding detailed steps specific to each audit task:
+   - HCM-1-0010: Steps for reviewing company codes, legal names, hierarchy
+   - HCM-1-0020: Steps for verifying location addresses, regions, timezones
+   - HCM-1-0030: Steps for validating cost center codes and hierarchy
+   - etc.
+
+================================================================================
+TOTAL HCM SCRIPTS IN FOLDER: 335
+BATCH 1 COVERAGE: 10/335 (3.0%)
+================================================================================
+END REPORT
