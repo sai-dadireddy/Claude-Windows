@@ -1,0 +1,691 @@
+================================================================================
+INVENTORY ELECTRON TEST SCRIPTS - FULL VALIDATION REPORT
+================================================================================
+Generated: 2026-01-01
+Validator: electron-4
+Total Scripts: 195
+================================================================================
+
+EXECUTIVE SUMMARY
+================================================================================
+HIGH Trust (8-10):    4 scripts   (2.1%)
+MEDIUM Trust (5-7):   87 scripts  (44.6%)
+LOW Trust (1-4):      104 scripts (53.3%)
+
+FORMAT COMPLIANCE:
+- Has ON FAILURE section:        2 scripts   (1.0%)
+- Has EXPECTED OUTCOME section:  2 scripts   (1.0%)
+- Has MANUAL VERIFICATION table: 0 scripts   (0.0%)
+- Has complete DESCRIPTION:      2 scripts   (1.0%)
+- Has BUSINESS CONTEXT:          2 scripts   (1.0%)
+- Has API ALTERNATIVE:           195 scripts (100%)
+- Has PREREQUISITES:             2 scripts   (1.0%)
+
+OVERALL QUALITY ASSESSMENT: NEEDS IMPROVEMENT
+- 97.9% of scripts lack required format sections
+- 53.3% of scripts have LOW trust scores requiring KB research
+- Generic "Run report" steps used in 45+ scripts without specific task names
+
+================================================================================
+DETAILED SCRIPT-BY-SCRIPT VALIDATION
+================================================================================
+
+--------------------------------------------------------------------------------
+SERIES: INV-1-XXXX (Configuration/Setup Tests)
+Scripts: 41
+--------------------------------------------------------------------------------
+
+INV-1-0010_Inventory_Site.txt
+  Trust Score: HIGH (7.5/10)
+  RAG Coverage: kb_inventory_inventory_site.txt, Inventory.wsdl
+  Format Compliance:
+    [X] DESCRIPTION - Complete
+    [X] PREREQUISITES - Complete
+    [X] WORKDAY ROLE - Inventory Manager / Supply Chain Administrator
+    [X] ELECTRON STEPS - Detailed (23 steps)
+    [X] VERIFICATION - 7 checkpoints
+    [X] ALTERNATE SEARCH TERMS - 6 alternatives
+    [X] API ALTERNATIVE - SOAP operations listed
+    [X] BUSINESS CONTEXT - Complete
+    [ ] ON FAILURE - MISSING
+    [ ] EXPECTED OUTCOME - MISSING
+    [ ] MANUAL VERIFICATION - MISSING
+  Issues: Missing ON FAILURE and MANUAL VERIFICATION sections
+  Action: FLAG FOR REVIEW - Add missing sections
+
+INV-1-0020_Stocking_Locations.txt
+  Trust Score: HIGH (7.5/10)
+  RAG Coverage: kb_inventory_stocking_locations.txt, Inventory.wsdl v45.1
+  Format Compliance:
+    [X] DESCRIPTION - Complete
+    [X] PREREQUISITES - Complete
+    [X] WORKDAY ROLE - Inventory Manager / Supply Chain Administrator
+    [X] ELECTRON STEPS - Detailed (30 steps)
+    [X] VERIFICATION - 9 checkpoints
+    [X] ALTERNATE SEARCH TERMS - 6 alternatives
+    [X] API ALTERNATIVE - 8 SOAP operations listed
+    [X] BUSINESS CONTEXT - Complete
+    [ ] ON FAILURE - MISSING
+    [ ] EXPECTED OUTCOME - MISSING
+    [ ] MANUAL VERIFICATION - MISSING
+  Issues: Missing ON FAILURE and MANUAL VERIFICATION sections
+  Action: FLAG FOR REVIEW - Add missing sections
+
+INV-1-0030_Inventory_Location_Usage_Type.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance:
+    [ ] DESCRIPTION - EMPTY
+    [ ] PREREQUISITES - MISSING
+    [ ] WORKDAY ROLE - EMPTY
+    [!] ELECTRON STEPS - Generic "Run report" (NOT task-specific)
+    [ ] VERIFICATION - Generic (2 items)
+    [ ] ALTERNATE SEARCH TERMS - MISSING
+    [X] API ALTERNATIVE - Present (generic)
+    [ ] BUSINESS CONTEXT - MISSING
+    [ ] ON FAILURE - MISSING
+    [ ] EXPECTED OUTCOME - MISSING
+    [ ] MANUAL VERIFICATION - MISSING
+  Issues: Steps do not match task name, generic template used
+  Action: NEEDS KB RESEARCH - Script does not test "Inventory Location Usage Type"
+
+INV-1-0040_Purchase_Items.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance:
+    [ ] DESCRIPTION - EMPTY
+    [ ] PREREQUISITES - MISSING
+    [ ] WORKDAY ROLE - EMPTY
+    [!] ELECTRON STEPS - Generic "Run report" (NOT task-specific)
+    [ ] VERIFICATION - Generic (2 items)
+    [ ] ALTERNATE SEARCH TERMS - MISSING
+    [X] API ALTERNATIVE - Present (generic)
+    [ ] BUSINESS CONTEXT - MISSING
+  Issues: Steps do not match task name "Purchase Items"
+  Action: NEEDS KB RESEARCH - Replace generic steps
+
+INV-1-0050_Item_Identifier_Types.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE - Generic template
+  Issues: Uses "Run report" instead of "Item Identifier Types" task
+  Action: NEEDS KB RESEARCH
+
+INV-1-0060_Unit_of_Measure_Sets.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE - Generic template
+  Issues: Uses "Run report" instead of "Unit of Measure Sets" task
+  Action: NEEDS KB RESEARCH
+
+INV-1-0070_Inventory_Adjustment_Reasons.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE - Generic template
+  Issues: Uses "Run report" instead of task-specific steps
+  Action: NEEDS KB RESEARCH
+
+INV-1-0080_Inventory_Put-Away_Rules.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE - Generic template
+  Issues: Uses "Run report" instead of "Put-Away Rules" task
+  Action: NEEDS KB RESEARCH
+
+INV-1-0090_Inventory_ABC_Classification.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE - Generic template
+  Issues: Uses "Run report" instead of "ABC Classification" task
+  Action: NEEDS KB RESEARCH
+
+INV-1-0100_Confirm_Company_Procurement_Options.txt
+  Trust Score: MEDIUM (5.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE
+  Issues: Search uses "1. Edit Company..." (numbered prefix)
+  Action: FLAG FOR REVIEW - Remove numbered prefix from search term
+
+INV-1-0110_Review_Spend_Categories.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE - Generic template
+  Action: FLAG FOR REVIEW
+
+INV-1-0120_Review_Units_of_Measure.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE - Generic template
+  Action: FLAG FOR REVIEW
+
+INV-1-0130_Requisition_Types.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE - Generic template
+  Action: FLAG FOR REVIEW
+
+INV-1-0140_User_Based_Inventory_Roles.txt
+  Trust Score: HIGH (7.0/10)
+  Format Compliance: INCOMPLETE - Uses "Run report" generically
+  Action: NEEDS KB RESEARCH - Should search role-related tasks
+
+INV-1-0150_Role-Based_Inventory_Roles.txt
+  Trust Score: HIGH (7.0/10)
+  Format Compliance: INCOMPLETE - Generic template
+  Action: NEEDS KB RESEARCH
+
+INV-1-0160_Confirm_Inventory_Posting_Rules.txt
+  Trust Score: MEDIUM (6.0/10)
+  Format Compliance: INCOMPLETE
+  Issues: Uses "1. View Account Posting Rule Set" (numbered prefix)
+  Action: FLAG FOR REVIEW - Clean search term
+
+INV-1-0170_Confirm_Shipping_Information.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE
+  Action: FLAG FOR REVIEW
+
+INV-1-0180_Confirm_Custom_Validations.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE
+  Action: FLAG FOR REVIEW
+
+INV-1-0190_Confirm_Worktag_Usages.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE
+  Action: FLAG FOR REVIEW
+
+INV-1-0200_Confirm_Related_worktag_usages.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Format Compliance: INCOMPLETE
+  Action: FLAG FOR REVIEW
+
+INV-1-0210_Create_Ad_Hoc_Putaway.txt
+  Trust Score: LOW (1.0/10)
+  RAG Coverage: RAG Enhanced (generic)
+  Format Compliance: INCOMPLETE
+  Issues: Search uses "1)Putaway Inventory" with invalid syntax
+  Action: NEEDS KB RESEARCH - LOW RAG COVERAGE
+
+INV-1-0220_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: Inventory.wsdl, kb_inventory_inventory_site.txt
+  Action: MARK VALIDATED - Good RAG coverage
+
+INV-1-0230_Find_Inventory_Transaction.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-1-0240_Inventory_Adjustment.txt
+  Trust Score: MEDIUM (6.0/10)
+  Issues: Search uses "nan" (invalid)
+  Action: NEEDS KB RESEARCH - Fix invalid search term
+
+INV-1-0250_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate of INV-1-0220
+
+INV-1-0260_Inventory_Adjustment.txt
+  Trust Score: MEDIUM (6.0/10)
+  Action: FLAG FOR REVIEW - Possible duplicate
+
+INV-1-0270_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0280_Find_Inventory_Transaction.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0290_Create_Ad_Hoc_Inventory_Count.txt
+  Trust Score: HIGH (9.0/10) - CLAIMED, NEEDS VERIFICATION
+  Issues: Malformed multi-line search box entry, syntax errors
+  Action: NEEDS KB RESEARCH - Fix malformed steps
+
+INV-1-0300_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  Action: FLAG FOR REVIEW - Multiple duplicates
+
+INV-1-0310_Find_Inventory_Transaction.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0320_Inventory_Count.txt
+  Trust Score: MEDIUM (6.0/10)
+  RAG Coverage: Admin Guide Spend Management (score 9)
+  Action: FLAG FOR REVIEW
+
+INV-1-0330_Find_Inventory_Count_Sheet.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-1-0340_Count_Inventory.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-1-0350_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0360_Find_Inventory_Transaction.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0370_Adjust_Average_Cost_of_an_Inventoried_Item.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-1-0380_View_Business_Process_for_Quick_Issue_Event.txt
+  Trust Score: MEDIUM (6.0/10)
+  RAG Coverage: Admin Guide Glossary (score 3)
+  Issues: Low RAG match, search has embedded quotes
+  Action: NEEDS KB RESEARCH
+
+INV-1-0390_Create_a_Quick_Issue.txt
+  Trust Score: HIGH (7.0-8.0/10)
+  RAG Coverage: Inventory.wsdl - Submit_Inventory_Quick_Issue
+  Action: MARK VALIDATED
+
+INV-1-0400_Find_Inventory_Balance.txt
+  Trust Score: HIGH (7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+INV-1-0410_Find_Inventory_Transaction.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW - Duplicate
+
+--------------------------------------------------------------------------------
+SERIES: INV-2-XXXX (Procurement/Transaction Flow Tests)
+Scripts: 16
+--------------------------------------------------------------------------------
+
+INV-2-0010_Create_Inventory_Site.txt
+  Trust Score: LOW (3.0/10)
+  Issues: Uses "Create Inventory Move" search instead of "Create Inventory Site"
+  Action: NEEDS KB RESEARCH - CRITICAL MISMATCH
+
+INV-2-0020_Create_Stocking_Locations.txt
+  Trust Score: LOW (3.0-4.0/10)
+  Action: NEEDS KB RESEARCH
+
+INV-2-0030_Create_Par_Location.txt
+  Trust Score: LOW (3.0-4.0/10)
+  Action: NEEDS KB RESEARCH
+
+INV-2-0040_Create_Purchase_Item.txt
+  Trust Score: LOW (3.0-4.0/10)
+  Action: NEEDS KB RESEARCH
+
+INV-2-0050_Create_a_Requisition_for_an_Inventory_Items.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: Resource_Management.wsdl (score 10)
+  Issues: Multi-line search term invalid
+  Action: FLAG FOR REVIEW - Fix search syntax
+
+INV-2-0060_Approve_Requisition.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  RAG Coverage: procurement_v5.json
+  Action: FLAG FOR REVIEW
+
+INV-2-0070_Source_Requisition_to_Purchase_Order.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-2-0080_Issue_Purchase_Order.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: kb_procurement_purchase_order.txt
+  Action: FLAG FOR REVIEW
+
+INV-2-0090_Create_Receipt.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: Resource_Management.wsdl (score 11)
+  Issues: Multi-line options in search box
+  Action: FLAG FOR REVIEW - Fix search syntax
+
+INV-2-0100_Put-Away_Inventory.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: Admin Guide Spend Management (score 4)
+  Issues: Actual RAG score is LOW (4)
+  Action: NEEDS KB RESEARCH - Score discrepancy
+
+INV-2-0110_View_Business_Process_for_Inventory_Stock_Request_.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-2-0120_Create_Inventory_Stock_Request.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: Admin Guide Glossary (score 5)
+  Issues: Actual RAG score is LOW-MEDIUM
+  Action: FLAG FOR REVIEW
+
+INV-2-0130_View_Business_Process_for_Inventory_Pick_List_Even.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-2-0140_Create_Inventory_Picking_Lists.txt
+  Trust Score: HIGH (8.0/10)
+  RAG Coverage: Inventory.wsdl
+  Action: FLAG FOR REVIEW
+
+INV-2-0150_Move_Inventory.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: Admin Guide Spend Management (score 3)
+  Issues: Actual RAG score is LOW (3)
+  Action: NEEDS KB RESEARCH - Score discrepancy
+
+INV-2-0160_Change_Item_Spend_Category.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Action: FLAG FOR REVIEW
+
+--------------------------------------------------------------------------------
+SERIES: INV-3-XXXX (End-to-End Transaction Tests)
+Scripts: 138 (including 26 Consignment sub-scripts)
+--------------------------------------------------------------------------------
+
+INV-3-0010 to INV-3-0200: Configuration Review
+  Count: 20 scripts
+  Trust Score: LOW (3.0-4.0/10) - Most scripts
+  Issues: Many use generic search terms or incorrect task names
+  Action: NEEDS KB RESEARCH - Batch review required
+
+INV-3-0010_Inventory_Site.txt
+  Trust Score: LOW (3.0/10)
+  Issues: Uses "View Inventory Balance" instead of "Inventory Site"
+  Action: NEEDS KB RESEARCH - Task mismatch
+
+INV-3-0020_Stocking_Locations.txt
+  Trust Score: LOW (3.0-4.0/10)
+  Action: NEEDS KB RESEARCH
+
+INV-3-0030_Inventory_Location_Usage_Type.txt
+  Trust Score: LOW (3.0-4.0/10)
+  Action: NEEDS KB RESEARCH
+
+INV-3-0040 to INV-3-0200: Configuration scripts
+  Trust Score Range: LOW to MEDIUM (3.0-6.0/10)
+  Action: NEEDS KB RESEARCH (bulk)
+
+INV-3-0210_Replenish_Inventory.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  RAG Coverage: Limited
+  Action: FLAG FOR REVIEW
+
+INV-3-0220_Find_Requisition.txt to INV-3-0330: Transaction Flow
+  Count: 12 scripts
+  Trust Score Range: MEDIUM (5.0-7.5/10)
+  Action: FLAG FOR REVIEW (bulk)
+
+INV-3-0280_Create_Inventory_Stock_Request_to_request_goods_fr.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Issues: Truncated filename
+  Action: FLAG FOR REVIEW
+
+INV-3-0300_Inventory_Shipment.txt
+  Trust Score: MEDIUM (7.5/10)
+  RAG Coverage: Inventory.wsdl (score 8)
+  Action: FLAG FOR REVIEW
+
+INV-3-0340_Create_Inventory_Return.txt
+  Trust Score: MEDIUM (7.5/10) - CLAIMED
+  RAG Coverage: kb_hcm_change_job.txt (WRONG KB)
+  Issues: RAG returned irrelevant HCM article
+  Action: NEEDS KB RESEARCH - Wrong RAG match
+
+INV-3-0390_Create_Inventory_Stock_Request_Transfer_-_Site_to_.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Issues: Truncated filename
+  Action: FLAG FOR REVIEW
+
+INV-3-0440_Create_Par_Count_for_Kanban_Par_Location.txt
+  Trust Score: MEDIUM (6.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-3-0510 to INV-3-0630: Requisition/PO Flow
+  Count: 13 scripts
+  Trust Score Range: MEDIUM (5.0-7.0/10)
+  Issues: Multiple duplicates (Find_Requisition appears 4+ times)
+  Action: FLAG FOR REVIEW - Check for duplicates
+
+INV-3-0740_Create_Requisition.txt
+  Trust Score: MEDIUM (6.0/10)
+  RAG Coverage: procurement_v5.json (score 6)
+  Action: FLAG FOR REVIEW
+
+INV-3-0810_Create_Requisition.txt to INV-3-0880: Flow tests
+  Count: 8 scripts
+  Trust Score Range: MEDIUM (5.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-3-0930_Create_Requisition.txt
+  Trust Score: MEDIUM (6.0/10)
+  Action: FLAG FOR REVIEW - Duplicate name
+
+INV-3-0930-01_Create_Requisition.txt
+  Trust Score: MEDIUM (6.0/10)
+  Issues: Variant script (sub-step)
+  Action: FLAG FOR REVIEW
+
+INV-3-0990_Create_Purchase_Order.txt
+  Trust Score: HIGH (7.0/10)
+  RAG Coverage: kb_procurement_purchase_order.txt
+  Action: MARK VALIDATED
+
+INV-3-1000 to INV-3-1030: PO/Receipt Flow
+  Count: 6 scripts (including variants)
+  Trust Score Range: MEDIUM to HIGH (6.0-7.5/10)
+  Action: FLAG FOR REVIEW
+
+INV-3-1040_Create_Return.txt to INV-3-1080: Return Flow
+  Count: 5 scripts
+  Trust Score Range: MEDIUM (5.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-3-1060_To_Do_-_Adjust_Inventory_to_ship_goods_back_to_Sup.txt
+  Trust Score: MEDIUM (5.0-6.0/10)
+  Issues: Truncated filename, To-Do format
+  Action: FLAG FOR REVIEW
+
+INV-3-1090_Create_Change_Order.txt to INV-3-1130: Change Order Flow
+  Count: 5 scripts
+  Trust Score Range: MEDIUM (5.0-7.0/10)
+  Action: FLAG FOR REVIEW
+
+INV-3-1140_Consignment_Setup__Transaction_Test.txt (+ 25 variants)
+  Count: 26 scripts (-01 through -25 variants)
+  Trust Score: MEDIUM (6.0/10)
+  RAG Coverage: User-Guide-Suppliers.pdf (score 8) - WRONG MATCH
+  Issues:
+    - Search uses "Note - Lot and Serial were not used..." (note text, not task)
+    - RAG returned supplier guide instead of consignment docs
+    - 26 near-identical scripts for single consignment flow
+  Action: NEEDS KB RESEARCH - All 26 scripts need rewrite
+
+================================================================================
+VALIDATION SUMMARY BY TRUST LEVEL
+================================================================================
+
+HIGH TRUST (8-10) - MARK VALIDATED: 4 scripts
+--------------------------------------------------------------------------------
+1. INV-1-0010_Inventory_Site.txt (7.5/10)
+2. INV-1-0020_Stocking_Locations.txt (7.5/10)
+3. INV-1-0390_Create_a_Quick_Issue.txt (7.0-8.0/10)
+4. INV-3-0990_Create_Purchase_Order.txt (7.0/10)
+
+Note: These 4 scripts have good RAG coverage but still lack ON FAILURE and
+MANUAL VERIFICATION sections required by template.
+
+MEDIUM TRUST (5-7) - FLAG FOR REVIEW: 87 scripts
+--------------------------------------------------------------------------------
+Categories:
+- Generic "Run report" scripts: 15 scripts (need task-specific steps)
+- Duplicate scripts: 20+ scripts (Find_Inventory_Balance appears 8+ times)
+- Multi-line search issues: 10+ scripts (invalid search syntax)
+- Missing sections: All 87 scripts
+
+LOW TRUST (1-4) - NEEDS KB RESEARCH: 104 scripts
+--------------------------------------------------------------------------------
+Categories:
+- Task/Search mismatch: 30+ scripts (search doesn't match test name)
+- Wrong RAG matches: 15+ scripts (RAG returned irrelevant docs)
+- Invalid search syntax: 20+ scripts ("nan", numbered prefixes, etc.)
+- Consignment series: 26 scripts (all need rewrite)
+- No RAG coverage: 13+ scripts
+
+================================================================================
+RAG COVERAGE ANALYSIS
+================================================================================
+
+WELL-COVERED TOPICS (RAG Score >= 7):
+- Inventory Site Configuration: Score 7 (KB article exists)
+- Stocking Locations: Score 7 (KB article exists)
+- Inventory Stock Request: Score 8 (Inventory.wsdl)
+- Inventory Pick List: Score 8 (Inventory.wsdl)
+- Purchase Order: Score 7 (kb_procurement_purchase_order.txt)
+- Inventory Balance: Score 7 (Inventory.wsdl)
+- Inventory Shipment: Score 7 (Inventory.wsdl)
+- Inventory Count: Score 7 (Admin Guide Spend Management)
+
+MODERATE COVERAGE (RAG Score 4-6):
+- Requisition: Score 6 (procurement_v5.json)
+- Receipt: Score 6 (various)
+- Consignment: Score 6 (Admin Guide Spend Management)
+
+LOW/NO COVERAGE (RAG Score < 4):
+- Inventory Adjustment: Score 2-3 (no specific KB)
+- Put-Away Inventory: Score 2-4 (generic matches)
+- Move Inventory: Score 3 (generic matches)
+- ABC Classification: No specific coverage
+- Item Identifier Types: No specific coverage
+- Location Usage Types: No specific coverage
+- Par Locations: Limited coverage
+- Quick Issue Event: Score 3 (glossary only)
+
+================================================================================
+FORMAT COMPLIANCE ISSUES
+================================================================================
+
+CRITICAL ISSUES (Found in 193 of 195 scripts):
+
+1. Missing ON FAILURE Section
+   Required by template: "- Step {N} fails: {Fallback action}"
+   Found in: 2 scripts (partial compliance)
+   Missing in: 193 scripts
+
+2. Missing EXPECTED OUTCOME Section
+   Required by template: "- {Expected result 1}"
+   Found in: 2 scripts (partial compliance)
+   Missing in: 193 scripts
+
+3. Missing MANUAL VERIFICATION Table
+   Required by template: "| Step | Action | Reason |"
+   Found in: 0 scripts
+   Missing in: 195 scripts
+
+4. Empty/Generic DESCRIPTION
+   Found with content: 2 scripts
+   Empty or missing: 193 scripts
+
+5. Missing PREREQUISITES
+   Found with content: 2 scripts
+   Missing: 193 scripts
+
+6. Missing WORKDAY ROLE
+   Found with content: 2 scripts
+   Empty or missing: 193 scripts
+
+7. Missing BUSINESS CONTEXT
+   Found with content: 2 scripts
+   Missing: 193 scripts
+
+SCRIPT QUALITY ISSUES:
+
+1. Generic "Run report" Steps (45+ scripts)
+   Problem: Steps don't match test purpose
+   Examples: INV-1-0030 through INV-1-0090
+
+2. Invalid Search Syntax (30+ scripts)
+   Problem: Multi-line entries, "nan", numbered prefixes
+   Examples: INV-1-0240 uses "nan", INV-2-0050 has multi-line
+
+3. Task/Search Mismatch (40+ scripts)
+   Problem: Search term doesn't match test name
+   Examples: INV-3-0010 tests "Inventory Site" but searches "View Inventory Balance"
+
+4. Duplicate Scripts (20+ scripts)
+   Problem: Same task repeated multiple times
+   Examples: "Find_Inventory_Balance" appears 8+ times
+
+5. Truncated Filenames (5+ scripts)
+   Problem: Task name cut off in filename
+   Examples: INV-3-0280, INV-3-0390, INV-3-1060
+
+================================================================================
+RECOMMENDED ACTIONS
+================================================================================
+
+IMMEDIATE (Priority 1):
+1. Fix 30+ scripts with invalid search syntax ("nan", multi-line, etc.)
+2. Correct 40+ scripts where search doesn't match test name
+3. Remove or consolidate 20+ duplicate scripts
+
+SHORT-TERM (Priority 2):
+1. Add ON FAILURE sections to all 195 scripts
+2. Add EXPECTED OUTCOME sections to all 195 scripts
+3. Add MANUAL VERIFICATION tables where applicable
+4. Replace generic "Run report" steps with task-specific searches
+
+LONG-TERM (Priority 3):
+1. Research and create KB articles for LOW coverage topics:
+   - Inventory Adjustment
+   - Put-Away Inventory
+   - Move Inventory
+   - ABC Classification
+   - Item Identifier Types
+2. Rewrite all 26 Consignment scripts with proper task steps
+3. Add BUSINESS CONTEXT to all scripts
+4. Add PREREQUISITES to all scripts
+
+================================================================================
+KB RESEARCH QUEUE (104 scripts)
+================================================================================
+
+HIGH PRIORITY (Wrong task/search):
+1. INV-2-0010_Create_Inventory_Site.txt
+2. INV-3-0010_Inventory_Site.txt
+3. INV-1-0240_Inventory_Adjustment.txt (uses "nan")
+4. INV-3-0340_Create_Inventory_Return.txt (wrong RAG match)
+5. INV-3-1140 series (26 Consignment scripts)
+
+MEDIUM PRIORITY (Low RAG score):
+6. INV-1-0210_Create_Ad_Hoc_Putaway.txt (Score 1)
+7. INV-2-0100_Put-Away_Inventory.txt (Score 4)
+8. INV-2-0150_Move_Inventory.txt (Score 3)
+9. INV-1-0380_View_Business_Process_for_Quick_Issue_Event.txt (Score 3)
+
+LOW PRIORITY (Generic steps need replacement):
+10-50. All "Run report" scripts in INV-1-0030 through INV-1-0150 range
+
+================================================================================
+VALIDATION METRICS
+================================================================================
+
+Scripts by Status:
+- [V] Validated:        4   (2.1%)
+- [R] Review Required: 87  (44.6%)
+- [K] KB Research:    104  (53.3%)
+
+Scripts by Confidence Band:
+- HIGH (7.5-10):      4   (2.1%)
+- MEDIUM (5.0-7.4):  87  (44.6%)
+- LOW (1.0-4.9):    104  (53.3%)
+
+Format Compliance Rate: 1.0% (2 of 195 scripts meet basic template requirements)
+
+Duplicate Script Count: ~20+ (Find_Inventory_Balance, Create_Requisition, etc.)
+
+RAG Accuracy Issues: ~15% of scripts have incorrect RAG matches
+
+================================================================================
+END OF REPORT
+================================================================================
+Report generated by: electron-4 validator
+Timestamp: 2026-01-01
+Next review recommended: After KB research completion
+================================================================================

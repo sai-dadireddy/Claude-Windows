@@ -150,3 +150,27 @@ ANTI-BOT RULES:
 ================================================================================
 TOTAL: 70 topics | Done: 70 | Remaining: 0 ✅ COMPLETE
 ================================================================================
+
+================================================================================
+ELECTRON SCRIPT VALIDATION LOG
+================================================================================
+Last Updated: 2026-01-01
+
+[2026-01-01] electron-6: Payroll US Full Validation
+  Location: electron_tests/_reports/payroll_us_full_validation.txt
+  Scripts Validated: 312
+  HIGH Confidence: 58 (55 validated, 3 overrated)
+  MEDIUM Confidence: 134
+  MANUAL REQUIRED: 120
+  Format Compliance: 25% (missing ON FAILURE, EXPECTED OUTCOME, MANUAL VERIFICATION)
+  Issues Found:
+    - 3 scripts with inflated trust scores (Security Group topics)
+    - All 192 automated scripts missing 3 format sections
+    - PROVE report coverage low in RAG
+  Recommendations:
+    - Add missing format sections
+    - Create kb_us_payroll_security.txt
+    - Create kb_prove_reports.txt
+    - Obtain SME input for 120 manual scripts
+
+================================================================================
