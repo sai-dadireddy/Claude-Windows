@@ -70,17 +70,17 @@ Worker Management:
 ================================================================================
 PAYROLL CANADA (4 topics)
 ================================================================================
-[ ] New Hire to Off-Cycle to Settlement      -> kb_payroll_ca_new_hire_settlement.txt
-[ ] Termination to Off-Cycle to Settlement   -> kb_payroll_ca_termination_settlement.txt
-[ ] BP Settlement Run Event                  -> kb_payroll_ca_settlement_run.txt
-[ ] Payroll Input to Gross to Settlement     -> kb_payroll_ca_input_gross.txt
+[x] New Hire to Off-Cycle to Settlement      -> kb_payroll_ca_new_hire_settlement.txt (19 EN)
+[x] Termination to Off-Cycle to Settlement   -> kb_payroll_ca_termination_settlement.txt (10 EN)
+[x] BP Settlement Run Event                  -> kb_payroll_ca_settlement_run_event.txt (236 EN)
+[x] Payroll Input to Gross to Settlement     -> kb_payroll_ca_payroll_input_gross.txt (164 EN)
 
 ================================================================================
 PAYROLL US (6 topics)
 ================================================================================
-[ ] Missing Payment Elections Review         -> kb_payroll_us_payment_elections.txt
-[ ] Review Tenant Analyzer                   -> kb_payroll_us_tenant_analyzer.txt
-[ ] Review Period Schedule Configuration     -> kb_payroll_us_period_schedule.txt
+[x] Missing Payment Elections Review         -> kb_payroll_us_payment_elections.txt (162 EN)
+[x] Review Tenant Analyzer                   -> kb_payroll_us_tenant_analyzer.txt (168 EN)
+[x] Review Period Schedule Configuration     -> kb_payroll_us_period_schedule.txt (251 EN)
 [ ] Review Pay Run Group Configuration       -> kb_payroll_us_pay_run_group.txt
 [ ] Benefits and Pay Hub                     -> kb_payroll_us_benefits_pay_hub.txt
 [ ] Review FLSA Calendar Configuration       -> kb_payroll_us_flsa_calendar.txt
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 15 | Remaining: 67
+TOTAL: 82 topics | Done: 37 | Remaining: 45
 ================================================================================
