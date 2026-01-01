@@ -1,0 +1,29 @@
+# Workday KB: Waives Verification
+# Searched: 2026-01-01
+# Query: "Benefit Waives"
+# Total Results: 500 (183 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 30 EN Admin Guide results
+Page 2: 27 EN Admin Guide results
+Page 3: 24 EN Admin Guide results
+Page 4: 19 EN Admin Guide results
+Page 5: 12 EN Admin Guide results
+Page 6: 14 EN Admin Guide results
+Page 7: 14 EN Admin Guide results
+Page 8: 13 EN Admin Guide results
+Page 9: 17 EN Admin Guide results
+Page 10: 13 EN Admin Guide results
+Pages 11-17: 0 EN (translations only)
+
+## Key Topics Found
+- Concept: Change Benefits EIB
+- Create Benefit Eligibility Rules
+- Correct Benefits
+- Troubleshooting: Enrollment Events
+- Set Up Default Benefits Coverage
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/benefits/
+

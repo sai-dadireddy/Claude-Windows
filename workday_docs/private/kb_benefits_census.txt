@@ -1,0 +1,31 @@
+# Workday KB: Benefit Census Verification
+# Searched: 2026-01-01
+# Query: "Benefit Census"
+# Total Results: 501 (200 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 26 EN Admin Guide results
+Page 2: 24 EN Admin Guide results
+Page 3: 22 EN Admin Guide results
+Page 4: 18 EN Admin Guide results
+Page 5: 19 EN Admin Guide results
+Page 6: 17 EN Admin Guide results
+Page 7: 12 EN Admin Guide results
+Page 8: 15 EN Admin Guide results
+Page 9: 12 EN Admin Guide results
+Page 10: 17 EN Admin Guide results
+Page 11: 10 EN Admin Guide results
+Page 12: 8 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- FAQ: Open Enrollment
+- Correct Benefits
+- FAQ: Benefit Groups
+- Change Benefit Elections
+- Steps: Set Up Benefits
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/benefits/
+

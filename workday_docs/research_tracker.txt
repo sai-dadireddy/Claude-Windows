@@ -109,21 +109,21 @@ BENEFITS (6 topics)
 [x] ACA Affordable Care Act                  -> kb_benefits_aca.txt (Done 2025-12-31)
 [x] Benefits Eligibility Rules               -> kb_benefits_eligibility_rules.txt (Done)
 [x] Benefits Enrollment Events               -> kb_benefits_enrollment_events.txt (Done)
-[ ] Benefit Census Verification              -> kb_benefits_census.txt
-[ ] Enrollment Count Verification            -> kb_benefits_enrollment_count.txt
-[ ] Waives Verification                      -> kb_benefits_waives.txt
+[x] Benefit Census Verification              -> kb_benefits_census.txt (200 EN)
+[x] Enrollment Count Verification            -> kb_benefits_enrollment_count.txt (108 EN)
+[x] Waives Verification                      -> kb_benefits_waives.txt (183 EN)
 
 ================================================================================
 LEASE ACCOUNTING (3 topics)
 ================================================================================
-[ ] Supplier Contract for Operating Lease    -> kb_lease_operating.txt
-[ ] Supplier Contract for Finance Lease      -> kb_lease_finance.txt
-[ ] Operating Leases under New Standards     -> kb_lease_new_standards.txt
+[x] Supplier Contract for Operating Lease    -> kb_lease_operating.txt (202 EN)
+[x] Supplier Contract for Finance Lease      -> kb_lease_finance.txt (242 EN)
+[x] Operating Leases under New Standards     -> kb_lease_new_standards.txt (51 EN)
 
 ================================================================================
 ENDOWMENTS (1 topic)
 ================================================================================
-[ ] Add Custom Field to Donor                -> kb_endowments_custom_field.txt
+[x] Add Custom Field to Donor                -> kb_endowments_custom_field.txt (103 EN)
 
 ================================================================================
 RESEARCH INSTRUCTIONS (FOR NEXT SESSION)
@@ -148,5 +148,5 @@ ANTI-BOT RULES:
 - Use separate Chrome tab
 
 ================================================================================
-TOTAL: 82 topics | Done: 65 | Remaining: 17
+TOTAL: 82 topics | Done: 72 | Remaining: 10
 ================================================================================

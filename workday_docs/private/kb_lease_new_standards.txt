@@ -1,0 +1,27 @@
+# Workday KB: Operating Leases under New Standards
+# Searched: 2026-01-01
+# Query: "Operating Lease New Standards"
+# Total Results: 500 (51 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 17 EN Admin Guide results
+Page 2: 8 EN Admin Guide results
+Page 3: 4 EN Admin Guide results
+Page 4: 11 EN Admin Guide results
+Page 5: 5 EN Admin Guide results
+Page 6: 3 EN Admin Guide results
+Page 7: 1 EN Admin Guide results
+Page 8: 2 EN Admin Guide results
+Pages 9-17: 0 EN (translations only)
+
+## Key Topics Found
+- Concept: Lease Accounting
+- Setup Considerations: Lease Accounting
+- Example: Set Up Operating Leases for IFRS and GASB Accounting
+- FAQ: Lease Accounting
+- Setup Considerations: Multibook Asset Accounting for Leases
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/supplier-accounts/
+

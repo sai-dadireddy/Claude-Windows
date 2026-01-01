@@ -1,0 +1,30 @@
+# Workday KB: Add Custom Field to Donor
+# Searched: 2026-01-01
+# Query: "Add Custom Field Donor"
+# Total Results: 500 (103 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 26 EN Admin Guide results
+Page 2: 13 EN Admin Guide results
+Page 3: 7 EN Admin Guide results
+Page 4: 4 EN Admin Guide results
+Page 5: 10 EN Admin Guide results
+Page 6: 11 EN Admin Guide results
+Page 7: 10 EN Admin Guide results
+Page 8: 5 EN Admin Guide results
+Page 9: 11 EN Admin Guide results
+Page 10: 4 EN Admin Guide results
+Page 11: 2 EN Admin Guide results
+Pages 12-17: 0 EN (translations only)
+
+## Key Topics Found
+- Create Custom Field Types
+- Example: Add Custom Fields to Job Requisitions
+- Concept: Custom Fields in Custom Reports and Calculated Fields
+- Create and Edit Custom Object Definitions
+- Add Custom Fields to Connector Output
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/
+
