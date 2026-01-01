@@ -1,0 +1,29 @@
+# Workday KB: Start Union Membership
+# Searched: 2025-12-31
+# Query: "Start Union Membership"
+# Total Results: 500 (163 English Admin Guide)
+# Pages: 17 (EN content in pages 1-11 only)
+
+## Summary by Page
+Page 1: 21 EN Admin Guide results
+Page 2: 17 EN Admin Guide results
+Page 3: 14 EN Admin Guide results
+Page 4: 10 EN Admin Guide results
+Page 5: 12 EN Admin Guide results
+Page 6: 17 EN Admin Guide results
+Page 7: 19 EN Admin Guide results
+Page 8: 14 EN Admin Guide results
+Page 9: 11 EN Admin Guide results
+Page 10: 13 EN Admin Guide results
+Page 11: 15 EN Admin Guide results
+Pages 12-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-11
+- 163 total EN Admin Guide results
+- Pages 12-17 contain only translated/non-EN content
+
+## Key Topics
+- Initiating union membership for workers
+- Union membership business process configuration
+- Labor union management and worker assignments

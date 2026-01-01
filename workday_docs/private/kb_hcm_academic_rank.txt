@@ -1,0 +1,31 @@
+# Workday KB: Academic Faculty Review Academic Rank
+# Searched: 2025-12-31
+# Query: "Academic Faculty Review Academic Rank"
+# Total Results: 500 (259 English Admin Guide)
+# Pages: 17 (EN content in pages 1-13 only)
+
+## Summary by Page
+Page 1: 29 EN Admin Guide results
+Page 2: 23 EN Admin Guide results
+Page 3: 24 EN Admin Guide results
+Page 4: 21 EN Admin Guide results
+Page 5: 17 EN Admin Guide results
+Page 6: 17 EN Admin Guide results
+Page 7: 21 EN Admin Guide results
+Page 8: 21 EN Admin Guide results
+Page 9: 25 EN Admin Guide results
+Page 10: 18 EN Admin Guide results
+Page 11: 15 EN Admin Guide results
+Page 12: 19 EN Admin Guide results
+Page 13: 9 EN Admin Guide results
+Pages 14-17: 0 EN Admin Guide results
+
+## Pattern Observed
+- EN Admin Guide results concentrated in pages 1-13
+- 259 total EN Admin Guide results
+- Pages 14-17 contain only translated/non-EN content
+
+## Key Topics
+- Academic rank configuration for faculty management
+- Faculty rank progression and criteria
+- Higher education academic hierarchy settings
