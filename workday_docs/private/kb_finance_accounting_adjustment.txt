@@ -1,0 +1,29 @@
+# Workday KB: Create Accounting Adjustment
+# Searched: 2026-01-01
+# Query: "Create Accounting Adjustment"
+# Total Results: 500 (149 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 15 EN Admin Guide results
+Page 2: 21 EN Admin Guide results
+Page 3: 11 EN Admin Guide results
+Page 4: 10 EN Admin Guide results
+Page 5: 19 EN Admin Guide results
+Page 6: 13 EN Admin Guide results
+Page 7: 16 EN Admin Guide results
+Page 8: 14 EN Admin Guide results
+Page 9: 4 EN Admin Guide results
+Page 10: 13 EN Admin Guide results
+Page 11: 7 EN Admin Guide results
+Page 12: 6 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- Create Financial Accounting Adjustments
+- Create Payroll Accounting Adjustments
+- Setup Considerations: Payroll Accounting Adjustments
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/accounting-adjustments/
+

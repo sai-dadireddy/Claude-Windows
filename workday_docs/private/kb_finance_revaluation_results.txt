@@ -1,0 +1,29 @@
+# Workday KB: View Revaluation Results
+# Searched: 2026-01-01
+# Query: "View Revaluation Results"
+# Total Results: 500 (132 English Admin Guide)
+# Pages: 17
+
+## Summary by Page
+Page 1: 25 EN Admin Guide results
+Page 2: 9 EN Admin Guide results
+Page 3: 11 EN Admin Guide results
+Page 4: 9 EN Admin Guide results
+Page 5: 6 EN Admin Guide results
+Page 6: 12 EN Admin Guide results
+Page 7: 8 EN Admin Guide results
+Page 8: 10 EN Admin Guide results
+Page 9: 14 EN Admin Guide results
+Page 10: 16 EN Admin Guide results
+Page 11: 9 EN Admin Guide results
+Page 12: 3 EN Admin Guide results
+Pages 13-17: 0 EN (translations only)
+
+## Key Topics Found
+- Setup Considerations: Revaluation
+- Review Foreign Currency Revaluation
+- Setup Considerations: Revaluation in AP&C
+
+## Primary URLs
+- https://doc.workday.com/admin-guide/en-us/financial-management/revaluation/
+

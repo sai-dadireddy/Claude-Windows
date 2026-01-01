@@ -18,11 +18,11 @@ Priority 1 (Score 2-3) - Critical:
 [x] Verify Tax Authorities                   -> kb_finance_tax_authorities.txt (87 EN)
 [x] Verify Tax Declaration Definitions       -> kb_finance_tax_declaration_definitions.txt (219 EN)
 [x] Unpost Accounting Journal                -> kb_finance_unpost_journal.txt (127 EN)
-[ ] Create Accounting Adjustment             -> kb_finance_accounting_adjustment.txt
-[ ] View Accounting Adjustment               -> kb_finance_view_adjustment.txt
-[ ] View Allocation Accounting               -> kb_finance_allocation_accounting.txt
-[ ] View Revaluation Results                 -> kb_finance_revaluation_results.txt
-[ ] Review Elimination Rules                 -> kb_finance_elimination_rules.txt
+[x] Create Accounting Adjustment             -> kb_finance_accounting_adjustment.txt (149 EN)
+[x] View Accounting Adjustment              -> kb_finance_view_adjustment.txt (129 EN)
+[x] View Allocation Accounting              -> kb_finance_allocation_accounting.txt (192 EN)
+[x] View Revaluation Results                -> kb_finance_revaluation_results.txt (132 EN)
+[x] Review Elimination Rules                -> kb_finance_elimination_rules.txt (211 EN)
 
 Priority 2 (Score 4-5):
 [x] Confirm Translation Rules Sets           -> kb_finance_confirm_translation_rules_sets.txt (132 EN)
