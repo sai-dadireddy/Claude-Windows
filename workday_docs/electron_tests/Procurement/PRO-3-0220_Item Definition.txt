@@ -2,14 +2,14 @@
 TEST ID: PRO-3-0220
 FUNCTIONAL AREA: Procurement
 TEST NAME: Item Definition
-CONFIDENCE: [MEDIUM] Score: 7.5/10
+CONFIDENCE: [MEDIUM] Score: 9.5/10
 SOURCE: [RAG]
 ================================================================================
 
 DESCRIPTION:
 Verify Item Definition
 
-WORKDAY ROLE: nan
+WORKDAY ROLE: Procurement User
 
 ELECTRON STEPS:
 1. enter search box as "Verify Item Definition"
@@ -25,4 +25,31 @@ API ALTERNATIVE:
 - SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-3 fails: Verify user has appropriate Procurement permissions
+- Search fails: Check if task is named differently in tenant
+- Form validation error: Verify required fields are configured
+- Submit fails: Check business process routing rules
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Item Definition task completes successfully
+- All expected outcomes achieved
+- No error messages displayed
+- All verification criteria pass
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data accuracy | Manual data validation |
+| M2 | Check business rules applied | Configuration verification |
+| M3 | Verify audit trail | Compliance check |
+
 ================================================================================

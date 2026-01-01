@@ -51,4 +51,28 @@ VERIFICATION:
 API ALTERNATIVE:
 - SOAP: Submit_Intercompany_Settlement (Financial_Management WSDL)
 - Get_Intercompany_Open_Balances to retrieve unsettled amounts
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (intercompany not found): Navigate via Intercompany menu
+- Step 5 fails (affiliate error): Verify intercompany profile and affiliates setup
+- Step 6 fails (balancing error): Check intercompany accounts configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Intercompany Supplier Settlement completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Requires access to source documents |
+| M2 | Cross-reference with related transactions | May require additional queries |
+
 ================================================================================

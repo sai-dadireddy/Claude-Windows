@@ -14,4 +14,29 @@ RAG confidence score was too low (< 5.0).
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (task not available): Verify security role permissions for create action
+- Step 5 fails (validation error): Check required fields and data dependencies
+- Step 6 fails (submit fails): Review error message, correct data, retry submission
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Create Consolidation Journal completes successfully
+- New record created with correct data
+- Business process workflow initiated if applicable
+- Confirmation message displayed
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify journal amounts against source documents | Requires source document access |
+| M2 | Validate account codes against chart of accounts | Complex validation logic |
+| M3 | Confirm tax treatment if applicable | Tax expertise required |
+
 ================================================================================

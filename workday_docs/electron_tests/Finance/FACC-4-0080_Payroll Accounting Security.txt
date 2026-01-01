@@ -9,6 +9,30 @@ STATUS: [MANUAL REQUIRED]
 REASON: Missing Task/Step or insufficient information
 
 SCENARIO DETAILS:
-Task/Step: nan
-Expected Result: nan
+Task/Step: N/A
+Expected Result: N/A
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (payroll task not found): Navigate via Payroll menu
+- Step 5 fails (calculation error): Verify pay component setup and costing
+- Step 6 fails (accounting error): Check payroll accounting configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Payroll Accounting Security completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify payroll calculations against pay statements | Requires HR data access |
+| M2 | Validate accounting distributions | Complex costing rules |
+
 ================================================================================

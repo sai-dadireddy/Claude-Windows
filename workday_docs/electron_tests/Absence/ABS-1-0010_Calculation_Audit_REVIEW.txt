@@ -3,7 +3,7 @@ TEST ID: ABS-1-0010
 FUNCTIONAL AREA: Absence
 TEST NAME: Calculation Exception Audit
 STATUS: ACCEPTED
-CONFIDENCE: [HIGH] Score: 8.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
 SOURCE: [KB Article: kb_absence_calculation_exception_audit.txt]
 ================================================================================
 
@@ -51,5 +51,33 @@ API ALTERNATIVE:
 - SOAP: Get_Absence_Inputs (Absence_Management)
 - SOAP: Get_Time_Off_Plan_Balances (Absence_Management)
 - SOAP: Get_Override_Balances (Absence_Management)
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (search result not found): Verify search term spelling, try "Audit Absence Calculations" or navigate via Absence Hub
+- Step 8 fails (OK button error): Check for required date fields, ensure valid date format (MM/DD/YYYY)
+- Step 9 fails (report timeout): Narrow date range to reduce data volume, retry after 30 seconds
+- Step 12 fails (verification error): Refresh page and re-run report, check for system maintenance windows
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Calculation Exception Audit report generates successfully
+- All workers with absence calculation exceptions display in results
+- Exception types (accrual errors, balance discrepancies) are clearly identified
+- Date range filter applies correctly to results
+- Report can be exported or printed for review
+- All verification criteria pass with screenshots captured
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify exception count matches expected baseline | Automated count validation not reliable |
+| M2 | Review individual worker exception details | Business logic validation required |
+| M3 | Confirm accrual calculation accuracy | Requires domain expertise to validate |
+| M4 | Check time off plan configuration referenced | Cross-reference with plan setup |
 
 ================================================================================

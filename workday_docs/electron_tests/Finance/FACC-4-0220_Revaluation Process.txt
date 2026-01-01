@@ -50,4 +50,28 @@ VERIFICATION:
 API ALTERNATIVE:
 - SOAP: Submit_Revaluation (Financial_Management WSDL)
 - Get_Currency_Rate_Types for exchange rate information
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (revaluation task not found): Navigate via Financial Accounting menu
+- Step 5 fails (rate error): Verify currency exchange rates are loaded
+- Step 6 fails (posting error): Check revaluation rules and target accounts
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Revaluation Process completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Requires access to source documents |
+| M2 | Cross-reference with related transactions | May require additional queries |
+
 ================================================================================

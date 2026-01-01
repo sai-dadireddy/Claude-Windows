@@ -15,4 +15,29 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (journal task not found): Navigate via Accounting menu
+- Step 5 fails (balance error): Verify debit/credit amounts balance
+- Step 6 fails (posting error): Check fiscal period status and account validity
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Recurring Journals completes successfully
+- Journal entries balance (debits equal credits)
+- Posted to correct ledger accounts
+- Audit trail created
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify journal amounts against source documents | Requires source document access |
+| M2 | Validate account codes against chart of accounts | Complex validation logic |
+| M3 | Confirm tax treatment if applicable | Tax expertise required |
+
 ================================================================================

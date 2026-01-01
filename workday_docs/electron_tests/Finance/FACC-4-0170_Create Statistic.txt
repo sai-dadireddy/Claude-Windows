@@ -55,4 +55,28 @@ VERIFICATION:
 API ALTERNATIVE:
 - SOAP: Submit_Statistic (Financial_Management WSDL)
 - Statistics used as allocation bases in cost allocation
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (task not available): Verify security role permissions for create action
+- Step 5 fails (validation error): Check required fields and data dependencies
+- Step 6 fails (submit fails): Review error message, correct data, retry submission
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Create Statistic completes successfully
+- New record created with correct data
+- Business process workflow initiated if applicable
+- Confirmation message displayed
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Requires access to source documents |
+| M2 | Cross-reference with related transactions | May require additional queries |
+
 ================================================================================

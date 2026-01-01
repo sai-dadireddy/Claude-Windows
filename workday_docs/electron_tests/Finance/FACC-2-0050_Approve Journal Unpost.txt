@@ -35,4 +35,29 @@ WORKDAY KB ARTICLE: CREATE JOURNAL ENTRY BUSINESS PROCESS
 Source: Workday Community & WSDL Analysis
 URL: Workday Financi
 ...
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (approval task not found): Check inbox for pending approvals
+- Step 5 fails (approval denied): Review denial reason and escalate if needed
+- Step 6 fails (workflow error): Verify business process configuration
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Approve Journal Unpost completes successfully
+- Approval recorded in business process history
+- Workflow advances to next step
+- Notification sent to relevant parties
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify journal amounts against source documents | Requires source document access |
+| M2 | Validate account codes against chart of accounts | Complex validation logic |
+| M3 | Confirm tax treatment if applicable | Tax expertise required |
+
 ================================================================================

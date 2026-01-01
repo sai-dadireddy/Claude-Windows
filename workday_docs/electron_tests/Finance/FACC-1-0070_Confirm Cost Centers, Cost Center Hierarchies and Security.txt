@@ -17,4 +17,28 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (search result not found): Navigate via Setup menu > Organization
+- Step 5 fails (data not displayed): Check tenant configuration and user permissions
+- Step 6 fails (field validation error): Document missing fields and escalate to configuration team
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Confirm Cost Centers, Cost Center Hierarchies and Security configuration displays correctly
+- All required fields are populated
+- Data matches expected configuration values
+- Screenshots captured for documentation
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Validate configuration against design document | Requires design documentation |
+| M2 | Cross-check with legacy system if applicable | Requires legacy system access |
+
 ================================================================================

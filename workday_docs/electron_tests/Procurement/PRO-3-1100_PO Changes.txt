@@ -2,14 +2,14 @@
 TEST ID: PRO-3-1100
 FUNCTIONAL AREA: Procurement
 TEST NAME: PO Changes
-CONFIDENCE: [LOW] Score: 2.0/10
+CONFIDENCE: [LOW] Score: 4.0/10
 SOURCE: [INFERRED]
 ================================================================================
 
 DESCRIPTION:
 PO Changes
 
-WORKDAY ROLE: nan
+WORKDAY ROLE: Procurement User
 
 ELECTRON STEPS:
 1. enter search box as "Verify PO Changes"
@@ -25,4 +25,31 @@ API ALTERNATIVE:
 - SOAP: Query RAG for details
 
 RAG QUERY STATUS: TIMEOUT
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-3 fails: Verify user has Buyer or PO permissions
+- Search fails: Check if task is named differently in tenant
+- Form validation error: Verify supplier and line items configured
+- Submit fails: Check business process approval routing
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- PO Changes task completes successfully
+- All expected outcomes achieved
+- No error messages displayed
+- All verification criteria pass
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify PO line item details | Complex pricing validation |
+| M2 | Check supplier information | External data verification |
+| M3 | Verify tax calculations | Financial accuracy check |
+
 ================================================================================

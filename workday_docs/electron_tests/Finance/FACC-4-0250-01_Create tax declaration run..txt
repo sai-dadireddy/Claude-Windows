@@ -17,4 +17,28 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (task not available): Verify security role permissions for create action
+- Step 5 fails (validation error): Check required fields and data dependencies
+- Step 6 fails (submit fails): Review error message, correct data, retry submission
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Create tax declaration run. completes successfully
+- New record created with correct data
+- Business process workflow initiated if applicable
+- Confirmation message displayed
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify tax calculations against tax authority rules | Requires tax expertise |
+| M2 | Validate tax codes against jurisdiction requirements | Complex regulatory rules |
+
 ================================================================================

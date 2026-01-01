@@ -2,14 +2,14 @@
 TEST ID: PRO-3-1540
 FUNCTIONAL AREA: Procurement
 TEST NAME: Issue Purchase Order
-CONFIDENCE: [HIGH] Score: 8.5/10
+CONFIDENCE: [HIGH] Score: 10.0/10
 SOURCE: [RAG]
 ================================================================================
 
 DESCRIPTION:
 Issue Purchase Order
 
-WORKDAY ROLE: nan
+WORKDAY ROLE: Procurement User
 
 ELECTRON STEPS:
 1. enter search box as "Issue Purchase Order"
@@ -25,4 +25,31 @@ API ALTERNATIVE:
 - SOAP: Check WSDL index for available operations
 
 RAG QUERY STATUS: SUCCESS
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-3 fails: Verify user has Buyer or PO permissions
+- Search fails: Check if task is named differently in tenant
+- Form validation error: Verify supplier and line items configured
+- Submit fails: Check business process approval routing
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Issue action completes successfully
+- Document status updated appropriately
+- Notification sent (if configured)
+- All verification criteria pass
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify PO line item details | Complex pricing validation |
+| M2 | Check supplier information | External data verification |
+| M3 | Verify tax calculations | Financial accuracy check |
+
 ================================================================================

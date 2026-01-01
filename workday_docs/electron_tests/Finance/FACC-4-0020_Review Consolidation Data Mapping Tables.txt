@@ -15,4 +15,28 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (report not found): Try searching with exact report name
+- Step 5 fails (data mismatch): Document discrepancy with screenshot
+- Step 6 fails (export error): Try alternative export format
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Review Consolidation Data Mapping Tables completes successfully
+- All verification criteria pass
+- Data matches expected values
+- Report/view renders correctly
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Requires access to source documents |
+| M2 | Cross-reference with related transactions | May require additional queries |
+
 ================================================================================

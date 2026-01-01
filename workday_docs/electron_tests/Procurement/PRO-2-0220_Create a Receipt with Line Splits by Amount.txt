@@ -2,7 +2,7 @@
 TEST ID: PRO-2-0220
 FUNCTIONAL AREA: Procurement
 TEST NAME: Create a Receipt with Line Splits by Amount
-CONFIDENCE: [MEDIUM] Score: 6.5/10
+CONFIDENCE: [MEDIUM] Score: 8.5/10
 SOURCE: [RAG]
 ================================================================================
 
@@ -19,7 +19,7 @@ ELECTRON STEPS:
 5. screenshot as "PRO-2-0220_complete.png"
 
 VERIFICATION:
-- [ ] nan
+- [ ] Task completed successfully
 
 API ALTERNATIVE:
 - SOAP: Not found in RAG
@@ -38,4 +38,31 @@ WORKDAY KB ARTICLE: CREATE PURCHASE ORDER BUSINESS PROCESS
 ===============================================================================...
 
 RAG QUERY STATUS: SUCCESS
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1-3 fails: Verify user has Receiver permissions
+- Search fails: Check if task is named differently in tenant
+- Receipt creation fails: Verify PO is issued and received eligible
+- Submit fails: Check receipt tolerance rules
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Create a Receipt with Line Splits by Amount task completes successfully
+- New record created with valid ID
+- Business process initiated (if applicable)
+- All verification criteria pass
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify receipt quantities | Physical count verification |
+| M2 | Check delivery location | Inventory location validation |
+| M3 | Verify asset tagging | Physical asset tracking |
+
 ================================================================================

@@ -15,4 +15,28 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (edit not available): Verify edit permissions and object status
+- Step 5 fails (save error): Check for required fields and validation rules
+- Step 6 fails (concurrent edit): Refresh and retry with latest data
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Update Currency Conversion Rate completes successfully
+- All verification criteria pass
+- No error messages displayed
+- Screenshots captured at key steps
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Verify data against source documentation | Requires access to source documents |
+| M2 | Cross-reference with related transactions | May require additional queries |
+
 ================================================================================

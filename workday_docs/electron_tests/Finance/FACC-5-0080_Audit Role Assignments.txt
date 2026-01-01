@@ -17,4 +17,28 @@ ELECTRON STEPS:
 VERIFICATION:
 - [ ] Transaction completed successfully
 - [ ] No error messages displayed
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 3 fails (search result not found): Try alternative search terms or navigate via menu
+- Step 5 fails (data not displayed): Verify user has required security roles
+- Step 6 fails (verification error): Capture screenshot and log discrepancy for manual review
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Audit Role Assignments report displays successfully
+- All audit criteria verified against expected values
+- No data discrepancies found
+- Screenshots captured at key verification points
+
+--------------------------------------------------------------------------------
+MANUAL VERIFICATION
+--------------------------------------------------------------------------------
+| Step | Action | Reason |
+|------|--------|--------|
+| M1 | Compare audit results with source system data | Requires access to source system |
+| M2 | Verify audit trail completeness | May require database query access |
+
 ================================================================================
