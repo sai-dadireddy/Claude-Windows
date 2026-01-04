@@ -165,9 +165,12 @@ def main():
     if tool == "Write" and inp.get("file_path", "").endswith(".md"):
         path = inp.get("file_path", "")
         name = os.path.basename(path)
-        allowed = ["CLAUDE.md", "README.md", "CHANGELOG.md", "LICENSE.md", "CONTRIBUTING.md"]
-        if not os.path.exists(path) and name not in allowed:
-            deny(f"Blocked: new .md file '{name}'. Use: {', '.join(allowed)}")
+        allowed_names = ["CLAUDE.md", "README.md", "CHANGELOG.md", "LICENSE.md", "CONTRIBUTING.md"]
+        # Allow .md files in commands, skills, agents, refs directories
+        allowed_dirs = [".claude/commands", ".claude/skills", ".claude/agents", ".claude/refs"]
+        in_allowed_dir = any(d in path.replace("\\", "/") for d in allowed_dirs)
+        if not os.path.exists(path) and name not in allowed_names and not in_allowed_dir:
+            deny(f"Blocked: new .md file '{name}'. Use: {', '.join(allowed_names)} or commands/skills dir")
 
     # === AUTO-ALLOW READS ===
     if tool == "Read":

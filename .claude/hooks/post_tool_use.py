@@ -4,11 +4,12 @@
 # dependencies = []
 # ///
 """
-PostToolUse Hook - Logging and error feedback
+PostToolUse Hook - Logging, error feedback, and auto-formatting
 
 Features:
 - Logs tool usage to tools.jsonl
 - Reports errors to user
+- Auto-formats files after Edit/Write (Boris's recommendation)
 
 Note: Auto-ingestion moved to auto_capture_memory.py (more sophisticated)
 """
@@ -19,6 +20,52 @@ import os
 import subprocess
 from datetime import datetime
 from pathlib import Path
+# === AUTO-FORMATTER (Boris's recommendation) ===
+FORMATTERS = {
+    '.py': ['black', '-q'],
+    '.js': ['prettier', '--write'],
+    '.ts': ['prettier', '--write'],
+    '.tsx': ['prettier', '--write'],
+    '.jsx': ['prettier', '--write'],
+    '.json': ['prettier', '--write'],
+    '.css': ['prettier', '--write'],
+    '.scss': ['prettier', '--write'],
+    '.html': ['prettier', '--write'],
+    '.md': ['prettier', '--write'],
+    '.yaml': ['prettier', '--write'],
+    '.yml': ['prettier', '--write'],
+    '.go': ['gofmt', '-w'],
+    '.rs': ['rustfmt'],
+}
+
+def auto_format_file(file_path: str) -> tuple[bool, str]:
+    """Auto-format file based on extension. Returns (success, message)."""
+    if not file_path or not os.path.exists(file_path):
+        return True, ''
+    
+    ext = os.path.splitext(file_path)[1].lower()
+    if ext not in FORMATTERS:
+        return True, ''
+    
+    formatter_cmd = FORMATTERS[ext]
+    try:
+        # Check if formatter exists
+        import shutil
+        if not shutil.which(formatter_cmd[0]):
+            return True, ''  # Silently skip if formatter not installed
+        
+        result = subprocess.run(
+            formatter_cmd + [file_path],
+            capture_output=True, text=True, timeout=10, cwd=os.path.dirname(file_path) or '.'
+        )
+        if result.returncode == 0:
+            return True, f'formatted with {formatter_cmd[0]}'
+        else:
+            return False, result.stderr[:100]
+    except Exception as e:
+        return False, str(e)[:100]
+
+
 
 LOG_DIR = Path.home() / ".claude" / "logs"
 ERROR_COUNTER_FILE = LOG_DIR / "error_counter.json"
@@ -204,6 +251,13 @@ Last error: {err_msg[:200]}
 
         print(json.dumps(output))
     else:
+        # Auto-format on successful Edit/Write
+        format_msg = ''
+        if tool in ['Edit', 'Write'] and file_path:
+            formatted, fmt_info = auto_format_file(file_path)
+            if fmt_info:
+                format_msg = f' [{fmt_info}]'
+        
         # Success message with brief info
         short_info = ""
         if tool == "Bash":
@@ -220,7 +274,7 @@ Last error: {err_msg[:200]}
             short_info = f": {pattern}" if pattern else ""
 
         # Success: Only terminal message, no context injection (to save tokens)
-        print(json.dumps({"systemMessage": f"[?] {tool}{short_info}"}))
+        print(json.dumps({"systemMessage": f"[?] {tool}{short_info}{format_msg}"}))
 
     sys.exit(0)
 
