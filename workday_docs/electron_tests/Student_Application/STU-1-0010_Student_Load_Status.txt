@@ -30,10 +30,12 @@ Click on the 'Sign In' button
 Wait for 5 seconds
 
 # === NAVIGATE TO TASK ===
-Enter My FA Load Status in Search
+Click on the 'Search' button
+Wait for 1 second
+Type My FA Load Status
 Press Enter
-Wait for 2 seconds
-Click My FA Load Status link
+Wait for 3 seconds
+Click on 'My FA Load Status' link
 Wait for 3 seconds
 
 # === VERIFY ===

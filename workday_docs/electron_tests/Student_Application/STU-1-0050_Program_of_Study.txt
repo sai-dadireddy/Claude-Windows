@@ -30,10 +30,12 @@ Click on the 'Sign In' button
 Wait for 5 seconds
 
 # === NAVIGATE TO TASK ===
-Enter View Program of Study in Search
+Click on the 'Search' button
+Wait for 1 second
+Type View Program of Study
 Press Enter
-Wait for 2 seconds
-Click View Program of Study link
+Wait for 3 seconds
+Click on 'View Program of Study' link
 Wait for 3 seconds
 
 # === PROMPT HANDLING ===

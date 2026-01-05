@@ -30,10 +30,12 @@ Click on the 'Sign In' button
 Wait for 5 seconds
 
 # === NAVIGATE TO TASK ===
-Enter Edit Academic Period in Search
+Click on the 'Search' button
+Wait for 1 second
+Type Edit Academic Period
 Press Enter
-Wait for 2 seconds
-Click Edit Academic Period link
+Wait for 3 seconds
+Click on 'Edit Academic Period' link
 Wait for 3 seconds
 
 # === PROMPT HANDLING ===

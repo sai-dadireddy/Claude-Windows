@@ -36,10 +36,12 @@ Wait for 5 seconds
 # - Academic Requirements for Program of Study (Report)
 # - Academic Period Student Revenue by Program (Report)
 # MANUAL REVIEW REQUIRED - Verify correct task name with business
-Enter Academic Program of Data in Search
+Click on the 'Search' button
+Wait for 1 second
+Type Academic Program of Data
 Press Enter
-Wait for 2 seconds
-# Click Academic Program of Data link - STEP WILL FAIL
+Wait for 3 seconds
+# Click on 'Academic Program of Data' link - STEP WILL FAIL (task not found)
 Wait for 3 seconds
 
 # === VERIFY ===
