@@ -40,8 +40,9 @@ Wait for 3 seconds
 
 # === PROMPT HANDLING ===
 # Note: Task requires Program of Study selection (required field)
-Select Program of Study as Bachelor
-Click OK button
+# MANUAL: Select a Program of Study from the dropdown (tenant-specific data)
+# Example: Select Program of Study as Bachelor
+Click Cancel button
 Wait for 3 seconds
 
 # === VERIFY ===

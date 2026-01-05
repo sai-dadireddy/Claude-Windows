@@ -41,8 +41,9 @@ Wait for 3 seconds
 # === PROMPT HANDLING ===
 # Note: Task requires Academic Period selection (required field)
 # Institution is optional
-Select Academic Period as Fall 2021
-Click OK button
+# MANUAL: Select an Academic Period from the dropdown (tenant-specific data)
+# Example: Select Academic Period as Test
+Click Cancel button
 Wait for 3 seconds
 
 # === VERIFY ===
