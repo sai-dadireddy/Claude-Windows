@@ -2,8 +2,8 @@
 TEST ID: STU-1-0020
 FUNCTIONAL AREA: Student Application
 TEST NAME: Citizenship Status
-CONFIDENCE: [PENDING] Score: TBD
-SOURCE: To be verified in Workday
+CONFIDENCE: [VERIFIED] Score: 8/10
+SOURCE: Verified in Workday 2026-01-05
 ================================================================================
 
 DESCRIPTION:
@@ -26,14 +26,20 @@ Click on the 'Sign In' button
 Wait for 5 seconds
 
 # === NAVIGATE TO TASK ===
-Enter Citizenship Status in Search
+Enter Citizenship Statuses in Search
 Press Enter
 Wait for 2 seconds
-Click Citizenship Status link
+Click Citizenship Statuses link
+Wait for 3 seconds
+
+# === PROMPT HANDLING ===
+# Note: Task requires Country selection (required field)
+Select Country as United States of America
+Click OK button
 Wait for 3 seconds
 
 # === VERIFY ===
-Verify page contains Citizenship Status
+Verify page contains Citizenship Statuses
 # TODO: Add specific verification steps after testing
 
 VERIFICATION:
@@ -42,5 +48,5 @@ VERIFICATION:
 - [ ] Expected data displays
 
 --------------------------------------------------------------------------------
-STATUS: NEEDS VERIFICATION - Test in Workday first
+STATUS: VERIFIED - Task name: Citizenship Statuses (requires Country prompt)
 --------------------------------------------------------------------------------
