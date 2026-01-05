@@ -167,6 +167,27 @@ Do not make up information.
 | Factual accuracy | > 95% |
 
 ---
+## DSL Executor (Playwright-based)
+
+Run tests without Electron app using `_scripts/dsl_executor.py`:
+
+```bash
+cd electron_tests/_scripts
+python dsl_executor.py ../Student_Application/STU-1-0010.txt              # Basic run
+python dsl_executor.py ../Student_Application/STU-1-0010.txt --screenshots # Step-by-step proof
+python dsl_executor.py ../Student_Application/STU-1-0010.txt --headless   # CI mode
+```
+
+### Key Implementation Details
+| Feature | Implementation |
+|---------|---------------|
+| Dropdown selection | Label-index matching (`labels[i]` → `inputs[i]`) |
+| Hierarchical dropdowns | ArrowDown → ArrowRight → Enter |
+| Search button | Multiple Workday selectors with fallback |
+| Screenshots | `screenshots/{test_name}/step_01_PASS.png` |
+
+---
+
 ## Electron DSL Commands
 
 Natural language commands for test scripts (see `private/kb_electron_dsl.txt`).

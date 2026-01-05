@@ -60,14 +60,31 @@ CONFIDENCE Score:
   - <5: Low coverage, manual review required
 
 DSL Commands Reference:
-  enter {field} as "{value}"      - Text input
-  click {element}                 - Click action
-  select {dropdown} as "{option}" - Dropdown selection
-  wait for {condition} ({time})   - Wait with timeout
-  verify {assertion}              - Assertion check
-  screenshot as "{filename}"      - Capture screenshot
-  navigate to "{task/page}"       - Navigation
-  press {key}                     - Keyboard action
+  Navigate to {URL}                    - Go to URL
+  Enter the username as {value}        - Login username
+  Enter the password as {value}        - Login password
+  Click on the 'Sign In' button        - Submit login
+  Click on the 'Search' button         - Open Workday search
+  Enter {text} in the search field     - Type in search box
+  Press Enter                          - Submit search
+  Click on '{link text}' link          - Click search result
+  Click OK button                      - Confirm dialog
+  Click Cancel button                  - Cancel/dismiss dialog
+  Select {field} as {value}            - Dropdown selection (label-index match)
+  Wait for {N} seconds                 - Delay
+  Verify page contains {text}          - Assertion check
+
+DSL Executor Usage:
+  python dsl_executor.py <test.txt>              - Run test
+  python dsl_executor.py <test.txt> --screenshots - With step screenshots
+  python dsl_executor.py <test.txt> --debug      - Screenshots on failure
+  python dsl_executor.py <test.txt> --headless   - No browser window
+
+Lessons Learned (2026-01-05):
+  - Workday dropdowns: Use label-index matching (labels[i] -> inputs[i])
+  - Hierarchical dropdowns: ArrowDown, ArrowRight, Enter sequence
+  - If tenant lacks data: Use "Click Cancel button" as workaround
+  - Screenshots saved to: _scripts/screenshots/{test_name}/
 
 Screenshot Naming: {TEST_ID}-{STEP}-{description}.png
 ================================================================================
