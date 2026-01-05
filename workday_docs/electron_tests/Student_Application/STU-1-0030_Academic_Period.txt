@@ -41,7 +41,7 @@ Wait for 3 seconds
 # === PROMPT HANDLING ===
 # Note: Task requires Academic Period selection (required field)
 # Institution is optional
-Select Academic Period as {{ACADEMIC_PERIOD}}
+Select Academic Period as Fall 2021
 Click OK button
 Wait for 3 seconds
 

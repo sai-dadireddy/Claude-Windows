@@ -40,7 +40,7 @@ Wait for 3 seconds
 
 # === PROMPT HANDLING ===
 # Note: Task requires Program of Study selection (required field)
-Select Program of Study as {{PROGRAM_OF_STUDY}}
+Select Program of Study as Bachelor
 Click OK button
 Wait for 3 seconds
 

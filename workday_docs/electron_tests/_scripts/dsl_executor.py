@@ -248,71 +248,53 @@ class DSLExecutor:
                     # Wait for any modal dialog to be ready
                     await asyncio.sleep(1)
 
-                    # Step 1: Find the search input in the modal/prompt dialog
-                    # Workday uses dialogs with searchable dropdowns
-                    field_selectors = [
-                        # Modal dialog search inputs
-                        '[data-automation-id="promptSearchBox"] input',
-                        '[data-automation-id="searchBox"] input',
-                        'div[role="dialog"] input[placeholder="Search"]',
-                        'div[role="dialog"] input',
-                        # Field-specific selectors
-                        f'[data-automation-id*="{field}"] input',
-                        f'[data-automation-id*="{field.lower().replace(" ", "")}"] input',
-                        # Generic fallbacks
-                        'input[placeholder="Search"]',
-                    ]
+                    # Step 1: Find the correct input by matching label text
+                    # Workday dialogs have labels in order matching inputs
+                    input_clicked = await self.page.evaluate(f'''() => {{
+                        // Get all labels and inputs in the dialog/prompt panel
+                        const dialogLabels = Array.from(document.querySelectorAll('[data-automation-id="promptPanel"] label, [role="dialog"] label'));
+                        const dialogInputs = Array.from(document.querySelectorAll('[data-automation-id="promptPanel"] input[placeholder="Search"], [role="dialog"] input[placeholder="Search"]'));
 
-                    input_found = False
-                    for sel in field_selectors:
-                        try:
-                            elem = await self.page.wait_for_selector(sel, timeout=2000)
-                            if elem:
-                                await elem.click()
-                                input_found = True
-                                break
-                        except:
-                            continue
+                        // Find the label index that matches our field
+                        const labelIndex = dialogLabels.findIndex(l => {{
+                            const text = l.textContent.trim();
+                            return text === "{field}" || text === "{field} *" || text.includes("{field}");
+                        }});
 
-                    if not input_found:
-                        # Try clicking by visible text and finding nearby input
-                        await self.page.click(f'text="{field}"')
-                        await asyncio.sleep(0.3)
-                        await self.page.click('input', timeout=2000)
+                        // Click the input at the same index
+                        if (labelIndex >= 0 && dialogInputs[labelIndex]) {{
+                            dialogInputs[labelIndex].click();
+                            dialogInputs[labelIndex].focus();
+                            return true;
+                        }}
+
+                        // Fallback: if only one input, use it
+                        if (dialogInputs.length === 1) {{
+                            dialogInputs[0].click();
+                            dialogInputs[0].focus();
+                            return true;
+                        }}
+
+                        return false;
+                    }}''')
+
+                    if not input_clicked:
+                        # Last resort: click any search input in dialog
+                        await self.page.click('[role="dialog"] input[placeholder="Search"]:last-of-type', timeout=2000)
 
                     # Step 2: Type the value to search
                     await asyncio.sleep(0.5)
                     await self.page.keyboard.type(value, delay=50)
                     await asyncio.sleep(2)  # Wait for search results to load
 
-                    # Step 3: Click on the matching result from dropdown
-                    result_selectors = [
-                        # Workday specific dropdown result selectors
-                        f'[data-automation-id*="promptOption"]:has-text("{value}")',
-                        f'[data-automation-id*="selectableItemLabel"]:has-text("{value}")',
-                        f'div[data-automation-id*="menuItem"]:has-text("{value}")',
-                        # Generic role-based selectors
-                        f'[role="option"]:has-text("{value}")',
-                        f'[role="menuitem"]:has-text("{value}")',
-                        f'div[role="listbox"] [role="option"]:has-text("{value}")',
-                        # Partial match - just contains the value
-                        f'div:has-text("{value}"):visible >> nth=0',
-                    ]
-
-                    clicked_result = False
-                    for sel in result_selectors:
-                        try:
-                            await self.page.click(sel, timeout=3000)
-                            clicked_result = True
-                            await asyncio.sleep(0.5)  # Wait for selection to register
-                            break
-                        except:
-                            continue
-
-                    if not clicked_result:
-                        # Try pressing Enter to select first result
-                        await self.page.keyboard.press('Enter')
-                        await asyncio.sleep(0.5)
+                    # Step 3: Navigate hierarchical dropdown with keyboard
+                    # Workday uses nested submenus - use ArrowDown + ArrowRight + Enter
+                    await self.page.keyboard.press('ArrowDown')
+                    await asyncio.sleep(0.3)
+                    await self.page.keyboard.press('ArrowRight')  # Expand submenu if present
+                    await asyncio.sleep(0.5)
+                    await self.page.keyboard.press('Enter')  # Select
+                    await asyncio.sleep(0.5)
 
                     return {'step': step, 'status': 'passed'}
 
