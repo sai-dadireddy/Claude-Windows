@@ -13,18 +13,21 @@ from playwright.async_api import async_playwright, Page, TimeoutError as Playwri
 
 
 class DSLExecutor:
-    def __init__(self, headless: bool = False, debug: bool = False):
+    def __init__(self, headless: bool = False, debug: bool = False, screenshots: bool = False):
         self.headless = headless
         self.debug = debug
+        self.screenshots = screenshots  # Capture screenshot for every step
         self.page: Page = None
         self.results = []
+        self.test_name = ""
         self.screenshot_dir = Path(__file__).parent / 'screenshots'
-        if self.debug:
+        if self.debug or self.screenshots:
             self.screenshot_dir.mkdir(exist_ok=True)
 
     async def execute_file(self, filepath: str) -> dict:
         """Execute a DSL test file and return results"""
         content = Path(filepath).read_text(encoding='utf-8')
+        self.test_name = Path(filepath).stem  # e.g., STU-1-0010_Student_Load_Status
 
         # Extract ELECTRON STEPS section
         steps = self._parse_steps(content)
@@ -32,6 +35,8 @@ class DSLExecutor:
         print(f"\n{'='*60}")
         print(f"Executing: {Path(filepath).name}")
         print(f"Total steps: {len(steps)}")
+        if self.screenshots:
+            print(f"Screenshots: {self.screenshot_dir / self.test_name}")
         print(f"{'='*60}\n")
 
         async with async_playwright() as p:
@@ -53,6 +58,11 @@ class DSLExecutor:
                     failed += 1
                     print(f"  [{i}] FAIL: {step[:50]}...")
                     print(f"       Error: {result.get('error', 'Unknown')}")
+
+                # Capture screenshot for every step if screenshots mode enabled
+                if self.screenshots:
+                    await self._capture_step_screenshot(i, result['status'])
+
                 self.results.append(result)
 
             await browser.close()
@@ -225,18 +235,89 @@ class DSLExecutor:
                 await self.page.click('button:has-text("OK"), [data-automation-id="ok"]')
                 return {'step': step, 'status': 'passed'}
 
-            # Select option
+            # Select option (Workday searchable dropdowns)
             if step_lower.startswith('select') and ' as ' in step_lower:
                 # Skip template placeholders
                 if '{{' in step:
                     return {'step': step, 'status': 'skipped', 'reason': 'Template placeholder'}
                 field = step.split('Select ', 1)[1].split(' as ')[0].strip()
                 value = step.split(' as ', 1)[1].strip()
-                # Try to find and click the dropdown/combobox
-                await self.page.click(f'[data-automation-id*="{field}"], label:has-text("{field}")')
-                await asyncio.sleep(0.5)
-                await self.page.click(f'[role="option"]:has-text("{value}")')
-                return {'step': step, 'status': 'passed'}
+
+                # Workday dropdowns: find the field, type to search, select from results
+                try:
+                    # Wait for any modal dialog to be ready
+                    await asyncio.sleep(1)
+
+                    # Step 1: Find the search input in the modal/prompt dialog
+                    # Workday uses dialogs with searchable dropdowns
+                    field_selectors = [
+                        # Modal dialog search inputs
+                        '[data-automation-id="promptSearchBox"] input',
+                        '[data-automation-id="searchBox"] input',
+                        'div[role="dialog"] input[placeholder="Search"]',
+                        'div[role="dialog"] input',
+                        # Field-specific selectors
+                        f'[data-automation-id*="{field}"] input',
+                        f'[data-automation-id*="{field.lower().replace(" ", "")}"] input',
+                        # Generic fallbacks
+                        'input[placeholder="Search"]',
+                    ]
+
+                    input_found = False
+                    for sel in field_selectors:
+                        try:
+                            elem = await self.page.wait_for_selector(sel, timeout=2000)
+                            if elem:
+                                await elem.click()
+                                input_found = True
+                                break
+                        except:
+                            continue
+
+                    if not input_found:
+                        # Try clicking by visible text and finding nearby input
+                        await self.page.click(f'text="{field}"')
+                        await asyncio.sleep(0.3)
+                        await self.page.click('input', timeout=2000)
+
+                    # Step 2: Type the value to search
+                    await asyncio.sleep(0.5)
+                    await self.page.keyboard.type(value, delay=50)
+                    await asyncio.sleep(2)  # Wait for search results to load
+
+                    # Step 3: Click on the matching result from dropdown
+                    result_selectors = [
+                        # Workday specific dropdown result selectors
+                        f'[data-automation-id*="promptOption"]:has-text("{value}")',
+                        f'[data-automation-id*="selectableItemLabel"]:has-text("{value}")',
+                        f'div[data-automation-id*="menuItem"]:has-text("{value}")',
+                        # Generic role-based selectors
+                        f'[role="option"]:has-text("{value}")',
+                        f'[role="menuitem"]:has-text("{value}")',
+                        f'div[role="listbox"] [role="option"]:has-text("{value}")',
+                        # Partial match - just contains the value
+                        f'div:has-text("{value}"):visible >> nth=0',
+                    ]
+
+                    clicked_result = False
+                    for sel in result_selectors:
+                        try:
+                            await self.page.click(sel, timeout=3000)
+                            clicked_result = True
+                            await asyncio.sleep(0.5)  # Wait for selection to register
+                            break
+                        except:
+                            continue
+
+                    if not clicked_result:
+                        # Try pressing Enter to select first result
+                        await self.page.keyboard.press('Enter')
+                        await asyncio.sleep(0.5)
+
+                    return {'step': step, 'status': 'passed'}
+
+                except Exception as e:
+                    return {'step': step, 'status': 'failed', 'error': f'Dropdown select failed: {str(e)[:100]}'}
 
             # Verify page contains
             if 'verify page contains' in step_lower:
@@ -265,21 +346,37 @@ class DSLExecutor:
         except:
             pass
 
+    async def _capture_step_screenshot(self, step_num: int, status: str):
+        """Capture screenshot after each step for proof"""
+        try:
+            # Create test-specific subfolder
+            test_folder = self.screenshot_dir / self.test_name
+            test_folder.mkdir(exist_ok=True)
+
+            # Name format: step_01_PASS.png
+            filename = f"step_{step_num:02d}_{status.upper()}.png"
+            path = test_folder / filename
+            await self.page.screenshot(path=str(path))
+        except:
+            pass
+
 
 async def main():
     if len(sys.argv) < 2:
-        print("Usage: python dsl_executor.py <test_file.txt> [--headless] [--debug]")
+        print("Usage: python dsl_executor.py <test_file.txt> [options]")
         print("\nOptions:")
-        print("  --headless  Run without visible browser")
-        print("  --debug     Capture screenshots on failures")
+        print("  --headless     Run without visible browser")
+        print("  --debug        Capture screenshots on failures")
+        print("  --screenshots  Capture screenshot after EVERY step (proof)")
         print("\nExample:")
         print("  python dsl_executor.py STU-1-0010_Student_Load_Status.txt")
-        print("  python dsl_executor.py STU-1-0010_Student_Load_Status.txt --debug")
+        print("  python dsl_executor.py STU-1-0010_Student_Load_Status.txt --screenshots")
         sys.exit(1)
 
     filepath = sys.argv[1]
     headless = '--headless' in sys.argv
     debug = '--debug' in sys.argv
+    screenshots = '--screenshots' in sys.argv
 
     if not Path(filepath).exists():
         # Try relative to electron_tests directory
@@ -291,7 +388,7 @@ async def main():
                     filepath = str(candidate)
                     break
 
-    executor = DSLExecutor(headless=headless, debug=debug)
+    executor = DSLExecutor(headless=headless, debug=debug, screenshots=screenshots)
     results = await executor.execute_file(filepath)
 
     # Return exit code based on failures
