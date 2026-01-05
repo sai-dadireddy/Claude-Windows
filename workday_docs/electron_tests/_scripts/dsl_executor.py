@@ -235,6 +235,24 @@ class DSLExecutor:
                 await self.page.click('button:has-text("OK"), [data-automation-id="ok"]')
                 return {'step': step, 'status': 'passed'}
 
+            # Click Cancel button
+            if 'click cancel button' in step_lower:
+                selectors = [
+                    'button:has-text("Cancel")',
+                    '[data-automation-id="cancel"]',
+                    '[data-automation-id="cancelButton"]',
+                    'button[title="Cancel"]',
+                ]
+                for sel in selectors:
+                    try:
+                        await self.page.click(sel, timeout=3000)
+                        return {'step': step, 'status': 'passed'}
+                    except:
+                        continue
+                # Last resort
+                await self.page.click('text="Cancel"')
+                return {'step': step, 'status': 'passed'}
+
             # Select option (Workday searchable dropdowns)
             if step_lower.startswith('select') and ' as ' in step_lower:
                 # Skip template placeholders
