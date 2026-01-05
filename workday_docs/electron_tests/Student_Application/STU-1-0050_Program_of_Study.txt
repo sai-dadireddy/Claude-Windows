@@ -32,7 +32,7 @@ Wait for 5 seconds
 # === NAVIGATE TO TASK ===
 Click on the 'Search' button
 Wait for 1 second
-Type View Program of Study
+Enter View Program of Study in the search field
 Press Enter
 Wait for 3 seconds
 Click on 'View Program of Study' link

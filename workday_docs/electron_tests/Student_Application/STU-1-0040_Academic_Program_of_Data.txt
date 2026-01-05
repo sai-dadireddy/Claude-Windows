@@ -38,7 +38,7 @@ Wait for 5 seconds
 # MANUAL REVIEW REQUIRED - Verify correct task name with business
 Click on the 'Search' button
 Wait for 1 second
-Type Academic Program of Data
+Enter Academic Program of Data in the search field
 Press Enter
 Wait for 3 seconds
 # Click on 'Academic Program of Data' link - STEP WILL FAIL (task not found)
