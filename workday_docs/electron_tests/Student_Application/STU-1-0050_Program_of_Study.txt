@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: STU-1-0050
+FUNCTIONAL AREA: Student Application
+TEST NAME: Program of Study
+CONFIDENCE: [PENDING] Score: TBD
+SOURCE: To be verified in Workday
+================================================================================
+
+DESCRIPTION:
+Verify Program of Study configuration and functionality.
+
+WORKDAY ROLE: Student Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Student Administrator permissions
+- Programs of Study configured in tenant
+
+URL: https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+
+ELECTRON STEPS (TO BE VERIFIED):
+# === LOGIN ===
+Enter the username as {{USERNAME}}
+Enter the password as {{PASSWORD}}
+Click on the 'Sign In' button
+Wait for 5 seconds
+
+# === NAVIGATE TO TASK ===
+Enter Program of Study in Search
+Press Enter
+Wait for 2 seconds
+Click Program of Study link
+Wait for 3 seconds
+
+# === VERIFY ===
+Verify page contains Program of Study
+# TODO: Add specific verification steps after testing
+
+VERIFICATION:
+- [ ] Task accessible with current user
+- [ ] Correct page loads
+- [ ] Study programs display correctly
+
+--------------------------------------------------------------------------------
+STATUS: NEEDS VERIFICATION - Test in Workday first
+--------------------------------------------------------------------------------

@@ -1,0 +1,46 @@
+================================================================================
+TEST ID: STU-1-0030
+FUNCTIONAL AREA: Student Application
+TEST NAME: Academic Period
+CONFIDENCE: [PENDING] Score: TBD
+SOURCE: To be verified in Workday
+================================================================================
+
+DESCRIPTION:
+Verify Academic Period configuration and functionality.
+
+WORKDAY ROLE: Student Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Student Administrator permissions
+- Academic periods configured in tenant
+
+URL: https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+
+ELECTRON STEPS (TO BE VERIFIED):
+# === LOGIN ===
+Enter the username as {{USERNAME}}
+Enter the password as {{PASSWORD}}
+Click on the 'Sign In' button
+Wait for 5 seconds
+
+# === NAVIGATE TO TASK ===
+Enter Academic Period in Search
+Press Enter
+Wait for 2 seconds
+Click Academic Period link
+Wait for 3 seconds
+
+# === VERIFY ===
+Verify page contains Academic Period
+# TODO: Add specific verification steps after testing
+
+VERIFICATION:
+- [ ] Task accessible with current user
+- [ ] Correct page loads
+- [ ] Academic periods display correctly
+
+--------------------------------------------------------------------------------
+STATUS: NEEDS VERIFICATION - Test in Workday first
+--------------------------------------------------------------------------------

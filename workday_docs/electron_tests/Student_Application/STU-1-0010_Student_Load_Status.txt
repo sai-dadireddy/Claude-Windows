@@ -1,0 +1,59 @@
+================================================================================
+TEST ID: STU-1-0010
+FUNCTIONAL AREA: Student Application
+TEST NAME: Student Load Status
+CONFIDENCE: [PENDING] Score: TBD
+SOURCE: To be verified in Workday
+================================================================================
+
+DESCRIPTION:
+Verify Student Load Status configuration and functionality.
+
+WORKDAY ROLE: Student Administrator
+EST. DURATION: 5 minutes
+
+PREREQUISITES:
+- User logged in with Student Administrator permissions
+- Test student record available
+
+URL: https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+
+ELECTRON STEPS (TO BE VERIFIED):
+# === LOGIN ===
+Enter the username as {{USERNAME}}
+Enter the password as {{PASSWORD}}
+Click on the 'Sign In' button
+Wait for 5 seconds
+
+# === NAVIGATE TO TASK ===
+Enter Student Load Status in Search
+Press Enter
+Wait for 2 seconds
+Click Student Load Status link
+Wait for 3 seconds
+
+# === VERIFY ===
+Verify page contains Student Load Status
+# TODO: Add specific verification steps after testing
+
+VERIFICATION:
+- [ ] Task accessible with current user
+- [ ] Correct page loads
+- [ ] Expected data displays
+
+--------------------------------------------------------------------------------
+ON FAILURE
+--------------------------------------------------------------------------------
+- Step 1 fails: Verify search functionality
+- Step 3 fails: Check user has Student Administrator role
+- General: Clear browser cache and retry
+
+--------------------------------------------------------------------------------
+EXPECTED OUTCOME
+--------------------------------------------------------------------------------
+- Student Load Status page displays successfully
+- Configuration data is visible and accurate
+
+--------------------------------------------------------------------------------
+STATUS: NEEDS VERIFICATION - Test in Workday first
+--------------------------------------------------------------------------------
