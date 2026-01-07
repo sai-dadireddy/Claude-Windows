@@ -1,7 +1,7 @@
 # Swarm - Parallel Agent Spawner
 
-**Description:** Spawn 5-10 parallel agents for large features (Boris's method)
-**Argument Hint:** <feature-description> [--agents N]
+**Description:** Spawn parallel agents with complexity tiers (Auto-Claude + Boris method)
+**Argument Hint:** [simple|standard|complex] <feature-description> [--agents N]
 **Allowed Tools:** Task, Read, Glob, Grep, Bash
 
 ---
@@ -9,10 +9,43 @@
 ## Usage
 
 ```bash
-/swarm "Implement user authentication"           # Auto-detect optimal agent count
-/swarm "Build dashboard" --agents 7              # Specify exact count
-/swarm analyze                                   # Analyze task for parallelization
+/swarm simple "Add logout button"              # 3 agents (quick tasks)
+/swarm standard "Add user authentication"      # 5-6 agents (features)
+/swarm complex "Build payment system"          # 8-12 agents (systems)
+/swarm "Implement dashboard"                   # Auto-detect complexity
+/swarm analyze                                 # Analyze task for parallelization
 ```
+
+---
+
+## Complexity Tiers (Auto-Claude Pattern)
+
+### SIMPLE (3 agents, ~10 min)
+For: Bug fixes, small features, UI tweaks
+
+| Wave | Agents |
+|------|--------|
+| 1 | @fullstack-dev (implement) |
+| 2 | @test-writer (tests), @qa-fixer (validate & fix) |
+
+### STANDARD (5-6 agents, ~20 min)
+For: New features, API endpoints, components
+
+| Wave | Agents |
+|------|--------|
+| 1 | @lead-architect (plan) |
+| 2 | @fullstack-dev (backend), @frontend-ux (frontend) |
+| 3 | @test-writer (tests), @qa-fixer (validate & fix), @scribe (docs) |
+
+### COMPLEX (8-12 agents, ~30-45 min)
+For: Major features, system integrations, refactors
+
+| Wave | Agents |
+|------|--------|
+| 1 | @lead-architect (architecture), @qa-engineer (test plan) |
+| 2 | @fullstack-dev x2 (backend, DB), @frontend-ux x2 (UI, state) |
+| 3 | @test-writer x2 (unit, E2E), @security-code-reviewer |
+| 4 | @qa-fixer (validate all), @scribe (documentation) |
 
 ---
 
@@ -22,76 +55,120 @@ When user runs `/swarm`:
 
 Feature: $ARGUMENTS
 
-### Phase 1: ANALYZE TASK FOR PARALLELIZATION
+### Phase 1: DETECT COMPLEXITY
 
 ```
-Analyzing task for parallel execution...
+Analyzing task complexity...
 
-1. Identify independent subtasks
-2. Map dependencies (which must complete first)
-3. Determine optimal agent count (5-10)
-4. Assign specialized agents to each subtask
+Factors:
+- Number of files likely affected
+- Cross-cutting concerns (auth, DB, API, UI)
+- Integration points
+- Test requirements
+
+Detected: [SIMPLE|STANDARD|COMPLEX]
+Agent Count: [3-12]
 ```
 
-### Phase 2: DECOMPOSE INTO PARALLEL TRACKS
+### Phase 2: AGENT PIPELINE (Auto-Claude Pattern)
 
-Break the feature into **5-10 independent tracks**:
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    SWARM PIPELINE                            │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  WAVE 1: PLANNING                                           │
+│  ┌─────────────┐    ┌─────────────┐                        │
+│  │  Planner    │    │  QA Plan    │                        │
+│  │  (Opus)     │    │  (Sonnet)   │                        │
+│  └──────┬──────┘    └──────┬──────┘                        │
+│         └────────┬─────────┘                                │
+│                  ↓                                          │
+│  WAVE 2: IMPLEMENTATION                                     │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐          │
+│  │ Backend │ │ Backend │ │Frontend │ │Frontend │          │
+│  │   #1    │ │   #2    │ │   #1    │ │   #2    │          │
+│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘          │
+│       └──────────┬┴──────────┬┴──────────┘                 │
+│                  ↓                                          │
+│  WAVE 3: VALIDATION                                         │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │
+│  │ Test Writer │ │  Security   │ │   Scribe    │          │
+│  │  (Haiku)    │ │  (Sonnet)   │ │  (Haiku)    │          │
+│  └──────┬──────┘ └──────┬──────┘ └──────┬──────┘          │
+│         └────────────────┴────────────────┘                 │
+│                          ↓                                  │
+│  WAVE 4: QA FIX (Auto-Claude Pattern)                      │
+│  ┌─────────────────────────────────────┐                   │
+│  │            @qa-fixer                 │                   │
+│  │  - Run all tests                    │                   │
+│  │  - Fix failing tests                │                   │
+│  │  - Fix linting errors               │                   │
+│  │  - Validate security findings       │                   │
+│  │  - Ensure build passes              │                   │
+│  └─────────────────────────────────────┘                   │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
 
-| Track | Agent Type | Subtask | Dependencies |
-|-------|------------|---------|--------------|
-| T1 | @lead-architect | Design system architecture | None |
-| T2 | @fullstack-dev | Backend API endpoints | T1 |
-| T3 | @fullstack-dev | Database models/migrations | T1 |
-| T4 | @frontend-ux | UI components | T1 |
-| T5 | @frontend-ux | State management | T1 |
-| T6 | @qa-engineer | Test plan & fixtures | T1 |
-| T7 | @test-writer | Unit tests | T2, T3 |
-| T8 | @test-writer | E2E tests | T4, T5 |
-| T9 | @scribe | Documentation | T2, T4 |
-| T10 | @security-code-reviewer | Security review | T2, T3 |
-
-### Phase 3: SPAWN WAVE 1 (No Dependencies)
+### Phase 3: SPAWN AGENTS
 
 ```python
-# Spawn independent agents in parallel
+# WAVE 1 - Planning (parallel)
 Task(subagent_type="lead-architect", prompt="...", run_in_background=True)
 Task(subagent_type="qa-engineer", prompt="...", run_in_background=True)
+
+# Wait for Wave 1...
+
+# WAVE 2 - Implementation (parallel)
+Task(subagent_type="fullstack-dev", prompt="Backend API...", run_in_background=True)
+Task(subagent_type="fullstack-dev", prompt="Database...", run_in_background=True)
+Task(subagent_type="frontend-ux", prompt="UI components...", run_in_background=True)
+Task(subagent_type="frontend-ux", prompt="State management...", run_in_background=True)
+
+# Wait for Wave 2...
+
+# WAVE 3 - Validation (parallel)
+Task(subagent_type="test-writer", prompt="...", run_in_background=True)
+Task(subagent_type="security-code-reviewer", prompt="...", run_in_background=True)
+Task(subagent_type="scribe", prompt="...", run_in_background=True)
+
+# Wait for Wave 3...
+
+# WAVE 4 - QA Fix (sequential, catches everything)
+Task(subagent_type="qa-fixer", prompt="Run tests, fix failures, ensure build passes")
 ```
 
-Output:
+### Phase 4: OUTPUT
+
 ```
 SWARM ACTIVATED
 ═══════════════════════════════════════════════════════════════
 
 Feature: [Feature Name]
+Complexity: [SIMPLE|STANDARD|COMPLEX]
 Total Agents: [N]
-Execution Strategy: Wave-based parallel
+Pipeline: Planner → Coder → QA → Fixer
 
-WAVE 1 (No Dependencies) - Launching NOW
+WAVE 1: PLANNING - Launching NOW
 ─────────────────────────────────────────
-🚀 Agent 1: @lead-architect
-   Task: Design system architecture
-   Status: RUNNING (background)
-   ID: agent_001
+🚀 @lead-architect - System design
+🚀 @qa-engineer - Test strategy
 
-🚀 Agent 2: @qa-engineer
-   Task: Create test plan and fixtures
-   Status: RUNNING (background)
-   ID: agent_002
-
-WAVE 2 (Depends on Wave 1) - Queued
+WAVE 2: IMPLEMENTATION - Queued
 ─────────────────────────────────────────
-⏳ Agent 3: @fullstack-dev - Backend API
-⏳ Agent 4: @fullstack-dev - Database models
-⏳ Agent 5: @frontend-ux - UI components
-⏳ Agent 6: @frontend-ux - State management
+⏳ @fullstack-dev x2 - Backend + Database
+⏳ @frontend-ux x2 - UI + State
 
-WAVE 3 (Depends on Wave 2) - Queued
+WAVE 3: VALIDATION - Queued
 ─────────────────────────────────────────
-⏳ Agent 7: @test-writer - Unit tests
-⏳ Agent 8: @test-writer - E2E tests
-⏳ Agent 9: @scribe - Documentation
-⏳ Agent 10: @security-code-reviewer - Security review
+⏳ @test-writer - Unit + E2E tests
+⏳ @security-code-reviewer - Security audit
+⏳ @scribe - Documentation
+
+WAVE 4: QA FIX - Final
+─────────────────────────────────────────
+⏳ @qa-fixer - Fix all issues, ensure green build
 
 ═══════════════════════════════════════════════════════════════
 
@@ -100,184 +177,83 @@ Commands:
   /swarm results    - Collect completed work
   /swarm wave2      - Launch next wave when ready
   /swarm abort      - Cancel all agents
-
-Estimated completion: 15-30 minutes
-```
-
-### Phase 4: MONITOR & LAUNCH SUBSEQUENT WAVES
-
-When Wave 1 completes:
-
-```bash
-# Check status
-TaskOutput(task_id="agent_001", block=False)
-TaskOutput(task_id="agent_002", block=False)
-
-# If complete, launch Wave 2
-Task(subagent_type="fullstack-dev", prompt="...", run_in_background=True)
-# ... etc
-```
-
-### Phase 5: AGGREGATE RESULTS
-
-When all agents complete:
-
-```
-SWARM COMPLETE
-═══════════════════════════════════════════════════════════════
-
-Feature: [Feature Name]
-Duration: 23 minutes
-Agents Used: 10
-
-RESULTS BY TRACK
-─────────────────────────────────────────
-✅ T1: Architecture design complete
-   - Created: docs/architecture.md
-   - Decisions: 5 ADRs documented
-
-✅ T2: Backend API complete
-   - Created: src/api/auth/*.ts (4 files)
-   - Endpoints: 8 implemented
-
-✅ T3: Database models complete
-   - Created: src/models/*.ts (3 files)
-   - Migrations: 2 created
-
-✅ T4: UI components complete
-   - Created: src/components/auth/*.tsx (6 files)
-   - Styles: Tailwind classes applied
-
-✅ T5: State management complete
-   - Created: src/store/authSlice.ts
-   - Actions: 12 defined
-
-✅ T6: Test plan complete
-   - Created: tests/fixtures/*.ts
-   - Scenarios: 25 documented
-
-✅ T7: Unit tests complete
-   - Created: tests/unit/*.test.ts (8 files)
-   - Coverage: 85%
-
-✅ T8: E2E tests complete
-   - Created: tests/e2e/*.spec.ts (4 files)
-   - Flows: 12 tested
-
-✅ T9: Documentation complete
-   - Updated: README.md, docs/auth.md
-   - API docs generated
-
-✅ T10: Security review complete
-   - Issues found: 2 (fixed)
-   - Recommendations: 3
-
-═══════════════════════════════════════════════════════════════
-
-NEXT STEPS
-─────────────────────────────────────────
-1. Review generated code in feature branch
-2. Run full test suite: npm test
-3. Address any remaining TODOs
-4. Create PR: /commit-push-pr
-
-Files Changed: 47
-Lines Added: 2,340
-Tests Added: 156
 ```
 
 ---
 
 ## Agent Assignment Matrix
 
-| Task Type | Best Agent | Model |
-|-----------|------------|-------|
-| Architecture | @lead-architect | sonnet |
-| Backend code | @fullstack-dev | sonnet |
-| Frontend code | @frontend-ux | sonnet |
-| Tests | @test-writer | haiku |
-| E2E tests | @qa-engineer | sonnet |
-| Documentation | @scribe | haiku |
-| Security | @security-code-reviewer | sonnet |
-| Refactoring | @refactorer | haiku |
+| Tier | Agent | Model | Role |
+|------|-------|-------|------|
+| Planning | @lead-architect | opus | System design, ADRs |
+| Planning | @qa-engineer | sonnet | Test strategy, fixtures |
+| Coding | @fullstack-dev | sonnet | Backend, API, DB |
+| Coding | @frontend-ux | sonnet | UI, components, state |
+| Testing | @test-writer | haiku | Unit tests, E2E tests |
+| Security | @security-code-reviewer | sonnet | Vulnerabilities, OWASP |
+| Docs | @scribe | haiku | README, API docs |
+| **QA Fix** | **@qa-fixer** | **sonnet** | **Fix all failures** |
 
 ---
 
-## Wave Strategy
+## QA Fixer Agent (Auto-Claude Pattern)
 
-**Wave 1** (0 deps): Architecture, Test Plan
-**Wave 2** (needs arch): Backend, Frontend, Database
-**Wave 3** (needs code): Tests, Docs, Security Review
+The **@qa-fixer** agent runs LAST and ensures:
 
-This maximizes parallelism while respecting dependencies.
+1. All tests pass (`npm test`, `pytest`, etc.)
+2. Linting passes (`eslint`, `black`, etc.)
+3. Type checking passes (`tsc`, `pyright`, etc.)
+4. Build succeeds (`npm run build`, etc.)
+5. Security issues from review are addressed
+6. No TODO comments left unresolved
 
----
-
-## Token Efficiency
-
-- Each agent: ~500-2000 tokens
-- 10 agents: ~10,000-20,000 tokens total
-- Sequential alternative: ~50,000+ tokens
-- **Savings: 60-80% token reduction**
-
----
-
-## Best Practices
-
-1. **Start with architecture** - Let @lead-architect design first
-2. **Maximize Wave 1** - Put as many independent tasks as possible
-3. **Use haiku for simple tasks** - Tests, docs, formatting
-4. **Use sonnet for complex tasks** - Architecture, security, core logic
-5. **Check status frequently** - Don't let agents idle
+This is the **self-validating QA loop** from Auto-Claude.
 
 ---
 
 ## Examples
 
-### Example 1: New Feature
+### Simple Task
 ```bash
-/swarm "Add user profile management with avatar upload, preferences, and notification settings"
+/swarm simple "Add dark mode toggle to settings"
 
-# Spawns:
-# - @lead-architect: Design profile system
-# - @fullstack-dev: Profile API endpoints
-# - @fullstack-dev: Avatar upload/storage
-# - @frontend-ux: Profile UI components
-# - @frontend-ux: Settings page
-# - @test-writer: Profile tests
-# - @scribe: Profile documentation
+# Spawns 3 agents:
+# Wave 1: @fullstack-dev (implement toggle)
+# Wave 2: @test-writer (test), @qa-fixer (validate)
 ```
 
-### Example 2: Major Refactor
+### Standard Feature
 ```bash
-/swarm "Migrate from REST to GraphQL" --agents 8
+/swarm standard "Add user profile with avatar upload"
 
-# Spawns:
-# - @lead-architect: GraphQL schema design
-# - @fullstack-dev: Resolver implementations (x2)
-# - @fullstack-dev: Migration utilities
-# - @test-writer: GraphQL tests
-# - @refactorer: Client-side updates
-# - @scribe: GraphQL documentation
-# - @security-code-reviewer: Auth/permissions review
+# Spawns 6 agents:
+# Wave 1: @lead-architect (design)
+# Wave 2: @fullstack-dev (API), @frontend-ux (UI)
+# Wave 3: @test-writer, @scribe, @qa-fixer
 ```
 
-### Example 3: Full-Stack Feature
+### Complex System
 ```bash
-/swarm "Build real-time chat with WebSockets, message history, and file sharing"
+/swarm complex "Build payment processing with Stripe integration"
 
-# Spawns 10 agents covering:
-# - WebSocket server
-# - Message persistence
-# - File upload handling
-# - React chat components
-# - Real-time state management
-# - Unit tests
-# - E2E tests
-# - Documentation
-# - Security review
-# - Performance optimization
+# Spawns 10 agents:
+# Wave 1: @lead-architect, @qa-engineer
+# Wave 2: @fullstack-dev x2, @frontend-ux x2
+# Wave 3: @test-writer, @security-code-reviewer, @scribe
+# Wave 4: @qa-fixer (ensures everything works)
 ```
+
+---
+
+## Token Efficiency by Tier
+
+| Tier | Agents | Tokens | Time |
+|------|--------|--------|------|
+| Simple | 3 | ~3,000 | ~10 min |
+| Standard | 5-6 | ~8,000 | ~20 min |
+| Complex | 8-12 | ~15,000 | ~30-45 min |
+
+Sequential alternative would use 3-5x more tokens.
 
 ---
 
@@ -285,10 +261,10 @@ This maximizes parallelism while respecting dependencies.
 
 - All agents work in feature branches
 - No direct commits to main
-- Code review required before merge
-- Each agent's work is isolated
+- @qa-fixer ensures build passes before completion
+- Security review catches vulnerabilities
 - Conflicts flagged for manual resolution
 
 ---
 
-**This is Boris's 5-10 parallel agent method implemented for Claude Code!**
+**Combines Boris's parallel method + Auto-Claude's QA pipeline!**
