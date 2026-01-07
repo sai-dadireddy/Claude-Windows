@@ -208,6 +208,16 @@
             "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/lint_changed.py",
             "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/idle_doc_gen.py",
+            "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/auto_test_spawn.py",
+            "timeout": 2000
           }
         ]
       },
