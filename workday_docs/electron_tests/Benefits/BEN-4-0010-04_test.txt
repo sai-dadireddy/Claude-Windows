@@ -11,9 +11,8 @@ enter the password as Erpa@1234
 click on the 'Sign In' button
 wait for page load (5 seconds)
 click on the 'Search' button
-enter Payroll in the search field
+enter Payroll Results in the search field
 wait for search results (2 seconds)
-click cancel button
 wait for 2 seconds
 
 VERIFICATION:

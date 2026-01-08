@@ -1,0 +1,71 @@
+================================================================================
+EMAIL TEMPLATE: BEN-4-0010 Test Scripts - Review Request
+================================================================================
+
+SUBJECT: [ACTION REQUIRED] BEN-4-0010 Electron Test Scripts - Please Review
+
+--------------------------------------------------------------------------------
+
+Hi Team,
+
+I'm sharing the automated test scripts for the **BEN-4-0010: New Hire to Pay with Elections** business process. These scripts are designed to be reusable across different client tenants using custom data variables.
+
+## Attached Files
+
+1. **BEN-4-0010-01_New_Hire_to_Pay_with_Elections.txt** - Hire Employee task
+2. **BEN-4-0010-02_New_Hire_to_Pay_with_Elections.txt** - Change Benefits task
+3. **BEN-4-0010-03_New_Hire_to_Pay_with_Elections.txt** - Validate Benefit History
+4. **BEN-4-0010-04_New_Hire_to_Pay_with_Elections.txt** - Validate Payroll
+5. **BEN-4-0010-05_New_Hire_to_Pay_with_Elections.txt** - Validate Integration
+6. **BEN-4-0010_config.json** - Configuration template
+7. **BEN-4-0010_GUIDE.md** - User guide with instructions
+
+## Key Features
+
+- **Generic Variables**: All tenant-specific data uses `{{VARIABLE}}` placeholders
+- **Tested**: All scripts passed execution tests with Playwright DSL executor
+- **Documented**: Each script includes field reference tables and troubleshooting guides
+
+## How to Use
+
+1. Update `BEN-4-0010_config.json` with your tenant values
+2. Replace `{{VARIABLE}}` placeholders in scripts with actual values
+3. Run using: `python dsl_executor.py <script_name.txt>`
+
+## Variables to Configure
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `{{TENANT_LOGIN_URL}}` | Your Workday login URL | https://tenant.workday.com/login |
+| `{{USERNAME}}` | Test user account | test_user |
+| `{{PASSWORD}}` | Test user password | ******* |
+| `{{EMPLOYEE_NAME}}` | Test employee name | John Smith |
+| `{{EFFECTIVE_DATE}}` | Test effective date | 01/15/2026 |
+
+## Feedback Requested
+
+Please review the attached scripts and provide feedback on:
+
+1. [ ] Are all required fields captured correctly?
+2. [ ] Are there any additional steps needed for your workflow?
+3. [ ] Should any wait times be adjusted?
+4. [ ] Are the variable names clear and appropriate?
+5. [ ] Any security/compliance concerns?
+
+**Please respond by: [DATE]**
+
+If you have questions, feel free to reach out.
+
+Best regards,
+[Your Name]
+
+--------------------------------------------------------------------------------
+ATTACHMENT LIST:
+- BEN-4-0010-01_New_Hire_to_Pay_with_Elections.txt
+- BEN-4-0010-02_New_Hire_to_Pay_with_Elections.txt
+- BEN-4-0010-03_New_Hire_to_Pay_with_Elections.txt
+- BEN-4-0010-04_New_Hire_to_Pay_with_Elections.txt
+- BEN-4-0010-05_New_Hire_to_Pay_with_Elections.txt
+- BEN-4-0010_config.json
+- BEN-4-0010_GUIDE.md
+================================================================================
