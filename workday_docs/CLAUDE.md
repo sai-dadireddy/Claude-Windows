@@ -251,19 +251,61 @@ Pages {N}-17: 0 EN (translations only)
 ```
 
 ---
-## Electron Script Generation
+## Electron Script Generation Process (2026-01-08)
+
+### STEP-BY-STEP WORKFLOW
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 1: QUERY RAG FIRST                                                      │
+│ python workday_rag.py "{Task Name}"                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+    Score >= 7.0?                  Score < 7.0?
+         ↓                                ↓
+┌─────────────────┐         ┌─────────────────────────────────────────────────┐
+│ USE RAG DATA    │         │ USE BROWSER TO MAP FIELDS                        │
+│ Generate script │         │ 1. Login to Workday tenant                       │
+│ directly        │         │ 2. Navigate to task                              │
+└─────────────────┘         │ 3. Document ALL field names, types, options      │
+                            │ 4. Note dropdowns vs text vs search fields       │
+                            │ 5. Screenshot each dialog for reference          │
+                            └─────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 2: CREATE SCRIPT WITH VARIABLES                                         │
+│ - Use {{VARIABLE}} format for ALL tenant-specific data                       │
+│ - Group in CUSTOM DATA VARIABLES section at top                              │
+│ - Include default values as examples                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 3: TEST SCRIPT                                                          │
+│ python dsl_executor.py <script.txt> --headless                              │
+│ (Expect login failures in headless - validates DSL syntax only)             │
+└─────────────────────────────────────────────────────────────────────────────┘
+                            ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 4: CREATE EMAIL_SUMMARY.txt                                             │
+│ - List ALL variables with descriptions                                       │
+│ - Explain how to customize for different tenants                             │
+│ - Include feedback checklist for reviewers                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ### Template Location
 `electron_tests/_templates/ELECTRON_TEST_TEMPLATE.txt`
 
-### Script Format
+### Script Format (v4.0)
 ```
 ================================================================================
 TEST: {TEST_ID} {Name}
 AREA: {Module} > {Sub-Area}
 CONFIDENCE: {X.X}/10
 PRIORITY: {High|Medium|Low}
-VERSION: 1.0 | UPDATED: {YYYY-MM-DD}
+VERSION: 4.0 | UPDATED: {YYYY-MM-DD}
 ================================================================================
 
 PURPOSE
@@ -273,24 +315,104 @@ PREREQUISITES
 - {Required role/permission}
 - {Required data/setup}
 
+--------------------------------------------------------------------------------
+CUSTOM DATA VARIABLES
+--------------------------------------------------------------------------------
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
+{{TENANT_LOGIN_URL}} = https://your-tenant.workday.com/...
+{{USERNAME}} = your_username
+{{PASSWORD}} = your_password
+
+# Task-Specific Fields (UPDATE THESE FOR TEST DATA)
+{{FIELD_NAME}} = default_value
+
+--------------------------------------------------------------------------------
 AUTOMATED STEPS
-1. navigate to "{Task}"
-2. enter search box as "{value}"
-3. wait for search results (3 seconds)
-4. verify "{Expected}" displays
-5. screenshot as "{TEST_ID}-05-desc.png"
+--------------------------------------------------------------------------------
+# Login Steps
+Navigate to {{TENANT_LOGIN_URL}}
+wait for 3 seconds
+enter the username as {{USERNAME}}
+wait for 1 second
+enter the password as {{PASSWORD}}
+click on the 'Sign In' button
+wait for 5 seconds
 
-MANUAL VERIFICATION
-| Step | Action | Reason |
-| M1 | {action} | {why can't automate} |
+# Task Steps
+click on the 'Search' button
+enter {Task Name} in the search field
+wait for 3 seconds
+click on '{Task Name}' link
+wait for 3 seconds
 
+# Form Fields
+select {Field} as {{VARIABLE}}
+wait for 1 second
+
+# Exit
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Login successful
+- [ ] Task opens correctly
+- [ ] Fields accept data
+
+--------------------------------------------------------------------------------
+FIELD REFERENCE
+--------------------------------------------------------------------------------
+| Field Name | Type | Required | Variable |
+|------------|------|----------|----------|
+| {Field}    | {Type} | {Yes/No} | {{VAR}} |
+
+--------------------------------------------------------------------------------
 ON FAILURE
-- Step N fails: {fallback}
+--------------------------------------------------------------------------------
+- {Step} fails: {Fallback action}
 
+--------------------------------------------------------------------------------
 EXPECTED OUTCOME
-- {result}
+--------------------------------------------------------------------------------
+- {Expected result}
+
 ================================================================================
 ```
+
+### DSL Commands Reference (VALID)
+
+| Command | Format | Example |
+|---------|--------|---------|
+| Navigate | `Navigate to {URL}` | `Navigate to {{TENANT_LOGIN_URL}}` |
+| Wait | `wait for N seconds` | `wait for 3 seconds` |
+| Username | `enter the username as {value}` | `enter the username as {{USERNAME}}` |
+| Password | `enter the password as {value}` | `enter the password as {{PASSWORD}}` |
+| Sign In | `click on the 'Sign In' button` | - |
+| Search | `click on the 'Search' button` | - |
+| Search Text | `enter {text} in the search field` | `enter Hire Employee in the search field` |
+| Click Link | `click on '{text}' link` | `click on 'Hire Employee' link` |
+| Select/Fill | `select {Field} as {value}` | `select Country as {{HIRE_COUNTRY}}` |
+| Cancel | `click cancel button` | - |
+| OK | `click OK button` | - |
+
+### Variable Naming Convention
+
+| Category | Prefix | Examples |
+|----------|--------|----------|
+| Tenant | None | `{{TENANT_LOGIN_URL}}`, `{{USERNAME}}`, `{{PASSWORD}}` |
+| Hire | `HIRE_` | `{{HIRE_COUNTRY}}`, `{{HIRE_FIRST_NAME}}` |
+| Employee | `EMPLOYEE_` | `{{EMPLOYEE_NAME}}`, `{{EMPLOYEE_ID}}` |
+| Date | None | `{{EFFECTIVE_DATE}}`, `{{COVERAGE_START_DATE}}` |
+| Deduction | `_DEDUCTION` | `{{MEDICAL_DEDUCTION}}`, `{{DENTAL_DEDUCTION}}` |
+
+### Best Practices
+
+1. **ALWAYS use {{VARIABLE}}** for tenant-specific data
+2. **Group variables** by purpose (Tenant, Employee, Expected Values)
+3. **Use `wait for N seconds`** - NOT `wait for page load`
+4. **Use `select`** for ALL field types (works for dropdowns and text)
+5. **End with `click cancel button`** for safe test exit
+6. **Version scripts** (v4.0) with UPDATED date
+7. **Create EMAIL_SUMMARY.txt** explaining variables for client
 
 ### Parallel Agent Coordination
 
