@@ -2,66 +2,92 @@
 TEST ID: BEN-4-0010-02
 FUNCTIONAL AREA: Benefits
 TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.0/10
+VERSION: 2.0 | UPDATED: 2026-01-08
 ================================================================================
 
-TASK/STEP: 2. Complete Benefit Election Step in Onboarding
+PURPOSE
+Verify the Benefit Election step during onboarding for a newly hired employee.
+This step ensures the employee can enroll in benefit plans as part of the
+New Hire to Pay with Elections business process.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 2. Complete Benefit Election Step in Onboarding
+PREREQUISITES
+- BEN-4-0010-01 (Hire Employee) completed successfully
+- Employee has active hire event with benefits eligibility
+- Benefit plans configured for new hire enrollment
+- User has Benefits Administrator security role
 
-### 1. Kb Benefits Enrollment (score: 7)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. enter search box as "Change Benefits"
+2. wait for search results (2 seconds)
+3. click search result "Change Benefits" with type "Task"
+4. wait for dialog to load (3 seconds)
+5. enter "Employee" as "{TEST_EMPLOYEE_ID}"
+6. wait for employee search (2 seconds)
+7. click employee result from dropdown
+8. screenshot as "BEN-4-0010-02_step08_employee_selected.png"
+9. select "Benefit Event Type" as "New Hire"
+10. enter "Effective Date" as "{TEST_EFFECTIVE_DATE}"
+11. click button "OK" or "Submit"
+12. wait for Benefits enrollment page to load (5 seconds)
+13. screenshot as "BEN-4-0010-02_step13_enrollment_page.png"
+14. verify section "Medical" displays available plans
+15. click to expand "Medical" section
+16. select medical plan from available options
+17. screenshot as "BEN-4-0010-02_step17_medical_selected.png"
+18. verify section "Dental" displays available plans
+19. select dental plan from available options
+20. verify section "Vision" displays available plans
+21. select vision plan from available options
+22. screenshot as "BEN-4-0010-02_step22_all_elections.png"
+23. scroll to bottom of page
+24. click button "Submit"
+25. wait for confirmation (3 seconds)
+26. verify success message displays
+27. screenshot as "BEN-4-0010-02_step27_complete.png"
 
-Source: Workday Community & WSDL Analysis
-U
-... (truncated)
-
-ELECTRON STEPS:
-1. enter search box as "2. Complete Benefit Election Step in Onboarding"
-2. wait for search results
-3. click search result containing "2. Complete Benefit Election Step in Onboarding"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-4-0010-02_complete.png"
-
-VERIFICATION:
-- [ ] N/A
+--------------------------------------------------------------------------------
+VERIFICATION
+--------------------------------------------------------------------------------
+- [ ] Change Benefits task opens with employee context
+- [ ] Benefit Event Type shows "New Hire" option
+- [ ] Medical, Dental, Vision plans are available for selection
+- [ ] Employee can make benefit elections
+- [ ] Submit completes successfully with confirmation message
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-2 fails: Verify search functionality is working; try refreshing page
-- Step 3 fails: Check if user has Benefits Administrator security role
-- Page load fails: Verify tenant is responsive; increase wait time
-- Data not displayed: Confirm New Hire to Pay with Elections data exists in tenant configuration
-- General failure: Check Benefits Administration module is enabled
+- Step 1-3 fails: Verify user has Change Benefits task access
+- Step 5-7 fails: Verify employee ID exists and has active hire
+- Step 9 fails: Check New Hire event type is configured
+- Step 14-21 fails: Verify benefit plans are configured for eligibility
+- Step 24-26 fails: Check required elections are made; review validation errors
+- General failure: Check Benefits Administrator security role
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- New Hire to Pay with Elections task/report displays successfully
-- All expected data is visible and accurate
-- Verification criteria are met
-- Screenshots captured at key verification points
+- Benefits enrollment page loads for new hire
+- Available benefit plans display correctly
+- Employee can make elections for Medical, Dental, Vision
+- Submit saves elections with confirmation
+- All screenshots captured at verification points
 
 --------------------------------------------------------------------------------
 MANUAL VERIFICATION
 --------------------------------------------------------------------------------
 | Step | Action | Reason |
 |------|--------|--------|
-| M1 | Verify data against source documentation | Ensure accuracy |
-| M2 | Check effective dates are current | Validate active configuration |
-| M3 | Cross-reference with related records | Confirm data integrity |
+| M1 | Verify plan options match eligibility rules | Ensure correct plans display |
+| M2 | Check coverage levels and costs displayed | Validate plan configuration |
+| M3 | Confirm dependent eligibility if applicable | Complex enrollment scenarios |
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- This is Step 2 of the New Hire to Pay with Elections business process
+- Previous step (BEN-4-0010-01) initiates the hire
+- Next step (BEN-4-0010-03) validates election and coverage history
+- Test data variables: {TEST_EMPLOYEE_ID}, {TEST_EFFECTIVE_DATE}
 ================================================================================

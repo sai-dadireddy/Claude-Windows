@@ -2,67 +2,89 @@
 TEST ID: BEN-4-0010-04
 FUNCTIONAL AREA: Benefits
 TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+VERSION: 2.0 | UPDATED: 2026-01-08
 ================================================================================
 
-TASK/STEP: 4. Validate Payroll
+PURPOSE
+Validate Payroll reflects the benefit elections made during onboarding. This step
+confirms that benefit deductions are correctly calculated and will appear on the
+employee's paycheck.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 4. Validate Payroll
+PREREQUISITES
+- BEN-4-0010-01 through 03 completed successfully
+- Employee has active benefit elections
+- Payroll is configured for benefit deductions
+- User has Payroll Administrator or View Payroll security role
 
-### 1. Electron Test Samples (score: 3)
-Source: electron_test_samples.txt
-```
-================================================================================
-WORKDAY ELECTRON TEST SCENARIOS - SAMPLE SET
-Generated: 2025-12-30
-Source: test_scenarios_v2.xlsx
-================================================================================
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. enter search box as "{TEST_EMPLOYEE_NAME}"
+2. wait for search results (2 seconds)
+3. click employee result from search
+4. wait for worker profile to load (3 seconds)
+5. click tab "Pay" or navigate to Pay section
+6. wait for page load (2 seconds)
+7. screenshot as "BEN-4-0010-04_step07_pay_tab.png"
+8. click link "Payroll" or "View Payroll Results"
+9. wait for payroll page to load (3 seconds)
+10. screenshot as "BEN-4-0010-04_step10_payroll_page.png"
+11. verify section "Deductions" displays
+12. verify Medical deduction appears with correct amount
+13. verify Dental deduction appears with correct amount
+14. verify Vision deduction appears with correct amount
+15. screenshot as "BEN-4-0010-04_step15_deductions.png"
+16. click to view deduction details if available
+17. verify deduction frequency matches pay period
+18. verify deduction effective date aligns with coverage start
+19. screenshot as "BEN-4-0010-04_step19_deduction_details.png"
+20. navigate to "Pay Statement" or run payroll preview
+21. wait for statement to load (3 seconds)
+22. verify benefit deductions appear on pay statement
+23. verify net pay calculation includes deductions
+24. screenshot as "BEN-4-0010-04_step24_pay_statement.png"
 
-This file contains 5 sample Ele
-... (truncated)
-
-ELECTRON STEPS:
-1. enter search box as "4. Validate Payroll"
-2. wait for search results
-3. click search result containing "4. Validate Payroll"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-4-0010-04_complete.png"
-
-VERIFICATION:
-- [ ] N/A
+--------------------------------------------------------------------------------
+VERIFICATION
+--------------------------------------------------------------------------------
+- [ ] Pay tab/section accessible for employee
+- [ ] Deductions section shows benefit-related deductions
+- [ ] Medical, Dental, Vision deduction amounts are correct
+- [ ] Deduction effective dates match coverage start
+- [ ] Pay statement preview reflects expected deductions
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-2 fails: Verify search functionality is working; try refreshing page
-- Step 3 fails: Check if user has Benefits Administrator security role
-- Page load fails: Verify tenant is responsive; increase wait time
-- Data not displayed: Confirm New Hire to Pay with Elections data exists in tenant configuration
-- General failure: Check Benefits Administration module is enabled
+- Step 1-5 fails: Verify employee exists and user has payroll view access
+- Step 8-10 fails: Check Payroll module access and configuration
+- Step 11-15 fails: Verify benefit deductions are configured
+- Step 16-19 fails: Check deduction calculation rules
+- Step 20-24 fails: Verify payroll has been calculated/previewed
+- General failure: Review payroll calendar and processing status
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- New Hire to Pay with Elections task/report displays successfully
-- All expected data is visible and accurate
-- Verification criteria are met
-- Screenshots captured at key verification points
+- Payroll deductions reflect benefit elections
+- Deduction amounts match plan costs/employee contributions
+- Effective dates are correctly set
+- Pay statement preview shows expected deductions
+- All screenshots captured at verification points
 
 --------------------------------------------------------------------------------
 MANUAL VERIFICATION
 --------------------------------------------------------------------------------
 | Step | Action | Reason |
 |------|--------|--------|
-| M1 | Verify data against source documentation | Ensure accuracy |
-| M2 | Check effective dates are current | Validate active configuration |
-| M3 | Cross-reference with related records | Confirm data integrity |
+| M1 | Compare deduction amounts to plan costs | Validate calculation accuracy |
+| M2 | Verify pre-tax vs post-tax treatment | Check tax configuration |
+| M3 | Confirm deduction codes are correct | Ensure GL mapping accuracy |
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- This is Step 4 of the New Hire to Pay with Elections business process
+- Validates payroll integration with benefits from BEN-4-0010-02
+- Next step (BEN-4-0010-05) validates payroll interface/integration
+- Test data variables: {TEST_EMPLOYEE_NAME}, {TEST_EMPLOYEE_ID}
 ================================================================================

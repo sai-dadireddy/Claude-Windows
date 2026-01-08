@@ -2,66 +2,86 @@
 TEST ID: BEN-4-0010-01
 FUNCTIONAL AREA: Benefits
 TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 8.5/10
+VERSION: 2.0 | UPDATED: 2026-01-08
 ================================================================================
 
-TASK/STEP: 1. Hire Employee
+PURPOSE
+Verify the Hire Employee task workflow as the first step in the New Hire to Pay
+with Elections business process. This step initiates the hiring of a new employee
+who will subsequently enroll in benefits.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 1. Hire Employee
+PREREQUISITES
+- User has HR Administrator or Hire Employee security role
+- Pre-hire candidate exists in system OR using Create New Pre-Hire option
+- Supervisory organization is configured
 
-### 1. Kb Benefits Enrollment (score: 3)
-Source: kb_benefits_enrollment.txt
-```
-================================================================================
-WORKDAY KB ARTICLE: BENEFIT ENROLLMENT BUSINESS PROCESS
-================================================================================
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. enter search box as "Hire Employee"
+2. wait for search results (2 seconds)
+3. click search result "Hire Employee" with type "Task"
+4. wait for dialog to load (3 seconds)
+5. verify field "Country" displays with default value
+6. screenshot as "BEN-4-0010-01_step05_country.png"
+7. expand section "Personal Details" if collapsed
+8. enter "First Name" as "{TEST_FIRST_NAME}"
+9. enter "Middle Name" as "{TEST_MIDDLE_NAME}"
+10. enter "Last Name" as "{TEST_LAST_NAME}"
+11. click dropdown "Workday ID Type"
+12. select option "Employee ID" from dropdown
+13. expand section "Contact Details" if collapsed
+14. screenshot as "BEN-4-0010-01_step14_personal_details.png"
+15. click button "Search"
+16. wait for search results (3 seconds)
+17. verify "Search Results" section displays matching candidates
+18. screenshot as "BEN-4-0010-01_step18_search_results.png"
+19. click button "Create New Pre-Hire" if no matching candidate found
+20. wait for page load (3 seconds)
+21. complete required fields on Pre-Hire form
+22. click button "Start Hire"
+23. wait for Hire Employee wizard to load (5 seconds)
+24. screenshot as "BEN-4-0010-01_step24_hire_wizard.png"
+25. verify page title contains "Hire Employee"
 
-Source: Workday Community & WSDL Analysis
-URL: Workday Benefits Administra
-... (truncated)
-
-ELECTRON STEPS:
-1. enter search box as "1. Hire Employee"
-2. wait for search results
-3. click search result containing "1. Hire Employee"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-4-0010-01_complete.png"
-
-VERIFICATION:
-- [ ] N/A
+--------------------------------------------------------------------------------
+VERIFICATION
+--------------------------------------------------------------------------------
+- [ ] Hire Employee task opens successfully
+- [ ] Country field defaults to "United States of America"
+- [ ] Personal Details section is expandable
+- [ ] Search returns relevant candidates or allows Create New Pre-Hire
+- [ ] Hire Employee wizard initiates after Start Hire
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-2 fails: Verify search functionality is working; try refreshing page
-- Step 3 fails: Check if user has Benefits Administrator security role
-- Page load fails: Verify tenant is responsive; increase wait time
-- Data not displayed: Confirm New Hire to Pay with Elections data exists in tenant configuration
-- General failure: Check Benefits Administration module is enabled
+- Step 1-3 fails: Verify user has Hire Employee task access
+- Step 5 fails: Check tenant country configuration
+- Step 15-17 fails: Verify search functionality; check data exists
+- Step 22-24 fails: Verify required fields are completed
+- General failure: Check HR Administrator security role assignment
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- New Hire to Pay with Elections task/report displays successfully
-- All expected data is visible and accurate
-- Verification criteria are met
-- Screenshots captured at key verification points
+- Hire Employee task launches successfully
+- Pre-hire candidate selected or created
+- Hire Employee wizard begins for benefits enrollment flow
+- All screenshots captured at verification points
 
 --------------------------------------------------------------------------------
 MANUAL VERIFICATION
 --------------------------------------------------------------------------------
 | Step | Action | Reason |
 |------|--------|--------|
-| M1 | Verify data against source documentation | Ensure accuracy |
-| M2 | Check effective dates are current | Validate active configuration |
-| M3 | Cross-reference with related records | Confirm data integrity |
+| M1 | Verify employee data accuracy | Ensure correct candidate selected |
+| M2 | Confirm supervisory org assignment | Required for hire process |
+| M3 | Check effective date is appropriate | Impacts benefits eligibility |
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- This is Step 1 of the New Hire to Pay with Elections business process
+- Next step (BEN-4-0010-02) covers Benefit Election during onboarding
+- Test data variables: {TEST_FIRST_NAME}, {TEST_LAST_NAME}, {TEST_MIDDLE_NAME}
 ================================================================================

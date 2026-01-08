@@ -2,67 +2,90 @@
 TEST ID: BEN-4-0010-05
 FUNCTIONAL AREA: Benefits
 TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [MEDIUM] Score: 7.0/10
+CONFIDENCE: [HIGH] Score: 7.5/10
+VERSION: 2.0 | UPDATED: 2026-01-08
 ================================================================================
 
-TASK/STEP: 4. Validate Payroll Interface
+PURPOSE
+Validate Payroll Interface/Integration outputs for the benefit elections. This
+step confirms that benefit data flows correctly to external systems or generates
+proper interface files for downstream processing.
 
-RAG QUERY RESULT:
-Loaded 63 docs from public/private
-Loaded 55 WSDLs with 3169 operations
-Total: 118 documents
-## Results for: 4. Validate Payroll Interface
+PREREQUISITES
+- BEN-4-0010-01 through 04 completed successfully
+- Employee has validated payroll deductions
+- Payroll interface/integration is configured
+- User has Integration Administrator or Payroll Interface security role
 
-### 1. Admin Guide Workday Studio (score: 4)
-Source: Admin-Guide-Workday-Studio.pdf
-```
-Workday Studio
-Product Summary
-December 10, 2025
- | Contents | ii
-Contents
-Setup Considerations: Workday Studio.............................................................10
-Studio Fundamentals..............................................................................
-... (truncated)
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. enter search box as "Integration"
+2. wait for search results (2 seconds)
+3. click "Integration" or "View Integrations" from results
+4. wait for page load (3 seconds)
+5. screenshot as "BEN-4-0010-05_step05_integrations.png"
+6. search or filter for "Payroll" or "Benefits" integrations
+7. wait for filter results (2 seconds)
+8. click relevant payroll/benefits interface
+9. screenshot as "BEN-4-0010-05_step09_interface_selected.png"
+10. verify interface status shows "Completed" or "Active"
+11. click to view integration run history
+12. wait for history to load (3 seconds)
+13. screenshot as "BEN-4-0010-05_step13_run_history.png"
+14. click most recent completed run
+15. verify run completed without errors
+16. screenshot as "BEN-4-0010-05_step16_run_details.png"
+17. click to view output file or data
+18. wait for file/data to load (3 seconds)
+19. search for {TEST_EMPLOYEE_ID} in output
+20. verify employee record exists in output
+21. verify benefit deduction data is included
+22. screenshot as "BEN-4-0010-05_step22_output_data.png"
+23. verify deduction amounts match expected values
+24. verify effective dates are correct in output
+25. screenshot as "BEN-4-0010-05_step25_complete.png"
 
-ELECTRON STEPS:
-1. enter search box as "4. Validate Payroll Interface"
-2. wait for search results
-3. click search result containing "4. Validate Payroll Interface"
-4. wait for page load
-5. fill required fields based on RAG guidance
-6. screenshot as "BEN-4-0010-05_complete.png"
-
-VERIFICATION:
-- [ ] N/A
+--------------------------------------------------------------------------------
+VERIFICATION
+--------------------------------------------------------------------------------
+- [ ] Integration system is accessible
+- [ ] Payroll/Benefits interface is configured and active
+- [ ] Recent integration run completed successfully
+- [ ] Employee data appears in interface output
+- [ ] Benefit deduction data is correctly formatted
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-2 fails: Verify search functionality is working; try refreshing page
-- Step 3 fails: Check if user has Benefits Administrator security role
-- Page load fails: Verify tenant is responsive; increase wait time
-- Data not displayed: Confirm New Hire to Pay with Elections data exists in tenant configuration
-- General failure: Check Benefits Administration module is enabled
+- Step 1-5 fails: Verify user has Integration view access
+- Step 6-9 fails: Check integration naming/filtering
+- Step 10-13 fails: Verify integration has been executed
+- Step 14-16 fails: Check for integration errors in logs
+- Step 19-24 fails: Employee may not be in output; check filters/scope
+- General failure: Review integration configuration and schedule
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- New Hire to Pay with Elections task/report displays successfully
-- All expected data is visible and accurate
-- Verification criteria are met
-- Screenshots captured at key verification points
+- Payroll interface/integration accessible and active
+- Recent run completed without errors
+- Employee benefit data appears in output
+- Deduction amounts and dates are correct
+- All screenshots captured at verification points
 
 --------------------------------------------------------------------------------
 MANUAL VERIFICATION
 --------------------------------------------------------------------------------
 | Step | Action | Reason |
 |------|--------|--------|
-| M1 | Verify data against source documentation | Ensure accuracy |
-| M2 | Check effective dates are current | Validate active configuration |
-| M3 | Cross-reference with related records | Confirm data integrity |
+| M1 | Compare output to source data | Validate transformation accuracy |
+| M2 | Verify file format meets specs | Check integration requirements |
+| M3 | Confirm downstream receipt | End-to-end validation |
 
 NOTES:
-- Confidence score based on RAG result quality and expected result clarity
-- Review and enhance steps as needed based on actual Workday UI
+- This is Step 5 (final) of the New Hire to Pay with Elections business process
+- Validates end-to-end data flow from hire to payroll interface
+- Complete test cycle validates Benefits integration with Payroll
+- Test data variables: {TEST_EMPLOYEE_NAME}, {TEST_EMPLOYEE_ID}
 ================================================================================
