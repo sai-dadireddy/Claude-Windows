@@ -1,0 +1,24 @@
+================================================================================
+TEST: BEN-4-0010-01 Test Run
+================================================================================
+
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+Navigate to https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+wait for page load (3 seconds)
+enter the username as stud_isu
+wait for 1 second
+enter the password as Erpa@1234
+click on the 'Sign In' button
+wait for page load (5 seconds)
+click on the 'Search' button
+enter Hire Employee in the search field
+wait for search results (2 seconds)
+click on 'Hire Employee' link
+wait for dialog (3 seconds)
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Test complete
+================================================================================

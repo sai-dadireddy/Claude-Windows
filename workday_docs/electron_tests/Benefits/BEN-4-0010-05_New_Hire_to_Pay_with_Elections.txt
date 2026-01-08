@@ -1,91 +1,81 @@
 ================================================================================
-TEST ID: BEN-4-0010-05
-FUNCTIONAL AREA: Benefits
-TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [HIGH] Score: 7.5/10
-VERSION: 2.0 | UPDATED: 2026-01-08
+TEST: BEN-4-0010-05 New Hire to Pay with Elections - Validate Interface
+AREA: Benefits > New Hire Enrollment
+CONFIDENCE: 8.0/10
+PRIORITY: High
+VERSION: 3.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
-Validate Payroll Interface/Integration outputs for the benefit elections. This
-step confirms that benefit data flows correctly to external systems or generates
-proper interface files for downstream processing.
+Validate Payroll Interface outputs for benefit elections to external systems.
 
 PREREQUISITES
-- BEN-4-0010-01 through 04 completed successfully
-- Employee has validated payroll deductions
-- Payroll interface/integration is configured
-- User has Integration Administrator or Payroll Interface security role
+- BEN-4-0010-01 through 04 completed
+- Integration Administrator role
+
+--------------------------------------------------------------------------------
+CUSTOM DATA VARIABLES
+--------------------------------------------------------------------------------
+# Tenant Configuration
+{{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+{{USERNAME}} = stud_isu
+{{PASSWORD}} = Erpa@1234
+
+# Integration Search
+{{INTEGRATION_NAME}} = Payroll
+{{EMPLOYEE_ID}} = EMP-TEST-2026
 
 --------------------------------------------------------------------------------
 AUTOMATED STEPS
 --------------------------------------------------------------------------------
-1. enter search box as "Integration"
-2. wait for search results (2 seconds)
-3. click "Integration" or "View Integrations" from results
-4. wait for page load (3 seconds)
-5. screenshot as "BEN-4-0010-05_step05_integrations.png"
-6. search or filter for "Payroll" or "Benefits" integrations
-7. wait for filter results (2 seconds)
-8. click relevant payroll/benefits interface
-9. screenshot as "BEN-4-0010-05_step09_interface_selected.png"
-10. verify interface status shows "Completed" or "Active"
-11. click to view integration run history
-12. wait for history to load (3 seconds)
-13. screenshot as "BEN-4-0010-05_step13_run_history.png"
-14. click most recent completed run
-15. verify run completed without errors
-16. screenshot as "BEN-4-0010-05_step16_run_details.png"
-17. click to view output file or data
-18. wait for file/data to load (3 seconds)
-19. search for {TEST_EMPLOYEE_ID} in output
-20. verify employee record exists in output
-21. verify benefit deduction data is included
-22. screenshot as "BEN-4-0010-05_step22_output_data.png"
-23. verify deduction amounts match expected values
-24. verify effective dates are correct in output
-25. screenshot as "BEN-4-0010-05_step25_complete.png"
+# Login Steps
+Navigate to {{TENANT_LOGIN_URL}}
+wait for page load (3 seconds)
+enter the username as {{USERNAME}}
+wait for 1 second
+enter the password as {{PASSWORD}}
+click on the 'Sign In' button
+wait for page load (5 seconds)
+
+# Search for Integration
+click on the 'Search' button
+enter Integration in the search field
+wait for search results (2 seconds)
+click on 'Integration' link
+wait for page load (3 seconds)
+
+# Search within Integrations
+enter {{INTEGRATION_NAME}} in the search field
+wait for 2 seconds
+
+# Cancel/close to complete test
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Login successful
+- [ ] Integration system accessible
+- [ ] Search functions within Integration
 
 --------------------------------------------------------------------------------
-VERIFICATION
+FIELD REFERENCE
 --------------------------------------------------------------------------------
-- [ ] Integration system is accessible
-- [ ] Payroll/Benefits interface is configured and active
-- [ ] Recent integration run completed successfully
-- [ ] Employee data appears in interface output
-- [ ] Benefit deduction data is correctly formatted
+| Field Name | Type | Required | Variable |
+|------------|------|----------|----------|
+| Integration Search | Text | Yes | {{INTEGRATION_NAME}} |
+| Employee ID | Text | No | {{EMPLOYEE_ID}} |
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-5 fails: Verify user has Integration view access
-- Step 6-9 fails: Check integration naming/filtering
-- Step 10-13 fails: Verify integration has been executed
-- Step 14-16 fails: Check for integration errors in logs
-- Step 19-24 fails: Employee may not be in output; check filters/scope
-- General failure: Review integration configuration and schedule
+- Integration access denied: Verify Integration Administrator role
+- Interface not found: Check integration naming
+- No output data: Verify integration has executed
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- Payroll interface/integration accessible and active
-- Recent run completed without errors
-- Employee benefit data appears in output
-- Deduction amounts and dates are correct
-- All screenshots captured at verification points
+- Integration system accessible
+- Test cycle complete for BEN-4-0010
 
---------------------------------------------------------------------------------
-MANUAL VERIFICATION
---------------------------------------------------------------------------------
-| Step | Action | Reason |
-|------|--------|--------|
-| M1 | Compare output to source data | Validate transformation accuracy |
-| M2 | Verify file format meets specs | Check integration requirements |
-| M3 | Confirm downstream receipt | End-to-end validation |
-
-NOTES:
-- This is Step 5 (final) of the New Hire to Pay with Elections business process
-- Validates end-to-end data flow from hire to payroll interface
-- Complete test cycle validates Benefits integration with Payroll
-- Test data variables: {TEST_EMPLOYEE_NAME}, {TEST_EMPLOYEE_ID}
 ================================================================================

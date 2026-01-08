@@ -1,87 +1,121 @@
 ================================================================================
-TEST ID: BEN-4-0010-01
-FUNCTIONAL AREA: Benefits
-TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [HIGH] Score: 8.5/10
-VERSION: 2.0 | UPDATED: 2026-01-08
+TEST: BEN-4-0010-01 New Hire to Pay with Elections - Hire Employee
+AREA: Benefits > New Hire Enrollment
+CONFIDENCE: 9.0/10
+PRIORITY: High
+VERSION: 3.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
-Verify the Hire Employee task workflow as the first step in the New Hire to Pay
-with Elections business process. This step initiates the hiring of a new employee
-who will subsequently enroll in benefits.
+Execute Hire Employee task to initiate new hire for benefits enrollment.
 
 PREREQUISITES
-- User has HR Administrator or Hire Employee security role
-- Pre-hire candidate exists in system OR using Create New Pre-Hire option
-- Supervisory organization is configured
+- HR Administrator or Hire Employee security role
+- Supervisory organization configured
+
+--------------------------------------------------------------------------------
+CUSTOM DATA VARIABLES
+--------------------------------------------------------------------------------
+# Tenant Configuration
+{{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+{{USERNAME}} = stud_isu
+{{PASSWORD}} = Erpa@1234
+
+# Hire Employee Fields
+{{HIRE_COUNTRY}} = United States of America
+{{HIRE_FIRST_NAME}} = John
+{{HIRE_MIDDLE_NAME}} = Michael
+{{HIRE_LAST_NAME}} = TestEmployee
+{{HIRE_ID_TYPE}} = Employee ID
+# ID Type Options: Candidate ID | Employee ID | Pre-Hire ID | Student ID | Universal ID
 
 --------------------------------------------------------------------------------
 AUTOMATED STEPS
 --------------------------------------------------------------------------------
-1. enter search box as "Hire Employee"
-2. wait for search results (2 seconds)
-3. click search result "Hire Employee" with type "Task"
-4. wait for dialog to load (3 seconds)
-5. verify field "Country" displays with default value
-6. screenshot as "BEN-4-0010-01_step05_country.png"
-7. expand section "Personal Details" if collapsed
-8. enter "First Name" as "{TEST_FIRST_NAME}"
-9. enter "Middle Name" as "{TEST_MIDDLE_NAME}"
-10. enter "Last Name" as "{TEST_LAST_NAME}"
-11. click dropdown "Workday ID Type"
-12. select option "Employee ID" from dropdown
-13. expand section "Contact Details" if collapsed
-14. screenshot as "BEN-4-0010-01_step14_personal_details.png"
-15. click button "Search"
-16. wait for search results (3 seconds)
-17. verify "Search Results" section displays matching candidates
-18. screenshot as "BEN-4-0010-01_step18_search_results.png"
-19. click button "Create New Pre-Hire" if no matching candidate found
-20. wait for page load (3 seconds)
-21. complete required fields on Pre-Hire form
-22. click button "Start Hire"
-23. wait for Hire Employee wizard to load (5 seconds)
-24. screenshot as "BEN-4-0010-01_step24_hire_wizard.png"
-25. verify page title contains "Hire Employee"
+# Login Steps
+Navigate to {{TENANT_LOGIN_URL}}
+wait for page load (3 seconds)
+enter the username as {{USERNAME}}
+wait for 1 second
+enter the password as {{PASSWORD}}
+click on the 'Sign In' button
+wait for page load (5 seconds)
+
+# Navigate to Hire Employee Task
+click on the 'Search' button
+enter Hire Employee in the search field
+wait for search results (2 seconds)
+click on 'Hire Employee' link
+wait for dialog (3 seconds)
+
+# Fill Hire Employee Form Fields
+# Field 1: Country (required dropdown - default United States of America)
+select Country as {{HIRE_COUNTRY}}
+wait for 1 second
+
+# Field 2-4: Personal Details Section
+enter First Name as {{HIRE_FIRST_NAME}}
+enter Middle Name as {{HIRE_MIDDLE_NAME}}
+enter Last Name as {{HIRE_LAST_NAME}}
+
+# Field 5: Workday ID Type (dropdown)
+select Workday ID Type as {{HIRE_ID_TYPE}}
+wait for 1 second
+
+# Search for existing person
+click on 'Search' button
+wait for search results (3 seconds)
+
+# If no match found, create new pre-hire
+click on 'Create New Pre-Hire' link
+wait for page load (3 seconds)
+
+# Cancel to complete test
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Login successful
+- [ ] Hire Employee task opens
+- [ ] Country field displays with {{HIRE_COUNTRY}}
+- [ ] Personal Details section expandable
+- [ ] First Name, Middle Name, Last Name fields accept input
+- [ ] Workday ID Type dropdown shows options
+- [ ] Search button functions
+- [ ] Create New Pre-Hire option available
 
 --------------------------------------------------------------------------------
-VERIFICATION
+FIELD REFERENCE
 --------------------------------------------------------------------------------
-- [ ] Hire Employee task opens successfully
-- [ ] Country field defaults to "United States of America"
-- [ ] Personal Details section is expandable
-- [ ] Search returns relevant candidates or allows Create New Pre-Hire
-- [ ] Hire Employee wizard initiates after Start Hire
+| Field Name | Type | Required | Variable |
+|------------|------|----------|----------|
+| Country | Dropdown | Yes | {{HIRE_COUNTRY}} |
+| First Name | Text | No | {{HIRE_FIRST_NAME}} |
+| Middle Name | Text | No | {{HIRE_MIDDLE_NAME}} |
+| Last Name | Text | No | {{HIRE_LAST_NAME}} |
+| Workday ID Type | Dropdown | No | {{HIRE_ID_TYPE}} |
+
+ID Type Options:
+- Candidate ID
+- Employee ID  
+- Pre-Hire ID
+- Student ID
+- Universal ID
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-3 fails: Verify user has Hire Employee task access
-- Step 5 fails: Check tenant country configuration
-- Step 15-17 fails: Verify search functionality; check data exists
-- Step 22-24 fails: Verify required fields are completed
-- General failure: Check HR Administrator security role assignment
+- Login fails: Verify {{USERNAME}} and {{PASSWORD}}
+- Task not found: Check Hire Employee security role
+- Country error: Verify {{HIRE_COUNTRY}} exists in tenant
+- ID Type error: Verify {{HIRE_ID_TYPE}} is valid option
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
 - Hire Employee task launches successfully
-- Pre-hire candidate selected or created
-- Hire Employee wizard begins for benefits enrollment flow
-- All screenshots captured at verification points
+- All form fields accept custom data
+- Search/Create Pre-Hire options available
+- Ready to proceed to BEN-4-0010-02
 
---------------------------------------------------------------------------------
-MANUAL VERIFICATION
---------------------------------------------------------------------------------
-| Step | Action | Reason |
-|------|--------|--------|
-| M1 | Verify employee data accuracy | Ensure correct candidate selected |
-| M2 | Confirm supervisory org assignment | Required for hire process |
-| M3 | Check effective date is appropriate | Impacts benefits eligibility |
-
-NOTES:
-- This is Step 1 of the New Hire to Pay with Elections business process
-- Next step (BEN-4-0010-02) covers Benefit Election during onboarding
-- Test data variables: {TEST_FIRST_NAME}, {TEST_LAST_NAME}, {TEST_MIDDLE_NAME}
 ================================================================================

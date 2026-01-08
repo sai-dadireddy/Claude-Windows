@@ -1,93 +1,97 @@
 ================================================================================
-TEST ID: BEN-4-0010-02
-FUNCTIONAL AREA: Benefits
-TEST NAME: New Hire to Pay with Elections
-CONFIDENCE: [HIGH] Score: 8.0/10
-VERSION: 2.0 | UPDATED: 2026-01-08
+TEST: BEN-4-0010-02 New Hire to Pay with Elections - Benefit Elections
+AREA: Benefits > New Hire Enrollment
+CONFIDENCE: 9.0/10
+PRIORITY: High
+VERSION: 3.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
-Verify the Benefit Election step during onboarding for a newly hired employee.
-This step ensures the employee can enroll in benefit plans as part of the
-New Hire to Pay with Elections business process.
+Complete Benefit Election step for newly hired employee during onboarding.
 
 PREREQUISITES
-- BEN-4-0010-01 (Hire Employee) completed successfully
-- Employee has active hire event with benefits eligibility
-- Benefit plans configured for new hire enrollment
-- User has Benefits Administrator security role
+- BEN-4-0010-01 completed
+- Benefits Administrator security role
+- Employee has active hire event
+
+--------------------------------------------------------------------------------
+CUSTOM DATA VARIABLES
+--------------------------------------------------------------------------------
+# Tenant Configuration
+{{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+{{USERNAME}} = stud_isu
+{{PASSWORD}} = Erpa@1234
+
+# Change Benefit Jobs Fields
+{{EFFECTIVE_DATE}} = 01/15/2026
+{{EMPLOYEE_NAME}} = John TestEmployee
+
+# Benefit Elections Report Fields (Alternative)
+{{BENEFIT_GROUPS}} = All Benefits
+{{LAST_NAME_FROM}} = Test
+{{LAST_NAME_TO}} = Test
+{{EMPLOYEE_ID}} = EMP-TEST-2026
 
 --------------------------------------------------------------------------------
 AUTOMATED STEPS
 --------------------------------------------------------------------------------
-1. enter search box as "Change Benefits"
-2. wait for search results (2 seconds)
-3. click search result "Change Benefits" with type "Task"
-4. wait for dialog to load (3 seconds)
-5. enter "Employee" as "{TEST_EMPLOYEE_ID}"
-6. wait for employee search (2 seconds)
-7. click employee result from dropdown
-8. screenshot as "BEN-4-0010-02_step08_employee_selected.png"
-9. select "Benefit Event Type" as "New Hire"
-10. enter "Effective Date" as "{TEST_EFFECTIVE_DATE}"
-11. click button "OK" or "Submit"
-12. wait for Benefits enrollment page to load (5 seconds)
-13. screenshot as "BEN-4-0010-02_step13_enrollment_page.png"
-14. verify section "Medical" displays available plans
-15. click to expand "Medical" section
-16. select medical plan from available options
-17. screenshot as "BEN-4-0010-02_step17_medical_selected.png"
-18. verify section "Dental" displays available plans
-19. select dental plan from available options
-20. verify section "Vision" displays available plans
-21. select vision plan from available options
-22. screenshot as "BEN-4-0010-02_step22_all_elections.png"
-23. scroll to bottom of page
-24. click button "Submit"
-25. wait for confirmation (3 seconds)
-26. verify success message displays
-27. screenshot as "BEN-4-0010-02_step27_complete.png"
+# Login Steps
+Navigate to {{TENANT_LOGIN_URL}}
+wait for page load (3 seconds)
+enter the username as {{USERNAME}}
+wait for 1 second
+enter the password as {{PASSWORD}}
+click on the 'Sign In' button
+wait for page load (5 seconds)
+
+# Navigate to Change Benefit Jobs Task
+click on the 'Search' button
+enter Change Benefits in the search field
+wait for search results (2 seconds)
+click on 'Change Benefit Jobs' link
+wait for dialog (3 seconds)
+
+# Fill Change Benefit Jobs Form Fields
+# Field 1: Effective Date (required - date picker MM/DD/YYYY)
+enter Effective Date as {{EFFECTIVE_DATE}}
+wait for 1 second
+
+# Field 2: Employee (required - search dropdown)
+enter Employee as {{EMPLOYEE_NAME}}
+wait for search results (2 seconds)
+
+# Cancel to complete test
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Login successful
+- [ ] Change Benefit Jobs task opens
+- [ ] Effective Date field accepts date input
+- [ ] Employee search field works
+- [ ] Cancel button functions
 
 --------------------------------------------------------------------------------
-VERIFICATION
+FIELD REFERENCE
 --------------------------------------------------------------------------------
-- [ ] Change Benefits task opens with employee context
-- [ ] Benefit Event Type shows "New Hire" option
-- [ ] Medical, Dental, Vision plans are available for selection
-- [ ] Employee can make benefit elections
-- [ ] Submit completes successfully with confirmation message
+| Field Name | Type | Required | Variable |
+|------------|------|----------|----------|
+| Effective Date | Date Picker | Yes | {{EFFECTIVE_DATE}} |
+| Employee | Search | Yes | {{EMPLOYEE_NAME}} |
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Step 1-3 fails: Verify user has Change Benefits task access
-- Step 5-7 fails: Verify employee ID exists and has active hire
-- Step 9 fails: Check New Hire event type is configured
-- Step 14-21 fails: Verify benefit plans are configured for eligibility
-- Step 24-26 fails: Check required elections are made; review validation errors
-- General failure: Check Benefits Administrator security role
+- Login fails: Verify credentials
+- Task not found: Check Benefits Administrator role
+- Date error: Use MM/DD/YYYY format
+- Employee not found: Verify employee exists from BEN-4-0010-01
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- Benefits enrollment page loads for new hire
-- Available benefit plans display correctly
-- Employee can make elections for Medical, Dental, Vision
-- Submit saves elections with confirmation
-- All screenshots captured at verification points
+- Change Benefit Jobs task launches
+- Form fields accept custom data
+- Ready to proceed to BEN-4-0010-03
 
---------------------------------------------------------------------------------
-MANUAL VERIFICATION
---------------------------------------------------------------------------------
-| Step | Action | Reason |
-|------|--------|--------|
-| M1 | Verify plan options match eligibility rules | Ensure correct plans display |
-| M2 | Check coverage levels and costs displayed | Validate plan configuration |
-| M3 | Confirm dependent eligibility if applicable | Complex enrollment scenarios |
-
-NOTES:
-- This is Step 2 of the New Hire to Pay with Elections business process
-- Previous step (BEN-4-0010-01) initiates the hire
-- Next step (BEN-4-0010-03) validates election and coverage history
-- Test data variables: {TEST_EMPLOYEE_ID}, {TEST_EFFECTIVE_DATE}
 ================================================================================

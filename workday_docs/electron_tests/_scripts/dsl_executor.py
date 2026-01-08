@@ -90,7 +90,7 @@ class DSLExecutor:
             line = line.strip()
 
             # Start capturing after ELECTRON STEPS header
-            if 'ELECTRON STEPS' in line:
+            if 'ELECTRON STEPS' in line or 'AUTOMATED STEPS' in line:
                 in_steps = True
                 continue
 

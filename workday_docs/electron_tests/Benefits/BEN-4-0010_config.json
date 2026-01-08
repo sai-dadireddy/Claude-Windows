@@ -1,0 +1,49 @@
+{
+  "_description": "BEN-4-0010 New Hire to Pay with Elections - Test Data Configuration",
+  "_usage": "Replace values below with your tenant-specific data before running tests",
+  
+  "tenant": {
+    "TENANT_LOGIN_URL": "https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login",
+    "TENANT_HOME_URL": "https://impl.wd12.myworkday.com/erpa_amu1",
+    "USERNAME": "stud_isu",
+    "PASSWORD": "Erpa@1234"
+  },
+  
+  "employee": {
+    "EMPLOYEE_FIRST_NAME": "John",
+    "EMPLOYEE_MIDDLE_NAME": "Michael",
+    "EMPLOYEE_LAST_NAME": "TestEmployee",
+    "EMPLOYEE_FULL_NAME": "John TestEmployee",
+    "EMPLOYEE_ID": "EMP-TEST-2026"
+  },
+  
+  "dates": {
+    "HIRE_DATE": "01/15/2026",
+    "EFFECTIVE_DATE": "01/15/2026",
+    "COVERAGE_START_DATE": "01/15/2026"
+  },
+  
+  "benefits": {
+    "MEDICAL_PLAN": "Gold Medical Plan",
+    "DENTAL_PLAN": "Standard Dental",
+    "VISION_PLAN": "Basic Vision",
+    "MEDICAL_DEDUCTION": "150.00",
+    "DENTAL_DEDUCTION": "25.00",
+    "VISION_DEDUCTION": "10.00"
+  },
+  
+  "workday_tasks": {
+    "HIRE_EMPLOYEE_TASK": "Hire Employee",
+    "CHANGE_BENEFITS_TASK": "Change Benefits",
+    "BENEFITS_TAB": "Benefits",
+    "PAY_TAB": "Pay",
+    "INTEGRATION_TASK": "Integration"
+  },
+  
+  "timeouts": {
+    "PAGE_LOAD_SECONDS": 5,
+    "SEARCH_RESULTS_SECONDS": 2,
+    "DIALOG_LOAD_SECONDS": 3,
+    "FORM_SUBMIT_SECONDS": 5
+  }
+}
