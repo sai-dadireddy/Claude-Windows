@@ -3,7 +3,7 @@ TEST: BEN-4-0010-05 New Hire to Pay with Elections - Validate Interface
 AREA: Benefits > New Hire Enrollment
 CONFIDENCE: 8.0/10
 PRIORITY: High
-VERSION: 3.0 | UPDATED: 2026-01-08
+VERSION: 4.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
@@ -16,12 +16,12 @@ PREREQUISITES
 --------------------------------------------------------------------------------
 CUSTOM DATA VARIABLES
 --------------------------------------------------------------------------------
-# Tenant Configuration
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
 {{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
 {{USERNAME}} = stud_isu
 {{PASSWORD}} = Erpa@1234
 
-# Integration Search
+# Integration Search (UPDATE FOR YOUR INTEGRATION)
 {{INTEGRATION_NAME}} = Payroll
 {{EMPLOYEE_ID}} = EMP-TEST-2026
 
@@ -30,19 +30,19 @@ AUTOMATED STEPS
 --------------------------------------------------------------------------------
 # Login Steps
 Navigate to {{TENANT_LOGIN_URL}}
-wait for page load (3 seconds)
+wait for 3 seconds
 enter the username as {{USERNAME}}
 wait for 1 second
 enter the password as {{PASSWORD}}
 click on the 'Sign In' button
-wait for page load (5 seconds)
+wait for 5 seconds
 
 # Search for Integration
 click on the 'Search' button
 enter Integration in the search field
-wait for search results (2 seconds)
+wait for 3 seconds
 click on 'Integration' link
-wait for page load (3 seconds)
+wait for 3 seconds
 
 # Search within Integrations
 enter {{INTEGRATION_NAME}} in the search field
@@ -56,26 +56,28 @@ VERIFICATION:
 - [ ] Login successful
 - [ ] Integration system accessible
 - [ ] Search functions within Integration
+- [ ] {{INTEGRATION_NAME}} integration found
 
 --------------------------------------------------------------------------------
 FIELD REFERENCE
 --------------------------------------------------------------------------------
-| Field Name | Type | Required | Variable |
-|------------|------|----------|----------|
-| Integration Search | Text | Yes | {{INTEGRATION_NAME}} |
-| Employee ID | Text | No | {{EMPLOYEE_ID}} |
+| Field Name         | Type | Required | Variable            |
+|--------------------|------|----------|---------------------|
+| Integration Search | Text | Yes      | {{INTEGRATION_NAME}}|
+| Employee ID        | Text | No       | {{EMPLOYEE_ID}}     |
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Integration access denied: Verify Integration Administrator role
-- Interface not found: Check integration naming
-- No output data: Verify integration has executed
+- Integration access denied: Verify user has Integration Administrator role
+- Interface not found: Check {{INTEGRATION_NAME}} naming in tenant
+- No output data: Verify integration has executed after benefit elections
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
 - Integration system accessible
-- Test cycle complete for BEN-4-0010
+- Test cycle complete for BEN-4-0010 series
+- All 5 scripts validated end-to-end
 
 ================================================================================

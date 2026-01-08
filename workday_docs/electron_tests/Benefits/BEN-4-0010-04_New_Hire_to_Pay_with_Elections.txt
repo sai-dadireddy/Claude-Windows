@@ -3,7 +3,7 @@ TEST: BEN-4-0010-04 New Hire to Pay with Elections - Validate Payroll
 AREA: Benefits > New Hire Enrollment
 CONFIDENCE: 8.0/10
 PRIORITY: High
-VERSION: 3.0 | UPDATED: 2026-01-08
+VERSION: 4.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
@@ -16,15 +16,15 @@ PREREQUISITES
 --------------------------------------------------------------------------------
 CUSTOM DATA VARIABLES
 --------------------------------------------------------------------------------
-# Tenant Configuration
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
 {{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
 {{USERNAME}} = stud_isu
 {{PASSWORD}} = Erpa@1234
 
-# Employee Search
+# Employee Search (UPDATE THESE FOR TEST DATA)
 {{EMPLOYEE_NAME}} = John TestEmployee
 
-# Expected Deduction Data
+# Expected Deduction Data (VERIFY AFTER TEST)
 {{MEDICAL_DEDUCTION}} = 150.00
 {{DENTAL_DEDUCTION}} = 25.00
 {{VISION_DEDUCTION}} = 10.00
@@ -35,55 +35,57 @@ AUTOMATED STEPS
 --------------------------------------------------------------------------------
 # Login Steps
 Navigate to {{TENANT_LOGIN_URL}}
-wait for page load (3 seconds)
+wait for 3 seconds
 enter the username as {{USERNAME}}
 wait for 1 second
 enter the password as {{PASSWORD}}
 click on the 'Sign In' button
-wait for page load (5 seconds)
+wait for 5 seconds
 
 # Search for Employee
 click on the 'Search' button
 enter {{EMPLOYEE_NAME}} in the search field
-wait for search results (2 seconds)
-click on '{{EMPLOYEE_NAME}}' link
-wait for page load (5 seconds)
+wait for 3 seconds
+click on 'View Profile' link
+wait for 5 seconds
 
 # Navigate to Pay section
 click on 'Pay' link
-wait for page load (3 seconds)
+wait for 3 seconds
 
-# Cancel/close to complete test
+# Complete test
 click cancel button
 wait for 2 seconds
 
 VERIFICATION:
 - [ ] Login successful
-- [ ] Employee found
+- [ ] Employee {{EMPLOYEE_NAME}} found
 - [ ] Pay section accessible
-- [ ] Deductions visible (if configured)
+- [ ] Medical deduction: {{MEDICAL_DEDUCTION}}
+- [ ] Dental deduction: {{DENTAL_DEDUCTION}}
+- [ ] Vision deduction: {{VISION_DEDUCTION}}
 
 --------------------------------------------------------------------------------
 FIELD REFERENCE
 --------------------------------------------------------------------------------
-| Field Name | Type | Required | Variable |
-|------------|------|----------|----------|
-| Employee Search | Text | Yes | {{EMPLOYEE_NAME}} |
-| Medical Deduction | Currency | No | {{MEDICAL_DEDUCTION}} |
-| Dental Deduction | Currency | No | {{DENTAL_DEDUCTION}} |
-| Vision Deduction | Currency | No | {{VISION_DEDUCTION}} |
+| Field Name        | Type     | Required | Variable              |
+|-------------------|----------|----------|-----------------------|
+| Employee Search   | Text     | Yes      | {{EMPLOYEE_NAME}}     |
+| Medical Deduction | Currency | No       | {{MEDICAL_DEDUCTION}} |
+| Dental Deduction  | Currency | No       | {{DENTAL_DEDUCTION}}  |
+| Vision Deduction  | Currency | No       | {{VISION_DEDUCTION}}  |
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Pay tab missing: Verify payroll view permissions
-- No deductions: Check benefit-to-payroll integration
-- Wrong amounts: Review deduction calculation rules
+- Pay tab missing: Verify user has Payroll view permissions
+- No deductions: Check benefit-to-payroll integration is configured
+- Wrong amounts: Review deduction calculation rules in tenant
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- Payroll deductions reflect elections
+- Payroll deductions reflect benefit elections
 - Ready to proceed to BEN-4-0010-05
 
 ================================================================================

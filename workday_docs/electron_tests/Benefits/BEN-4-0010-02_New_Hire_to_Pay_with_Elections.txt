@@ -1,13 +1,13 @@
 ================================================================================
-TEST: BEN-4-0010-02 New Hire to Pay with Elections - Benefit Elections
+TEST: BEN-4-0010-02 New Hire to Pay with Elections - Change Benefit Jobs
 AREA: Benefits > New Hire Enrollment
 CONFIDENCE: 9.0/10
 PRIORITY: High
-VERSION: 3.0 | UPDATED: 2026-01-08
+VERSION: 4.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
-Complete Benefit Election step for newly hired employee during onboarding.
+Execute Change Benefit Jobs task to configure benefit eligibility for new hire.
 
 PREREQUISITES
 - BEN-4-0010-01 completed
@@ -17,16 +17,16 @@ PREREQUISITES
 --------------------------------------------------------------------------------
 CUSTOM DATA VARIABLES
 --------------------------------------------------------------------------------
-# Tenant Configuration
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
 {{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
 {{USERNAME}} = stud_isu
 {{PASSWORD}} = Erpa@1234
 
-# Change Benefit Jobs Fields
+# Change Benefit Jobs Fields (UPDATE THESE FOR TEST DATA)
 {{EFFECTIVE_DATE}} = 01/15/2026
 {{EMPLOYEE_NAME}} = John TestEmployee
 
-# Benefit Elections Report Fields (Alternative)
+# Alternative Search Fields
 {{BENEFIT_GROUPS}} = All Benefits
 {{LAST_NAME_FROM}} = Test
 {{LAST_NAME_TO}} = Test
@@ -37,28 +37,25 @@ AUTOMATED STEPS
 --------------------------------------------------------------------------------
 # Login Steps
 Navigate to {{TENANT_LOGIN_URL}}
-wait for page load (3 seconds)
+wait for 3 seconds
 enter the username as {{USERNAME}}
 wait for 1 second
 enter the password as {{PASSWORD}}
 click on the 'Sign In' button
-wait for page load (5 seconds)
+wait for 5 seconds
 
 # Navigate to Change Benefit Jobs Task
 click on the 'Search' button
-enter Change Benefits in the search field
-wait for search results (2 seconds)
+enter Change Benefit Jobs in the search field
+wait for 3 seconds
 click on 'Change Benefit Jobs' link
-wait for dialog (3 seconds)
+wait for 3 seconds
 
 # Fill Change Benefit Jobs Form Fields
-# Field 1: Effective Date (required - date picker MM/DD/YYYY)
-enter Effective Date as {{EFFECTIVE_DATE}}
+select Effective Date as {{EFFECTIVE_DATE}}
 wait for 1 second
-
-# Field 2: Employee (required - search dropdown)
-enter Employee as {{EMPLOYEE_NAME}}
-wait for search results (2 seconds)
+select Employee as {{EMPLOYEE_NAME}}
+wait for 2 seconds
 
 # Cancel to complete test
 click cancel button
@@ -67,31 +64,32 @@ wait for 2 seconds
 VERIFICATION:
 - [ ] Login successful
 - [ ] Change Benefit Jobs task opens
-- [ ] Effective Date field accepts date input
-- [ ] Employee search field works
-- [ ] Cancel button functions
+- [ ] Effective Date field accepts {{EFFECTIVE_DATE}}
+- [ ] Employee search finds {{EMPLOYEE_NAME}}
 
 --------------------------------------------------------------------------------
 FIELD REFERENCE
 --------------------------------------------------------------------------------
-| Field Name | Type | Required | Variable |
-|------------|------|----------|----------|
-| Effective Date | Date Picker | Yes | {{EFFECTIVE_DATE}} |
-| Employee | Search | Yes | {{EMPLOYEE_NAME}} |
+| Field Name      | Type        | Required | Variable           |
+|-----------------|-------------|----------|--------------------|
+| Effective Date  | Date Picker | Yes      | {{EFFECTIVE_DATE}} |
+| Employee        | Search      | Yes      | {{EMPLOYEE_NAME}}  |
+
+Date Format: MM/DD/YYYY
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Login fails: Verify credentials
-- Task not found: Check Benefits Administrator role
-- Date error: Use MM/DD/YYYY format
-- Employee not found: Verify employee exists from BEN-4-0010-01
+- Login fails: Verify {{USERNAME}} and {{PASSWORD}} credentials
+- Task not found: Check user has Benefits Administrator role
+- Date error: Use MM/DD/YYYY format for {{EFFECTIVE_DATE}}
+- Employee not found: Verify {{EMPLOYEE_NAME}} exists from BEN-4-0010-01
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
 --------------------------------------------------------------------------------
-- Change Benefit Jobs task launches
-- Form fields accept custom data
+- Change Benefit Jobs task launches successfully
+- Form fields accept custom data values
 - Ready to proceed to BEN-4-0010-03
 
 ================================================================================

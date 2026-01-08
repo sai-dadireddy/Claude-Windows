@@ -3,7 +3,7 @@ TEST: BEN-4-0010-03 New Hire to Pay with Elections - Validate History
 AREA: Benefits > New Hire Enrollment
 CONFIDENCE: 8.5/10
 PRIORITY: High
-VERSION: 3.0 | UPDATED: 2026-01-08
+VERSION: 4.0 | UPDATED: 2026-01-08
 ================================================================================
 
 PURPOSE
@@ -16,16 +16,16 @@ PREREQUISITES
 --------------------------------------------------------------------------------
 CUSTOM DATA VARIABLES
 --------------------------------------------------------------------------------
-# Tenant Configuration
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
 {{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
 {{USERNAME}} = stud_isu
 {{PASSWORD}} = Erpa@1234
 
-# Employee Search
+# Employee Search (UPDATE THESE FOR TEST DATA)
 {{EMPLOYEE_NAME}} = John TestEmployee
 {{EMPLOYEE_ID}} = EMP-TEST-2026
 
-# Expected History Data
+# Expected History Data (VERIFY AFTER TEST)
 {{ELECTION_EVENT_TYPE}} = New Hire
 {{COVERAGE_START_DATE}} = 01/15/2026
 
@@ -34,23 +34,23 @@ AUTOMATED STEPS
 --------------------------------------------------------------------------------
 # Login Steps
 Navigate to {{TENANT_LOGIN_URL}}
-wait for page load (3 seconds)
+wait for 3 seconds
 enter the username as {{USERNAME}}
 wait for 1 second
 enter the password as {{PASSWORD}}
 click on the 'Sign In' button
-wait for page load (5 seconds)
+wait for 5 seconds
 
 # Search for Employee
 click on the 'Search' button
 enter {{EMPLOYEE_NAME}} in the search field
-wait for search results (2 seconds)
-click on '{{EMPLOYEE_NAME}}' link
-wait for page load (5 seconds)
+wait for 3 seconds
+click on 'View Profile' link
+wait for 5 seconds
 
-# Navigate to Benefits tab (if available)
+# Navigate to Benefits section
 click on 'Benefits' link
-wait for page load (3 seconds)
+wait for 3 seconds
 
 # Cancel/close to complete test
 click cancel button
@@ -58,26 +58,27 @@ wait for 2 seconds
 
 VERIFICATION:
 - [ ] Login successful
-- [ ] Employee found in search
-- [ ] Worker profile loads
+- [ ] Employee {{EMPLOYEE_NAME}} found in search
+- [ ] Worker profile loads correctly
 - [ ] Benefits section accessible
+- [ ] Election history shows {{ELECTION_EVENT_TYPE}}
 
 --------------------------------------------------------------------------------
 FIELD REFERENCE
 --------------------------------------------------------------------------------
-| Field Name | Type | Required | Variable |
-|------------|------|----------|----------|
-| Employee Search | Text | Yes | {{EMPLOYEE_NAME}} |
-| Employee ID | Text | No | {{EMPLOYEE_ID}} |
-| Election Event | Display | No | {{ELECTION_EVENT_TYPE}} |
-| Coverage Start | Date | No | {{COVERAGE_START_DATE}} |
+| Field Name       | Type    | Required | Variable               |
+|------------------|---------|----------|------------------------|
+| Employee Search  | Text    | Yes      | {{EMPLOYEE_NAME}}      |
+| Employee ID      | Text    | No       | {{EMPLOYEE_ID}}        |
+| Election Event   | Display | No       | {{ELECTION_EVENT_TYPE}}|
+| Coverage Start   | Date    | No       | {{COVERAGE_START_DATE}}|
 
 --------------------------------------------------------------------------------
 ON FAILURE
 --------------------------------------------------------------------------------
-- Employee not found: Verify name spelling
-- Benefits tab missing: Check security role permissions
-- No history: Confirm BEN-4-0010-02 completed
+- Employee not found: Verify {{EMPLOYEE_NAME}} spelling matches BEN-4-0010-01
+- Benefits tab missing: Check user has Benefits view permissions
+- No history: Confirm BEN-4-0010-02 was completed successfully
 
 --------------------------------------------------------------------------------
 EXPECTED OUTCOME
