@@ -376,6 +376,9 @@
                             Google Antigravity
                         </h3>
                         <p class="tagline">"You are the Manager"</p>
+                        <p style="font-size: 0.85rem; background: #e8f0fe; color: #1967d2; padding: 8px; border-radius: 6px; margin-bottom: 10px; border-left: 3px solid #1967d2;">
+                            "Cursor makes me a 10x Developer; Antigravity makes me a 1x Engineering Manager."
+                        </p>
                         <ul>
                             <li>✅ Parallel agent control</li>
                             <li>✅ 1M token context</li>
@@ -410,14 +413,20 @@
                     <tr>
                         <td>Pro</td>
                         <td><strong>$20/mo</strong> <span class="confidence verified">✓</span></td>
-                        <td><strong>$17/mo</strong> <span class="confidence verified">✓</span></td>
+                        <td><strong>$20/mo</strong> <span class="confidence verified">✓</span><br><span style="font-size:0.75em; color:#666">($17/mo annual)</span></td>
                         <td><strong>$19.99/mo</strong> <span class="confidence verified">✓</span></td>
                     </tr>
                     <tr>
                         <td>Pro+ / Max</td>
-                        <td><strong>$40/mo</strong></td>
-                        <td><strong>$100-200/mo</strong></td>
-                        <td>~$124.99/mo</td>
+                        <td><strong>$40/mo</strong> <span class="confidence verified">✓</span></td>
+                        <td><strong>$100-200/mo</strong> <span class="confidence verified">✓</span></td>
+                        <td>~$124.99/mo <span class="confidence estimate">❓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Team Premium Seat</td>
+                        <td>—</td>
+                        <td><strong>$150/mo</strong> <span class="confidence verified">✓</span><br><span style="font-size:0.75em; color:#666">(incl. Claude Code CLI)</span></td>
+                        <td>—</td>
                     </tr>
                     <tr>
                         <td>Power / Ultra</td>
@@ -455,21 +464,25 @@
                     <tr>
                         <th>Platform</th>
                         <th>Risk</th>
+                        <th>Confidence</th>
                         <th>Mitigation</th>
                     </tr>
                     <tr>
                         <td>Kiro</td>
-                        <td>Infinite loop hook billing</td>
+                        <td>Infinite loop hook billing (hooks trigger saves → trigger hooks)</td>
+                        <td><span class="confidence estimate">❓ Inferred</span></td>
                         <td>Set AWS budget caps</td>
                     </tr>
                     <tr>
                         <td>Claude</td>
-                        <td>Token explosion ($0.08 → $10/request)</td>
+                        <td>Token explosion ($0.08 → $10/request on agentic)</td>
+                        <td><span class="confidence reported">⚠️ Reported</span></td>
                         <td>Use Sonnet for routine tasks</td>
                     </tr>
                     <tr>
                         <td>Antigravity</td>
-                        <td>"Work done" burns faster on complex tasks</td>
+                        <td>"Work done" burns 4x faster with 4 parallel agents</td>
+                        <td><span class="confidence reported">⚠️ Reported</span></td>
                         <td>Monitor quota dashboards</td>
                     </tr>
                 </table>
@@ -501,10 +514,16 @@
                         <td>Session-based</td>
                     </tr>
                     <tr>
-                        <td>Parallel Agents</td>
-                        <td>Multi-repo</td>
-                        <td>Manual (worktrees)</td>
-                        <td><strong>Mission Control UI</strong></td>
+                        <td>Parallel Agents (Native UI)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td><strong>Yes (Mission Control)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Parallel Agents (DIY)</td>
+                        <td>Multi-repo orchestration</td>
+                        <td><strong>Yes (worktrees/terminals)</strong></td>
+                        <td>Yes</td>
                     </tr>
                     <tr>
                         <td>Memory/Learning</td>
@@ -666,7 +685,14 @@
                     <p><strong>5 Power Users:</strong> Antigravity Ultra ($1,250/mo) for architecture & planning</p>
                     <p><strong>5 Contributors:</strong> Stay on Cursor ($100/mo) for day-to-day coding</p>
                     <p style="margin-top: 15px; font-size: 1.2rem; color: #667eea;"><strong>Total: ~$1,350/mo</strong></p>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Avoids "manager fatigue" for contributors while giving architects the power they need.</p>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">
+                        <strong>Why this works:</strong> Antigravity isolates "Agent" complexity to power users only.
+                    </p>
+                    <p style="background: #fef2f2; color: #991b1b; padding: 10px; border-radius: 6px; font-size: 0.85rem; margin-top: 10px; border-left: 3px solid #ef4444;">
+                        <strong>⚠️ Why NOT Kiro Hybrid:</strong> Kiro's "Steering Files" require 100% team adoption.
+                        If Contributors use Cursor while Power Users use Kiro, the specs get ignored and builds break.
+                        <em>Kiro = all or nothing.</em>
+                    </p>
                 </div>
             </div>
         </div>
@@ -674,7 +700,16 @@
 
     <footer>
         <p>Research compiled January 2026 | Sources: AWS, Google, Anthropic official documentation</p>
-        <p style="margin-top: 10px;">✅ Verified | ⚠️ Press Reported | ❓ Estimate</p>
+        <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <span class="confidence verified" style="padding: 5px 12px;">✓ Verified (Official Docs)</span>
+            <span class="confidence reported" style="padding: 5px 12px;">⚠️ Reported (Press)</span>
+            <span class="confidence estimate" style="padding: 5px 12px;">❓ Estimate / Inferred</span>
+        </div>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #94a3b8;">
+            Primary sources: <a href="https://kiro.dev/pricing/" style="color: #667eea;">kiro.dev</a> |
+            <a href="https://claude.com/pricing" style="color: #667eea;">claude.com</a> |
+            <a href="https://blog.google/products/google-one/google-ai-ultra/" style="color: #667eea;">blog.google</a>
+        </p>
     </footer>
 
     <script>
