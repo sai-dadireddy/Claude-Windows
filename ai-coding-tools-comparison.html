@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Tools Comparison | Executive Decision Brief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Navigation Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: white;
+            color: #667eea;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+            font-weight: 500;
+        }
+
+        /* Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-card.kiro { border-color: #FF9900; }
+        .tool-card.claude { border-color: #D97706; }
+        .tool-card.antigravity { border-color: #4285F4; }
+
+        .tool-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tool-card .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .tool-card.kiro .icon { background: #FF9900; }
+        .tool-card.claude .icon { background: #D97706; }
+        .tool-card.antigravity .icon { background: #4285F4; }
+
+        .tool-card .tagline {
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .tool-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tool-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tool-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f8fafc;
+        }
+
+        /* Risk Indicators */
+        .risk-high { color: #ef4444; }
+        .risk-medium { color: #f59e0b; }
+        .risk-low { color: #22c55e; }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .risk-badge.high { background: #fef2f2; color: #ef4444; }
+        .risk-badge.medium { background: #fffbeb; color: #f59e0b; }
+        .risk-badge.low { background: #f0fdf4; color: #22c55e; }
+
+        /* Decision Matrix */
+        .decision-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .decision-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            padding: 25px;
+            border-left: 4px solid #667eea;
+        }
+
+        .decision-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .decision-card .recommendation {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Pricing Section */
+        .pricing-highlight {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* Confidence Badge */
+        .confidence {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #f1f5f9;
+        }
+
+        .confidence.verified { background: #dcfce7; color: #166534; }
+        .confidence.reported { background: #fef9c3; color: #854d0e; }
+        .confidence.estimate { background: #f1f5f9; color: #64748b; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .tab-btn { padding: 10px 16px; font-size: 0.9rem; }
+            .card { padding: 20px; }
+        }
+
+        /* Print styles */
+        @media print {
+            .tabs { display: none; }
+            .section { display: block !important; page-break-after: always; }
+            header { background: #667eea !important; -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Coding Tools Comparison</h1>
+        <p>Executive Decision Brief: AWS Kiro vs Claude Code vs Google Antigravity</p>
+        <div class="date-badge">January 2026 | Research-Backed Analysis</div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showSection('overview')">Overview</button>
+            <button class="tab-btn" onclick="showSection('pricing')">Pricing</button>
+            <button class="tab-btn" onclick="showSection('features')">Features</button>
+            <button class="tab-btn" onclick="showSection('risks')">Risks</button>
+            <button class="tab-btn" onclick="showSection('decision')">Decision Guide</button>
+        </div>
+
+        <!-- Overview Section -->
+        <div id="overview" class="section active">
+            <div class="card">
+                <h2>At a Glance</h2>
+                <div class="comparison-grid">
+                    <div class="tool-card kiro">
+                        <h3>
+                            <span class="icon">K</span>
+                            AWS Kiro
+                        </h3>
+                        <p class="tagline">"You are the Architect"</p>
+                        <ul>
+                            <li>✅ Spec-driven development</li>
+                            <li>✅ Hours-to-days autonomy</li>
+                            <li>✅ Multi-repo coordination</li>
+                            <li>⚠️ High lock-in (steering files)</li>
+                            <li>⚠️ Complex pricing model</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card claude">
+                        <h3>
+                            <span class="icon">C</span>
+                            Claude Code
+                        </h3>
+                        <p class="tagline">"You are the Coder"</p>
+                        <ul>
+                            <li>✅ Terminal-first workflow</li>
+                            <li>✅ Portable data (MCP)</li>
+                            <li>✅ BYOK flexibility</li>
+                            <li>✅ Enterprise-ready (SSO/SCIM)</li>
+                            <li>⚠️ Manual memory setup</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card antigravity">
+                        <h3>
+                            <span class="icon">G</span>
+                            Google Antigravity
+                        </h3>
+                        <p class="tagline">"You are the Manager"</p>
+                        <ul>
+                            <li>✅ Parallel agent control</li>
+                            <li>✅ 1M token context</li>
+                            <li>✅ Multi-model support</li>
+                            <li>⚠️ High "manager fatigue"</li>
+                            <li>⚠️ No enterprise plan yet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div id="pricing" class="section">
+            <div class="card">
+                <h2>Pricing Comparison</h2>
+
+                <h3>Individual Plans</h3>
+                <table>
+                    <tr>
+                        <th>Tier</th>
+                        <th>AWS Kiro</th>
+                        <th>Claude Code</th>
+                        <th>Google Antigravity</th>
+                    </tr>
+                    <tr>
+                        <td>Free</td>
+                        <td>50 credits <span class="confidence verified">✓</span></td>
+                        <td>Limited</td>
+                        <td>Weekly quota <span class="confidence verified">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pro</td>
+                        <td><strong>$20/mo</strong> <span class="confidence verified">✓</span></td>
+                        <td><strong>$17/mo</strong> <span class="confidence verified">✓</span></td>
+                        <td><strong>$19.99/mo</strong> <span class="confidence verified">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pro+ / Max</td>
+                        <td><strong>$40/mo</strong></td>
+                        <td><strong>$100-200/mo</strong></td>
+                        <td>~$124.99/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Power / Ultra</td>
+                        <td><strong>$200/mo</strong></td>
+                        <td>—</td>
+                        <td><strong>$249.99/mo</strong> <span class="confidence verified">✓</span></td>
+                    </tr>
+                </table>
+
+                <h3>10-Person Team Estimate</h3>
+                <div class="pricing-highlight">
+                    <div>
+                        <strong>Claude Team</strong> (5 Premium + 5 Standard)
+                        <br><small>Lowest cost option</small>
+                    </div>
+                    <div class="price">~$900/mo</div>
+                </div>
+                <div class="pricing-highlight">
+                    <div>
+                        <strong>AWS Kiro</strong> (5 Power + 5 Pro+)
+                        <br><small>Full autonomy features</small>
+                    </div>
+                    <div class="price">~$1,200/mo</div>
+                </div>
+                <div class="pricing-highlight">
+                    <div>
+                        <strong>Google Antigravity</strong> (5 Ultra + 5 Pro)
+                        <br><small>Maximum parallelism</small>
+                    </div>
+                    <div class="price">~$1,350/mo</div>
+                </div>
+
+                <h3>⚠️ Hidden Cost Warnings</h3>
+                <table>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Risk</th>
+                        <th>Mitigation</th>
+                    </tr>
+                    <tr>
+                        <td>Kiro</td>
+                        <td>Infinite loop hook billing</td>
+                        <td>Set AWS budget caps</td>
+                    </tr>
+                    <tr>
+                        <td>Claude</td>
+                        <td>Token explosion ($0.08 → $10/request)</td>
+                        <td>Use Sonnet for routine tasks</td>
+                    </tr>
+                    <tr>
+                        <td>Antigravity</td>
+                        <td>"Work done" burns faster on complex tasks</td>
+                        <td>Monitor quota dashboards</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div id="features" class="section">
+            <div class="card">
+                <h2>Feature Comparison</h2>
+
+                <table>
+                    <tr>
+                        <th>Capability</th>
+                        <th>Kiro</th>
+                        <th>Claude Code</th>
+                        <th>Antigravity</th>
+                    </tr>
+                    <tr>
+                        <td>Context Window</td>
+                        <td>~200K</td>
+                        <td>200-500K</td>
+                        <td><strong>1M tokens</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Autonomous Duration</td>
+                        <td><strong>Hours to Days</strong></td>
+                        <td>Session-based</td>
+                        <td>Session-based</td>
+                    </tr>
+                    <tr>
+                        <td>Parallel Agents</td>
+                        <td>Multi-repo</td>
+                        <td>Manual (worktrees)</td>
+                        <td><strong>Mission Control UI</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Memory/Learning</td>
+                        <td><strong>Learns from PRs</strong></td>
+                        <td>Via MCP</td>
+                        <td>Knowledge Items</td>
+                    </tr>
+                    <tr>
+                        <td>SSO/SCIM</td>
+                        <td>Coming</td>
+                        <td><strong>Available</strong></td>
+                        <td>Coming</td>
+                    </tr>
+                    <tr>
+                        <td>BYOK (Bring Own Key)</td>
+                        <td>No</td>
+                        <td><strong>Yes</strong></td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Model</td>
+                        <td>Claude only</td>
+                        <td>Yes (via MCP)</td>
+                        <td><strong>Native (3+)</strong></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Risks Section -->
+        <div id="risks" class="section">
+            <div class="card">
+                <h2>Risk Assessment</h2>
+
+                <table>
+                    <tr>
+                        <th>Risk Factor</th>
+                        <th>Kiro</th>
+                        <th>Claude Code</th>
+                        <th>Antigravity</th>
+                    </tr>
+                    <tr>
+                        <td>Manager Fatigue</td>
+                        <td><span class="risk-badge medium">Medium</span></td>
+                        <td><span class="risk-badge low">Low</span></td>
+                        <td><span class="risk-badge high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cost Predictability</td>
+                        <td><span class="risk-badge high">High Risk</span></td>
+                        <td><span class="risk-badge low">Low Risk</span></td>
+                        <td><span class="risk-badge medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Vendor Lock-in</td>
+                        <td><span class="risk-badge high">High</span></td>
+                        <td><span class="risk-badge low">Low</span></td>
+                        <td><span class="risk-badge medium">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Junior Dev Skill Atrophy</td>
+                        <td><span class="risk-badge medium">Medium</span></td>
+                        <td><span class="risk-badge low">Low</span></td>
+                        <td><span class="risk-badge high">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise Readiness</td>
+                        <td><span class="risk-badge medium">Coming</span></td>
+                        <td><span class="risk-badge low">Ready</span></td>
+                        <td><span class="risk-badge medium">Coming</span></td>
+                    </tr>
+                </table>
+
+                <h3>Key "Gotchas" to Consider</h3>
+                <div class="decision-matrix">
+                    <div class="decision-card">
+                        <h4>🔄 Cultural Schism Risk</h4>
+                        <p>If only power users use Kiro specs but contributors use Cursor, expect conflicts.</p>
+                        <div class="recommendation">Fix: Everyone on Kiro, or CI/CD enforces specs</div>
+                    </div>
+                    <div class="decision-card">
+                        <h4>💸 Billing Nightmare</h4>
+                        <p>Kiro hooks can create infinite loops burning credits overnight.</p>
+                        <div class="recommendation">Fix: Set AWS budget caps before deployment</div>
+                    </div>
+                    <div class="decision-card">
+                        <h4>📚 Skill Retention</h4>
+                        <p>Antigravity abstracts coding entirely. Juniors become "prompt engineers."</p>
+                        <div class="recommendation">Fix: Use Claude Code for training environments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision Section -->
+        <div id="decision" class="section">
+            <div class="card">
+                <h2>Decision Guide</h2>
+                <p style="margin-bottom: 20px; color: #64748b;">Choose based on your primary goal:</p>
+
+                <div class="decision-matrix">
+                    <div class="decision-card">
+                        <h4>🎯 Ship Complex Product by Q3</h4>
+                        <p>Need architecture enforcement to prevent "refactoring hell" later.</p>
+                        <div class="recommendation">
+                            <span style="color: #FF9900;">→ AWS Kiro</span>
+                            <br><small>Spec-first prevents chaos in month 3</small>
+                        </div>
+                    </div>
+
+                    <div class="decision-card">
+                        <h4>⚡ Clear Backlog Quickly</h4>
+                        <p>Senior team needs to blast through tickets fast.</p>
+                        <div class="recommendation">
+                            <span style="color: #4285F4;">→ Google Antigravity</span>
+                            <br><small>Parallel agents clear 5 tickets in time of 1</small>
+                        </div>
+                    </div>
+
+                    <div class="decision-card">
+                        <h4>📊 Long-term Stability</h4>
+                        <p>Need predictable costs and vendor flexibility.</p>
+                        <div class="recommendation">
+                            <span style="color: #D97706;">→ Claude Code</span>
+                            <br><small>Portable data, predictable pricing, enterprise-ready</small>
+                        </div>
+                    </div>
+
+                    <div class="decision-card">
+                        <h4>🔐 Enterprise Governance NOW</h4>
+                        <p>Must have SSO, SCIM, audit logs immediately.</p>
+                        <div class="recommendation">
+                            <span style="color: #D97706;">→ Claude Enterprise</span>
+                            <br><small>Only option with full governance today</small>
+                        </div>
+                    </div>
+
+                    <div class="decision-card">
+                        <h4>👩‍💻 Training Junior Devs</h4>
+                        <p>Want AI assistance without skill atrophy.</p>
+                        <div class="recommendation">
+                            <span style="color: #D97706;">→ Claude Code</span>
+                            <br><small>Terminal + diffs force reading code changes</small>
+                        </div>
+                    </div>
+
+                    <div class="decision-card">
+                        <h4>🧪 Pilot / Experimentation</h4>
+                        <p>Testing AI coding before org-wide rollout.</p>
+                        <div class="recommendation">
+                            <span style="color: #D97706;">→ Claude Code (BYOK)</span>
+                            <br><small>Pay only API costs, full flexibility</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%); border-radius: 12px;">
+                    <h3 style="color: #667eea; margin-bottom: 10px;">💡 Recommended Hybrid Strategy</h3>
+                    <p><strong>5 Power Users:</strong> Antigravity Ultra ($1,250/mo) for architecture & planning</p>
+                    <p><strong>5 Contributors:</strong> Stay on Cursor ($100/mo) for day-to-day coding</p>
+                    <p style="margin-top: 15px; font-size: 1.2rem; color: #667eea;"><strong>Total: ~$1,350/mo</strong></p>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-top: 10px;">Avoids "manager fatigue" for contributors while giving architects the power they need.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Research compiled January 2026 | Sources: AWS, Google, Anthropic official documentation</p>
+        <p style="margin-top: 10px;">✅ Verified | ⚠️ Press Reported | ❓ Estimate</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const sections = ['overview', 'pricing', 'features', 'risks', 'decision'];
+            const currentIndex = sections.findIndex(s => document.getElementById(s).classList.contains('active'));
+
+            if (e.key === 'ArrowRight' && currentIndex < sections.length - 1) {
+                document.querySelectorAll('.tab-btn')[currentIndex + 1].click();
+            } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                document.querySelectorAll('.tab-btn')[currentIndex - 1].click();
+            }
+        });
+    </script>
+</body>
+</html>
