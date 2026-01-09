@@ -1,3 +1,14 @@
+---
+name: n8n-workflow-builder
+description: Generate production-ready n8n workflows from natural language
+context: fork
+user-invocable: true
+triggers:
+  - "n8n workflow"
+  - "build workflow"
+  - "automate with n8n"
+---
+
 # n8n Workflow Builder Skill
 
 Generate production-ready n8n workflows from natural language descriptions. Self-hosted = free unlimited workflows.

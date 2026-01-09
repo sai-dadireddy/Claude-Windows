@@ -1,3 +1,14 @@
+---
+name: interview-spec
+description: Interview user to create detailed specs before implementation
+context: fork
+user-invocable: true
+triggers:
+  - "interview me"
+  - "spec first"
+  - "plan this feature"
+---
+
 # Interview-Spec Skill
 
 Trigger: User mentions "interview me", "spec first", "plan this feature", or starts a large/ambiguous request.
