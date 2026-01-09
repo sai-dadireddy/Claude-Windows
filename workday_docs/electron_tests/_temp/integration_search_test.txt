@@ -1,0 +1,43 @@
+CUSTOM DATA VARIABLES
+--------------------------------------------------------------------------------
+# Tenant Configuration (UPDATE THESE FOR YOUR ENVIRONMENT)
+{{TENANT_LOGIN_URL}} = https://impl-identity.wd12.myworkday.com/wday/authgwy/erpa_amu1/upc/login
+{{USERNAME}} = stud_isu
+{{PASSWORD}} = Erpa@1234
+
+# Integration Search (UPDATE FOR YOUR INTEGRATION)
+{{INTEGRATION_NAME}} = Payroll
+{{EMPLOYEE_ID}} = EMP-TEST-2026
+
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+# Login Steps
+Navigate to {{TENANT_LOGIN_URL}}
+wait for 3 seconds
+enter the username as {{USERNAME}}
+wait for 1 second
+enter the password as {{PASSWORD}}
+click on the 'Sign In' button
+wait for 5 seconds
+
+# Search for Integration
+click on the 'Search' button
+enter Integration in the search field
+wait for 3 seconds
+click on 'Integration' link
+wait for 3 seconds
+
+# Search within Integrations
+enter {{INTEGRATION_NAME}} in the search field
+wait for 2 seconds
+
+# Cancel/close to complete test
+click cancel button
+wait for 2 seconds
+
+VERIFICATION:
+- [ ] Login successful
+- [ ] Integration system accessible
+- [ ] Search functions within Integration
+- [ ] {{INTEGRATION_NAME}} integration found
