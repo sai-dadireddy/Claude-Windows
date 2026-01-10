@@ -27,7 +27,13 @@ export const TodoCanvas: React.FC<TodoCanvasProps> = ({
   onClose,
 }) => {
   const { exit } = useApp();
-  const [items, setItems] = useState<TodoItem[]>(initialItems);
+  // Ensure all items have IDs
+  const [items, setItems] = useState<TodoItem[]>(
+    initialItems.map((item, idx) => ({
+      ...item,
+      id: item.id || `todo_${Date.now()}_${idx}`,
+    }))
+  );
   const [selectedIdx, setSelectedIdx] = useState(0);
   const [isAdding, setIsAdding] = useState(false);
   const [newItemText, setNewItemText] = useState('');
