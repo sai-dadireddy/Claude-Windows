@@ -1,0 +1,26 @@
+{
+  "phase": "build",
+  "iteration": 2,
+  "max_iterations": 10,
+  "min_iterations": 2,
+  "screenshots_dir": ".ralph/screenshots",
+  "started": "2026-01-10T18:18:10.996498",
+  "completion_promise": "DONE",
+  "current_task": 2,
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Create UI",
+      "status": "complete",
+      "verified": true,
+      "attempts": 0
+    },
+    {
+      "id": 2,
+      "task": "Test button",
+      "status": "complete",
+      "verified": true,
+      "attempts": 0
+    }
+  ]
+}
