@@ -15,7 +15,8 @@
     "server": "tsx src/server/index.ts",
     "electron": "electron electron/main/index.ts",
     "electron:build": "tsc -p electron/tsconfig.json",
-    "popup": "tsx electron/spawn.ts"
+    "popup": "node open-popup.js",
+    "popup:electron": "tsx electron/spawn.ts"
   },
   "dependencies": {
     "chalk": "^5.3.0",

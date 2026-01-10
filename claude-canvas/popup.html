@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Claude Canvas</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+    .titlebar { background: #16213e; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #0f3460; position: sticky; top: 0; }
+    .content { padding: 20px; }
+    input, textarea, select { background: #16213e; border: 1px solid #0f3460; color: #eee; padding: 10px 14px; border-radius: 8px; width: 100%; box-sizing: border-box; font-size: 14px; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: #e94560; }
+    .btn { background: #e94560; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+    .btn:hover { background: #ff6b6b; }
+    .btn-secondary { background: #0f3460; }
+    .btn-secondary:hover { background: #16213e; }
+    label { display: block; margin-bottom: 6px; color: #aaa; font-size: 13px; font-weight: 500; }
+    .field { margin-bottom: 16px; }
+    .todo-item { padding: 12px; margin-bottom: 8px; background: #16213e; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 12px; }
+    .todo-item:hover { background: #1f2b4a; }
+    .todo-item.done { opacity: 0.5; }
+    .todo-item.done span { text-decoration: line-through; }
+    .checkbox { width: 20px; height: 20px; border: 2px solid #0f3460; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+    .checkbox.checked { background: #e94560; border-color: #e94560; }
+    .priority-high { border-left: 3px solid #e94560; }
+    .priority-medium { border-left: 3px solid #f0a500; }
+    .priority-low { border-left: 3px solid #4a90d9; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #0f3460; }
+    th { color: #e94560; font-weight: 600; background: #16213e; position: sticky; top: 45px; }
+    tr:hover td { background: #16213e; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+    .tab { padding: 8px 16px; border-radius: 8px; cursor: pointer; background: #16213e; }
+    .tab.active { background: #e94560; }
+    pre { background: #16213e; padding: 16px; border-radius: 8px; overflow: auto; font-size: 13px; line-height: 1.6; }
+    .json-key { color: #e94560; }
+    .json-string { color: #4ade80; }
+    .json-number { color: #fbbf24; }
+    .json-boolean { color: #c084fc; }
+  </style>
+</head>
+<body>
+  <div class="titlebar">
+    <span id="canvas-title" style="font-size: 15px; font-weight: 600;">Claude Canvas</span>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn-secondary" onclick="copyToClipboard()">Copy Data</button>
+      <button class="btn" onclick="window.close()">Close</button>
+    </div>
+  </div>
+  <div id="root" class="content"></div>
+
+  <script>
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const canvasType = params.get('type') || 'email';
+    const initialData = params.get('data') ? JSON.parse(decodeURIComponent(params.get('data'))) : {};
+
+    let currentData = { ...initialData };
+    document.getElementById('canvas-title').textContent = canvasType.charAt(0).toUpperCase() + canvasType.slice(1) + ' Canvas';
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText(JSON.stringify(currentData, null, 2));
+      alert('Data copied to clipboard!');
+    }
+
+    // Email Canvas
+    function EmailCanvas({ data }) {
+      const [form, setForm] = React.useState({
+        to: data.to || '',
+        cc: data.cc || '',
+        bcc: data.bcc || '',
+        subject: data.subject || '',
+        body: data.body || '',
+      });
+
+      React.useEffect(() => { currentData = form; }, [form]);
+
+      const Field = ({ label, field, multiline }) => React.createElement('div', { className: 'field' }, [
+        React.createElement('label', { key: 'l' }, label),
+        multiline
+          ? React.createElement('textarea', { key: 'i', value: form[field], onChange: e => setForm({...form, [field]: e.target.value}), rows: 8 })
+          : React.createElement('input', { key: 'i', value: form[field], onChange: e => setForm({...form, [field]: e.target.value}) })
+      ]);
+
+      return React.createElement('div', null, [
+        React.createElement(Field, { key: 'to', label: 'To', field: 'to' }),
+        React.createElement(Field, { key: 'cc', label: 'Cc', field: 'cc' }),
+        React.createElement(Field, { key: 'bcc', label: 'Bcc', field: 'bcc' }),
+        React.createElement(Field, { key: 'subject', label: 'Subject', field: 'subject' }),
+        React.createElement(Field, { key: 'body', label: 'Body', field: 'body', multiline: true }),
+      ]);
+    }
+
+    // Todo Canvas
+    function TodoCanvas({ data }) {
+      const [items, setItems] = React.useState((data.items || []).map((item, i) => ({ ...item, id: item.id || i })));
+      const [newItem, setNewItem] = React.useState('');
+
+      React.useEffect(() => { currentData = { items }; }, [items]);
+
+      const addItem = () => {
+        if (newItem.trim()) {
+          setItems([...items, { id: Date.now(), text: newItem, done: false }]);
+          setNewItem('');
+        }
+      };
+
+      const toggleItem = (id) => setItems(items.map(i => i.id === id ? { ...i, done: !i.done } : i));
+      const deleteItem = (id) => setItems(items.filter(i => i.id !== id));
+      const setPriority = (id, priority) => setItems(items.map(i => i.id === id ? { ...i, priority } : i));
+
+      const doneCount = items.filter(i => i.done).length;
+
+      return React.createElement('div', null, [
+        React.createElement('div', { key: 'progress', style: { marginBottom: 16, color: '#aaa' } },
+          `Progress: ${doneCount}/${items.length} (${items.length ? Math.round(doneCount/items.length*100) : 0}%)`
+        ),
+        React.createElement('div', { key: 'input', style: { display: 'flex', gap: 8, marginBottom: 20 } }, [
+          React.createElement('input', {
+            key: 'i', value: newItem, onChange: e => setNewItem(e.target.value),
+            placeholder: 'Add new item...', style: { flex: 1 },
+            onKeyPress: e => e.key === 'Enter' && addItem()
+          }),
+          React.createElement('button', { key: 'b', className: 'btn', onClick: addItem }, 'Add')
+        ]),
+        ...items.map(item => React.createElement('div', {
+          key: item.id,
+          className: `todo-item ${item.done ? 'done' : ''} ${item.priority ? 'priority-' + item.priority : ''}`
+        }, [
+          React.createElement('div', {
+            key: 'c', className: `checkbox ${item.done ? 'checked' : ''}`,
+            onClick: () => toggleItem(item.id)
+          }, item.done ? '✓' : ''),
+          React.createElement('span', { key: 't', style: { flex: 1 } }, item.text),
+          React.createElement('select', {
+            key: 's', value: item.priority || '', onChange: e => setPriority(item.id, e.target.value),
+            style: { width: 100 }
+          }, [
+            React.createElement('option', { key: '', value: '' }, 'Priority'),
+            React.createElement('option', { key: 'high', value: 'high' }, 'High'),
+            React.createElement('option', { key: 'medium', value: 'medium' }, 'Medium'),
+            React.createElement('option', { key: 'low', value: 'low' }, 'Low'),
+          ]),
+          React.createElement('button', {
+            key: 'd', className: 'btn btn-secondary', onClick: () => deleteItem(item.id),
+            style: { padding: '6px 12px' }
+          }, '×')
+        ]))
+      ]);
+    }
+
+    // Table Canvas
+    function TableCanvas({ data }) {
+      const columns = data.columns || (data.rows?.[0] ? Object.keys(data.rows[0]) : []);
+      const [rows, setRows] = React.useState(data.rows || []);
+      const [sortCol, setSortCol] = React.useState(null);
+      const [sortAsc, setSortAsc] = React.useState(true);
+
+      React.useEffect(() => { currentData = { columns, rows }; }, [rows]);
+
+      const sortedRows = [...rows].sort((a, b) => {
+        if (!sortCol) return 0;
+        const cmp = String(a[sortCol] || '').localeCompare(String(b[sortCol] || ''), undefined, { numeric: true });
+        return sortAsc ? cmp : -cmp;
+      });
+
+      const toggleSort = (col) => {
+        if (sortCol === col) setSortAsc(!sortAsc);
+        else { setSortCol(col); setSortAsc(true); }
+      };
+
+      return React.createElement('div', { style: { overflowX: 'auto' } },
+        React.createElement('table', null, [
+          React.createElement('thead', { key: 'h' },
+            React.createElement('tr', null, columns.map(col =>
+              React.createElement('th', {
+                key: col, onClick: () => toggleSort(col), style: { cursor: 'pointer' }
+              }, col + (sortCol === col ? (sortAsc ? ' ↑' : ' ↓') : ''))
+            ))
+          ),
+          React.createElement('tbody', { key: 'b' },
+            sortedRows.map((row, i) => React.createElement('tr', { key: i },
+              columns.map(col => React.createElement('td', { key: col }, String(row[col] ?? '')))
+            ))
+          )
+        ])
+      );
+    }
+
+    // JSON Canvas
+    function JsonCanvas({ data }) {
+      const jsonData = data.data || data;
+      const formatted = JSON.stringify(jsonData, null, 2)
+        .replace(/"([^"]+)":/g, '<span class="json-key">"$1"</span>:')
+        .replace(/: "([^"]+)"/g, ': <span class="json-string">"$1"</span>')
+        .replace(/: (\d+)/g, ': <span class="json-number">$1</span>')
+        .replace(/: (true|false)/g, ': <span class="json-boolean">$1</span>');
+
+      return React.createElement('pre', { dangerouslySetInnerHTML: { __html: formatted } });
+    }
+
+    // Render
+    const components = { email: EmailCanvas, todo: TodoCanvas, table: TableCanvas, json: JsonCanvas };
+    const Component = components[canvasType] || JsonCanvas;
+    ReactDOM.render(React.createElement(Component, { data: initialData }), document.getElementById('root'));
+  </script>
+</body>
+</html>
