@@ -1,12 +1,15 @@
 ---
 name: interview-spec
-description: Interview user to create detailed specs before implementation
+description: Interview-driven specification development for large features
 context: fork
-user-invocable: true
-triggers:
-  - "interview me"
-  - "spec first"
-  - "plan this feature"
+agent: product-lead
+allowed-tools:
+  - Read
+  - Glob
+  - Grep
+  - Write
+  - AskUserQuestion
+  - TodoWrite
 ---
 
 # Interview-Spec Skill
@@ -51,7 +54,7 @@ When this skill is activated:
 
 ## Example Questions
 
-```
+\`\`\`
 AskUserQuestion:
   questions:
     - question: "What authentication approach should we use?"
@@ -66,7 +69,7 @@ AskUserQuestion:
         - label: "Session-based"
           description: "Server-side sessions with cookies"
       multiSelect: false
-```
+\`\`\`
 
 ## When to Trigger
 

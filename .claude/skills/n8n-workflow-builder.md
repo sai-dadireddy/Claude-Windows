@@ -2,6 +2,7 @@
 name: n8n-workflow-builder
 description: Generate production-ready n8n workflows from natural language
 context: fork
+model: haiku
 user-invocable: true
 triggers:
   - "n8n workflow"

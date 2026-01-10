@@ -1,6 +1,15 @@
 ---
 name: prompt-improver
 description: This skill enriches vague prompts with targeted research and clarification before execution. Should be used when a prompt is determined to be vague and requires systematic research, question generation, and execution guidance.
+context: fork
+allowed-tools:
+  - Read
+  - Glob
+  - Grep
+  - WebSearch
+  - WebFetch
+  - AskUserQuestion
+  - TodoWrite
 ---
 
 # Prompt Improver Skill
@@ -77,14 +86,14 @@ For question templates, effective patterns, and examples, see [references/questi
 Use the AskUserQuestion tool to present your research-grounded questions.
 
 **AskUserQuestion Format:**
-```
+\`\`\`
 - question: Clear, specific question ending with ?
 - header: Short label (max 12 chars) for UI display
 - multiSelect: false (unless choices aren't mutually exclusive)
 - options: Array of 2-4 specific choices from research
   - label: Concise choice text (1-5 words)
   - description: Context about this option (trade-offs, implications)
-```
+\`\`\`
 
 **Important:** Always include multiSelect field (true/false). User can always select "Other" for custom input.
 

@@ -7,3 +7,6 @@ User accesses Linux server from Windows machine. For AWS SSO login, ALWAYS use -
 
 ## [2025-12-23 20:00:39]
 User connects via SSM from PowerShell 7, then sudo su - claude. Tmux prefix changed to Ctrl+a and backtick for SSM compatibility. Hooks log to ~/.claude/logs/hooks.log (watch-hooks alias)
+
+## [2025-12-29 15:47:59]
+OneDrive sync interferes with file edits - pause sync before making multiple file changes in OneDrive-synced folders

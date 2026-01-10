@@ -306,6 +306,7 @@ def main():
 
     cwd = data.get("cwd", os.getcwd())
     source = data.get("source", "startup")  # startup, resume, clear, compact
+    agent_type = data.get("agent_type", "")  # New in 2.1.2 - populated if --agent specified
     project = os.path.basename(cwd)
 
     # Log session start
@@ -316,6 +317,7 @@ def main():
                 "cwd": cwd,
                 "source": source,
                 "project": project,
+                "agent_type": agent_type,
                 "timestamp": datetime.now().isoformat()
             }) + "\n")
     except:

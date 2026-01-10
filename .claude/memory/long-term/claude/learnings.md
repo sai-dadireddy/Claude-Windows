@@ -7,3 +7,6 @@ Hook optimization session: skill_reminder.py reduced 80% (30KB→5.8KB) using pr
 
 ## [2025-12-23 19:01:16]
 Hook optimization complete: Pre-compiled regex patterns (re.compile at module level) provide 50-80% size reduction and faster execution. Key hooks optimized: skill_reminder (80%), beads_reminder (59%), memory_search (54%). parallel_agent_reminder now includes model routing guidance with prompt templates for each model type.
+
+## [2026-01-04 10:34:08]
+learn-claude-code repo (github.com/shareAI-lab/learn-claude-code): Educational resource showing agent internals in 5 progressive versions (v0-v4, ~1100 lines total). Core pattern: model generates response, execute tools, append results, repeat. Useful for understanding Claude Agent SDK internals or building custom agents.

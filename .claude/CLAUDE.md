@@ -29,15 +29,36 @@ NEVER lie or fabricate. Verify before claiming. Say "I don't know" when unsure.
 
 ---
 
-## VERIFICATION GATES
+## VERIFICATION GATES (Boris-Style)
 
-Before claiming "done":
-- [ ] Code compiles, linting passes
-- [ ] Tests run and pass (show output)
-- [ ] Feature works as specified
-- [ ] Evidence provided to user
+**CRITICAL:** Before marking ANY coding task complete, you MUST actively verify:
 
-**Never batch-complete todos.** Mark complete ONLY when fully verified.
+### Auto-Verify Checklist
+1. **Run tests** - Execute `pytest`, `npm test`, or relevant test command
+2. **Check lint** - Run linter, fix any errors
+3. **Verify build** - Run `npm run build` or equivalent if applicable
+4. **Show evidence** - Display test output to user
+
+### Verification by Domain
+| Change Type | Required Verification |
+|-------------|----------------------|
+| Python code | `pytest -x --tb=short` |
+| TypeScript/JS | `npm test && npm run build` |
+| UI changes | Screenshot or browser verification |
+| Config changes | Restart service, validate syntax |
+| API changes | `curl` test or integration test |
+
+### The Rule
+```
+NEVER say "done" without running verification.
+NEVER assume tests pass - RUN them.
+NEVER skip verification for "small" changes.
+```
+
+### Autonomous Mode (`/ralph`)
+Use `/ralph` for multi-task sessions - it auto-verifies each task before continuing.
+
+**Never batch-complete todos.** Mark complete ONLY when fully verified with evidence.
 
 ---
 
@@ -75,6 +96,10 @@ Before claiming "done":
 | Write Tests | `test-driven-development` |
 | New Feature | `brainstorm` -> `write-plan` |
 | Documents | `docx`, `pdf`, `pptx`, `xlsx` |
+| Workday API + Electron Tests | `/workday` |
+| PeopleSoft | `/peoplesoft` |
+| Rich Visual Output | `/canvas` (TUI/Electron popups) |
+| Oracle/MOS | `/oracle` |
 
 **Full guide:** `cat ~/.claude/refs/skills-guide.md`
 
@@ -134,13 +159,33 @@ All MCPs are behind a router for **60k token savings**. Only 4 tools loaded (~2.
 ### Available Backends
 | Backend | Triggers | Key Tools |
 |---------|----------|-----------|
+| `browser` | chrome, devtools, debug, console | navigate_page, get_console_logs, performance_* |
 | `context7` | library, docs, api | resolve-library-id, get-library-docs |
 | `github` | pr, issue, repo | create_pull_request, create_issue |
 | `memory` | entity, relationship | create_entities, search_nodes |
 | `sequential-thinking` | reasoning, analyze | sequentialthinking |
 | `multi` | compare models, review | chat, compare, codereview |
-| `playwright` | browser, screenshot | playwright_navigate, playwright_click |
 | `code-index` | index, code search | search_code_advanced, find_files |
+
+### Browser Tools (via router category `browser`)
+| Use Case | Server | When to Use |
+|----------|--------|-------------|
+| Debug live site | `chrome-devtools` | Console errors, network, performance profiling |
+| Test UI flows | `playwright` | Cross-browser, headed mode, form automation |
+| Claude-in-Chrome | Native `/chrome` | Quick automation with YOUR logged-in sessions |
+
+```python
+# Debug console errors
+router_execute(category="browser", server="chrome-devtools", tool="get_console_logs", args={})
+
+# Performance profiling
+router_execute(category="browser", server="chrome-devtools", tool="performance_start_trace", args={})
+# ... interact with page ...
+router_execute(category="browser", server="chrome-devtools", tool="performance_stop_trace", args={})
+
+# Cross-browser test
+router_execute(category="browser", server="playwright", tool="playwright_navigate", args={"url": "..."})
+```
 
 ### Usage Pattern
 ```python
@@ -167,17 +212,88 @@ bd close <id>
 
 ## PARALLEL AGENTS (Sherpa 6)
 
-> **NOTE:** Task spawning requires restart with fixed env var. MCP multi-model works now.
-
 ### The Sherpa 6
-| Agent | Role | Use For |
-|-------|------|---------|
-| `@lead-architect` | Adult | AWS, security, infrastructure |
-| `@fullstack-dev` | Builder | React/Node features |
-| `@frontend-ux` | Artist | Tailwind, Shadcn, responsive |
-| `@product-lead` | Boss | Specs, user stories, planning |
-| `@qa-engineer` | Tester | Jest/Playwright, edge cases |
-| `@scribe` | Historian | Documentation, READMEs |
+| Agent | Role | Use For | MCP Access |
+|-------|------|---------|------------|
+| `@lead-architect` | Adult | AWS, security, infrastructure | - |
+| `@fullstack-dev` | Builder | React/Node features | - |
+| `@frontend-ux` | Artist | Tailwind, Shadcn, responsive | - |
+| `@product-lead` | Boss | Specs, user stories, planning | - |
+| `@qa-engineer` | Tester | Jest/Playwright, edge cases | Claude-in-Chrome, Playwright |
+| `@scribe` | Historian | Documentation, READMEs | - |
+
+### Browser-Enabled Agents
+| Agent | MCP Tools | Use For |
+|-------|-----------|---------|
+| `@qa-engineer` | `mcp__claude-in-chrome__*`, `mcp__playwright__*` | Live browser testing |
+| `@test-writer` | `mcp__claude-in-chrome__*`, `mcp__playwright__*` | E2E test automation |
+| `@workday-expert` | `mcp__claude-in-chrome__*`, `mcp__playwright__*` | Workday doc scraping, Electron test generation |
+| `@peoplesoft-expert` | `mcp__claude-in-chrome__*`, `mcp__playwright__*` | Oracle MOS/PeopleSoft scraping |
+
+### @workday-expert Browser Workflow (CRITICAL)
+```
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 1: Query RAG FIRST                                     │
+│  python workday_rag.py "{Task name}"                        │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+    Score >= 7.0?                  Score < 7.0?
+         ↓                                ↓
+┌─────────────────┐         ┌─────────────────────────────────┐
+│ ✅ USE RAG DATA │         │ 🌐 MUST USE BROWSER             │
+│ Skip browser    │         │ 1. tabs_context_mcp()           │
+│ Generate test   │         │ 2. tabs_create_mcp() → TAB_ID   │
+└─────────────────┘         │ 3. navigate(resourcecenter...)  │
+                            │ 4. search & extract content     │
+                            │ 5. Save to KB, update test      │
+                            └─────────────────────────────────┘
+```
+**RAG Score Decision Matrix:**
+| Score | Browser Required? | Action |
+|-------|-------------------|--------|
+| **>= 7.0** | ❌ No | Use RAG directly |
+| **< 7.0** | ✅ **YES** | **MUST open Chrome tab** |
+
+**DO NOT mark as MANUAL without trying browser first when RAG < 7.0!**
+
+### @peoplesoft-expert Browser Workflow (CRITICAL)
+```
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 1: Query Oracle RAG FIRST                              │
+│  python oracle_rag.py "{Task name}"                         │
+└─────────────────────────────────────────────────────────────┘
+                            ↓
+              ┌─────────────┴─────────────┐
+              ↓                           ↓
+    Score >= 7.0?                  Score < 7.0?
+         ↓                                ↓
+┌─────────────────┐         ┌─────────────────────────────────┐
+│ ✅ USE RAG DATA │         │ 🌐 MUST USE BROWSER             │
+│ Skip browser    │         │ 1. tabs_context_mcp()           │
+│ Generate test   │         │ 2. tabs_create_mcp() → TAB_ID   │
+└─────────────────┘         │ 3. navigate to:                 │
+                            │    - support.oracle.com (MOS)   │
+                            │    - docs.oracle.com            │
+                            │ 4. search & extract content     │
+                            │ 5. Save to KB, update test      │
+                            └─────────────────────────────────┘
+```
+**Oracle/PeopleSoft Resources:**
+| Resource | URL | Auth Required |
+|----------|-----|---------------|
+| My Oracle Support (MOS) | `support.oracle.com` | ✅ Yes |
+| Oracle Documentation | `docs.oracle.com/cd/E92519_02` | ❌ No |
+| PeopleTools Docs | `docs.oracle.com/en/applications/peoplesoft` | ❌ No |
+
+**RAG Score Decision Matrix:**
+| Score | Browser Required? | Action |
+|-------|-------------------|--------|
+| **>= 7.0** | ❌ No | Use RAG directly |
+| **< 7.0** | ✅ **YES** | **MUST open Chrome tab** |
+
+**DO NOT mark as MANUAL without trying browser first when RAG < 7.0!**
 
 ### Multi-Model via Router
 ```python
@@ -218,6 +334,73 @@ router_execute(mcp_name="multi", tool_name="codereview", arguments={"content": "
 | Compare answers | Any 2+ models | `router_execute(mcp_name="multi", tool_name="compare", arguments={"models": [...], ...})` |
 
 **List all models:** `router_execute(mcp_name="multi", tool_name="models", arguments={})`
+
+---
+
+## SKILL SEEKERS (v2.5.0)
+
+MCP server for automated skill creation from documentation.
+
+### Quick Commands
+```bash
+# Scrape docs and enhance
+skill-seekers scrape --config configs/react.json --enhance-local
+
+# Package for Claude
+skill-seekers package output/react/
+
+# Install to all coding agents
+skill-seekers install-agent output/react/ --agent all
+```
+
+### 18 MCP Tools
+| Category | Tools |
+|----------|-------|
+| Config | `list_configs`, `generate_config`, `fetch_config`, `validate_config` |
+| Scrape | `scrape_docs`, `scrape_github`, `scrape_pdf`, `estimate_pages` |
+| Build | `enhance_skill`, `package_skill`, `upload_skill` |
+| Deploy | `install_skill`, `install_agent`, `split_config`, `generate_router` |
+
+### Agent Paths (Auto-detected)
+- `~/.claude/skills/` - Claude Code
+- `~/.cursor/skills/` - Cursor
+- `~/.codeium/windsurf/skills/` - Windsurf
+
+### Natural Language Examples
+- "List available configs" → shows 24+ presets
+- "Scrape the React docs" → creates skill
+- "Install React skill to all agents" → deploys everywhere
+
+---
+
+## KNOWLEDGE BASES
+
+Local documentation repositories with RAG support:
+
+| KB | Location | Content | Scraping Method |
+|----|----------|---------|-----------------|
+| Workday | `~/OneDrive - ERPA/Claude/workday_docs/` | 55 WSDLs, REST APIs, integration guides | Claude-in-Chrome (auth) |
+| Oracle/PeopleSoft | `~/OneDrive - ERPA/Claude/oracle_docs/` | MOS KB articles, PeopleTools, Integration Broker | Claude-in-Chrome (auth) |
+
+### Workday RAG
+```bash
+python workday_docs/workday_rag.py "query"
+python workday_docs/workday_rag.py --list-wsdl
+```
+
+### Oracle/PeopleSoft RAG
+```bash
+python oracle_docs/oracle_rag.py "query"
+python oracle_docs/oracle_rag.py --list
+python oracle_docs/oracle_rag.py --list-kb
+python oracle_docs/oracle_rag.py --kb KB593233
+```
+
+### Anti-Bot Best Practices (for auth-required sites)
+- Use Claude-in-Chrome (your logged-in session)
+- Natural delays (2-5 seconds between actions)
+- Scroll before clicking
+- Human pace (3-10 seconds between requests)
 
 ---
 

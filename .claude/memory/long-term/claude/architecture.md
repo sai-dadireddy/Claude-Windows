@@ -9,3 +9,6 @@ Windows Claude Code Setup (Dec 28, 2025):
 - Hooks: Fixed 31+ files for Windows cp1252 emoji encoding (replaced with ASCII)
 - Router: ~/.claude/mcp/router/server.py has multi backend with Windows path
 - Detection hooks: intent_detector.py (model routing), parallel_agent_reminder.py (agents), beads_reminder.py (tasks), decision_reminder.py (memory saves)
+
+## [2026-01-10 17:07:19]
+Claude Canvas architecture: src/ contains TUI components (ink/React), electron/ contains popup components. Main files: src/cli.ts (CLI), src/canvases/*.tsx (components), src/server/index.ts (WebSocket), electron/main/index.ts (Electron app), electron/spawn.ts (popup launcher). Dependencies: ink, react, ws, commander, electron.

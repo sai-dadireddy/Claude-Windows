@@ -1,0 +1,89 @@
+# Electron Script Generator
+
+Generate Workday Electron test scripts from Excel scenarios with RAG/KB validation.
+
+## Trigger
+- User provides Excel file or scenario data
+- User says "generate electron script for {test}"
+- User says "create test for {workday task}"
+
+## Workflow
+
+### Step 1: Load Scenario Data
+```bash
+# Check for Excel data
+ls "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs/electron_tests/_data/"
+```
+
+### Step 2: Query RAG for Coverage
+```bash
+cd "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/workday_docs"
+python workday_rag.py "{task_name}"
+```
+
+### Step 3: Confidence Decision
+| RAG Score | Action |
+|-----------|--------|
+| >= 7.0 | Generate script directly from RAG |
+| 4.0-6.9 | Generate script, mark for manual review |
+| < 4.0 | Flag as LOW CONFIDENCE, research KB first |
+
+### Step 4: Generate Script
+Use template from: `electron_tests/_templates/ELECTRON_TEST_TEMPLATE.txt`
+
+### Step 5: Update Tracker
+Update: `electron_tests/script_tracker.txt`
+- Set status to [G]
+- Add trust score
+- Add agent ID
+- Mark [R] if trust < 7.0
+
+## Strict Rules
+1. **NO HALLUCINATIONS** - Only use RAG/KB content
+2. **NO GUESSING** - If unsure, mark as MANUAL
+3. **VERIFY** - Cross-check task names against Workday
+4. **SCREENSHOT** - Every verification step needs screenshot
+5. **CONFIDENCE** - Be honest about trust score
+
+## DSL Commands
+```
+enter {field} as "{value}"
+click {element}
+select {dropdown} as "{option}"
+wait for {condition} ({time})
+verify {assertion}
+screenshot as "{filename}"
+navigate to "{task}"
+press {key}
+```
+
+## Output Format
+Save to: `electron_tests/{AREA}/{TEST_ID}_{name}.txt`
+
+## Example
+```
+================================================================================
+TEST: HCM-1-0010 Audit Company Setup
+AREA: HCM > Organization Setup
+CONFIDENCE: 8.5/10
+PRIORITY: High
+VERSION: 1.0 | UPDATED: 2026-01-01
+================================================================================
+
+PURPOSE
+Verify company audit trail captures configuration changes for SOX compliance.
+
+PREREQUISITES
+- Admin role with "View Company" permission
+- Test company exists in tenant
+
+--------------------------------------------------------------------------------
+AUTOMATED STEPS
+--------------------------------------------------------------------------------
+1. navigate to "Find Companies" task
+2. enter search box as "Acme Corp"
+3. wait for search results (3 seconds)
+4. click first result
+5. verify "Company Details" displays
+6. screenshot as "HCM-1-0010-05-details.png"
+```
