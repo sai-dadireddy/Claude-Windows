@@ -182,6 +182,27 @@ After completing Ralph loop, save significant learnings:
 ~/.claude/scripts/memory_manager.py save-memory PROJECT learning "Discovered blocker: ..."
 ```
 
+## PRD-Based Workflow (Ryan Carson Method)
+
+For building complete features overnight:
+
+```bash
+# 1. Generate PRD from your idea
+/prd "I want to add a task priority system..."
+
+# 2. Convert PRD to user stories
+/prd-to-stories docs/prd-priority.md
+
+# 3. Run the loop (spawns fresh Claude instances)
+# Bash:
+~/.claude/scripts/ralph_loop.sh .ralph/prd.json 15
+
+# PowerShell:
+~/.claude/scripts/ralph_loop.ps1 -PrdFile .ralph/prd.json -MaxIterations 15
+```
+
+Each iteration gets fresh context, implements one story, commits, and continues.
+
 ## Begin
 
 1. First, initialize the loop with the tasks provided
