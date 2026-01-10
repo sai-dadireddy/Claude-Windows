@@ -13,6 +13,9 @@ const __dirname = path.dirname(__filename);
 
 const args = process.argv.slice(2);
 
+// Debug: show received args
+console.log('Args received:', args);
+
 // Parse arguments
 let type = 'email';
 let data = {};
@@ -21,7 +24,18 @@ for (let i = 0; i < args.length; i++) {
   if (args[i] === '--type' || args[i] === '-t') {
     type = args[++i];
   } else if (args[i] === '--data' || args[i] === '-d') {
-    data = JSON.parse(args[++i]);
+    // Collect all remaining args as JSON (in case it got split)
+    let jsonStr = args[++i];
+    // If JSON was split by shell, reassemble it
+    while (i + 1 < args.length && !args[i + 1].startsWith('--')) {
+      jsonStr += args[++i];
+    }
+    try {
+      data = JSON.parse(jsonStr);
+    } catch (e) {
+      console.error('Failed to parse JSON:', jsonStr);
+      console.error('Error:', e.message);
+    }
   } else if (args[i] === '--help' || args[i] === '-h') {
     console.log(`
 Claude Canvas Browser Popup
@@ -39,12 +53,14 @@ Examples:
   }
 }
 
-// Build URL
+// Build URL with cache buster
 const htmlPath = path.join(__dirname, 'popup.html');
 const dataParam = encodeURIComponent(JSON.stringify(data));
-const url = `file:///${htmlPath.replace(/\\/g, '/')}?type=${type}&data=${dataParam}`;
+const cacheBuster = Date.now();
+const url = `file:///${htmlPath.replace(/\\/g, '/')}?type=${type}&data=${dataParam}&_=${cacheBuster}`;
 
 console.log(`Opening ${type} canvas in browser...`);
+console.log('Data preview:', JSON.stringify(data).substring(0, 80) + (JSON.stringify(data).length > 80 ? '...' : ''));
 
 // Open in default browser
 const platform = process.platform;
