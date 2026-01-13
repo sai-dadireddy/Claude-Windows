@@ -1,0 +1,54 @@
+{
+  "url": "http://54.173.231.4/dashboard",
+  "timestamp": "2026-01-13T15:01:02.319Z",
+  "screenshots": [
+    "01-full-page.png",
+    "02-viewport.png",
+    "05-mobile-view.png",
+    "06-tablet-view.png"
+  ],
+  "navigation": [],
+  "features": [],
+  "uiComponents": [],
+  "loginRequired": true,
+  "pageTitle": "Test Accelerator",
+  "pageStructure": {
+    "bodyClasses": "mat-typography",
+    "hasNavbar": false,
+    "hasSidebar": false,
+    "hasFooter": false,
+    "mainSections": [],
+    "buttons": [
+      "Sign In"
+    ],
+    "links": [],
+    "forms": 0,
+    "tables": 0,
+    "cards": 0,
+    "modals": 0,
+    "framework": "Ant Design"
+  },
+  "visibleText": [
+    "LOGIN",
+    "Email",
+    "Password",
+    "Sign In"
+  ],
+  "interactiveElements": [
+    {
+      "tag": "input",
+      "text": "Email address",
+      "type": "text"
+    },
+    {
+      "tag": "input",
+      "text": "Password",
+      "type": "password"
+    },
+    {
+      "tag": "button",
+      "text": "Sign In",
+      "type": "button"
+    }
+  ]
+}
