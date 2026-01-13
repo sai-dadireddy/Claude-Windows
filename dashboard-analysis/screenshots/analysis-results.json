@@ -1,54 +1,77 @@
 {
-  "url": "http://54.173.231.4/dashboard",
-  "timestamp": "2026-01-13T15:01:02.319Z",
+  "url": "http://54.173.231.4",
+  "timestamp": "2026-01-13T15:24:24.616Z",
   "screenshots": [
-    "01-full-page.png",
-    "02-viewport.png",
-    "05-mobile-view.png",
-    "06-tablet-view.png"
+    "01-initial-page.png",
+    "02-login-filled.png",
+    "03-dashboard-home.png",
+    "04-page-test-studio.png",
+    "05-page-test-suites.png",
+    "06-page-test-scenarios.png",
+    "07-page-execution-studio.png",
+    "08-page-test-execution.png",
+    "09-page-execution-result.png",
+    "10-page-analytics.png",
+    "11-page-report.png",
+    "tablet-view.png",
+    "mobile-view.png"
   ],
-  "navigation": [],
+  "navigation": {
+    "sidebar": [
+      {
+        "text": "Test Studio",
+        "href": "#"
+      },
+      {
+        "text": "Test Suites",
+        "href": "/package"
+      },
+      {
+        "text": "Test Scenarios",
+        "href": "/scenario"
+      },
+      {
+        "text": "Execution Studio",
+        "href": "#"
+      },
+      {
+        "text": "Test Execution",
+        "href": "/test-execution"
+      },
+      {
+        "text": "Execution Result",
+        "href": "/execution-results"
+      },
+      {
+        "text": "Analytics",
+        "href": "#"
+      },
+      {
+        "text": "Report",
+        "href": "/report"
+      }
+    ],
+    "topbar": []
+  },
   "features": [],
-  "uiComponents": [],
-  "loginRequired": true,
-  "pageTitle": "Test Accelerator",
+  "uiComponents": {
+    "tables": 1,
+    "cards": 2,
+    "charts": 0,
+    "forms": 0,
+    "buttons": 7,
+    "modals": 0,
+    "tabs": 0,
+    "stats": 0
+  },
   "pageStructure": {
     "bodyClasses": "mat-typography",
-    "hasNavbar": false,
+    "hasNavbar": true,
     "hasSidebar": false,
     "hasFooter": false,
-    "mainSections": [],
-    "buttons": [
-      "Sign In"
-    ],
-    "links": [],
-    "forms": 0,
-    "tables": 0,
-    "cards": 0,
-    "modals": 0,
-    "framework": "Ant Design"
+    "framework": "unknown"
   },
-  "visibleText": [
-    "LOGIN",
-    "Email",
-    "Password",
-    "Sign In"
-  ],
-  "interactiveElements": [
-    {
-      "tag": "input",
-      "text": "Email address",
-      "type": "text"
-    },
-    {
-      "tag": "input",
-      "text": "Password",
-      "type": "password"
-    },
-    {
-      "tag": "button",
-      "text": "Sign In",
-      "type": "button"
-    }
-  ]
+  "dataDisplayed": [],
+  "uxAnalysis": {},
+  "pageTitle": "Test Accelerator"
 }
