@@ -1,0 +1,53 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "BedrockInvokeModels",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-5-sonnet-*",
+        "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-5-haiku-*",
+        "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-sonnet-4-*",
+        "arn:aws:bedrock:us-east-1::foundation-model/deepseek.deepseek-r1-*",
+        "arn:aws:bedrock:us-east-1::foundation-model/mistral.mistral-large-*",
+        "arn:aws:bedrock:us-east-1::foundation-model/meta.llama*"
+      ]
+    },
+    {
+      "Sid": "BedrockListModels",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModel"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BedrockAgentAccess",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeAgent",
+        "bedrock:Retrieve",
+        "bedrock:RetrieveAndGenerate"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:us-east-1:168770103454:agent/*",
+        "arn:aws:bedrock:us-east-1:168770103454:knowledge-base/*"
+      ]
+    },
+    {
+      "Sid": "CloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:168770103454:log-group:/aws/bedrock/*"
+    }
+  ]
+}

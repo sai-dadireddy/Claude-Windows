@@ -1,0 +1,140 @@
+# LLM Router Configuration
+# Brain + Muscle Architecture for Cost Optimization
+
+version: "1.0"
+default_region: us-east-1
+
+# Model Tiers (cheapest to most expensive)
+models:
+  tier1_cheap:
+    - name: deepseek-r1
+      provider: bedrock
+      model_id: deepseek.deepseek-r1-distill-llama-70b
+      cost_per_mtok_in: 1.35
+      cost_per_mtok_out: 5.40
+      use_for:
+        - unit_tests
+        - boilerplate
+        - documentation
+        - pr_review_initial
+        - ci_batch_scans
+
+  tier2_balanced:
+    - name: mistral-large
+      provider: bedrock
+      model_id: mistral.mistral-large-2411-v1:0
+      cost_per_mtok_in: 2.00
+      cost_per_mtok_out: 6.00
+      use_for:
+        - code_generation_large
+        - refactor_simple
+        - explain_code
+
+  tier3_premium:
+    - name: claude-sonnet
+      provider: bedrock
+      model_id: us.anthropic.claude-sonnet-4-5-20250929-v1:0
+      cost_per_mtok_in: 3.00
+      cost_per_mtok_out: 15.00
+      use_for:
+        - architecture
+        - complex_refactor
+        - security_review
+        - bug_root_cause
+        - orchestration
+
+# Routing Rules
+routing:
+  # Default: Try cheap first, escalate on low confidence
+  default_strategy: cascade
+
+  # Confidence threshold for escalation
+  confidence_threshold: 0.7
+
+  # Task-specific routing
+  task_routes:
+    pr_review:
+      primary: deepseek-r1
+      escalate_to: claude-sonnet
+      escalate_on: security_concern
+
+    code_generation:
+      primary: mistral-large
+      escalate_to: claude-sonnet
+      escalate_on: complexity_high
+
+    architecture_design:
+      primary: claude-sonnet
+      # No escalation - premium only
+
+    ci_failure_fix:
+      primary: deepseek-r1
+      escalate_to: claude-sonnet
+      escalate_on: multiple_failures
+
+    documentation:
+      primary: deepseek-r1
+      # Cheap model only
+
+# Budget Controls
+budgets:
+  global_monthly_limit_usd: 600
+
+  per_user_daily_limit_usd: 20
+
+  alerts:
+    - threshold_percent: 50
+      action: notify_slack
+    - threshold_percent: 80
+      action: notify_email
+    - threshold_percent: 95
+      action: rate_limit
+
+# GitHub Integration
+github:
+  hooks:
+    on_pr_open:
+      agent: pr_reviewer
+      model: deepseek-r1
+      auto_comment: true
+
+    on_pr_update:
+      agent: pr_reviewer
+      model: deepseek-r1
+      auto_comment: true
+
+    on_ci_failure:
+      agent: ci_fix_agent
+      model: deepseek-r1
+      escalate: true
+
+    on_release_tag:
+      agent: doc_agent
+      model: deepseek-r1
+
+    nightly_batch:
+      agent: tech_debt_scanner
+      model: deepseek-r1
+      batch_mode: true  # 50% discount
+
+# Memory Strategy (minimal)
+memory:
+  # Repo-level only (no global)
+  repo_context:
+    files:
+      - CLAUDE.md
+      - architecture.md
+      - .github/CODEOWNERS
+    max_tokens: 4000
+
+  # Short-term task context
+  task_context:
+    include_pr_diff: true
+    include_issue_body: true
+    max_history_messages: 5
+
+  # Vector store for RAG
+  vector_store:
+    provider: pgvector
+    connection: ${RDS_CONNECTION_STRING}
+    embedding_model: amazon.titan-embed-text-v2:0
