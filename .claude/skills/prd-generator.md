@@ -2,6 +2,16 @@
 name: prd
 description: Generate a Product Requirements Document from a feature description
 user-invocable: true
+hooks:
+  Stop:
+    - hooks:
+        - type: prompt
+          prompt: "Verify PRD completeness: 1) Does it have Overview, Problem Statement, Goals, User Stories with Acceptance Criteria? 2) Are acceptance criteria testable? 3) Was the file saved to docs/? If incomplete, add missing sections."
+  PostToolUse:
+    - matcher: "Write"
+      hooks:
+        - type: command
+          command: "python -c \"import sys; f=sys.argv[1] if len(sys.argv)>1 else ''; print('PRD saved:',f) if 'prd' in f.lower() else None\" \"$TOOL_INPUT_FILE_PATH\" 2>/dev/null || true"
 ---
 
 # PRD Generator

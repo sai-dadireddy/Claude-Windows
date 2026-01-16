@@ -7,6 +7,16 @@ triggers:
   - "ralph loop"
   - "autonomous loop"
   - "keep working until done"
+hooks:
+  Stop:
+    - hooks:
+        - type: prompt
+          prompt: "Check .ralph-state.json: Are ALL tasks marked complete AND verified? If not, list remaining tasks and continue working. Only stop when every task has verified: true."
+  PostToolUse:
+    - matcher: "Edit|Write"
+      hooks:
+        - type: command
+          command: "python -c \"import json,os; f='.ralph-state.json'; s=json.load(open(f)) if os.path.exists(f) else {}; s['iteration']=s.get('iteration',0)+1; json.dump(s,open(f,'w'),indent=2)\" 2>/dev/null || true"
 ---
 
 # Ralph Loop - Persistent Autonomous Development

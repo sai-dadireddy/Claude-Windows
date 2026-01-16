@@ -294,6 +294,10 @@
       {
         "hooks": [
           {
+            "type": "prompt",
+            "prompt": "Before stopping, verify: 1) Are ALL user-requested tasks complete? 2) Were there any pending todos left? 3) Did verification (tests/build/lint) pass? If anything is incomplete, list what remains. If truly done, confirm completion."
+          },
+          {
             "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/ralph_stop_hook.py",
             "timeout": 3000
