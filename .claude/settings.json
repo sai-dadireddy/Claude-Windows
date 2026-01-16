@@ -1,4 +1,5 @@
 {
+  "autoCompact": false,
   "respectGitignore": true,
   "env": {
     "_comment": "CallMe Configuration - Set these to enable phone notifications",
@@ -347,7 +348,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "exit 2"
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/block_auto_compact.py",
+            "timeout": 1000
           }
         ]
       },
@@ -445,7 +447,6 @@
     "version": "6.3 with 2.1.9 enhancements",
     "note": "Added: PreToolUse additionalContext, keybindings, plansDirectory, MCP auto threshold"
   },
-  "autoCompact": false,
   "plansDirectory": "~/.claude/plans",
   "showTurnDuration": true,
   "mcpToolSearchAuto": "auto:15"
