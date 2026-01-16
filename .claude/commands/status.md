@@ -56,6 +56,7 @@ Execute these checks in PARALLEL for speed:
 
 ⏱ SESSION INFO
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Session:   ${CLAUDE_SESSION_ID}
   Duration:  [X hours X minutes] OR [X minutes]
   Started:   [YYYY-MM-DD HH:MM] OR [N/A - new session]
   Project:   [project-name] OR [workspace root]

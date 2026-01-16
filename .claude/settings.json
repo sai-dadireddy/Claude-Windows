@@ -1,10 +1,17 @@
 {
   "respectGitignore": true,
+  "env": {
+    "_comment": "CallMe Configuration - Set these to enable phone notifications",
+    "CALLME_ENABLED": "false",
+    "CALLME_PHONE_PROVIDER": "",
+    "CALLME_PHONE_ACCOUNT_SID": "",
+    "CALLME_PHONE_AUTH_TOKEN": "",
+    "CALLME_PHONE_NUMBER": "",
+    "CALLME_USER_PHONE_NUMBER": "",
+    "CALLME_OPENAI_API_KEY": "",
+    "CALLME_NGROK_AUTHTOKEN": ""
+  },
   "permissions": {
-    "deny": [
-      "Task(visual-analysis-heavy)",
-      "Task(youtube-research-heavy)"
-    ],
     "allow": [
       "mcp__router__*",
       "mcp__claude-in-chrome__*",
@@ -34,7 +41,14 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:docs.anthropic.com)",
-      "mcp__excel-bridge__*"
+      "mcp__excel-bridge__*",
+      "mcp__fetchaller__fetch",
+      "mcp__fetchaller__browse_reddit",
+      "mcp__fetchaller__search_reddit"
+    ],
+    "deny": [
+      "Task(visual-analysis-heavy)",
+      "Task(youtube-research-heavy)"
     ],
     "fileOperations": {
       "read": true,
@@ -139,6 +153,11 @@
             "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/auto_rag.py",
             "timeout": 1500
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/skill_preservation.py",
+            "timeout": 1000
           }
         ]
       }
@@ -149,8 +168,18 @@
         "hooks": [
           {
             "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/pre_tool_timing.py",
+            "timeout": 500
+          },
+          {
+            "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/pre_tool_use.py",
             "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/token_guard.py",
+            "timeout": 1000
           }
         ]
       },
@@ -185,6 +214,11 @@
             "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/post_tool_use.py",
             "timeout": 2000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/token_monitor.py",
+            "timeout": 1500
           },
           {
             "type": "command",
@@ -270,6 +304,11 @@
           },
           {
             "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/session_report.py",
+            "timeout": 3000
+          },
+          {
+            "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/end_of_turn_check.py",
             "timeout": 3000
           },
@@ -282,6 +321,11 @@
             "type": "command",
             "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/notify_on_stop.py",
             "timeout": 5000
+          },
+          {
+            "type": "command",
+            "command": "python C:/Users/SainathreddyDadiredd/.claude/hooks/autoskill_reminder.py",
+            "timeout": 2000
           }
         ]
       }
@@ -376,6 +420,13 @@
         "excel-mcp-server"
       ],
       "description": "Excel file operations: read, write, analyze, find values in xlsx files"
+    },
+    "fetchaller": {
+      "command": "node",
+      "args": [
+        "C:/Users/SainathreddyDadiredd/.claude/mcp/fetchaller-mcp/index.js"
+      ],
+      "description": "Fetch URLs without permission prompts, browse/search Reddit"
     }
   },
   "context": {
@@ -390,19 +441,12 @@
   "description": "User-level Claude Code Settings (v6.0) - Updated with new features",
   "version": "6.0.0",
   "_metadata": {
-    "updated": "2026-01-10",
-    "version": "6.2 with CallMe + Ralph Enhanced",
-    "note": "Added: CallMe phone notifications, Ralph negative memory"
+    "updated": "2026-01-16",
+    "version": "6.3 with 2.1.9 enhancements",
+    "note": "Added: PreToolUse additionalContext, keybindings, plansDirectory, MCP auto threshold"
   },
-  "env": {
-    "_comment": "CallMe Configuration - Set these to enable phone notifications",
-    "CALLME_ENABLED": "false",
-    "CALLME_PHONE_PROVIDER": "",
-    "CALLME_PHONE_ACCOUNT_SID": "",
-    "CALLME_PHONE_AUTH_TOKEN": "",
-    "CALLME_PHONE_NUMBER": "",
-    "CALLME_USER_PHONE_NUMBER": "",
-    "CALLME_OPENAI_API_KEY": "",
-    "CALLME_NGROK_AUTHTOKEN": ""
-  }
+  "autoCompact": false,
+  "plansDirectory": "~/.claude/plans",
+  "showTurnDuration": true,
+  "mcpToolSearchAuto": "auto:15"
 }

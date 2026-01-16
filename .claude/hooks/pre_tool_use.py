@@ -192,13 +192,25 @@ def main():
             print(f"\033[32m{msg}\033[0m", file=sys.stderr)
             print(json.dumps({"systemMessage": msg}))
 
-    # === TASK TOOL: Show when launching agents ===
+    # === TASK TOOL: Show when launching agents (with additionalContext for 2.1.9) ===
     if tool == "Task":
         agent_type = inp.get("subagent_type", "general")
         desc = inp.get("description", "")[:30]
+        prompt = inp.get("prompt", "")[:100]
         msg = f"[BOT] Launching agent: {agent_type} - {desc}"
         print(f"\033[34m{msg}\033[0m", file=sys.stderr)
-        print(json.dumps({"systemMessage": msg}))
+        output = {
+            "systemMessage": msg,
+            "hookSpecificOutput": {
+                "hookEventName": "PreToolUse",
+                "additionalContext": f"""<agent-launch type="{agent_type}">
+Description: {desc}
+Prompt preview: {prompt}...
+TIP: Use model="haiku" for fast parallel tasks, background=true for non-blocking.
+</agent-launch>"""
+            }
+        }
+        print(json.dumps(output))
 
     # === MULTI-MODEL: Show when using multi:chat ===
     if tool == "Bash":

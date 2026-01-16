@@ -18,6 +18,7 @@ import json
 import sys
 import os
 import subprocess
+import time
 from datetime import datetime
 from pathlib import Path
 # === AUTO-FORMATTER (Boris's recommendation) ===
@@ -69,10 +70,83 @@ def auto_format_file(file_path: str) -> tuple[bool, str]:
 
 LOG_DIR = Path.home() / ".claude" / "logs"
 ERROR_COUNTER_FILE = LOG_DIR / "error_counter.json"
+TIMING_FILE = LOG_DIR / ".tool_timing.json"
 META_COGNITION_THRESHOLD = 3  # Trigger reflection after N consecutive errors
+PRUNE_AGE_MS = 3600000  # 1 hour in milliseconds
 
 VERBOSE = False  # Set to False to disable terminal output
 HOOK_LOG = Path.home() / ".claude" / "logs" / "hooks.log"
+
+
+# === DURATION TRACKING ===
+def load_timing_data() -> dict:
+    """Load timing data from file."""
+    try:
+        if TIMING_FILE.exists():
+            return json.loads(TIMING_FILE.read_text())
+    except (json.JSONDecodeError, IOError):
+        pass
+    return {}
+
+
+def save_timing_data(data: dict):
+    """Save timing data to file."""
+    try:
+        TIMING_FILE.write_text(json.dumps(data))
+    except IOError:
+        pass
+
+
+def prune_old_entries(data: dict) -> dict:
+    """Remove entries older than PRUNE_AGE_MS."""
+    now_ms = int(time.time() * 1000)
+    cutoff = now_ms - PRUNE_AGE_MS
+    return {k: v for k, v in data.items() if v > cutoff}
+
+
+def get_duration_ms(data: dict) -> int | None:
+    """
+    Get tool execution duration in milliseconds.
+    Returns None if start time not found.
+    """
+    session_id = data.get("session_id", "unknown")[:8]
+    tool_name = data.get("tool_name", "unknown")
+    tool_use_id = data.get("tool_use_id") or data.get("invocation_id")
+
+    # Load timing data
+    timing_data = load_timing_data()
+
+    # Try to find the matching start time
+    timing_key = None
+    start_time_ms = None
+
+    if tool_use_id:
+        # Exact match with tool_use_id
+        timing_key = f"{session_id}_{tool_use_id}"
+        start_time_ms = timing_data.get(timing_key)
+    else:
+        # Fallback: find most recent entry matching session_id + tool_name
+        prefix = f"{session_id}_{tool_name}_"
+        matching_keys = [k for k in timing_data.keys() if k.startswith(prefix)]
+        if matching_keys:
+            # Use the most recent one (highest timestamp in key)
+            timing_key = max(matching_keys, key=lambda k: timing_data[k])
+            start_time_ms = timing_data.get(timing_key)
+
+    if start_time_ms is None:
+        return None
+
+    # Calculate duration
+    end_time_ms = int(time.time() * 1000)
+    duration_ms = end_time_ms - start_time_ms
+
+    # Clean up the used entry and prune old ones
+    if timing_key and timing_key in timing_data:
+        del timing_data[timing_key]
+    timing_data = prune_old_entries(timing_data)
+    save_timing_data(timing_data)
+
+    return duration_ms
 
 
 def get_error_count(session_id: str) -> int:
@@ -167,8 +241,14 @@ def main():
     # Ensure log dir
     LOG_DIR.mkdir(parents=True, exist_ok=True)
 
+    # Calculate duration from start time recorded by pre_tool_timing.py
+    duration_ms = get_duration_ms(data)
+
     # Compact log entry
     entry = {"t": datetime.now().strftime("%H:%M:%S"), "tool": tool}
+
+    # Add duration if available (null if not found)
+    entry["duration_ms"] = duration_ms
 
     file_path = None
     if tool == "Bash":

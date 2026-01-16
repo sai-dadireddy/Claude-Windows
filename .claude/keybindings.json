@@ -1,0 +1,89 @@
+{
+  "$schema": "https://code.claude.com/schemas/keybindings.json",
+  "_comment": "Custom keyboard shortcuts for Claude Code (2.1.7+)",
+  "keybindings": [
+    {
+      "key": "ctrl+shift+p",
+      "command": "command_palette",
+      "description": "Open command palette"
+    },
+    {
+      "key": "ctrl+shift+r",
+      "command": "run_slash_command",
+      "args": "/ralph",
+      "description": "Start autonomous mode"
+    },
+    {
+      "key": "ctrl+shift+s",
+      "command": "run_slash_command",
+      "args": "/status",
+      "description": "Show session status"
+    },
+    {
+      "key": "ctrl+shift+m",
+      "command": "run_slash_command",
+      "args": "/memory",
+      "description": "Memory management"
+    },
+    {
+      "key": "ctrl+shift+c",
+      "command": "run_slash_command",
+      "args": "/compact-context",
+      "description": "Compact context"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "run_slash_command",
+      "args": "/tokens",
+      "description": "Token monitoring"
+    },
+    {
+      "key": "ctrl+shift+b",
+      "command": "run_slash_command",
+      "args": "/brainstorm",
+      "description": "Brainstorm mode"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "run_slash_command",
+      "args": "/explore",
+      "description": "Explore codebase"
+    },
+    {
+      "key": "ctrl+shift+d",
+      "command": "run_slash_command",
+      "args": "/debug-webapp",
+      "description": "Debug web app"
+    },
+    {
+      "key": "ctrl+alt+g",
+      "command": "run_slash_command",
+      "args": "/gha",
+      "description": "GitHub Actions debug"
+    },
+    {
+      "key": "ctrl+alt+h",
+      "command": "run_slash_command",
+      "args": "/handoff",
+      "description": "Create handoff document"
+    },
+    {
+      "key": "f5",
+      "command": "run_slash_command",
+      "args": "/validate",
+      "description": "Run validation"
+    },
+    {
+      "key": "f6",
+      "command": "run_slash_command",
+      "args": "/test",
+      "description": "Run tests"
+    },
+    {
+      "key": "f7",
+      "command": "run_slash_command",
+      "args": "/commit-push-pr",
+      "description": "Commit, push, and create PR"
+    }
+  ]
+}

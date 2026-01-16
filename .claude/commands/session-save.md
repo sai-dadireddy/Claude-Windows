@@ -14,8 +14,10 @@ Create a comprehensive session summary and save it. Include:
 
 After creating the summary, run:
 ```bash
-~/.claude/scripts/memory_manager.py save-session "$SESSION_ID" "$(basename $PWD)" "YOUR_SUMMARY_HERE"
+~/.claude/scripts/memory_manager.py save-session "${CLAUDE_SESSION_ID}" "$(basename $PWD)" "YOUR_SUMMARY_HERE"
 ```
+
+**Note:** `${CLAUDE_SESSION_ID}` is automatically substituted with the current session ID (2.1.9+).
 
 Replace YOUR_SUMMARY_HERE with the markdown-formatted summary.
 

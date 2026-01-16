@@ -13,6 +13,7 @@ Write or update a **handoff document** so the next agent with fresh context can 
 
 **Project:** [Project name]
 **Date:** [Current date]
+**Session ID:** ${CLAUDE_SESSION_ID}
 **Last Updated By:** Claude
 
 ---
