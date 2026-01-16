@@ -371,7 +371,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "python C:/Users/SainathreddyDadiredd/.claude/scripts/statusline.py"
+    "command": "bash C:/Users/SainathreddyDadiredd/.claude/scripts/statusline.sh"
   },
   "enabledPlugins": {
     "pyright@claude-code-lsps": true,
