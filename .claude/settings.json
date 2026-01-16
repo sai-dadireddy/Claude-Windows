@@ -371,7 +371,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "npx ccstatusline@latest"
+    "command": "python C:/Users/SainathreddyDadiredd/.claude/scripts/statusline.py"
   },
   "enabledPlugins": {
     "pyright@claude-code-lsps": true,
