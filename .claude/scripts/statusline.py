@@ -62,11 +62,17 @@ def estimate_cost(input_tokens, output_tokens, model):
 def main():
     try:
         # Read status data from stdin
-        data = json.load(sys.stdin)
+        raw_input = sys.stdin.read().strip()
+        if not raw_input:
+            # No data yet - show minimal status
+            print(f"{GRAY}Opus 4.5{RESET} {GREEN}[----------]{RESET} {GREEN}0%{RESET} {GRAY}$0.00{RESET}")
+            return
+
+        data = json.loads(raw_input)
 
         # Extract context window info
         ctx = data.get("context_window", {})
-        model = data.get("model", "unknown")
+        model = data.get("model", "claude-opus-4-5")
 
         # Get token counts
         total_input = ctx.get("total_input_tokens", 0)
@@ -105,9 +111,9 @@ def main():
 
         print(status)
 
-    except Exception as e:
-        # Fallback on error
-        print(f"{GRAY}Claude Code{RESET}")
+    except Exception:
+        # Fallback on error - show default Opus status
+        print(f"{GRAY}Opus 4.5{RESET} {GREEN}[----------]{RESET} {GREEN}0%{RESET}")
 
 if __name__ == "__main__":
     main()
