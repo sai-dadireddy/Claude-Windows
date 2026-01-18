@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sherpa v4.1 - Dashboard</title>
+    <style>
+        :root {
+            --bg: #1a1a2e;
+            --card: #16213e;
+            --accent: #0f3460;
+            --text: #e8e8e8;
+            --success: #00d9a5;
+            --warning: #ffc107;
+            --error: #ff6b6b;
+            --info: #4dabf7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { margin-bottom: 20px; font-size: 2rem; }
+        h2 { margin: 20px 0 15px; font-size: 1.4rem; color: var(--info); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--accent);
+        }
+        .card h3 { margin-bottom: 15px; font-size: 1.1rem; }
+        .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+        .status-live { background: var(--success); color: #000; }
+        .status-pending { background: var(--warning); color: #000; }
+        .status-lost { background: var(--error); color: #fff; }
+        .resource { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--accent); }
+        .resource:last-child { border-bottom: none; }
+        .resource-name { font-weight: 500; }
+        .resource-value { color: var(--info); font-family: monospace; font-size: 0.9rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid var(--accent); }
+        th { color: var(--info); font-weight: 600; }
+        .progress { width: 100%; height: 8px; background: var(--accent); border-radius: 4px; overflow: hidden; }
+        .progress-bar { height: 100%; background: var(--success); transition: width 0.3s; }
+        .metric { text-align: center; padding: 15px; }
+        .metric-value { font-size: 2.5rem; font-weight: bold; color: var(--success); }
+        .metric-label { font-size: 0.9rem; opacity: 0.8; }
+        code { background: var(--accent); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        .endpoint { word-break: break-all; }
+        .footer { margin-top: 40px; text-align: center; opacity: 0.6; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Sherpa v4.1 Dashboard</h1>
+        <p>Enterprise AI Orchestrator - AWS Infrastructure Status</p>
+
+        <h2>Key Metrics</h2>
+        <div class="grid">
+            <div class="card metric">
+                <div class="metric-value">5</div>
+                <div class="metric-label">Lambda Functions</div>
+            </div>
+            <div class="card metric">
+                <div class="metric-value">2</div>
+                <div class="metric-label">DynamoDB Tables</div>
+            </div>
+            <div class="card metric">
+                <div class="metric-value">97%</div>
+                <div class="metric-label">Token Savings</div>
+            </div>
+            <div class="card metric">
+                <div class="metric-value">22+</div>
+                <div class="metric-label">Tickets Completed</div>
+            </div>
+        </div>
+
+        <h2>AWS Resources - LIVE</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Lambda Functions <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">sherpa-mcp-router</span><span class="resource-value">MCP routing</span></div>
+                <div class="resource"><span class="resource-name">sherpa-beads-sync</span><span class="resource-value">Ticket sync</span></div>
+                <div class="resource"><span class="resource-name">sherpa-agent-loader</span><span class="resource-value">Lazy loading</span></div>
+                <div class="resource"><span class="resource-name">sherpa-memory-kb</span><span class="resource-value">Memory CRUD</span></div>
+                <div class="resource"><span class="resource-name">sherpa-kb-retrieve</span><span class="resource-value">KB search</span></div>
+            </div>
+
+            <div class="card">
+                <h3>DynamoDB Tables <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">sherpa-beads</span><span class="resource-value">PK: PROJ#, SK: BEAD#</span></div>
+                <div class="resource"><span class="resource-name">sherpa-memory-store</span><span class="resource-value">Memory storage</span></div>
+            </div>
+
+            <div class="card">
+                <h3>API Gateway <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">ID</span><span class="resource-value endpoint">hl98rmqgd6</span></div>
+                <div class="resource"><span class="resource-name">Auth</span><span class="resource-value">IAM (SigV4)</span></div>
+                <div class="resource"><span class="resource-name">Routes</span><span class="resource-value">/mcp, /memory, /beads, /kb</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Security <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">WAF</span><span class="resource-value">sherpa-api-waf</span></div>
+                <div class="resource"><span class="resource-name">CloudTrail</span><span class="resource-value">sherpa-audit-trail</span></div>
+                <div class="resource"><span class="resource-name">Guardrail</span><span class="resource-value">0izv8dtovrwx</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Frontend <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">CloudFront</span><span class="resource-value endpoint">dznfspanfl89s.cloudfront.net</span></div>
+                <div class="resource"><span class="resource-name">Cognito Pool</span><span class="resource-value">us-east-1_DS0DWtBpu</span></div>
+                <div class="resource"><span class="resource-name">S3 Dashboard</span><span class="resource-value">sherpa-dashboard-*</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Bedrock <span class="status status-live">LIVE</span></h3>
+                <div class="resource"><span class="resource-name">Region</span><span class="resource-value">us-east-1</span></div>
+                <div class="resource"><span class="resource-name">Lambda Layer</span><span class="resource-value">boto3-bedrock-latest:1</span></div>
+                <div class="resource"><span class="resource-name">Inference Profiles</span><span class="resource-value">us.anthropic.*</span></div>
+            </div>
+        </div>
+
+        <h2>Local Services - REGENERATED</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>services/mcp-proxy <span class="status status-live">READY</span></h3>
+                <p>Thin Node.js proxy (~158 lines)</p>
+                <div class="resource"><span class="resource-name">index.js</span><span class="resource-value">MCP server</span></div>
+                <div class="resource"><span class="resource-name">package.json</span><span class="resource-value">@aws-sdk/*</span></div>
+            </div>
+
+            <div class="card">
+                <h3>services/beads-sync <span class="status status-live">READY</span></h3>
+                <p>Python client with SigV4</p>
+                <div class="resource"><span class="resource-name">sync_client.py</span><span class="resource-value">BeadsSyncClient</span></div>
+                <div class="resource"><span class="resource-name">config.example.yaml</span><span class="resource-value">Template</span></div>
+            </div>
+
+            <div class="card">
+                <h3>services/memory-api <span class="status status-live">READY</span></h3>
+                <p>Python client with SigV4</p>
+                <div class="resource"><span class="resource-name">client.py</span><span class="resource-value">MemoryAPIClient</span></div>
+                <div class="resource"><span class="resource-name">test_client.py</span><span class="resource-value">Unit tests</span></div>
+            </div>
+        </div>
+
+        <h2>Architecture</h2>
+        <div class="card">
+            <table>
+                <tr><th>Layer</th><th>Component</th><th>Purpose</th></tr>
+                <tr><td>Local</td><td>MCP Proxy (~50MB)</td><td>Thin proxy, manifest cache, SSO creds</td></tr>
+                <tr><td>GitHub</td><td>sherpa-config repo</td><td>Agent/skill manifests, PR-reviewed changes</td></tr>
+                <tr><td>AWS Lambda</td><td>5 functions</td><td>MCP routing, memory, beads, KB, agent loading</td></tr>
+                <tr><td>AWS Storage</td><td>DynamoDB + S3</td><td>Runtime state, synced configs</td></tr>
+                <tr><td>AWS AI</td><td>Bedrock</td><td>Sonnet (brain), DeepSeek R1 (muscle), Nova (bulk)</td></tr>
+            </table>
+        </div>
+
+        <h2>Configuration</h2>
+        <div class="card">
+            <h3>AWS SSO</h3>
+            <div class="resource"><span class="resource-name">Start URL</span><span class="resource-value endpoint">https://d-90676b136f.awsapps.com/start/#</span></div>
+            <div class="resource"><span class="resource-name">Account</span><span class="resource-value">458798750195 (KB Play Ground)</span></div>
+            <div class="resource"><span class="resource-name">Region</span><span class="resource-value">us-east-1</span></div>
+            <div class="resource"><span class="resource-name">Role</span><span class="resource-value">KB_AdministratorAccess</span></div>
+            <div class="resource"><span class="resource-name">Login</span><span class="resource-value">aws sso login --profile sherpa --use-device-code</span></div>
+        </div>
+
+        <h2>Endpoints</h2>
+        <div class="card">
+            <table>
+                <tr><th>Route</th><th>URL</th><th>Purpose</th></tr>
+                <tr><td>/mcp/*</td><td class="endpoint">https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/mcp</td><td>MCP router</td></tr>
+                <tr><td>/memory/*</td><td class="endpoint">https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/memory</td><td>Memory CRUD</td></tr>
+                <tr><td>/beads/*</td><td class="endpoint">https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/beads</td><td>Ticket sync</td></tr>
+                <tr><td>/kb/*</td><td class="endpoint">https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/kb</td><td>KB retrieve</td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: 2026-01-18 | Session: 22+ tickets completed</p>
+            <p>Note: Infrastructure is for NEW users/projects. Existing local bd CLI setup unchanged.</p>
+        </div>
+    </div>
+</body>
+</html>

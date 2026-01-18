@@ -1,0 +1,27 @@
+{
+  "name": "@sherpa/mcp-proxy",
+  "version": "4.1.0",
+  "description": "Thin MCP proxy for Sherpa v4.1 AWS Lambda endpoints",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sts": "^3.710.0",
+    "@aws-sdk/credential-providers": "^3.710.0",
+    "aws4": "^1.13.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "sherpa",
+    "aws",
+    "lambda",
+    "proxy"
+  ],
+  "author": "Sherpa Team",
+  "license": "MIT"
+}

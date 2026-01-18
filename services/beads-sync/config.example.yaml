@@ -1,0 +1,13 @@
+# Beads Sync Client Configuration
+
+# API Gateway endpoint URL
+api_endpoint: https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/beads
+
+# AWS region where Lambda is deployed
+region: us-east-1
+
+# AWS credentials profile name (from ~/.aws/credentials)
+profile: sherpa
+
+# DynamoDB table name (for reference only - not used by client)
+# dynamodb_table: sherpa-beads
