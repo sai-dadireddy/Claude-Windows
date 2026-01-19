@@ -19,7 +19,7 @@ class MemoryAPIClient:
 
     def __init__(
         self,
-        endpoint: str = "https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod/memory",
+        base_url: str = "https://hl98rmqgd6.execute-api.us-east-1.amazonaws.com/prod",
         region: str = "us-east-1",
         profile: str = "sherpa"
     ):
@@ -27,11 +27,11 @@ class MemoryAPIClient:
         Initialize memory API client.
 
         Args:
-            endpoint: API Gateway endpoint URL
+            base_url: API Gateway base URL (without trailing slash)
             region: AWS region (default: us-east-1)
             profile: AWS credentials profile (default: sherpa)
         """
-        self.endpoint = endpoint
+        self.base_url = base_url.rstrip('/')
         self.region = region
         self.profile = profile
 
@@ -42,24 +42,26 @@ class MemoryAPIClient:
         if not self.credentials:
             raise ValueError(f"Could not load AWS credentials from profile: {profile}")
 
-    def _sign_request(self, method: str, url: str, data: Optional[Dict[str, Any]] = None) -> Any:
+    def _make_request(self, path: str, data: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
-        Sign request with SigV4 for IAM authentication.
+        Make signed API request.
 
         Args:
-            method: HTTP method (GET, POST, etc.)
-            url: Request URL
-            data: Request body (will be JSON encoded)
+            path: API path (e.g., /memory/save)
+            data: Request payload
 
         Returns:
-            Signed PreparedRequest ready to send
+            API response as dict
+
+        Raises:
+            requests.HTTPError: If request fails
         """
-        # Prepare request body
+        url = f"{self.base_url}{path}"
         body = json.dumps(data) if data else ""
 
         # Create AWS request
         request = AWSRequest(
-            method=method,
+            method="POST",
             url=url,
             data=body,
             headers={
@@ -71,25 +73,13 @@ class MemoryAPIClient:
         # Sign with SigV4
         SigV4Auth(self.credentials, "execute-api", self.region).add_auth(request)
 
-        # Convert to requests PreparedRequest
-        return request.prepare()
-
-    def _make_request(self, method: str, data: Optional[Dict] = None) -> Dict[str, Any]:
-        """
-        Make signed API request.
-
-        Args:
-            method: HTTP method
-            data: Request payload
-
-        Returns:
-            API response as dict
-
-        Raises:
-            requests.HTTPError: If request fails
-        """
-        signed_request = self._sign_request(method, self.endpoint, data)
-        response = requests.Session().send(signed_request)
+        # Send using requests library
+        response = requests.request(
+            method=str(request.method),
+            url=str(request.url),
+            headers=dict(request.headers),
+            data=request.body
+        )
         response.raise_for_status()
         return response.json()
 
@@ -130,7 +120,7 @@ class MemoryAPIClient:
         if metadata:
             payload["metadata"] = metadata
 
-        return self._make_request("POST", payload)
+        return self._make_request("/memory/save", payload)
 
     def search_memories(
         self,
@@ -167,64 +157,53 @@ class MemoryAPIClient:
         if memory_type:
             payload["type"] = memory_type
 
-        response = self._make_request("POST", payload)
+        response = self._make_request("/memory/search", payload)
         return response.get("results", [])
 
-    def list_memories(
+    def promote_memory(
         self,
-        project: str,
-        memory_type: Optional[str] = None,
-        limit: int = 50
-    ) -> List[Dict[str, Any]]:
+        memory_id: str,
+        target_project: str = "global"
+    ) -> Dict[str, Any]:
         """
-        List all memories for a project.
+        Promote a memory to a higher scope (e.g., project -> global).
 
         Args:
-            project: Project name (or "global")
-            memory_type: Optional filter by type
-            limit: Max results to return (default: 50)
+            memory_id: Memory ID to promote
+            target_project: Target project (default: global)
 
         Returns:
-            List of memories sorted by timestamp (newest first)
-
-        Example:
-            >>> memories = client.list_memories(
-            ...     project="sherpa",
-            ...     memory_type="decision"
-            ... )
+            API response with promoted memory details
         """
         payload = {
-            "action": "list",
-            "project": project,
+            "memory_id": memory_id,
+            "target_project": target_project
+        }
+
+        return self._make_request("/memory/promote", payload)
+
+    def kb_retrieve(
+        self,
+        query: str,
+        limit: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        Retrieve from Bedrock Knowledge Base.
+
+        Args:
+            query: Search query
+            limit: Max results to return (default: 5)
+
+        Returns:
+            List of matching documents with scores
+        """
+        payload = {
+            "query": query,
             "limit": limit
         }
 
-        if memory_type:
-            payload["type"] = memory_type
-
-        response = self._make_request("POST", payload)
-        return response.get("memories", [])
-
-    def get_memory(self, memory_id: str) -> Dict[str, Any]:
-        """
-        Retrieve a specific memory by ID.
-
-        Args:
-            memory_id: Unique memory identifier
-
-        Returns:
-            Memory details
-
-        Example:
-            >>> memory = client.get_memory("mem_abc123")
-        """
-        payload = {
-            "action": "get",
-            "memory_id": memory_id
-        }
-
-        response = self._make_request("POST", payload)
-        return response.get("memory", {})
+        response = self._make_request("/kb/retrieve", payload)
+        return response.get("results", [])
 
 
 # Convenience function for quick usage
