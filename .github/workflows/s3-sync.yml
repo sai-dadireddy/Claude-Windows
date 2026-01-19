@@ -1,0 +1,144 @@
+# S3 Sync Workflow - Syncs sherpa-config files to S3 bucket
+#
+# =============================================================================
+# REQUIRED SETUP FOR OIDC AUTHENTICATION (No hardcoded secrets needed)
+# =============================================================================
+#
+# 1. AWS IAM IDENTITY PROVIDER (One-time setup in AWS Console)
+#    - Go to IAM > Identity Providers > Add Provider
+#    - Provider type: OpenID Connect
+#    - Provider URL: https://token.actions.githubusercontent.com
+#    - Audience: sts.amazonaws.com
+#
+# 2. IAM ROLE FOR GITHUB ACTIONS
+#    - Create IAM Role with trust policy below
+#    - Attach S3 permissions policy
+#
+#    Trust Policy (replace YOUR_GITHUB_ORG and YOUR_REPO):
+#    {
+#      "Version": "2012-10-17",
+#      "Statement": [
+#        {
+#          "Effect": "Allow",
+#          "Principal": {
+#            "Federated": "arn:aws:iam::458798750195:oidc-provider/token.actions.githubusercontent.com"
+#          },
+#          "Action": "sts:AssumeRoleWithWebIdentity",
+#          "Condition": {
+#            "StringEquals": {
+#              "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+#            },
+#            "StringLike": {
+#              "token.actions.githubusercontent.com:sub": "repo:YOUR_GITHUB_ORG/YOUR_REPO:ref:refs/heads/main"
+#            }
+#          }
+#        }
+#      ]
+#    }
+#
+#    S3 Permissions Policy:
+#    {
+#      "Version": "2012-10-17",
+#      "Statement": [
+#        {
+#          "Effect": "Allow",
+#          "Action": [
+#            "s3:PutObject",
+#            "s3:GetObject",
+#            "s3:DeleteObject",
+#            "s3:ListBucket"
+#          ],
+#          "Resource": [
+#            "arn:aws:s3:::sherpa-agent-prompts-458798750195",
+#            "arn:aws:s3:::sherpa-agent-prompts-458798750195/*"
+#          ]
+#        }
+#      ]
+#    }
+#
+# 3. GITHUB REPOSITORY VARIABLE (Settings > Secrets and variables > Actions > Variables)
+#    - Name: AWS_ROLE_ARN
+#    - Value: arn:aws:iam::458798750195:role/YOUR_ROLE_NAME
+#
+# =============================================================================
+
+name: Sync Sherpa Config to S3
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'sherpa-config/**'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  id-token: write   # Required for OIDC
+  contents: read    # Required to checkout code
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: sherpa-agent-prompts-458798750195
+
+jobs:
+  sync-to-s3:
+    name: Sync sherpa-config to S3
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+          role-session-name: github-actions-s3-sync
+
+      - name: Verify AWS credentials
+        run: |
+          aws sts get-caller-identity
+          echo "Successfully authenticated with AWS"
+
+      - name: Sync agents folder
+        run: |
+          if [ -d "sherpa-config/agents" ]; then
+            aws s3 sync sherpa-config/agents/ s3://${{ env.S3_BUCKET }}/agents/ \
+              --delete \
+              --exclude ".*" \
+              --no-progress
+            echo "Synced agents folder"
+          else
+            echo "Warning: sherpa-config/agents directory not found, skipping"
+          fi
+
+      - name: Sync skills folder
+        run: |
+          if [ -d "sherpa-config/skills" ]; then
+            aws s3 sync sherpa-config/skills/ s3://${{ env.S3_BUCKET }}/skills/ \
+              --delete \
+              --exclude ".*" \
+              --no-progress
+            echo "Synced skills folder"
+          else
+            echo "Warning: sherpa-config/skills directory not found, skipping"
+          fi
+
+      - name: Sync manifests folder
+        run: |
+          if [ -d "sherpa-config/manifests" ]; then
+            aws s3 sync sherpa-config/manifests/ s3://${{ env.S3_BUCKET }}/manifests/ \
+              --delete \
+              --exclude ".*" \
+              --no-progress
+            echo "Synced manifests folder"
+          else
+            echo "Warning: sherpa-config/manifests directory not found, skipping"
+          fi
+
+      - name: List synced files
+        run: |
+          echo "=== S3 Bucket Contents ==="
+          aws s3 ls s3://${{ env.S3_BUCKET }}/ --recursive --human-readable

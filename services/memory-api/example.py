@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """
 Example usage of Memory API Client
+
+Demonstrates all available API methods:
+- save_memory: Store memories with project, type, and content
+- search_memories: Semantic search across memories
+- promote_memory: Promote memories to global scope
+- kb_retrieve: Query the Bedrock Knowledge Base
 """
 
 from client import create_client
@@ -18,47 +24,91 @@ def main():
         memory_type="decision",
         content="Use TypeScript for all new frontend code to improve type safety"
     )
-    print(f"   Saved: {result['memory_id']}")
+    print(f"   Saved: {result.get('memory_id', 'N/A')}")
+    saved_memory_id = result.get('memory_id')
 
-    # Example 2: Save a preference
-    print("\n2. Saving a preference...")
+    # Example 2: Save a preference with metadata
+    print("\n2. Saving a preference with metadata...")
     result = client.save_memory(
         project="global",
         memory_type="preference",
         content="User prefers concise code comments",
-        metadata={"category": "code_style"}
+        metadata={"category": "code_style", "priority": "medium"}
     )
-    print(f"   Saved: {result['memory_id']}")
+    print(f"   Saved: {result.get('memory_id', 'N/A')}")
 
-    # Example 3: Search memories
-    print("\n3. Searching for 'typescript' memories...")
+    # Example 3: Save an observation
+    print("\n3. Saving an observation...")
+    result = client.save_memory(
+        project="sherpa",
+        memory_type="observation",
+        content="Project uses pytest for Python tests and Jest for JavaScript tests"
+    )
+    print(f"   Saved: {result.get('memory_id', 'N/A')}")
+
+    # Example 4: Search memories
+    print("\n4. Searching for 'typescript' memories...")
     results = client.search_memories(
         project="sherpa",
         query="typescript frontend",
-        limit=3
+        limit=5
     )
     print(f"   Found {len(results)} results:")
     for memory in results:
-        print(f"   - {memory['content'][:60]}... (score: {memory.get('score', 0):.2f})")
+        content = memory.get('content', '')[:60]
+        score = memory.get('score', 0)
+        print(f"   - {content}... (score: {score:.2f})")
 
-    # Example 4: List all decisions
-    print("\n4. Listing recent decisions...")
-    memories = client.list_memories(
+    # Example 5: Search with type filter
+    print("\n5. Searching for decisions only...")
+    results = client.search_memories(
         project="sherpa",
+        query="code style",
         memory_type="decision",
+        limit=3
+    )
+    print(f"   Found {len(results)} decisions:")
+    for memory in results:
+        print(f"   - [{memory.get('type', 'unknown')}] {memory.get('content', '')[:50]}...")
+
+    # Example 6: Promote a memory to global scope
+    if saved_memory_id:
+        print(f"\n6. Promoting memory {saved_memory_id} to global...")
+        try:
+            result = client.promote_memory(
+                memory_id=saved_memory_id,
+                target_project="global"
+            )
+            print(f"   Status: {result.get('status', 'unknown')}")
+            print(f"   Target: {result.get('target_project', 'N/A')}")
+        except Exception as e:
+            print(f"   Error promoting memory: {e}")
+    else:
+        print("\n6. Skipping promote_memory (no memory_id available)")
+
+    # Example 7: Query Knowledge Base (Bedrock)
+    print("\n7. Querying Knowledge Base...")
+    results = client.kb_retrieve(
+        query="how to configure authentication",
+        limit=3
+    )
+    print(f"   Found {len(results)} documents:")
+    for doc in results:
+        content = doc.get('content', '')[:60]
+        score = doc.get('score', 0)
+        print(f"   - {content}... (score: {score:.2f})")
+
+    # Example 8: Search global memories
+    print("\n8. Searching global memories...")
+    results = client.search_memories(
+        project="global",
+        query="preferences",
         limit=5
     )
-    print(f"   Found {len(memories)} decisions:")
-    for memory in memories:
-        print(f"   - [{memory['timestamp']}] {memory['content'][:60]}...")
-
-    # Example 5: Get specific memory (using first result from list)
-    if memories:
-        print(f"\n5. Retrieving memory {memories[0]['memory_id']}...")
-        memory = client.get_memory(memories[0]['memory_id'])
-        print(f"   Type: {memory.get('type')}")
-        print(f"   Content: {memory.get('content')}")
-        print(f"   Timestamp: {memory.get('timestamp')}")
+    print(f"   Found {len(results)} global memories:")
+    for memory in results:
+        content = memory.get('content', '')[:50]
+        print(f"   - {content}...")
 
     print("\nDone!")
 

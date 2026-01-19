@@ -221,6 +221,80 @@ for bead in remote_beads:
     print(f"Pulled {bead['id']}")
 ```
 
+## Testing
+
+### Installation
+
+Install test dependencies:
+
+```bash
+pip install pytest pytest-cov
+```
+
+Or install all dependencies including test requirements:
+
+```bash
+pip install -r requirements.txt -r requirements-test.txt
+```
+
+### Running Tests
+
+Run all tests:
+
+```bash
+# From the beads-sync directory
+pytest tests/ -v
+```
+
+Run with coverage:
+
+```bash
+pytest tests/ -v --cov=sync_client --cov-report=term-missing
+```
+
+Run specific test classes:
+
+```bash
+# Test initialization
+pytest tests/test_sync_client.py::TestBeadsSyncClientInitialization -v
+
+# Test CRUD operations
+pytest tests/test_sync_client.py::TestListBeads -v
+pytest tests/test_sync_client.py::TestGetBead -v
+pytest tests/test_sync_client.py::TestCreateBead -v
+pytest tests/test_sync_client.py::TestUpdateBead -v
+pytest tests/test_sync_client.py::TestDeleteBead -v
+pytest tests/test_sync_client.py::TestSyncBeads -v
+
+# Test edge cases
+pytest tests/test_sync_client.py::TestEdgeCases -v
+```
+
+Run tests matching a pattern:
+
+```bash
+pytest tests/ -v -k "create or update"
+```
+
+### Test Coverage
+
+The test suite covers:
+
+- **Initialization**: Default parameters, custom parameters, URL normalization, credential storage
+- **API Methods**: list_beads, get_bead, create_bead, update_bead, delete_bead, sync_beads
+- **Error Handling**: HTTP errors, missing required fields, file not found
+- **Edge Cases**: Special characters, Unicode, large payloads, empty inputs
+- **Status Filters**: All valid status values (open, in_progress, closed)
+
+### Mocking Strategy
+
+Tests use mocked AWS credentials and HTTP requests to avoid:
+- Requiring actual AWS credentials
+- Making real API calls
+- Incurring AWS costs during testing
+
+The mocks are provided via pytest fixtures in `tests/conftest.py`.
+
 ## License
 
 Part of Sherpa v4.1 project.
