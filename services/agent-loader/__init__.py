@@ -12,7 +12,14 @@ Usage:
     agent = client.get_agent("lead-architect")
 """
 
-from .client import AgentLoaderClient
+try:
+    from .client import AgentLoaderClient
+except ImportError:
+    # Handle case when running standalone (e.g., pytest discovery)
+    try:
+        from client import AgentLoaderClient
+    except ImportError:
+        AgentLoaderClient = None
 
 __all__ = ["AgentLoaderClient"]
 __version__ = "1.0.0"
