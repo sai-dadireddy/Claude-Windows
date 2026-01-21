@@ -20,17 +20,22 @@ from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 
+# Windows path helpers
+NPX = "C:/Program Files/nodejs/npx.cmd"
+UVX = os.path.expanduser("~/.local/bin/uvx.exe")
+NODE = "C:/Program Files/nodejs/node.exe"
+
 # Backend MCP configurations - these are NOT loaded into Claude's context
 BACKEND_MCPS = {
     "context7": {
         "description": "Library documentation and API references",
-        "command": ["npx", "-y", "@upstash/context7-mcp"],
+        "command": [NPX, "-y", "@upstash/context7-mcp"],
         "tools": ["resolve-library-id", "get-library-docs"],
         "triggers": ["library", "docs", "documentation", "api", "npm", "package"],
     },
     "github": {
         "description": "GitHub operations: PRs, issues, repos",
-        "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+        "command": [NPX, "-y", "@modelcontextprotocol/server-github"],
         "tools": [
             "create_pull_request", "create_issue", "get_file_contents",
             "search_repositories", "list_issues", "get_pull_request",
@@ -40,7 +45,7 @@ BACKEND_MCPS = {
     },
     "memory": {
         "description": "Knowledge graph for entity relationships",
-        "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+        "command": [NPX, "-y", "@modelcontextprotocol/server-memory"],
         "tools": [
             "create_entities", "create_relations", "add_observations",
             "delete_entities", "search_nodes", "read_graph", "open_nodes"
@@ -49,19 +54,19 @@ BACKEND_MCPS = {
     },
     "sequential-thinking": {
         "description": "Multi-step reasoning and problem solving",
-        "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "command": [NPX, "-y", "@modelcontextprotocol/server-sequential-thinking"],
         "tools": ["sequentialthinking"],
         "triggers": ["reasoning", "think step", "complex problem", "analyze"],
     },
     "multi": {
         "description": "Multi-model queries: chat, compare, debate, code review",
-        "command": ["C:/Users/SainathreddyDadiredd/AppData/Local/Temp/multi_mcp/.venv/Scripts/python.exe", "-m", "multi_mcp.server"],
+        "command": [os.path.expanduser("~/.claude/mcp/multi_mcp/.venv/Scripts/python.exe"), "-m", "multi_mcp.server"],
         "tools": ["chat", "compare", "debate", "codereview", "models", "version"],
         "triggers": ["multi-model", "compare models", "code review", "glm", "gemini", "gpt"],
     },
     "playwright": {
         "description": "Browser automation and testing",
-        "command": ["npx", "-y", "@executeautomation/playwright-mcp-server"],
+        "command": [NPX, "-y", "@executeautomation/playwright-mcp-server"],
         "tools": [
             "playwright_navigate", "playwright_screenshot", "playwright_click",
             "playwright_fill", "playwright_evaluate", "playwright_close"
@@ -70,12 +75,65 @@ BACKEND_MCPS = {
     },
     "code-index": {
         "description": "Code indexing and advanced search",
-        "command": ["uvx", "code-index-mcp"],
+        "command": [UVX, "code-index-mcp"],
         "tools": [
             "set_project_path", "search_code_advanced", "find_files",
             "get_file_summary", "refresh_index", "build_deep_index"
         ],
         "triggers": ["index", "code search", "find files", "codebase"],
+    },
+    "memory-bridge": {
+        "description": "AWS memory bridge: save/search/retrieve memories with local cache + AWS backend",
+        "command": ["python", "-m", "memory_bridge"],
+        "cwd": "C:/Users/SainathreddyDadiredd/OneDrive - ERPA/Claude/claudecodeshared/services/mcp-bridge",
+        "tools": [
+            "memory_save", "memory_search", "memory_retrieve",
+            "memory_sync", "memory_stats"
+        ],
+        "triggers": ["memory save", "memory search", "memories", "remember", "recall", "semantic search"],
+        "env": {
+            "SHERPA_MEMORY_API": os.environ.get("SHERPA_MEMORY_API", ""),
+            "SHERPA_KB_ID": os.environ.get("SHERPA_KB_ID", ""),
+            "AWS_PROFILE": os.environ.get("AWS_PROFILE", "sherpa"),
+        }
+    },
+    "skill-seekers": {
+        "description": "Automated skill creation: scrape docs, enhance, package, upload to Claude, install to agents",
+        "command": ["skill-seekers", "mcp"],
+        "tools": [
+            "list_configs", "generate_config", "fetch_config", "validate_config",
+            "scrape_docs", "scrape_github", "scrape_pdf", "estimate_pages",
+            "enhance_skill", "package_skill", "upload_skill",
+            "install_skill", "install_agent", "split_config", "generate_router"
+        ],
+        "triggers": ["skill", "scrape docs", "create skill", "package skill", "install skill"],
+    },
+    "excel-bridge": {
+        "description": "Excel file operations: read, write, analyze, find values in xlsx files",
+        "command": [NPX, "-y", "excel-mcp-server"],
+        "tools": [
+            "read_excel", "write_excel", "analyze_excel", "find_in_excel",
+            "create_workbook", "list_sheets"
+        ],
+        "triggers": ["excel", "xlsx", "spreadsheet", "workbook", "cells"],
+    },
+    "fetchaller": {
+        "description": "Fetch URLs without permission prompts, browse/search Reddit",
+        "command": [NODE, "C:/Users/SainathreddyDadiredd/.claude/mcp/fetchaller-mcp/index.js"],
+        "tools": ["fetch", "browse_reddit", "search_reddit"],
+        "triggers": ["fetch url", "reddit", "browse", "http get"],
+    },
+    "chrome-devtools": {
+        "description": "Chrome DevTools: debug pages, console logs, network, performance profiling, screenshots",
+        "command": [NPX, "-y", "chrome-devtools-mcp@latest"],
+        "tools": [
+            "browser_navigate", "browser_click", "browser_type", "browser_screenshot",
+            "browser_console_messages", "browser_network_requests", "browser_evaluate",
+            "browser_scroll", "browser_select_option", "browser_hover", "browser_wait_for",
+            "browser_tabs", "browser_tab_new", "browser_tab_select", "browser_tab_close",
+            "browser_resize", "browser_refresh", "browser_back", "browser_forward"
+        ],
+        "triggers": ["devtools", "console", "network", "performance", "chrome debug", "browser"],
     },
 }
 
@@ -170,6 +228,13 @@ async def execute_mcp_tool(mcp_name: str, tool_name: str, arguments: dict[str, A
             except Exception:
                 pass
 
+        # Apply custom environment variables from config
+        if "env" in config:
+            env.update(config["env"])
+
+        # Determine working directory
+        cwd = config.get("cwd")
+
         # Run the MCP server and communicate
         process = subprocess.Popen(
             config["command"],
@@ -177,6 +242,7 @@ async def execute_mcp_tool(mcp_name: str, tool_name: str, arguments: dict[str, A
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             env=env,
+            cwd=cwd,
         )
 
         # Send initialization
