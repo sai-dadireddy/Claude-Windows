@@ -132,3 +132,6 @@ claude/projects/
 .claude/playbook.json
 .claude/read_tracker.json
 .beads/
+
+# Migration config (synced via OneDrive, not git)
+globalconfig/
