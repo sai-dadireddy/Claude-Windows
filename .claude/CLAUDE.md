@@ -412,12 +412,30 @@ python oracle_docs/oracle_rag.py --kb KB593233
 
 ---
 
-## HOOKS ACTIVE
+## HOOKS ACTIVE (v7.0 Consolidated)
 
-- **PreToolUse**: Security, auto-permissions
-- **PostToolUse**: Audit, Error-Correction RAG
-- **UserPromptSubmit**: Intent detection, Auto-RAG
-- **SessionStart**: Memory injection
+### Session Lifecycle (`session_unified.py`)
+- **SessionStart**: Memory injection, git status, beads tracking
+- **SessionEnd**: Session logging, cleanup
+- **Setup**: Project initialization (--init, --maintenance)
+- **SubagentStart**: Track subagent spawning
+
+### Tool Lifecycle (`tool_unified.py`)
+- **PreToolUse**: Security blocks, auto-permissions, timing
+- **PostToolUse**: Audit logging, auto-format, error tracking
+- **PostToolUseFailure**: Failure handling, error count
+
+### Prompt Processing (`prompt_unified.py`)
+- **UserPromptSubmit**: Adaptive thinking, credential blocking, auto-RAG
+
+### Stop Events (`stop_unified.py`)
+- **Stop**: Session report, verification suggestions, bell notification
+- **SubagentStop**: Subagent completion tracking
+
+### Other Hooks
+- **PermissionRequest**: Permission handling
+- **Notification**: Permission/idle prompts
+- **PreCompact**: Block auto-compaction (matcher: auto)
 
 ---
 
