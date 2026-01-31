@@ -1,16 +1,56 @@
 #!/usr/bin/env node
 
 /**
- * Sherpa v4.1 MCP Proxy
+ * Sherpa v4.2 MCP Proxy
  *
- * Thin proxy for AWS Lambda MCP endpoints with IAM SigV4 signing.
+ * Hybrid router for local and Lambda MCP endpoints with IAM SigV4 signing.
  * Routes: /mcp/* (router), /memory/* (CRUD), /beads/* (sync), /kb/* (retrieve)
+ *
+ * Local MCPs: playwright, code-index, context7, github, sequential-thinking, react, shadcn, vercel
+ * Lambda MCPs: salesforce, jira, aws, oracle-db, oci, workday, peoplesoft, document-ops, firecrawl
  */
 
 import { fromIni } from '@aws-sdk/credential-providers';
 import { STSClient, GetCallerIdentityCommand } from '@aws-sdk/client-sts';
 import aws4 from 'aws4';
 import https from 'https';
+import { spawn } from 'child_process';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+// Get manifest path relative to this file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const MANIFEST_PATH = join(__dirname, '../../claudecodeshared/.claude/mcp/manifest.json');
+const MCP_CONFIG_DIR = join(__dirname, '../../claudecodeshared/.claude/mcp');
+
+// Load manifest for routing decisions
+let manifest = null;
+function loadManifest() {
+  try {
+    manifest = JSON.parse(readFileSync(MANIFEST_PATH, 'utf-8'));
+    console.error(`[MCP-Proxy] Loaded manifest v${manifest.version} with ${manifest.backends.length} backends`);
+  } catch (error) {
+    console.error(`[MCP-Proxy] Warning: Could not load manifest: ${error.message}`);
+    manifest = { backends: [] };
+  }
+}
+
+// Get backend config from manifest
+function getBackendConfig(mcpName) {
+  if (!manifest) loadManifest();
+  return manifest.backends.find(b => b.id === mcpName && b.enabled !== false);
+}
+
+// Check if MCP should be routed locally
+function isLocalMcp(mcpName) {
+  const backend = getBackendConfig(mcpName);
+  return backend && backend.location === 'local';
+}
+
+// Local MCP process cache (for persistent connections)
+const localMcpProcesses = new Map();
 
 // AWS Configuration
 const AWS_REGION = 'us-east-1';
@@ -109,9 +149,126 @@ async function signedRequest(path, method = 'POST', body = null) {
 
 // MCP Tool Handlers
 
+// Execute tool on local MCP server
+async function executeLocalMcp(mcpName, toolName, toolArgs) {
+  const backend = getBackendConfig(mcpName);
+  if (!backend) {
+    throw new Error(`Unknown MCP backend: ${mcpName}`);
+  }
+
+  // Load the MCP config file
+  const configPath = join(MCP_CONFIG_DIR, backend.file);
+  let mcpConfig;
+  try {
+    mcpConfig = JSON.parse(readFileSync(configPath, 'utf-8'));
+  } catch (error) {
+    throw new Error(`Failed to load MCP config for ${mcpName}: ${error.message}`);
+  }
+
+  if (!mcpConfig.command) {
+    throw new Error(`MCP ${mcpName} has no command defined`);
+  }
+
+  // Execute the local MCP via stdio
+  return new Promise((resolve, reject) => {
+    const args = mcpConfig.args || [];
+    const proc = spawn(mcpConfig.command, args, {
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: { ...process.env }
+    });
+
+    let stdout = '';
+    let stderr = '';
+    let responseReceived = false;
+
+    proc.stdout.on('data', (data) => {
+      stdout += data.toString();
+
+      // Try to parse JSON-RPC responses
+      const lines = stdout.split('\n');
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        try {
+          const response = JSON.parse(line);
+          if (response.result && !responseReceived) {
+            responseReceived = true;
+            proc.kill();
+            resolve(response.result);
+          }
+        } catch (e) {
+          // Not valid JSON yet, keep buffering
+        }
+      }
+    });
+
+    proc.stderr.on('data', (data) => {
+      stderr += data.toString();
+    });
+
+    proc.on('error', (error) => {
+      reject(new Error(`Failed to start local MCP ${mcpName}: ${error.message}`));
+    });
+
+    proc.on('close', (code) => {
+      if (!responseReceived) {
+        if (code !== 0) {
+          reject(new Error(`Local MCP ${mcpName} exited with code ${code}: ${stderr}`));
+        } else {
+          reject(new Error(`Local MCP ${mcpName} closed without response`));
+        }
+      }
+    });
+
+    // Set timeout
+    const timeout = mcpConfig.config?.timeout_ms || mcpConfig.config?.timeout || 30000;
+    setTimeout(() => {
+      if (!responseReceived) {
+        proc.kill();
+        reject(new Error(`Local MCP ${mcpName} timed out after ${timeout}ms`));
+      }
+    }, timeout);
+
+    // Send initialize request
+    const initRequest = {
+      jsonrpc: '2.0',
+      id: 1,
+      method: 'initialize',
+      params: {
+        protocolVersion: '2024-11-05',
+        clientInfo: { name: 'sherpa-mcp-proxy', version: '4.2.0' },
+        capabilities: {}
+      }
+    };
+    proc.stdin.write(JSON.stringify(initRequest) + '\n');
+
+    // Send tools/call request after a small delay
+    setTimeout(() => {
+      const callRequest = {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'tools/call',
+        params: {
+          name: toolName,
+          arguments: toolArgs || {}
+        }
+      };
+      proc.stdin.write(JSON.stringify(callRequest) + '\n');
+    }, 100);
+  });
+}
+
 async function routerExecute(args) {
   const { mcp_name, tool_name, arguments: toolArgs } = args;
 
+  // Check if this is a local MCP
+  if (isLocalMcp(mcp_name)) {
+    console.error(`[MCP-Proxy] Routing ${mcp_name}.${tool_name} to LOCAL`);
+    const result = await executeLocalMcp(mcp_name, tool_name, toolArgs);
+    return result;
+  }
+
+  // Route to Lambda
+  console.error(`[MCP-Proxy] Routing ${mcp_name}.${tool_name} to LAMBDA`);
   const response = await signedRequest('/mcp/execute', 'POST', {
     mcp_name,
     tool_name,
@@ -170,12 +327,127 @@ async function kbRetrieve(args) {
   return response;
 }
 
+// Router helper functions
+
+async function routerAnalyzeIntent(args) {
+  const { query } = args;
+  if (!manifest) loadManifest();
+
+  const queryLower = query.toLowerCase();
+  const matches = [];
+
+  // Check each category's triggers
+  for (const [category, config] of Object.entries(manifest.categories || {})) {
+    const matchedTriggers = config.triggers.filter(t => queryLower.includes(t.toLowerCase()));
+    if (matchedTriggers.length > 0) {
+      // Find backends in this category
+      const backends = manifest.backends.filter(b => b.category === category && b.enabled !== false);
+      matches.push({
+        category,
+        description: config.description,
+        matched_triggers: matchedTriggers,
+        backends: backends.map(b => ({ id: b.id, location: b.location }))
+      });
+    }
+  }
+
+  // Sort by number of matched triggers
+  matches.sort((a, b) => b.matched_triggers.length - a.matched_triggers.length);
+
+  return {
+    query,
+    suggestions: matches.slice(0, 3),
+    top_suggestion: matches[0] || null
+  };
+}
+
+async function routerListCategories() {
+  if (!manifest) loadManifest();
+
+  const categories = {};
+  for (const [category, config] of Object.entries(manifest.categories || {})) {
+    const backends = manifest.backends.filter(b => b.category === category && b.enabled !== false);
+    categories[category] = {
+      description: config.description,
+      triggers: config.triggers,
+      backends: backends.map(b => ({
+        id: b.id,
+        location: b.location,
+        reason: b.reason
+      }))
+    };
+  }
+
+  return {
+    version: manifest.version,
+    categories,
+    total_backends: manifest.backends.filter(b => b.enabled !== false).length
+  };
+}
+
+async function routerLoadToolset(args) {
+  const { mcp_name } = args;
+  const backend = getBackendConfig(mcp_name);
+
+  if (!backend) {
+    throw new Error(`Unknown or disabled MCP: ${mcp_name}`);
+  }
+
+  // Load the MCP config file
+  const configPath = join(MCP_CONFIG_DIR, backend.file);
+  let mcpConfig;
+  try {
+    mcpConfig = JSON.parse(readFileSync(configPath, 'utf-8'));
+  } catch (error) {
+    throw new Error(`Failed to load MCP config for ${mcp_name}: ${error.message}`);
+  }
+
+  return {
+    id: mcpConfig.id,
+    name: mcpConfig.name,
+    description: mcpConfig.description,
+    location: backend.location,
+    tools: mcpConfig.tools || [],
+    triggers: mcpConfig.triggers || []
+  };
+}
+
 // MCP Server Protocol
 
 const tools = [
   {
+    name: 'router_analyze_intent',
+    description: 'Analyze query to find the right MCP backend based on triggers',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        query: { type: 'string', description: 'Natural language query to analyze' }
+      },
+      required: ['query']
+    }
+  },
+  {
+    name: 'router_list_categories',
+    description: 'List all available MCP categories and their backends',
+    inputSchema: {
+      type: 'object',
+      properties: {}
+    }
+  },
+  {
+    name: 'router_load_toolset',
+    description: 'Get detailed tool information for a specific MCP backend',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        mcp_name: { type: 'string', description: 'MCP backend name to load tools for' }
+      },
+      required: ['mcp_name']
+    }
+  },
+  {
     name: 'router_execute',
-    description: 'Execute tool on backend MCP via Sherpa router',
+    description: 'Execute tool on backend MCP via Sherpa router (routes to local or Lambda based on manifest)',
     inputSchema: {
       type: 'object',
       properties: {
@@ -247,11 +519,13 @@ async function handleMessage(message) {
 
   switch (method) {
     case 'initialize':
+      // Load manifest on initialize
+      loadManifest();
       return {
         protocolVersion: '2024-11-05',
         serverInfo: {
           name: '@sherpa/mcp-proxy',
-          version: '4.1.0'
+          version: '4.2.0'
         },
         capabilities: {
           tools: {}
@@ -268,6 +542,15 @@ async function handleMessage(message) {
         let result;
 
         switch (name) {
+          case 'router_analyze_intent':
+            result = await routerAnalyzeIntent(args);
+            break;
+          case 'router_list_categories':
+            result = await routerListCategories();
+            break;
+          case 'router_load_toolset':
+            result = await routerLoadToolset(args);
+            break;
           case 'router_execute':
             result = await routerExecute(args);
             break;
@@ -314,7 +597,7 @@ async function handleMessage(message) {
 
 // Main entry point
 async function main() {
-  console.error('[MCP-Proxy] Sherpa v4.1 MCP Proxy starting...');
+  console.error('[MCP-Proxy] Sherpa v4.2 MCP Proxy starting (hybrid local+lambda routing)...');
 
   // Verify AWS credentials
   const authenticated = await verifyCredentials();
