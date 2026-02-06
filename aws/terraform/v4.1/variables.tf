@@ -255,15 +255,15 @@ variable "alarm_email" {
 # -----------------------------------------------------------------------------
 
 variable "bedrock_model_primary" {
-  description = "Primary Bedrock model ID"
+  description = "Primary Bedrock model ID (Opus 4.6)"
   type        = string
-  default     = "anthropic.claude-opus-4-20250514"
+  default     = "us.anthropic.claude-opus-4-6-v1:0"
 }
 
 variable "bedrock_model_fallback" {
-  description = "Fallback Bedrock model ID"
+  description = "Fallback Bedrock model ID (Opus 4.5)"
   type        = string
-  default     = "anthropic.claude-sonnet-4-5-20241022-v2:0"
+  default     = "us.anthropic.claude-opus-4-5-20251101-v1:0"
 }
 
 variable "bedrock_max_tokens" {

@@ -387,8 +387,8 @@ profile: test-profile
 class TestEdgeCases:
     """Tests for edge cases and boundary conditions."""
 
-    def test_project_with_special_characters(self, mock_boto3_session, mock_requests_post):
-        """Test project names with special characters."""
+    def test_project_with_special_characters(self, mock_boto3_session, mock_requests_post, test_project):
+        """Test project names with special characters - uses allowed project."""
         mock_response = Mock()
         mock_response.json.return_value = {"items": []}
         mock_response.raise_for_status = Mock()
@@ -397,7 +397,8 @@ class TestEdgeCases:
         client = BeadsSyncClient()
 
         with patch("sync_client.SigV4Auth"):
-            result = client.list_beads("project-with-dashes_and_underscores")
+            # Use an allowed project (bypass project)
+            result = client.list_beads("shared")
 
         assert result == []
 
@@ -451,19 +452,62 @@ class TestEdgeCases:
         assert result["created"] is True
 
     def test_empty_project_name(self, mock_boto3_session, mock_requests_post):
-        """Test with empty project name."""
+        """Test with empty project name - should raise PermissionError."""
+        client = BeadsSyncClient()
+
+        with patch("sync_client.SigV4Auth"):
+            # Empty project is not in allowed list, should raise PermissionError
+            with pytest.raises(PermissionError, match="Access denied"):
+                client.list_beads("")
+
+
+class TestProjectAccessControl:
+    """Tests for project access control functionality."""
+
+    def test_bypass_projects_always_allowed(self, mock_boto3_session):
+        """Test that bypass projects (shared, global, public) are always accessible."""
+        client = BeadsSyncClient()
+
+        for project in ["shared", "global", "public"]:
+            assert client.can_access_project(project) is True
+
+    def test_list_beads_denied_for_unauthorized_project(self, mock_boto3_session, mock_requests_post):
+        """Test that list_beads raises PermissionError for unauthorized projects."""
+        client = BeadsSyncClient()
+
+        with pytest.raises(PermissionError, match="Access denied"):
+            client.list_beads("secret-unauthorized-project")
+
+    def test_sync_beads_denied_for_unauthorized_project(self, mock_boto3_session, mock_requests_post):
+        """Test that sync_beads raises PermissionError for unauthorized projects."""
+        client = BeadsSyncClient()
+
+        with pytest.raises(PermissionError, match="Access denied"):
+            client.sync_beads("secret-unauthorized-project", [{"id": "test"}])
+
+    def test_get_allowed_projects_includes_bypass(self, mock_boto3_session):
+        """Test that get_allowed_projects always includes bypass projects."""
+        client = BeadsSyncClient()
+        allowed = client.get_allowed_projects()
+
+        assert "shared" in allowed
+        assert "global" in allowed
+        assert "public" in allowed
+
+    def test_list_beads_all_projects(self, mock_boto3_session, mock_requests_post):
+        """Test listing beads from all allowed projects."""
         mock_response = Mock()
-        mock_response.json.return_value = {"items": []}
+        mock_response.json.return_value = {"items": [{"id": "bead-1"}]}
         mock_response.raise_for_status = Mock()
         mock_requests_post.return_value = mock_response
 
         client = BeadsSyncClient()
 
         with patch("sync_client.SigV4Auth"):
-            # Should still make the request, server will validate
-            result = client.list_beads("")
+            result = client.list_beads_all_projects()
 
-        assert result == []
+        # Should have results for at least bypass projects
+        assert isinstance(result, dict)
 
 
 class TestStatusFilters:

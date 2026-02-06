@@ -295,13 +295,39 @@ bd close <id>
 
 **DO NOT mark as MANUAL without trying browser first when RAG < 7.0!**
 
-### Multi-Model via Router
+### Multi-Model via Router (AWS Bedrock + GLM)
 ```python
-# Via router (recommended - saves context)
-router_execute(mcp_name="multi", tool_name="chat", arguments={"model": "gemini-2.5-flash", "content": "..."})
-router_execute(mcp_name="multi", tool_name="compare", arguments={"models": ["gpt-4o", "gemini-flash"], "content": "..."})
-router_execute(mcp_name="multi", tool_name="codereview", arguments={"content": "...", "base_path": "/path"})
+# Code review with 4 models (nova-pro, mistral-large, llama-70b, deepseek-r1)
+router_execute(mcp_name="multi", tool_name="codereview", arguments={
+    "code": "<code to review>",
+    "focus": "all"  # bugs|security|performance|style|all
+})
+
+# Compare multiple models
+router_execute(mcp_name="multi", tool_name="compare", arguments={
+    "prompt": "How would you implement caching?",
+    "models": ["nova-pro", "mistral-large", "deepseek-r1"]
+})
+
+# Chat with specific model
+router_execute(mcp_name="multi", tool_name="chat", arguments={
+    "model": "nova-pro",  # or: nova-micro, mistral-large, llama-70b, deepseek-r1, glm-4.7
+    "prompt": "Explain this error..."
+})
+
+# Check SSO status
+router_execute(mcp_name="multi", tool_name="sso_check", arguments={})
 ```
+
+**Available Models:**
+| Model | Best For | Cost |
+|-------|----------|------|
+| `nova-micro` | Quick checks | $0.035/1M |
+| `nova-pro` | Code review | $0.80/1M |
+| `mistral-large` | Reasoning | ~$2/1M |
+| `llama-70b` | Second opinion | ~$0.65/1M |
+| `deepseek-r1` | Hard problems, debugging | ~$0.55/1M |
+| `glm-4.7` | Multilingual/Chinese | Free tier |
 
 ---
 
@@ -323,17 +349,20 @@ router_execute(mcp_name="multi", tool_name="codereview", arguments={"content": "
 
 ---
 
-## MODEL ROUTING (58 models via router)
+## MODEL ROUTING (Bedrock + GLM)
 
 | Task | Model | Via Router |
 |------|-------|------------|
-| Default | Claude Opus 4.5 | (current) |
+| Default | Claude Opus 4.6 | (current session) |
+| Code Review | 4 models | `router_execute(mcp_name="multi", tool_name="codereview", ...)` |
 | Multilingual/Chinese | GLM 4.7 | `router_execute(mcp_name="multi", tool_name="chat", arguments={"model": "glm-4.7", ...})` |
-| Large context (1M) | Gemini 2.5 Flash | `router_execute(..., arguments={"model": "gemini-2.5-flash", ...})` |
-| FREE models | DeepSeek-v3.2, Kimi-K2 | `router_execute(..., arguments={"model": "deepseek-v3.2", ...})` |
+| Deep Reasoning | DeepSeek R1 | `router_execute(..., arguments={"model": "deepseek-r1", ...})` |
+| Fast/Cheap | Nova Micro | `router_execute(..., arguments={"model": "nova-micro", ...})` |
 | Compare answers | Any 2+ models | `router_execute(mcp_name="multi", tool_name="compare", arguments={"models": [...], ...})` |
 
 **List all models:** `router_execute(mcp_name="multi", tool_name="models", arguments={})`
+
+**If SSO expires:** Run `aws sso login --profile sherpa`
 
 ---
 

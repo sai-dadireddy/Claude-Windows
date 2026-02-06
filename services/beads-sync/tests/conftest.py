@@ -17,11 +17,45 @@ def mock_aws_credentials():
 
 
 @pytest.fixture
-def mock_boto3_session(mock_aws_credentials):
+def mock_dynamodb_table():
+    """Mock DynamoDB table for project membership queries."""
+    mock_table = Mock()
+    # Default: return test-project as allowed
+    mock_table.query.return_value = {
+        "Items": [
+            {"PK": "USER#test@example.com", "SK": "PROJ#test-project", "role": "member"},
+            {"PK": "USER#test@example.com", "SK": "PROJ#sherpa", "role": "admin"}
+        ]
+    }
+    return mock_table
+
+
+@pytest.fixture
+def mock_sts_client():
+    """Mock STS client for caller identity."""
+    mock_sts = Mock()
+    mock_sts.get_caller_identity.return_value = {
+        "Arn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Developer/test@example.com",
+        "Account": "123456789012"
+    }
+    return mock_sts
+
+
+@pytest.fixture
+def mock_boto3_session(mock_aws_credentials, mock_dynamodb_table, mock_sts_client):
     """Mock boto3.Session for testing without real AWS credentials."""
     with patch("boto3.Session") as mock_session_class:
         mock_session = Mock()
         mock_session.get_credentials.return_value = mock_aws_credentials
+
+        # Mock resource for DynamoDB
+        mock_dynamodb = Mock()
+        mock_dynamodb.Table.return_value = mock_dynamodb_table
+        mock_session.resource.return_value = mock_dynamodb
+
+        # Mock client for STS
+        mock_session.client.return_value = mock_sts_client
+
         mock_session_class.return_value = mock_session
         yield mock_session_class
 
@@ -86,3 +120,21 @@ def api_base_url():
 def test_project():
     """Test project identifier."""
     return "test-project"
+
+
+@pytest.fixture
+def test_user_email():
+    """Test user email."""
+    return "test@example.com"
+
+
+@pytest.fixture
+def allowed_projects():
+    """List of projects the test user has access to."""
+    return {"shared", "global", "public", "test-project", "sherpa"}
+
+
+@pytest.fixture
+def denied_project():
+    """A project the test user does NOT have access to."""
+    return "secret-project"
